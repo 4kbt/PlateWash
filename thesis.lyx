@@ -1746,6 +1746,133 @@ clean room
  
 \end_layout
 
+\begin_layout Subsection
+Foil Interferometer
+\end_layout
+
+\begin_layout Standard
+The isolating foil is the most important defense against systematic error.
+ It is a physical and electrical barrier between pendulum and attractor.
+ If it moves in an attractor-correlated way, the pendulum's electrostatic
+ environment will change.
+ In order to assess the foil's motion, we built an interferometric optical
+ sensor system.
+ 
+\end_layout
+
+\begin_layout Standard
+XXX Blah Blah blah
+\end_layout
+
+\begin_layout Subsubsection
+Noise
+\end_layout
+
+\begin_layout Paragraph
+Leading noise source
+\end_layout
+
+\begin_layout Standard
+Believed to be polarization rotation in the fiber.
+ New polarization-maintaining fiber is on-hand for an upgraded version of
+ the experiment.
+\end_layout
+
+\begin_layout Subsubsection
+Calibration
+\end_layout
+
+\begin_layout Standard
+In order for the intensity values measured at the photodiode to be meaningful,
+ we must develop an intensity-change to displacement conversion.
+ As the intensity at the output port necessarily varies sinusoidally with
+ foil position, the sensitivity .
+ With the initial visible-light laser, we attempted to lock the fringe phase
+ into the location of maximum sensitivity by varying the laser temperature
+ temperature, and hence frequency.
+ With the infrared distributed feedback laser, the temperature coefficient
+ is so small that such an approach cannot work.
+ Future versions of the experiment may include positioning feedback for
+ the fiber mount in order to maximize sensitivity.
+ 
+\end_layout
+
+\begin_layout Standard
+Determining fringe contrast can only be done by displacing the foil.
+ The attractor can be pressed into the foil by lightly over-driving the
+ translation stage.
+ If valves are manipulated to permit a slow retreat of the attractor (or
+ using the very slow leak of the isolation valve), a fringe pattern may
+ be obtained.
+\end_layout
+
+\begin_layout Standard
+XXX image.
+\end_layout
+
+\begin_layout Standard
+The very first fringe (at XXX psi) is our best measure of fringe contrast.
+ We can identify the turning points and sensitive regions of intensity.
+ 
+\end_layout
+
+\begin_layout Standard
+XXX image
+\end_layout
+
+\begin_layout Standard
+In Fig XXX, we have the interferometer signal plotted over the duration
+ of the experiment.
+ Given the spatial extent of the materials involved and the heterogeneous
+ nature of the assembly, the <XXX 
+\begin_inset Formula $\mu$
+\end_inset
+
+m differential displacement over a period of more than a month is satisfying.
+ Much of the experiment took place near a turning point, which limits our
+ ability to constrain the foil motion for each individual run.
+ 
+\end_layout
+
+\begin_layout Paragraph
+A conservative approach
+\end_layout
+
+\begin_layout Standard
+As it is challenging to infer anything about foil motion near a fringe turning
+ point, we won't.
+ We will only consider times when the interferometer was in the middle 71%
+ (
+\begin_inset Formula $\sin(\pi/4)=\sqrt{2}/2=0.707$
+\end_inset
+
+) of the range of fringe contrast.
+ Over the same range, the slope of the fringe-to-displacement sinusoid varies
+ by at most 21% away from the mean (average slope 
+\begin_inset Formula $2\sqrt{2}/\pi$
+\end_inset
+
+, maximum 1, minimum 
+\begin_inset Formula $\sqrt{2}/2$
+\end_inset
+
+ ).
+ As we are only interested in an estimate (and hopefully an upper bound)
+ on the foil's contribution to pendulum torque, this will be sufficient.
+\end_layout
+
+\begin_layout Standard
+Within this range, we use the approximation 
+\begin_inset Formula $\frac{\pi\lambda}{8\sqrt{2}A_{0}}\sim\frac{370\mbox{ nm}}{\mbox{fringe (peak-to-peak) }}$
+\end_inset
+
+ to convert measured output to displacement.
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
 \begin_layout Section
 Uncertainty Budget
 \end_layout
