@@ -1761,6 +1761,165 @@ The isolating foil is the most important defense against systematic error.
 \end_layout
 
 \begin_layout Standard
+The foil interferometer is a Fizeau XXX (cite) interferometer.
+ Inspired by the designs and sensitivities of early atomic force microscope
+ (AFM) readout systems, the device interferes light from a reference surface
+ and a reflecting target surface.
+ In this case, the reference surface is the end of an optical fiber, and
+ the reflecting target surface is the PlateWash isolating foil.
+ As shown in Fig XXX, light from a fiber-coupled laser is directed through
+ a 90/10 fiber coupler.
+ The light that travels down the 90% branch is absorbed by an intensity
+ monitor diode.
+ The remaining 10% is coupled into a fiber that goes to the apparatus.
+ The end of the fiber is carefully directed and positioned next to the isolating
+ foil.
+ Approximately 5% (XXX) of the light leaving the fiber is reflected from
+ the glass/air interface.
+ Due to the divergence of the beam (NA XXX, core diameter XXX), less light
+ re-enters the fiber core after reflecting from the foil.
+ By adjusting the fiber-foil distance, it is possible to tune the internally
+ and externally-reflected light to have comparable intensity, maximizing
+ the interference contrast.
+ In PlateWash, the operating point is ~XXX
+\backslash
+pmXXX from the foil (can get it from the crash plot).
+ 
+\end_layout
+
+\begin_layout Standard
+The reflected light returns down the fiber to the 90/10 splitter.
+ 90% of the light goes into an XXX (composition (Germanium?)) high sensitivity
+ photodiode (ThorLabs XXX).
+ The remaining 10% proceeds back to the laser, where XXX % of the light
+ is attenuated by a Faraday isolator.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Foil interferometer signal as a function of attractor pressure (top axis)
+ and position (bottom axis).
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The signal from a Fizeau interferometer is readily understood.
+ Assuming light with wavelength 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, amplitude 
+\begin_inset Formula $A$
+\end_inset
+
+, and fiber tip to mirror spacing 
+\begin_inset Formula $s$
+\end_inset
+
+, fiber core radius 
+\begin_inset Formula $r$
+\end_inset
+
+, tip reflectivity 
+\begin_inset Formula $R$
+\end_inset
+
+, and radial (full width is 
+\begin_inset Formula $2\theta$
+\end_inset
+
+) beam divergence angle 
+\begin_inset Formula $\theta$
+\end_inset
+
+, the intensity travelling back down the fiber is roughly 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A_{reflected}=ARe^{i\omega t}+A(1-R)\frac{1}{(\frac{2s}{r}\tan\theta+1)^{2}}e^{i\omega(t+2s/c)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+I_{reflected}=|A_{reflected}|^{2}=A^{2}(Re^{i\omega t}+(1-R)\frac{1}{(\frac{2s}{d}\tan\theta+1)^{2}}e^{i\omega(t+2s/c)})(Re^{-i\omega t}+(1-R)\frac{1}{(\frac{2s}{d}\tan\theta+1)^{2}}e^{-i\omega(t+2s/c)})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+I_{reflected}=|A_{reflected}|^{2}=A^{2}(R^{2}+2(1-R)R\frac{1}{(\frac{2s}{d}\tan\theta+1)^{2}}\cos(2\omega s/c)+(1-R)^{2}\frac{1}{(\frac{2s}{d}\tan\theta+1)^{4}})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+I_{reflected}=|A_{reflected}|^{2}=A^{2}(R^{2}+2(1-R)R\frac{1}{(\frac{2r}{d}\tan\theta+1)^{2}}\cos(4\pi s/\lambda)+(1-R)^{2}\frac{1}{(\frac{2s}{r}\tan\theta+1)^{4}})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+XXX plotted in ifoSim.gpl on watson.
+\end_layout
+
+\begin_layout Standard
 XXX Blah Blah blah
 \end_layout
 
@@ -1867,10 +2026,6 @@ Within this range, we use the approximation
 \end_inset
 
  to convert measured output to displacement.
-\end_layout
-
-\begin_layout Standard
-
 \end_layout
 
 \begin_layout Section
@@ -4805,10 +4960,10 @@ Blindness
 \end_layout
 
 \begin_layout Standard
-The most accurate experiments are those which are completely free of bias.
+The most accurate experiments are free of bias.
  It is possible to perform an unbiased experiment without a blind, but it
- is extremely difficult to guarantee that all pre-concieved notions of experimen
-tal results and implications are suppressed.
+ is difficult to guarantee that all pre-concieved notions of experimental
+ results and implications are suppressed.
  Critics of blind experiments claim that, 
 \begin_inset Quotes eld
 \end_inset
@@ -4830,7 +4985,7 @@ known
 
 \begin_layout Standard
 PlateWash is not a blind experiment.
- It is, at best, a precursor to a blind experiment.
+ It is a precursor to a blind experiment.
  More than half of the science data were taken without a blind, largely
  because we had not discovered a way to monitor the health of the experiment
  without access to data which included the central values of each measurement.
@@ -4864,6 +5019,18 @@ Results
 
 \begin_layout Section
 Description of runs
+\end_layout
+
+\begin_layout Standard
+Attractor overview graphic
+\end_layout
+
+\begin_layout Standard
+Uncertainty overview
+\end_layout
+
+\begin_layout Standard
+Torque central value overview
 \end_layout
 
 \begin_layout Section
@@ -4923,7 +5090,7 @@ Binned Triangle Plot
 \end_layout
 
 \begin_layout Section
-Inverted 
+Bootstrapped
 \begin_inset Quotes eld
 \end_inset
 
