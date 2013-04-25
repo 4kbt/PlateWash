@@ -1,0 +1,23 @@
+nglass = 1.47
+
+NA = 0.14
+r= 5e-6
+lam = 1330e-9
+
+T1 = 2.0*nglass/(nglass+1)
+T2 = 2.0/(nglass+1)
+
+R = (1.0-nglass)/(1.0+nglass)
+set key noauto
+
+set samples 10000
+
+c = 1e-6
+
+
+set title 'Fiber output as a function of foil displacement'
+set xlabel 'fiber tip to foil separation (um)'
+set ylabel 'reflected laser power fraction'
+
+pl [0:50][0:] \
+	(R**2 + 2.0*R*T1*T2/(2*c*x/r*NA+1)**2 * cos(4.0*pi*c*x/lam)+T1**2*T2**2/(2.0*c*x/r*NA+1.0)**4)

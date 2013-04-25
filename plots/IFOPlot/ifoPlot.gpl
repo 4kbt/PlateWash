@@ -1,0 +1,20 @@
+set term postscript enhanced solid color eps
+set output 'ifoPlot.eps'
+
+
+xWidth = 0.5
+yWidth = xWidth/2.0*3.0
+         
+set size xWidth,yWidth
+
+
+set xlabel 'pendulum-attractor separation (um)'
+set ylabel 'foil displacement (nm)'
+
+set title  'PRELIMINARY Attractor-correlated foil displacement'
+
+set key noauto
+
+pl [0:800][-3:3] \
+	'./run3147simplexBootstrapShortFilterIOutx2March052013.15umAnd50um.LinearMaxCut.dat' u ($1*1e6):2 w p pt 7 ps 0.15 lc 3
+

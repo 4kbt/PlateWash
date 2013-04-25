@@ -1,0 +1,25 @@
+set term postscript enhanced solid color eps
+set output 'lagFrequencySNR.eps'
+
+
+
+
+set logsc x
+set xlabel 'attractor frequency (mHz)'
+set ylabel 'SNR attenuation'
+
+set samples 2000
+
+set arrow from 3.90625,0 to 3.90625,1 nohead lt 0 lw 2
+set arrow from 2.5,0.2 to 3.90625,0.3 
+
+set label 'actual frequency' at 2,0.15 center front 
+
+pl [1:100][0:1]\
+	sqrt(1-2*10*x/1000.0)  tit '10 s lag'  lw 2,\
+	sqrt(1-2*20*x/1000.0)  tit '20 s lag'  lw 2,\
+	sqrt(1-2*35*x/1000.0)  tit '35 s lag'  lw 2,\
+	sqrt(1-2*55*x/1000.0)  tit '55 s lag'  lw 2,\
+	sqrt(1-2*80*x/1000.0)  tit '80 s lag'  lw 2,\
+	sqrt(1-2*100*x/1000.0) tit '100 s lag' lw 2
+

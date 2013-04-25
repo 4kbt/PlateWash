@@ -1,0 +1,18 @@
+set term postscript enhanced solid color eps
+set output 'lagSNR.eps'
+
+f = 1.0
+
+set xlabel 'step time excluded by lags (attractor periods)'
+set ylabel 'Signal to Noise attenuation (amplitude)'
+set x2label 'step time excluded by lags (s)'
+
+set xtics nomirror 
+
+set x2tics
+
+set key noauto
+
+pl [0:0.5][0:1][0:128]\
+	sqrt(1.0-2*x*f) lt 3,\
+	0 lt -1 ax x2y1

@@ -1,0 +1,22 @@
+set term postscript enhanced solid color eps
+set output 'pwTransferFunction.eps'
+
+k = 17.0e-9
+Q = 3500.0
+f_0=1.0/90.0
+
+trans(x) = 1.0/k/sqrt((1-x**2/f_0**2)**2+1.0/Q/Q)
+
+set logsc
+set samples 1000
+
+set key noauto
+
+set title 'Approximate PlateWash Transfer Function'
+set xlabel 'frequency (Hz)'
+set ylabel 'transfer function ( radians / N-m )'
+
+pl [1e-4:1]\
+	trans(x) lt 3 tit 'torsion oscillator',\
+	f_0**2/k/x/x lt 0 lw 2 tit 'free mass'
+
