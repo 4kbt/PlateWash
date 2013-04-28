@@ -33,7 +33,7 @@
 \use_esint 1
 \use_mhchem 1
 \use_mathdots 1
-\cite_engine natbib_authoryear
+\cite_engine natbib_numerical
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -75,7 +75,7 @@ C.
  Gundlach
 \end_layout
 
-\begin_layout Abstract
+\begin_layout Verse
 We tested it.
  It worked.
  Our number at 
@@ -90,11 +90,15 @@ m.
  
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
 \begin_layout Chapter
 Introduction
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Not every thesis requires introduction.
  For reasons which will hopefully become clear, this one does.
  The experimental challenges that shaped the design, implementation, analysis,
@@ -103,13 +107,13 @@ Not every thesis requires introduction.
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 The motivation for this experiment is simple.
  Nobody knows what gravity does over distances shorter than ~100 microns.
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 The Newtonian theory of gravity, and its refinement General Relativity,
  agree with every experimental test yet completed.
  Using these theories, we have considerable predictive power, particularly
@@ -124,7 +128,7 @@ exceedingly
  behavior of gravity over short distance.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 The forces with which we are concerned are small -- ~50 fN.
  On the scale of modern gravitational experiment, however, they're somewhat
  large; our group's equivalence principle measurements measure forces on
@@ -134,10 +138,19 @@ The forces with which we are concerned are small -- ~50 fN.
  Model background that mimics gravity.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 This experiment is complimentary to our group's world-leading short-range
  gravity test.
  Blah blahXXX
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \begin_layout Chapter
@@ -163,7 +176,6 @@ ak interaction in XXX.
  precision tests, but it contains no known links to the Standard Model.
  For interactions with sufficiently high energy density, one or both theories
  must fail, as they predict different phenomena.
- (XXX)
 \end_layout
 
 \begin_layout Standard
@@ -184,14 +196,25 @@ Observations which the Standard Model cannot explain:
 \end_layout
 
 \begin_layout Standard
-Gravity: There is no coupling between uncharged objects in the Standard
- Model.
+Gravity: There is no tree-level coupling between uncharged objects in the
+ Standard Model.
  Furthermore, on a charge for charge basis, the interactions in the Standard
  Model are 
-\begin_inset Formula $10^{46}$
+\begin_inset Formula $>10^{40}$
 \end_inset
 
- XXX times stronger than gravity, frustrating any unification attempts.
+ times stronger than gravity, frustrating any unification attempts.
+ The theory of gravity, General Relativity, is well-tested and in agreement
+ with experiment
+\begin_inset CommandInset citation
+LatexCommand citep
+key "lrr-2006-3"
+
+\end_inset
+
+, but does not contain any hint of quantum probability or uncertainty.
+ Gravity and quantum mechanics are mathematically incompatible.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -225,7 +248,7 @@ Dark Energy
 \begin_inset Quotes erd
 \end_inset
 
-, an energy density associated with empty space, that has negative pressure.
+, an energy density associated with empty space that has negative pressure.
  The energy density of vacuum, as described by the Standard Model, is 
 \begin_inset Formula $10^{120}$
 \end_inset
@@ -245,11 +268,11 @@ Furthermore, the angular power spectra of the cosmic microwave background,
  along with detailed studies of nucleosynthesis, are highly compatible with
  cosmology theory that includes dark energy and cold dark matter and are
  essentially incompatible with theories that do not (XXX WMAP).
- These measurements suggest a dark energy density of XXX keV/cm
+ These measurements suggest a dark energy density of 4 keV/cm
 \begin_inset Formula $^{3}$
 \end_inset
 
-, which, when converted to a length, XXX, is roughly 86 micrometers.
+, which, when converted to a length is roughly 86 micrometers.
 \end_layout
 
 \begin_layout Section
@@ -287,14 +310,90 @@ The inverse square law (ISL) for gravity has been subjected to many experimental
  and astronomical tests.
  The observed stability of elliptical orbits and the apparent validity of
  Kepler's laws gave immediate support to the theory at solar system scales.
- The first laboratory test of the ISL was done by Cavendish and XXX in XXX
+ The first laboratory test of the ISL was done by Cavendish and Michell
+ in 1798 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Cavendish1798"
+
+\end_inset
+
  in support of his measurement of the density of the Earth.
- See a fine review by Fischbach for the history of these experiments XXX.
+ See a fine review by Fischbach for the history of these experiments 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "1999snng.book.....F"
+
+\end_inset
+
+, and a detailed review of short range experiments by Adleberger, Heckel,
+ and Nelson 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "adelberger2003tests"
+
+\end_inset
+
+.
  Current tests of the inverse square law are underway at the University
- of Washington XXX, Huazhong University, University of Indiana, Washington
- University at St.
- Louis, Stanford University, Apache Point Observatory, XXX Clive Speake,
- Dusseldorf University, and XXX.
+ of Washington XXX (Ted's thesis), Huazhong University
+\begin_inset CommandInset citation
+LatexCommand citep
+key "2007PhRvL..98t1101T,PhysRevLett.108.081101"
+
+\end_inset
+
+, University of Indiana, Washington University at St.
+ Louis
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Wagoner2010"
+
+\end_inset
+
+, Stanford University
+\begin_inset CommandInset citation
+LatexCommand citep
+key "2005PhRvD..72l2001S"
+
+\end_inset
+
+, Apache Point Observatory
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Murphy2008"
+
+\end_inset
+
+, the University of Maryland
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Venkateswara2010"
+
+\end_inset
+
+, Grenoble
+\begin_inset CommandInset citation
+LatexCommand citep
+key "PhysRevD.77.034020"
+
+\end_inset
+
+, Birmingham University 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "E.Chalkley2011"
+
+\end_inset
+
+, Düsseldorf 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Schiller2006"
+
+\end_inset
+
+, and XXX.
 \end_layout
 
 \begin_layout Standard
@@ -343,8 +442,8 @@ where
 \begin_inset Formula $\lambda$
 \end_inset
 
- is the interaction's characteristic length (usually the reduced Compton
- wavelength of a mediating particle with mass 
+ is the interaction's characteristic length (reduced Compton wavelength
+ of a mediating particle with mass 
 \begin_inset Formula $m$
 \end_inset
 
@@ -353,7 +452,14 @@ where
 \begin_inset Formula $\lambda=\hbar/mc$
 \end_inset
 
- XXX).
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Shankar1994"
+
+\end_inset
+
+).
  This is not the only possible modified potential, but it is general and
  has become a traditional parametrization for inverse square law violations.
  
@@ -369,13 +475,22 @@ Observational ISL tests to moon - first laser ranging? First lab tests?
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 Note to self: How well can you test the ISL at long range simply by knowing
  that the Moon hasn't appreciably approached or receded in your lifetime?
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Introduce 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -432,26 +547,36 @@ In general, the compactification scales are quite small,
 \end_inset
 
 m or smaller.
- It was shown in 1997 XXX by ADD that, using the then-current limits on
- the gravitational inverse square law, the compactification scale of one
- or more of these extra dimensions could be as large as a millimeter or
- more.
+ It was shown in 1998 by Arkani-Hamed, Dimopoulos, and Dvali that, using
+ the then-current limits on the gravitational inverse square law, the compactifi
+cation scale of one or more of these extra dimensions could be as large
+ as a millimeter or more 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ArkaniHamed:1998rs,ArkaniHamed:1998nn"
+
+\end_inset
+
+.
  2007 limits from Kapner 
 \emph on
 et al.
 
 \emph default
- XXX place a 95% confidence upper bound at XXX 
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "2007PhRvL..98b1101K"
+
+\end_inset
+
+ place a 95% confidence upper bound at 44 
 \begin_inset Formula $\mu$
 \end_inset
 
-m for one extra dimension, and XXX 
-\begin_inset Formula $\mu$
-\end_inset
-
-m for two.
+m for one extra dimension.
  Greater numbers of extra dimensions are more stringently constrained by
- Fermilab experiments XXX, at scales below XXX 
+ collider experiments XXX, at scales below XXX 
 \begin_inset Formula $\mu$
 \end_inset
 
@@ -485,8 +610,18 @@ dark energy
 
  associated with a volume of spacetime and if this new kind of energy has
  negative pressure.
- If measured in accordance with the usual FRW parametrization, XXX ...
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+If measured in accordance with the usual FRW parametrization, XXX ...
+ 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -494,7 +629,11 @@ If the supernova measurements are used to extract a value for
 \begin_inset Formula $\Lambda$
 \end_inset
 
-, it is found to be XXX keV/cm
+, it is found to be 
+\begin_inset Formula $\sim4$
+\end_inset
+
+ keV/cm
 \begin_inset Formula $^{3}$
 \end_inset
 
@@ -503,17 +642,41 @@ If the supernova measurements are used to extract a value for
  of light, 
 \begin_inset Formula 
 \[
-\lambda=\sqrt[4]{\frac{\hbar c}{\Lambda}}\approx86\,\mu\mbox{m}.
+\lambda=\sqrt[4]{\frac{\hbar c}{\Lambda}}=\sqrt[4]{\frac{8\pi G\hbar}{3\Omega_{\lambda}H_{0}^{2}c}}\approx86\,\mu\mbox{m},
 \]
 
 \end_inset
 
+ where 
+\begin_inset Formula $\Omega_{\lambda}$
+\end_inset
 
-\end_layout
+is the dark energy fraction of the closure density of the universe (
+\begin_inset Formula $\sim70\%$
+\end_inset
 
-\begin_layout Standard
-XXX If there is new gravitational physics associated with Dark Energy, we
- should expect interesting behavior at this approximate spatial scale.
+) and 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ is the Hubble constant (
+\begin_inset Formula $\sim70$
+\end_inset
+
+ km/s/Mpc
+\begin_inset Formula $=2\times10^{-18}\,\mbox{s}^{-1}$
+\end_inset
+
+) 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Ade:2013ktc"
+
+\end_inset
+
+.
+ If there is new gravitational physics associated with Dark Energy, we should
+ expect interesting behavior at this approximate scale.
  
 \end_layout
 
@@ -522,21 +685,26 @@ Cosmological Constant
 \end_layout
 
 \begin_layout Standard
-Perhaps closely related to the dark energy problem is an older problem in
- physics.
- In the Einstein Equations for unperturbed spacetime, XXX, there is a free
- parameter, 
-\begin_inset Formula $C$
-\end_inset
-
-, which plays the same (XXX 0 or 1?) role as 
+Closely related to the dark energy problem is an older problem in physics.
+ In general relativity, there is a free parameter, traditionally 
 \begin_inset Formula $\Lambda$
 \end_inset
 
- in the evolution of spacetime.
- Very roughly, it is the energy density associated with a volume of space.
+, which plays a similar role as the aforementioned dark-energy 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+ in the evolution of spacetime 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Misner_1973"
+
+\end_inset
+
+.
+ Roughly, it is the energy density associated with a volume of space.
  If computed from modern particle theory, the expectation is that 
-\begin_inset Formula $C_{ParticleTheory}\sim10^{120}C_{Observed}$
+\begin_inset Formula $\Lambda_{ParticleTheory}\sim10^{120}\Lambda_{Observed}$
 \end_inset
 
  XXX.
@@ -647,6 +815,14 @@ In addition to their physical motiviation, chameleon interactions are ready-made
  be made as thin as possible, or dispensed with entirely.
 \end_layout
 
+\begin_layout Standard
+XXX Uphadye calculable boundaries
+\end_layout
+
+\begin_layout Standard
+XXX New PRL regarding viability of chameleons
+\end_layout
+
 \begin_layout Subsection
 Unparticles
 \end_layout
@@ -732,15 +908,34 @@ At scales of approximately meters and below, tests of the inverse square
  Experimental designs become more and more carefully crafted to suppress
  systematics that would otherwise hide the signature of gravity entirely.
  Prior to 2001, the shortest distance at which gravity had been observed
- was ~XXX, by Spero 
+ was 
+\begin_inset Formula $\sim0.5$
+\end_inset
+
+-
+\begin_inset Formula $1$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+cm, by Spero 
 \emph on
 et al.
 
 \emph default
- in 1980 XXX.
- This remains the best published limit from scales of XXX-XXX cm, though
- an improved result from XXX, Boynton, Newman, and collaborators is expected
- soon.
+ in 1980 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "PhysRevLett.44.1645"
+
+\end_inset
+
+.
+ XXX Paik/MoodyThis remains the best published limit from scales of XXX-XXX
+ cm, though an improved result from XXX, Boynton, Newman, and collaborators
+ is expected soon.
 \end_layout
 
 \begin_layout Standard
@@ -754,36 +949,87 @@ Initially inspired by the suggestions of large extra dimensions, the Eot-Wash
 \begin_inset Formula $\lambda=200\,\mu$
 \end_inset
 
-m [XXX] (2001), 
+m 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "2001PhRvL..86.1418H"
+
+\end_inset
+
+ (2001), 
 \begin_inset Formula $\lambda=XXX$
 \end_inset
 
-, [XXX], 
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "2004PhRvD..70d2004H"
+
+\end_inset
+
+ (2004) , 
 \begin_inset Formula $\lambda=56\,\mu$
 \end_inset
 
-m [XXX] (2007), and 
-\begin_inset Formula $\lambda=???$
+m 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "2007PhRvL..98b1101K"
+
 \end_inset
 
- (2011).
+ (2007), and 
+\begin_inset Formula $\lambda=40$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m (2013).
  In parallel, a 1kHz tungsten oscillator experiment at the University of
  Colorado achieved their maximum sensitivity at 
-\begin_inset Formula $\alpha=XXX$
+\begin_inset Formula $\alpha=\sim5$
 \end_inset
 
 , 
-\begin_inset Formula $\lambda=XXX$
+\begin_inset Formula $\lambda=\sim100$
 \end_inset
 
- [XXX] (2003).
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "2003Natur.421..922L"
+
+\end_inset
+
+ (2003).
  An atomic force microscope-inspired series of experiments at Stanford have
  provided the tightest constraints to date on gravity at scales below XXX
  
 \begin_inset Formula $\mu$
 \end_inset
 
-m with publications in 2004 [XXX] and 2008 [XXX].
+m with publications in 2005 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "2005PhRvD..72l2001S"
+
+\end_inset
+
+ and 2008 [XXX].
  Most recently, there has been a new experiment from Huazhong University
  using a vertical torsion balance geometry that set an 
 \begin_inset Formula $\alpha=1$
@@ -794,19 +1040,57 @@ m with publications in 2004 [XXX] and 2008 [XXX].
 \end_inset
 
 m [XXX].
+ XXX Krishna's measurement.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+XXX ISL existing limits
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 At distances shorter than 
-\begin_inset Formula $\sim10\,\mu$
+\begin_inset Formula $\sim5\,\mu$
 \end_inset
 
-m (XXX) and longer than 
-\begin_inset Formula $\sim0.1$
+m and longer than 
+\begin_inset Formula $\sim6$
 \end_inset
 
- nm (XXX), the best limits on gravity come from measurements of the Casimir
- force.
+ nm, the best limits on gravity come from measurements of the Casimir force
+\begin_inset CommandInset citation
+LatexCommand citep
+key "PhysRevLett.107.171101"
+
+\end_inset
+
+.
  Any disagreement between observations of the Casimir force and the Casimir
  theory could possibly be due to new physics.
  So far, no clear deviations have been observed, so the measurement uncertaintie
@@ -819,15 +1103,29 @@ bouncing
 \begin_inset Quotes erd
 \end_inset
 
- quantum-mechanically on tabletops [XXX] .
- At scales shorter than this, limits are entirely collider-based and beyond
- the scope of this thesis.
+ quantum-mechanically on tabletops
+\begin_inset CommandInset citation
+LatexCommand citep
+key "PhysRevD.77.034020,antoniadis2011short"
+
+\end_inset
+
+.
+ At still shorter scales, limits are collider-based, restricted by the non-obser
+vation of unexpected physics, and beyond the scope of this thesis.
 \end_layout
 
 \begin_layout Standard
-There has recently been a proposal of indirect inverse square law testing
- in the astronomical environment by Simonetti et al.
- [XXX]
+Gravitational tests for micron-scale extra dimensions with astrophysical
+ sources has been proposed by Simonetti et al.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Simonetti:2010mk,Kavic:2008qb"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Chapter
@@ -1193,7 +1491,11 @@ Evaluating the integral:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Comment
+XXX - recheck.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
 status collapsed
 
 \begin_layout Plain Layout
@@ -1302,7 +1604,8 @@ prehanger
 m diameter fiber in the magnetic field of a small ring magnet to damp the
  pendulum's swing and vibrational modes.
  Both the fiber assembly and the magnetic damper were attached, through
- a ceramic electrical isolator, to a two-axis motorized translation stage.
+ a ceramic electrical isolator, to a motorized two-axis translation and
+ one-axis rotary stage.
  Electrical contact to the pendulum was established by way of a thin (XXX
  gauge) wire clipped to the otherwise isolated fiber support.
 \begin_inset Float figure
@@ -1338,10 +1641,6 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Caption
 
 \begin_layout Plain Layout
@@ -1363,10 +1662,6 @@ Attractor schematic with dimensions
 wide false
 sideways false
 status collapsed
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption
@@ -1669,17 +1964,21 @@ The pendulum support, autocollimator, foil, attractor stage, and feedback
  Suspended from the pump were six lead bricks to prevent the bellows from
  compressing when the system was placed under vacuum.
  The turbo pump was backed by a small oil roughing pump.
- The lowest pressure observed in the jar with a cold-cathode ion gauge (Lesker
- XXX) was 
-\begin_inset Formula $8.5\times10^{-8}$
+ To eliminate the possible of electrostatic charging of any part of the
+ apparatus, the ion vacuum gauge was left off from pumpdown until the entire
+ measurement was complete.
+ After systematic checks were complete, the ion gauge was turned on, and
+ the pressure was observed to be XXX
+\begin_inset space ~
 \end_inset
 
- Torr XXX and all measurements were taken at pressures below 
-\begin_inset Formula $3\times10^{-7}$
+Torr.
+ Past experience with the jar has shown that pressures of XXX
+\begin_inset space ~
 \end_inset
 
- Torr XXX.
- 
+Torr are reliably obtained by XXX days after pumpdown.
+ Science measurements began XXX days after pumpdown.
 \end_layout
 
 \begin_layout Subsection
@@ -1745,15 +2044,11 @@ m above the center of the pendulum.
  The amplitude of the calibration torque was taken to be 
 \begin_inset CommandInset include
 LatexCommand input
-filename "pWDA/extracted/qTesterTorque.tex"
+filename "/home/charlie/pWDA/extracted/qTesterTorque.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-N-m.
+ N-m.
  The q-tester was mounted on rails with positioning stops to expedite moving
  it out of the path of the crane-opened bell jar and ensure repeatable positioni
 ng of the q-tester with respect to the pendulum.
@@ -1920,8 +2215,8 @@ A_{reflected}=ARe^{i\omega t}-AT_{1}T_{2}\frac{1}{(\frac{2s}{r}\tan\theta+1)^{2}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Comment
-status open
+\begin_inset Note Note
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Formula 
@@ -2282,7 +2577,7 @@ Q=XXX.
 \end_layout
 
 \begin_layout Paragraph
-Noise
+Noiseanti-aliasing
 \end_layout
 
 \begin_layout Standard
@@ -4467,7 +4762,7 @@ reference "sec:Calibration"
 ) injects a torque of amplitude 
 \begin_inset CommandInset include
 LatexCommand input
-filename "pWDA/extracted/qTesterTorque.tex"
+filename "~/pWDA/extracted/qTesterTorque.tex"
 
 \end_inset
 
@@ -4479,7 +4774,7 @@ N-m.
  The data are broken into 
 \begin_inset CommandInset include
 LatexCommand input
-filename "pWDA/extracted/calibCutLength.tex"
+filename "~/pWDA/extracted/calibCutLength.tex"
 
 \end_inset
 
@@ -4536,7 +4831,7 @@ reference "fig:Gravitational-calibration"
  The fitted amplitude is 
 \begin_inset CommandInset include
 LatexCommand input
-filename "pWDA/extracted/CalibFitWErr.tex"
+filename "~/pWDA/extracted/CalibFitWErr.tex"
 
 \end_inset
 
@@ -4571,7 +4866,7 @@ decrease
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Comment
+\begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
@@ -4711,14 +5006,14 @@ Three columns of data are fed through finite impulse response (FIR) filters
  from 
 \begin_inset CommandInset include
 LatexCommand input
-filename "pWDA/extracted/filterLow.tex"
+filename "~/pWDA/extracted/filterLow.tex"
 
 \end_inset
 
 -
 \begin_inset CommandInset include
 LatexCommand input
-filename "pWDA/extracted/filterHigh.tex"
+filename "~/pWDA/extracted/filterHigh.tex"
 
 \end_inset
 
@@ -4743,7 +5038,7 @@ mHz).
  a low-pass filter with a corner frequency at 
 \begin_inset CommandInset include
 LatexCommand input
-filename "pWDA/extracted/filterSensorHigh.tex"
+filename "~/pWDA/extracted/filterSensorHigh.tex"
 
 \end_inset
 
@@ -4871,7 +5166,7 @@ status open
 \size small
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "mlib/findRisingEdge.m"
+filename "~/mlib/findRisingEdge.m"
 lstparams "caption={findRisingEdge.m},language=Matlab"
 
 \end_inset
@@ -4913,7 +5208,7 @@ reference "TorqueFeedbackLag"
  
 \begin_inset CommandInset include
 LatexCommand input
-filename "pWDA/extracted/filterSensorHigh.tex"
+filename "~/pWDA/extracted/filterSensorHigh.tex"
 
 \end_inset
 
@@ -4945,7 +5240,7 @@ s.
  The acausal torque passband FIR filter 
 \begin_inset CommandInset include
 LatexCommand input
-filename "pWDA/extracted/filterHigh.tex"
+filename "~/pWDA/extracted/filterHigh.tex"
 
 \end_inset
 
@@ -4956,7 +5251,7 @@ filename "pWDA/extracted/filterHigh.tex"
 mHz cutoff frequency corresponds to a 
 \begin_inset CommandInset include
 LatexCommand input
-filename "pWDA/extracted/filterHighLag.tex"
+filename "~/pWDA/extracted/filterHighLag.tex"
 
 \end_inset
 
@@ -5175,7 +5470,7 @@ delay time
  is set to 
 \begin_inset CommandInset include
 LatexCommand input
-filename "pWDA/extracted/dTime.tex"
+filename "~/pWDA/extracted/dTime.tex"
 
 \end_inset
 
@@ -5196,7 +5491,7 @@ end-pad time
  to 
 \begin_inset CommandInset include
 LatexCommand input
-filename "pWDA/extracted/pTime.tex"
+filename "~/pWDA/extracted/pTime.tex"
 
 \end_inset
 
@@ -5305,7 +5600,7 @@ Once the lags are chosen, a window selected, and a leading edge found, locking
  There are 
 \begin_inset CommandInset include
 LatexCommand input
-filename "pWDA/extracted/lockAve.tex"
+filename "~/pWDA/extracted/lockAve.tex"
 
 \end_inset
 
@@ -5370,8 +5665,8 @@ The 'lock-in' is made by taking the difference between the average of the
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Comment
-status open
+\begin_inset Note Note
+status collapsed
 
 \begin_layout Section
 For Collaborators
@@ -5485,19 +5780,8 @@ Does algorithm keep everything that's good?
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset bibtex
-LatexCommand bibtex
-bibfiles "thesis"
-options "plain"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Comment
-status open
+\begin_inset Note Note
+status collapsed
 
 \begin_layout Section
 Signal Extraction
@@ -6758,10 +7042,6 @@ Anti-aliasing on a single bin is insufficient to reach a narrow-enough bandwidth
  to escape the high frequency noise, m 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -7010,6 +7290,11 @@ lstparams "breakatwhitespace=true,breaklines=true,caption={bootstrapData.m},empt
 
 \begin_layout Section
 Model Comparison
+\end_layout
+
+\begin_layout Standard
+The bootstrap makes comparison with any model straightforward.
+ 
 \end_layout
 
 \begin_layout Section
@@ -7275,6 +7560,17 @@ Interpretation
 
 \begin_layout Chapter
 Future
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "/home/charlie/thesis"
+options "bibtotoc,unsrtnat"
+
+\end_inset
+
+
 \end_layout
 
 \end_body
