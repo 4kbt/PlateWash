@@ -1,2 +1,5 @@
 addpath("runAnalysis/")
 addpath("runConfig/")
+addpath("calibration/")
+
+HOMEDIR = "~/goldStandard/"
