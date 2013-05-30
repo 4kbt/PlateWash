@@ -1,10 +1,11 @@
 'setup'
-torqueCol   = 16;
 
-Nfilt = 2560*3/0.8; printInteger(Nfilt, 'extracted/calibCutLength.tex'); 
+run3147FixedParameters
 
-qLow = 2.5e-3;
-qHigh = 3.5e-3;
+printInteger(Nfilt, 'extracted/calibCutLength.tex'); 
+
+qLow = qTesterFreq1-qTesterChunkCalibWidth1;
+qHigh =qTesterFreq1+qTesterChunkCalibWidth1;
 
 out = OneTwoOmegaChunkCalibFit( pwData, pwTimeCol, torqueCol, qLow, qHigh, Nfilt);
 
