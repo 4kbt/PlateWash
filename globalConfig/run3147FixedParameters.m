@@ -27,7 +27,7 @@ TheoSampleTime = 0.8; printDecimal(TheoSampleTime,'extracted/TheoSampleTime.tex'
 
 qTesterFreq1=3e-3;
 qTesterWidth1=0.2e-3;
-qTesterChunkCalibWidth1 = 0.5;
+qTesterChunkCalibWidth1 = 0.5e-3;
 
 fitOneOmega = false;
 doNotFitTwoOmega = 1

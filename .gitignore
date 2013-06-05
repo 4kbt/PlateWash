@@ -3,3 +3,8 @@
 .*.swo
 *.swo
 octave-core
+*.dat
+*.eps
+*.tex
+*.dta
+*.hdr
