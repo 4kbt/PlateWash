@@ -1,0 +1,54 @@
+reset
+clear
+
+set term postscript enhanced solid color eps
+set output 'run3147calFitChk.eps'
+
+#set multiplot layout 2,1 title 'Gravitational calibration'
+set multiplot title 'Gravitational calibration'
+
+set tmargin 2.5 
+set bmargin 2 
+
+
+set format x ""
+
+set size 1,0.5
+set origin 0.0,0.5
+
+
+set ylabel 'torque amp. (feedback x 10^{5})'
+
+#set title 'calibration peak over time'
+set ytics nomirror
+set key noauto
+set y2tics
+set y2label " "
+set format y "%.2f"
+
+pl [][0:1][][0:1] \
+	'./run3147calFitChkMergeCut.dat' u ($2/86400):($2> 1e8? sqrt($6**2+$7**2)*100000.0:1/0) w p pt 7 ps 0.3 lt 1,\
+	'./run3147calFitChkMerge.dat'    u ($1/86400):((abs($11-3e-3) < 2.5e-5) & \
+						  ($1> 1e8)? sqrt($3**2+$4**2)*100000.0:1/0) w p pt 7 ps 0.3 lt 3 ax x1y2,\
+	'./run3147calFitChkMean.dat'  u ($1/86400):(($1>0) ? $2               *100000.0:1/0) w l lt 1
+#	.8e-5*100000.0 lt 1
+
+
+set format x 
+set ylabel 'frequency (mHz)'
+#set title 'calibration fit frequencies over time'
+set y2tics
+set key below
+set y2label 'frequency (mHz)'
+set xlabel 'time (days since 1/1/2009)'
+set size 1,0.5
+set origin 0,0
+set tmargin 0
+set bmargin 5
+
+
+pl [][5.9:6.05][][2:5] \
+	'./run3147calFitChkMergeCut.dat' u ($2/86400):($2>1e8? $12*1e3: 1/0) w p pt 7 ps 0.3 lt 1         tit '2-omega (left)',\
+	'./run3147calFitChkMerge.dat'    u ($1/86400):($1>1e8? $11*1e3: 1/0) w p pt 7 ps 0.3 lt 3 ax x1y2 tit '1-omega (right)'\
+
+unset multiplot
