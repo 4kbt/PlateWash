@@ -2,6 +2,9 @@
 *.swp
 .*.swo
 *.swo
+*.swn
+.*.swp
+.*.swo
 octave-core
 *.dat
 *.eps

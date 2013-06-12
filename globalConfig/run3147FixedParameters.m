@@ -14,16 +14,18 @@ unBlind = 0 ;
 
 %end 3077free.m
 
+HOMEDIR = '~/goldStandard/'
+
 %units are seconds 
-dTime = 55;   printInteger(dTime, 'extracted/dTime.tex');
-pTime = 15;   printInteger(pTime, 'extracted/pTime.tex');
-stepPeriod = 128; printInteger(stepPeriod, 'extracted/stepPeriod.tex');
+dTime = 55;   printInteger(dTime, [HOMEDIR 'extracted/dTime.tex']);
+pTime = 15;   printInteger(pTime, [HOMEDIR 'extracted/pTime.tex']);
+stepPeriod = 128; printInteger(stepPeriod, [HOMEDIR 'extracted/stepPeriod.tex']);
 
 weight = 1;
 
-lockAve = 20;  printInteger(lockAve, 'extracted/lockAve.tex');
+lockAve = 20;  printInteger(lockAve, [HOMEDIR 'extracted/lockAve.tex']);
 
-TheoSampleTime = 0.8; printDecimal(TheoSampleTime,'extracted/TheoSampleTime.tex', 1);
+TheoSampleTime = 0.8; printDecimal(TheoSampleTime,[HOMEDIR 'extracted/TheoSampleTime.tex'], 1);
 
 qTesterFreq1=3e-3;
 qTesterWidth1=0.2e-3;
@@ -35,7 +37,7 @@ doNotFitTwoOmega = 1
 qTesterFreq   = 3*2e-3;
 qTesterWidth  = 0.2e-3;
 qTesterTorque = 1.678e-14;
-printSigNumber(qTesterTorque, 'extracted/qTesterTorque.tex',3);
+printSigNumber(qTesterTorque, [HOMEDIR 'extracted/qTesterTorque.tex'],3);
 
 spikeChopWidth = 100/TheoSampleTime; % in samples
 
@@ -54,15 +56,15 @@ Ncut = floor(Nfilt*1.5);
 
 
 NyquistFrequency = 1.0/TheoSampleTime/2;
-printSigNumber(NyquistFrequency, 'extracted/NyquistFrequency.tex', 3);
+printSigNumber(NyquistFrequency, [HOMEDIR 'extracted/NyquistFrequency.tex'], 3);
 
 % FIR filter bandpass selection
 % if changing these off integer millihertz, change print statements below.
-filterLow        = 0.001; printInteger( 1000*filterLow       ,  'extracted/filterLow.tex');
-filterHigh       = 0.1;   printInteger( 1000*filterHigh      ,  'extracted/filterHigh.tex');
-filterSensorHigh = 0.2;   printInteger( 1000*filterSensorHigh,  'extracted/filterSensorHigh.tex');
+filterLow        = 0.001; printInteger( 1000*filterLow       ,  [HOMEDIR 'extracted/filterLow.tex']);
+filterHigh       = 0.1;   printInteger( 1000*filterHigh      ,  [HOMEDIR 'extracted/filterHigh.tex']);
+filterSensorHigh = 0.2;   printInteger( 1000*filterSensorHigh,  [HOMEDIR 'extracted/filterSensorHigh.tex']);
 
-printInteger( 1.0./filterHigh/2, 'extracted/filterHighLag.tex');
+printInteger( 1.0./filterHigh/2, [HOMEDIR 'extracted/filterHighLag.tex']);
 
 fprintf('# read Complete \n')
 

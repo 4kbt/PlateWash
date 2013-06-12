@@ -2,10 +2,20 @@
 
 include ../Makefile.inc
 
-CALIBFILES=$(shell ls run*calFitChk.dat)
+MLIB=$(shell ls ../mlib/)
 
-$(CALIBFILES):run3147calibFitAll.m
-	octave run3147calibFitAll.m
+CALFILES= $(shell ls run*calFitChk.dat)
+NOFILES = 'ls: cannot access *.hippo: No such file or directory'
+
+ifeq ( $(CALIBFILES), $(NOFILES) ) 
+	CALIBFILES=''
+	echo 'Woo!'
+else
+	CALIBFILES = CALFILES
+endif
+
+$(MLIB) $(CALIBFILES):run3147calibFitAll.m 
+	$(OCT) run3147calibFitAll.m
 
 CALIBMERGEFILE=run3147calFitChkMerge.dat
 
@@ -22,3 +32,10 @@ $(CALIBMEANFILE):$(CALIBMERGEFILE) $(CALIBMEANM)
 run3147calFitChk.eps: run3147calFitChk.gpl $(CALIBMERGEFILE) $(CALIBMEANFILE)
 	$(GNU) run3147calFitChk.gpl
 
+
+clean: 
+	rm *.dat 
+	rm *.eps
+
+all:
+	make run3147calFitChk.eps

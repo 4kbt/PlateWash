@@ -16,10 +16,7 @@ function [b, s, f, time] = peakFitter3Chunk2(t, data, fLow,fHigh, nsamp)
 			b(i,:)= c';
 			time(i) = (t(a) + t(z) )/2;
 		catch
-			'chunk fit failed in peakFitter3Chunk2, moving on'
-			lasterr
-			'chunk time'
-			t(a)
+			printf('fit fail in peakFitter3Chunk2 at time %s : %s\n', num2str(t(a)), lasterr);
 		end
 	end
 
