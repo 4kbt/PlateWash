@@ -1,6 +1,6 @@
-addpath("runAnalysis/")
-addpath("runConfig/")
-addpath("globalConfig/")
-addpath("calibration/")
+%addpath("runAnalysis/")
+%addpath("runConfig/")
+%addpath("globalConfig/")
+%addpath("calibration/")
 
-HOMEDIR = "~/goldStandard/"
+%HOMEDIR = "~/goldStandard/"
