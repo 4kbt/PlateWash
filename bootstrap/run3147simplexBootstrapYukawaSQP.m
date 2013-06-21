@@ -164,7 +164,7 @@ ranSeed = [ 10^( rand*3.0-6) , (-1).^(round(rand)+1)*10^(rand*11-5)]
 [x, csMin, info, iter, nf]   = sqp(ranSeed, cSFunc, [], [], [0, -realmax], [1, realmax],2000,1e-20)
 
 %When analyzing, consider a cut on csMin
-bsO = [ x(1) x(2) csMin nf iter info];
+bsO = [ x(1) x(2) csMin nf iter info ranSeed];
 
 %if fit converged, save it.
 if(info == 101) 
