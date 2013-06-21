@@ -6,7 +6,10 @@ RESULTS := $(shell ls -d -1 results/* )
 #analysis : run3147processAll2.m ../calibration/
 analysis -$(RESULTS)  : run3147processAll2.m ../calibration/
 	$(OCT) run3147processAll2.m
-	./run3147pLDAFilterMerge.sh
+	./run3147pLDAFiltermerge.sh
 
 path : 
 	$(OCT) --verbose pathTest.m
+
+clean :
+	rm results/*.dat

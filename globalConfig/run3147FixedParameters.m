@@ -74,7 +74,7 @@ touch2937 =  147 -2 + pfTouch
 aCol = 105
 bCol = 170
 torCol = torqueCol;
-torerrCol = 6*65*torCol;
+torerrCol = 6*65+torCol;
 
 torErrThresh = 1e-14;
 

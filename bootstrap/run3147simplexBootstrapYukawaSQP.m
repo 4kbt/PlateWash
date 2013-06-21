@@ -19,10 +19,23 @@ more off;
 
 %pM(:,torqueCol) = randn(rows(pM),1)*1e-15;
 
-
 pM = load([HOMEDIR 'runAnalysis/results/run3147pM3FilterMerge.dat']);
-pM(:,torqueCol) = randn(rows(pM),1)*5e-15;
-pM(:,torerrCol) = ones(rows(pM),1) *5e-15;
+
+if( max(abs(pM(:,torqueCol)) == 0) )
+	if( exist('unBlind') & unBlind == 0)
+		pM(:,torqueCol) = randn(rows(pM),1).*pM(:,torerrCol);
+	else
+		error('blind persists, but blind should not persist');
+	end
+else
+	if( exist('unBlind') & unBlind == 0)
+		error('Blind VIOLATED! WTF, MATE? This error should never happen');
+	else
+		'Torque column is unblinded. Are you ready for this?'
+			pause 
+	end
+end
+
 dBSArchive = [pM(:,aCol) pM(:,bCol) pM(:,torCol) pM(:,torerrCol)];
 dBSArchive = dBSArchive(dBSArchive(:,4) < torErrThresh,:);
 dBSArchive = dBSArchive(abs(dBSArchive(:,3)) < torErrThresh,:);
@@ -33,7 +46,7 @@ end
 
 pause = 0 ; 
 
-for bootStrapCounter = 1:300
+for bootStrapCounter = 1:30000
 
 bootStrapCounter
 

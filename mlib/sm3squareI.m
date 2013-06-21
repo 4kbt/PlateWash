@@ -99,12 +99,6 @@ else
 end % doNotFitTwoOmega
 
 
-%Blind.
-if(exist('unBlind') & unBlind == true)
-else
-	pwData(:,torqueCol) = 0;
-end
-
 
 fprintf(' * calibration complete, beginning lock-in ');
 
@@ -194,6 +188,30 @@ for j = 1:(floor(numRows/lockAve) - 1) %changed from length(pwRows) to numRows 1
 	pDiffDev(j,:) = sqrt(pAsd.^2 + pBsd.^2);
 	qDiffDev(j,:) = sqrt(qAsd.^2 + qBsd.^2);
 
+end
+
+%Blind.
+if(exist('unBlind') & unBlind == true)
+else
+	pwData(:,torqueCol)  = 0;
+	pwLock(:,torqueCol)  = 0;
+	pA(:,torqueCol)      = 0;
+	pB(:,torqueCol)      = 0;
+	pAmax(:,torqueCol)   = 0;
+	pAmin(:,torqueCol)   = 0;
+	pBmax(:,torqueCol)   = 0;
+	pBMin(:,torqueCol)   = 0;
+	pDiff(:,torqueCol)   = 0;
+
+	qpwLock(:,torqueCol) = 0;
+	qA(:,torqueCol)      = 0;
+	qB(:,torqueCol)      = 0;
+	qAmax(:,torqueCol)   = 0;
+	qAmin(:,torqueCol)   = 0;
+	qBmax(:,torqueCol)   = 0;
+	qBMin(:,torqueCol)   = 0;
+	qDiff(:,torqueCol)   = 0;
+	
 end
 
 fprintf( '* A-B differencing complete ');
