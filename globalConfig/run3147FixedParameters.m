@@ -66,5 +66,17 @@ filterSensorHigh = 0.2;   printInteger( 1000*filterSensorHigh,  [HOMEDIR 'extrac
 
 printInteger( 1.0./filterHigh/2, [HOMEDIR 'extracted/filterHighLag.tex']);
 
+%Fit configuration
+pfTouch =  56+17+ 12+2 %swag
+touch2937 =  147 -2 + pfTouch
+
+
+aCol = 105
+bCol = 170
+torCol = torqueCol;
+torerrCol = 6*65*torCol;
+
+torErrThresh = 1e-14;
+
 fprintf('# read Complete \n')
 

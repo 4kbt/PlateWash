@@ -2,8 +2,6 @@
 
 include ../Makefile.inc
 
-MLIB=$(shell ls ../mlib/)
-
 CALFILES= $(shell ls run*calFitChk.dat)
 NOFILES = 'ls: cannot access *.hippo: No such file or directory'
 

@@ -15,7 +15,9 @@ for nameCtr = 3147:3166
 		eval(['save "results/run' num2str(nameCtr) 'pM3Filter.dat" pM sizes times']);
 		eval(['save "results/run' num2str(nameCtr) 'pM3FilterOnly.dat" pM']);
 	catch
-		printf('Error in %s.\nMessage: %s\nFile: %s\nLine: %s\nScope: %s\nContext: %s\n', num2str(nameCtr), lasterror.message , lasterror.stack.file, lasterror.stack.line , lasterror.stack.scope , lasterror.stack.context);
+		nameCtr
+		errorMessage
+		%printf('Error in %s.\nMessage: %s\nFile: %s\nLine: %s\nScope: %s\nContext: %s\n', num2str(nameCtr), lasterror.message , lasterror.stack.file, lasterror.stack.line , lasterror.stack.scope , lasterror.stack.context);
 	end
 
 end
