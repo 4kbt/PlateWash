@@ -1,0 +1,15 @@
+set key noauto
+
+fA(x) =  aA  * x + bA
+fS(x) =  aS  * x + bS
+fSG(x) = aSG * x + bSG
+
+fit [0:.5e-3] fA(x)  'jan13Attractor.dat' u ($5 - 1e-3):13 via aA, bA
+fit [0:.5e-3] fS(x)  'jan13Spindles.dat'  u ($5 - 1e-3):13 via aS, bS
+fit [0:.5e-3] fSG(x) 'jan13ScrewGaps.dat' u ($5 - 1e-3):13 via aSG, bSG
+
+pl \
+	'./jan13Spindles.dat'  u ($5-1e-3):(1e15*($13 - fS( $5 -1e-3)))       w l tit 'spindles',\
+	'./jan13ScrewGaps.dat' u ($5-1e-3):(1e15*($13 - fSG($5 -1e-3)))       w l tit 'screw gaps',\
+	'./jan13Attractor.dat' u ($5-1e-3):(1e15*($13 - fA( $5 -1e-3))) w l tit 'attractor'
+
