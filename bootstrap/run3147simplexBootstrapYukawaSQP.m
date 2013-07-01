@@ -29,7 +29,9 @@ if( max(abs(pM(:,torqueCol)) == 0) )
 	end
 else
 	if( exist('unBlind') & unBlind == 0)
-		error('Blind VIOLATED! WTF, MATE? This error should never happen');
+		if(fakeTheData == 0)
+			error('Blind VIOLATED! WTF, MATE? This error should never happen');
+		end
 	else
 		'Torque column is unblinded. Are you ready for this?'
 			pause 

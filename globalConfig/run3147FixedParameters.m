@@ -11,6 +11,7 @@ kappa=4*pi*pi*pendulumF0*pendulumF0*pendulumI;
 psdWidth=1e-2;
 focalLength=400e-3;
 unBlind = 0 ;
+fakeTheData = 1;
 
 %end 3077free.m
 
@@ -62,7 +63,7 @@ printSigNumber(NyquistFrequency, [HOMEDIR 'extracted/NyquistFrequency.tex'], 3);
 % if changing these off integer millihertz, change print statements below.
 filterLow        = 0.001; printInteger( 1000*filterLow       ,  [HOMEDIR 'extracted/filterLow.tex']);
 filterHigh       = 0.1;   printInteger( 1000*filterHigh      ,  [HOMEDIR 'extracted/filterHigh.tex']);
-filterSensorHigh = 0.2;   printInteger( 1000*filterSensorHigh,  [HOMEDIR 'extracted/filterSensorHigh.tex']);
+filterSensorHigh = NyquistFrequency;   printInteger( 1000*filterSensorHigh,  [HOMEDIR 'extracted/filterSensorHigh.tex']);
 
 printInteger( 1.0./filterHigh/2, [HOMEDIR 'extracted/filterHighLag.tex']);
 
