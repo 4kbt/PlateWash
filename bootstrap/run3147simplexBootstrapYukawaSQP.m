@@ -42,6 +42,21 @@ dBSArchive = [pM(:,aCol) pM(:,bCol) pM(:,torCol) pM(:,torerrCol)];
 dBSArchive = dBSArchive(dBSArchive(:,4) < torErrThresh,:);
 dBSArchive = dBSArchive(abs(dBSArchive(:,3)) < torErrThresh,:);
 
+testInjection = 0 
+if( testInjection == 1)
+	alpha = 10
+	lambda = 80e-6
+	yo = yukawaForceLaw(alpha, lambda, 1e-6, 3e-3, 1e-6);
+
+	(touch2937 - polyval(pressEncP, dBSArchive(:,1)))*1e-6
+	interp1(yo(:,1), yo(:,2), (touch2937 - polyval(pressEncP, dBSArchive(:,1)))*1e-6)
+	dBSArchive(:,3) = interp1(yo(:,1), yo(:,2), (touch2937 - polyval(pressEncP, dBSArchive(:,1)))*1e-6) - interp1(yo(:,1), yo(:,2), (touch2937 - polyval(pressEncP,dBSArchive(:,2)))*1e-6) + randn(rows(dBSArchive), 1).*dBSArchive(:,4);
+
+end
+
+dBSArchive(:,3)
+
+
 if rows(dBSArchive) < 2
 	error('Insufficient data. Wrong channel? Cut too hard?');
 end
