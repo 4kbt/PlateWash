@@ -5,5 +5,5 @@ yukawaFit : run3147simplexBootstrapYukawaSQP.m $(HOMEDIR)/calibration/pressure/r
 
 
 
-clean : 
-	rm *.dat
+#clean : 
+#	rm *.dat
