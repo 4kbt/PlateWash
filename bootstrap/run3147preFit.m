@@ -60,14 +60,14 @@ dBSArchive = dBSArchive(dBSArchive(:,2) >= shortCut,:);
 if( testInjection == 1)
 
 	%Injected model parameters
-	alpha    = 0 
-	lambda 	 = 50e-6
+	alpha    = 1 
+	lambda 	 = 100e-6
 	injSlope = 2e-12 
 
 	%Make force law
 	yo = yukawaForceLaw(alpha, lambda, 1e-6, 3e-3, 1e-6);
 
-	injPos = dBSArchive(:,1:2)
+	injPos = dBSArchive(:,1:2);
 
 	%Fake it!
 	dBSArchive(:,3) = interp1(yo(:,1), yo(:,2), injPos(:,1)) - interp1(yo(:,1), yo(:,2), injPos(:,2)) + randn(rows(dBSArchive), 1).*dBSArchive(:,4) + injSlope*(injPos(:,1) - injPos(:,2)),;
