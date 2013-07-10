@@ -56,8 +56,8 @@ dBSArchive = dBSArchive(dBSArchive(:,2) >= shortCut,:);
 
 %Post-analysis signal injection.
 if( testInjection == 1)
-	alpha    = 100
-	lambda 	 = 100e-6
+	alpha    = 0 
+	lambda 	 = 50e-6
 	injSlope = 2e-12 
 	yo = yukawaForceLaw(alpha, lambda, 1e-6, 3e-3, 1e-6);
 
@@ -83,7 +83,15 @@ if rows(dBSArchive) < 2
 end
 
 pause = 0; 
-nmsFit = 1
+
+
+
+% 'SQP'
+% 'NMS'
+% 'SimulatedAnnealing'
+% 'Levenburg'
+%fitAlgorithm = 'SimulatedAnnealing';
+fitAlgorithm = 'Levenburg';
 
 %Bootstrap loop
 for bootStrapCounter = 1:30000
@@ -97,44 +105,61 @@ for bootStrapCounter = 1:30000
 	%Save the real data
 
 	%lambdas, alphas
-	if (nmsFit == 1)
+	switch fitAlgorithm
+	 case {'NMS'} 
 		cSFunc = @(x) -chiSquareVectorYukawaWSlope(d, x(1), x(2), x(3));
-	else
+	 case {'SQP', 'SimulatedAnnealing'}
 		cSFunc = @(x) chiSquareVectorYukawaWSlope(d, x(1), x(2), x(3));
-	end
+	 case {'Levenburg'}
+		%uses yukfit.m
+	 otherwise
+		errstr = ['Fit algorithm ' fitAlgorithm ' is an invalid choice'];
+		error(errstr);
+	endswitch
 
 	%Fit begins
 	ranSeed = [ 10^( rand*3.0-6) , (-1).^(round(rand)+1)*10^(rand*11-5), (rand-0.5)*10^-11]
 	try
 		%When analyzing, make a cut on csMin
-		if(nmsFit == 1)
+		switch fitAlgorithm
+		 case {'NMS'}
 			[x, csMax, nf] = nmsmax(cSFunc, ranSeed, [1e-15 inf inf 0 0 1]);
 			bsO = [ x(1) x(2) csMax nf ranSeed x(3)];
-		else
-			[x, csMin, fitInfo, iter, nf]   = sqp(ranSeed, cSFunc, [], [], [0, -realmax,-realmax], [.01, realmax, realmax],2000,1e-22)
+			bootstrapOut(bootStrapCounter,:) = bsO; 
+		 case {'SQP'}
+			[x, csMin, fitInfo, iter, nf]   = sqp(ranSeed, cSFunc, [], [], [0, -realmax,-realmax], [.01, realmax, realmax],100,1e-22)
 			bsO = [ x(1) x(2) csMin nf iter fitInfo ranSeed x(3)];
+			%if fit converged, save it.
+			if(fitInfo == 101) 
+				bootstrapOut(bootStrapCounter,:) = bsO; 
+			end
+		 case {'SimulatedAnnealing'}
+			lb = [0, -realmax,-realmax];
+			ub = [.01, realmax, realmax];
+
+			nt = 100;
+			ns = 5;
+			rt = 0.8;
+			maxevals = 1e10;
+			pramtol = 1e-3;
+			verbosity = 2;
+			minarg = 1;
+			
+			[x, obj, convergence, details] = samin(cSFunc, args, control) 
+		 case {'Levenburg'}
+			options = struct("bounds", [ 0 0.1; -Inf, Inf; -Inf Inf] );
+			[f, x, cvg, iter, corp, covp, covr, stdresid, Z, r2] = leasqr(d(:,1:2), d(:,3), ranSeed, "yukFit", 1e-10, 200, 1./d(:,4), .001*ones(size(ranSeed)), 'dfdp', options);
+			csMin = sum( ( (f-d(:,3))./d(:,4) ).^2 )/rows(d) ;
+			bsO =  [ x(1) x(2) csMin r2 iter ranSeed x(3)];
+			if(cvg == 1)
+	                        bootstrapOut(bootStrapCounter,:) = bsO;
+			end
+		 otherwise
+			errstr = ['Fit algorithm ' fitAlgorithm ' is an invalid choice'];
+			error(errstr);
 		end
 
-
-		%if fit converged, save it.
-		if(exist('fitInfo') && fitInfo == 101) 
-			bootstrapOut(bootStrapCounter,:) = bsO; 
-		end
-
-		if(nmsFit == 1 )
-			bootstrapOut(bootStrapCounter,:) = bsO; 
-		end
-
-		al   = num2str(alpha);
-		lam  = num2str(lambda);
-		injS = num2str(injSlope);
-		
-		if(nmsFit == 1 )
-			fitType = 'NMS'
-		else
-			fitType = 'SQP'
-		end
-		outfilename = ['run3147simplexBootstrapYukawa.SimulFloata' al 'l' lam 'slop' injS fitType '.dat'];
+		outfilename = ['run3147simplexBootstrapYukawa.SimulFloata' num2str(alpha) 'l' num2str(lambda) 'slop' num2str(injSlope) fitAlgorithm '.dat'];
 		save( outfilename, "bootstrapOut");
 	catch
 		'FIT ERROR! BED HAS BEEN POOPED!'
