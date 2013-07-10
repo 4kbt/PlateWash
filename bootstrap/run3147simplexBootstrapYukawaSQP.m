@@ -88,7 +88,6 @@ pause = 0;
 
 % 'SQP'
 % 'NMS'
-% 'SimulatedAnnealing'
 % 'Levenburg'
 %fitAlgorithm = 'SimulatedAnnealing';
 fitAlgorithm = 'Levenburg';
@@ -108,7 +107,7 @@ for bootStrapCounter = 1:30000
 	switch fitAlgorithm
 	 case {'NMS'} 
 		cSFunc = @(x) -chiSquareVectorYukawaWSlope(d, x(1), x(2), x(3));
-	 case {'SQP', 'SimulatedAnnealing'}
+	 case {'SQP'}
 		cSFunc = @(x) chiSquareVectorYukawaWSlope(d, x(1), x(2), x(3));
 	 case {'Levenburg'}
 		%uses yukfit.m
@@ -133,19 +132,6 @@ for bootStrapCounter = 1:30000
 			if(fitInfo == 101) 
 				bootstrapOut(bootStrapCounter,:) = bsO; 
 			end
-		 case {'SimulatedAnnealing'}
-			lb = [0, -realmax,-realmax];
-			ub = [.01, realmax, realmax];
-
-			nt = 100;
-			ns = 5;
-			rt = 0.8;
-			maxevals = 1e10;
-			pramtol = 1e-3;
-			verbosity = 2;
-			minarg = 1;
-			
-			[x, obj, convergence, details] = samin(cSFunc, args, control) 
 		 case {'Levenburg'}
 			options = struct("bounds", [ 0 0.1; -Inf, Inf; -Inf Inf] );
 			[f, x, cvg, iter, corp, covp, covr, stdresid, Z, r2] = leasqr(d(:,1:2), d(:,3), ranSeed, "yukFit", 1e-10, 200, 1./d(:,4), .001*ones(size(ranSeed)), 'dfdp', options);
