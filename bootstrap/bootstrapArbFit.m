@@ -1,7 +1,4 @@
-%This function fits an arbitrary linear piecewise function the data defined in run3147preFit.
-
-run3147preFit
-
+%This function fits an arbitrary linear piecewise function the data defined in preFit.
 pause = 0; 
 
 xpos1 = (pfTouch*1e-6):15e-6:300e-6;
@@ -17,7 +14,7 @@ fitAlgorithm = 'Levenberg';
 
 
 %Bootstrap loop
-for bootStrapCounter = 1:30000
+for bootStrapCounter = 1:300
 
 	bootStrapCounter
 
@@ -42,7 +39,7 @@ for bootStrapCounter = 1:30000
 	endswitch
 
 	%Fit begins
-	ranSeed = 0.5*(randn(size(xpositions))-0.5)*1e-13
+	ranSeed = 0.5*(randn(size(xpositions))-0.5)*1e-13;
 	try
 		%When analyzing, make a cut on csMin
 		switch fitAlgorithm
@@ -74,8 +71,13 @@ for bootStrapCounter = 1:30000
 			error(errstr);
 		end
 
-		outfilename = ['run3147bootstrapArbFit.a' num2str(alpha) 'l' num2str(lambda) 'slop' num2str(injSlope) fitAlgorithm '.dat'];
-		save( outfilename, "bootstrapOut");
+		if ( 1 == testInjection)
+			outfilename = ['output/bootstrapArbFit.a' num2str(alpha) 'l' num2str(lambda) 'slop' num2str(injSlope) fitAlgorithm '.dat'];
+			save( outfilename, "bootstrapOut", "yo");
+		else
+			outfilename = ['output/bootstrapArbFit.' fitAlgorithm '.dat'];
+			save( outfilename, "bootstrapOut");
+		end
 	catch
 		'FIT ERROR!'
 		errorMessage

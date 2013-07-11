@@ -1,0 +1,17 @@
+set xlabel 'pendulum-attractor separation (m)'
+set ylabel 'torque (N-m)
+
+name = system("echo $GNUPLOTME")
+
+filename = name .".eps"
+
+print filename
+
+set term postscript enhanced solid color
+set output filename
+
+
+pl [:1e-3][]\
+	name\
+	 index 0  u 1:2 w p pt 7 ps 0.3 lc 3,\
+	 '' index 1 u 1:($2) w l lt 1

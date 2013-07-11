@@ -1,5 +1,5 @@
 more off
-
+pause = 0
 %Import parameters
 run3147FixedParameters
 
@@ -55,36 +55,6 @@ dBSArchive = dBSArchive(dBSArchive(:,1) >= shortCut,:);
 dBSArchive = dBSArchive(dBSArchive(:,2) >= shortCut,:);
 %dBSArchive = dBSArchive(dBSArchive(:,1) >= longCut,:);
 %dBSArchive = dBSArchive(dBSArchive(:,2) >= longCut,:);
-
-%Post-analysis signal injection.
-if( testInjection == 1)
-
-	%Injected model parameters
-	alpha    = 1 
-	lambda 	 = 100e-6
-	injSlope = 2e-12 
-
-	%Make force law
-	yo = yukawaForceLaw(alpha, lambda, 1e-6, 3e-3, 1e-6);
-
-	injPos = dBSArchive(:,1:2);
-
-	%Fake it!
-	dBSArchive(:,3) = interp1(yo(:,1), yo(:,2), injPos(:,1)) - interp1(yo(:,1), yo(:,2), injPos(:,2)) + randn(rows(dBSArchive), 1).*dBSArchive(:,4) + injSlope*(injPos(:,1) - injPos(:,2)),;
-end
-
-clear pause
-
-
-%These data should probably be dumped to a plot included in the thesis. 
-plot(dBSArchive(:,1), dBSArchive(:,2),'+');
-pause
-plot(pM(:,aCol), pM(:,bCol),'+');
-pause
-
-%These data should land in the thesis too. 
-plot3(dBSArchive(:,1), dBSArchive(:,2), dBSArchive(:,3),'+');
-pause
 
 %Sanity check
 if rows(dBSArchive) < 2

@@ -1,5 +1,3 @@
-run3147preFit
-
 pause = 0; 
 
 % 'SQP'
@@ -8,7 +6,7 @@ pause = 0;
 fitAlgorithm = 'Levenburg';
 
 %Bootstrap loop
-for bootStrapCounter = 1:30000
+for bootStrapCounter = 1:1000
 
 	bootStrapCounter
 
@@ -45,7 +43,7 @@ for bootStrapCounter = 1:30000
 			bsO = [ x(1) x(2) csMin nf iter fitInfo ranSeed x(3)];
 			%if fit converged, save it.
 			if(fitInfo == 101) 
-				bootstrapOut(bootStrapCounter,:) = bsO; 
+	                        bootstrapOut = [bootstrapOut; bsO];
 			end
 		 case {'Levenburg'}
 			%Define Bounds
@@ -56,15 +54,21 @@ for bootStrapCounter = 1:30000
 			csMin = sum( ( (f-d(:,3))./d(:,4) ).^2 )/rows(d) ;
 			bsO =  [ x(1) x(2) csMin r2 iter ranSeed x(3)];
 			if(cvg == 1)
-	                        bootstrapOut(bootStrapCounter,:) = bsO;
+	                        bootstrapOut = [bootstrapOut; bsO];
 			end
 		 otherwise
 			errstr = ['Fit algorithm ' fitAlgorithm ' is an invalid choice'];
 			error(errstr);
 		end
 
-		outfilename = ['run3147bootstrapYukawa.SimulFloata' num2str(alpha) 'l' num2str(lambda) 'slop' num2str(injSlope) fitAlgorithm '.dat'];
-		save( outfilename, "bootstrapOut");
+		if(1 == testInjection)
+			injParameters = [lambda alpha injSlope];
+			outfilename = ['output/bootstrapYukawa.SimulFloata' num2str(alpha) 'l' num2str(lambda) 'slop' num2str(injSlope) fitAlgorithm '.dat'];
+		else
+			injParameters = [0 0 0];
+			outfilename = ['output/bootstrapYukawa.SimulFloat' fitAlgorithm '.dat'];
+		end
+		save( outfilename, "bootstrapOut", "injParameters");
 	catch
 		'FIT ERROR!'
 		errorMessage
