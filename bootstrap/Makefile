@@ -2,33 +2,45 @@ include ../Makefile.inc
 
 PREREQUISITES =  *.m $(HOMEDIR)/calibration/pressure/run2937pressEncOutput.dat $(MLIB) $(HOMEDIR)/runAnalysis/results/run3147pM3FilterMerge.dat
 
+FITA=--eval 'alpha = 100;  lambda = 200e-6; injSlope =  5e-11;'
+FITB=--eval 'alpha = 0;    lambda = 200e-6; injSlope = -4e-12;'
+FITC=--eval 'alpha = -100; lambda = 200e-6; injSlope =  6e-12;'
+FITD=--eval 'alpha = 500;  lambda = 200e-6; injSlope = -1e-11;'
+FITE=--eval 'alpha = 1;    lambda = 100e-6; injSlope = -2e-12;'
+FITF=--eval 'alpha = 1;    lambda = 56e-6;  injSlope = -3e-11;'
+FITG=--eval 'alpha = -1;   lambda = 56e-6;  injSlope = -1e-11;'
+FITH=--eval 'alpha = 200;  lambda = 30e-6;  injSlope =  0e-11;'
+FITI=--eval 'alpha = 500;  lambda = 200e-6; injSlope =  1e-11;'
+
+
 
 yukawaFit : $(PREREQUISITES)
 	$(OCT)  yukawaWrapper.m
 
 yukawaFitTest : $(PREREQUISITES)
-	$(OCT) --eval 'alpha = 100;  lambda = 200e-6; injSlope =  5e-11;' yukawaWrapper.m
-	$(OCT) --eval 'alpha = 0;    lambda = 200e-6; injSlope = -4e-12;' yukawaWrapper.m
-	$(OCT) --eval 'alpha = -100; lambda = 200e-6; injSlope =  6e-12;' yukawaWrapper.m
-	$(OCT) --eval 'alpha = 500;  lambda = 200e-6; injSlope = -1e-11;' yukawaWrapper.m
-	$(OCT) --eval 'alpha = 1;    lambda = 100e-6; injSlope = -2e-12;' yukawaWrapper.m
-	$(OCT) --eval 'alpha = 1;    lambda = 56e-6;  injSlope = -3e-11;' yukawaWrapper.m
-	$(OCT) --eval 'alpha = -1;   lambda = 56e-6;  injSlope = -1e-11;' yukawaWrapper.m
-	$(OCT) --eval 'alpha = 200;  lambda = 30e-6;  injSlope =  0e-11;' yukawaWrapper.m
-	$(OCT) --eval 'alpha = 500;  lambda = 200e-6; injSlope =  1e-11;' yukawaWrapper.m
+	$(OCT) $(FITA) yukawaWrapper.m
+	$(OCT) $(FITB) yukawaWrapper.m
+	$(OCT) $(FITC) yukawaWrapper.m
+	$(OCT) $(FITD) yukawaWrapper.m
+	$(OCT) $(FITE) yukawaWrapper.m
+	$(OCT) $(FITF) yukawaWrapper.m
+	$(OCT) $(FITG) yukawaWrapper.m
+	$(OCT) $(FITH) yukawaWrapper.m
+	$(OCT) $(FITI) yukawaWrapper.m
 
 arbFit : $(PREREQUISITES)
 	$(OCT) arbFitWrapper.m
 
 arbFitTest : $(PREREQUISITES)
-	$(OCT) --eval 'alpha = 100;  lambda = 200e-6; injSlope =  5e-11;' arbFitWrapper.m
-	$(OCT) --eval 'alpha = 0;    lambda = 200e-6; injSlope = -4e-12;' arbFitWrapper.m
-	$(OCT) --eval 'alpha = -100; lambda = 200e-6; injSlope =  6e-12;' arbFitWrapper.m
-	$(OCT) --eval 'alpha = 500;  lambda = 200e-6; injSlope = -1e-11;' arbFitWrapper.m
-	$(OCT) --eval 'alpha = 1;    lambda = 100e-6; injSlope = -2e-12;' arbFitWrapper.m
-	$(OCT) --eval 'alpha = 1;    lambda = 56e-6;  injSlope = -3e-11;' arbFitWrapper.m
-	$(OCT) --eval 'alpha = -1;   lambda = 56e-6;  injSlope = -1e-11;' arbFitWrapper.m
-	$(OCT) --eval 'alpha = 200;  lambda = 30e-6;  injSlope =  0e-11;' arbFitWrapper.m
-	$(OCT) --eval 'alpha = 500;  lambda = 200e-6; injSlope =  1e-11;' arbFitWrapper.m
+	$(OCT) $(FITA) arbFitWrapper.m
+	$(OCT) $(FITB) arbFitWrapper.m
+	$(OCT) $(FITC) arbFitWrapper.m
+	$(OCT) $(FITD) arbFitWrapper.m
+	$(OCT) $(FITE) arbFitWrapper.m
+	$(OCT) $(FITF) arbFitWrapper.m
+	$(OCT) $(FITG) arbFitWrapper.m
+	$(OCT) $(FITH) arbFitWrapper.m
+	$(OCT) $(FITI) arbFitWrapper.m
+
 #clean : 
 #	rm *.dat
