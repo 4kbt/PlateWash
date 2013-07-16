@@ -17,6 +17,8 @@ FITI=--eval 'alpha = 500;  lambda = 200e-6; injSlope =  1e-11;'
 yukawaFit : $(PREREQUISITES)
 	$(OCT)  yukawaWrapper.m
 
+test:yukawaFitTest arbFitTest
+
 yukawaFitTest : $(PREREQUISITES)
 	$(OCT) $(FITA) yukawaWrapper.m
 	$(OCT) $(FITB) yukawaWrapper.m
@@ -42,5 +44,6 @@ arbFitTest : $(PREREQUISITES)
 	$(OCT) $(FITH) arbFitWrapper.m
 	$(OCT) $(FITI) arbFitWrapper.m
 
-#clean : 
-#	rm *.dat
+clean : 
+	rm output/*.dat
+	rm output/*.eps
