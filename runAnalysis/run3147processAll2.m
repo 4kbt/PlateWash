@@ -3,7 +3,16 @@ pause = 0;
 more off; 
 path
 
-for nameCtr = 3147:3166
+
+
+runNamesToAnalyze  = 3147:3166;
+
+%Coil on apparatus long stroke 
+%Coil on apparatus short stroke magnetic tests
+runNamesToAnalyze = [runNamesToAnalyze 3203 3204 3205];
+
+
+for nameCtr = runNamesToAnalyze 
 %for nameCtr = 3224:3224
 
 	clear -x nameCtr pause
