@@ -1,6 +1,7 @@
-function [cS yTD] = chiSquareVectorYukawaWSlope(inOutTorqueTorqueErr, lambdas, alphas, slope)
+%d = inOutTorqueTorqueErr; removed to save a copy.
+function [cS yTD] = chiSquareVectorYukawaWSlope(d, lambdas, alphas, slope)
 
-	d=inOutTorqueTorqueErr;
+%	d=inOutTorqueTorqueErr;
 
 	%Note that not transposing d is important
 	measTorques = repmat(d(:,3), [1 length(lambdas) length(alphas)]);
