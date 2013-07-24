@@ -10,6 +10,9 @@ brick :
 washCycleBrick:
 	$(OCT) washCycleDemo.m
 
+tiltmeterQTester:
+	$(OCT) tiltmeterDemo.m
+
 # Non-infinite torque
 simulation : 
 	$(OCT) processRun.m
