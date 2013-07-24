@@ -13,7 +13,7 @@ if( fakeTheData == 1)
 	'injecting fake data!'
 
 	simTor = simulatedTorque( [pwData(:,pwTimeCol), pwData(:,torqueCol)], [psData(:,psTimeCol), psData(:,psSquareCol)],\
-	yukawaForceLaw( 10, 100e-6, 1e-6, 3e-3, 1e-6),\
+	yukawaForceLaw( 100, 100e-6, 1e-6, 3e-3, 1e-6),\
 	2e-14);
 
 	unBlind = 1;

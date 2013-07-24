@@ -36,8 +36,6 @@ MAGC=--eval 'nameCtr = 3205'
 #	./run3147pLDAFiltermerge.sh
 
 
-results/run3147pM3FilterMerge.dat : runs run3147pLDAFiltermerge.sh
-	./run3147pLDAFiltermerge.sh
 
 
 #Spelled out this way in hopes of parallelizing someday. Apologies for the complexity
@@ -66,6 +64,8 @@ runs -$(RESULTS) : analyzeRun.m ../calibration/ ../mlib/ ../globalConfig
 	$(OCT) $(MAGB) analyzeRun.m
 	$(OCT) $(MAGC) analyzeRun.m
 
+results/run3147pM3FilterMerge.dat : runs run3147pLDAFiltermerge.sh
+	./run3147pLDAFiltermerge.sh
 
 path : 
 	$(OCT) --verbose pathTest.m

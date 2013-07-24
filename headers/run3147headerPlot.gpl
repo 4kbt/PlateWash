@@ -1,0 +1,24 @@
+set xlabel 'time since 1/1/2009 (days)'
+
+set ylabel 'run number'
+
+pl \
+	'psHeaders.dat'  u ($10/86400):2 w lp tit 'Pendulum',\
+	'pwHeaders.dat'  u ($10/86400):2 w lp tit 'Attractor',\
+	'ifoHeaders.dat' u ($10/86400):2 w lp tit 'Interferometer'
+
+f(x) = A*x+b
+
+fit f(x) 'pwHeaders.dat' u ($10/86400):2 via A,b
+
+
+set x2tics
+set xtics nomirror
+	
+pl \
+	'psHeaders.dat'  u ($10/86400):($2-f($10/86400)) w lp tit 'Pendulum',\
+	'pwHeaders.dat'  u ($10/86400):($2-f($10/86400)) w lp tit 'Attractor',\
+	'ifoHeaders.dat' u ($10/86400):($2-f($10/86400)) w lp tit 'Interferometer',\
+	'pwHeaders.dat' u (f($10/86400)):($2-f($10/86400)) ax x2y1 w p ps 0
+
+	

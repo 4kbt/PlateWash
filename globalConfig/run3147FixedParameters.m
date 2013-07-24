@@ -12,6 +12,8 @@ psdWidth=1e-2;
 focalLength=400e-3;
 unBlind = 0 ;
 fakeTheData = 1;
+testInjection = 1;
+
 
 %end 3077free.m
 

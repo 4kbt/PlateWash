@@ -13,7 +13,13 @@ try
 	sm3squareA
 	eval(['save "results/run' num2str(nameCtr) 'pM3Filter.dat" pM sizes times']);
 	eval(['save "results/run' num2str(nameCtr) 'pM3FilterOnly.dat" pM']);
+
+	pM = pMU; 
+	eval(['save "alwaysUnblindedResults/run' num2str(nameCtr) 'pM3Filter.dat" pM sizes times']);
+	eval(['save "alwaysUnblindedResults/run' num2str(nameCtr) 'pM3FilterOnly.dat" pM']);
+	clear pM;
 catch
 	nameCtr
 	errorMessage
+	lasterror
 end

@@ -190,6 +190,12 @@ for j = 1:(floor(numRows/lockAve) - 1) %changed from length(pwRows) to numRows 1
 
 end
 
+%These guys are always unblinded. Use with care.
+pMU = [pDiff pA pB qDiff qA qB pDiffDev qDiffDev pAmax pAmin pBmax pBmin qAmax qAmin qBmax qBmin pAStdDev pBStdDev qAStdDev qBStdDev];
+
+%sanity checks
+assert( sum(sum(isnan(pMU))) == 0 )
+
 %Blind.
 if(exist('unBlind') & unBlind == true)
 else
