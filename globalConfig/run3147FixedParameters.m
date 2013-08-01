@@ -11,7 +11,7 @@ kappa=4*pi*pi*pendulumF0*pendulumF0*pendulumI;
 psdWidth=1e-2;
 focalLength=400e-3;
 unBlind = 0 ;
-fakeTheData = 1;
+fakeTheData = 0;
 testInjection = 1;
 
 
@@ -80,6 +80,7 @@ torCol = torqueCol;
 torerrCol = 6*65+torCol;
 
 torErrThresh = 1e-14;
+torErrMin    = 1e-18;
 
 fprintf('# read Complete \n')
 

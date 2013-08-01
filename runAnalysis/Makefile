@@ -13,7 +13,7 @@ SCIF=--eval 'nameCtr = 3152'
 SCIG=--eval 'nameCtr = 3153'
 SCIH=--eval 'nameCtr = 3154'
 SCII=--eval 'nameCtr = 3155'
-SCIJ=--eval 'nameCtr = 3156'
+#SCIJ=--eval 'nameCtr = 3156'
 SCIK=--eval 'nameCtr = 3157'
 SCIL=--eval 'nameCtr = 3158'
 SCIM=--eval 'nameCtr = 3159'
@@ -22,7 +22,7 @@ SCIO=--eval 'nameCtr = 3161'
 SCIP=--eval 'nameCtr = 3162'
 SCIQ=--eval 'nameCtr = 3163'
 SCIR=--eval 'nameCtr = 3164'
-SCIS=--eval 'nameCtr = 3165'
+#SCIS=--eval 'nameCtr = 3165'
 SCIT=--eval 'nameCtr = 3166'
 
 #Magnetic runs, coil on can, short stroke
@@ -49,7 +49,7 @@ runs -$(RESULTS) : analyzeRun.m ../calibration/ ../mlib/ ../globalConfig
 	$(OCT) $(SCIG) analyzeRun.m
 	$(OCT) $(SCIH) analyzeRun.m
 	$(OCT) $(SCII) analyzeRun.m
-	$(OCT) $(SCIJ) analyzeRun.m
+#	$(OCT) $(SCIJ) analyzeRun.m
 	$(OCT) $(SCIK) analyzeRun.m
 	$(OCT) $(SCIL) analyzeRun.m
 	$(OCT) $(SCIM) analyzeRun.m
@@ -58,7 +58,7 @@ runs -$(RESULTS) : analyzeRun.m ../calibration/ ../mlib/ ../globalConfig
 	$(OCT) $(SCIP) analyzeRun.m
 	$(OCT) $(SCIQ) analyzeRun.m
 	$(OCT) $(SCIR) analyzeRun.m
-	$(OCT) $(SCIS) analyzeRun.m
+#	$(OCT) $(SCIS) analyzeRun.m
 	$(OCT) $(SCIT) analyzeRun.m
 	$(OCT) $(MAGA) analyzeRun.m
 	$(OCT) $(MAGB) analyzeRun.m

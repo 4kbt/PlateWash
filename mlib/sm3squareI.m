@@ -1,6 +1,7 @@
 %Rev. H. Adding max/min support to data analysis.
 %Rev. I. Reordering location of A,B stdDev computation, writing devs to disk.
 
+	assert(sum(isnan(pwData(:,torqueCol))) == 0 )
 fprintf('* finding edges ');
 startEdgeTimeR =  psData(findRisingEdge([psData(:,psTimeCol) psData(:,psSquareCol)]), psTimeCol); 
 startEdgeTimeF =  psData(findFallingEdge([psData(:,psTimeCol) psData(:,psSquareCol)]), psTimeCol); 
@@ -96,6 +97,8 @@ else
 	%torqueCal = 2.59e-10 was FeedbackFit based
 %	torqueCal = 2.1e-9 %SWAG from run3147calFitChk
 	pwData(:,torqueCol) = torqueCal * pwData(:,torqueCol);
+
+	assert(sum(isnan(pwData(:,torqueCol))) == 0 )
 end % doNotFitTwoOmega
 
 
@@ -194,6 +197,11 @@ end
 pMU = [pDiff pA pB qDiff qA qB pDiffDev qDiffDev pAmax pAmin pBmax pBmin qAmax qAmin qBmax qBmin pAStdDev pBStdDev qAStdDev qBStdDev];
 
 %sanity checks
+if (sum(sum(isnan(pMU))) > 0 )
+	sum(isnan(pMU))
+end
+
+
 assert( sum(sum(isnan(pMU))) == 0 )
 
 %Blind.
