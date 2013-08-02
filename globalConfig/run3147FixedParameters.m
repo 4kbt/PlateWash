@@ -48,6 +48,7 @@ doNotRemoveSpikes = 1
 %doNotFitTwoOmega = 1
 
 fprintf('# setup ');
+numSensors = 65;
 psSquareCol = 15;
 torqueCol   = 16;
 %torqueCol   = 23;
