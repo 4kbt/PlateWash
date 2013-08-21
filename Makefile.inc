@@ -8,6 +8,9 @@ GNU := gnuplot
 
 MLIB := $(shell ls -d -1 $(HOMEDIR)/mlib/)
 
+.INTERACT: 
+	$(OCT) --persist
+
 .PHONY : 
 	@echo $(OCT)
 	@echo $(MLIB)
