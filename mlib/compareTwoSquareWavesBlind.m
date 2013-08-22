@@ -35,18 +35,13 @@ aDev = aTor(2) * sqrt(rows(a));
 bDev = bTor(2) * sqrt(rows(b));
 
 %This isn't the optimal bin spacing. It should scale somehow with rows(a)/rows(b)
-aBins = min(a(:,sciCol)):aDev:max(a(:,sciCol));
-bBins = min(b(:,sciCol)):bDev:max(b(:,sciCol));
+aBins = (min(a(:,sciCol)):aDev:max(a(:,sciCol)));
+bBins = (min(b(:,sciCol)):bDev:max(b(:,sciCol)));
 
 [aH aX] = hist(a(:,sciCol),aBins);
 [bH bX] = hist(b(:,sciCol),bBins);
 
-hist(a(:,sciCol),aBins);
-pause
-
-hist(b(:,sciCol),bBins);
-
-%plot3(a(:,lockCol+numSensors), a(:,lockCol+2*numSensors), a(:,sciCol),'.', b(:,lockCol + 2*numSensors), b(:,lockCol+numSensors), -b(:,sciCol),'.1')
-pause
+aH = aH'; aBins = aBins';
+bH = bH'; bBins = bBins';
 
 end

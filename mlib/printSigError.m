@@ -5,7 +5,7 @@
 function printSigError(central, err, filename)
 %	filename
 
-	prec = ceil(  log10( central/err ) )
+	prec = ceil(  log10( abs(central/err) ) )
 
 	if(prec >= 0)
 		cl   = floor( log10( abs(central ) ) );

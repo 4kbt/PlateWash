@@ -1,0 +1,15 @@
+include ../../Makefile.inc
+
+PREREQUISITES = $(HOMEDIR)/runAnalysis/results
+
+shortStroke :  coilOnCanShortStroke.m $(PREREQUISITES)
+	$(OCT) coilOnCanShortStroke.m
+
+longStroke  :  coilOnCanLongStroke.m $(PREREQUISITES)
+	$(OCT) coilOnCanLongStroke.m
+
+
+
+clean : 
+	-rm output/*.dat
+	-rm output/*.eps

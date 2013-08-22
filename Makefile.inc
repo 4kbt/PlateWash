@@ -1,12 +1,15 @@
 HOMEDIR := ~/goldStandard/
 
-OCT:= octave -p /home/charlie/goldStandard/mlib/ \
-	-p /home/charlie/goldStandard/runConfig/\
-	-p /home/charlie/goldStandard/simulatedData/\
-	-p /home/charlie/goldStandard/globalConfig/
+OCT:= octave --no-init-file \
+	--eval "HOMEDIR = \"$(HOMEDIR)\";"\
+	--eval 'initializeOctave;'\
+	-p $(HOMEDIR)/globalConfig/
 GNU := gnuplot
 
 MLIB := $(shell ls -d -1 $(HOMEDIR)/mlib/)
+
+.INTERACT: 
+	$(OCT) --persist
 
 .PHONY : 
 	@echo $(OCT)

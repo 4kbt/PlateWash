@@ -17,7 +17,8 @@ testInjection = 1;
 
 %end 3077free.m
 
-HOMEDIR = '~/goldStandard/'
+%This is now defined in Makefile.inc 
+%HOMEDIR = '~/goldStandard/'
 
 %units are seconds 
 dTime = 55;   printInteger(dTime, [HOMEDIR 'extracted/dTime.tex']);

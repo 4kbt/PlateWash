@@ -12,6 +12,8 @@ else
 	CALIBFILES = CALFILES
 endif
 
+all: run3147calFitChk.eps
+
 $(MLIB) $(CALIBFILES):run3147calibFitAll.m 
 	$(OCT) run3147calibFitAll.m
 
@@ -32,8 +34,6 @@ run3147calFitChk.eps: run3147calFitChk.gpl $(CALIBMERGEFILE) $(CALIBMEANFILE)
 
 
 clean: 
-	rm *.dat 
-	rm *.eps
+	-rm *.dat 
+	-rm *.eps
 
-all:
-	make run3147calFitChk.eps
