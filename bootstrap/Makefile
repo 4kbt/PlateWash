@@ -12,7 +12,7 @@ FITG=--eval 'alpha = -1;   lambda = 56e-6;  injSlope = -1e-11;'
 FITH=--eval 'alpha = 200;  lambda = 30e-6;  injSlope =  0e-11;'
 FITI=--eval 'alpha = 500;  lambda = 200e-6; injSlope =  1e-11;'
 
-
+all : yukawaFit arbFit test
 
 yukawaFit : $(PREREQUISITES)
 	$(OCT)  yukawaWrapper.m

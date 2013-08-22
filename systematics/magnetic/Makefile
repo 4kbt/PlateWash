@@ -11,5 +11,5 @@ longStroke  :  coilOnCanLongStroke.m $(PREREQUISITES)
 
 
 clean : 
-	rm output/*.dat
-	rm output/*.eps
+	-rm output/*.dat
+	-rm output/*.eps

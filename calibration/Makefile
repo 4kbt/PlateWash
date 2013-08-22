@@ -34,6 +34,6 @@ run3147calFitChk.eps: run3147calFitChk.gpl $(CALIBMERGEFILE) $(CALIBMEANFILE)
 
 
 clean: 
-	rm *.dat 
-	rm *.eps
+	-rm *.dat 
+	-rm *.eps
 

@@ -46,6 +46,7 @@ THRD=--eval 'nameCtr = 3217;'
 
 ANALYSISDEPS := analyzeRun.m ../calibration/ ../mlib/ ../globalConfig
 
+all: results/run3147pM3FilterMerge.dat
 
 #Spelled out this way in hopes of parallelizing someday. Apologies for the complexity
 runs -$(RESULTS) : $(ANALYSISDEPS)
@@ -81,4 +82,4 @@ path :
 	$(OCT) --verbose pathTest.m
 
 clean :
-	rm results/*.dat
+	-rm results/*.dat
