@@ -13,6 +13,9 @@ washCycleBrick:
 tiltmeterQTester:
 	$(OCT) tiltmeterDemo.m
 
+spinCalibration:
+	$(OCT) spinPendulumDemo.m
+
 # Non-infinite torque
 simulation : 
 	$(OCT) processRun.m
