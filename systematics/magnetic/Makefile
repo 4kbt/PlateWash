@@ -2,6 +2,8 @@ include ../../Makefile.inc
 
 PREREQUISITES = $(HOMEDIR)/runAnalysis/results
 
+all: shortStroke longStroke
+
 shortStroke :  coilOnCanShortStroke.m $(PREREQUISITES)
 	$(OCT) coilOnCanShortStroke.m
 
