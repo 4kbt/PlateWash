@@ -1,0 +1,13 @@
+3206    ps      15+15at 1/256. ps and pw clocks match 3206
+3206    pw      coil disconnected. Shortrange thermistor Xbee attached. Connector closer to pump port is Beta.
+3210    pw      back from colorado; relock?
+3213    pw      heating test beginning.
+3215    ps      30.2+2.5 at 1/256. Previous run was 15+15
+3215    pw      stuck on foil, but should relock. Heater on, attractor doing 30.2+2.5
+3216    ps      15+15 at 1/256.
+3216    pw      DAQ restarted. AO0 seemed to have stopped operating? Restart fixed it. Relocked. Unplugged and replugged feedback box inputs/outputs a few times while checking wtih DVM
+3217    ps      30.2+2.5 at 1/256
+3217    ifo     # heat systematic continues; pendulum relocked.
+3218    ps      15+15 at 1/256
+3218    pw      Going for long-stroke heat run
+
