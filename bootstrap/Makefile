@@ -45,5 +45,5 @@ arbFitTest : $(PREREQUISITES)
 	$(OCT) $(FITI) arbFitWrapper.m
 
 clean : 
-	rm output/*.dat
-	rm output/*.eps
+	-rm output/*.dat
+	-rm output/*.eps
