@@ -34,10 +34,9 @@ MAGC=--eval 'nameCtr = 3205;'
 MAGD=--eval 'nameCtr = 3197;'
 
 #Thermal runs 
-THRA=--eval 'nameCtr = 3213;'
-THRB=--eval 'nameCtr = 3215;'
-THRC=--eval 'nameCtr = 3216;'
-THRD=--eval 'nameCtr = 3217;'
+THRA=--eval 'nameCtr = 3215;'
+THRB=--eval 'nameCtr = 3217;'
+THRC=--eval 'nameCtr = 3218;'
 
 #depends on calibration, everything in mlib
 #analysis -$(RESULTS) : run3147processAll2.m ../calibration/
@@ -74,6 +73,9 @@ runs -$(RESULTS) : $(ANALYSISDEPS)
 	$(OCT) $(MAGB) analyzeRun.m
 	$(OCT) $(MAGC) analyzeRun.m
 	$(OCT) $(MAGD) analyzeRun.m
+	$(OCT) $(THRA) analyzeRun.m
+	$(OCT) $(THRB) analyzeRun.m
+	$(OCT) $(THRC) analyzeRun.m
 
 results/run3147pM3FilterMerge.dat : runs run3147pLDAFiltermerge.sh
 	./run3147pLDAFiltermerge.sh

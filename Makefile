@@ -1,3 +1,5 @@
+include Makefile.inc
+
 thesis : 
 	$(MAKE) -C calibration
 	$(MAKE) -C runAnalysis
