@@ -49,6 +49,6 @@ save 'plots/shortStrokeolHist.dat' olHist
 save 'plots/shortStrokeorHist.dat' orHist
 save 'plots/shortStrokeo0Hist.dat' o0Hist
 
-save 'plots/shortStrokeo0Positions' b0Positions
-save 'plots/shortStrokeoLPositions' bLPositions
-save 'plots/shortStrokeoRPositions' bRPositions
+save 'plots/shortStrokeo0Positions.dat' b0Positions
+save 'plots/shortStrokeoLPositions.dat' bLPositions
+save 'plots/shortStrokeoRPositions.dat' bRPositions

@@ -13,5 +13,6 @@ longStroke  :  coilOnCanLongStroke.m $(PREREQUISITES)
 
 
 clean : 
-	-rm output/*.dat
-	-rm output/*.eps
+	-rm plots/*.dat
+	-rm plots/*.eps
+	-rm extracted/*.tex
