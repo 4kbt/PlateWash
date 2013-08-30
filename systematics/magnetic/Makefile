@@ -11,8 +11,7 @@ longStroke  :  coilOnCanLongStroke.m $(PREREQUISITES)
 	$(OCT) coilOnCanLongStroke.m
 
 
-
 clean : 
 	-rm plots/*.dat
-	-rm plots/*.eps
 	-rm extracted/*.tex
+	$(MAKE) -C plots clean
