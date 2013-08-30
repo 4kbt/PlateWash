@@ -24,8 +24,8 @@ printSigError( l0Diff(1), l0Diff(2) , [filePath 'longStrokeL0Diff.tex']);
 olHist = [blBins blH];
 o0Hist = [b0Bins b0H];
 
-save 'plots/longStrokeolHist.dat' olHist
 save 'plots/longStrokeo0Hist.dat' o0Hist
+save 'plots/longStrokeoHHist.dat' olHist
 
 save 'plots/longStrokeo0Positions.dat' b0Positions
-save 'plots/longStrokeoLPositions.dat' bLPositions
+save 'plots/longStrokeoHPositions.dat' bLPositions
