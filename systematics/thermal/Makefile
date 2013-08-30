@@ -13,5 +13,5 @@ longStroke  :  thermalLongStroke.m $(PREREQUISITES)
 
 clean : 
 	-rm plots/*.dat
-	-rm plots/*.eps
 	-rm extracted/*.tex
+	$(MAKE) -C plots clean
