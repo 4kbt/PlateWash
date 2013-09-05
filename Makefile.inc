@@ -15,4 +15,6 @@ MLIB := $(shell ls -d -1 $(HOMEDIR)/mlib/)
 	@echo $(OCT)
 	@echo $(MLIB)
 
+SINGLEQUOTECUTTER := sed -e "s/^.*'\(.*\)'.*$$/\1/"
+
 

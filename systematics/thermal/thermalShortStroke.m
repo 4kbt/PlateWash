@@ -30,7 +30,7 @@ clear pM;
 %filePath = [HOMEDIR 'extracted/'];
 filePath = ['extracted/'];
 
-printSigError( l0Diff(1), l0Diff(2) , [filePath 'longStrokeL0Diff.tex']);
+printSigError( l0Diff(1), l0Diff(2) , [filePath 'shortStrokeL0Diff.tex']);
 
 olHist = [blBins blH];
 o0Hist = [b0Bins b0H];
