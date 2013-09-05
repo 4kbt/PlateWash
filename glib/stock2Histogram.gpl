@@ -1,8 +1,9 @@
 #Pass in variable filename, plotTitle, bottomlabel
 # gnuplot -e "filename = 'bob.dat'; plotTitle = 'Bob is your uncle'; bottomlabel = 'torque difference (N-m)'; homedir = \'$(HOMEDIR)\'"  $HOMEDIR/glib/stockHistogram.gpl
 
-outfile = filename.'.eps'
+
+outfile = filename.filename2.'.eps'
 
 load  homedir.'glib/plotSetup.gpl'
 
-pl filename w boxes lt 3
+pl filename w boxes lt 1 tit title1, filename2 w boxes lt 3 tit title2

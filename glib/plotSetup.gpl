@@ -1,0 +1,10 @@
+#Pass in variable filename, plotTitle, bottomlabel
+# gnuplot -e "filename = 'bob.dat'; plotTitle = 'Bob is your uncle'; bottomlabel = 'torque difference (N-m)'"  $HOMEDIR/glib/stockHistogram.gpl
+
+set key noauto
+
+set term postscript enhanced solid color
+set output outfile
+
+set title  plotTitle
+set xlabel bottomlabel
