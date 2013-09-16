@@ -11,7 +11,7 @@ b0 = [b0; pM];
 
 clear pM;
 
-[l0Diff blBins blH b0Bins b0H bLPositions b0Positions] = compareTwoSquareWavesBlind( bL,b0, torCol, torerrCol, torErrThresh, torErrMin, psSquareCol, numSensors, 1, 2);
+[l0Diff blBins blH b0Bins b0H bLPositions b0Positions] = compareTwoSquareWavesBlind( bL,b0, torCol, torerrCol, torErrThresh, torErrMin, numPWSensors + psSquareCol, numSensors, 1, 2);
 
 
 %Output...
