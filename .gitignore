@@ -11,3 +11,4 @@ octave-core
 *.tex
 *.dta
 *.hdr
+*.lyx~
