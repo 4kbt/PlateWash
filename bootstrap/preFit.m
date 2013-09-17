@@ -5,7 +5,7 @@ run3147FixedParameters
 
 %Calibrate duty/microe.
 if( ~exist('pressEncP'))
-	pressEncP = load([HOMEDIR 'calibration/pressure/run2937pressEncOutput.dat']);
+	pressEncP = getPressEncP(HOMEDIR); 
 end
 
 %Need to put these somewhere.
