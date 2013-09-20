@@ -67,9 +67,9 @@ Here's a possible fit function:
 \begin_inset Formula 
 \begin{eqnarray*}
 F(x) & = & \pi G\alpha e^{-x/\lambda}\rho_{1}\rho_{2}[\mbox{finite size/torque terms}]\,(\mbox{novel gravity})\\
- &  & +\Delta T\alpha_{T}e^{-x/\lambda_{T}}C_{T}\,(\mbox{A-F temperature difference})\\
- &  & +B_{\parallel}\alpha_{B_{L\parallel}}e^{-x/\lambda_{B_{L\parallel}}}C_{B_{L\parallel}}+B_{\perp}\alpha_{B_{L\perp}}e^{-x/\lambda_{B_{L\perp}}}C_{B_{L\perp}}\,(\mbox{Linear magnetism})\\
- &  & +B_{\parallel}^{2}\alpha_{B_{Q\parallel}}e^{-x/\lambda_{B_{Q\parallel}}}C_{B_{Q\parallel}}+B_{\perp}^{2}\alpha_{B_{Q\perp}}e^{-x/\lambda_{B_{Q\perp}}}C_{B_{Q\perp}}\,(\mbox{Quadratic magnetism})\\
+ &  & +\Delta T\alpha_{T}e^{-x/\lambda_{T}}\,(\mbox{A-F temperature difference})\\
+ &  & +B_{\parallel}\alpha_{B_{L\parallel}}e^{-x/\lambda_{B_{L\parallel}}}+B_{\perp}\alpha_{B_{L\perp}}e^{-x/\lambda_{B_{L\perp}}}\,(\mbox{Linear magnetism})\\
+ &  & +B_{\parallel}^{2}\alpha_{B_{Q\parallel}}e^{-x/\lambda_{B_{Q\parallel}}}+B_{\perp}^{2}\alpha_{B_{Q\perp}}e^{-x/\lambda_{B_{Q\perp}}}\,(\mbox{Quadratic magnetism})\\
  &  & +C_{foil}Foil(x)+\sum_{frequencies}C_{f_{n}}Foil(x,\omega_{n})^{2}\,(\mbox{Foil motion})\\
  &  & +C_{Linear}x\,(\mbox{Linear background})\\
  &  & +C_{Quad}x^{2}\,(\mbox{Quadratic backgrounds; must be bounded)}
