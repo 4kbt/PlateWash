@@ -4,6 +4,12 @@ iforunNumber = '3138';
 
 preSync3
 
+verticalField = 0;
+axialField = 0;
+horizontalField = 0;
+leftAttrTemperature = 0;
+rightAttrTemperature = 0;
+
 psStartSec  = pwStartSec+271;
 %psEndSec    = psEndSec-100;
 %psEndSec    = psEndSec - 86000*.8

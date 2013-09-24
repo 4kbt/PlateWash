@@ -22,6 +22,9 @@ pwData  =  pwData(  pwOverlapStartIndex  : pwOverlapEndIndex  , : );
 psData  =  psData(  psOverlapStartIndex  : psOverlapEndIndex  , : );
 ifoData =  ifoData( ifoOverlapStartIndex : ifoOverlapEndIndex , : );
 
+newColumn = ones(rows(pwData), 1); 
+pwData = [pwData verticalField*newColumn axialField*newColumn horizontalField*newColumn leftAttrTemperature*newColumn rightAttrTemperature*newColumn]; 
+
 pwSampleTime = median(diff(pwData(:,pwTimeCol)));
 psSampleTime = median(diff(psData(:,psTimeCol)));
 ifoSampleTime = median(diff(ifoData(:,ifoTimeCol)));
@@ -30,5 +33,8 @@ if(abs(pwSampleTime-psSampleTime)>1e-1 | abs(ifoSampleTime - psSampleTime)>1e-1)
 	error("Sample Times do not match");
 end
 
-
-
+%Number of channels errorcheck.
+run3147FixedParameters
+assert( columns(pwData ) == numPWSensors ); 
+assert( columns(psData ) == numPSSensors ); 
+assert( columns(ifoData) == numIFOSensors); 

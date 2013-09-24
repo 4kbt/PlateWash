@@ -2,13 +2,13 @@ pwrunNumber  = '3146'
 psrunNumber  = '3147';
 iforunNumber = '3138';
 
+preSync3
+
 verticalField = 0;
 axialField = 0;
 horizontalField = 0;
 leftAttrTemperature = 0;
 rightAttrTemperature = 0;
-
-preSync3
 
 
 %psStartSec  = psStartSec+9*128;

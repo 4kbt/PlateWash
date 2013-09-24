@@ -1,4 +1,4 @@
-rootDir = '~/goldStandard/';
+rootDir = HOMEDIR;
 subDir = 'data/';
 runPrefix = [ ' = fopen("' rootDir subDir 'run']
 
