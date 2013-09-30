@@ -1,2 +1,9 @@
 *.lyx~
 *.*.swp
+*.lyx#
+*.eps
+*.ps
+*.dvi
+*.log
+*.aux
+*.pdf

@@ -16,6 +16,8 @@ set title 'Approximate PlateWash Transfer Function'
 set xlabel 'frequency (Hz)'
 set ylabel 'transfer function ( radians / N-m )'
 
+set ytics format '10^{%L}'
+
 pl [1e-4:1]\
 	trans(x) lt 3 tit 'torsion oscillator',\
 	f_0**2/k/x/x lt 0 lw 2 tit 'free mass'

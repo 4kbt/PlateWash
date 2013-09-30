@@ -69,7 +69,7 @@ Each Platewash measurement operates in a frequency regime spanning 100
 \end_inset
 
 Hz to 1 Hz.
- This section describes the way in which critical experimental frequencies
+ This section describes the way in which important experimental frequencies
  were selected.
 \end_layout
 
@@ -79,7 +79,8 @@ Spectral Character of Noise
 
 \begin_layout Standard
 A torsion balance is an excellent harmonic oscillator.
- For modern fibers, the anharmonic terms are smaller than XXX (cite Bantel).
+ For quality torsion fibers, the anharmonic terms are smaller than XXX (cite
+ Bantel).
  The torque to angle transfer function of a torsion oscillator with resonant
  angular frequency 
 \begin_inset Formula $\omega_{0}$
@@ -116,7 +117,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename thesis/plots/pwTransferFunction.eps
+	filename plots/pwTransferFunction.eps
 	width 50page%
 	scaleBeforeRotation
 
@@ -154,7 +155,7 @@ name "fig:Approximate-torque-to-angle-tran"
 \end_layout
 
 \begin_layout Standard
-Note that for 
+For 
 \begin_inset Formula $\omega\gg\omega_{0}$
 \end_inset
 
@@ -248,7 +249,7 @@ No physical measurement has arbitrary precision, thus we must consider the
 \begin_inset Formula $\delta\theta$
 \end_inset
 
- (this is a practical approximation).
+ (this is a practical approximation, see XXX).
  Our minimum resolvable torque signal at any given frequency is 
 \begin_inset Formula 
 \[
@@ -360,7 +361,7 @@ non-Gaussian
  computer crashes, etc.
  all happen.
  They are often short in duration, but overwhelming in amplitude.
- Measurements taken at these moments are unusable.
+ Measurements taken at these tims are unusable.
  They are rare-enough that most experiments never incorporate them into
  their noise budget.
  LIGO, the gravitational wave interferometer, is a rare exception; some
@@ -394,8 +395,8 @@ A second benefit to small
 
  is improved statistics.
  This measurement relies on Monte Carlo-like measurement schemes (random
- attractor locations) to understand some systematic effects and better constrain
- possible violations of the ISL.
+ attractor locations) to understand systematic uncertainties and better
+ constrain possible violations of the ISL.
  Faster individual measurements allow faster exploration of parameter space
  (exploring a 
 \begin_inset Formula $6\times6$
@@ -906,7 +907,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename thesis/plots/lagFrequencySNR.eps
+	filename plots/lagFrequencySNR.eps
 
 \end_inset
 
@@ -1006,11 +1007,51 @@ s sample time, making each attractor period an integer number of samples.
 \end_layout
 
 \begin_layout Subsection
-P-term
+Choosing a science signal
 \end_layout
 
 \begin_layout Standard
+As the pendulum is locked in feedback, there are multiple data channels
+ that may be used to extract a science measurement.
+ The pendulum twist angle, the feedback signal itself, and the P, I, and
+ D terms of the feedback loop are written to disk.
+ The pendulum twist angle and the P (proportional) term of the loop are
+ necessarily equivalent.
+ In practice, the twist signal and P term were anti-aliased differently.
+ The P term had an XXX s filter applied, making it the signal of choice
+ for a twist measurement.
+ The loop was operated with zero I-term, so the I channel contains no signal.
+ The D (derivative) term responds like 
+\begin_inset Formula $\omega$
+\end_inset
 
+, making it unsuited to low frequency signal extraction.
+\end_layout
+
+\begin_layout Standard
+So, there are two reasonable science channels: the feedback signal applied
+ to the pendulum, and the P term.
+ The feedback signal has units of torque, the P term has units of angle.
+ Even though the pendulum is held fixed, the torque-angle transfer function
+ remains important.
+ At frequencies below the resonance of the pendulum, the two channels are
+ directly proportional.
+ At frequencies above resonance, the frequency-independent angle noise of
+ the autocollimator appears, in the feedback signal, as torque noise that
+ rises like frequency squared.
+ As shown in XXX, the higher harmonics of the attractor motion contain no
+ interesting signal, so it is in our interest to low-pass them away.
+ 
+\end_layout
+
+\begin_layout Standard
+By choosing the angle signal instead of the feedback signal as the science
+ signal, we use the inertia of the pendulum as an analog low-pass filter.
+ While, in principle, both signals contain the science, the science signal
+ is more-easily extracted from the angle signal.
+ Furthermore, as the feedback signal is the sum of the P and the derived
+ D terms, there's less opportunity for an error to enter into the science
+ signal if the measured angle is used alone.
 \end_layout
 
 \end_body
