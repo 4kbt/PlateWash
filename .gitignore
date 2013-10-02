@@ -1,9 +1,10 @@
 .*.swp
+*.*.swp
+.*.swp
 *.swp
 .*.swo
 *.swo
 *.swn
-.*.swp
 .*.swo
 octave-core
 *.dat
@@ -12,3 +13,9 @@ octave-core
 *.dta
 *.hdr
 *.lyx~
+*.lyx#
+*.ps
+*.dvi
+*.log
+*.aux
+*.pdf

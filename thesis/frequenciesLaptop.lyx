@@ -1,0 +1,1058 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Frequency
+\end_layout
+
+\begin_layout Standard
+Each Platewash measurement operates in a frequency regime spanning 100 
+\begin_inset Formula $\mu$
+\end_inset
+
+Hz to 1 Hz.
+ This section describes the way in which important experimental frequencies
+ were selected.
+\end_layout
+
+\begin_layout Subsection
+Spectral Character of Noise
+\end_layout
+
+\begin_layout Standard
+A torsion balance is an excellent harmonic oscillator.
+ For quality torsion fibers, the anharmonic terms are smaller than XXX (cite
+ Bantel).
+ The torque to angle transfer function of a torsion oscillator with resonant
+ angular frequency 
+\begin_inset Formula $\omega_{0}$
+\end_inset
+
+ , torsion spring constant 
+\begin_inset Formula $\kappa$
+\end_inset
+
+, moment of inertia 
+\begin_inset Formula $I$
+\end_inset
+
+, and quality factor 
+\begin_inset Formula $Q$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+\left|\frac{\theta(\omega)}{\tau(\omega)}\right|=\frac{1/\kappa}{\sqrt{(1-\omega^{2}/\omega_{0}^{2})^{2}+1/Q^{2}}};\Rightarrow\mbox{If }\omega\gg\omega_{0},\,\left|\frac{\theta(\omega)}{\tau(\omega)}\right|\rightarrow\frac{1}{I\omega^{2})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename plots/pwTransferFunction.eps
+	width 50page%
+	scaleBeforeRotation
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Approximate torque-to-angle transfer function
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Approximate-torque-to-angle-tran"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For 
+\begin_inset Formula $\omega\gg\omega_{0}$
+\end_inset
+
+, the pendulum response is independent of the torsion spring.
+ This is the equivalent of 
+\begin_inset Formula $F=ma=m\ddot{x}\rightarrow\tilde{\tau}=I(-\omega^{2})\tilde{\theta}$
+\end_inset
+
+; at these frequencies, the pendulum is a free mass.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Thermal Noise
+\end_layout
+
+\begin_layout Standard
+The intrinsic noise in a torsion balance is known (XXX) to be consistent
+ with thermal noise from 
+\begin_inset Quotes eld
+\end_inset
+
+internal damping
+\begin_inset Quotes erd
+\end_inset
+
+, that is, that the spring constant has an imaginary part.
+ 
+\begin_inset Formula $I\ddot{\theta}=\kappa\theta\rightarrow I\ddot{\theta}=\kappa(1+i\frac{1}{Q})\theta$
+\end_inset
+
+ , where 
+\begin_inset Formula $\kappa$
+\end_inset
+
+ is the torsion constant of the fiber, 
+\begin_inset Formula $I$
+\end_inset
+
+ the pendulum's moment of inertia about the fiber axis, and 
+\begin_inset Formula $\theta$
+\end_inset
+
+ the pendulum twist angle.
+ This is in contrast to the more familiar external damping, where 
+\begin_inset Formula $I\ddot{\theta}=-\kappa\theta-\frac{\sqrt{\kappa I}}{Q}\dot{\theta}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Following Saulson's classic explication, internal damping gives rise to
+ torque noise power with a 
+\begin_inset Formula $1/f$
+\end_inset
+
+ spectral shape.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\tilde{\tau}^{2}(\omega)=4k_{B}T\frac{\kappa}{Q\omega}
+\]
+
+\end_inset
+
+Convolving this noise with the torque-to-angle transfer function (see Fig
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Approximate-torque-to-angle-tran"
+
+\end_inset
+
+), we recover the angle noise spectrum of a thermally-limited torsion oscillator.
+\end_layout
+
+\begin_layout Subsubsection
+Readout Noise
+\end_layout
+
+\begin_layout Standard
+No physical measurement has arbitrary precision, thus we must consider the
+ effects of finite-precision angle readout on our ability to measure torques.
+ For simplicity, let our minimum resolvable angle at all frequencies be
+ 
+\begin_inset Formula $\delta\theta$
+\end_inset
+
+ (this is a practical approximation, see XXX).
+ Our minimum resolvable torque signal at any given frequency is 
+\begin_inset Formula 
+\[
+\delta\tau(\omega)=\frac{\delta\theta}{T(\omega)}=\kappa\sqrt{(1-\omega^{2}/\omega_{0}^{2})^{2}+1/Q^{2}}\delta\theta\approx\kappa\left|1-\omega^{2}/\omega_{0}^{2}\right|\delta\theta
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+At frequencies above the pendulum resonance, the resolvable torque noise
+ rises with frequency.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Proximity Noise
+\end_layout
+
+\begin_layout Standard
+Reference other sections.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Experimentally determined noise curves
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Experimentally-determined-noise"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Emphasize here where the optimal noise is.
+\end_layout
+
+\begin_layout Subsection
+Statistics
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Statistics"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The higher the attractor frequency 
+\begin_inset Formula $f$
+\end_inset
+
+, the more individual measurements we can make.
+ In principle, given frequency-independent noise, the choice of signal frequency
+ is arbitrary.
+ If the noise power spectral density 
+\begin_inset Formula $S(\omega)=S_{0}$
+\end_inset
+
+, then the resulting uncertainty of 
+\begin_inset Formula $N$
+\end_inset
+
+ measurements each of duration 
+\begin_inset Formula $t=1/f$
+\end_inset
+
+ is 
+\begin_inset Formula $\sigma_{all}=\sqrt{S_{0}/Nt}$
+\end_inset
+
+.
+ If the measurements are performed in a fixed time 
+\begin_inset Formula $T=Nt$
+\end_inset
+
+, then 
+\begin_inset Formula $\sigma_{all}=\sqrt{S_{0}/T}$
+\end_inset
+
+, independent of 
+\begin_inset Formula $t$
+\end_inset
+
+ and 
+\begin_inset Formula $N$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Practically, however, noise is 
+\begin_inset Quotes eld
+\end_inset
+
+non-Gaussian
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Events such as earthquakes, human activity, attractor/foil interactions,
+ computer crashes, etc.
+ all happen.
+ They are often short in duration, but overwhelming in amplitude.
+ Measurements taken at these tims are unusable.
+ They are rare-enough that most experiments never incorporate them into
+ their noise budget.
+ LIGO, the gravitational wave interferometer, is a rare exception; some
+ LIGO scientists devote much of their time to 
+\begin_inset Quotes eld
+\end_inset
+
+glitch
+\begin_inset Quotes erd
+\end_inset
+
+-hunting.
+ In PlateWash, it will be shown in XXX(ref) that for any large transient,
+ measurements for at least 
+\begin_inset Formula $10t=2560\mbox{\,\ s}=0.7\mbox{\,\ hr}$
+\end_inset
+
+ must be discarded.
+ If 
+\begin_inset Formula $t$
+\end_inset
+
+ were smaller, the experiment's livetime would be greater.
+ XXX glitch/day?
+\end_layout
+
+\begin_layout Standard
+A second benefit to small 
+\begin_inset Formula $t$
+\end_inset
+
+ is improved statistics.
+ This measurement relies on Monte Carlo-like measurement schemes (random
+ attractor locations) to understand systematic uncertainties and better
+ constrain possible violations of the ISL.
+ Faster individual measurements allow faster exploration of parameter space
+ (exploring a 
+\begin_inset Formula $6\times6$
+\end_inset
+
+ grid of measurements requires a day with the current choice of 
+\begin_inset Formula $t$
+\end_inset
+
+).
+ Measurements that are twice as fast allow twice as many questions to be
+ answered.
+ Faster is better, much more than 
+\begin_inset Formula $\sqrt{\mbox{better}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Harmonics
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Harmonics"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In order to avoid any velocity-dependent systematic uncertainties, the attractor
+ must move in a square wave, with measurements taken only when the instrument
+ is at rest.
+ The Fourier coefficients of a square wave are 
+\begin_inset Formula $A_{n}=4/\pi n$
+\end_inset
+
+ for all odd 
+\begin_inset Formula $n$
+\end_inset
+
+ (
+\begin_inset Formula $A_{n}=0$
+\end_inset
+
+ for even 
+\begin_inset Formula $n$
+\end_inset
+
+).
+ XXX cite Arfken.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="10">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Harmonic (
+\begin_inset Formula $m)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+13
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+15..
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+17
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Fourier coefficient
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.27
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.42
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.25
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.18
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.14
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.12
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.08
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.07
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Combined SNR ( 1 to 
+\begin_inset Formula $m$
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.27
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.34
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.36
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.39
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.39
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.40
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.40
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.40
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.40
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Square wave Fourier coefficients and aggregate SNR up to 
+\begin_inset Formula $n=17$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Fourier Harmonics"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For measurements with equal uncertainty 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ of each harmonic, the uncertainty in a combined measurement of the first
+ 
+\begin_inset Formula $m$
+\end_inset
+
+ harmonics is 
+\begin_inset Formula $\sigma_{combined}=\sigma/\sqrt{\sum_{j=1}^{m}A_{m}^{2}}$
+\end_inset
+
+.
+ In Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Fourier Harmonics"
+
+\end_inset
+
+, the signal to noise ratio (SNR) is computed for 
+\begin_inset Formula $\sigma=1$
+\end_inset
+
+.
+ The first harmonic is the only one that matters.
+\end_layout
+
+\begin_layout Subsection
+Lags
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Lags"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A number of properties of the instrument require finite time.
+ The pneumatically-driven attractor takes XXX s to move to a new position.
+ The feedback loop requires ~XXX s to settle.
+ The data acquisition system samples every XXX
+\begin_inset space ~
+\end_inset
+
+s and has 3-5
+\begin_inset space ~
+\end_inset
+
+s anti-aliasing filters.
+ Synchronization errors between the three data acquisition computers require
+ XXX
+\begin_inset space ~
+\end_inset
+
+s of padding.
+ For these reasons, the first 
+\begin_inset Formula $\sim XXX$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+s after a position change must be excluded to reject any position-change
+ related effects (see section XXX for further discussion of lags).
+ As a consequence, the highest available switch frequency is 
+\begin_inset Formula $\sim XXX$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+mHz.
+ At that frequency, the accepted measurements would have zero duty cycle.
+ The duty cycle available for measurement is 
+\begin_inset Formula $D=(1-2Lf)$
+\end_inset
+
+, where 
+\begin_inset Formula $L$
+\end_inset
+
+ is the total time excluded from an individual step and 
+\begin_inset Formula $f$
+\end_inset
+
+ is the attractor frequency.
+ The SNR attenuation is roughly 
+\begin_inset Formula $\sqrt{D}$
+\end_inset
+
+, plotted in Figure
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "SNR vs Lags"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename plots/lagFrequencySNR.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Signal to noise attenuation as a function of attractor frequency and lag
+ size
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "SNR vs Lags"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Choosing a frequency
+\end_layout
+
+\begin_layout Standard
+As the first harmonic is the only signal of importance (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Harmonics"
+
+\end_inset
+
+), we should place the first harmonic at the location of lowest noise (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Experimentally-determined-noise"
+
+\end_inset
+
+).
+ Furthermore, we are driven by statistics (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Statistics"
+
+\end_inset
+
+) to operate at the highest practical frequency.
+ The required use of lags to eliminate systematic uncertainties places a
+ soft upper bound on usable frequencies (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Lags"
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+The operating frequency was chosen well in advance of the science run reported
+ here, before the instrument was fully understood.
+ We selected a frequency that we expected would give low noise and was sufficien
+tly slow to allow transients associated with attractor motion to damp.
+ We selected 3.90625 mHz, or 
+\begin_inset Formula $1/256$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+s.
+ 256
+\begin_inset space ~
+\end_inset
+
+s is an integer (320) multiple of the 0.8
+\begin_inset space ~
+\end_inset
+
+s sample time, making each attractor period an integer number of samples.
+ This choice improves the performance of discrete Fourier analysis and minimizes
+ beating between signal and sample frequencies.
+\end_layout
+
+\begin_layout Subsection
+Choosing a science signal
+\end_layout
+
+\begin_layout Standard
+As the pendulum is locked in feedback, there are multiple data channels
+ that may be used to extract a science measurement.
+ The pendulum twist angle, the feedback signal itself, and the P, I, and
+ D terms of the feedback loop are written to disk.
+ The pendulum twist angle and the P (proportional) term of the loop are
+ necessarily equivalent.
+ In practice, the twist signal and P term were anti-aliased differently.
+ The P term had an XXX s filter applied, making it the signal of choice
+ for a twist measurement.
+ The loop was operated with zero I-term, so the I channel contains no signal.
+ The D (derivative) term responds like 
+\begin_inset Formula $\omega$
+\end_inset
+
+, making it unsuited to low frequency signal extraction.
+\end_layout
+
+\begin_layout Standard
+So, there are two reasonable science channels: the feedback signal applied
+ to the pendulum, and the P term.
+ The feedback signal has units of torque, the P term has units of angle.
+ Even though the pendulum is held fixed, the torque-angle transfer function
+ remains important.
+ At frequencies below the resonance of the pendulum, the two channels are
+ directly proportional.
+ At frequencies above resonance, the frequency-independent angle noise of
+ the autocollimator appears, in the feedback signal, as torque noise that
+ rises like frequency squared.
+ As shown in XXX, the higher harmonics of the attractor motion contain no
+ interesting signal, so it is in our interest to low-pass them away.
+ 
+\end_layout
+
+\begin_layout Standard
+By choosing the angle signal instead of the feedback signal as the science
+ signal, we use the inertia of the pendulum as an analog low-pass filter.
+ While, in principle, both signals contain the science, the science signal
+ is more-easily extracted from the angle signal.
+ Furthermore, as the feedback signal is the sum of the P and the derived
+ D terms, there's less opportunity for an error to enter into the science
+ signal if the measured angle is used alone.
+\end_layout
+
+\end_body
+\end_document

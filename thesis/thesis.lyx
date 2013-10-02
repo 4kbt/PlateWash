@@ -1,0 +1,7577 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass book
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing double
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine natbib_numerical
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+A Sub-Millimeter Gauss' Law Test of Gravity
+\end_layout
+
+\begin_layout Author
+C.
+ A.
+ Hagedorn, M.
+ D.
+ Turner, S.
+ Schlamminger, J.
+ H.
+ Gundlach
+\end_layout
+
+\begin_layout Verse
+We tested it.
+ It worked.
+ Our number at 
+\begin_inset Formula $\alpha=1$
+\end_inset
+
+ is 
+\begin_inset Formula $\lambda=30\,\mu$
+\end_inset
+
+m.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Chapter
+Introduction
+\end_layout
+
+\begin_layout Plain Layout
+Not every thesis requires introduction.
+ For reasons which will hopefully become clear, this one does.
+ The experimental challenges that shaped the design, implementation, analysis,
+ and results of the PlateWash experiment should be introduced even before
+ we begin.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+The motivation for this experiment is simple.
+ Nobody knows what gravity does over distances shorter than ~100 microns.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+The Newtonian theory of gravity, and its refinement General Relativity,
+ agree with every experimental test yet completed.
+ Using these theories, we have considerable predictive power, particularly
+ for orbital mechanics.
+ These theories are mathematically incompatible with the 
+\emph on
+exceedingly
+\emph default
+ well-tested theory of the Standard Model.
+ An important example: There is no quantum mechanics in the theory of gravity.
+ New theories that attempt to resolve this tension tend to predict novel
+ behavior of gravity over short distance.
+\end_layout
+
+\begin_layout Plain Layout
+The forces with which we are concerned are small -- ~50 fN.
+ On the scale of modern gravitational experiment, however, they're somewhat
+ large; our group's equivalence principle measurements measure forces on
+ similar masses that are 100 times smaller.
+ So, the primary task is not to prove that such an experiment is sufficiently
+ sensitive, but rather to prove that we're not seeing or hiding a Standard
+ Model background that mimics gravity.
+\end_layout
+
+\begin_layout Plain Layout
+This experiment is complimentary to our group's world-leading short-range
+ gravity test.
+ Blah blahXXX
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Chapter
+Motivation and Background
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+Four fundamental interactions are known.
+ In historical order of characterization, they are gravity, which governs
+ planetary motions; electromagnetism, which describes the interactions of
+ electrically charged objects, and the weak force and strong forces, which
+ govern nuclear and subnuclear dynamics.
+ The electric and weak forces were unified theoretically by XXX as the electrowe
+ak interaction in XXX.
+ The strong force is described well by quantum chromodynamics.
+ The resulting theory of the electroweak and the strong, precisely tested,
+ finely tuned, and quantum in nature, is known as the Standard Model.
+ Einstein's theory of gravity, general relativity, is consistent with all
+ precision tests, but it contains no known links to the Standard Model.
+ For interactions with sufficiently high energy density, one or both theories
+ must fail, as they predict different phenomena.
+\end_layout
+
+\begin_layout Standard
+The Standard Model is a triumph.
+ It is a complex theory, with 18 or more parameters (particle masses, coupling
+ constants, and mixing parameters) which are tuned to fit observation.
+ After tuning, the Model has predictive power, correctly recovering within
+ experimental and theoretical error the known zoo of observed particles,
+ resonances, and phenomena, with very few exceptions.
+ The exceptions are, therefore, very important.
+ The Standard Model has one major remaining prediction - the existence of
+ the so-called Higgs boson, a lynchpin for the theory, which may have been
+ discovered at the LHC in 2012 XXX.
+\end_layout
+
+\begin_layout Standard
+Observations which the Standard Model cannot explain:
+\end_layout
+
+\begin_layout Standard
+Gravity: There is no tree-level coupling between uncharged objects in the
+ Standard Model.
+ Furthermore, on a charge for charge basis, the interactions in the Standard
+ Model are 
+\begin_inset Formula $>10^{40}$
+\end_inset
+
+ times stronger than gravity, frustrating any unification attempts.
+ The theory of gravity, General Relativity, is well-tested and in agreement
+ with experiment
+\begin_inset CommandInset citation
+LatexCommand citep
+key "lrr-2006-3"
+
+\end_inset
+
+, but does not contain any hint of quantum probability or uncertainty.
+ Gravity and quantum mechanics are mathematically incompatible.
+ 
+\end_layout
+
+\begin_layout Standard
+Neutrino mass, oscillation: The Standard Model admits only massless left-handed
+ neutrinos, yet they are observed to have a small but very significant,
+ mass.
+ Furthermore, the mass and flavor eigenstates of the neutrino are not the
+ same.
+ This could be accommodated by adding the neutrino mixing angles to the
+ list of tuning parameters, but it was not anticipated by anything within
+ the 
+\begin_inset Quotes eld
+\end_inset
+
+standard
+\begin_inset Quotes erd
+\end_inset
+
+ theory XXX.
+\end_layout
+
+\begin_layout Standard
+The Cosmological Constant Problem/Dark Energy: Astronomical observations
+ suggest that the universe is expanding, and doing so at a rate which is
+ increasing XXX.
+ The phenomenon can be explained by proposing the existence of 
+\begin_inset Quotes eld
+\end_inset
+
+Dark Energy
+\begin_inset Quotes erd
+\end_inset
+
+, an energy density associated with empty space that has negative pressure.
+ The energy density of vacuum, as described by the Standard Model, is 
+\begin_inset Formula $10^{120}$
+\end_inset
+
+ times too large XXX.
+\end_layout
+
+\begin_layout Standard
+Dark Matter: Beginning with the study of galactic rotation curves, a compelling
+ body of observations point toward the existence of a novel form of matter,
+ perhaps a new family of particles, that, at accessible temperatures, couples
+ to ordinary matter only gravitationally XXX .
+\end_layout
+
+\begin_layout Standard
+Furthermore, the angular power spectra of the cosmic microwave background,
+ along with detailed studies of nucleosynthesis, are highly compatible with
+ cosmology theory that includes dark energy and cold dark matter and are
+ essentially incompatible with theories that do not (XXX WMAP).
+ These measurements suggest a dark energy density of 4 keV/cm
+\begin_inset Formula $^{3}$
+\end_inset
+
+, which, when converted to a length is roughly 86 micrometers.
+\end_layout
+
+\begin_layout Section
+The inverse square law
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vec{F}_{21}=-G\frac{m_{1}m_{2}}{|\vec{r}_{21}|^{2}}\hat{r}_{21}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Newton proposed the gravitational inverse square law in 16XX in order to
+ explain the motions of celestial bodies.
+ He suggested that the gravitational force between two objects is always
+ attractive, is proportional to the mass of each object, and inversely proportio
+nal to the square of the distance between them.
+ This model was remarkably good at predicting the motion of celestial orbits,
+ the tides, and gave the first quantitative value for the mass of the Earth.
+\end_layout
+
+\begin_layout Standard
+XXX Did Newton also compute the strength at Earth's surface? Was it empirical,
+ or did he invoke a dimensionality argument?
+\end_layout
+
+\begin_layout Standard
+The inverse square law (ISL) for gravity has been subjected to many experimental
+ and astronomical tests.
+ The observed stability of elliptical orbits and the apparent validity of
+ Kepler's laws gave immediate support to the theory at solar system scales.
+ The first laboratory test of the ISL was done by Cavendish and Michell
+ in 1798 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Cavendish1798"
+
+\end_inset
+
+ in support of his measurement of the density of the Earth.
+ See a fine review by Fischbach for the history of these experiments 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "1999snng.book.....F"
+
+\end_inset
+
+, and a detailed review of short range experiments by Adleberger, Heckel,
+ and Nelson 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "adelberger2003tests"
+
+\end_inset
+
+.
+ Current tests of the inverse square law are underway at the University
+ of Washington XXX (Ted's thesis), Huazhong University
+\begin_inset CommandInset citation
+LatexCommand citep
+key "2007PhRvL..98t1101T,PhysRevLett.108.081101"
+
+\end_inset
+
+, University of Indiana, Washington University at St.
+ Louis
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Wagoner2010"
+
+\end_inset
+
+, Stanford University
+\begin_inset CommandInset citation
+LatexCommand citep
+key "2005PhRvD..72l2001S"
+
+\end_inset
+
+, Apache Point Observatory
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Murphy2008"
+
+\end_inset
+
+, the University of Maryland
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Venkateswara2010"
+
+\end_inset
+
+, Grenoble
+\begin_inset CommandInset citation
+LatexCommand citep
+key "PhysRevD.77.034020"
+
+\end_inset
+
+, Birmingham University 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "E.Chalkley2011"
+
+\end_inset
+
+, Düsseldorf 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Schiller2006"
+
+\end_inset
+
+, and XXX.
+\end_layout
+
+\begin_layout Standard
+Early tests of the inverse square law parametrized possible inverse square
+ law violations as 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F_{G}\propto\frac{1}{r^{2+\epsilon}},
+\]
+
+\end_inset
+
+ and set bounds on the size of 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+.
+ This parametrization is hard to reconcile with modern theory, as there
+ are no known viable theories that propose fractional dimensions at all
+ scales.
+\end_layout
+
+\begin_layout Standard
+In modern work, proposed inverse square law violations are parametrized
+ as forces mediated by an exchange particle.
+ For both scalar and vector particles XXX, when the fields are weak, the
+ modified potential takes the form 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V(r)=-G\frac{m_{1}m_{2}}{r}(1+\alpha e^{-r/\lambda}),\label{eq:YukawaPotential}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is the new interaction's strength relative to gravity and 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is the interaction's characteristic length (reduced Compton wavelength
+ of a mediating particle with mass 
+\begin_inset Formula $m$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\lambda=\hbar/mc$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Shankar1994"
+
+\end_inset
+
+).
+ This is not the only possible modified potential, but it is general and
+ has become a traditional parametrization for inverse square law violations.
+ 
+\end_layout
+
+\begin_layout Standard
+Observational ISL tests to moon - first laser ranging? First lab tests?
+ Spero et.
+ al.
+ Hoyle.
+ Long, Kapner, Chiaverini, Huazhong.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Note to self: How well can you test the ISL at long range simply by knowing
+ that the Moon hasn't appreciably approached or receded in your lifetime?
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Introduce 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Theories
+\end_layout
+
+\begin_layout Subsection
+String Theory
+\end_layout
+
+\begin_layout Standard
+String theory provided the catalyst for a resurgence of interest in the
+ inverse square law at sub-millimeter scales in the late 1990s.
+ At the cost of as many as seven extra dimensions, the theory offers a the
+ promise of unifying gravity with the other forces.
+ The extra dimensions are hidden away from normal observation with 
+\begin_inset Quotes eld
+\end_inset
+
+compactification
+\begin_inset Quotes erd
+\end_inset
+
+; the introduction of a scale shorter than which extra dimensions are relevant
+ to particle interactions and longer than which any effects of extra dimensions
+ are suppressed.
+ Critically, the effects of gravity would be sensitive to the change in
+ dimensionality by obeying Gauss' Law at all scales - diluting gravity into
+ the many extra dimensions at short distances, while diluting into only
+ three spatial dimensions at longer scales.
+ String theories predict that gravity will get significantly more attractive
+ at scales shorter than the compactification scale.
+ 
+\end_layout
+
+\begin_layout Standard
+If parametrized as a particle-exchange theory, string theory predicts two
+ new types of exchange particles, known as the dilaton and the radion.
+ Both would appear gravitationally as Yukawa violations of the inverse square
+ law at scales comparable to the compactification length.
+ The dilaton is responsible for the familiar Gauss' law increase in strength
+ of gravity, while the radion is associated with excitations of the periodic
+ spacetime normally accorded to the compactified dimensions.
+ 
+\end_layout
+
+\begin_layout Standard
+In general, the compactification scales are quite small, 
+\begin_inset Formula $10^{-XXX}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+m or smaller.
+ It was shown in 1998 by Arkani-Hamed, Dimopoulos, and Dvali that, using
+ the then-current limits on the gravitational inverse square law, the compactifi
+cation scale of one or more of these extra dimensions could be as large
+ as a millimeter or more 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ArkaniHamed:1998rs,ArkaniHamed:1998nn"
+
+\end_inset
+
+.
+ 2007 limits from Kapner 
+\emph on
+et al.
+
+\emph default
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "2007PhRvL..98b1101K"
+
+\end_inset
+
+ place a 95% confidence upper bound at 44 
+\begin_inset Formula $\mu$
+\end_inset
+
+m for one extra dimension.
+ Greater numbers of extra dimensions are more stringently constrained by
+ collider experiments XXX, at scales below XXX 
+\begin_inset Formula $\mu$
+\end_inset
+
+m.
+\end_layout
+
+\begin_layout Subsection
+Dark Energy
+\end_layout
+
+\begin_layout Standard
+At present, the dominant motivation for submillimeter gravity tests comes
+ from the physics of 
+\begin_inset Quotes eld
+\end_inset
+
+dark energy
+\begin_inset Quotes erd
+\end_inset
+
+.
+ The universe has been observed to be expanding through redshift, CMB, structure
+, and other measurements.
+ Not only is the expansion occurring, but the expansion rate is observed
+ to be accelerating throughout the visible historical record in astronomical
+ observations.
+ The expansion and changes in its rate can be roughly explained if there
+ is an energy density 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+ associated with a volume of spacetime and if this new kind of energy has
+ negative pressure.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+If measured in accordance with the usual FRW parametrization, XXX ...
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If the supernova measurements are used to extract a value for 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+, it is found to be 
+\begin_inset Formula $\sim4$
+\end_inset
+
+ keV/cm
+\begin_inset Formula $^{3}$
+\end_inset
+
+.
+ If this is converted to a length using Planck's constant and the speed
+ of light, 
+\begin_inset Formula 
+\[
+\lambda=\sqrt[4]{\frac{\hbar c}{\Lambda}}=\sqrt[4]{\frac{8\pi G\hbar}{3\Omega_{\lambda}H_{0}^{2}c}}\approx86\,\mu\mbox{m},
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $\Omega_{\lambda}$
+\end_inset
+
+is the dark energy fraction of the closure density of the universe (
+\begin_inset Formula $\sim70\%$
+\end_inset
+
+) and 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ is the Hubble constant (
+\begin_inset Formula $\sim70$
+\end_inset
+
+ km/s/Mpc
+\begin_inset Formula $=2\times10^{-18}\,\mbox{s}^{-1}$
+\end_inset
+
+) 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Ade:2013ktc"
+
+\end_inset
+
+.
+ If there is new gravitational physics associated with Dark Energy, we should
+ expect interesting behavior at this approximate scale.
+ 
+\end_layout
+
+\begin_layout Subsection
+Cosmological Constant
+\end_layout
+
+\begin_layout Standard
+Closely related to the dark energy problem is an older problem in physics.
+ In general relativity, there is a free parameter, traditionally 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+, which plays a similar role as the aforementioned dark-energy 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+ in the evolution of spacetime 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Misner_1973"
+
+\end_inset
+
+.
+ Roughly, it is the energy density associated with a volume of space.
+ If computed from modern particle theory, the expectation is that 
+\begin_inset Formula $\Lambda_{ParticleTheory}\sim10^{120}\Lambda_{Observed}$
+\end_inset
+
+ XXX.
+ Without a physically-motivated infrared cutoff to the necessary integrals,
+ there is no known explanation for this discrepancy.
+\end_layout
+
+\begin_layout Standard
+Any deviation, particularly a weakening, of gravity at short range might
+ provide the clues needed to explain this major theoretical problem.
+ If 
+\begin_inset Formula $C\leftrightarrow\Lambda$
+\end_inset
+
+, then the motivation for submillimeter gravitational experiments is necessarily
+ stronger.
+\end_layout
+
+\begin_layout Subsection
+Fat Graviton
+\end_layout
+
+\begin_layout Standard
+Raman Sundrum showed in XXX that the Cosmological Constant problem could
+ be resolved if gravity were to become significantly weaker at scales below
+ 100 
+\begin_inset Formula $\mu$
+\end_inset
+
+m.
+ His 
+\begin_inset Quotes eld
+\end_inset
+
+fat graviton
+\begin_inset Quotes erd
+\end_inset
+
+ modification of gravity is remarkable because he predicts that it must
+ occur at scales greater than 20 microns.
+ Experimental attempts to constrain the interaction [XXX] have adopted the
+ functional form 
+\begin_inset Formula $F_{12}(r)=-G\frac{m_{1}m_{2}}{r^{2}}[1-e^{-(0.914\frac{r}{l_{g}})^{3}}]$
+\end_inset
+
+ after Figure 8 in Sundrum's paper.
+ Present bounds on 
+\begin_inset Formula $l_{g}$
+\end_inset
+
+ are 
+\begin_inset Formula $20\mbox{\mu m}\lesssim l_{g}\leq95\mbox{\mu m}$
+\end_inset
+
+, by naturalness and Kapner 
+\emph on
+et al.
+ 
+\emph default
+[XXX] respectively.
+\end_layout
+
+\begin_layout Subsection
+Chameleons
+\end_layout
+
+\begin_layout Standard
+XXX, XXX, and Nelson noted in XXX that the simple addition of a self-interacting
+ term to the Lagrangian to any new interaction could hide it from long range
+ experimental searches.
+ Self interactions act to 
+\begin_inset Quotes eld
+\end_inset
+
+screen
+\begin_inset Quotes erd
+\end_inset
+
+ the effect of any new interaction.
+ As self-interaction is a general property of fields, the notion is quite
+ reasonable.
+ In its simplest form as a scalar field, XXX (Lagrangian), a chameleon interacti
+on must be constrained by limiting not only the exchange particle's mass
+ 
+\begin_inset Formula $m$
+\end_inset
+
+ but also the self interaction strength 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ Because chameleon interactions are self-screening, the screening length
+ XXX becomes the relevant length scale at which the new interaction may
+ emerge from camoflage.
+ 
+\end_layout
+
+\begin_layout Standard
+In addition to their physical motiviation, chameleon interactions are ready-made
+ to evade traditional inverse square law tests.
+ All precision tests of short-range gravity at gravitational strength to
+ date, including the experiment described here, make use of an isolating
+ metal foil between the source and detector masses.
+ Because of XXX, the isolating foil significantly enhances the effective
+ self-screening of the chameleon interaction.
+ When searching for this class of interactions, the isolating material must
+ be made as thin as possible, or dispensed with entirely.
+\end_layout
+
+\begin_layout Standard
+XXX Uphadye calculable boundaries
+\end_layout
+
+\begin_layout Standard
+XXX New PRL regarding viability of chameleons
+\end_layout
+
+\begin_layout Subsection
+Unparticles
+\end_layout
+
+\begin_layout Standard
+Weinberg kicked off a flurry of theoretical work by noting the possibility
+ of interactions with novel dispersion relations, where the particle propagator
+ was XXX instead of 
+\begin_inset Formula $\frac{1}{k^{2}+m^{2}}$
+\end_inset
+
+.
+ Unparticle interactions would appear in tests of short range gravity by
+ XXX.
+ The existing body of inverse square law tests served to place the most
+ stringent constraints on XXX.
+ The tight constraints, on new theory, that stem from precision tests of
+ gravity are the guaranteed payoff that come with incremental improvement
+ in the laboratory.
+\end_layout
+
+\begin_layout Subsection
+Other
+\end_layout
+
+\begin_layout Standard
+Chinese QCD scale stuff? LHC gravity physics
+\end_layout
+
+\begin_layout Section
+Survey of Previous Experimental Work
+\end_layout
+
+\begin_layout Standard
+Tests of gravity using test bodies with known masses have now spanned about
+ thirty orders of magnitude in spatial extent.
+ Gravity itself has been observed consistent with an inverse square law
+ over the roughly sixteen orders of magnitude from the solar system scale
+ down to the size of a human hair.
+\end_layout
+
+\begin_layout Standard
+Precision measurements of the distance dependence of gravity may have begun
+ with Kepler.
+ Kepler's Laws [XXX] are now taught to students as necessary corrolaries
+ of Newton's theory, but Kepler's data were essential to the formulation
+ of the theory itself [XXX].
+ Astronomical tests of gravity remain the most precise, providing direct
+ tests of General Relativity in addition to Newton's Laws.
+ In order of decreasing range and increasing precision, the currently leading
+ solar system tests of gravity are the Pioneer spacecraft [XXX], the Cassini
+ mission to Saturn [XXX], radar ranging to Mars [XXX], and the very precise
+ lunar laser ranging [XXX].
+ The lunar results are, up to any theoretical uncertainties in the complicated
+ astronomical modeling code, by far the most precise tests of gravity.
+ The experimental data are consistent with the inverse square law at the
+ 
+\begin_inset Formula $10^{-XXX}$
+\end_inset
+
+ level [XXX].
+\end_layout
+
+\begin_layout Standard
+In the laboratory, direct observations began with XXX and Cavendish with
+ a torsion balance in XXX, observing gravity at scales of tens of centimeters
+ to meters.
+ Successive improvements on that method and tests with improved gravimeters
+ have extended tests of gravity out to scales the size of Earth [XXX](XXX
+ Do gravimeter measurements actually hit 
+\begin_inset Formula $\alpha=1$
+\end_inset
+
+ at Earth radii?).
+ From scales of 10 cm out to XXX km, the leading direct measurements of
+ gravity are ....
+ XXX!
+\end_layout
+
+\begin_layout Standard
+At scales of approximately meters and below, tests of the inverse square
+ law become more specialized.
+ Experimental designs become more and more carefully crafted to suppress
+ systematics that would otherwise hide the signature of gravity entirely.
+ Prior to 2001, the shortest distance at which gravity had been observed
+ was 
+\begin_inset Formula $\sim0.5$
+\end_inset
+
+-
+\begin_inset Formula $1$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+cm, by Spero 
+\emph on
+et al.
+
+\emph default
+ in 1980 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "PhysRevLett.44.1645"
+
+\end_inset
+
+.
+ XXX Paik/MoodyThis remains the best published limit from scales of XXX-XXX
+ cm, though an improved result from XXX, Boynton, Newman, and collaborators
+ is expected soon.
+\end_layout
+
+\begin_layout Standard
+Initially inspired by the suggestions of large extra dimensions, the Eot-Wash
+ group at the University of Washington began its series of four horizontal
+ torsion balance experiments, yielding limits at 
+\begin_inset Formula $\alpha=1$
+\end_inset
+
+ of 
+\begin_inset Formula $\lambda=200\,\mu$
+\end_inset
+
+m 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "2001PhRvL..86.1418H"
+
+\end_inset
+
+ (2001), 
+\begin_inset Formula $\lambda=XXX$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "2004PhRvD..70d2004H"
+
+\end_inset
+
+ (2004) , 
+\begin_inset Formula $\lambda=56\,\mu$
+\end_inset
+
+m 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "2007PhRvL..98b1101K"
+
+\end_inset
+
+ (2007), and 
+\begin_inset Formula $\lambda=40$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m (2013).
+ In parallel, a 1kHz tungsten oscillator experiment at the University of
+ Colorado achieved their maximum sensitivity at 
+\begin_inset Formula $\alpha=\sim5$
+\end_inset
+
+, 
+\begin_inset Formula $\lambda=\sim100$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "2003Natur.421..922L"
+
+\end_inset
+
+ (2003).
+ An atomic force microscope-inspired series of experiments at Stanford have
+ provided the tightest constraints to date on gravity at scales below XXX
+ 
+\begin_inset Formula $\mu$
+\end_inset
+
+m with publications in 2005 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "2005PhRvD..72l2001S"
+
+\end_inset
+
+ and 2008 [XXX].
+ Most recently, there has been a new experiment from Huazhong University
+ using a vertical torsion balance geometry that set an 
+\begin_inset Formula $\alpha=1$
+\end_inset
+
+ limit at 
+\begin_inset Formula $\lambda=76\,\mu$
+\end_inset
+
+m [XXX].
+ XXX Krishna's measurement.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+XXX ISL existing limits
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+At distances shorter than 
+\begin_inset Formula $\sim5\,\mu$
+\end_inset
+
+m and longer than 
+\begin_inset Formula $\sim6$
+\end_inset
+
+ nm, the best limits on gravity come from measurements of the Casimir force
+\begin_inset CommandInset citation
+LatexCommand citep
+key "PhysRevLett.107.171101"
+
+\end_inset
+
+.
+ Any disagreement between observations of the Casimir force and the Casimir
+ theory could possibly be due to new physics.
+ So far, no clear deviations have been observed, so the measurement uncertaintie
+s are traditionally converted into exclusion limits for gravity.
+ Other experiments at these scales include neutrons 
+\begin_inset Quotes eld
+\end_inset
+
+bouncing
+\begin_inset Quotes erd
+\end_inset
+
+ quantum-mechanically on tabletops
+\begin_inset CommandInset citation
+LatexCommand citep
+key "PhysRevD.77.034020,antoniadis2011short"
+
+\end_inset
+
+.
+ At still shorter scales, limits are collider-based, restricted by the non-obser
+vation of unexpected physics, and beyond the scope of this thesis.
+\end_layout
+
+\begin_layout Standard
+Gravitational tests for micron-scale extra dimensions with astrophysical
+ sources has been proposed by Simonetti et al.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Simonetti:2010mk,Kavic:2008qb"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Chapter
+Apparatus
+\end_layout
+
+\begin_layout Section
+Principle - Gauss' Law Test
+\end_layout
+
+\begin_layout Standard
+For Coulomb potentials, the field of an infinite sheet of charge is uniform.
+ Its strength does not vary with distance from the sheet, nor does its direction.
+ This is normally derived by making use of Gauss' law.
+ Indeed, it may be shown that, in three dimensions, any force that obeys
+ a 
+\begin_inset Formula $1/r$
+\end_inset
+
+ potential satisfies Gauss' law XXX and vice versa XXX.
+ Our experiment is a test of the uniformity of the gravitational field of
+ an 
+\begin_inset Quotes eld
+\end_inset
+
+infinite
+\begin_inset Quotes erd
+\end_inset
+
+ sheet of mass.
+ It is in this sense that our experiment is a 
+\begin_inset Quotes eld
+\end_inset
+
+Gauss' law test of gravity.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In its idealized form, our experiment compares the gravitational field strength
+ at two distances from an infinite sheet of mass.
+ Finite sheet masses are suspended on opposite sides of a torsion pendulum
+ aligned parallel to their moment arms, but displaced in opposite directions
+ perpendicular to the arms.
+ If there is an inverse square law violating force between the sheets on
+ the pendulum and an infinite sheet of matter, the pendulum will feel a
+ torque.
+ If the distance between the pendulum and the sheet is modulated, the torque
+ will vary in sync with the modulation.
+ If there are no inverse square law violating interactions between the pendulum
+ and sheet, the pendulum will experience 
+\emph on
+no torque
+\emph default
+.
+ The difficulties in the measurement primarily involve ensuring that the
+ 
+\begin_inset Quotes eld
+\end_inset
+
+infinite sheet
+\begin_inset Quotes erd
+\end_inset
+
+ approximation is valid and that gravity is the only messenger between the
+ infinite sheet and the pendulum.
+ 
+\end_layout
+
+\begin_layout Section
+Expected Signal
+\end_layout
+
+\begin_layout Subsection
+Flat plate force
+\end_layout
+
+\begin_layout Standard
+The form of possible inverse square law violations is not known from first
+ principles.
+ However, under the assumption that a new interaction can be modelled by
+ a Yukawa potential 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:YukawaPotential"
+
+\end_inset
+
+, the new force between flat plates is calculable.
+ Neglecting edge effects, if one plate is infinite in spatial extent, the
+ other has area 
+\begin_inset Formula $A$
+\end_inset
+
+, and the plates have densities 
+\begin_inset Formula $\rho_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\rho_{2}$
+\end_inset
+
+, thicknesses 
+\begin_inset Formula $t_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $t_{2}$
+\end_inset
+
+, and face-to-face separation 
+\begin_inset Formula $d$
+\end_inset
+
+ is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+F_{Y}=2\pi G\rho_{1}\rho_{2}A\alpha\lambda^{2}\left(1-e^{-t_{1}/\lambda}\right)\left(1-e^{-t_{2}/\lambda}\right)e^{-d/\lambda}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+When the plate size, 
+\begin_inset Formula $A$
+\end_inset
+
+, is large compared to 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, the fractional error from end effects should be roughly 
+\begin_inset Formula $\sim4\lambda\sqrt{A}/A=4\lambda/\sqrt{A}$
+\end_inset
+
+.
+ In our experiment, in the flat orientation, this correction spans 0.1-10%
+ (
+\begin_inset Formula $\lambda$
+\end_inset
+
+ from 
+\begin_inset Formula $10$
+\end_inset
+
+-
+\begin_inset Formula $1000$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m), and always acts to increase the magnitude of the signal.
+\end_layout
+
+\begin_layout Standard
+When 
+\begin_inset Formula $\lambda\rightarrow\infty$
+\end_inset
+
+, the Yukawa interaction is blurred into an altered 
+\begin_inset Formula $G$
+\end_inset
+
+, 
+\begin_inset Formula $F_{Y}\rightarrow2\pi G\rho_{1}\rho_{2}A\alpha t_{1}t_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Flat plate torque
+\end_layout
+
+\begin_layout Subsection
+Angled plate torque
+\end_layout
+
+\begin_layout Standard
+The pendulum is, in general, not parallel to the attractor.
+ Furthermore, rotating one part of the pendulum toward the attractor can
+ yield greater sensitivity.
+ This analysis, like the flat plate calculations, neglects edge effects.
+ This approximation underestimates the expected torque by an amount that
+ depends on the angle, 
+\begin_inset Formula $\theta$
+\end_inset
+
+, pendulum dimensions, and 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+ See 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Estimation-of-edge"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We will compute the Yukawa torque about 
+\begin_inset Formula $x,y=0$
+\end_inset
+
+ on a finite plate of height 
+\begin_inset Formula $h$
+\end_inset
+
+, thickness 
+\begin_inset Formula $t_{p}$
+\end_inset
+
+, and density 
+\begin_inset Formula $\rho_{p}$
+\end_inset
+
+ that spans 
+\begin_inset Formula $x\in[a,b]$
+\end_inset
+
+ due to an infinite plane of density 
+\begin_inset Formula $\rho_{a}$
+\end_inset
+
+ and thickness 
+\begin_inset Formula $t_{a}$
+\end_inset
+
+.
+ Let their face-to-face separation (real or projected) at 
+\begin_inset Formula $x=0$
+\end_inset
+
+ be 
+\begin_inset Formula $d$
+\end_inset
+
+.
+ Let the angle of twist of the finite plate about the vertical plane be
+ 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+ We will work in the limit that 
+\begin_inset Formula $t_{p}\ll\sqrt{\int_{a}^{b}|x|dx}$
+\end_inset
+
+ (plate is functionally large in 
+\begin_inset Formula $x$
+\end_inset
+
+ compared to its thickness).
+ We will only consider 
+\begin_inset Formula $|\theta|\ll1$
+\end_inset
+
+.
+ This analysis only applies when 
+\begin_inset Formula $\max(|a|,|b|)|\theta|<d$
+\end_inset
+
+ (plate does not touch the infinite plane)
+\end_layout
+
+\begin_layout Standard
+The Yukawa field from the infinite planar attractor is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+g(d)=C(1-e^{-t_{a}/\lambda})e^{-d/\lambda}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The torque on the finite plate is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\tau=h\int_{a}^{b}\int_{x\theta+D}^{x\theta+D+t_{p}}\rho_{p}g(y)xdydx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Evaluating the integral:
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+\tau=-\lambda^{2}h\rho_{p}C(1-e^{-t_{a}/\lambda})(1-e^{-t_{p}/\lambda})e^{-d/\lambda}\frac{1}{\theta}[e^{-b\theta/\lambda}(b+\frac{\lambda}{\theta})-e^{-a\theta/\lambda}(a+\frac{\lambda}{\theta})]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+\tau=-\lambda^{2}h\rho C(1-e^{-t_{a}/\lambda})(1-e^{-t_{p}/\lambda})e^{-d/\lambda}\frac{1}{\theta}[e^{-b\theta/\lambda}(b+\frac{\lambda}{\theta})-e^{-a\theta/\lambda}(a+\frac{\lambda}{\theta})]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+XXX - recheck.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+XXX check against Josh Long's formula - josh long doesn't have one.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Estimation of edge effect correction
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Estimation-of-edge"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Design
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Pendulum
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Our Ti (density XXX) torsion pendulum had a thickness 
+\begin_inset Formula $t=2$
+\end_inset
+
+mm, height 
+\begin_inset Formula $h=30.8$
+\end_inset
+
+ mm, and width 
+\begin_inset Formula $w_{pend}=43.18$
+\end_inset
+
+ mm.
+ The Pt (density XXX) inlays were 
+\begin_inset Formula $203\,\mu$
+\end_inset
+
+m thick and 
+\begin_inset Formula $w_{inlay}=XXX$
+\end_inset
+
+ wide.
+ The pendulum was threaded onto a thin copper tube crimped onto an 
+\begin_inset Formula $8.9XXX$
+\end_inset
+
+ cm long 
+\begin_inset Formula $18\,\mu$
+\end_inset
+
+m diameter W torsion fiber.
+ The upper end of the fiber was connected to a 
+\begin_inset Formula $30XXX$
+\end_inset
+
+ g cylindrical copper 
+\begin_inset Quotes eld
+\end_inset
+
+prehanger
+\begin_inset Quotes erd
+\end_inset
+
+ mass that was suspended by a 
+\begin_inset Formula $8.9XXX$
+\end_inset
+
+ cm long 
+\begin_inset Formula $50XXX\,\mu$
+\end_inset
+
+m diameter fiber in the magnetic field of a small ring magnet to damp the
+ pendulum's swing and vibrational modes.
+ Both the fiber assembly and the magnetic damper were attached, through
+ a ceramic electrical isolator, to a motorized two-axis translation and
+ one-axis rotary stage.
+ Electrical contact to the pendulum was established by way of a thin (XXX
+ gauge) wire clipped to the otherwise isolated fiber support.
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Phitop/Damper
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Attractor schematic with dimensions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Attractor on spindles with sensors mounted to flexure, preferably with pendulum
+ hanging.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The moving field mass, or 
+\begin_inset Quotes eld
+\end_inset
+
+attractor
+\begin_inset Quotes erd
+\end_inset
+
+, was constructed of a 
+\begin_inset Formula $380XXX\,\mu$
+\end_inset
+
+m thick Ta sheet glued to an Al alloy (7075) backer/gravitational compensator.
+ The backer was 75XXX mm in diameter, with a thickness of 2.5XXX mm.
+ In addition, the monocoque backer's rim extended 4XXX mm, with an inner
+ diameter of 70XXXmm.
+ Three aluminum spindles (80XXXmm long, 6XXX mm diameter) were attached
+ to the back of the backer with aluminum set screws.
+ Each spindle was attached, via machinable glass electrical isolators, to
+ a pneumatically-driven flexure translation stage.
+\end_layout
+
+\begin_layout Standard
+Both large faces of the pendulum and the front face of the attractor were
+ hand polished to a mirror finish with silicon-carbide and 3M diamond sandpaper.
+ After ultrasonic cleaning in isopropyl alcohol, a thick (~3000 Angstrom
+ XXX) layer of gold was deposited by thermal evaporation on all surfaces
+ of the pendulum and on the front face of the attractor.
+ A thin titanium layer was used beneath the gold to promote adhesion.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Foil, front and back, to show adjustment motors
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The electrostatic shielding 
+\begin_inset Quotes eld
+\end_inset
+
+foil
+\begin_inset Quotes erd
+\end_inset
+
+ was made by stretching 
+\begin_inset Formula $12.5\,\mu$
+\end_inset
+
+m thick BeCu alloy foil over the tapered end of an 79XXX mm inner diameter
+ Al tube like a drumhead.
+ The foil was flat to XXX 
+\begin_inset Formula $\mu$
+\end_inset
+
+m over its width.
+ We coated the outside of the foil with XXX nm of Au over an XXX nm Ti adhesion
+ layer by e-beam evaporation.
+ The foil was mounted to an electrically isolated frame to allow us to vary
+ its electrostatic potential.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Autocollimator
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Autocollimator diagram
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The twist angle of the pendulum was measured by an in-vacuum laser autocollimato
+r (XXX - it's not a true autocollimator...) with a 400 mm focal length.
+ Light from a 780 nm (XXX) laser diode was directed through a spatial filter,
+ collimated, and directed at the pendulum.
+ Light reflected from the pendulum passed back through the collimating lens
+ and was focused, via a beamsplitter, onto two position sensitive photodiodes.
+ One of these detectors (UDT XXX) had a 1 cm (12 mrad) wide dynamic range
+ in both tip and twist, while the other, a simple bicell detector (model?
+ XXX), afforded a sensitivity of XXX angle/rtHz over a much smaller (
+\begin_inset Formula $\mu$
+\end_inset
+
+rad? XXX) range along the twist axis.
+ The detectors were read out by in-vacuum transimpedance amplifiers and
+ the difference observable computed in software.
+ XXX Diff/Sum, lockin.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Feedback Electrodes
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For all of our science data, the pendulum's orientation with respect to
+ the autocollimator was held in electrostatic feedback.
+ Two round gold coated aluminum rod electrodes were placed on the opposite
+ side of the pendulum from the foil.
+ As the pendulum was electrically grounded, the application of a voltage
+ to an electrode would attract the pendulum in the same way that the plates
+ of a charged capacitor attract one another.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Flexure
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The attractor's flexure stage was electric-discharge machined from a single
+ piece of 6061-T6 aluminum sheet.
+ It was actuated by an internal bronze bellows that was driven by a pulse-width
+ modulated reed valve/vented accumulator apparatus external to the vacuum
+ enclosure.
+ The motion of the stage was monitored by a Micro-E 3000V XXX encoder system
+ with an interpolated resolution of XXX nm.
+ The position of the system was controlled in a software PID feedback loop
+ on the data acquisition computer.
+\end_layout
+
+\begin_layout Standard
+The electric signals needed to operate the experiment were conducted through
+ three feedthroughs.
+ The autocollimator supply, readout, pendulum motor control, and electrostatic
+ feedback shared one feedthrough.
+ The attractor encoder, attractor-side thermistors, and pendulum translation
+ encoder shared the other two.
+ The thin copper tube for the attractor flexure bellows was connected via
+ a Swagelok compression fitting to a separate vacuum feedthrough.
+ 
+\end_layout
+
+\begin_layout Standard
+The pendulum support, autocollimator, foil, attractor stage, and feedback
+ electrodes were all firmly clamped to a single 5 cm XXX thick aluminum
+ optical bench.
+ The bench was secured, via three 1/2
+\begin_inset Quotes erd
+\end_inset
+
+ XXX diameter stainless threaded rods with aluminum adapters on the ends
+ to the stainless steel baseplate of the bell jar.
+ The jar itself sat atop three aluminum legs with adjustable levelling feet.
+ The entire apparatus was installed upon a U-shaped solid masonry block
+ table that was mortared to the cement floor of the laboratory.
+ The bell jar's lid was sealed with a double O-ring seal.
+ The gap between the O-rings was held under rough vacuum by the foreline
+ pump.
+ All high-vacuum seals except the bell-jar lid were made with copper gaskets.
+ The 6
+\begin_inset Quotes erd
+\end_inset
+
+ Leybold turbo pump was connected to and suspended from the center of the
+ bell jar baseplate by a hydroformed stainless steel bellows for vibration
+ isolation and from a ceramic electrical isolator.
+ Suspended from the pump were six lead bricks to prevent the bellows from
+ compressing when the system was placed under vacuum.
+ The turbo pump was backed by a small oil roughing pump.
+ To eliminate the possible of electrostatic charging of any part of the
+ apparatus, the ion vacuum gauge was left off from pumpdown until the entire
+ measurement was complete.
+ After systematic checks were complete, the ion gauge was turned on, and
+ the pressure was observed to be XXX
+\begin_inset space ~
+\end_inset
+
+Torr.
+ Past experience with the jar has shown that pressures of XXX
+\begin_inset space ~
+\end_inset
+
+Torr are reliably obtained by XXX days after pumpdown.
+ Science measurements began XXX days after pumpdown.
+\end_layout
+
+\begin_layout Subsection
+Calibration
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Calibration"
+
+\end_inset
+
+The torque scale of the apparatus was set gravitationally by rotating a
+ quadrupole mass distribution from a bearing above the apparatus.
+ By way of the 
+\begin_inset Formula $Q_{22}q_{22}$
+\end_inset
+
+ coupling XXX, the 
+\begin_inset Quotes eld
+\end_inset
+
+q-tester
+\begin_inset Quotes erd
+\end_inset
+
+ would cause a gravitational torque on the pendulum at twice the rotation
+ frequency.
+ Two 
+\begin_inset Formula $23.88\pm0.34$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+kg lead blocks were hung on opposite sides of the vacuum jar by nylon straps
+ attached to a rotating armature which operated continuously during data
+ acquisition.
+ The blocks were weighed with a common bathroom scale (XXX how to calibrate?
+ linearity?), and computed by averaging seven measured differences between
+ the experimentalist's body weight with and without each block.
+ The 
+\begin_inset Formula $4"\times4"\times8"$
+\end_inset
+
+ bricks were suspended vertically and located with their inner faces XXX
+\begin_inset space ~
+\end_inset
+
+m from the center of the jar and bottom faces XXX
+\begin_inset space ~
+\end_inset
+
+m above the center of the pendulum.
+ (XXX Centering?) The rotation was controlled by a PIC microprocessor driving
+ a geared-down stepper motor.
+ The frequency stability of the calibration tone was observed to be comparable
+ to, or better than, the stability of the data acquisition clock.
+ The sinusoidally varying gravitational torque appeared twice the rotation
+ frequency of 3.0 mHz.
+ The amplitude of the calibration torque was taken to be 
+\begin_inset CommandInset include
+LatexCommand input
+filename "/home/charlie/pWDA/extracted/qTesterTorque.tex"
+
+\end_inset
+
+ N-m.
+ The q-tester was mounted on rails with positioning stops to expedite moving
+ it out of the path of the crane-opened bell jar and ensure repeatable positioni
+ng of the q-tester with respect to the pendulum.
+\end_layout
+
+\begin_layout Subsection
+Cleanliness
+\end_layout
+
+\begin_layout Standard
+The apparatus itself was housed inside a 
+\begin_inset Quotes eld
+\end_inset
+
+clean room
+\begin_inset Quotes erd
+\end_inset
+
+ to control dust.
+ Any dust between the pendulum and the foil or the foil and the attractor
+ could have prevented bringing them into close proximity.
+ Air from the outer lab was passed through filtered blowers and forced down
+ from the ceiling of the room, keeping it at slightly positive pressure
+ and flushing airborne dust out of the room through an opening along the
+ floor.
+ XXX HEPA/Class XXX When the apparatus was under vacuum, the blowers were
+ turned off; the enclosure then provided some added wind and thermal isolation.
+ 
+\end_layout
+
+\begin_layout Subsection
+Foil Interferometer
+\end_layout
+
+\begin_layout Standard
+The isolating foil is the most important defense against systematic error.
+ It is a physical and electrical barrier between pendulum and attractor.
+ If it moves in an attractor-correlated way, the pendulum's electrostatic
+ environment will change.
+ In order to assess the foil's motion, we built an interferometric optical
+ sensor system.
+ 
+\end_layout
+
+\begin_layout Standard
+The foil interferometer is a Fizeau XXX (cite) interferometer.
+ Inspired by the designs and sensitivities of early atomic force microscope
+ (AFM) readout systems, the device interferes light from a reference surface
+ and a reflecting target surface.
+ In this case, the reference surface is the end of an optical fiber, and
+ the reflecting target surface is the PlateWash isolating foil.
+ As shown in Fig XXX, light from a fiber-coupled laser is directed through
+ a 90/10 fiber coupler.
+ The light that travels down the 90% branch is absorbed by an intensity
+ monitor diode.
+ The remaining 10% is coupled into a fiber that goes to the apparatus.
+ The end of the fiber is carefully directed and positioned next to the isolating
+ foil.
+ Approximately 5% (XXX) of the light leaving the fiber is reflected from
+ the glass/air interface.
+ Due to the divergence of the beam (NA XXX, core diameter XXX), less light
+ re-enters the fiber core after reflecting from the foil.
+ By adjusting the fiber-foil distance, it is possible to tune the internally
+ and externally-reflected light to have comparable intensity, maximizing
+ the interference contrast.
+ In PlateWash, the operating point is ~XXX
+\backslash
+pmXXX from the foil (can get it from the crash plot).
+ 
+\end_layout
+
+\begin_layout Standard
+The reflected light returns down the fiber to the 90/10 splitter.
+ 90% of the light goes into an XXX (composition (Germanium?)) high sensitivity
+ photodiode (ThorLabs XXX).
+ The remaining 10% proceeds back to the laser, where XXX % of the light
+ is attenuated by a Faraday isolator.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Foil interferometer signal as a function of attractor pressure (top axis)
+ and position (bottom axis).
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The signal from a Fizeau interferometer is readily understood.
+ Assuming light with wavelength 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, amplitude 
+\begin_inset Formula $A$
+\end_inset
+
+, and fiber tip to mirror spacing 
+\begin_inset Formula $s$
+\end_inset
+
+, fiber core radius 
+\begin_inset Formula $r$
+\end_inset
+
+, tip-to-vacuum reflectivity 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+, tip-to-vacuum transmission 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+, vacuum-to-tip transmission 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+, and radial (full width is 
+\begin_inset Formula $2\theta$
+\end_inset
+
+) beam divergence angle 
+\begin_inset Formula $\theta$
+\end_inset
+
+, the intensity travelling back down the fiber is roughly 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A_{reflected}=ARe^{i\omega t}-AT_{1}T_{2}\frac{1}{(\frac{2s}{r}\tan\theta+1)^{2}}e^{i\omega(t+2s/c)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+I_{reflected}=|A_{reflected}|^{2}=A^{2}(Re^{i\omega t}-T_{1}T_{2}\frac{1}{(\frac{2s}{d}\tan\theta+1)^{2}}e^{i\omega(t+2s/c)})(Re^{-i\omega t}-T_{1}T_{2}\frac{1}{(\frac{2s}{d}\tan\theta+1)^{2}}e^{-i\omega(t+2s/c)})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+I_{reflected}=|A_{reflected}|^{2}=A^{2}(R^{2}-2T_{1}T_{2}R\frac{1}{(\frac{2s}{d}\tan\theta+1)^{2}}\cos(2\omega s/c)+T_{1}^{2}T_{2}^{2}\frac{1}{(\frac{2s}{d}\tan\theta+1)^{4}})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+I_{reflected}=|A_{reflected}|^{2}=A^{2}\left(R^{2}-2RT_{1}T_{2}\frac{1}{(\frac{2s}{r}\tan\theta+1)^{2}}\cos(4\pi s/\lambda)+T_{1}^{2}T_{2}^{2}\frac{1}{(\frac{2s}{r}\tan\theta+1)^{4}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The optical fiber used is ThorLabs SMF28E: Mode field diameter 
+\begin_inset Formula $\sim9.2\,\mu$
+\end_inset
+
+m, numerical aperture (
+\begin_inset Formula $\tan\theta$
+\end_inset
+
+) 0.14, index of refraction 1.47.
+ The reflection coefficient for normally-incident light passing from glass
+ with refractive index 
+\begin_inset Formula $n$
+\end_inset
+
+ into vacuum (refractive index 1) is 
+\begin_inset Formula $R=\frac{1-n}{1+n}$
+\end_inset
+
+.
+ Note that there is a phase flip at the foil, but not at the internal reflection
+, hence the minus sign in 
+\begin_inset Formula $A_{reflected.}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+XXX plotted in ifoSim.gpl on watson.
+\end_layout
+
+\begin_layout Standard
+XXX Blah Blah blah
+\end_layout
+
+\begin_layout Subsubsection
+Noise
+\end_layout
+
+\begin_layout Paragraph
+Leading noise source
+\end_layout
+
+\begin_layout Standard
+Believed to be polarization rotation in the fiber.
+ New polarization-maintaining fiber is on-hand for an upgraded version of
+ the experiment.
+\end_layout
+
+\begin_layout Subsubsection
+Calibration
+\end_layout
+
+\begin_layout Standard
+In order for the intensity values measured at the photodiode to be meaningful,
+ we must develop an intensity-change to displacement conversion.
+ As the intensity at the output port necessarily varies sinusoidally with
+ foil position, the sensitivity .
+ With the initial visible-light laser, we attempted to lock the fringe phase
+ into the location of maximum sensitivity by varying the laser temperature
+ temperature, and hence frequency.
+ With the infrared distributed feedback laser, the temperature coefficient
+ is so small that such an approach cannot work.
+ Future versions of the experiment may include positioning feedback for
+ the fiber mount in order to maximize sensitivity.
+ 
+\end_layout
+
+\begin_layout Standard
+Determining fringe contrast can only be done by displacing the foil.
+ The attractor can be pressed into the foil by lightly over-driving the
+ translation stage.
+ If valves are manipulated to permit a slow retreat of the attractor (or
+ using the very slow leak of the isolation valve), a fringe pattern may
+ be obtained.
+\end_layout
+
+\begin_layout Standard
+XXX image.
+\end_layout
+
+\begin_layout Standard
+The very first fringe (at XXX psi) is our best measure of fringe contrast.
+ We can identify the turning points and sensitive regions of intensity.
+ 
+\end_layout
+
+\begin_layout Standard
+XXX image
+\end_layout
+
+\begin_layout Standard
+In Fig XXX, we have the interferometer signal plotted over the duration
+ of the experiment.
+ Given the spatial extent of the materials involved and the heterogeneous
+ nature of the assembly, the <XXX 
+\begin_inset Formula $\mu$
+\end_inset
+
+m differential displacement over a period of more than a month is satisfying.
+ Much of the experiment took place near a turning point, which limits our
+ ability to constrain the foil motion for each individual run.
+ 
+\end_layout
+
+\begin_layout Paragraph
+A conservative approach
+\end_layout
+
+\begin_layout Standard
+As it is challenging to infer anything about foil motion near a fringe turning
+ point, we won't.
+ We will only consider times when the interferometer was in the middle 71%
+ (
+\begin_inset Formula $\sin(\pi/4)=\sqrt{2}/2=0.707$
+\end_inset
+
+) of the range of fringe contrast.
+ Over the same range, the slope of the fringe-to-displacement sinusoid varies
+ by at most 21% away from the mean (average slope 
+\begin_inset Formula $2\sqrt{2}/\pi$
+\end_inset
+
+, maximum 1, minimum 
+\begin_inset Formula $\sqrt{2}/2$
+\end_inset
+
+ ).
+ As we are only interested in an estimate (and hopefully an upper bound)
+ on the foil's contribution to pendulum torque, this will be sufficient.
+\end_layout
+
+\begin_layout Standard
+Within this range, we use the approximation 
+\begin_inset Formula $\frac{\pi\lambda}{8\sqrt{2}A_{0}}\sim\frac{370\mbox{ nm}}{\mbox{fringe (peak-to-peak) }}$
+\end_inset
+
+ to convert measured output to displacement.
+\end_layout
+
+\begin_layout Section
+Uncertainty Budget
+\end_layout
+
+\begin_layout Standard
+There are two forms of experimental uncertainty.
+ Statistical uncertainty is random and decreases with additional data.
+ Systematic uncertainty is intrinsic to the implementation of an experiment,
+ and does not improve with time.
+ In the context of PlateWash, only attractor-correlated systematic effects
+ are of great concern.
+\end_layout
+
+\begin_layout Subsection
+Statistical Uncertainty
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Statistical-Uncertainty"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+There are many sources of fluctuating 'noise' that affect the PlateWash
+ torsion balance.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Fiber thermal noise
+\end_layout
+
+\begin_layout Standard
+As Saulson XXX(cite) neatly described, all mechanical oscillators have intrinsic
+ thermal noise.
+ Through the fluctuation-dissipation theorem, any lossy oscillator at finite
+ temperature drives itself with thermal fluctuations.
+ 
+\end_layout
+
+\begin_layout Standard
+A torsion balance suspended in sufficiently high vacuum is 'internally damped'.
+ This is described by adding an imaginary part to the torsion fiber's spring
+ constant 
+\begin_inset Formula $\kappa\rightarrow\kappa(1+i\phi)$
+\end_inset
+
+, where 
+\begin_inset Formula $\phi=\frac{1}{Q}$
+\end_inset
+
+ (XXX 2s?) is the 'loss angle' of the fiber.
+ In torque units, the thermal noise is
+\begin_inset Formula 
+\[
+\tau^{2}(f)=4k_{B}T\frac{\kappa}{2\pi fQ}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+XXX-recheck.FormulaProbablyWrong.
+\end_layout
+
+\begin_layout Subsubsection
+Gas damping
+\end_layout
+
+\begin_layout Paragraph
+Origin
+\end_layout
+
+\begin_layout Standard
+As we considered in a detailed investigation of 
+\begin_inset Quotes eld
+\end_inset
+
+squeeze-film damping
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+proximity-enhanced gas damping
+\begin_inset Quotes erd
+\end_inset
+
+ (XXX cite us and aggregation paper), torsion balances in imperfect vacuum
+ are damped by the residual atmosphere.
+ Microscopically, there is only one form of gas damping - collisions between
+ gas particles and an oscillator allow momentum and energy exchange.
+ Experimentally, when the particle mean free path is larger than the dimensions
+ of the chamber, gas damping appears in two forms: 'free' damping and 'proximity
+-enhanced' damping.
+ Free gas damping is independent of an oscillator's location in a vacuum
+ chamber, and depends only upon properties of the gas: 
+\begin_inset Formula 
+\[
+C_{F}XXX
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $C_{F}$
+\end_inset
+
+ is a constant of order unity (in PlateWash it's 
+\begin_inset Formula $\sim XXX$
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+Proximity-enhanced gas damping is geometry dependent.
+ It arises in regions of constrained gas flow.
+ Restricted volumes of gas that are compressed/rarified by oscillator motion
+ have slight over/under-pressure that opposes the oscillator's motion.
+ If the restricted volume's equilibration time 
+\begin_inset Formula $\tau_{eq}$
+\end_inset
+
+ is comparable to the oscillator period 
+\begin_inset Formula $T$
+\end_inset
+
+, the effect becomes lossy.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Q=CXXX
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $C$
+\end_inset
+
+ is, in general, a complicated function of oscillator/chamber geometry.
+ Analytical approximations exist for certain geometries, but in any application
+ where these effects matter quantitatively, experimentation and accurate
+ Monte Carlo simulation is essential.
+\end_layout
+
+\begin_layout Standard
+For PlateWash, which we used in XXX, we found that
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Q=XXX.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Noiseanti-aliasing
+\end_layout
+
+\begin_layout Standard
+The torque noise from free gas damping is white; there is no characteristic
+ timescale.
+ The torque noise from proximity-enhanced damping is peaked around 
+\begin_inset Formula $\tau_{eq}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+With the PlateWash atmosphere, we expect gas damping-driven noise to be
+ roughly 
+\begin_inset Formula 
+\[
+\tau^{2}(f)=XXX
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Quotes eld
+\end_inset
+
+Patch effect
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The gold-coated surfaces of our pendulum and foil are some mixture of amorphous
+ and polycrystalline materials.
+ According to XXX (who?!?!?) the surface environment evolves over time,
+ as crystals slowly change.
+ This gives rise to a changing electrostatic environment at each surface.
+ Our pendulum and foil are gold coated in order to minimise this effect
+ - gold's work function is only weakly-dependent on crystal orientation
+ XXX.
+ Once the pendulum-foil separation is small compared to the characteristic
+ size of any metallic patches, we expect this effect to be important.
+ 
+\end_layout
+
+\begin_layout Standard
+Estimating or measuring the size of this effect is a challenge.
+ Our pendulums may be more sensitive to this effect than available Kelvin
+ probes, it's difficult to compare with surface-physics experiments due
+ to differing surface preparation and vacuum properties, etc.
+ 
+\end_layout
+
+\begin_layout Standard
+Experimentally, all of our group's short-range experiments have seen increased
+ noise at small separations.
+ This is one of the boogey-men invoked to explain it.
+ We generally see improved noise performance from newly-coated foils immediately
+ after pump-down, but don't have a satisfactory understanding of the effect.
+\end_layout
+
+\begin_layout Subsubsection
+Contact potential noise
+\end_layout
+
+\begin_layout Standard
+Electrical connections generally form small galvanic batteries.
+ Numerous connections in series between, for example, the pendulum and foil
+ give rise to a small (
+\begin_inset Formula $<1$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+V) potential between them that is fairly stable (
+\begin_inset Formula $<10$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+mV/month drift), and initially unpredictable in value.
+ 
+\end_layout
+
+\begin_layout Standard
+XXX continues...
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Autocollimator noise
+\end_layout
+
+\begin_layout Standard
+The opto-electronic system used to measure pendulum twist has its own inherent
+ noise.
+ By design, the autocollimator's relatively white noise floor is chosen
+ to sit below the low-frequency thermally-driven angle noise of XXX.
+ The PlateWash autocollimator's noise floor is approximately XXX.
+ XXX Fig.
+ Because of the pendulum's 
+\begin_inset Formula $1/f^{2}$
+\end_inset
+
+ response function at high frequency, angle readout noise is the primary
+ limit on the instruments' torque sensitivity at high frequency.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Environment
+\end_layout
+
+\begin_layout Standard
+A number of environmental factors can give rise to extra noise in the balance.
+ Careful design and construction helps to limit these effects.
+ Many of them are transient in nature, and may be avoided by focusing data
+ acquisition into quite parts of the day, week, and year.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Ground motion
+\end_layout
+
+\begin_layout Standard
+There are several ways in which ground motion can cause an apparent pendulum
+ torque:
+\end_layout
+
+\begin_layout Enumerate
+Rotation of the ground: This rotates the instrument relative to the pendulum
+ and appears as a spurious torque.
+\end_layout
+
+\begin_layout Enumerate
+'Tilt feedthrough': Asymmetry in the fiber cross-section converts the tilt
+ of the fiber support into a pendulum twist.
+ This is suppressed, but not eliminated, by the fiber 'prehanger'
+\end_layout
+
+\begin_layout Enumerate
+Magnetic damper asymmetry: If the field of the swing damper is inhomogeneous,
+ and the prehanger mass has a magnetic moment, damper swing will be converted
+ to a torque.
+\end_layout
+
+\begin_layout Enumerate
+Vertical bouncing: up-down motion of the pendulum changes the tensile stress
+ in the fiber.
+ There is a connection between fiber stress and equilibrium position, so
+ vertical shaking may give rise to apparent torques.
+\end_layout
+
+\begin_layout Enumerate
+Electrostatic interaction with nearby surfaces: For PlateWash, and most
+ short-range experiments, this is the dominant effect.
+ Asymmetric position-dependent pendulum interactions with the foil, control
+ electrodes, and nearby grounded surfaces easily create powerful torques
+ on the pendulum.
+ Careful minimization of contact potentials is essential to reduce tilt/swing
+ couplings.
+ XXX elaborate.
+ With simple modification and bias voltages, the PlateWash balance can become
+ a powerful tilt sensor.
+\end_layout
+
+\begin_layout Subparagraph
+Seismic
+\end_layout
+
+\begin_layout Standard
+Earthquakes worldwide can affect the balance.
+ Quakes of magnitude 3+ in the immediate region (Northern California to
+ Alaska) can disturb operation for minutes to hours.
+ Large quakes, such as the recent Chilean and Japanese quakes, disturb Earth
+ so violently that it can take a day or more before aftershocks and low-frequenc
+y modes of terrestrial vibration have damped.
+ XXX figure
+\end_layout
+
+\begin_layout Standard
+PlateWash also sees less-palpable seismic effects, such as the 'microseismic
+ peak' XXX and the effects of nearby humanity (traffic and laboratory noise).
+ 
+\end_layout
+
+\begin_layout Subparagraph
+Tilt
+\end_layout
+
+\begin_layout Standard
+XXX
+\end_layout
+
+\begin_layout Paragraph
+Gravity gradients
+\end_layout
+
+\begin_layout Standard
+The majority of Eot-Wash XXX(umlaut) pendulums are designed to have vanishing
+ low-order gravitational moments.
+ PlateWash, on the other hand, has a sizeable 
+\begin_inset Formula $q_{22}$
+\end_inset
+
+ moment (it's a flat plate, with masses on the end).
+ Recent estimates by Krishna Venkateswara and Todd Wagner put the ambient
+ gravitational gradient noise at approximately XXX.
+ This noise level converts to torque noise of XXX.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Wind
+\end_layout
+
+\begin_layout Standard
+While the coupling mechanism to wind is presumably seismic, tilt, gravitational
+ gradient, or pressure-related, we don't know the cause.
+ What is clear from our data is a strong coupling between outside wind and
+ pendulum noise.
+ Stormy periods can elevate torque noise by as much as an order of magnitude
+ over completely still periods.
+\end_layout
+
+\begin_layout Standard
+XXX figure.
+\end_layout
+
+\begin_layout Paragraph
+Connection to contact potential
+\end_layout
+
+\begin_layout Standard
+As elucidated above, the electrostatic environment near the pendulum is
+ important to these vibrational noise sources.
+ The largest and closest surface to the pendulum is the foil.
+ Minimizing the pendulum-foil contact potential, 
+\begin_inset Formula $V_{PF}$
+\end_inset
+
+, can have considerable impact on pendulum noise.
+ Because of a non-constant contact potential as a function of pendulum angle,
+ we were unable to trim 
+\begin_inset Formula $V_{PF}$
+\end_inset
+
+ as well as should be possible in principle.
+ Furthermore, as seen in section XXX, we chose to give up control of 
+\begin_inset Formula $V_{PF}$
+\end_inset
+
+ in order to eliminate a possible systematic effect.
+ Direct grounding of the foil is no longer required.
+ Future pendulum designs and future iterations of this experiment must minimize
+ 
+\begin_inset Formula $V_{PF}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+XXX Pendulum battery Figure.
+\end_layout
+
+\begin_layout Paragraph
+Temperature
+\end_layout
+
+\begin_layout Standard
+The PlateWash apparatus is sensitive to temperature.
+ The fiber's equilibrium position and drift rate are perhaps most temperature
+ dependent, but there are uncountably many temperature sensitive elements
+ in the apparatus.
+ To limit the effects of temperature variation, the instrument is located
+ in a temperature controlled room.
+ The room temperature varies by less than XXX through the year and XXX every
+ day.
+ 
+\end_layout
+
+\begin_layout Standard
+As passive isolation, the vacuum system is an excellent insulator, with
+ a time constant of about a week XXX for the internal aluminum baseplate
+ with respect to the outside world.
+ As further, rather limited, insulation, the clean room fans are turned
+ off during measurement periods, trapping a volume of air around the apparatus.
+\end_layout
+
+\begin_layout Subsubsection
+Instrumental noise
+\end_layout
+
+\begin_layout Standard
+Many electronic effects can create excess noise.
+ Most pick-up effects are indistinguishable from autocollimator noise.
+ Because PlateWash normally operates in electrostatic feedback, there is
+ a second channel through which EMF pickup, ground loops, and finite digital-to-
+analog conversion noise can couple to the pendulum.
+ These effects may be assessed by comparing the pendulum noise with and
+ without the feedback electrodes grounded.
+ XXX figure.
+\end_layout
+
+\begin_layout Subsubsection
+Noise model
+\end_layout
+
+\begin_layout Standard
+XXX
+\end_layout
+
+\begin_layout Subsubsection
+Comparison with experiment
+\end_layout
+
+\begin_layout Subsection
+Systematics 
+\end_layout
+
+\begin_layout Standard
+Systematic uncertainties are the primary challenge of this measurement.
+ Ensuring that no gravitational signals are mimiced nor masked demands great
+ care.
+ For this section, estimates are made of a torque difference between an
+ attractor-pendulum distance of closest approach (XXX um) and a point XXX
+ um away.
+\end_layout
+
+\begin_layout Subsubsection
+Electrical/Instrumental Crosstalk
+\end_layout
+
+\begin_layout Standard
+Any effect that is not directly related to attractor motion, but is aware
+ of attractor position, lands in this catchall category.
+ In general, these systematics are very important in many experiments.
+ In this case, the experiment includes an isolation valve on the air pressure
+ line to the attractor bellows.
+ The valve is positioned downstream of the electronic pressure gauge.
+ The valve may be closed, and 
+\bar under
+every 
+\bar default
+electrical signal associated with the operation of the experiment is unchanged.
+ The data analysis system is also unchanged, making it possible to test
+ for these systematics directly.
+ This ability is greatest strength of the pneumatic drive system; any electrical
+ly-actuated drive cannot separate electrical crosstalk in this way.
+\end_layout
+
+\begin_layout Standard
+The electro-optical encoders mounted atop the attractor flexure are disconnected
+ in normal operation of the experiment.
+\end_layout
+
+\begin_layout Subsubsection
+Foil-related
+\end_layout
+
+\begin_layout Paragraph
+Foil displacement
+\end_layout
+
+\begin_layout Standard
+Any attractor-correlated displacement of the isolating foil is a cause for
+ concern.
+ The pendulum interacts electrostatically with the foil with a coupling
+ of ~XXX N-m/um.
+ 
+\end_layout
+
+\begin_layout Subparagraph
+Dust
+\end_layout
+
+\begin_layout Standard
+Any dust between the attractor and foil will cause the foil to move once
+ the attractor-foil separation is smaller than the dust's characteristic
+ size (Pendulum-foil dust is assessed via the 
+\begin_inset Quotes eld
+\end_inset
+
+bounce test
+\begin_inset Quotes erd
+\end_inset
+
+).
+ Effort has been made to keep the active surfaces very clean, with class
+ XXX clean room procedures.
+ We see the effects of dust in perhaps 50% of our initial cleanings of a
+ surface.
+ The presence of dust is inferred with the interferometer.
+ 
+\end_layout
+
+\begin_layout Subparagraph
+Attractor-foil contact potential
+\end_layout
+
+\begin_layout Standard
+The attractor and foil will, in general, have different values of electrical
+ potential.
+ The electrical connections between them will include a collection of Galvanic-p
+otential generating junctions.
+\end_layout
+
+\begin_layout Subparagraph
+Residual gas pressure
+\end_layout
+
+\begin_layout Standard
+The foil's stiffness is XXX.
+ The diffusion time out of the attractor-foil gap is XXX.
+ As we wait XXX seconds between moving the attractor and taking data, any
+ remaining pressure gradient should be, at most, comparable to the ambient
+ pressure itself.
+ XXX torr acting on XXX area yields a foil displacement of XXX and related
+ torque of XXX.
+\end_layout
+
+\begin_layout Paragraph
+Modulation of ambient foil motion
+\end_layout
+
+\begin_layout Standard
+The foil is in constant motion, especially in its resonant modes.
+ The foil has a 
+\begin_inset Formula $Q$
+\end_inset
+
+ of thousands or more.
+ If those vibration amplitudes change with attractor position, a false signal
+ may emerge in the pendulum.
+ The ambient modes can be damped by proximity-enhanced gas damping XXX or
+ some electrical effect (XXX RC or eddy currents?).
+ 
+\end_layout
+
+\begin_layout Standard
+XXX studied this.
+\end_layout
+
+\begin_layout Paragraph
+Attractor vibration coupling via gas or electromagnetic effects to foil
+\end_layout
+
+\begin_layout Standard
+From the interferometer, we can see that the attractor, at the end of its
+ spindles, vibrates with 60 Hz and its harmonics considerably more than
+ the foil alone.
+ The attractor must also have its own seismically driven vibrational modes.
+ XXX we must place a limit on this from on-line ifo traces.
+\end_layout
+
+\begin_layout Paragraph
+Attractor Drift
+\end_layout
+
+\begin_layout Paragraph
+Interferometer Opto-coupling
+\end_layout
+
+\begin_layout Standard
+Foil motion inherently changes the ambient light leaving the vicinity of
+ the interferometer tip.
+ Varying stray light incident on optically sensitive elements of the autocollima
+tor could lead to a spurious foil-correlated signal in the autocollimator.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Newtonian Gravity
+\end_layout
+
+\begin_layout Standard
+In the search for non-Newtonian effects, it is essential to understand the
+ effects of 
+\begin_inset Quotes eld
+\end_inset
+
+normal
+\begin_inset Quotes erd
+\end_inset
+
+ gravity that stem from imperfections in the experiment's design and execution.
+ Some of these effects are essential, such as the necessarily finite size
+ of the attractor.
+ Other effects have been made small by careful design and construction,
+ but residual effects must be quantified.
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset Quotes eld
+\end_inset
+
+Non-infinite
+\begin_inset Quotes erd
+\end_inset
+
+ attractor
+\end_layout
+
+\begin_layout Standard
+As the attractor does not have the spatial extent of an infinite sheet,
+ the gravitational field of the attractor has both distance and misalignment
+ dependence.
+ To estimate the size of this effect, two independent quadrature programs
+ were written.
+ When completed, it was discovered that one trivial bug separated the two
+ codes from nearly exact agreement.
+ See XXX for a description of both methods.
+ As expected from flat surfaces in the near field, the torque vs.
+ distance curves are predominantly linear.
+ For a properly centered pendulum, the expected torque is XXX N-m/m.
+ The quadratic term is XXX N-m/m^2.
+ There is a left-right asymmetry of the curve due to the asymmetry of the
+ pendulum, but for a displacement of the pendulum XXX horizontally and XXX
+ vertically, the linear term becomes XXX N-m/m and the quadratic term XXX
+ N-m/m^2.
+ 
+\end_layout
+
+\begin_layout Standard
+XXX attractor plots go here?
+\end_layout
+
+\begin_layout Paragraph
+Voids/defects in materials
+\end_layout
+
+\begin_layout Standard
+Small non-uniformities in density of the attractor or pendulum materials
+ can mimic or mask a signal.
+ The flat plate geometry of the experiment renders this effect largely second
+ order.
+ In the absence of an attractor non-uniformity, a pendulum void should be
+ expected to have no effect at all.
+ In the absence of a pendulum non-uniformity, an attractor void will cause
+ a lateral position-dependent torque.
+ If the attractor void were to occur near the outer corner of the pendulum
+ (worst case), the torque would be XXX N-m/ (cubic micron of attractor).
+ In the event that two voids are laterally coincident, the maximum torque
+ difference would be XXX N-m/(cubic micron of void).
+ 
+\end_layout
+
+\begin_layout Standard
+Horizontal displacement of the pendulum is an excellent test for the local
+ effects.
+ The largest voids observed in the surfaces under a microscope are about
+ XXX in size.
+ Note that a distribution of voids across the surface can, with sufficiently
+ many voids, be viewed as a reduction in the density of the material.
+ This is especially true if the voids are smaller than a characteristic
+ length-scale of interest.
+\end_layout
+
+\begin_layout Paragraph
+Attractor mount/flexure/bellows gravity
+\end_layout
+
+\begin_layout Standard
+The motion of the attractor mount, spindles, flexure, and bellows introduces
+ a small, largely linear, torque background.
+ The linear background is expected to be XXX Nm/m.
+ The spindles contribute the dominant nonlinear term, which is expected
+ to be < XXX N-m/m^2 (or N-m/m^3).
+ 
+\end_layout
+
+\begin_layout Paragraph
+Caterpillaring of the bellows
+\end_layout
+
+\begin_layout Standard
+XXX The bellows might deform sideways slightly?
+\end_layout
+
+\begin_layout Paragraph
+Weight of drive gas
+\end_layout
+
+\begin_layout Standard
+The flow of gas into the attractor drive bellows changes the mass distribution
+ near the pendulum.
+ XXX cm^3 of gas at 50 psi has a mass of XXX kg.
+ The expected torque on the pendulum due to the appearance of XXX kg XXX
+ m from the pendulum is XXX
+\end_layout
+
+\begin_layout Paragraph
+Glue gaps
+\end_layout
+
+\begin_layout Standard
+The dense inlays of the attractor and the dense material of the attractor
+ face are attached with a thin layer of epoxy.
+ It is possible that an air bubble may have become laterally very large
+ when the glue layer was pressed.
+ Assuming a 1 cm diameter by 1 micron thick glue bubble in both the pendulum
+ and attractor, the associated torque is <XXX.
+\end_layout
+
+\begin_layout Paragraph
+Spindle screw voids
+\end_layout
+
+\begin_layout Standard
+The attractor's aluminum body is attached to aluminum spindles using aluminum
+ set screws.
+ The screws are matched in length and mass to better than XXX um and XXX
+ g.
+ The screws and spindles are installed such that the mass distribution is
+ most mirror-symmetric about the vertical plane perpendicular to the attractor
+ face and coincident with the torsion fiber.
+ The set screws were screwed all the way into the attractor, then the spindles
+ were screwed onto the screws.
+ The remaining voids in the attractor and spindle housings are expected
+ to give rise to torques of XXX N-m/m and nonlinearities of XXX N-m/m^2.
+\end_layout
+
+\begin_layout Paragraph
+Surface flatness
+\end_layout
+
+\begin_layout Standard
+The attractor and pendulum were lapped to XXX um (attractor) XXX um (pendulum)
+ rms flatness.
+ The surfaces were 
+\begin_inset Quotes eld
+\end_inset
+
+dished
+\begin_inset Quotes erd
+\end_inset
+
+ by the lapping process, which dominates the rms flatness.
+ After a spatial lowpass at XXX scale, the rms roughness of the surfaces
+ was XXX um (attractor) and XXX um (pendulum).
+ In addition, the pendulum materials' differing hardnesses led to a step
+ at the dense/light interface of XXX um.
+ A plot of all the surfaces is shown in Fig XXX.
+ 
+\end_layout
+
+\begin_layout Standard
+The torque due to the flatness variations of attractor and pendulum was
+ estimated numerically to be XXX N-m/m in the near field and negligible
+ elsewhere.
+ XXX How the F do we do this reliably?
+\end_layout
+
+\begin_layout Subsubsection
+Tilt/apparatus deformation
+\end_layout
+
+\begin_layout Standard
+Tilt sensitivity is a general affliction of torsion balances.
+ Perhaps because of eccentricity of fine torsion fibers, all balances exhibit
+ 
+\begin_inset Quotes eld
+\end_inset
+
+tilt feedthrough
+\begin_inset Quotes erd
+\end_inset
+
+.
+ In short range interaction experiments, the tilt feedthrough is exacerbated
+ by the importance of spatially varying electrostatic potentials.
+ The apparatus has a two-axis tilt sensor, but it was intentionally turned
+ off during data taking to minimize any electromagnetic interference.
+ The pendulum autocollimator is sensitive along both vertical and horizontal
+ axes, and provides a continuous measurement of pendulum tilt.
+\end_layout
+
+\begin_layout Paragraph
+Nonlinear tilt feedthrough
+\end_layout
+
+\begin_layout Standard
+The apparatus may have attractor-related tilt for a number of reasons, including
+ the displacement of the center of mass of the attractor assembly, deformations
+ of the attractor mount, and changing geometry of the attractor air line.
+ The flexure was mounted from its center in order to minimize any deformation
+ of the apparatus as a whole.
+ The deflection is expected to be both small and primarily linear, limiting
+ the impact on the measurement.
+ We initially estimated the effect of tilt by considering only center of
+ mass motion, finding ~XXX N-m
+\end_layout
+
+\begin_layout Paragraph
+Flexure non-linearity
+\end_layout
+
+\begin_layout Standard
+One interesting systematic effect that can exhibit considerable nonlinearity
+ is the nonlinearity of the flexure itself.
+ Most tilt-related effects are essentially blind to the attractor-foil distance.
+ In order to maximise our use of the flexure's limited (<2mm) travel, the
+ flexure's internal travel limit was located not far from the point at which
+ the attractor pressed hard into the foil.
+ If the double-compensating mechanism of the flexure experiences nonlinear
+ stress near the (artificially-placed with mechanical stops) end of its
+ travel, nonlinear stresses might be communicated to the baseplate.
+ XXX not sure how to estimate this.
+\end_layout
+
+\begin_layout Subsubsection
+Magnetism
+\end_layout
+
+\begin_layout Standard
+Magnetic systematics are among the most difficult to assess in these experiments.
+ The foil provides limited, if any, shielding against low frequency magnetic
+ fields.
+ Because of the considerable strength of the magnetic interaction, great
+ care must be taken to ensure that magnetic effects do not mimic or mask
+ a gravitational signal.
+ For the shortest-range effects, the torsion balance may be the most sensitive
+ probe for their existence, complicating things considerably.
+ Short range gravity research is becoming increasingly sophisticated in
+ this realm; previous tests have only considered some of these effects.
+\end_layout
+
+\begin_layout Paragraph
+Magnetic contamination of materials
+\end_layout
+
+\begin_layout Subparagraph
+Point sources
+\end_layout
+
+\begin_layout Standard
+Single ferromagnetic impurities may interact with one another or with the
+ finite permeability of the opposing material to produce a force/torque
+ on the pendulum.
+\end_layout
+
+\begin_layout Subparagraph
+Diffuse contamination
+\end_layout
+
+\begin_layout Standard
+If impurities are sufficiently numerous, then their presence will only appear
+ in the force/torque once the pendulum/attractor separation is smaller than
+ the characteristic separation of the impurities.
+ Only one surface must be contaminated for this effect to appear, as all
+ materials in the problem have magnetic permeability different from vacuum.
+\end_layout
+
+\begin_layout Subparagraph
+Pendulum magnetic moment
+\end_layout
+
+\begin_layout Standard
+The pendulum has a magnetic moment.
+ It may be measured by applying a time-varying uniform magnetic field to
+ the apparatus.
+ XXX expand.
+ 
+\end_layout
+
+\begin_layout Subparagraph
+Magnetic materials on the attractor
+\end_layout
+
+\begin_layout Standard
+The attractor/flexure/bellows assembly contains magnetic materials, primarily
+ stainless-steel screws positioned more than an attractor diameter away
+ from the pendulum.
+ Any magnetic fields from these sources should vary almost linearly with
+ attractor position,
+\end_layout
+
+\begin_layout Paragraph
+Modulation of background magnetic fields
+\end_layout
+
+\begin_layout Standard
+The magnetic permeability of the attractor and pendulum materials will affect
+ any background magnetic fields.
+ In addition to Earth's field, the largely non-magnetic apparatus will still
+ have a residual field.
+ The magnetic damper is quite close to the pendulum, and is only partially
+ shielded.
+\end_layout
+
+\begin_layout Standard
+As discussed by XXXStanford, fields with a component perpendicular to the
+ attractor surface will be altered by the presence of the attractor.
+\end_layout
+
+\begin_layout Paragraph
+Thermal currents in materials
+\end_layout
+
+\begin_layout Standard
+Charge carriers in any material at finite temperature are in constant motion.
+ These random currents create magnetic fields.
+ They have been experimentally observed in several contexts XXX.
+ The interaction of thermally-generated fields may give rise to a false
+ signal.
+ The thermal fields have low frequency components that will pass through
+ the foil.
+\end_layout
+
+\begin_layout Subparagraph
+Attractor-to-pendulum
+\end_layout
+
+\begin_layout Subparagraph
+Attractor induces fields in pendulum
+\end_layout
+
+\begin_layout Subparagraph
+Attractor modulation of foil fields
+\end_layout
+
+\begin_layout Subparagraph
+Attractor fields interact with pendulum contaminant
+\end_layout
+
+\begin_layout Subparagraph
+Pendulum fields interact with attractor contaminant
+\end_layout
+
+\begin_layout Paragraph
+Attractor drift
+\end_layout
+
+\begin_layout Standard
+The attractor pneumatic drive valves leak slowly, causing the attractor
+ to retract at ~XXX um/minute.
+ A changing magnetic environment may give rise to a pseudo-DC magnetic field
+ that penetrates the foil.
+\end_layout
+
+\begin_layout Paragraph
+Attractor vibration
+\end_layout
+
+\begin_layout Standard
+Even with a 
+\begin_inset Quotes eld
+\end_inset
+
+static
+\begin_inset Quotes erd
+\end_inset
+
+ attractor, attractor vibration can induce magnetic effects.
+ As mentioned in the section regarding foil motion, the attractor picks
+ up ambient vibration.
+ Audio frequency motion of the attractor or of attractor impurities can
+ potentially create magnetic fields that are weakly attenuated by the foil.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Thermal
+\end_layout
+
+\begin_layout Paragraph
+Foil-Attractor temperature difference
+\end_layout
+
+\begin_layout Standard
+If there is a temperature gradient between the foil and the attractor, attractor
+-correlated temperature variations in the foil temperature may occur, giving
+ rise to a false signal.
+ Heaters and thermistors were installed on board the attractor spindles
+ to magnify and study this effect.
+ Studies by XXX show that heat transfer is enhanced over very short distances
+ in vacuum by an effect similar to proximity-enhanced gas damping.
+\end_layout
+
+\begin_layout Paragraph
+Spot-heating by interferometer
+\end_layout
+
+\begin_layout Standard
+The foil interferometer has approximately 1 mW of infrared optical power
+ incident on the foil.
+ This spot heating may dissipate at different rates in an attractor correlated
+ way.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Overall temperature change at attractor frequency
+\end_layout
+
+\begin_layout Standard
+The temperature of the instrument itself may change as gas flows into and
+ out of the attractor bellows.
+ Thermistors are installed (but not continuously monitored XXX) in several
+ locations throughout the apparatus.
+\end_layout
+
+\begin_layout Subsubsection
+Pneumatic Drive Leak
+\end_layout
+
+\begin_layout Standard
+If the pneumatic drive system has a leak into the vacuum chamber, it would
+ change the residual gas atmosphere in an attractor-correlated way.
+ An upper bound on the magnitude of any pressure change may be obtained
+ by running the instrument with the ion pressure gauge turned on.
+\end_layout
+
+\begin_layout Subsubsection
+RF tuning
+\end_layout
+
+\begin_layout Standard
+Attractor motion may change the electromagnetic resonant structure of the
+ inside of the bell jar.
+ This could matter at the lock-in frequency of the autocollimator, alter
+ the magnitude of interference-driven pickup, or something else.
+\end_layout
+
+\begin_layout Subsubsection
+Casimir effect
+\end_layout
+
+\begin_layout Standard
+The Casimir effect is not expected to penetrate the foil.
+ See XXX.
+ If it did, it would be very interesting.
+\end_layout
+
+\begin_layout Section
+Metrology
+\end_layout
+
+\begin_layout Subsection
+Initial Alignment
+\end_layout
+
+\begin_layout Standard
+XXX! The experiment was initially aligned using the autocollimator.
+ The attractor was fixed in place against two registry blocks and firmly
+ clamped.
+ The autocollimator was then centered on the attractor and aligned such
+ that the light returned to near the center of the sensor.
+ The up-down and left-right angles were recorded.
+ The attractor was then translated through its full range of motion, and
+ the position on the autocollimator recorded.
+ The attractor was adjusted to a point ~20
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m from the desired working position.
+ The foil and attractor were cleaned with dry nitrogen and with clean room
+ wipes/isopropanol.
+ The foil was then placed in front of the attractor and iteratively aligned
+ to the attractor using a combination of the autocollimator readout and
+ a measurement of the attractor-foil capacitance.
+ Gross alignment was done by hand.
+ Fine adjustment was done using the Belleville washers on the foil mount.
+ When optical alignment reached XXX 
+\begin_inset Formula $\mu$
+\end_inset
+
+rad, a capacitance of ~3-400 pF was achieved, and the capacitance seemed
+ to be at a minimum as a function of attractor-foil angle, the system was
+ declared to be aligned.
+ 
+\end_layout
+
+\begin_layout Subsection
+Cleaning
+\end_layout
+
+\begin_layout Standard
+Once the attractor and foil were aligned, it was essential to remove any
+ debris/dust in the gap between them.
+ To characterize the amount of dust in the gap, and to verify alignment,
+ the attractor-foil capacitance was measured as a function of attractor
+ position, including positions where the attractor touched the foil.
+ Touching was, at this step, determined by noting the position where the
+ capacitance reading became unreliable.
+ The maximum capacitance recorded without signs of touching gave a proxy
+ for the minimum attractor-foil separation.
+ 
+\end_layout
+
+\begin_layout Standard
+The attractor assembly was removed and the attractor face cleaned with isopropan
+ol, clean room wipes, and dry nitrogen.
+ The same was done with the attractor side of the foil.
+ Both attractor and foil were visually inspected for dust.
+ The attractor assembly was replaced against the registry blocks and re-clamped.
+ The attractor-foil capacitance was measured as a function of attractor
+ position.
+ The cleaning procedure was repeated until no gains in capacitance were
+ observed with subsequent cleanings.
+ Typical maximum capacitances were ~2
+\begin_inset space ~
+\end_inset
+
+nF; because of the ambient atmosphere, this measurement should not be used
+ to determine the distance of minimum approach.
+\end_layout
+
+\begin_layout Subsection
+Online Alignment
+\end_layout
+
+\begin_layout Standard
+The critical distances between and relative orientations of the pendulum,
+ foil, and attractor were determined with the bell jar closed, under vacuum,
+ and after bake-out.
+ A number of methods were explored, but the method of choice was as follows:
+ The freely twisting pendulum was allowed to tap the foil as the attractor
+ was pressed into the foil by the flexure stage.
+ As the attractor displaced the foil, the angular amplitude of the tapping
+ signal necessarily decreased to zero.
+ The point where this occurred was used as a reference to determine the
+ absolute distance between the pendulum and the attractor (XXX we should
+ repeat at another phitop position?).
+ The pendulum twist at this point was taken to be the angle at which the
+ pendulum was parallel to the attractor (XXX what about 
+\begin_inset Formula $\psi$
+\end_inset
+
+?) 
+\end_layout
+
+\begin_layout Standard
+The pendulum-foil capacitance was measured as a function of pendulum position
+ towards and away from the foil, as measured by the phitop encoder.
+ 
+\end_layout
+
+\begin_layout Standard
+XXX Plots
+\end_layout
+
+\begin_layout Standard
+The pendulum foil distance was measured optically using a digital camera.
+ 
+\end_layout
+
+\begin_layout Standard
+The attractor-foil capacitance was measured as a function of attractor position.
+\end_layout
+
+\begin_layout Standard
+The interferometer signal was measured as a function of attractor position.
+ 
+\end_layout
+
+\begin_layout Standard
+The bounce test was repeated holding the pendulum close to the foil and
+ moving the attractor.
+\end_layout
+
+\begin_layout Section
+Typical Behavior
+\end_layout
+
+\begin_layout Subsection
+Torque Trace
+\end_layout
+
+\begin_layout Subsection
+Noise Plot
+\end_layout
+
+\begin_layout Subsection
+Flexure motion
+\end_layout
+
+\begin_layout Chapter
+Operation
+\end_layout
+
+\begin_layout Section
+Frequency
+\end_layout
+
+\begin_layout Standard
+Each Platewash measurement operates in a frequency regime spanning 100 
+\begin_inset Formula $\mu$
+\end_inset
+
+Hz to 1 Hz.
+ This section describes the way in which important experimental frequencies
+ were selected.
+\end_layout
+
+\begin_layout Subsection
+Spectral Character of Noise
+\end_layout
+
+\begin_layout Standard
+A torsion balance is an excellent harmonic oscillator.
+ For quality torsion fibers, the anharmonic terms are smaller than XXX (cite
+ Bantel).
+ The torque to angle transfer function of a torsion oscillator with resonant
+ angular frequency 
+\begin_inset Formula $\omega_{0}$
+\end_inset
+
+ , torsion spring constant 
+\begin_inset Formula $\kappa$
+\end_inset
+
+, moment of inertia 
+\begin_inset Formula $I$
+\end_inset
+
+, and quality factor 
+\begin_inset Formula $Q$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+\left|\frac{\theta(\omega)}{\tau(\omega)}\right|=\frac{1/\kappa}{\sqrt{(1-\omega^{2}/\omega_{0}^{2})^{2}+1/Q^{2}}};\Rightarrow\mbox{If }\omega\gg\omega_{0},\,\left|\frac{\theta(\omega)}{\tau(\omega)}\right|\rightarrow\frac{1}{I\omega^{2})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename plots/pwTransferFunction.eps
+	width 50page%
+	scaleBeforeRotation
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Approximate torque-to-angle transfer function
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Approximate-torque-to-angle-tran"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For 
+\begin_inset Formula $\omega\gg\omega_{0}$
+\end_inset
+
+, the pendulum response is independent of the torsion spring.
+ This is the equivalent of 
+\begin_inset Formula $F=ma=m\ddot{x}\rightarrow\tilde{\tau}=I(-\omega^{2})\tilde{\theta}$
+\end_inset
+
+; at these frequencies, the pendulum is a free mass.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Thermal Noise
+\end_layout
+
+\begin_layout Standard
+The intrinsic noise in a torsion balance is known (XXX) to be consistent
+ with thermal noise from 
+\begin_inset Quotes eld
+\end_inset
+
+internal damping
+\begin_inset Quotes erd
+\end_inset
+
+, that is, that the spring constant has an imaginary part.
+ 
+\begin_inset Formula $I\ddot{\theta}=\kappa\theta\rightarrow I\ddot{\theta}=\kappa(1+i\frac{1}{Q})\theta$
+\end_inset
+
+ , where 
+\begin_inset Formula $\kappa$
+\end_inset
+
+ is the torsion constant of the fiber, 
+\begin_inset Formula $I$
+\end_inset
+
+ the pendulum's moment of inertia about the fiber axis, and 
+\begin_inset Formula $\theta$
+\end_inset
+
+ the pendulum twist angle.
+ This is in contrast to the more familiar external damping, where 
+\begin_inset Formula $I\ddot{\theta}=-\kappa\theta-\frac{\sqrt{\kappa I}}{Q}\dot{\theta}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Following Saulson's classic explication, internal damping gives rise to
+ torque noise power with a 
+\begin_inset Formula $1/f$
+\end_inset
+
+ spectral shape.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\tilde{\tau}^{2}(\omega)=4k_{B}T\frac{\kappa}{Q\omega}
+\]
+
+\end_inset
+
+Convolving this noise with the torque-to-angle transfer function (see Fig
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Approximate-torque-to-angle-tran"
+
+\end_inset
+
+), we recover the angle noise spectrum of a thermally-limited torsion oscillator.
+\end_layout
+
+\begin_layout Subsubsection
+Readout Noise
+\end_layout
+
+\begin_layout Standard
+No physical measurement has arbitrary precision, thus we must consider the
+ effects of finite-precision angle readout on our ability to measure torques.
+ For simplicity, let our minimum resolvable angle at all frequencies be
+ 
+\begin_inset Formula $\delta\theta$
+\end_inset
+
+ (this is a practical approximation, see XXX).
+ Our minimum resolvable torque signal at any given frequency is 
+\begin_inset Formula 
+\[
+\delta\tau(\omega)=\frac{\delta\theta}{T(\omega)}=\kappa\sqrt{(1-\omega^{2}/\omega_{0}^{2})^{2}+1/Q^{2}}\delta\theta\approx\kappa\left|1-\omega^{2}/\omega_{0}^{2}\right|\delta\theta
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+At frequencies above the pendulum resonance, the resolvable torque noise
+ rises with frequency.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Proximity Noise
+\end_layout
+
+\begin_layout Standard
+As described in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Statistical-Uncertainty"
+
+\end_inset
+
+, the noise in the apparatus increases as the pendulum approaches the foil.
+ In our frequency range of interest, it appears as relatively frequency-independ
+ent noise.
+ Some of this noise is time-dependent, correlated with wind, human activity,
+ and worldwide seismic activity.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Experimentally determined noise curves
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Experimentally-determined-noise"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Emphasize here where the optimal noise is.
+\end_layout
+
+\begin_layout Subsection
+Statistics
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Statistics"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The higher the attractor frequency 
+\begin_inset Formula $f$
+\end_inset
+
+, the more individual measurements we can make.
+ In principle, given frequency-independent noise, the choice of signal frequency
+ is arbitrary.
+ If the noise power spectral density 
+\begin_inset Formula $S(\omega)=S_{0}$
+\end_inset
+
+, then the resulting uncertainty of 
+\begin_inset Formula $N$
+\end_inset
+
+ measurements each of duration 
+\begin_inset Formula $t=1/f$
+\end_inset
+
+ is 
+\begin_inset Formula $\sigma_{all}=\sqrt{S_{0}/Nt}$
+\end_inset
+
+.
+ If the measurements are performed in a fixed time 
+\begin_inset Formula $T=Nt$
+\end_inset
+
+, then 
+\begin_inset Formula $\sigma_{all}=\sqrt{S_{0}/T}$
+\end_inset
+
+, independent of 
+\begin_inset Formula $t$
+\end_inset
+
+ and 
+\begin_inset Formula $N$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Practically, however, noise is 
+\begin_inset Quotes eld
+\end_inset
+
+non-Gaussian
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Events such as earthquakes, human activity, attractor/foil interactions,
+ computer crashes, etc.
+ all happen.
+ They are often short in duration, but overwhelming in amplitude.
+ Measurements taken at these tims are unusable.
+ They are rare-enough that most experiments never incorporate them into
+ their noise budget.
+ LIGO, the gravitational wave interferometer, is a rare exception; some
+ LIGO scientists devote much of their time to 
+\begin_inset Quotes eld
+\end_inset
+
+glitch
+\begin_inset Quotes erd
+\end_inset
+
+-hunting.
+ In PlateWash, it will be shown in XXX(ref) that for any large transient,
+ measurements for at least 
+\begin_inset Formula $10t=2560\mbox{\,\ s}=0.7\mbox{\,\ hr}$
+\end_inset
+
+ must be discarded.
+ If 
+\begin_inset Formula $t$
+\end_inset
+
+ were smaller, the experiment's livetime would be greater.
+ XXX glitch/day?
+\end_layout
+
+\begin_layout Standard
+A second benefit to small 
+\begin_inset Formula $t$
+\end_inset
+
+ is improved statistics.
+ This measurement relies on Monte Carlo-like measurement schemes (random
+ attractor locations) to understand systematic uncertainties and better
+ constrain possible violations of the ISL.
+ Faster individual measurements allow faster exploration of parameter space
+ (exploring a 
+\begin_inset Formula $6\times6$
+\end_inset
+
+ grid of measurements requires a day with the current choice of 
+\begin_inset Formula $t$
+\end_inset
+
+).
+ Measurements that are twice as fast allow twice as many questions to be
+ answered.
+ Faster is better, much more than 
+\begin_inset Formula $\sqrt{\mbox{better}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Harmonics
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Harmonics"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In order to avoid any velocity-dependent systematic uncertainties, the attractor
+ must move in a square wave, with measurements taken only when the instrument
+ is at rest.
+ The Fourier coefficients of a square wave are 
+\begin_inset Formula $A_{n}=4/\pi n$
+\end_inset
+
+ for all odd 
+\begin_inset Formula $n$
+\end_inset
+
+ (
+\begin_inset Formula $A_{n}=0$
+\end_inset
+
+ for even 
+\begin_inset Formula $n$
+\end_inset
+
+).
+ XXX cite Arfken.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="10">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Harmonic (
+\begin_inset Formula $m)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+13
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+15..
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+17
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Fourier coefficient
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.27
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.42
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.25
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.18
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.14
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.12
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.08
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.07
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Combined SNR ( 1 to 
+\begin_inset Formula $m$
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.27
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.34
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.36
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.39
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.39
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.40
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.40
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.40
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.40
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Square wave Fourier coefficients and aggregate SNR up to 
+\begin_inset Formula $n=17$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Fourier Harmonics"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For measurements with equal uncertainty 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ of each harmonic, the uncertainty in a combined measurement of the first
+ 
+\begin_inset Formula $m$
+\end_inset
+
+ harmonics is 
+\begin_inset Formula $\sigma_{combined}=\sigma/\sqrt{\sum_{j=1}^{m}A_{m}^{2}}$
+\end_inset
+
+.
+ In Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Fourier Harmonics"
+
+\end_inset
+
+, the signal to noise ratio (SNR) is computed for 
+\begin_inset Formula $\sigma=1$
+\end_inset
+
+.
+ The first harmonic is the only one that matters.
+\end_layout
+
+\begin_layout Subsection
+Lags
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Lags"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A number of properties of the instrument require finite time.
+ The pneumatically-driven attractor takes XXX s to move to a new position.
+ The feedback loop requires ~XXX s to settle.
+ The data acquisition system samples every XXX
+\begin_inset space ~
+\end_inset
+
+s and has 3-5
+\begin_inset space ~
+\end_inset
+
+s anti-aliasing filters.
+ Synchronization errors between the three data acquisition computers require
+ XXX
+\begin_inset space ~
+\end_inset
+
+s of padding.
+ For these reasons, the first 
+\begin_inset Formula $\sim XXX$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+s after a position change must be excluded to reject any position-change
+ related effects (see section XXX for further discussion of lags).
+ As a consequence, the highest available switch frequency is 
+\begin_inset Formula $\sim XXX$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+mHz.
+ At that frequency, the accepted measurements would have zero duty cycle.
+ The duty cycle available for measurement is 
+\begin_inset Formula $D=(1-2Lf)$
+\end_inset
+
+, where 
+\begin_inset Formula $L$
+\end_inset
+
+ is the total time excluded from an individual step and 
+\begin_inset Formula $f$
+\end_inset
+
+ is the attractor frequency.
+ The SNR attenuation is roughly 
+\begin_inset Formula $\sqrt{D}$
+\end_inset
+
+, plotted in Figure
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "SNR vs Lags"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename plots/lagFrequencySNR.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Signal to noise attenuation as a function of attractor frequency and lag
+ size
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "SNR vs Lags"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Choosing a frequency
+\end_layout
+
+\begin_layout Standard
+As the first harmonic is the only signal of importance (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Harmonics"
+
+\end_inset
+
+), we should place the first harmonic at the location of lowest noise (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Experimentally-determined-noise"
+
+\end_inset
+
+).
+ Furthermore, we are driven by statistics (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Statistics"
+
+\end_inset
+
+) to operate at the highest practical frequency.
+ The required use of lags to eliminate systematic uncertainties places a
+ soft upper bound on usable frequencies (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Lags"
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+The operating frequency was chosen well in advance of the science run reported
+ here, before the instrument was fully understood.
+ We selected a frequency that we expected would give low noise and was sufficien
+tly slow to allow transients associated with attractor motion to damp.
+ We selected 3.90625 mHz, or 
+\begin_inset Formula $1/256$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+s.
+ 256
+\begin_inset space ~
+\end_inset
+
+s is an integer (320) multiple of the 0.8
+\begin_inset space ~
+\end_inset
+
+s sample time, making each attractor period an integer number of samples.
+ This choice improves the performance of discrete Fourier analysis and minimizes
+ beating between signal and sample frequencies.
+\end_layout
+
+\begin_layout Subsection
+Choosing a science signal
+\end_layout
+
+\begin_layout Standard
+As the pendulum is locked in feedback, there are multiple data channels
+ that may be used to extract a science measurement.
+ The pendulum twist angle, the feedback signal itself, and the P, I, and
+ D terms of the feedback loop are written to disk.
+ The pendulum twist angle and the P (proportional) term of the loop are
+ necessarily equivalent.
+ In practice, the twist signal and P term were anti-aliased differently.
+ The P term had an XXX s filter applied, making it the signal of choice
+ for a twist measurement.
+ The loop was operated with zero I-term, so the I channel contains no signal.
+ The D (derivative) term responds like 
+\begin_inset Formula $\omega$
+\end_inset
+
+, making it unsuited to low frequency signal extraction.
+\end_layout
+
+\begin_layout Standard
+So, there are two reasonable science channels: the feedback signal applied
+ to the pendulum, and the P term.
+ The feedback signal has units of torque, the P term has units of angle.
+ Even though the pendulum is held fixed, the torque-angle transfer function
+ remains important.
+ At frequencies below the resonance of the pendulum, the two channels are
+ directly proportional.
+ At frequencies above resonance, the frequency-independent angle noise of
+ the autocollimator appears, in the feedback signal, as torque noise that
+ rises like frequency squared.
+ As shown in XXX, the higher harmonics of the attractor motion contain no
+ interesting signal, so it is in our interest to low-pass them away.
+ 
+\end_layout
+
+\begin_layout Standard
+By choosing the angle signal instead of the feedback signal as the science
+ signal, we use the inertia of the pendulum as an analog low-pass filter.
+ While, in principle, both signals contain the science, the science signal
+ is more-easily extracted from the angle signal.
+ Furthermore, as the feedback signal is the sum of the P and the derived
+ D terms, there's less opportunity for an error to enter into the science
+ signal if the measured angle is used alone.
+\end_layout
+
+\begin_layout Chapter
+Data Analysis
+\end_layout
+
+\begin_layout Standard
+XXX Calibration stability through the runs.
+ What can explain observed calibration variation?
+\end_layout
+
+\begin_layout Standard
+XXX Systematics on calibration signal.
+\end_layout
+
+\begin_layout Section
+Signal Extraction
+\end_layout
+
+\begin_layout Standard
+This section describes the way in which XXX seconds of raw data are converted
+ from three independent raw timeseries into 
+\begin_inset Formula $\sim1350$
+\end_inset
+
+ 'cuts' for further analysis.
+ 
+\end_layout
+
+\begin_layout Subsection
+Torque Calibration
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../pWDA/run3147calFitChk.eps
+	width 75col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Gravitational calibration.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Gravitational-calibration"
+
+\end_inset
+
+XXX Reexamine near 1180.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The torque scale of the instrument is set gravitationally.
+ Throughout the operation of the experiment the 'q-tester' (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Calibration"
+
+\end_inset
+
+) injects a torque of amplitude 
+\begin_inset CommandInset include
+LatexCommand input
+filename "~/pWDA/extracted/qTesterTorque.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+N-m.
+ The data are broken into 
+\begin_inset CommandInset include
+LatexCommand input
+filename "~/pWDA/extracted/calibCutLength.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+s chunks and fit for the sinusoidal signal.
+ The signal occurs at the q-tester's 
+\begin_inset Formula $2\omega$
+\end_inset
+
+ frequency; a fit is also incorporated for the 
+\begin_inset Formula $1\omega$
+\end_inset
+
+ signal.
+ Both frequencies are allowed to float.
+ The fit is an ordinary least-squares fit of 
+\begin_inset Formula $A\cos(\omega t)+B\sin(\omega t)+C$
+\end_inset
+
+ to each chunk.
+ The frequency is varied through a downhill binary search to minimize 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+.
+ The 
+\begin_inset Formula $1\omega$
+\end_inset
+
+ and 
+\begin_inset Formula $2\omega$
+\end_inset
+
+ signals are fit independently.
+\end_layout
+
+\begin_layout Standard
+The mean amplitude (solid line in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Gravitational-calibration"
+
+\end_inset
+
+) 
+\begin_inset Formula $\sqrt{A^{2}+B^{2}}$
+\end_inset
+
+ throughout the experiment is used to compute the fixed measured-torque
+ to actual-torque conversion ratio.
+ The fitted amplitude is 
+\begin_inset CommandInset include
+LatexCommand input
+filename "~/pWDA/extracted/CalibFitWErr.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+XXX units.
+ 
+\end_layout
+
+\begin_layout Standard
+The time variation of the q-tester signal may be understood as any of a)
+ a small change in pendulum/foil/electrode spacing, b) slow creep of the
+ q-tester geometry, c) something else.
+ In case 
+\begin_inset Quotes eld
+\end_inset
+
+b)
+\begin_inset Quotes erd
+\end_inset
+
+, the masses have crept outward radially by less than ~5% over the 3+ year
+ lifetime of the experiment (of which these data comprise only 5%).
+ This gives a (conservative) 16% 
+\emph on
+decrease
+\emph default
+ in calibration signal, which cannot account for the slight increase in
+ observed signal.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXX include code?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Timing
+\end_layout
+
+\begin_layout Standard
+XXX TO COLLABORATORS: This section is not yet really begun.
+ This is potentially a huge issue.
+ I think the only correct response is to lock in to each individual switch
+ of the attractor.
+ My analysis does not yet do that.
+ It presumes that the clock rates and sample rates match.
+ 
+\end_layout
+
+\begin_layout Standard
+Look at 3169lags.
+ On long runs, the difference between sample rate and attractor rate matters.
+\end_layout
+
+\begin_layout Standard
+No easy answer here? May have to continuously resync to edges? Tricky.
+ No synchronous timing signal makes it harder.
+ have to believe the clocks?
+\end_layout
+
+\begin_layout Standard
+Square wave in 3169 is locked to the clock, not to samples.
+ Drift is ~60 degrees in phase through the whole 300,000
+\begin_inset space ~
+\end_inset
+
+s run.
+ 
+\end_layout
+
+\begin_layout Subsection
+Attractor-correlated signal extraction
+\end_layout
+
+\begin_layout Subsubsection
+Synchronization
+\end_layout
+
+\begin_layout Standard
+Data are imported from three separate sources (torsion balance, attractor
+ control, interferometer), and trimmed in length to present only data with
+ complete temporal overlap.
+ If needed (runs XXX-XXX), any timing offsets between the three clocks are
+ incorporated before trimming.
+ All three sources sample with a fixed 0.8
+\begin_inset space ~
+\end_inset
+
+s sample interval, so any timing mismatch is at most 1.6 s.
+ When interferometer data are unavailable, the interferometer's data structures
+ are created and filled with zeros, except the timing information, which
+ is copied from the torsion balance data.
+\end_layout
+
+\begin_layout Subsubsection
+Filtering
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Filtering"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/charlie/pWDA/run3147filterFrequencyResponse.eps
+	width 75col%
+	BoundingBox 50bp 50bp 554bp 770bp
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Transfer functions of software low-pass filters.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:FIR Filter Transfer Functions"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Three columns of data are fed through finite impulse response (FIR) filters
+ of length 9600 samples (
+\begin_inset Formula $10\mbox{ switches}\times256\mbox{ second attractor period}\times3\mbox{ cuts}\div0.8\mbox{ seconds/sample}$
+\end_inset
+
+).
+ The filters are designed by the octave-forge function 'fir1'.
+ The function designs 'windowed filters' with linear phase response.
+ Filters with linear phase response have frequency-independent phase delays
+ [XXX cite].
+  The torsion balance feedback signal is sent through a filter with passband
+ from 
+\begin_inset CommandInset include
+LatexCommand input
+filename "~/pWDA/extracted/filterLow.tex"
+
+\end_inset
+
+-
+\begin_inset CommandInset include
+LatexCommand input
+filename "~/pWDA/extracted/filterHigh.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+mHz with notch filters at the calibration tone's 
+\begin_inset Formula $1\mbox{-}\omega$
+\end_inset
+
+ and 
+\begin_inset Formula $2\mbox{-}\omega$
+\end_inset
+
+ frequencies (3 and 6
+\begin_inset space ~
+\end_inset
+
+mHz).
+ Other sensors to be analyzed in sync with the attractor are fed through
+ a low-pass filter with a corner frequency at 
+\begin_inset CommandInset include
+LatexCommand input
+filename "~/pWDA/extracted/filterSensorHigh.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+mHz.
+ This frequency is chosen to be comparable to the DAQ software filters.
+ The sensor filtering is done to guarantee that all locked-in sensors share
+ timebase/phase with the filtered torque signal.
+ The first 
+\begin_inset Formula $1.5\times(\mbox{filter length})$
+\end_inset
+
+ samples are removed from the beginning of each filtered run to remove filter-in
+itialization effects.
+ The filter transfer function is shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:FIR Filter Transfer Functions"
+
+\end_inset
+
+.
+ Periodograms of the filters applied to experimental data are shown in Figure
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Measured Effect of FIR Filters"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../pWDA/run3169filterTransfer.eps
+	width 75col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Torque data before and after filtering.
+ Attractor included to show relevant frequencies.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Measured Effect of FIR Filters"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This procedure correlates three cuts.
+ As the total science dataset consists of ~XXX cuts, the effect of cut-to-cut
+ correlation is limited.
+ XXX cut-correlation estimation.
+ The 3-cut length of the FIR filter was chosen by balancing the need for
+ effective suppression of the rising 100
+\begin_inset space ~
+\end_inset
+
+mHz autocollimator noise (pushes to longer length) with the need to reject
+ the effects of spikes/kicks (earthquakes and attractor-foil contact).
+ A spike, with amplitude orders of magnitude larger than the calibration
+ tone, contaminates the entire FIR filter length with ringing.
+ With a 3-cut filter, a single spike makes more than two hours data unusable;
+ a longer filter (5-cut is the next symmetric choice) would be even less
+ forgiving.
+\end_layout
+
+\begin_layout Subsubsection
+Edge finding
+\end_layout
+
+\begin_layout Standard
+While many regions of temporal overlap between the three different data
+ sources begin with the beginning of a cut, not all do.
+ Therefore, it is necessary to examine the piecewise square-wave motion
+ of the attractor to determine the phase of the attractor's steps.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "~/mlib/findRisingEdge.m"
+lstparams "caption={findRisingEdge.m},language=Matlab"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Lags
+\end_layout
+
+\begin_layout Standard
+With each attractor position change, it takes a finite amount of time for
+ the pneumatic drive to change position (~27s, including the DAQ filter,
+ see Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "AttractorMotionLag"
+
+\end_inset
+
+).
+ In addition, the pendulum feedback has a finite response time (See Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "TorqueFeedbackLag"
+
+\end_inset
+
+).
+ The pneumatic post-acquisition filter low-pass has a corner frequency at
+ 
+\begin_inset CommandInset include
+LatexCommand input
+filename "~/pWDA/extracted/filterSensorHigh.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+mHz.
+ The pneumatic DAQ filter has a lowpass at 3 s.
+ The synchronization uncertainty among the three acquisition computers is
+ at most 0.8
+\begin_inset space ~
+\end_inset
+
+s (one sample-time).
+ In the case of clock drifts, which affect runs XXX-XXX, it can be as large
+ as XXX.
+ The autocollimator (and on-line feedback) DAQ filter corner was 1
+\begin_inset space ~
+\end_inset
+
+s.
+ Feedback torque DAQ filter at 5
+\begin_inset space ~
+\end_inset
+
+s.
+ Feedback P-term anti-aliasing (for storage only) 3 s.
+ The acausal torque passband FIR filter 
+\begin_inset CommandInset include
+LatexCommand input
+filename "~/pWDA/extracted/filterHigh.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+mHz cutoff frequency corresponds to a 
+\begin_inset CommandInset include
+LatexCommand input
+filename "~/pWDA/extracted/filterHighLag.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+s lead and lag.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../pWDA/run3169lags.eps
+	width 75text%
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "AttractorMotionLag"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Attractor motion, convolved with DAQ IIR low-pass response.
+ Scatter in the lower frame is from ambient air pressure variation (affects
+ both blue and red), and variation in pneumatic-drive pulse-width modulation
+ phase (red only).
+ Duty cycle was a 15%
+\begin_inset Formula $\pm$
+\end_inset
+
+15% square wave.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../pWDA/run3220torqueLag.eps
+	width 75text%
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "TorqueFeedbackLag"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Pendulum, in PD feedback, coherently-averaged response to periodic magnetic
+ torque.
+ Magnet states are as-driven by the attractor control DAQ, no phase lag;
+ scatter driven by sample/clock beating.
+ The measured data are filtered with a 2
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXX WTF?!
+\begin_inset CommandInset include
+LatexCommand input
+filename "pWDA/extracted/filterHigh3220.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+mHz high-pass filter.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+End-to-End measurement
+\end_layout
+
+\begin_layout Standard
+The general problem of filter combination is simple in frequency-space,
+ but difficult in the time domain.
+ 
+\end_layout
+
+\begin_layout Standard
+Serendipity provides a solution to the problem.
+ The pendulum has a magnetic moment (see XXX).
+ Using a coil placed around the apparatus for systematic tests, it is possible
+ to produce arbitrary torques on the pendulum.
+ The attractor position is measured using an analog electronic pressure
+ gauge (see XXX).
+ By combining the gauge with the coil and an amplifier, it is possible to
+ make an exact and magnified simulation of a gravitational signal that is
+ linear in attractor position.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../pWDA/run3224torqueLag.eps
+	width 75text%
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "ElectronicTorqueLag"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Injected torques for lag determination after all filters.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Delay times
+\end_layout
+
+\begin_layout Standard
+Using Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "ElectronicTorqueLag"
+
+\end_inset
+
+, we conclude that it is conservative to choose the following lags: The
+ 
+\begin_inset Quotes eld
+\end_inset
+
+delay time
+\begin_inset Quotes erd
+\end_inset
+
+ from the beginning of a position change to the beginning of accepted data
+ is set to 
+\begin_inset CommandInset include
+LatexCommand input
+filename "~/pWDA/extracted/dTime.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+s.
+ The 
+\begin_inset Quotes eld
+\end_inset
+
+end-pad time
+\begin_inset Quotes erd
+\end_inset
+
+ from the end of accepted data to the end of the position change is set
+ to 
+\begin_inset CommandInset include
+LatexCommand input
+filename "~/pWDA/extracted/pTime.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+s.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Windowing
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../pWDA/run3147windowTransferFunctions.eps
+	width 75col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+The effect of windowing in a lock-in measurement.
+ The solid black line is the periodogram of a single window.
+ The periodogram of the windowed lock-in signal is approximately that of
+ the convolution of the window with a square-wave signal.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Windowing"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Windowing is familiar to many as a method for reducing the magnitude of
+ spectral leakage in Fourier transforms.
+ It is also of use, as a low-pass filter, in reducing the sensitivity of
+ an averaged value to high frequency fluctuations at a modest expense in
+ statistical resolving power.
+ In this analysis, a Hann window is used
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Press2002NumericalRecipes"
+
+\end_inset
+
+.
+ Just as in periodogram estimation, the choice 
+\bar under
+to
+\bar default
+ use a window is much more important than the choice 
+\bar under
+of
+\bar default
+ a particular window.
+ Several windowing schemes were explored, without significant improvement.
+ The final weighting of data used for our analysis is shown in Fig 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Windowing"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Lock-in
+\end_layout
+
+\begin_layout Standard
+Once the lags are chosen, a window selected, and a leading edge found, locking
+ in is straightforward.
+ Beginning at a time prescribed by a leading edge, the analysis program
+ walks through each data stream, multiplies the data found in each 'step
+ period' (1/2 the attractor motion period) by the properly-lagged window
+ function, and computes the weighted average.
+ The resulting average forms a single measurement.
+ There are 
+\begin_inset CommandInset include
+LatexCommand input
+filename "~/pWDA/extracted/lockAve.tex"
+
+\end_inset
+
+ measurements per cut.
+ This is done by the octave function 'squareLockM.m'
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "~/mlib/squareLockM.m"
+lstparams "breakatwhitespace=true,breaklines=true,caption={findRisingEdge.m},emptylines=0,language=Matlab,linerange={1-17,19-23,71-104}"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The first measurement, and every other subsequent measurement, is regarded
+ as an 'A' measurement.
+ The second measurement, and every other subsequent measurement (the complement
+ of the As), is regarded as a 'B' measurement.
+ Because the pneumatic drive takes about one attractor period to come into
+ equilibrium (if coming from a different A/B position pair in the previous
+ cut), the first A and B measurements are dropped from quantitative analysis.
+ 
+\end_layout
+
+\begin_layout Standard
+The average of the A state measurements and the average of the B state measureme
+nts are stored for each cut.
+ In addition, the standard deviation, maximum, and minimum of each set of
+ As and Bs are stored.
+\end_layout
+
+\begin_layout Standard
+The 'lock-in' is made by taking the difference between the average of the
+ As and the average of the Bs.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Section
+For Collaborators
+\end_layout
+
+\begin_layout Plain Layout
+I see that there are a few ways to do the signal extraction with PlateWash.
+\end_layout
+
+\begin_layout Enumerate
+Pass the torque data through the filter mentioned in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Filtering"
+
+\end_inset
+
+ (which notches out the Q-tester and bandpasses out the autocollimator noise),
+ use a flat-topped window on each step, then lock in.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Option 1, but with a Hann window (this is my current solution, is more conservat
+ive), but may give away 
+\begin_inset Formula $\sim\sqrt{2}$
+\end_inset
+
+ in signal.
+\end_layout
+
+\begin_layout Enumerate
+Fit out the Q-tester (which is delicate on long/spiked data sets), lock
+ in with a low-passing window, tolerate detrending as a high-pass.
+\end_layout
+
+\begin_layout Subsection
+Questions:
+\end_layout
+
+\begin_layout Itemize
+Is it kosher to simply square-lock the FIR-filtered data (option 1 above)?
+ 
+\end_layout
+
+\begin_layout Itemize
+I could shorten the FIR filter to a shorter length (perhaps 2560
+\begin_inset space ~
+\end_inset
+
+s instead of the current 7680
+\begin_inset space ~
+\end_inset
+
+s), at a loss of spectral specificity, especially for the 1mHz high-pass.
+ 
+\end_layout
+
+\begin_layout Itemize
+Which lags do you think I should use?
+\end_layout
+
+\begin_layout Itemize
+Is it necessary to analyze the data two independent ways in order to guarantee
+ that there's not a bug?
+\end_layout
+
+\begin_layout Itemize
+In an environment where lags are important, is there any use to a quadrature
+ signal? I do all the same computations for a signal 90 degrees out of phase,
+ but I don't use it, as it's unclear if it's useful.
+ 
+\end_layout
+
+\begin_layout Itemize
+In a perfect world, I'd do careful analysis of the dependence of output
+ on each lag, filter frequency, window parameter, fitting algorithm, etc..
+ How important is it to do so? Are you comfortable with a conservative choice
+ of lag?
+\end_layout
+
+\begin_layout Itemize
+I'm very interested in including the 
+\bar under
+actual 
+\bar default
+source code used for the analysis, as much as possible as inline text instead
+ of appendices.
+ If there's a bug in my analysis routines, I want the reader to be able
+ to correct for it and repeat my results.
+ A lot of dirty laundry lies in an experiment's source code; I want to air
+ it out.
+ Do you have any thoughts on how I can do it, but keep things readable?
+\end_layout
+
+\begin_layout Itemize
+Issues:
+\end_layout
+
+\begin_layout Itemize
+Does algorithm reject everything that's bad.
+\end_layout
+
+\begin_layout Itemize
+Does algorithm keep everything that's good?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Section
+Signal Extraction
+\end_layout
+
+\begin_layout Plain Layout
+The attractor's position was modulated in a square wave with a period of
+ 256
+\begin_inset space ~
+\end_inset
+
+s, an integer number of 0.8
+\begin_inset space ~
+\end_inset
+
+s data acquisition samples.
+ At every position change, after an XXX
+\begin_inset space ~
+\end_inset
+
+s delay to allow the attractor and pendulum feedback systems to come into
+ equilibrium, the pendulum torque was measured for XXX
+\begin_inset space ~
+\end_inset
+
+s.
+ The absolute torque measurements were converted into torque differences
+ by subtracting the mean (XXX windowing!) of the torque measurements when
+ the pendulum-attractor distance was small from the mean of the torque measureme
+nts when the distance was large that immediately preceded and succeeded
+ it XXX.
+  XXX lockAve, windowing length.
+\end_layout
+
+\begin_layout Subsection
+Synchronization
+\end_layout
+
+\begin_layout Plain Layout
+Data are imported from three separate sources (torsion balance, attractor
+ control, interferometer), and trimmed in length to present only data with
+ complete temporal overlap.
+ If needed (runs XXX), any timing offsets between the three clocks are incorpora
+ted before trimming.
+ In instances where interferometer data are unavailable, the interferometer's
+ data structures are created and filled with zeros, except the timing informatio
+n, which is copied from the torsion balance data.
+\end_layout
+
+\begin_layout Subsection
+Filtering
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename pWDA/run3147preSM3A.filterResponse.ps
+	width 75col%
+	BoundingBox 50bp 50bp 554bp 770bp
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Transfer functions of software low-pass filters.
+ XXX data before/after, show data that contains signal, show that science
+ is unfiltered.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Three columns of data are fed through FIR filters of length 9600 samples
+ (
+\begin_inset Formula $10\mbox{ switches}\times256\mbox{ second attractor period}\times3\mbox{ cuts}\div0.8\mbox{ seconds/sample}$
+\end_inset
+
+).
+ The filters are designed by the octave-forge function 'fir1'.
+ The torsion balance feedback signal is sent through a filter whose parameters
+ are described in fir1 syntax as [0.001,0.0045,0.005,0.009,0.010,0.05].
+ This corresponds to a bandpass filter from 
+\begin_inset Formula $\sim1-25$
+\end_inset
+
+ mHz with notch filters at 3 and 6 mHz to remove the calibration tone.
+ The attractor and interferometer signals are fed through a filter described
+ as an 
+\begin_inset Quotes eld
+\end_inset
+
+0.1
+\begin_inset Quotes erd
+\end_inset
+
+ lowpass filter.
+ [XXX get frequencies right] This is primarily done to guarantee that the
+ attractor and interferometer signals share timebase/phase with the signal
+ from the pendulum.
+ To finish the filtering step, the first 14400 samples (1.5 
+\begin_inset Formula $\times$
+\end_inset
+
+ 9600) are clipped from the beginning of all data to remove the filter-initializ
+ing effects.
+ XXX What order to put this section in WRT calibration?
+\end_layout
+
+\begin_layout Subsection
+Edge Finding
+\end_layout
+
+\begin_layout Plain Layout
+To ensure that the phases of each run are correct with respect to the attractor
+ 256 s carrier frequency, an adaptive edge finding method detects rising
+ and falling edges of attractor motion.
+ In the many runs which featured XXX
+\end_layout
+
+\begin_layout Subsection
+Torque Calibration
+\end_layout
+
+\begin_layout Plain Layout
+While the torque scale is ultimately hardcoded with the value set in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Calibration"
+
+\end_inset
+
+, the analysis routine is capable of calibrating each data set independently.
+ The analysis routine is designed to fit and subtract both the 1-
+\begin_inset Formula $\omega$
+\end_inset
+
+ and 2-
+\begin_inset Formula $\omega$
+\end_inset
+
+ signals from the attractor.
+ The fitting algorithm implements a binary search in frequency for the maximum
+ fit amplitude present in the data.
+ At present, there is no cycle-mark on the calibration attractor, so no
+ attempt is made to match the phase of the fit with an external phase reference.
+\end_layout
+
+\begin_layout Plain Layout
+To remove transients before fitting, torque data are passed through a 'spikeRemo
+ver', applied to the data's time derivative.
+ As the calibration signal is continuous, transient signals are interpreted
+ as spurious.
+ Any 100 s region of data centered on a suspected spike is excised completely.
+ Spike detection uses a an aggressive version of Chauvenet's criterion XXX
+ (ref).
+ XXX (Peirce's criteron may actually be better for this?) The implementation
+ loops 20 iterations of the spike removing code to ensure that spikes of
+ multiple scales (or spikes sufficiently numerous to pull the initial standard
+ deviation) are rejected.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+XXX spike-removal plots
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Implementation
+\end_layout
+
+\begin_layout Plain Layout
+Spike-removing code, edited for inconsequential diagnostic code/comments.
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset listings
+lstparams "basicstyle={\scriptsize},breaklines=true,language=Octave,tabsize=2"
+inline false
+status collapsed
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+function out = spikeRemover(time, data, chopWidth)
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	d = diff(data,1 );
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	% see chuckData for a similar implementation without delays
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	% assumes data are regularly sampled
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	numPoints = rows(d);
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	stdDev = std(d);
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	dmean = mean(d);
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	crit = sqrt(2) * stdDev .* erfinv( 1- 1 / numPoints);
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	crit( crit == 0.0 ) = 1.0;
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	repHigh = repmat(dmean+crit, numPoints, 1);
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	repLow  = repmat(dmean-crit , numPoints, 1);
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	% Single | does the right thing for matrices.
+ Matlab has no ||.
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	pitch = ( ( d > repHigh) | ( d < repLow) );
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+       
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	%Loop to cut chopWidth in time around each detected spike.
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	pdata = zeros(rows(d), 1);
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	for i = 1:length(pitch)
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+		if (pitch(i) != 0)
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+			low = i - chopWidth;
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+			if low < 1
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+				low = 1;
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+			end
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+			high = i + chopWidth;
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+			if high > ( rows(data) - 1) % minus one added 1/3/2010
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+				high = rows(data) - 1;
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+			end
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+			for j =  low : high
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+				pdata(j) = 1;
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+			end
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+		end
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	end
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	pdata = -1*(pdata-1);
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	data = data(1:rows(data) - 1);
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	time = time(1:rows(time) - 1);
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	data = data( logical(pdata) );
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	time = time( logical(pdata) );
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	out = [time data];
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Peak fitting code, lightly edited for inconsequential code:
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset listings
+lstparams "basicstyle={\scriptsize},breaklines=true,language=Octave,tabsize=2"
+inline false
+status collapsed
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+function  [beta, sigma, r, bestFreq, out, ERR, COV]= peakFitter3(t, data,
+ fLow, fHigh)
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	%Hunt for peak
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	minsigma = 1e99;
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	maxIndex = 0;
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	bestFreq = 10000;
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	binWidth=1/(t(2)-t(1)) / length(t); % gets the bin width approximately
+ right in order to set ntries
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	nTries=( fHigh - fLow) / binWidth * 4; 
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	%%% Find the center peak of the sinc window response %%%%
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	for i = 1:nTries
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+		guessFreq = fLow + ( i - 1 ) * ( fHigh - fLow) / nTries;
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+		[beta, sigma, r] = ols2( data, genSineSeed( t, guessFreq ) );
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+		out(i,1) = guessFreq;
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+		out(i,2) = sigma;
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+		if(sigma<minsigma)
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+			minsigma = sigma;
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+			maxIndex = i;
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+			bestFreq = guessFreq;
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+		end
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	end
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	%%% Bisection - bisect inward to find the true peak %%%
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	bisect = zeros(3,2); 
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	bisect(1,1) = out( maxIndex - 1 , 1 );
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	bisect(1,2) = out( maxIndex - 1 , 2 );
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	bisect(3,1) = out( maxIndex + 1 , 1 );
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	bisect(3,2) = out( maxIndex + 1 , 2 );
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	% 5 is a magic number that seems to work all the time.
+ The right magic number is < 10 and should be a mathematical constant.
+  
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	for i=1:5	 %pick the center of the interval
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+		bisect(2,1) = ( bisect(3,1) - bisect(1,1) ) / 2 + bisect(1,1); 
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+		%fit at the center
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+		[beta, sigma, r] = ols2( data , genSineSeed(t,bisect(2,1)) );
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+		bisect(2,2) = sigma;
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+		%interpolate a parabola to the data
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+		seedMatrix = [bisect(:,1).^2  bisect(:,1) ones(3,1)];
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+		%Look, ma! I learned something in all that math 'scoolin.
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+		pb = inv( seedMatrix ) * bisect(:,2);
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+		%find the location of the parabola's vertex
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+		bestFreq = - pb(2) / 2 / pb(1);
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+    
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+		if(abs(bestFreq-bisect(2,1))>(bisect(3,1)-bisect(1,1)))
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+			error("Traversed out of bisection interval.");
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+		end
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+		if(bestFreq <= bisect(2,1))
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+			bisect(3,:) = bisect(2,:);
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+		else
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+    		bisect(1,:) = bisect(2,:);
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+		end
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	end
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	[beta,sigma, r, ERR, COV] = ols2( data , genSineSeed(t,bestFreq) ); 
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\begin_layout Plain Layout
+The function ols2 (an ordinary linear least-squares routine) differs from
+ the Octave-Forge 2.1.73 implementation of ols.m by the inclusion of 
+\end_layout
+
+\begin_layout LyX-Code
+COV = inv(Z); 
+\end_layout
+
+\begin_layout Plain Layout
+and
+\end_layout
+
+\begin_layout LyX-Code
+COV = pinv(X); 
+\end_layout
+
+\begin_layout Plain Layout
+in the appropriate places in order to make the computation
+\end_layout
+
+\begin_layout LyX-Code
+ERR = sqrt(diag(COV)*SIGMA); 
+\end_layout
+
+\begin_layout Plain Layout
+possible.
+ 
+\end_layout
+
+\begin_layout Subsection
+Attractor-correlated torque measurement
+\end_layout
+
+\begin_layout Plain Layout
+The attractor moves every 128 s.
+ After XXX s, the attractor is nearly stationary until its next movement.
+ The science signal is the difference in torque on the pendulum between
+ stationary steps.
+ For narrowed bandwidth, we alternate 10 times between two states.
+ This set of 20 (becomes 18 - see 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Aggregation/Differencing"
+
+\end_inset
+
+) measurements ('bins' below XXX word choice) comprises a 'cut'.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Padding
+\end_layout
+
+\begin_layout Plain Layout
+In order to prevent the contamination of each bin by transient effects from
+ attractor motion and by small XXX (size?) synchronization errors between
+ the three data acquisition computers, the analysis does not accept measurements
+ until XXX s after each position change and ceases to accept them XXXs before
+ each position change (XXX do I do this in seconds or samples? Does it matter?
+ Does it beat?)
+\end_layout
+
+\begin_layout Plain Layout
+XXX Need plots to justify choices.
+\end_layout
+
+\begin_layout Subsubsection
+Weighting/windowing
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+XXX Weighting seems important, even if I choose not to use it here.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Preventing the aliasing of high frequency noise into low frequency measurements
+ is of particular importance to the PlateWash measurement.
+ As the torsion balance operates in feedback, autocollimator noise, (white
+ in angle), rises like 
+\begin_inset Formula $f^{2}$
+\end_inset
+
+ in torque.
+ As an simple anti-aliasing measure, the data within each accepted bin are
+ multiplied by a parabolic (Welch) window function before averaging.
+ To preserve normalization, the weights are independently accumulated, and
+ the ratio of accumulated weighted data to accumulated weight is the reported
+ average for each bin.
+\end_layout
+
+\begin_layout Plain Layout
+XXX Plot of transfer function with and without windowing.
+\end_layout
+
+\begin_layout Subsubsection
+Implementation
+\end_layout
+
+\begin_layout Plain Layout
+The code below is trimmed from the original implementation (alternate weighting
+ schema and supporting variables were the primary redaction), and may not
+ execute properly.
+ XXX (clean it up?)
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset listings
+lstparams "basicstyle={\scriptsize},breaklines=true,language=Octave,tabsize=2"
+inline false
+status collapsed
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+function [out squareWave outTime] = squareLockM(timeCol, data, stepPeriod,
+ risingEdgeTime, startDelay, endPad, weighting)
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	outTime   = [];
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	pTime	 = endPad;
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	dTime	 = startDelay;
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	weightLength  = stepPeriod-pTime-dTime;
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	squareWave    = zeros(length(data),1);
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	outputCounter = 1;
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	avecounter    = 0;
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	aveVecProto   = zeros(1,columns(data));
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	aveVec        = aveVecProto;
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	sampleTime    = data(2,timeCol) - data(1,timeCol);
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	stepTime      = mod( (data(:,timeCol) - risingEdgeTime) , stepPeriod);
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	acceptValues  = ( stepTime > dTime & stepTime < (stepPeriod - pTime) );
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	if( weighting == 1 )
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+		weight2 = 1.
+ / 2 * (1 - cos( 2*pi / (weightLength) * (stepTime-dTime) ) );
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	end
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	for i = 1:length(data)
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+		if(acceptValues(i))
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+			flag = 1;
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+			aveVec      = aveVec + data(i,:) * weight2(i);
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+			avecounter += weight2(i);
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+			if(weighting != 0 )
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+				squareWave(i) = weight2(i);
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+			else
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+				squareWave(i) = 1;
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+			end
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+		endif
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+		%Average and reset
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+		if( !acceptValues(i) && flag==1 )
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+			flag=0;
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+			out(outputCounter, :) = aveVec ./ avecounter;
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+			outTime = [ outTime ; data(i,timeCol)];
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+			aveVec     = aveVecProto;
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+			avecounter = 0;
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+			outputCounter++;
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+		end
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+	end
+\end_layout
+
+\begin_layout LyX-Code
+\paragraph_spacing single
+
+end %function
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Aggregation/Differencing
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Aggregation/Differencing"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+After the 
+\end_layout
+
+\begin_layout Paragraph
+Bandwidth
+\end_layout
+
+\begin_layout Plain Layout
+Anti-aliasing on a single bin is insufficient to reach a narrow-enough bandwidth
+ to escape the high frequency noise, m 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\begin_inset Quotes eld
+\end_inset
+
+Triangle Plot
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "TriangleScatterPlot"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Your first 'triangle plot'
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A clear method of visualization is important to understanding the output
+ of any experiment.
+ For PlateWash, the natural plot is three-dimensional.
+ The experiment measures the difference in pendulum torque between two different
+ attractor positions.
+ So, if we plot 
+\begin_inset Formula $\Delta\tau(\mbox{start},\mbox{end})$
+\end_inset
+
+, we can plot every measurement in the experiment in a single plot, as in
+ Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "TriangleScatterPlot"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Three dimensional plots are difficult to read, three dimensional plots with
+ errorbars are worse.
+ Furthermore, the scatter in a plot like Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "TriangleScatterPlot"
+
+\end_inset
+
+ is dominated by the noisiest points.
+ As shown in XXX (plot of noise vs.
+ time), the noise in PlateWash varies by orders of magnitude with environmental
+ conditions; we're interested mostly in the points with least scatter.
+ 
+\end_layout
+
+\begin_layout Standard
+In order to present the result in a meaningful and two-dimensional way,
+ the 'triangle plot' was developed.
+ In order to improve the statistics by a factor of two, we make the assumption
+ that 
+\begin_inset Formula $\Delta\tau(a,b)=\Delta\tau(b,a)$
+\end_inset
+
+, and fold the points over the 
+\begin_inset Formula $a=b$
+\end_inset
+
+ axis.
+ In order to plot points with uncertainties, measurements are plotted as
+ circles in the 
+\begin_inset Formula $a,b$
+\end_inset
+
+ plane.
+ The magnitude of 
+\begin_inset Formula $\Delta\tau$
+\end_inset
+
+ is represented by the radius of the circle.
+ To provide an errorbar, the region from 
+\begin_inset Formula $\Delta\tau+\sigma_{\tau}$
+\end_inset
+
+ to 
+\begin_inset Formula $\Delta\tau-\sigma_{\tau}$
+\end_inset
+
+ is plotted in grey.
+ If 
+\begin_inset Formula $\Delta\tau-\sigma_{\tau}$
+\end_inset
+
+ or 
+\begin_inset Formula $|\Delta\tau+\sigma_{\tau}|$
+\end_inset
+
+ are greater than zero (
+\emph on
+i.e.
+
+\emph default
+ a point is off-zero with 1-
+\begin_inset Formula $\sigma$
+\end_inset
+
+ significance), the remainder of the circle is filled in with color.
+ To represent the sign of the datapoint, yellow is negative, and blue is
+ positive XXX (check sign).
+ Any force of nature should satisfy 
+\begin_inset Formula $\Delta\tau(a,a)=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $a$
+\end_inset
+
+.
+ Any conservative force should be associative: 
+\begin_inset Formula $\Delta\tau(a,c)=\Delta\tau(a,b)+\Delta\tau(b,c)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+This method has limitations.
+ Large signals, or large uncertainties produce large circles, which can
+ hide smaller, more significant, points.
+ For sparsely sampled data, however, it can be very helpful.
+ 
+\end_layout
+
+\begin_layout Section
+Bootstrap
+\end_layout
+
+\begin_layout Standard
+The analysis presented here makes extensive use of a statistical method
+ called 'the bootstrap' or 'bootstrapping'.
+ Its primary merit in this context is that it allows straightforward and
+ reasonably robust estimation of confidence intervals.
+ Its support rests upon the premise that the best estimator for the distribution
+ from which a data set is drawn is the data set itself.
+ The idea is to 'resample' the data to create synthetic data sets which
+ may be passed through any analysis routine developed for the original data
+ set.
+ With repetition, this process generates distributions of important output
+ quantities (best-fit points in 
+\begin_inset Formula $\alpha-\lambda$
+\end_inset
+
+ space, for example) without recourse to complex error estimation/propagation.
+\end_layout
+
+\begin_layout Standard
+The resampling scheme used in this analysis was to replace a fraction 
+\begin_inset Formula $1/e$
+\end_inset
+
+ of the data points in a data set with others randomly selected from the
+ initial data set.
+ There is a related class of methods called 'the jackknife' that generate
+ statistics by considering complete sets of subsets of data.
+ 
+\end_layout
+
+\begin_layout Subsection
+Implementation
+\end_layout
+
+\begin_layout Standard
+In all instances where the bootstrap was used, this Octave function was
+ called:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "~/mlib/bootstrapData.m"
+lstparams "breakatwhitespace=true,breaklines=true,caption={bootstrapData.m},emptylines=0,language=Matlab,linerange={1-17,19-23,71-104}"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+ 
+\end_layout
+
+\begin_layout Section
+Model Comparison
+\end_layout
+
+\begin_layout Standard
+The bootstrap makes comparison with any model straightforward.
+ 
+\end_layout
+
+\begin_layout Section
+\begin_inset Quotes eld
+\end_inset
+
+Force law
+\begin_inset Quotes erd
+\end_inset
+
+ inversion
+\end_layout
+
+\begin_layout Standard
+In addition to extracting model parameters from the data, we can reconstruct
+ the function 
+\begin_inset Formula $\tau(d)$
+\end_inset
+
+, the pendulum torque as a function of attractor/pendulum separation.
+ The entire data set consists of differential measurements of 
+\begin_inset Formula $\tau(d)$
+\end_inset
+
+, where the attractor measures a 
+\begin_inset Formula $\Delta\tau=\tau(d_{1})-\tau(d_{2})$
+\end_inset
+
+.
+ Recovering 
+\begin_inset Formula $\tau(d)$
+\end_inset
+
+ is then similar to recovering a function using knowledge of its derivative.
+ Just as in indefinite integration, there is a 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $+C$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+, a free constant offset to which the experiment is insensitive.
+\end_layout
+
+\begin_layout Standard
+The method used to recover 
+\begin_inset Formula $\tau(d)$
+\end_inset
+
+ is simple - attempt to find a best-fit function which minimizes the difference
+ between the measured torques 
+\begin_inset Formula $\Delta\tau_{meas}$
+\end_inset
+
+ and those computed using the fitting function 
+\begin_inset Formula $\Delta\tau_{fit}$
+\end_inset
+
+.
+ To provide confidence intervals on the fit parameters, we bootstrap the
+ measured data many times; the distribution of the extracted fit parameters
+ provides the necessary foundation.
+ 
+\end_layout
+
+\begin_layout Standard
+In order to generate results that are independent of any physics-model,
+ we choose to fit a piecewise-linear XXX function to the data.
+ Each piece is XXX 
+\begin_inset Formula $\mu$
+\end_inset
+
+m long for 
+\begin_inset Formula $d\in[0,XXX)$
+\end_inset
+
+ and XXX
+\begin_inset Formula $\mu$
+\end_inset
+
+m long for 
+\begin_inset Formula $d\in[XXX,XXX]$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Section
+Blindness
+\end_layout
+
+\begin_layout Standard
+The most accurate experiments are free of bias.
+ It is possible to perform an unbiased experiment without a blind, but it
+ is difficult to guarantee that all pre-concieved notions of experimental
+ results and implications are suppressed.
+ Critics of blind experiments claim that, 
+\begin_inset Quotes eld
+\end_inset
+
+no experiment is truly blind,
+\begin_inset Quotes erd
+\end_inset
+
+ in reference to the current reality that experimenters unblind their results
+ prior to peer review and submission for publication.
+ This is true, but it hides the power of the blind -- forcing complete and
+ equal attention to each 
+\emph on
+known
+\emph default
+ systematic effect.
+ 
+\end_layout
+
+\begin_layout Standard
+PlateWash is not a blind experiment.
+ It is a precursor to a blind experiment.
+ More than half of the science data were taken without a blind, largely
+ because we had not discovered a way to monitor the health of the experiment
+ without access to data which included the central values of each measurement.
+ In the latter half of science data-taking, it became clear that watching
+ the errorbars on each cut XXX(terminology?) was sufficient to ensure data
+ quality.
+ In this first iteration of PlateWash, our understanding of the instrument's
+ metrology was in continuous refinement, which frustrated any attempt to
+ inject a fake signal into the data as they were acquired.
+ (Furthermore, the physical separation between pendulum and attractor DAQ
+ systems would make doing so extremely difficult).
+\end_layout
+
+\begin_layout Standard
+The analysis proceeded as if it were blind, to demonstrate the suitability
+ of the analysis toolchain for a future blind analysis.
+ XXX (need actual procedure followed here).
+\end_layout
+
+\begin_layout Chapter
+Quantified uncertainties
+\end_layout
+
+\begin_layout Chapter
+Results
+\end_layout
+
+\begin_layout Section
+Description of runs
+\end_layout
+
+\begin_layout Standard
+Attractor overview graphic
+\end_layout
+
+\begin_layout Standard
+Uncertainty overview
+\end_layout
+
+\begin_layout Standard
+Torque central value overview
+\end_layout
+
+\begin_layout Section
+Systematic Tests
+\end_layout
+
+\begin_layout Subsection
+Resistor values
+\end_layout
+
+\begin_layout Subsection
+Magnetism
+\end_layout
+
+\begin_layout Subsubsection
+Perpendicular horizontal
+\end_layout
+
+\begin_layout Subsubsection
+Perpendicular vertical
+\end_layout
+
+\begin_layout Subsubsection
+Perpendicular parallel
+\end_layout
+
+\begin_layout Subsection
+Attractor Bias
+\end_layout
+
+\begin_layout Subsection
+Temperature
+\end_layout
+
+\begin_layout Subsubsection
+Temperature gradient
+\end_layout
+
+\begin_layout Subsubsection
+Temperature variation at attractor frequency
+\end_layout
+
+\begin_layout Subsubsection
+Interferometer spot-heating
+\end_layout
+
+\begin_layout Subsection
+Electrical Crosstalk
+\end_layout
+
+\begin_layout Section
+Raw data
+\end_layout
+
+\begin_layout Section
+Binned Triangle Plot
+\end_layout
+
+\begin_layout Section
+Bootstrapped
+\begin_inset Quotes eld
+\end_inset
+
+Force Law
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Model Constraints
+\end_layout
+
+\begin_layout Subsection
+Yukawa Potential
+\end_layout
+
+\begin_layout Subsection
+Power Law
+\end_layout
+
+\begin_layout Subsection
+Fat Graviton
+\end_layout
+
+\begin_layout Subsection
+Chameleon
+\end_layout
+
+\begin_layout Subsection
+Unparticles
+\end_layout
+
+\begin_layout Chapter
+Interpretation
+\end_layout
+
+\begin_layout Chapter
+Future
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "/home/charlie/thesis"
+options "bibtotoc,unsrtnat"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
