@@ -1,6 +1,6 @@
 %Generic function against which we might fit. see text/FitFunction.lyx 9/19/13
 
-function o = FitFunction(x,p)
+function o = generalTorque(x,p)
 
 	%Yukawa
 	o = yukawaVectorizedTorque(x(:,1), p(1), p(2)); 
@@ -26,6 +26,12 @@ function o = FitFunction(x,p)
 	%AC Foil (foil to torque is passed as an indep variable)
 	%o = o + x(:,7)*XXXAC Stuff here
 
+	
+
 	%Quadratic torque term?
 	%o = o + p(13)*x(:,1).^2;
+	
+	%Linear torque term
+	o = o + p(14) * x(:,1);
+
 end
