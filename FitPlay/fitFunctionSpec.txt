@@ -1,9 +1,10 @@
 A fitting function should have the following properties:
 
-function [value jacobian] = function( data, fitparams)
+function [value jacobian names] = function( data, names, fitparams)
 
 end 
 
 
 Data should be specified as a column 
 Fit parameters should be specified as a column vector.
+Names should be "strings" that specify what's in each column of "data"
