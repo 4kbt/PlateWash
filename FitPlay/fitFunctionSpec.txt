@@ -1,10 +1,14 @@
 A fitting function should have the following properties:
 
-function [value jacobian names] = function( data, names, fitparams)
+function [value partials dataNames] = function( data, dataNames, fitParams, fitNames)
 
 end 
 
 
-Data should be specified as a column 
-Fit parameters should be specified as a column vector.
-Names should be "strings" that specify what's in each column of "data"
+* Data should be specified as a column 
+* Fit parameters should be specified as a row vector.
+* names is a cell array of {"name1" "name2" ...} that specify contents of each column of "data"
+* partials returns the partial derivative of f with respect to each data column
+
+**** Acceptable dataNames ***
+"position (m)"
