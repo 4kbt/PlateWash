@@ -118,7 +118,7 @@ For this, we'll need
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\bar{f}=\frac{1}{\sigma\sqrt{2\pi}}\int e^{-(x^{2}-2(\bar{x}+\sigma^{2}/\lambda)x+\bar{x}^{2})/2\sigma^{2}}dx$
+\begin_inset Formula $\bar{f}=\frac{1}{\sigma\sqrt{2\pi}}\int e^{-(x^{2}-2(\bar{x}-\sigma^{2}/\lambda)x+\bar{x}^{2})/2\sigma^{2}}dx$
 \end_inset
 
 
@@ -126,17 +126,201 @@ For this, we'll need
 
 \begin_layout Standard
 To complete the square, we'll need 
-\begin_inset Formula $(\bar{x}+\sigma^{2}/\lambda)^{2}=\bar{x}^{2}+2\sigma^{2}\bar{x}/\lambda+\sigma^{4}/\lambda^{2}$
+\begin_inset Formula $(\bar{x}-\sigma^{2}/\lambda)^{2}=\bar{x}^{2}-2\sigma^{2}\bar{x}/\lambda+\sigma^{4}/\lambda^{2}$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\bar{f}=\frac{1}{\sigma\sqrt{2\pi}}\int e^{-(x^{2}-2(\bar{x}+\sigma^{2}/\lambda)x+\bar{x}^{2})/2\sigma^{2}}dx$
+\begin_inset Formula $\bar{f}=\frac{1}{\sigma\sqrt{2\pi}}\int e^{-(((x-(\bar{x}-\sigma^{2}/\lambda))^{2}-\sigma^{4}/\lambda^{2}+2\sigma^{2}\bar{x}/\lambda)/2\sigma^{2}}dx$
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{f}=\frac{1}{\sigma\sqrt{2\pi}}e^{\sigma^{2}/2\lambda^{2}}e^{-\bar{x}/\lambda}\int e^{-((x-(\bar{x}-\sigma^{2}/\lambda))^{2}/2\sigma^{2}}dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since the gaussian was originally normalized, then 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{f}=e^{\sigma^{2}/2\lambda^{2}}e^{-\bar{x}/\lambda}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So, back to the problem at hand:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sigma_{f}^{2}=\int(f(x)-\bar{f})^{2}P(x)dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sigma_{f}^{2}=\int(e^{-x/\lambda}-e^{\sigma^{2}/2\lambda^{2}}e^{-\bar{x}/\lambda})^{2}\frac{1}{\sigma\sqrt{2\pi}}e^{-(x-\bar{x})^{2}/2\sigma^{2}}dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sigma_{f}^{2}=\frac{1}{\sigma\sqrt{2\pi}}\int(e^{-x/\lambda}-e^{\sigma^{2}/2\lambda^{2}}e^{-\bar{x}/\lambda})^{2}e^{-(x-\bar{x})^{2}/2\sigma^{2}}dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sigma_{f}^{2}=\frac{1}{\sigma\sqrt{2\pi}}\int(e^{-2x/\lambda}-2e^{-x/\lambda}e^{\sigma^{2}/2\lambda^{2}}e^{-\bar{x}/\lambda}+e^{\sigma^{2}/\lambda^{2}}e^{-2\bar{x}/\lambda})e^{-(x-\bar{x})^{2}/2\sigma^{2}}dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sigma_{f}^{2}=\frac{1}{\sigma\sqrt{2\pi}}\int(e^{-2x/\lambda}+e^{\sigma^{2}/\lambda^{2}}e^{-2\bar{x}/\lambda})e^{-(x-\bar{x})^{2}/2\sigma^{2}}dx-2e^{\sigma^{2}/2\lambda^{2}}e^{-\bar{x}/\lambda}\frac{1}{\sigma\sqrt{2\pi}}\int e^{-x/\lambda}e^{-(x-\bar{x})^{2}/2\sigma^{2}}dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+By identification with 
+\begin_inset Formula $\bar{f}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sigma_{f}^{2}=\frac{1}{\sigma\sqrt{2\pi}}\int e^{-2x/\lambda}e^{-(x-\bar{x})^{2}/2\sigma^{2}}dx+e^{\sigma^{2}/\lambda^{2}}e^{-2\bar{x}/\lambda}-2e^{\sigma^{2}/\lambda^{2}}e^{-2\bar{x}/\lambda}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can make the same identification for the other integral, but have to
+ be careful about changing variables; better just to repeat it.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{f}'=\int e^{-2x/\lambda}\frac{1}{\sigma\sqrt{2\pi}}e^{-(x-\bar{x})^{2}/2\sigma^{2}}dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{f}'=\frac{1}{\sigma\sqrt{2\pi}}\int e^{-(x-\bar{x})^{2}/2\sigma^{2}-2x/\lambda}dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{f}'=\frac{1}{\sigma\sqrt{2\pi}}\int e^{-(x^{2}-2x\bar{x}+\bar{x}^{2}+4\sigma^{2}x/\lambda)/2\sigma^{2}}dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{f}'=\frac{1}{\sigma\sqrt{2\pi}}\int e^{-(x^{2}-2(\bar{x}-2\sigma^{2}/\lambda)x+\bar{x}^{2})/2\sigma^{2}}dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To complete the square, we'll need 
+\begin_inset Formula $(\bar{x}-2\sigma^{2}/\lambda)^{2}=\bar{x}^{2}-4\sigma^{2}\bar{x}/\lambda+4\sigma^{4}/\lambda^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{f}'=\frac{1}{\sigma\sqrt{2\pi}}\int e^{-(((x-(\bar{x}-2\sigma^{2}/\lambda))^{2}-4\sigma^{4}/\lambda^{2}+4\sigma^{2}\bar{x}/\lambda)/2\sigma^{2}}dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{f}'=\frac{1}{\sigma\sqrt{2\pi}}e^{2\sigma^{2}/\lambda^{2}}e^{-2\bar{x}/\lambda}\int e^{-((x-(\bar{x}-2\sigma^{2}/\lambda))^{2}/2\sigma^{2}}dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since the gaussian was originally normalized, then 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{f}'=e^{2\sigma^{2}/\lambda^{2}}e^{-2\bar{x}/\lambda}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Back to it:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sigma_{f}^{2}=\frac{1}{\sigma\sqrt{2\pi}}\int e^{-2x/\lambda}e^{-(x-\bar{x})^{2}/2\sigma^{2}}dx-e^{\sigma^{2}/\lambda^{2}}e^{-2\bar{x}/\lambda}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sigma_{f}^{2}=e^{2\sigma^{2}/\lambda^{2}}e^{-2\bar{x}/\lambda}-e^{\sigma^{2}/\lambda^{2}}e^{-2\bar{x}/\lambda}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sigma_{f}^{2}=(e^{2\sigma^{2}/\lambda^{2}}-e^{\sigma^{2}/\lambda^{2}})e^{-2\bar{x}/\lambda}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sigma_{f}^{2}=e^{\sigma^{2}/\lambda^{2}}(e^{\sigma^{2}/\lambda^{2}}-1)e^{-2\bar{x}/\lambda}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Have to be careful using this when 
+\begin_inset Formula $\bar{x}-\sigma<0$
+\end_inset
+
+, as the force law itself no longer obeys 
+\begin_inset Formula $e^{-x/\lambda}$
+\end_inset
+
+.
+ 
 \end_layout
 
 \end_body
