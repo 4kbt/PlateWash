@@ -1,0 +1,18 @@
+set term postscript eps enhanced solid color
+set output 'jasonIdea.eps'
+
+set logsc
+
+set format y "10^{%L}"
+
+set key noauto
+
+set title 
+set xlabel 'x uncertainty in units of {/Symbol l} ({/Symbol s}/{/Symbol l})'
+set ylabel '{/Symbol s}_f^2/e^{-2@^{/=18-}x / {/Symbol l}}'
+
+set title 'Prefactor for {/Symbol s}_f^2'
+
+
+pl [1e-1:10] \
+	exp(x**2)*(exp(x**2)-1) lt 3 tit 'e^{({/Symbol s}/{/Symbol l})^2} (e^{({/Symbol s}/{/Symbol l})^2}-1)'

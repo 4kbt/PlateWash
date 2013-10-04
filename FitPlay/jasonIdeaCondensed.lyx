@@ -1,0 +1,374 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+This is an idea I would never have considered without an insight from Jason
+ Detwiler that there should be a closed-form solution for 
+\begin_inset Formula $\sigma_{f}^{2}$
+\end_inset
+
+.
+ Sneaky sneaky.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(x)=e^{-x/\lambda}
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Need 
+\begin_inset Formula 
+\[
+\sigma_{f}^{2}=<(f-\bar{f})^{2}>=\int(f(x)-\bar{f})^{2}P(x)dx,
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $P(x)=\frac{1}{\sigma\sqrt{2\pi}}e^{-(x-\bar{x})^{2}/2\sigma^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For this, we'll need 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{f}=\int f(x)P(x)dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{f}=\int e^{-x/\lambda}\frac{1}{\sigma\sqrt{2\pi}}e^{-(x-\bar{x})^{2}/2\sigma^{2}}dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{f}=\frac{1}{\sigma\sqrt{2\pi}}\int e^{-(x-\bar{x})^{2}/2\sigma^{2}-x/\lambda}dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{f}=\frac{1}{\sigma\sqrt{2\pi}}\int e^{-(x^{2}-2(\bar{x}-\sigma^{2}/\lambda)x+\bar{x}^{2})/2\sigma^{2}}dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Completing the square and reorganizing:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{f}=\frac{1}{\sigma\sqrt{2\pi}}e^{\sigma^{2}/2\lambda^{2}}e^{-\bar{x}/\lambda}\int e^{-((x-(\bar{x}-\sigma^{2}/\lambda))^{2}/2\sigma^{2}}dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since the gaussian was originally normalized, then 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\bar{f}=e^{\sigma^{2}/2\lambda^{2}}e^{-\bar{x}/\lambda}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So, back to the problem at hand:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sigma_{f}^{2}=\int(f(x)-\bar{f})^{2}P(x)dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sigma_{f}^{2}=\int(e^{-x/\lambda}-e^{\sigma^{2}/2\lambda^{2}}e^{-\bar{x}/\lambda})^{2}\frac{1}{\sigma\sqrt{2\pi}}e^{-(x-\bar{x})^{2}/2\sigma^{2}}dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sigma_{f}^{2}=\frac{1}{\sigma\sqrt{2\pi}}\int(e^{-2x/\lambda}-2e^{-x/\lambda}e^{\sigma^{2}/2\lambda^{2}}e^{-\bar{x}/\lambda}+e^{\sigma^{2}/\lambda^{2}}e^{-2\bar{x}/\lambda})e^{-(x-\bar{x})^{2}/2\sigma^{2}}dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sigma_{f}^{2}=\frac{1}{\sigma\sqrt{2\pi}}\int(e^{-2x/\lambda}+e^{\sigma^{2}/\lambda^{2}}e^{-2\bar{x}/\lambda})e^{-(x-\bar{x})^{2}/2\sigma^{2}}dx-2e^{\sigma^{2}/2\lambda^{2}}e^{-\bar{x}/\lambda}\frac{1}{\sigma\sqrt{2\pi}}\int e^{-x/\lambda}e^{-(x-\bar{x})^{2}/2\sigma^{2}}dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Using gaussian normalization for the second term and identification with
+ 
+\begin_inset Formula $\bar{f}$
+\end_inset
+
+ for the third:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sigma_{f}^{2}=\frac{1}{\sigma\sqrt{2\pi}}\int e^{-2x/\lambda}e^{-(x-\bar{x})^{2}/2\sigma^{2}}dx+e^{\sigma^{2}/\lambda^{2}}e^{-2\bar{x}/\lambda}-2e^{\sigma^{2}/\lambda^{2}}e^{-2\bar{x}/\lambda}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sigma_{f}^{2}=\frac{1}{\sigma\sqrt{2\pi}}\int e^{-2x/\lambda}e^{-(x-\bar{x})^{2}/2\sigma^{2}}dx-e^{\sigma^{2}/\lambda^{2}}e^{-2\bar{x}/\lambda}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We could make a similar identification for the first integral, but have
+ to be careful about changing variables; better just to repeat it.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\bar{f}'=\int e^{-2x/\lambda}\frac{1}{\sigma\sqrt{2\pi}}e^{-(x-\bar{x})^{2}/2\sigma^{2}}dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{f}'=\frac{1}{\sigma\sqrt{2\pi}}\int e^{-(x-\bar{x})^{2}/2\sigma^{2}-2x/\lambda}dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{f}'=\frac{1}{\sigma\sqrt{2\pi}}\int e^{-(x^{2}-2(\bar{x}-2\sigma^{2}/\lambda)x+\bar{x}^{2})/2\sigma^{2}}dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Completing the square again
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{f}'=\frac{1}{\sigma\sqrt{2\pi}}\int e^{-(((x-(\bar{x}-2\sigma^{2}/\lambda))^{2}-4\sigma^{4}/\lambda^{2}+4\sigma^{2}\bar{x}/\lambda)/2\sigma^{2}}dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{f}'=\frac{1}{\sigma\sqrt{2\pi}}e^{2\sigma^{2}/\lambda^{2}}e^{-2\bar{x}/\lambda}\int e^{-(x-(\bar{x}-2\sigma^{2}/\lambda))^{2}/2\sigma^{2}}dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since the gaussian was originally normalized, then 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\bar{f}'=e^{2\sigma^{2}/\lambda^{2}}e^{-2\bar{x}/\lambda}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Back to it:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sigma_{f}^{2}=\frac{1}{\sigma\sqrt{2\pi}}\int e^{-2x/\lambda}e^{-(x-\bar{x})^{2}/2\sigma^{2}}dx-e^{\sigma^{2}/\lambda^{2}}e^{-2\bar{x}/\lambda}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sigma_{f}^{2}=e^{2\sigma^{2}/\lambda^{2}}e^{-2\bar{x}/\lambda}-e^{\sigma^{2}/\lambda^{2}}e^{-2\bar{x}/\lambda}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sigma_{f}^{2}=(e^{2\sigma^{2}/\lambda^{2}}-e^{\sigma^{2}/\lambda^{2}})e^{-2\bar{x}/\lambda}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Perhaps more meaningful:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sigma_{f}^{2}=e^{\sigma^{2}/\lambda^{2}}(e^{\sigma^{2}/\lambda^{2}}-1)e^{-2\bar{x}/\lambda}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Must be careful using this in PlateWash when 
+\begin_inset Formula $\bar{x}-\sigma<0$
+\end_inset
+
+, as the force law itself no longer obeys 
+\begin_inset Formula $e^{-x/\lambda}$
+\end_inset
+
+, but that shouldn't happen (ever?).
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename plots/jasonIdea.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sigma_{f}^{2}/e^{-2\bar{x}/\lambda}=e^{\sigma^{2}/\lambda^{2}}(e^{\sigma^{2}/\lambda^{2}}-1)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
