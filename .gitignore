@@ -8,6 +8,7 @@
 octave-core
 *.dat
 *.eps
+*.pdf
 *.tex
 *.dta
 *.hdr
