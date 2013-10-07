@@ -1,6 +1,6 @@
 include Makefile.inc
 
-thesis : 
+dissertation: 
 	$(MAKE) -C calibration
 	$(MAKE) -C runAnalysis
 	$(MAKE) -C systematics 
