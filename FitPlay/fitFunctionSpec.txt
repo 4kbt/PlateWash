@@ -1,6 +1,6 @@
 A fitting function should have the following properties:
 
-function [value partials dataNames] = function( data, dataNames, fitParams, fitNames)
+function [values partials dataNames fitNames] = function( data, dataNames, fitParams, fitNames)
 
 end 
 
