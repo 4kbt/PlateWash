@@ -12,3 +12,4 @@ end
 
 **** Acceptable dataNames ***
 "position (m)"
+"magnetic field (T)"
