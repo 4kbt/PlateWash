@@ -4775,7 +4775,7 @@ N-m.
  The data are broken into 
 \begin_inset CommandInset include
 LatexCommand input
-filename "../pWDA/extracted/calibCutLength.tex"
+filename "../extracted/calibCutLength.tex"
 
 \end_inset
 
