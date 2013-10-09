@@ -1,0 +1,29 @@
+reset
+
+set term postscript enhanced solid color eps
+set output 'run3147windowTransferFunctions.eps'
+
+set multiplot layout 2,1 title  'Windowing/Weighting: PSD window is uniform'
+
+set xlabel 'frequency (Hz)'
+set ylabel 'transfer spectral amplitude'
+
+set logsc
+set key noauto
+
+
+pl [1e-3:1][1e-9:1e3] \
+'run3147windowTransferFunctionsW1.dat'  w l tit 'Single window' lt -1 ,\
+'run3147windowTransferFunctionsU10.dat' u 1:($2+1e-30) w l lt 1,\
+'run3147windowTransferFunctionsW10.dat' w l lt 3
+
+
+set key below
+set xlabel 'time(s)'
+set ylabel 'weighting function'
+unset logsc
+pl [0:2560][-1.1:1.1] \
+'run3147windowTransferFunctionsTenU.dat' w l lt 1 tit 'Unwindowed 10-switch lock-in',\
+'run3147windowTransferFunctionsTenW.dat' w l lt  3 tit 'Windowed 10-switch lock-in' 
+
+unset multiplot

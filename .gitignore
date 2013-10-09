@@ -14,6 +14,7 @@ octave-core
 *.hdr
 *.lyx~
 *.lyx#
+*.lyx.emergency
 *.ps
 *.dvi
 *.log
