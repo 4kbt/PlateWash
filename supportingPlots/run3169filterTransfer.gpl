@@ -1,0 +1,25 @@
+set term postscript enhanced solid color eps
+set output 'run3169filterTransfer.eps'
+
+
+set title   'filters applied to measured data'
+set xlabel  'frequency (Hz)'
+set ylabel  'torque (N-m/rtHz)'
+set y2label 'displacement (um/rtHz)'
+set y2tics
+
+
+
+set format y  "10^{%L}"
+set format y2 "10^{%L}"
+set format x  "10^{%L}"
+
+
+set logsc
+
+torcal = 2.59e-10 #pinned as of 9/4/12, seeded from 3148
+
+pl [2e-5:0.5][1e-19:1e-10][][1e-4:1e7] \
+ 'run3169filterTransferNF.dat' u 1:(sqrt($2)*torcal) w l lt 1 tit 'Before filter',\
+ 'run3169filterTransferA.dat'  u 1:(sqrt($2)) w l ax x1y2 lt -1 tit 'Attractor (read right)',\
+ 'run3169filterTransferF.dat'  u 1:(sqrt($2)*torcal) w l lt 3 tit 'After filter'
