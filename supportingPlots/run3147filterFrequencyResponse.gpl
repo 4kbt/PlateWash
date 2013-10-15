@@ -1,0 +1,25 @@
+set term postscript enhanced solid color eps
+set output 'run3147filterFrequencyResponse.eps'
+
+set ylabel 'Transfer Function'
+set xlabel 'frequency (Hz)'
+set title  'PlateWash pre-analysis filter design'
+
+set key bottom left
+
+set format y "10^{%L}"
+set format x "10^{%L}"
+
+set yrange [1e-6:2]
+#set ytics (1, 1e-2, 1e-4, 1e-6, 1e-8, 1e-10, 1e-12)
+
+f = 3.90625e-3
+
+set arrow 1 from f,0.0015 to f,1 filled 
+set label 1 "attractor\nfrequency" at f,0.001 center front
+
+set logsc
+
+pl 'run3147filterResponseTorque.dat'  w l      tit 'Torque Filter', \
+   'run3147filterResponseSensors.dat' w l lt 3 tit 'Other Sensors'
+
