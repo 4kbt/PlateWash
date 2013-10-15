@@ -7566,7 +7566,7 @@ Future
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
-bibfiles "/home/charlie/thesis"
+bibfiles "thesis"
 options "bibtotoc,unsrtnat"
 
 \end_inset
