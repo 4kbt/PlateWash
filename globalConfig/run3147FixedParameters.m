@@ -10,8 +10,12 @@ pendulumI=2.369e-6;
 kappa=4*pi*pi*pendulumF0*pendulumF0*pendulumI;
 psdWidth=1e-2;
 focalLength=400e-3;
+
+%Controls the post-lockin blinding.
 unBlind = 0 ;
+%Injects before the lockin
 fakeTheData = 0;
+%Controls the use of "postLockinSignalInjection"
 testInjection = 1;
 
 
