@@ -14,8 +14,10 @@ octave-core
 *.hdr
 *.lyx~
 *.lyx#
+*.lyx.emergency
 *.ps
 *.dvi
 *.log
 *.aux
 *.pdf
+*.bib.bak
