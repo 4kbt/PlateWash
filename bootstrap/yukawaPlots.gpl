@@ -18,4 +18,4 @@ pl [1e-6:0.11][]\
 	 '' index 1 u 1:( $2 > 0           ?  $2 : 1/0) w p pt 1 ps 2   tit 'positive injection',\
 	 '' index 1 u 1:( $2 < 0           ? -$2 : 1/0) w p pt 1 ps 2   tit 'negative injection'
 
-pause -1
+#pause -1
