@@ -16,6 +16,8 @@ all : yukawaFit arbFit test
 
 yukawaFit : $(PREREQUISITES)
 	$(OCT)  yukawaWrapper.m
+	./yukawaPlots.sh
+	$(MAKE) TeXFigure
 
 test:yukawaFitTest arbFitTest
 
@@ -29,9 +31,12 @@ yukawaFitTest : $(PREREQUISITES)
 	$(OCT) $(FITG) yukawaWrapper.m
 	$(OCT) $(FITH) yukawaWrapper.m
 	$(OCT) $(FITI) yukawaWrapper.m
+	./yukawaPlots.sh
+	$(MAKE) TeXFigure
 
 arbFit : $(PREREQUISITES)
 	$(OCT) arbFitWrapper.m
+	./arbFitPlots.sh
 
 arbFitTest : $(PREREQUISITES)
 	$(OCT) $(FITA) arbFitWrapper.m
@@ -43,6 +48,10 @@ arbFitTest : $(PREREQUISITES)
 	$(OCT) $(FITG) arbFitWrapper.m
 	$(OCT) $(FITH) arbFitWrapper.m
 	$(OCT) $(FITI) arbFitWrapper.m
+	./arbFitPlots.sh
+
+TeXFigure : generatePlottingTeX.sh output
+	./generatePlottingTeX.sh $(HOMEDIR)
 
 clean : 
 	-rm output/*.dat
