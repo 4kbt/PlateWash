@@ -7471,8 +7471,50 @@ Systematic Tests
 Resistor values
 \end_layout
 
+\begin_layout Standard
+To assess the effect of changing the attractor/foil resistance, we tried
+ a variety of resistor values.
+ The signal at XXX stroke was measured (unblinded) for resistor values of
+ XXX, XXX, XXX, XXX, and XXX.
+ The circuit is modelled as an LCR resonator, see XXX.
+ When the circuit 
+\begin_inset Formula $Q$
+\end_inset
+
+ reaches ~1, a major systematic effect appears.
+ This test shows, in Figure XXX, that the specific choice of the 10 M
+\begin_inset Formula $\Omega$
+\end_inset
+
+ resistor cannot tune away nor create a signal.
+\end_layout
+
 \begin_layout Subsection
 Magnetism
+\end_layout
+
+\begin_layout Standard
+A large (XXX
+\begin_inset space ~
+\end_inset
+
+cm diameter ) coil with XXX turns of wire was placed near and on the apparatus
+ to gauge any change in signal as a function of applied magnetic field.
+ 
+\end_layout
+
+\begin_layout Standard
+XXX photo
+\end_layout
+
+\begin_layout Standard
+XXX diagram
+\end_layout
+
+\begin_layout Standard
+The change in field at the pendulum was estimated (XXX measured?!) to be
+ XXX vertical, XXX horizontal, and XXX axial in the on-apparatus configuration
+ and XXX horizontal in the position at the side of the instrument.
 \end_layout
 
 \begin_layout Subsubsection
@@ -7491,6 +7533,12 @@ Perpendicular parallel
 Attractor Bias
 \end_layout
 
+\begin_layout Standard
+The attractor was biased to XXX V through a resistor, and the experiment
+ was operated with XXX stroke.
+ 
+\end_layout
+
 \begin_layout Subsection
 Temperature
 \end_layout
@@ -7499,8 +7547,24 @@ Temperature
 Temperature gradient
 \end_layout
 
+\begin_layout Standard
+Using the on-board heating resistors, one leg of the attractor was heated
+ with XXX mW of power, both heating the attractor and providing a spatial
+ gradient.
+ This was observed to create an XXX K rise in attractor temperature and
+ create an XXX K temperature gradient across the attractor.
+ The attractor was operated with strokes of XXX and XXX, and the run analyzed
+ blind.
+\end_layout
+
 \begin_layout Subsubsection
 Temperature variation at attractor frequency
+\end_layout
+
+\begin_layout Standard
+In runs XXX-XXX, the experiment was operated with wireless sensors reading
+ out the resistance of the on-attractor thermistors.
+ Theg
 \end_layout
 
 \begin_layout Subsubsection
