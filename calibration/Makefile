@@ -2,24 +2,25 @@
 
 include ../Makefile.inc
 
-CALFILES= $(shell ls run*calFitChk.dat)
-NOFILES = 'ls: cannot access *.hippo: No such file or directory'
+CALFILES := $(shell ls run*calFitChk.dat)
 
-ifeq ( $(CALIBFILES), $(NOFILES) ) 
-	CALIBFILES=''
-	echo 'Woo!'
+#The following empty assignment is meaningful. 
+NOFILES := 
+
+ifeq ($(CALFILES), $(NOFILES)) 
+ CALIBFILES := 'run3147calFitChk.dat'
 else
-	CALIBFILES = CALFILES
+ CALIBFILES := $(CALFILES)
 endif
 
 all: run3147calFitChk.eps
 
-$(MLIB) $(CALIBFILES):run3147calibFitAll.m 
+
+$(CALIBFILES):run3147calibFitAll.m run3147calibFitCheck.m $(MLIB) $(RUNS) $(DATA)
 	$(OCT) run3147calibFitAll.m
 
 CALIBMERGEFILE=run3147calFitChkMerge.dat
 
-#run3147calFitChkMerge.dat: $(CALIBFILES)
 $(CALIBMERGEFILE): $(CALIBFILES)
 	./run3147calFitChkMerge.sh
 

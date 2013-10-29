@@ -4716,7 +4716,6 @@ status open
 
 \begin_layout Plain Layout
 \align center
-l
 \begin_inset Graphics
 	filename ../calibration/run3147calFitChk.eps
 	width 75col%
@@ -4840,7 +4839,33 @@ filename "../extracted/CalibFitWErr.tex"
 \begin_inset space ~
 \end_inset
 
-XXX units.
+N-m/AFU (arbitrary feedback unit).
+ This may be converted to an approximate effective spring constant for the
+ feedback loop of 
+\begin_inset CommandInset include
+LatexCommand input
+preview true
+filename "../extracted/CalibFitWErrInRadians.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+N-m/rad, which should be compared with the fiber kappa of 
+\begin_inset CommandInset include
+LatexCommand input
+preview true
+filename "../extracted/kappa.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+N-m/rad.
  
 \end_layout
 
@@ -7350,7 +7375,7 @@ The method used to recover
 \begin_inset Formula $\tau(d)$
 \end_inset
 
- is simple - attempt to find a best-fit function which minimizes the difference
+ is simple -- attempt to find a best-fit function which minimizes the difference
  between the measured torques 
 \begin_inset Formula $\Delta\tau_{meas}$
 \end_inset

@@ -1,3 +1,5 @@
+run3147FixedParameters
+
 d = load('run3147calFitChkMerge.dat');
 
 
@@ -18,7 +20,8 @@ m = mean(sqrt(d(:,6).^2 + d(:,7).^2));
 s =  std(sqrt(d(:,6).^2 + d(:,7).^2));
 
 
-printSigError(m,s/sqrt(rows(d)), '../extracted/CalibFitWErr.tex');
+printSigError(m             , s/sqrt(rows(d))             , '../extracted/CalibFitWErr.tex'         );
+printSigError(m*psdToRadians, s/sqrt(rows(d))*psdToRadians, '../extracted/CalibFitWErrInRadians.tex');
 
 M = m*ones(rows(d),1);
 S = s*ones(rows(d),1);

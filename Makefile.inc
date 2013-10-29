@@ -6,7 +6,15 @@ OCT:= octave --no-init-file \
 	-p $(HOMEDIR)/globalConfig/
 GNU := gnuplot
 
-MLIB := $(shell ls -d -1 $(HOMEDIR)/mlib/)
+MLIB := $(shell ls -d -1 $(HOMEDIR)/mlib/) 
+
+GLOBAL := $(shell ls -d -1 $(HOMEDIR)/globalConfig/)
+
+RUNS := $(shell ls -d -1 $(HOMEDIR)/runConfig/)
+
+DATA := $(shell ls -d -1 $(HOMEDIR)/data/)
+
+MLIB := $(MLIB) $(GLOBAL)
 
 LYX := lyx -batch --export "pdf" -dbg info,latex
 

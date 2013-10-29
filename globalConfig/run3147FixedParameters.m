@@ -7,9 +7,11 @@ pendulumF0=0.0128;
 pendulumF0Width = 4e-3;
 pendulumQ=3500;
 pendulumI=2.369e-6;
-kappa=4*pi*pi*pendulumF0*pendulumF0*pendulumI;
+kappa=4*pi*pi*pendulumF0*pendulumF0*pendulumI; printSigNumber(kappa,[HOMEDIR 'extracted/kappa.tex'],1);
 psdWidth=1e-2;
 focalLength=400e-3;
+
+psdToRadians = psdWidth/focalLength/2.0;
 
 %Controls the post-lockin blinding.
 unBlind = 0 ;

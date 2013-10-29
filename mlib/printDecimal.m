@@ -4,6 +4,7 @@
 
 function printDecimal(data, filename, precision)
 %	filename
+	assert(precision > 0); 
 
 	precision = precision - 1;
 
