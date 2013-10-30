@@ -8,8 +8,9 @@ FILT := run3169filterTransfer
 WIND := run3147windowTransferFunctions
 LAG20:= run3220torqueLag
 LAG24:= run3224torqueLag
+LAG69:= run3169lags
 
-all: $(FFR).eps $(FILT).eps $(WIND).eps $(LAG20).eps $(LAG24).eps
+all: $(FFR).eps $(FILT).eps $(WIND).eps $(LAG20).eps $(LAG24).eps $(LAG69).eps
 
 #Filter transfer functions
 $(FFR).eps: $(FFR).m $(FFR).gpl
@@ -35,6 +36,12 @@ $(LAG20).eps : $(LAG20).m $(LAG20).gpl
 $(LAG24).eps : $(LAG24).m $(LAG24).gpl
 	$(OCT) $(LAG24).m
 	$(GNU) $(LAG24).gpl
+
+#Run3169 lags
+$(LAG69).eps : $(LAG69).m $(LAG69).gpl
+	$(OCT) $(LAG69).m
+	$(GNU) $(LAG69).gpl
+
 
 clean : 
 	-rm *.eps

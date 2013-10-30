@@ -5192,7 +5192,7 @@ status open
 \size small
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "~/mlib/findRisingEdge.m"
+filename "../mlib/findRisingEdge.m"
 lstparams "caption={findRisingEdge.m},language=Matlab"
 
 \end_inset
@@ -5301,7 +5301,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../pWDA/run3169lags.eps
+	filename ../runAnalysis/supportingPlots/run3169lags.eps
 	width 75text%
 
 \end_inset
@@ -5655,7 +5655,7 @@ status open
 \size small
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "~/mlib/squareLockM.m"
+filename "../mlib/squareLockM.m"
 lstparams "breakatwhitespace=true,breaklines=true,caption={findRisingEdge.m},emptylines=0,language=Matlab,linerange={1-17,19-23,71-104}"
 
 \end_inset

@@ -1,0 +1,38 @@
+reset
+clear
+
+set key noauto
+
+sT = 0.8 
+set term postscript enhanced solid color eps
+set output 'run3169lags.eps'
+         
+set multiplot layout 2,1 title 'Attractor Motion run3169, 1240+ cuts stacked'
+
+
+
+set ylabel 'attractor position (um)'
+
+pl [0:256][]\
+	'run3169lagsMod.dat' u 1:2 w d
+
+#	'run3169lags.dat' u ($0*sT):1 w p pt 7 ps 0.3 lt 3,\
+
+#pause -1
+
+set y2tics
+set ylabel  'pre-switch position (um)'
+set y2label 'post-switch position (um)'
+set xlabel 'time (s) modulo 256 s'
+
+pl [100:150][-552.5:-532.5][100:150][30:50]\
+	'run3169lagsMod.dat' u 1:2 w d lt 1 ax x1y2,\
+	'run3169lagsMod.dat' u 1:2 w d lt 3,\
+	'run3169lagsMod.dat' u 1:($0 < 1280 ? $2 : 1/0) w p ps 0.6 pt 7 lt -1 tit 'first four cuts',\
+	'run3169lagsMod.dat' u 1:($0 < 1280 ? $2 : 1/0) w p ps 0.6 pt 7 lt -1 ax x1y2 
+
+
+#	'run3169lagsCoh.dat' u ($0*sT):1:2 w yerr pt 7 ps 0.3 lt 3,\
+#	'run3169lagsCoh.dat' u ($0*sT):1:2 w yerr pt 7 ps 0.3 lt 1 ax x1y2
+
+unset multiplot
