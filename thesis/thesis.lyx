@@ -5439,7 +5439,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../pWDA/run3224torqueLag.eps
+	filename ../runAnalysis/supportingPlots/run3224torqueLag.eps
 	width 75text%
 
 \end_inset
@@ -5459,6 +5459,8 @@ name "ElectronicTorqueLag"
 
 \begin_layout Plain Layout
 Injected torques for lag determination after all filters.
+ (XXX this plot is modified from ~/pWDA/, make sure it makes sense; run3224preSM
+3A is quite different.)
 \end_layout
 
 \end_inset
