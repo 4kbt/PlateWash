@@ -3,7 +3,7 @@ run3147FixedParameters
 
 'dynamic configuration begins'
 
-qTesterCalibrationSignal = load('../calibration/run3147calFitChkMean.dat');
+qTesterCalibrationSignal = load([HOMEDIR '/calibration/run3147calFitChkMean.dat']);
 qTesterCalibrationSignal = qTesterCalibrationSignal(1,2);
 
 torqueCal = qTesterTorque / qTesterCalibrationSignal;

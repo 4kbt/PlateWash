@@ -1,5 +1,3 @@
-clear
-
 try
 run3147preSM3A
 catch

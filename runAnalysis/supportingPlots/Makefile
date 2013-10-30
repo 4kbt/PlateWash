@@ -1,5 +1,8 @@
 include ../../Makefile.inc
 
+OCT := $(OCT) --eval "addpath([HOMEDIR \"/runAnalysis/\"]);"
+
+
 #Filter transfer functions
 FFR := run3147filterFrequencyResponse
 $(FFR).eps: $(FFR).m $(FFR).gpl
