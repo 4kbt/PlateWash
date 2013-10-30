@@ -46,6 +46,7 @@ THRC=--eval 'nameCtr = 3218;'
 ANALYSISDEPS := analyzeRun.m ../calibration/ ../mlib/ ../globalConfig
 
 all: results/run3147pM3FilterMerge.dat
+	$(MAKE) -C supportingPlots
 
 #Spelled out this way in hopes of parallelizing someday. Apologies for the complexity
 runs -$(RESULTS) : $(ANALYSISDEPS)
@@ -85,3 +86,4 @@ path :
 
 clean :
 	-rm results/*.dat
+	$(MAKE) -C supportingPlots clean

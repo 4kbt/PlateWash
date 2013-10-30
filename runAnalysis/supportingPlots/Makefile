@@ -1,6 +1,7 @@
 include ../../Makefile.inc
 
 OCT := $(OCT) --eval "addpath([HOMEDIR \"/runAnalysis/\"]);"
+OCT := $(OCT) --eval "addpath([HOMEDIR \"/calibration/pressure/\"]);"
 
 FFR := run3147filterFrequencyResponse
 FILT := run3169filterTransfer
@@ -25,3 +26,4 @@ $(WIND).eps : $(WIND).m $(WIND).gpl
 
 clean : 
 	-rm *.eps
+	-rm *.dat

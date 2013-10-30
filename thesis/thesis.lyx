@@ -4983,7 +4983,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../pWDA/run3147filterFrequencyResponse.eps
+	filename ../runAnalysis/supportingPlots/run3147filterFrequencyResponse.eps
 	width 75col%
 	BoundingBox 50bp 50bp 554bp 770bp
 
@@ -5110,7 +5110,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../pWDA/run3169filterTransfer.eps
+	filename ../runAnalysis/supportingPlots/run3169filterTransfer.eps
 	width 75col%
 
 \end_inset
@@ -5542,7 +5542,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../pWDA/run3147windowTransferFunctions.eps
+	filename ../runAnalysis/supportingPlots/run3147windowTransferFunctions.eps
 	width 75col%
 
 \end_inset
