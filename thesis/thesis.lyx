@@ -5350,7 +5350,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../pWDA/run3220torqueLag.eps
+	filename ../runAnalysis/supportingPlots/run3220torqueLag.eps
 	width 75text%
 
 \end_inset

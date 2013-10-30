@@ -6,8 +6,9 @@ OCT := $(OCT) --eval "addpath([HOMEDIR \"/calibration/pressure/\"]);"
 FFR := run3147filterFrequencyResponse
 FILT := run3169filterTransfer
 WIND := run3147windowTransferFunctions
+LAG20:= run3220torqueLag
 
-all: $(FFR).eps $(FILT).eps $(WIND).eps
+all: $(FFR).eps $(FILT).eps $(WIND).eps $(LAG20).eps
 
 #Filter transfer functions
 $(FFR).eps: $(FFR).m $(FFR).gpl
@@ -23,6 +24,11 @@ $(FILT).eps : $(FILT).m $(FILT).gpl
 $(WIND).eps : $(WIND).m $(WIND).gpl
 	$(OCT) $(WIND).m
 	$(GNU) $(WIND).gpl
+
+#Run3220 torque lag
+$(LAG20).eps : $(LAG20).m $(LAG20).gpl
+	$(OCT) $(LAG20).m
+	$(GNU) $(LAG20).gpl
 
 clean : 
 	-rm *.eps
