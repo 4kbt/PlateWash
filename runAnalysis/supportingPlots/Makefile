@@ -1,4 +1,4 @@
-include ../Makefile.inc
+include ../../Makefile.inc
 
 #Filter transfer functions
 FFR := run3147filterFrequencyResponse
