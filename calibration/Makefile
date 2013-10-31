@@ -13,6 +13,9 @@ else
  CALIBFILES := $(CALFILES)
 endif
 
+everything : all 
+	$(MAKE) -C pressure
+
 all: run3147calFitChk.eps
 
 
