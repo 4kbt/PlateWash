@@ -1,9 +1,9 @@
-all : thermal magnetic
+all : therm mag
 
-magnetic: 
+mag: 
 	$(MAKE) -C magnetic
 
-thermal: 
+therm: 
 	$(MAKE) -C thermal
 
 
