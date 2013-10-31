@@ -78,7 +78,16 @@ runs -$(RESULTS) : $(ANALYSISDEPS)
 	$(OCT) $(THRB) analyzeRun.m
 	$(OCT) $(THRC) analyzeRun.m
 
-results/run3147pM3FilterMerge.dat : runs run3147pLDAFiltermerge.sh
+#The following empty assignment is meaningful.
+NOFILES :=
+
+ifeq ($(RESULTS), $(NOFILES))
+ DEPS := runs
+else
+ DEPS := $(RESULTS)
+endif
+
+results/run3147pM3FilterMerge.dat : $(DEPS) run3147pLDAFiltermerge.sh
 	./run3147pLDAFiltermerge.sh
 
 path : 
