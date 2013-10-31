@@ -3680,7 +3680,7 @@ Frequency
 \end_layout
 
 \begin_layout Standard
-Each Platewash measurement operates in a frequency regime spanning 100 
+Each PlateWash measurement operates in a frequency regime spanning 100 
 \begin_inset Formula $\mu$
 \end_inset
 
@@ -4607,7 +4607,11 @@ The operating frequency was chosen well in advance of the science run reported
  here, before the instrument was fully understood.
  We selected a frequency that we expected would give low noise and was sufficien
 tly slow to allow transients associated with attractor motion to damp.
- We selected 3.90625 mHz, or 
+ We selected 3.90625
+\begin_inset space ~
+\end_inset
+
+mHz, or 
 \begin_inset Formula $1/256$
 \end_inset
 
@@ -5381,7 +5385,7 @@ status open
 XXX WTF?!
 \begin_inset CommandInset include
 LatexCommand input
-filename "pWDA/extracted/filterHigh3220.tex"
+filename "../extracted/filterHigh3220.tex"
 
 \end_inset
 
@@ -5867,11 +5871,11 @@ Filtering
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename pWDA/run3147preSM3A.filterResponse.ps
+	filename ../runAnalysis/supportingPlots/run3147filterFrequencyResponse.eps
 	width 75col%
 	BoundingBox 50bp 50bp 554bp 770bp
 
