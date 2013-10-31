@@ -1,6 +1,9 @@
 include ../Makefile.inc
 
-RESULTS := $(shell ls -d -1 results/* )
+FILTRESULTS := $(shell ls -d -1 results/*Filter.dat )
+ONLYRESULTS := $(shell ls -d -1 results/*FilterOnly.dat )
+
+RAWRESULTS := $(FILTRESULTS) $(ONLYRESULTS)
 
 #Spelled out this way in hopes of parallelizing someday. Apologies for the complexity
 #Science runs:
@@ -49,7 +52,8 @@ all: results/run3147pM3FilterMerge.dat
 	$(MAKE) -C supportingPlots
 
 #Spelled out this way in hopes of parallelizing someday. Apologies for the complexity
-runs -$(RESULTS) : $(ANALYSISDEPS)
+runs -$(RAWRESULTS) : $(ANALYSISDEPS)
+	echo $(DEPS)
 	$(OCT) $(SCIA) analyzeRun.m
 	$(OCT) $(SCIB) analyzeRun.m
 	$(OCT) $(SCIC) analyzeRun.m
@@ -78,7 +82,17 @@ runs -$(RESULTS) : $(ANALYSISDEPS)
 	$(OCT) $(THRB) analyzeRun.m
 	$(OCT) $(THRC) analyzeRun.m
 
-results/run3147pM3FilterMerge.dat : runs run3147pLDAFiltermerge.sh
+#The following empty assignment is meaningful.
+NOFILES :=
+
+ifeq ($(RAWRESULTS), $(NOFILES))
+ DEPS := runs
+else
+ DEPS := $(RAWRESULTS)
+endif
+
+results/run3147pM3FilterMerge.dat : $(DEPS) run3147pLDAFiltermerge.sh
+	echo $(DEPS)
 	./run3147pLDAFiltermerge.sh
 
 path : 
