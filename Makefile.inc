@@ -1,7 +1,7 @@
 HOMEDIR := ~/goldStandard/
 
 OCT:= octave --no-init-file \
-	--eval "HOMEDIR = \"$(HOMEDIR)\";"\
+	--eval 'HOMEDIR = \"$(HOMEDIR)\";'\
 	--eval 'initializeOctave;'\
 	-p $(HOMEDIR)/globalConfig/
 GNU := gnuplot
