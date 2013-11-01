@@ -53,7 +53,7 @@ all: results/run3147pM3FilterMerge.dat
 	$(MAKE) -C supportingPlots
 
 #Spelled out this way in hopes of parallelizing someday. Apologies for the complexity
-runs -$(RAWRESULTS) : $(ANALYSISDEPS)
+runs -$(RAWRESULTS) :: $(ANALYSISDEPS)
 	echo $(DEPS)
 	$(OCT) $(SCIA) analyzeRun.m
 	$(OCT) $(SCIB) analyzeRun.m
@@ -66,7 +66,7 @@ runs -$(RAWRESULTS) : $(ANALYSISDEPS)
 	$(OCT) $(SCII) analyzeRun.m
 
 #Sleazy parallelization
-runs2 -$(RAWRESULTS) : $(ANALYSISDEPS)
+runs2 -$(RAWRESULTS) :: $(ANALYSISDEPS)
 #	$(OCT) $(SCIJ) analyzeRun.m
 	$(OCT) $(SCIK) analyzeRun.m
 	$(OCT) $(SCIL) analyzeRun.m
@@ -80,7 +80,7 @@ runs2 -$(RAWRESULTS) : $(ANALYSISDEPS)
 	$(OCT) $(SCIT) analyzeRun.m
 
 #Sleazy parallelization
-runs3 -$(RAWRESULTS) : $(ANALYSISDEPS)
+runs3 -$(RAWRESULTS) :: $(ANALYSISDEPS)
 	$(OCT) $(MAGA) analyzeRun.m
 	$(OCT) $(MAGB) analyzeRun.m
 	$(OCT) $(MAGC) analyzeRun.m
