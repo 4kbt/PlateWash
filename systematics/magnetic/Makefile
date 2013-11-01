@@ -3,6 +3,7 @@ include ../../Makefile.inc
 PREREQUISITES = $(HOMEDIR)/runAnalysis/results
 
 all: shortStroke longStroke
+	$(MAKE) -C plots
 
 shortStroke :  coilOnCanShortStroke.m $(PREREQUISITES)
 	$(OCT) coilOnCanShortStroke.m
