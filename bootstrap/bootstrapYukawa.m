@@ -12,7 +12,7 @@ for bootStrapCounter = 1:1000
 
 	d = bootstrapData(dBSArchive);
 
-	'bootstrapping complete'
+	%'bootstrapping complete'
 
 	%Save the real data
 
@@ -30,7 +30,7 @@ for bootStrapCounter = 1:1000
 	endswitch
 
 	%Fit begins
-	ranSeed = [ 10^( rand*3.0-6) , (-1).^(round(rand)+1)*10^(rand*11-5), (rand-0.5)*10^-11]
+	ranSeed = [ 10^( rand*3.0-6) , (-1).^(round(rand)+1)*10^(rand*11-5), (rand-0.5)*10^-11];
 	try
 		%When analyzing, make a cut on csMin
 		switch fitAlgorithm
