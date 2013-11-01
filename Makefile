@@ -2,9 +2,9 @@ include Makefile.inc
 
 dissertation: 
 	$(MAKE) -C calibration
-	$(MAKE) -C runAnalysis
-	$(MAKE) -C systematics 
-	$(MAKE) -C bootstrap
+	$(MAKE) -j 3 -C runAnalysis
+	$(MAKE) -j 3 -C systematics 
+	$(MAKE) -j 3 -C bootstrap
 	$(MAKE) -C thesis 
 
 clean:

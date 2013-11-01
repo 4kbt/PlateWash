@@ -64,6 +64,9 @@ runs -$(RAWRESULTS) : $(ANALYSISDEPS)
 	$(OCT) $(SCIG) analyzeRun.m
 	$(OCT) $(SCIH) analyzeRun.m
 	$(OCT) $(SCII) analyzeRun.m
+
+#Sleazy parallelization
+runs2 -$(RAWRESULTS) : $(ANALYSISDEPS)
 #	$(OCT) $(SCIJ) analyzeRun.m
 	$(OCT) $(SCIK) analyzeRun.m
 	$(OCT) $(SCIL) analyzeRun.m
@@ -75,6 +78,9 @@ runs -$(RAWRESULTS) : $(ANALYSISDEPS)
 	$(OCT) $(SCIR) analyzeRun.m
 ##	$(OCT) $(SCIS) analyzeRun.m
 	$(OCT) $(SCIT) analyzeRun.m
+
+#Sleazy parallelization
+runs3 -$(RAWRESULTS) : $(ANALYSISDEPS)
 	$(OCT) $(MAGA) analyzeRun.m
 	$(OCT) $(MAGB) analyzeRun.m
 	$(OCT) $(MAGC) analyzeRun.m
@@ -87,7 +93,7 @@ runs -$(RAWRESULTS) : $(ANALYSISDEPS)
 NOFILES := 
 
 ifeq ( $(strip  $(RAWRESULTS)), $(NOFILES) )
- DEPS := runs
+ DEPS := runs runs2 runs3
 else
  DEPS := $(RAWRESULTS)
 endif
