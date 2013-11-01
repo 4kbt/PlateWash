@@ -16,11 +16,11 @@ fitAlgorithm = 'Levenberg';
 %Bootstrap loop
 for bootStrapCounter = 1:300
 
-	bootStrapCounter
+	['arbFit bootstrap counter ' num2str(bootStrapCounter)]
 
 	d = bootstrapData(dBSArchive);
 
-	'bootstrapping complete'
+%	'bootstrapping complete'
 
 	%Save the real data
 
