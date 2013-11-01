@@ -8,7 +8,7 @@ fitAlgorithm = 'Levenburg';
 %Bootstrap loop
 for bootStrapCounter = 1:1000
 
-	['yukawa bootstrap counter ' num2str(bootStrapCounter)];
+	['yukawa bootstrap counter ' num2str(bootStrapCounter)]
 
 	d = bootstrapData(dBSArchive);
 
