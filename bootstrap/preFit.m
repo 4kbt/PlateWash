@@ -3,6 +3,8 @@ pause = 0
 %Import parameters
 run3147FixedParameters
 
+warning off Octave:divide-by-zero
+
 %Calibrate duty/microe.
 if( ~exist('pressEncP'))
 	pressEncP = getPressEncP(HOMEDIR); 
