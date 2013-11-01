@@ -49,6 +49,7 @@ THRC=--eval 'nameCtr = 3218;'
 ANALYSISDEPS := analyzeRun.m ../calibration/ ../mlib/ ../globalConfig
 
 all: results/run3147pM3FilterMerge.dat
+	echo $(RAWRESULTS)
 	$(MAKE) -C supportingPlots
 
 #Spelled out this way in hopes of parallelizing someday. Apologies for the complexity
@@ -83,9 +84,9 @@ runs -$(RAWRESULTS) : $(ANALYSISDEPS)
 	$(OCT) $(THRC) analyzeRun.m
 
 #The following empty assignment is meaningful.
-NOFILES :=
+NOFILES := 
 
-ifeq ($(RAWRESULTS), $(NOFILES))
+ifeq ( $(strip  $(RAWRESULTS)), $(NOFILES) )
  DEPS := runs
 else
  DEPS := $(RAWRESULTS)
