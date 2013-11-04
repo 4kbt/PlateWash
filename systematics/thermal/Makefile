@@ -1,6 +1,6 @@
 include ../../Makefile.inc
 
-PREREQUISITES := $(HOMEDIR)/runAnalysis/results
+PREREQUISITES := $(HOMEDIR)/runAnalysis/results Makefile
 
 all: shortStroke longStroke
 	$(MAKE) -C plots
@@ -22,9 +22,12 @@ LONGTEX  := $(addprefix $(LONGTEXFP),$(LONGTEX))
 
 $(SHORTTEX) $(SHORTDAT) shortStroke :  thermalShortStroke.m $(PREREQUISITES)
 	$(OCT) thermalShortStroke.m
+	$(HOMEDIR)/bin/mathify.sh extracted/*
+
 
 $(LONGTEX) $(LONGDAT)  longStroke  :  thermalLongStroke.m $(PREREQUISITES)
 	$(OCT) thermalLongStroke.m
+	$(HOMEDIR)/bin/mathify.sh extracted/*
 
 clean : 
 	-rm plots/*.dat
