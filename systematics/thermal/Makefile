@@ -20,13 +20,13 @@ LONGTEX    := $(shell grep tex $(TLONG)  | $(SINGLEQUOTECUTTER) )
 SHORTTEX := $(addprefix $(SHORTTEXFP),$(SHORTTEX))
 LONGTEX  := $(addprefix $(LONGTEXFP),$(LONGTEX))
 
-$(SHORTTEX) $(SHORTDAT) shortStroke :  thermalShortStroke.m $(PREREQUISITES)
-	$(OCT) thermalShortStroke.m
+$(SHORTTEX) $(SHORTDAT) shortStroke :  $(TSHORT) $(PREREQUISITES)
+	$(OCT) $(TSHORT)
 	$(HOMEDIR)/bin/mathify.sh extracted/*
 
 
-$(LONGTEX) $(LONGDAT)  longStroke  :  thermalLongStroke.m $(PREREQUISITES)
-	$(OCT) thermalLongStroke.m
+$(LONGTEX) $(LONGDAT)  longStroke  :  $(TLONG) $(PREREQUISITES)
+	$(OCT) $(TLONG)
 	$(HOMEDIR)/bin/mathify.sh extracted/*
 
 clean : 
