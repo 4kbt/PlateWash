@@ -8,8 +8,8 @@ all: shortStroke longStroke
 TSHORT := thermalShortStroke.m
 TLONG  := thermalLongStroke.m
 
-LONGDAT  := $(shell grep dat $(TSHORT) | grep plots | $(SINGLEQUOTECUTTER) )
-SHORTDAT := $(shell grep dat $(TLONG)  | grep plots | $(SINGLEQUOTECUTTER) )
+SHORTDAT := $(shell grep dat $(TSHORT) | grep plots | $(SINGLEQUOTECUTTER) )
+LONGDAT  := $(shell grep dat $(TLONG)  | grep plots | $(SINGLEQUOTECUTTER) )
 
 SHORTTEXFP := $(shell grep filePath $(TSHORT) | head -n 1 | $(SINGLEQUOTECUTTER) )
 LONGTEXFP  := $(shell grep filePath $(TLONG)  | head -n 1 | $(SINGLEQUOTECUTTER) )
