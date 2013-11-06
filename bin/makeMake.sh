@@ -20,14 +20,17 @@ ACTION=$5
 #Dependencies (just the name of the Make variable, not the dollar-signed expansion.
 DEPENDENCIES=$6
 
+#Target prefix
+TPREFIX=$7
+
 rm $FN $DL
 
 for RN in $(cat ${RL})
 do
 	echo $RN
-	echo run${RN}${TSUFFIX} : $ACTION \$\(${DEPENDENCIES}\) >> $FN
+	echo ${TPREFIX}${RN}${TSUFFIX} : $ACTION \$\(${DEPENDENCIES}\) >> $FN
 	echo -e "\t"\$\(OCT\) --eval \'nameCtr = $RN\' $ACTION  >> $FN
 	echo >> $FN
 
-	echo run${RN}Filter.dat >> $DL
+	echo ${TPREFIX}${RN}${TSUFFIX} >> $DL
 done

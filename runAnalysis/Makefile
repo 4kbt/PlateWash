@@ -22,7 +22,7 @@ DEPFILE := depList.txt
 #Throwaway variables to make external shell commands prior to parsing the subMake.inc file
 throwaway1 := $(shell $(HOMEDIR)/bin/genTargets.sh $(RUNSTOBEANALYZED) $(RUNLIST) )
 #No dollar-sign on analysisdeps for a reason, see script
-throwaway2 := $(shell $(HOMEDIR)/bin/makeMake.sh $(RUNLIST) $(SUBMAKE) $(DEPFILE) Filter.dat analyzeRun.m ANALYSISDEPS)
+throwaway2 := $(shell $(HOMEDIR)/bin/makeMake.sh $(RUNLIST) $(SUBMAKE) $(DEPFILE) Filter.dat analyzeRun.m ANALYSISDEPS results/run)
 
 #include all the actual targets
 include subMake.inc
@@ -31,13 +31,13 @@ include subMake.inc
 DEPLIST = $(shell cat $(DEPFILE))
 
 #Test target to ensure things are working correctly.
-listRuns : $(DEPLIST)
+listRuns : 
 	echo $(DEPLIST)
 
 #end STRANGE section
 
 
-results/run3147pM3FilterMerge.dat : $(DEPLIST) run3147pLDAFiltermerge.sh
+results/run3147pM3FilterMerge.dat : $(DEPLIST) run3147pLDAFiltermerge.sh $(HOMEDIR)/bin/makeMake.sh
 	./run3147pLDAFiltermerge.sh
 
 path : 
@@ -45,4 +45,6 @@ path :
 
 clean :
 	-rm results/*.dat
+	-rm depList.txt
+	-rm RunList.dat
 	$(MAKE) -C supportingPlots clean
