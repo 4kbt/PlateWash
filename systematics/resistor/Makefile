@@ -17,11 +17,12 @@ LONGTEX  := $(addprefix $(LONGTEXFP),$(LONGTEX))
 
 $(LONGTEX) $(LONGDAT)  longStroke  :  $(RLONG) $(PREREQUISITES)
 	$(OCT) $(RLONG)
-	$(HOMEDIR)/bin/mathify.sh extracted/*
+	$(HOMEDIR)/bin/copyToNewExtension.sh tex dat extracted/
+	$(HOMEDIR)/bin/mathify.sh extracted/*.tex
 
 clean : 
 	-rm plots/*.dat
-	-rm extracted/*.tex
+	-rm extracted/*
 	$(MAKE) -C plots clean
 
 toy : 

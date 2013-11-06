@@ -34,6 +34,10 @@ for resistorCtr = 1:rows(resistorRuns)
 
 	printSigError( l0Diff(1), l0Diff(2) , [filePath 'longStrokeL0Diff' runString '.tex']);
 
+	outData = [resistorRuns(resistorCtr,:) l0Diff];
+
+	save (['plots/longStroke' runString '.dat'],"outData");
+
 	olHist = [blBins blH];
 	o0Hist = [b0Bins b0H];
 
