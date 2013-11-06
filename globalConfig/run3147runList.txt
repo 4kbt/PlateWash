@@ -1,0 +1,99 @@
+3141	ps	sync start with 3141elsewhere.
+3141	pw	Angle +0.010 Lockin moved to 500 Hz. Attractor and foil capacitors chopped. Attractor 20MOhm, Foil 50 Ohm.
+3142	ps	sync start with 3142elsewhere. run3142rsched.
+3142	pw	Angle +0.010 Lockin moved to 500 Hz. Attractor and foil capacitors chopped. Attractor 20MOhm, Foil 50 Ohm.
+3145	pw	POWER OUTAGE! Bounce testing. Again, with higher precision.
+3146	pw	relocked. still 500Hz lockin. qT at -3.0 mHz.
+3147	ps	post-power outage. run3142rsched again.
+3148	ps	sync start with 3148elsewhere.
+3148	pw	relocked. still 500Hz lockin. qT at -3.0 mHz.
+3149	ps	sync start with 3149elsewhere.
+3149	pw	sync w 3149. still 500Hz lockin. qT at -3.0 mHz.
+3150	ps	sync start with 3150elsewhere.
+3150	pw	sync w 3150. still 500Hz lockin. qT at -3.0 mHz.
+3151	ps	Feedback batteries replaced. sync start with 3151elsewhere.
+3151	pw	FEEDBACK BATTERIES REPLACED! sync w 3151. still 500Hz lockin. qT at -3.0 mHz.
+3151	ifo	# sync with 3151
+3152	ps	run3152rsched
+3152	pw	FEEDBACK BATTERIES REPLACED! sync w 3152. still 500Hz lockin. qT at -3.0 mHz.
+3152	ifo	# sync with 3152
+3153	ps	run3153rsched
+3153	pw	sync w 3153. still 500Hz lockin. qT at -3.0 mHz.
+3153	ifo	# sync with 3153
+3154	ps	15+15 square at 3.90625e-3
+3154	pw	sync w 3154. still 500Hz lockin. qT at -3.0 mHz.
+3154	ifo	# sync with 3154
+3155	ps	run3155rsched.
+3155	pw	sync w 3155. still 500Hz lockin. qT at -3.0 mHz.
+3156	pw	pw daq program crashed. letting pendulum flop for a little while for ranging.
+3157	pw	pendulum still stuck, feedback on.
+3158	ps	run3158rsched.
+3158	pw	sync with 3158
+3158	ifo	# sync with 3158. clock matches ps clock
+3159	ps	run3159rsched.
+3159	pw	sync with 3159
+3160	ps	run3160rsched.
+3160	pw	sync with 3160
+3160	ifo	# sync with 3160; clock matches ps clock 3160
+3161	ps	30.5+2.5 at 3.90625e-3. Let's hunt.
+3161	pw	sync with 3161
+3161	ifo	# sync with 3161; clock matches ps clock 3161
+3162	ps	30.4+2.5 at 3.90625e-3. Let's hunt.
+3163	ps	30.2+2.5 at 3.90625e-3. Let's hunt.
+3164	ps	30.2+2.5 at 3.90625e-3. PS DAQ restarted, updated. IFO too.
+3164	pw	sync with 3164. Ps computer restarted. PW clock rolled in 3161.
+3164	ifo	# sync with 3164; clock matches pw clock 3164
+3166	ps	30.2+2.5 at 3.90625e-3. Let's hunt.
+3167	ps	30.2+2.5 at 3.90625e-3. last run ps clock led pw clock by 8s. resynced to wwv.nist.gov
+3167	pw	sync with 3167; valving off  apparatus after pressure gauge.
+3168	pw	sync with 3168; valving off  apparatus after pressure gauge.
+3169	ps	15+15 at 3.90625e-3. pw clock and ps clock match.
+3170	pw	daq program crashed.  pendulum on foil; will recatch sometime.
+3174	ps	Attractor grounded.15+15 at 3.90625e-3. pw clock and ps clock match.
+3174	pw	pw and ps clocks match. 
+3176	ps	gigaohm to attractor; 15+15 at 3.90625e-3. ps clock and pw clock match.
+3176	pw	gigaohm resistor on attractor.
+3177	pw	10k resistor on attractor.
+3178	pw	50 ohm resistor on attractor.
+3179	pw	1 ohm resistor on attractor.
+3180	pw	"0.1" ohm resistor on attractor.
+3181	pw	1 Gohm resistor on attractor. Bypass capacitor installed for attractor.
+3182	pw	50 ohm resistor on attractor. Bypass capacitor installed for attractor. Removed and inspected Foil resistor. kicked pendulum gently; no touch.
+3183	pw	Foil resistor switched from 50 ohm to 0 ohm. 0 ohm resistor on attractor. Bypass capacitor REMOVED for attractor.
+3184	ps	magnetic tests. 20 Mohm to attractor; 15+15 at 3.90625e-3. ps clock and pw clock match 6/8
+3184	pw	Foil resistor switched back to same 50 ohm resistor. New 20 Mohm resistor on attractor. No caps. Magnetic field on. 0.8A.
+3185	pw	Current direction flipped. Foil resistor switched back to same 50 ohm resistor. New 20 Mohm resistor on attractor. No caps. Magnetic field on. 0.8A.
+3186	ps	psdaq restarted after wifi lockup; 15+15 at 3.90625e-3. ps clock and pw clock match.
+3187	ps	30.2+2.5 at 3.90625e-3. ps clock and pw clock match 3187
+3189	pw	PW DAQ crashed. Reflipped field, mid short-stroke. Magnetic field on. 0.8A.
+3191	ps	psdaq restarted after wifi lockup; 15+15 at 3.90625e-3. ps clock and pw clock match; Run3190 is in phase with this run, but forgot to hit "record". :(. Whoopsie.
+3191	pw	Placed coil directly on apparatus. It's slightly warm. (red plug on Left,)  Short strokes continue. 0.8A.
+3193	ps	last run was 30.2+2.5. Now 15+15 at 3.90625e-3. ps clock and pw clock match; Run3193 
+3194	pw	(red plug on Right,)   0.8A.
+3195	ps	Previous runs, Pneu control was in "Follow", not  "duty". Check back to last restart :(.  Now 15+15 at 3.90625e-3. ps clock and pw clock match; Run3195 
+3197	pw	0.6A, red on right.
+3198	ps	30+2.5 at 1/256.
+3198	pw	Bounce testing, then will relock. 0.6A, red on right.
+3200	ps	30+2.5 at 1/256.
+3200	pw	Will flip field to red on left, 0.6A, then move ps to run3200
+3201	ps	30+2.5 at 1/256. ps and pw clocks match
+3201	pw	1.75A; red on red from sorenson.
+3202	pw	field off. Trying for relock.
+3203	ps	30+2.5 at 1/256. ps and pw clocks match
+3203	pw	field on again at 0.6A (21 V) red on right. 
+3204	ps	30+2.5 at 1/256. ps and pw clocks match 3204 (and 3203, if memory serves)
+3204	pw	field on again at 0.6A (21 V) red on left.
+3205	ps	30+2.5 at 1/256. 
+3205	pw	field on again at 0.6A (21 V) red on left.
+3206	ps	15+15at 1/256. ps and pw clocks match 3206
+3206	pw	coil disconnected. Shortrange thermistor Xbee attached. Connector closer to pump port is Beta.
+3210	pw	back from colorado; relock?
+3213	pw	heating test beginning.
+3215	ps	30.2+2.5 at 1/256. Previous run was 15+15
+3215	pw	stuck on foil, but should relock. Heater on, attractor doing 30.2+2.5
+3216	ps	15+15 at 1/256.
+3216	pw	DAQ restarted. AO0 seemed to have stopped operating? Restart fixed it. Relocked. Unplugged and replugged feedback box inputs/outputs a few times while checking wtih DVM
+3217	ps	30.2+2.5 at 1/256
+3217	ifo	# heat systematic continues; pendulum relocked.
+3218	ps	15+15 at 1/256
+3218	pw	Going for long-stroke heat run
