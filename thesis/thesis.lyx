@@ -7520,6 +7520,42 @@ To assess the effect of changing the attractor/foil resistance, we tried
  resistor cannot tune away nor create a signal.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../systematics/resistor/plots/resistorPlot.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Summary of resistor tests
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Magnetism
 \end_layout
@@ -7531,6 +7567,11 @@ A large (XXX
 
 cm diameter ) coil with XXX turns of wire was placed near and on the apparatus
  to gauge any change in signal as a function of applied magnetic field.
+ A the coil was driven with current of XXX
+\begin_inset space ~
+\end_inset
+
+A.
  
 \end_layout
 
@@ -7546,6 +7587,110 @@ XXX diagram
 The change in field at the pendulum was estimated (XXX measured?!) to be
  XXX vertical, XXX horizontal, and XXX axial in the on-apparatus configuration
  and XXX horizontal in the position at the side of the instrument.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../systematics/magnetic/plots/longStrokeolHist.datlongStrokeo0Hist.dat.eps
+	width 80col%
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Long-stroke Magnetic Tests
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../systematics/magnetic/plots/shortStrokeolHist.datshortStrokeo0Hist.datshortStrokeorHist.dat.eps
+	width 80col%
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Long-stroke Magnetic Tests
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "../systematics/magnetic/extracted/longStrokeL0Diff.tex"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "../systematics/magnetic/extracted/shortStrokeL0Diff.tex"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "../systematics/magnetic/extracted/shortStrokeLRDiff.tex"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "../systematics/magnetic/extracted/shortStrokeR0Diff.tex"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -7572,6 +7717,87 @@ The attractor was biased to XXX V through a resistor, and the experiment
 
 \begin_layout Subsection
 Temperature
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../systematics/thermal/plots/longStrokeoHHist.datlongStrokeo0Hist.dat.eps
+	width 80col%
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Long-stroke Thermal Tests
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../systematics/magnetic/plots/shortStrokeolHist.datshortStrokeo0Hist.datshortStrokeorHist.dat.eps
+	width 80col%
+	rotateAngle 90
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Short-stroke Thermal Tests
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "../systematics/thermal/extracted/longStrokeL0Diff.tex"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "../systematics/thermal/extracted/shortStrokeL0Diff.tex"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
