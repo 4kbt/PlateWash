@@ -2,6 +2,7 @@ run3147FixedParameters
 
 %run#	resist	bypassCap
 resistorRuns = [\
+3174	1e-3	0;\
 3176	1e9	0;\
 3177	10e3	0;\
 3178	50	0;\
@@ -27,6 +28,8 @@ for resistorCtr = 1:rows(resistorRuns)
 
 	[l0Diff blBins blH b0Bins b0H bLPositions b0Positions] = compareTwoSquareWavesBlind( bL,b0, torCol, torerrCol, torErrThresh, torErrMin, numPWSensors + psSquareCol, numSensors, 1, 2);
 
+	b0Uncertainty = uncertaintyOverTime(b0(:,torCol), b0(:,torerrCol)) (end,2);
+	b0Uncertainty = [3154 20e6 0 0 b0Uncertainty];
 
 	%Output...
 
@@ -42,6 +45,7 @@ for resistorCtr = 1:rows(resistorRuns)
 	o0Hist = [b0Bins b0H];
 
 	save 'plots/longStrokeo0Hist.dat' o0Hist
+	save 'plots/b0Uncertainty.dat' b0Uncertainty
 	save (['plots/longStrokeoHHist' runString '.dat'], "olHist");
 
 	save  'plots/longStrokeo0Positions.dat' b0Positions

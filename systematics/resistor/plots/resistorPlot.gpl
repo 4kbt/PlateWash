@@ -1,0 +1,19 @@
+set key noauto
+
+set term postscript enhanced solid color
+set output 'resistorPlot.eps'
+
+set title 'Torque difference from 20 MOhm with a long attractor stroke'
+
+set xlabel 'Attractor resistor (Ohm)'
+
+set ylabel 'torque difference (fN-m)'
+
+set logsc 
+
+set xtics format '10^{%L}'
+
+pl [1e-4: 2e9][0.01:] \
+	'resistorMerge.dat'  u 2:($4*1e15):($5*1e15) w yerr pt 7 lc 1 tit 'no capacitor',\
+	'capacitorMerge.dat' u 2:($4*1e15):($5*1e15) w yerr pt 5 lc 3 tit 'capacitor installed',\
+	'b0Uncertainty.dat'  u 2:($4*1e15+0.01):($5*1e15) w yerr pt 1 lc -1 tit '20 MOhm operating point'

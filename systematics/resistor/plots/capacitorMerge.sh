@@ -1,10 +1,10 @@
 #!/bin/bash
 
-MERGEFILE=resistorMerge.dat
+MERGEFILE=capacitorMerge.dat
 
 rm $MERGEFILE
 
-for ctr in 3174 3176 3177 3178 3179 3180; 
+for ctr in 3181 3182; 
 do
 	cat longStroke${ctr}.dat >>  $MERGEFILE
 done
