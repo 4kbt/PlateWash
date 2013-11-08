@@ -1,0 +1,37 @@
+run3147FixedParameters
+
+%run#	resist	bypassCap
+resistorRuns = [\
+3167
+];
+
+for resistorCtr = 1:rows(resistorRuns)
+	runString = num2str(resistorRuns(resistorCtr,1));
+
+
+	load(strcat( HOMEDIR , ['runAnalysis/alwaysUnblindedResults/run' runString 'pM3FilterOnly.dat']));
+
+	TorDiff = uncertaintyOverTime( pM(:,torqueCol), pM(:, torerrCol));
+
+	%Output...
+
+	l0Diff = TorDiff(end,:);
+
+	%Approach borrowed from compareTwoSquareWavesBlind.m
+	aDev = l0Diff(2) * sqrt(rows(pM));
+
+	aBins = (min(pM(:,torqueCol)):aDev:max(pM(:,torqueCol)));
+
+	[aH aX] = hist(pM(:,torqueCol), aBins);
+
+
+	filePath = ['extracted/'];
+
+	printSigError( l0Diff(1), l0Diff(2) , [filePath 'longStrokeL0Diff' runString '.tex']);
+
+	save (['plots/longStroke' runString '.dat'],"outData");
+
+	olHist = [aBins' aH'];
+
+	save (['plots/longStrokeoHHist' runString '.dat'], "olHist");
+end
