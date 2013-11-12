@@ -3680,11 +3680,19 @@ Frequency
 \end_layout
 
 \begin_layout Standard
-Each PlateWash measurement operates in a frequency regime spanning 100 
+Each PlateWash measurement operates in a frequency regime spanning 100
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset Formula $\mu$
 \end_inset
 
-Hz to 1 Hz.
+Hz to 1
+\begin_inset space ~
+\end_inset
+
+Hz.
  This section describes the way in which important experimental frequencies
  were selected.
 \end_layout
@@ -3695,8 +3703,119 @@ Spectral Character of Noise
 
 \begin_layout Standard
 A torsion balance is an excellent harmonic oscillator.
- For quality torsion fibers, the anharmonic terms are smaller than XXX (cite
- Bantel).
+ For quality torsion fibers operated at amplitudes much smaller than a radian,
+ the anharmonic terms are negligible
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+In a precise measurement in beryllium-copper at 77K on a 
+\begin_inset Formula $20$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m diameter fiber with 
+\begin_inset Formula $\kappa\sim10^{-7}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+N-m/rad, with a parametrization of 
+\begin_inset Formula $\kappa(\theta)=\kappa_{1}+\kappa_{2}\theta+\kappa_{3}\theta^{2}$
+\end_inset
+
+, Bantel and Newman found 
+\begin_inset Formula $\kappa_{2}/\kappa<4\times10^{-7}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+rad
+\begin_inset Formula $^{-1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\kappa_{3}/\kappa<5\times10^{-8}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+rad
+\begin_inset Formula $^{-2}$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "bantel2000high"
+
+\end_inset
+
+.
+ For this experiment, with 
+\begin_inset Formula $\kappa\sim10^{-8}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+N-m/rad, maximum angles of < 1 mrad, and a torque goal of 
+\begin_inset Formula $10^{-16}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+N-m, a 
+\begin_inset Formula $\kappa_{2}/\kappa$
+\end_inset
+
+ ratio as large as 
+\begin_inset Formula $10^{-2}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+rad
+\begin_inset Formula $^{-1}$
+\end_inset
+
+ would yield a sufficiently linear response.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\kappa_{2}\cdot10^{-6}=10^{-16}\rightarrow\kappa_{2}=10^{-10}\rightarrow\kappa_{2}/\kappa=10^{-2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+.
  The torque to angle transfer function of a torsion oscillator with resonant
  angular frequency 
 \begin_inset Formula $\omega_{0}$
@@ -3785,8 +3904,14 @@ Thermal Noise
 \end_layout
 
 \begin_layout Standard
-The intrinsic noise in a torsion balance is known (XXX) to be consistent
- with thermal noise from 
+The intrinsic noise in a torsion balance is known 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "GonzÃ¡lez199512,1995PhDT........16G"
+
+\end_inset
+
+ to be consistent with thermal noise from 
 \begin_inset Quotes eld
 \end_inset
 
@@ -3874,8 +3999,7 @@ No physical measurement has arbitrary precision, thus we must consider the
 \end_layout
 
 \begin_layout Standard
-At frequencies above the pendulum resonance, the resolvable torque noise
- rises with frequency.
+At frequencies above the pendulum resonance, torque noise rises with frequency.
  
 \end_layout
 
@@ -3984,7 +4108,7 @@ non-Gaussian
  computer crashes, etc.
  all happen.
  They are often short in duration, but overwhelming in amplitude.
- Measurements taken at these tims are unusable.
+ Measurements taken at these times are unusable.
  They are rare-enough that most experiments never incorporate them into
  their noise budget.
  LIGO, the gravitational wave interferometer, is a rare exception; some
@@ -3997,8 +4121,14 @@ glitch
 \end_inset
 
 -hunting.
- In PlateWash, it will be shown in XXX(ref) that for any large transient,
- measurements for at least 
+ In PlateWash, it will be shown in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Filtering"
+
+\end_inset
+
+ that for any large transient, measurements for at least 
 \begin_inset Formula $10t=2560\mbox{\,\ s}=0.7\mbox{\,\ hr}$
 \end_inset
 
@@ -7654,6 +7784,7 @@ Long-stroke Magnetic Tests
 \end_layout
 
 \begin_layout Standard
+Long stroke red on left: 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../systematics/magnetic/extracted/longStrokeL0Diff.tex"
@@ -7664,6 +7795,7 @@ filename "../systematics/magnetic/extracted/longStrokeL0Diff.tex"
 \end_layout
 
 \begin_layout Standard
+Short stroke red on left: 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../systematics/magnetic/extracted/shortStrokeL0Diff.tex"
@@ -7674,6 +7806,7 @@ filename "../systematics/magnetic/extracted/shortStrokeL0Diff.tex"
 \end_layout
 
 \begin_layout Standard
+Short stroke left-right difference: 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../systematics/magnetic/extracted/shortStrokeLRDiff.tex"
@@ -7684,6 +7817,7 @@ filename "../systematics/magnetic/extracted/shortStrokeLRDiff.tex"
 \end_layout
 
 \begin_layout Standard
+Short stroke red on right: 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../systematics/magnetic/extracted/shortStrokeR0Diff.tex"
@@ -7830,6 +7964,29 @@ Interferometer spot-heating
 
 \begin_layout Subsection
 Electrical Crosstalk
+\end_layout
+
+\begin_layout Standard
+The experiment was operated with the pneumatic drive valved-off on the experimen
+t-side of the pressure gauge.
+ Electrically, the experiment proceeded 
+\emph on
+exactly
+\emph default
+ as if the true experiment were underway, but the attractor did not move.
+ After XXX seconds of data, the torque difference over a long stroke was
+ 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../systematics/electrical/extracted/longStrokeL0Diff3167.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+N-m.
 \end_layout
 
 \begin_layout Section
