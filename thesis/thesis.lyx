@@ -3907,7 +3907,7 @@ Thermal Noise
 The intrinsic noise in a torsion balance is known 
 \begin_inset CommandInset citation
 LatexCommand citet
-key "GonzÃ¡lez199512,1995PhDT........16G"
+key "GonzÃ¡lez199512,1995PhDT........16G,saulson1990thermal"
 
 \end_inset
 
@@ -3937,7 +3937,7 @@ internal damping
 \end_inset
 
  the pendulum twist angle.
- This is in contrast to the more familiar external damping, where 
+ This is in contrast to more-familiar external damping, where 
 \begin_inset Formula $I\ddot{\theta}=-\kappa\theta-\frac{\sqrt{\kappa I}}{Q}\dot{\theta}$
 \end_inset
 
@@ -3979,14 +3979,15 @@ Readout Noise
 \end_layout
 
 \begin_layout Standard
-No physical measurement has arbitrary precision, thus we must consider the
- effects of finite-precision angle readout on our ability to measure torques.
+No physical measurement has arbitrary precision; we must consider the effects
+ of finite-precision angle readout on our ability to measure torque.
  For simplicity, let our minimum resolvable angle at all frequencies be
  
 \begin_inset Formula $\delta\theta$
 \end_inset
 
- (this is a practical approximation, see XXX).
+ (this is a practical approximation, see XXX (ref autocollimator noise)
+ ).
  Our minimum resolvable torque signal at any given frequency is 
 \begin_inset Formula 
 \[
@@ -4020,7 +4021,7 @@ reference "sub:Statistical-Uncertainty"
 ent noise.
  Some of this noise is time-dependent, correlated with wind, human activity,
  and worldwide seismic activity.
- 
+ (XXX needs expansion (how to do it?))
 \end_layout
 
 \begin_layout Subsubsection
@@ -4036,6 +4037,10 @@ name "sub:Experimentally-determined-noise"
 
 \begin_layout Standard
 Emphasize here where the optimal noise is.
+\end_layout
+
+\begin_layout Standard
+XXX Insert raw noise plot (take from stationary run).
 \end_layout
 
 \begin_layout Subsection
@@ -4758,7 +4763,7 @@ s is an integer (320) multiple of the 0.8
 \begin_inset space ~
 \end_inset
 
-s sample time, making each attractor period an integer number of samples.
+s XXX sample time, making each attractor period an integer number of samples.
  This choice improves the performance of discrete Fourier analysis and minimizes
  beating between signal and sample frequencies.
 \end_layout
@@ -4775,8 +4780,8 @@ As the pendulum is locked in feedback, there are multiple data channels
  The pendulum twist angle and the P (proportional) term of the loop are
  necessarily equivalent.
  In practice, the twist signal and P term were anti-aliased differently.
- The P term had an XXX s filter applied, making it the signal of choice
- for a twist measurement.
+ The P term had an (XXX 3, just recheck) s filter applied, making it the
+ signal of choice for a twist measurement.
  The loop was operated with zero I-term, so the I channel contains no signal.
  The D (derivative) term responds like 
 \begin_inset Formula $\omega$
@@ -4796,8 +4801,15 @@ So, there are two reasonable science channels: the feedback signal applied
  At frequencies above resonance, the frequency-independent angle noise of
  the autocollimator appears, in the feedback signal, as torque noise that
  rises like frequency squared.
- As shown in XXX, the higher harmonics of the attractor motion contain no
- interesting signal, so it is in our interest to low-pass them away.
+ As shown in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Fourier Harmonics"
+
+\end_inset
+
+, the higher harmonics of the attractor motion contain no interesting signal,
+ so it is in our interest to low-pass them away.
  
 \end_layout
 
