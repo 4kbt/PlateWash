@@ -7,6 +7,9 @@ MASSES=jan13Attractor.m jan13Pendulum.m
 brick : 
 	$(OCT) brickDemo.m
 
+truck :
+	$(OCT) --persist tiltmeterTruck.m 
+
 washCycleBrick:
 	$(OCT) washCycleDemo.m
 
@@ -15,6 +18,9 @@ tiltmeterQTester:
 
 spinCalibration:
 	$(OCT) spinPendulumDemo.m
+
+face:
+	$(OCT) faceDemo.m
 
 # Non-infinite torque
 simulation : 
