@@ -1,6 +1,7 @@
 include Makefile.inc
 
-dissertation: 
+dissertation:
+	ln -s ~/PWData/ data 
 	$(MAKE) -C calibration
 	$(MAKE) -j 3 -C runAnalysis
 	$(MAKE) -j 3 -C systematics 
