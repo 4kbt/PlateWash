@@ -4,7 +4,7 @@ OCT:= octave --no-init-file \
 	--eval "HOMEDIR = \"$(HOMEDIR)\";"\
 	--eval 'initializeOctave;'\
 	-p $(HOMEDIR)/globalConfig/
-GNU := gnuplot
+GNU := gnuplot -e 'set term dumb'
 
 MLIB := $(shell ls -d -1 $(HOMEDIR)/mlib/) 
 
