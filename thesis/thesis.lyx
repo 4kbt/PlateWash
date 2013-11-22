@@ -2313,12 +2313,12 @@ Calibration
 \begin_layout Standard
 In order for the intensity values measured at the photodiode to be meaningful,
  we must develop an intensity-change to displacement conversion.
- As the intensity at the output port necessarily varies sinusoidally with
- foil position, the sensitivity .
+ As the intensity at the output port varies sinusoidally with foil position,
+ the sensitivity of the instrument is spatially-varying.
  With the initial visible-light laser, we attempted to lock the fringe phase
  into the location of maximum sensitivity by varying the laser temperature
  temperature, and hence frequency.
- With the infrared distributed feedback laser, the temperature coefficient
+ With the infrared distributed-feedback laser, the temperature coefficient
  is so small that such an approach cannot work.
  Future versions of the experiment may include positioning feedback for
  the fiber mount in order to maximize sensitivity.
@@ -2326,7 +2326,7 @@ In order for the intensity values measured at the photodiode to be meaningful,
 \end_layout
 
 \begin_layout Standard
-Determining fringe contrast can only be done by displacing the foil.
+Determining fringe contrast can be done by displacing the foil.
  The attractor can be pressed into the foil by lightly over-driving the
  translation stage.
  If valves are manipulated to permit a slow retreat of the attractor (or
@@ -2368,9 +2368,8 @@ A conservative approach
 
 \begin_layout Standard
 As it is challenging to infer anything about foil motion near a fringe turning
- point, we won't.
- We will only consider times when the interferometer was in the middle 71%
- (
+ point, we don't.
+ We only consider times when the interferometer was in the middle 71% (
 \begin_inset Formula $\sin(\pi/4)=\sqrt{2}/2=0.707$
 \end_inset
 
