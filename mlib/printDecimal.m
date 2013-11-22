@@ -35,7 +35,7 @@ function printDecimal(data, filename, precision)
 end
 
 %!test
-%! fn = "printDecimalTest1.txt"; testVal = 0.8
+%! fn = "testOutput/printDecimalTest1.txt"; testVal = 0.8
 %! printDecimal(testVal,fn,1)
 %! d = load(fn);
 %! assert(testVal == d)
@@ -43,7 +43,7 @@ end
 
 %!test
 %! for roundCounter = 1:100
-%! fn = "printDecimalTest2.txt"; testVal = randn*10
+%! fn = "testOutput/printDecimalTest2.txt"; testVal = randn*10
 %! printDecimal(testVal,fn,1)
 %! d = load(fn)
 %! roundVal = sigRound(testVal,1)
@@ -56,7 +56,7 @@ end
 %!test
 %! 'stress-testing printDecimal.m'
 %! for roundCounter = 1:10000
-%! fn = "printDecimalTest3.txt"; testVal = randn*10000;
+%! fn = "testOutput/printDecimalTest3.txt"; testVal = randn*10000;
 %! precision = floor(10*rand)+1;
 %! printDecimal(testVal,fn,precision);
 %! d = load(fn);
