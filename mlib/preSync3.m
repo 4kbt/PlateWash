@@ -1,5 +1,5 @@
-rootDir = '~/goldStandard/';
-subDir = 'data/';
+rootDir = HOMEDIR;
+subDir = '/data/';
 runPrefix = [ ' = fopen("' rootDir subDir 'run']
 
 eval([ 'pwHeaderFile' runPrefix pwrunNumber  'pw.hdr" , "rt")'] ) ;
