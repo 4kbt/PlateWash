@@ -2,15 +2,15 @@ rootDir = HOMEDIR;
 subDir = '/data/';
 runPrefix = [ ' = fopen("' rootDir subDir 'run']
 
-eval([ 'pwHeaderFile' runPrefix pwrunNumber  'pw.hdr" , "rt")'] ) ;
+eval([ 'pwHeaderFile' runPrefix pwrunNumber  'pw.hdr" , "rt");'] ) ;
 pwLoadHdr;
-eval([    'pwDatFile' runPrefix pwrunNumber  'pw.dta" , "r", "ieee-le")'] ) ;
+eval([    'pwDatFile' runPrefix pwrunNumber  'pw.dta" , "r", "ieee-le");'] ) ;
 pwLoadBin;
-eval([ 'psHeaderFile' runPrefix psrunNumber  'ps.hdr" , "rt")'] ) ;
+eval([ 'psHeaderFile' runPrefix psrunNumber  'ps.hdr" , "rt");'] ) ;
 psLoadHdr;
-eval([    'psDatFile' runPrefix psrunNumber  'ps.dta" , "r", "ieee-le")'] ) ;
+eval([    'psDatFile' runPrefix psrunNumber  'ps.dta" , "r", "ieee-le");'] ) ;
 psLoadBin;
-eval(['ifoHeaderFile' runPrefix iforunNumber 'ifo.dat", "rt")'] ) ;
+eval(['ifoHeaderFile' runPrefix iforunNumber 'ifo.dat", "rt");'] ) ;
 ifoLoadData;
 
 
