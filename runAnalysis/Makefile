@@ -25,7 +25,7 @@ throwaway1 := $(shell $(HOMEDIR)/bin/genTargets.sh $(RUNSTOBEANALYZED) $(RUNLIST
 throwaway2 := $(shell $(HOMEDIR)/bin/makeMake.sh $(RUNLIST) $(SUBMAKE) $(DEPFILE) Filter.dat analyzeRun.m ANALYSISDEPS results/run)
 
 #include all the actual targets
-include subMake.inc
+include $(SUBMAKE) 
 
 #this variable contains the name of every analysis file to be built.
 DEPLIST = $(shell cat $(DEPFILE))
