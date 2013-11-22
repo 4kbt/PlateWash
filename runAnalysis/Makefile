@@ -14,7 +14,7 @@ ANALYSISDEPS := analyzeRun.m ../calibration/ ../mlib/ ../globalConfig
 #Begin STRANGE section
 #This section exists to parallelize the run analysis directly. Its job is to analyze all of the 
 
-RUNSTOBEANALYZED := runsToBeAnalyzed.dat
+RUNSTOBEANALYZED := runsToBeAnalyzed.cfg
 RUNLIST := RunList.dat
 SUBMAKE := subMake.inc
 DEPFILE := depList.txt
