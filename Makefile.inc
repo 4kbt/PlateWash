@@ -1,9 +1,11 @@
-HOMEDIR := ~/goldStandard/
+HOMEDIR := ~/trialEotwash/Eotwash/
 
 OCT:= octave --no-init-file \
 	--eval "HOMEDIR = \"$(HOMEDIR)\";"\
 	--eval 'initializeOctave;'\
-	-p $(HOMEDIR)/globalConfig/
+	-p $(HOMEDIR)/globalConfig/ \
+	-q 
+
 GNU := gnuplot -e 'set term dumb'
 
 MLIB := $(shell ls -d -1 $(HOMEDIR)/mlib/) 
