@@ -2,7 +2,6 @@
 
 pause = 0;
 more off; 
-path
 
 clear -x nameCtr pause HOMEDIR
 try
