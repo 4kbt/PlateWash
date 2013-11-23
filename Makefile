@@ -1,7 +1,7 @@
 include Makefile.inc
 
 dissertation: 
-	$(if ls data, ,$(shell ln -s ~/PWData/ data))
+	$(if $(shell ls data), ,$(shell ln -s ~/PWData/ data))
 	$(MAKE) -j 3 -C mlib
 	$(MAKE) -C calibration
 	$(MAKE) -j 3 -C runAnalysis
