@@ -1,7 +1,10 @@
 include ../Makefile.inc
 
 AGGREGATE := testOutput/aggregate.test
-testEverything $(AGGREGATE): $(shell ls *.m | sed 's/\.m/\.test/')
+
+all : $(AGGREGATE)
+
+$(AGGREGATE): $(shell ls *.m | sed 's/\.m/\.test/')
 	-rm testOutput/aggregate.test
 	#The below is a dangerous, but apparently functional, usage of the minus-sign operator.
 	-grep failed testOutput/* > $(AGGREGATE)
