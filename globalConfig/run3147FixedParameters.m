@@ -65,7 +65,7 @@ torqueCol   = 16;
 ifoDataCol  = 2;
 
 fprintf('# filtering ');
-Nfilt = 2560*3/0.8
+Nfilt = 2560*3/TheoSampleTime;
 Ncut = floor(Nfilt*1.5);
 
 
@@ -86,12 +86,15 @@ touch2937 =  147 -2 + pfTouch
 
 
 aCol = 105
-bCol = 170
+bCol = 170;
 torCol = torqueCol;
 torerrCol = 6*65+torCol;
 
 torErrThresh = 1e-14;
 torErrMin    = 1e-18;
 
-fprintf('# read Complete \n')
+%fprintf('# read Complete \n')
 
+'INSUFFICENT bootstrap counts'
+NumberOfYukawaBootstraps = 100;
+NumberofArbFitBootstraps = NumberOfYukawaBootstraps;
