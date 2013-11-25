@@ -1,2 +1,4 @@
 include ../../../Makefile.inc
 
+all:
+
