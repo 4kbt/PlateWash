@@ -97,4 +97,4 @@ torErrMin    = 1e-18;
 
 'INSUFFICENT bootstrap counts'
 NumberOfYukawaBootstraps = 100; %was 1000
-NumberofArbFitBootstraps = NumberOfYukawaBootstraps; % was 300
+NumberOfArbFitBootstraps = NumberOfYukawaBootstraps; % was 300
