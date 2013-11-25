@@ -96,5 +96,5 @@ torErrMin    = 1e-18;
 %fprintf('# read Complete \n')
 
 'INSUFFICENT bootstrap counts'
-NumberOfYukawaBootstraps = 100;
-NumberofArbFitBootstraps = NumberOfYukawaBootstraps;
+NumberOfYukawaBootstraps = 100; %was 1000
+NumberofArbFitBootstraps = NumberOfYukawaBootstraps; % was 300
