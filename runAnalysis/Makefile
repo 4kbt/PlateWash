@@ -1,10 +1,5 @@
 include ../Makefile.inc
 
-FILTRESULTS := $(shell ls -d -1 results/*Filter.dat )
-ONLYRESULTS := $(shell ls -d -1 results/*FilterOnly.dat )
-
-RAWRESULTS := $(FILTRESULTS) $(ONLYRESULTS)
-
 all: results/run3147pM3FilterMerge.dat
 	$(MAKE) -C supportingPlots
 
