@@ -3840,7 +3840,7 @@ status open
  is
 \begin_inset Formula 
 \[
-\left|\frac{\theta(\omega)}{\tau(\omega)}\right|=\frac{1/\kappa}{\sqrt{(1-\omega^{2}/\omega_{0}^{2})^{2}+1/Q^{2}}};\Rightarrow\mbox{If }\omega\gg\omega_{0},\,\left|\frac{\theta(\omega)}{\tau(\omega)}\right|\rightarrow\frac{1}{I\omega^{2})}
+T(\omega)=\left|\frac{\theta(\omega)}{\tau(\omega)}\right|=\frac{1/\kappa}{\sqrt{(1-\omega^{2}/\omega_{0}^{2})^{2}+1/Q^{2}}};\Rightarrow\mbox{If }\omega\gg\omega_{0},\,\left|\frac{\theta(\omega)}{\tau(\omega)}\right|\rightarrow\frac{1}{I\omega^{2}}
 \]
 
 \end_inset
@@ -3985,13 +3985,11 @@ Readout Noise
 \begin_layout Standard
 No physical measurement has arbitrary precision; we must consider the effects
  of finite-precision angle readout on our ability to measure torque.
- For simplicity, let our minimum resolvable angle at all frequencies be
- 
+ For simplicity, let our angle noise at all frequencies be 
 \begin_inset Formula $\delta\theta$
 \end_inset
 
- (this is a practical approximation, see XXX (ref autocollimator noise)
- ).
+ (a practical approximation, see XXX (ref autocollimator noise) ).
  Our minimum resolvable torque signal at any given frequency is 
 \begin_inset Formula 
 \[
@@ -4155,8 +4153,8 @@ A second benefit to small
 \begin_inset Formula $t$
 \end_inset
 
- is improved statistics.
- This measurement relies on Monte Carlo-like measurement schemes (random
+ is the increased number of independent measurements.
+ This experiment relies on Monte Carlo-like measurement schemes (random
  attractor locations) to understand systematic uncertainties and better
  constrain possible violations of the ISL.
  Faster individual measurements allow faster exploration of parameter space
@@ -4171,6 +4169,7 @@ A second benefit to small
 ).
  Measurements that are twice as fast allow twice as many questions to be
  answered.
+ At equal noise levels, there is no penalty for this approach.
  Faster is better, much more than 
 \begin_inset Formula $\sqrt{\mbox{better}}$
 \end_inset
