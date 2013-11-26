@@ -150,6 +150,11 @@ This experiment is complimentary to our group's world-leading short-range
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
 
 \end_layout
 
