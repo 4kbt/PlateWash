@@ -4,9 +4,8 @@ all: results/run3147pM3FilterMerge.dat
 	$(MAKE) -C supportingPlots
 
 
-ANALYSISDEPS := analyzeRun.m ../calibration/ ../mlib/ ../globalConfig
+ANALYSISDEPS := analyzeRun.m ../calibration/ $(MLIB) $(RUNS) $(DATA) $(GLOBAL)
 
-#Begin STRANGE section
 #This section exists to parallelize the run analysis directly. Its job is to analyze all of the 
 
 RUNSTOBEANALYZED := runsToBeAnalyzed.cfg
@@ -29,7 +28,7 @@ DEPLIST = $(shell cat $(DEPFILE))
 listRuns : 
 	echo $(DEPLIST)
 
-#end STRANGE section
+#end parallelization section. 
 
 
 results/run3147pM3FilterMerge.dat : $(DEPLIST) run3147pLDAFiltermerge.sh $(HOMEDIR)/bin/makeMake.sh
