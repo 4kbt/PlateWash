@@ -12,11 +12,12 @@ RUNSTOBEANALYZED := runsToBeAnalyzed.cfg
 RUNLIST := RunList.dat
 SUBMAKE := subMake.inc
 DEPFILE := depList.txt
+SUFFIX  := Filter.dat
 
 #Throwaway variables to make external shell commands prior to parsing the subMake.inc file
 throwaway1 := $(shell $(HOMEDIR)/bin/genTargets.sh $(RUNSTOBEANALYZED) $(RUNLIST) )
 #No dollar-sign on analysisdeps for a reason, see script
-throwaway2 := $(shell $(HOMEDIR)/bin/makeMake.sh $(RUNLIST) $(SUBMAKE) $(DEPFILE) Filter.dat analyzeRun.m ANALYSISDEPS results/run)
+throwaway2 := $(shell $(HOMEDIR)/bin/makeMake.sh $(RUNLIST) $(SUBMAKE) $(DEPFILE) $(SUFFIX) analyzeRun.m ANALYSISDEPS results/run)
 
 #include all the actual targets
 include $(SUBMAKE) 
