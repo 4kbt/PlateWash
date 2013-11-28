@@ -193,7 +193,14 @@ The Standard Model is a triumph.
  The exceptions are, therefore, very important.
  The Standard Model has one major remaining prediction - the existence of
  the so-called Higgs boson, a lynchpin for the theory, which may have been
- discovered at the LHC in 2012 XXX.
+ discovered at the LHC in 2012 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Aad20121,Chatrchyan201230"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -272,7 +279,24 @@ Dark Matter: Beginning with the study of galactic rotation curves, a compelling
 Furthermore, the angular power spectra of the cosmic microwave background,
  along with detailed studies of nucleosynthesis, are highly compatible with
  cosmology theory that includes dark energy and cold dark matter and are
- essentially incompatible with theories that do not (XXX WMAP).
+ essentially incompatible with theories that do not 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Ade:2013ktc,Ade:2013zuv"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXX nucleosynthesis
+\end_layout
+
+\end_inset
+
+.
  These measurements suggest a dark energy density of 4 keV/cm
 \begin_inset Formula $^{3}$
 \end_inset
@@ -296,7 +320,7 @@ The inverse square law
 \end_layout
 
 \begin_layout Standard
-Newton proposed the gravitational inverse square law in 16XX in order to
+Newton proposed the gravitational inverse square law in 16XXX in order to
  explain the motions of celestial bodies.
  He suggested that the gravitational force between two objects is always
  attractive, is proportional to the mass of each object, and inversely proportio
@@ -341,7 +365,14 @@ key "adelberger2003tests"
 
 .
  Current tests of the inverse square law are underway at the University
- of Washington XXX (Ted's thesis), Huazhong University
+ of Washington 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Cook2013"
+
+\end_inset
+
+, Huazhong University
 \begin_inset CommandInset citation
 LatexCommand citep
 key "2007PhRvL..98t1101T,PhysRevLett.108.081101"
@@ -733,9 +764,15 @@ Fat Graviton
 \end_layout
 
 \begin_layout Standard
-Raman Sundrum showed in XXX that the Cosmological Constant problem could
- be resolved if gravity were to become significantly weaker at scales below
- 100 
+Raman Sundrum showed in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "PhysRevD.69.044014"
+
+\end_inset
+
+ that the Cosmological Constant problem could be resolved if gravity were
+ to become significantly weaker at scales below 100 
 \begin_inset Formula $\mu$
 \end_inset
 
@@ -750,8 +787,14 @@ fat graviton
 
  modification of gravity is remarkable because he predicts that it must
  occur at scales greater than 20 microns.
- Experimental attempts to constrain the interaction [XXX] have adopted the
- functional form 
+ Experimental attempts to constrain the interaction 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "2007PhRvL..98m1104A"
+
+\end_inset
+
+ have adopted the functional form 
 \begin_inset Formula $F_{12}(r)=-G\frac{m_{1}m_{2}}{r^{2}}[1-e^{-(0.914\frac{r}{l_{g}})^{3}}]$
 \end_inset
 
@@ -764,12 +807,19 @@ fat graviton
 \begin_inset Formula $20\mbox{\mu m}\lesssim l_{g}\leq95\mbox{\mu m}$
 \end_inset
 
-, by naturalness and Kapner 
+, by naturalness and Adelberger 
 \emph on
 et al.
  
 \emph default
-[XXX] respectively.
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "2007PhRvL..98m1104A"
+
+\end_inset
+
+ respectively.
 \end_layout
 
 \begin_layout Subsection
@@ -951,7 +1001,7 @@ Initially inspired by the suggestions of large extra dimensions, the Eot-Wash
 \end_inset
 
  of 
-\begin_inset Formula $\lambda=200\,\mu$
+\begin_inset Formula $\lambda=218\,\mu$
 \end_inset
 
 m 
@@ -962,7 +1012,7 @@ key "2001PhRvL..86.1418H"
 \end_inset
 
  (2001), 
-\begin_inset Formula $\lambda=XXX$
+\begin_inset Formula $\lambda=197$
 \end_inset
 
  
@@ -984,7 +1034,7 @@ key "2007PhRvL..98b1101K"
 \end_inset
 
  (2007), and 
-\begin_inset Formula $\lambda=40$
+\begin_inset Formula $\lambda=42$
 \end_inset
 
 
@@ -995,7 +1045,14 @@ key "2007PhRvL..98b1101K"
 \begin_inset Formula $\mu$
 \end_inset
 
-m (2013).
+m 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Cook2013"
+
+\end_inset
+
+(2013).
  In parallel, a 1kHz tungsten oscillator experiment at the University of
  Colorado achieved their maximum sensitivity at 
 \begin_inset Formula $\alpha=\sim5$
@@ -1022,7 +1079,7 @@ key "2003Natur.421..922L"
 
  (2003).
  An atomic force microscope-inspired series of experiments at Stanford have
- provided the tightest constraints to date on gravity at scales below XXX
+ provided the tightest constraints to date on gravity at scales below 10
  
 \begin_inset Formula $\mu$
 \end_inset
@@ -1034,7 +1091,14 @@ key "2005PhRvD..72l2001S"
 
 \end_inset
 
- and 2008 [XXX].
+ and 2008 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "weld2008new"
+
+\end_inset
+
+.
  Most recently, there has been a new experiment from Huazhong University
  using a vertical torsion balance geometry that set an 
 \begin_inset Formula $\alpha=1$
@@ -1044,8 +1108,27 @@ key "2005PhRvD..72l2001S"
 \begin_inset Formula $\lambda=76\,\mu$
 \end_inset
 
-m [XXX].
- XXX Krishna's measurement.
+m 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "2007PhRvL..98t1101T"
+
+\end_inset
+
+.
+ A cryogenic experiment at the University of Maryland with a superconducting
+ isolating shield has reached scales of 
+\begin_inset Formula $\lambda\sim120\,\mu$
+\end_inset
+
+m 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Venkateswara2010"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -1568,7 +1651,7 @@ mm, height
 \end_inset
 
  mm.
- The Pt (density XXX) inlays were 
+ The Ta (density XXX) inlays were 
 \begin_inset Formula $203\,\mu$
 \end_inset
 
@@ -1780,9 +1863,16 @@ m over its width.
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "Autocollimator Photo"
+
+\end_inset
+
+
 \begin_inset Caption
 
 \begin_layout Plain Layout
@@ -1807,9 +1897,15 @@ Autocollimator
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "Autocollimator Diagram"
+
+\end_inset
+
 
 \end_layout
 
@@ -1817,7 +1913,7 @@ status collapsed
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Autocollimator diagram
+Autocollimator optical diagram
 \end_layout
 
 \end_inset
@@ -1835,19 +1931,71 @@ Autocollimator diagram
 \end_layout
 
 \begin_layout Standard
-The twist angle of the pendulum was measured by an in-vacuum laser autocollimato
-r (XXX - it's not a true autocollimator...) with a 400 mm focal length.
- Light from a 780 nm (XXX) laser diode was directed through a spatial filter,
- collimated, and directed at the pendulum.
- Light reflected from the pendulum passed back through the collimating lens
- and was focused, via a beamsplitter, onto two position sensitive photodiodes.
- One of these detectors (UDT XXX) had a 1 cm (12 mrad) wide dynamic range
- in both tip and twist, while the other, a simple bicell detector (model?
- XXX), afforded a sensitivity of XXX angle/rtHz over a much smaller (
-\begin_inset Formula $\mu$
+The twist angle of the pendulum was measured by an in-vacuum laser pseudo-autoco
+llimator with a 400 mm focal length, depicted in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Autocollimator Photo"
+
 \end_inset
 
-rad? XXX) range along the twist axis.
+ and diagrammed in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Autocollimator Diagram"
+
+\end_inset
+
+.
+ Light from a 780 nm (XXX) laser diode was directed through a pinhole, collimate
+d, and directed at the pendulum.
+ Light reflected from the pendulum passed back through the collimating lens
+ and was focused, via a beamsplitter, onto a position sensitive photodiode.
+ The detector (UDT SC-10D 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXX (confirm on apparatus)
+\end_layout
+
+\end_inset
+
+) had a 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/detectorWidthMillimeters.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+mm (
+\begin_inset CommandInset include
+LatexCommand input
+filename "/home/charlie/trialEotwash/Eotwash/extracted/autocollDynamicRangePeak2PeakmRad.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+mrad) dynamic range in both tip and twist.
+ The autocollimator noise gave a sensitivity of XXX rad/
+\begin_inset Formula $\sqrt{\mbox{Hz}}$
+\end_inset
+
+, plotted in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Autocollimator noise"
+
+\end_inset
+
+.
  The detectors were read out by in-vacuum transimpedance amplifiers and
  the difference observable computed in software.
  XXX Diff/Sum, lockin.
@@ -1857,11 +2005,45 @@ rad? XXX) range along the twist axis.
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
 \end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "Autocollimator noise"
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Autocollimator noise
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption
@@ -1925,7 +2107,17 @@ The attractor's flexure stage was electric-discharge machined from a single
  modulated reed valve/vented accumulator apparatus external to the vacuum
  enclosure.
  The motion of the stage was monitored by a Micro-E 3000V XXX encoder system
- with an interpolated resolution of XXX nm.
+ with a claimed interpolated resolution of 20 nm 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXX check settings
+\end_layout
+
+\end_inset
+
+.
  The position of the system was controlled in a software PID feedback loop
  on the data acquisition computer.
 \end_layout
@@ -1973,17 +2165,44 @@ The pendulum support, autocollimator, foil, attractor stage, and feedback
  apparatus, the ion vacuum gauge was left off from pumpdown until the entire
  measurement was complete.
  After systematic checks were complete, the ion gauge was turned on, and
- the pressure was observed to be XXX
+ the pressure was observed to be 
+\begin_inset Formula $2.2\times10^{-7}$
+\end_inset
+
+
 \begin_inset space ~
 \end_inset
 
-Torr.
+Torr
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+See photo in ~/platewash/photos
+\end_layout
+
+\end_inset
+
+.
  Past experience with the jar has shown that pressures of XXX
 \begin_inset space ~
 \end_inset
 
-Torr are reliably obtained by XXX days after pumpdown.
- Science measurements began XXX days after pumpdown.
+Torr are reliably obtained by XXX days after pumpdown from atmosphere, and
+ pressure of XXX Torr are obtained after XXX hours when pumping down from
+ roughing pressures.
+ Science measurements began XXX hours after pumpdown from roughing pressures
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Power outage 3/13, Run3146 pw begins begins 3/13.!
+\end_layout
+
+\end_inset
+
+ following a power outage, and >2 months under vacuum (XXX check runtitles).
 \end_layout
 
 \begin_layout Subsection
@@ -2119,9 +2338,11 @@ The foil interferometer is a Fizeau XXX (cite) interferometer.
  By adjusting the fiber-foil distance, it is possible to tune the internally
  and externally-reflected light to have comparable intensity, maximizing
  the interference contrast.
- In PlateWash, the operating point is ~XXX
-\backslash
-pmXXX from the foil (can get it from the crash plot).
+ In PlateWash, the operating point is 
+\begin_inset Formula $\sim XXX\pm XXX$
+\end_inset
+
+ from the foil (can get it from the crash plot).
  
 \end_layout
 
@@ -2141,10 +2362,6 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Caption
 
 \begin_layout Plain Layout
@@ -2155,10 +2372,6 @@ Foil interferometer signal as a function of attractor pressure (top axis)
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -2654,8 +2867,15 @@ Contact potential noise
 \end_layout
 
 \begin_layout Standard
-Electrical connections generally form small galvanic batteries.
- Numerous connections in series between, for example, the pendulum and foil
+Electrical connections generally form small galvanic batteries
+\begin_inset CommandInset citation
+LatexCommand citet
+key "lamoreaux1997demonstration"
+
+\end_inset
+
+.
+ Numerous connections in series between, for example, the pendulum and foil,
  give rise to a small (
 \begin_inset Formula $<1$
 \end_inset
@@ -2690,8 +2910,15 @@ The opto-electronic system used to measure pendulum twist has its own inherent
  noise.
  By design, the autocollimator's relatively white noise floor is chosen
  to sit below the low-frequency thermally-driven angle noise of XXX.
- The PlateWash autocollimator's noise floor is approximately XXX.
- XXX Fig.
+ The PlateWash autocollimator's noise floor is approximately XXX, as seen
+ in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Autocollimator noise"
+
+\end_inset
+
+.
  Because of the pendulum's 
 \begin_inset Formula $1/f^{2}$
 \end_inset
@@ -2792,8 +3019,8 @@ Gravity gradients
 \end_layout
 
 \begin_layout Standard
-The majority of Eot-Wash XXX(umlaut) pendulums are designed to have vanishing
- low-order gravitational moments.
+The majority of Eöt-Wash pendulums are designed to have vanishing low-order
+ gravitational moments.
  PlateWash, on the other hand, has a sizeable 
 \begin_inset Formula $q_{22}$
 \end_inset
@@ -2896,6 +3123,37 @@ analog conversion noise can couple to the pendulum.
  These effects may be assessed by comparing the pendulum noise with and
  without the feedback electrodes grounded.
  XXX figure.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Free pendulum noise with and without grounded feedback electrodes
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -4762,11 +5020,18 @@ s.
 \begin_inset space ~
 \end_inset
 
-s is an integer (320) multiple of the 0.8
+s is an integer (320) multiple of the 
+\begin_inset CommandInset include
+LatexCommand input
+filename "/home/charlie/trialEotwash/Eotwash/extracted/TheoSampleTime.tex"
+
+\end_inset
+
+
 \begin_inset space ~
 \end_inset
 
-s XXX sample time, making each attractor period an integer number of samples.
+s sample time, making each attractor period an integer number of samples.
  This choice improves the performance of discrete Fourier analysis and minimizes
  beating between signal and sample frequencies.
 \end_layout
@@ -4849,7 +5114,7 @@ This section describes the way in which XXX seconds of raw data are converted
 \begin_inset Formula $\sim1350$
 \end_inset
 
- 'cuts' for further analysis.
+ XXX 'cuts' for further analysis.
  
 \end_layout
 
