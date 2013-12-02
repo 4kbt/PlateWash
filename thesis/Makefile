@@ -9,6 +9,7 @@ thesis.pdf : thesis.lyx $(EXTRACTEDDEPS)
 	$(OCT) ../globalConfig/run3147FixedParameters.m
 	$(HOMEDIR)/bin/mathify.sh $(HOMEDIR)/extracted/*
 	$(LYX) thesis.lyx
+	date > buildDate.txt
 
 $(PLOTTARGETS) :
 	$(MAKE) -C plots
