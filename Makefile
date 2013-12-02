@@ -1,7 +1,11 @@
 include Makefile.inc
 
-dissertation: 
-	$(MAKE) -C mlib
+CURRENTDIR = $(shell pwd)
+
+dissertation:
+	$(if $(shell ls data), ,$(shell ln -s ~/PWData/ data))
+	$(shell sed -i  "s|HOMEDIR := .*|HOMEDIR := $(CURRENTDIR)/|" Makefile.inc)
+	$(MAKE) -j 3 -C mlib
 	$(MAKE) -C calibration
 	$(MAKE) -j 3 -C runAnalysis
 	$(MAKE) -j 3 -C systematics 

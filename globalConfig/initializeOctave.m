@@ -7,10 +7,10 @@ HOMEDIR
 warning off Octave:possible-matlab-short-circuit-operator
 
 tpath = [HOMEDIR '/mlib/'];
-addpath(tpath);
+addpath(genpath(tpath));
 
 tpath = [HOMEDIR '/runConfig/'];
-addpath(tpath);
+addpath(genpath(tpath));
 
 tpath = [HOMEDIR '/simulatedData/'];
 addpath(tpath);

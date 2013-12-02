@@ -16,5 +16,5 @@ cat run3163calFitChk.dat >> run3147calFitChkMerge.dat
 cat run3164calFitChk.dat >> run3147calFitChkMerge.dat
 cat run3166calFitChk.dat >> run3147calFitChkMerge.dat
 
-commentStrip.sh   run3147calFitChkMerge.dat
-whiteLineStrip.sh run3147calFitChkMerge.dat
+../bin/commentStrip.sh   run3147calFitChkMerge.dat
+../bin/whiteLineStrip.sh run3147calFitChkMerge.dat

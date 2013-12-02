@@ -6,7 +6,7 @@ pause = 0;
 fitAlgorithm = 'Levenburg';
 
 %Bootstrap loop
-for bootStrapCounter = 1:1000
+for bootStrapCounter = 1:NumberOfYukawaBootstraps
 
 	['yukawa bootstrap counter ' num2str(bootStrapCounter)]
 

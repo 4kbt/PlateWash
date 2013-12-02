@@ -1,31 +1,26 @@
 include ../Makefile.inc
 
-FILTRESULTS := $(shell ls -d -1 results/*Filter.dat )
-ONLYRESULTS := $(shell ls -d -1 results/*FilterOnly.dat )
-
-RAWRESULTS := $(FILTRESULTS) $(ONLYRESULTS)
-
 all: results/run3147pM3FilterMerge.dat
 	$(MAKE) -C supportingPlots
 
 
-ANALYSISDEPS := analyzeRun.m ../calibration/ ../mlib/ ../globalConfig
+ANALYSISDEPS := analyzeRun.m ../calibration/ $(MLIB) $(RUNS) $(DATA) $(GLOBAL)
 
-#Begin STRANGE section
 #This section exists to parallelize the run analysis directly. Its job is to analyze all of the 
 
-RUNSTOBEANALYZED := runsToBeAnalyzed.dat
+RUNSTOBEANALYZED := runsToBeAnalyzed.cfg
 RUNLIST := RunList.dat
 SUBMAKE := subMake.inc
 DEPFILE := depList.txt
+SUFFIX  := Filter.dat
 
 #Throwaway variables to make external shell commands prior to parsing the subMake.inc file
 throwaway1 := $(shell $(HOMEDIR)/bin/genTargets.sh $(RUNSTOBEANALYZED) $(RUNLIST) )
 #No dollar-sign on analysisdeps for a reason, see script
-throwaway2 := $(shell $(HOMEDIR)/bin/makeMake.sh $(RUNLIST) $(SUBMAKE) $(DEPFILE) Filter.dat analyzeRun.m ANALYSISDEPS results/run)
+throwaway2 := $(shell $(HOMEDIR)/bin/makeMake.sh $(RUNLIST) $(SUBMAKE) $(DEPFILE) $(SUFFIX) analyzeRun.m ANALYSISDEPS results/run)
 
 #include all the actual targets
-include subMake.inc
+include $(SUBMAKE) 
 
 #this variable contains the name of every analysis file to be built.
 DEPLIST = $(shell cat $(DEPFILE))
@@ -34,7 +29,7 @@ DEPLIST = $(shell cat $(DEPFILE))
 listRuns : 
 	echo $(DEPLIST)
 
-#end STRANGE section
+#end parallelization section. 
 
 
 results/run3147pM3FilterMerge.dat : $(DEPLIST) run3147pLDAFiltermerge.sh $(HOMEDIR)/bin/makeMake.sh

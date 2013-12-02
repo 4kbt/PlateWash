@@ -14,7 +14,7 @@ fitAlgorithm = 'Levenberg';
 
 
 %Bootstrap loop
-for bootStrapCounter = 1:300
+for bootStrapCounter = 1:NumberOfArbFitBootstraps
 
 	['arbFit bootstrap counter ' num2str(bootStrapCounter)]
 
