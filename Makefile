@@ -4,6 +4,7 @@ CURRENTDIR = $(shell pwd)
 
 dissertation:
 	$(if $(shell ls data), ,$(shell ln -s ~/PWData/ data))
+	$(shell bin/countXXXs.sh thesis/thesis.lyx >> data/xxxCount.dat)
 	$(shell sed -i  "s|HOMEDIR := .*|HOMEDIR := $(CURRENTDIR)/|" Makefile.inc)
 	$(MAKE) -j 3 -C mlib
 	$(MAKE) -C calibration
