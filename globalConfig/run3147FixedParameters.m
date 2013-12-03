@@ -8,10 +8,10 @@ pendulumF0Width = 4e-3;
 pendulumQ=3500;
 pendulumI=2.369e-6;
 kappa=4*pi*pi*pendulumF0*pendulumF0*pendulumI; printSigNumber(kappa,[HOMEDIR 'extracted/kappa.tex'],1);
-psdWidth=1e-2;
+psdWidth=1.016e-2; printDecimal(psdWidth*10.0, [HOMEDIR 'extracted/detectorWidthMillimeters.tex'], 2); %Quoted number from OSI for SC-10.
 focalLength=400e-3;
 
-psdToRadians = psdWidth/focalLength/2.0;
+psdToRadians = psdWidth/focalLength/2.0/2.0; printDecimal(psdToRadians*2.0*1000, [HOMEDIR 'extracted/autocollDynamicRangePeak2PeakmRad.tex'], 2); %2 for detector width, 2 for single-bounce.
 
 %Controls the post-lockin blinding.
 unBlind = 0 ;
