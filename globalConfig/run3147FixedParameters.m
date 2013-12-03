@@ -65,7 +65,7 @@ torqueCol   = 16;
 ifoDataCol  = 2;
 
 fprintf('# filtering ');
-Nfilt = 2560*3/TheoSampleTime;
+Nfilt = 2560*3/TheoSampleTime; printInteger(Nfilt, [HOMEDIR 'extracted/calibCutLength.tex']);
 Ncut = floor(Nfilt*1.5);
 
 

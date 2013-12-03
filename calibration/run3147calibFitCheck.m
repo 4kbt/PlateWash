@@ -1,12 +1,19 @@
-'setup'
+try
+	['Calibration Setup for ' num2str(nameCtr)];
+	eval(['run' num2str(nameCtr) 'sync3']);
 
-run3147FixedParameters
+	run3147FixedParameters
 
-printInteger(Nfilt, [HOMEDIR 'extracted/calibCutLength.tex']); 
+	qLow = qTesterFreq1-qTesterChunkCalibWidth1;
+	qHigh =qTesterFreq1+qTesterChunkCalibWidth1;
 
-qLow = qTesterFreq1-qTesterChunkCalibWidth1;
-qHigh =qTesterFreq1+qTesterChunkCalibWidth1;
+	out = OneTwoOmegaChunkCalibFit( pwData, pwTimeCol, torqueCol, qLow, qHigh, Nfilt);
 
-out = OneTwoOmegaChunkCalibFit( pwData, pwTimeCol, torqueCol, qLow, qHigh, Nfilt);
+	eval(['save "' HOMEDIR '/calibration/run' num2str(nameCtr) 'calFitChk.dat" out']);
 
-'read Complete'
+	['Calibration Complete for run ' num2str(nameCtr)]
+
+catch
+	['error in ' num2str(nameCtr) '!!!!!!!!!!!!!!!!!!!!!!!']
+	lasterr
+end

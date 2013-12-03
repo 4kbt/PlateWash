@@ -1,34 +1,33 @@
 ## Torque Calibration
-
 include ../Makefile.inc
-
-CALFILES := $(shell ls run*calFitChk.dat)
-
-#The following empty assignment is meaningful. 
-NOFILES := 
-
-ifeq ($(CALFILES), $(NOFILES)) 
- CALIBFILES := 'run3147calFitChk.dat'
-else
- CALIBFILES := $(CALFILES)
-endif
 
 everything : all 
 	$(MAKE) -C pressure
 
+#Parallelized make! Woohoo!
+#Inspiration here:
+#http://stackoverflow.com/questions/1490949/how-to-write-loop-in-makefile
+
+NUMBERS := $(shell cat calibRuns.cfg)
+PREF := $(addprefix run,${NUMBERS})
+CALIBFILES :=$(addsuffix calFitChk.dat,${PREF})
+
+#There's a try/catch in calibfitcheck that should be removed. Keeping for continuity.
+${CALIBFILES} : run%calFitChk.dat : calibRuns.cfg run3147calibFitCheck.m
+	$(OCT) --eval "nameCtr=$*" run3147calibFitCheck.m
+
+CALFILES := $(shell ls run*calFitChk.dat)
+
+
 all: run3147calFitChk.eps
 
-
-$(CALIBFILES):run3147calibFitAll.m run3147calibFitCheck.m $(MLIB) $(RUNS) $(DATA)
-	$(OCT) run3147calibFitAll.m
-
-CALIBMERGEFILE=run3147calFitChkMerge.dat
+CALIBMERGEFILE := run3147calFitChkMerge.dat
 
 $(CALIBMERGEFILE): $(CALIBFILES)
 	./run3147calFitChkMerge.sh
 
-CALIBMEANFILE=run3147calFitChkMean.dat run3147calFitChkMergeCut.dat
-CALIBMEANM=run3147calFitChkMean.m
+CALIBMEANFILE :=run3147calFitChkMean.dat run3147calFitChkMergeCut.dat
+CALIBMEANM :=run3147calFitChkMean.m
 
 $(CALIBMEANFILE):$(CALIBMERGEFILE) $(CALIBMEANM)
 	$(OCT) $(CALIBMEANM)

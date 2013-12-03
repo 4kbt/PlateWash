@@ -7,7 +7,7 @@ dissertation: gitlog.log
 	$(shell bin/countXXXs.sh thesis/thesis.lyx >> data/xxxCount.dat)
 	$(shell sed -i  "s|HOMEDIR := .*|HOMEDIR := $(CURRENTDIR)/|" Makefile.inc)
 	$(MAKE) -j 3 -C mlib
-	$(MAKE) -C calibration
+	$(MAKE) -j 3 -C calibration
 	$(MAKE) -j 3 -C runAnalysis
 	$(MAKE) -j 3 -C systematics 
 	$(MAKE) -j 3 -C bootstrap
