@@ -7915,15 +7915,48 @@ Resistor values
 \begin_layout Standard
 To assess the effect of changing the attractor/foil resistance, we tried
  a variety of resistor values.
- The signal at XXX stroke was measured (unblinded) for resistor values of
- XXX, XXX, XXX, XXX, and XXX.
+ The long-stroke signal was measured (blinded by subtracting the long-stroke
+ signal at 20 M
+\begin_inset Formula $\Omega$
+\end_inset
+
+) for resistor values of 
+\begin_inset Formula $10^{9},$
+\end_inset
+
+ 10000, 50, 1, 0.1, and 
+\begin_inset Quotes eld
+\end_inset
+
+0
+\begin_inset Quotes erd
+\end_inset
+
+ ohms
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXAlg: algorithm me!
+\end_layout
+
+\end_inset
+
+.
  The circuit is modelled as an LCR resonator, see XXX.
  When the circuit 
 \begin_inset Formula $Q$
 \end_inset
 
  reaches ~1, a major systematic effect appears.
- This test shows, in Figure XXX, that the specific choice of the 10 M
+ This test shows, in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Resistor Tests"
+
+\end_inset
+
+, that the specific choice of the 10 M
 \begin_inset Formula $\Omega$
 \end_inset
 
@@ -7937,6 +7970,13 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "Resistor Tests"
+
+\end_inset
+
+
 \begin_inset Graphics
 	filename ../systematics/resistor/plots/resistorPlot.eps
 
@@ -7977,7 +8017,7 @@ A large (XXX
 
 cm diameter ) coil with XXX turns of wire was placed near and on the apparatus
  to gauge any change in signal as a function of applied magnetic field.
- A the coil was driven with current of XXX
+ The coil was driven with current of XXX
 \begin_inset space ~
 \end_inset
 
