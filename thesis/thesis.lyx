@@ -3654,7 +3654,14 @@ Thermal currents in materials
 \begin_layout Standard
 Charge carriers in any material at finite temperature are in constant motion.
  These random currents create magnetic fields.
- They have been experimentally observed in several contexts XXX.
+ They have been experimentally observed in several contexts 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "varpula1984magnetic,lee2008calculation"
+
+\end_inset
+
+.
  The interaction of thermally-generated fields may give rise to a false
  signal.
  The thermal fields have low frequency components that will pass through
