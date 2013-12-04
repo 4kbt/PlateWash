@@ -1638,25 +1638,98 @@ Pendulum
 \end_layout
 
 \begin_layout Standard
-Our Ti (density XXX) torsion pendulum had a thickness 
-\begin_inset Formula $t=2$
+Our Ti (
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/titaniumDensity.tex"
+
 \end_inset
 
-mm, height 
-\begin_inset Formula $h=30.8$
+
+\begin_inset space ~
 \end_inset
 
- mm, and width 
-\begin_inset Formula $w_{pend}=43.18$
+kg/m
+\begin_inset Formula $^{3}$
+\end_inset
+
+) torsion pendulum had a thickness 
+\begin_inset Formula $t=$
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/pendulumBodyThickness.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+m, height 
+\begin_inset Formula $h=$
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/pendulumBodyHeight.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+m, and width 
+\begin_inset Formula $w_{pend}=$
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/pendulumBodyWidth.tex"
+
 \end_inset
 
  mm.
- The Ta (density XXX) inlays were 
-\begin_inset Formula $203\,\mu$
+ The Ta (
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/inlayDensity.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+kg/m
+\begin_inset Formula $^{3}$
+\end_inset
+
+) inlays were 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/inlayThickness.tex"
+
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 m thick and 
-\begin_inset Formula $w_{inlay}=XXX$
+\begin_inset Formula $w_{inlay}=$
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/inlayWidth.tex"
+
 \end_inset
 
  wide.

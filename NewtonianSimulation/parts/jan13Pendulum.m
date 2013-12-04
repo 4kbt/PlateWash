@@ -8,7 +8,7 @@ function P = jan13Pendulum
 	pendulumBodyThickness= 0.070*0.0254; printSigNumber(pendulumBodyThickness, [HOMEDIR '/extracted/pendulumBodyThickness.tex' ], 2); %1 part in 10^2 seems coarse?
 	pendulumBodyMass=rhoTi*pendulumBodyHeight*pendulumBodyWidth*pendulumBodyThickness;
 
-	rhoPt=16650; printInteger(rhoPt, [HOMEDIR '/extracted/denseDensity.tex' ]);
+	rhoPt=16650; printInteger(rhoPt, [HOMEDIR '/extracted/inlayDensity.tex' ]);
 	rhoInlay=rhoPt-rhoTi
 	inlayHeight=pendulumBodyHeight
 	inlayThickness=0.010*0.0254 ; printSigNumber(inlayThickness, [HOMEDIR '/extracted/inlayThickness.tex' ], 2); 
