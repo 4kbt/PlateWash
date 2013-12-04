@@ -4,6 +4,8 @@ OCT := $(OCT) -p $(HOMEDIR)/mlib/gravity/ -p parts/
 
 MASSES=jan13Attractor.m jan13Pendulum.m
 
+all: brick simulation
+
 brick : 
 	$(OCT) brickDemo.m
 
@@ -19,3 +21,6 @@ spinCalibration:
 # Non-infinite torque
 simulation : 
 	$(OCT) processRun.m
+
+clean :
+	-rm SimulationOutput/*.dat

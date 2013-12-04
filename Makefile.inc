@@ -1,5 +1,8 @@
 HOMEDIR := /home/charlie/trialEotwash/Eotwash/
 
+#Needs to happen here
+RUNME := $(shell sed -i "s|~/trialEotwash/Eotwash/|$(HOMEDIR)|" $(HOMEDIR)/mlib/HOMEDIR.m)
+
 OCT:= octave --no-init-file \
 	--eval "HOMEDIR = \"$(HOMEDIR)\";"\
 	--eval 'initializeOctave;'\
