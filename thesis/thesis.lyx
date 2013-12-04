@@ -2456,23 +2456,44 @@ The isolating foil is the most important defense against systematic error.
 \end_layout
 
 \begin_layout Standard
-The foil interferometer is a Fizeau XXX (cite) interferometer.
+The foil interferometer is a Fizeau interferometer 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Fizeau1862"
+
+\end_inset
+
+.
  Inspired by the designs and sensitivities of early atomic force microscope
- (AFM) readout systems, the device interferes light from a reference surface
- and a reflecting target surface.
+ (AFM) readout systems
+\begin_inset CommandInset citation
+LatexCommand citet
+key "rugar1988force,rugar1989improved"
+
+\end_inset
+
+, the device interferes light from a reference surface and a reflecting
+ target surface.
  In this case, the reference surface is the end of an optical fiber, and
  the reflecting target surface is the PlateWash isolating foil.
- As shown in Fig XXX, light from a fiber-coupled laser is directed through
- a 90/10 fiber coupler.
+ As shown in Fig XXX, light from a fiber-coupled laser (Q-Photonics QDFBLD-1300-
+10) is directed through a 90/10 fiber coupler (ThorLabs FC1310-70-10-APC).
  The light that travels down the 90% branch is absorbed by an intensity
- monitor diode.
+ monitor photodiode.
  The remaining 10% is coupled into a fiber that goes to the apparatus.
  The end of the fiber is carefully directed and positioned next to the isolating
  foil.
- Approximately 5% (XXX) of the light leaving the fiber is reflected from
- the glass/air interface.
- Due to the divergence of the beam (NA XXX, core diameter XXX), less light
- re-enters the fiber core after reflecting from the foil.
+ Approximately 4% of the light leaving the fiber is reflected from the glass/vac
+uum interface.
+ Due to the divergence of the beam (NA 0.14, mode field diameter 9.2
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m), less light re-enters the fiber core after reflecting from the foil.
  By adjusting the fiber-foil distance, it is possible to tune the internally
  and externally-reflected light to have comparable intensity, maximizing
  the interference contrast.
@@ -2486,10 +2507,10 @@ The foil interferometer is a Fizeau XXX (cite) interferometer.
 
 \begin_layout Standard
 The reflected light returns down the fiber to the 90/10 splitter.
- 90% of the light goes into an XXX (composition (Germanium?)) high sensitivity
- photodiode (ThorLabs XXX).
- The remaining 10% proceeds back to the laser, where XXX % of the light
- is attenuated by a Faraday isolator.
+ 90% of the light goes into an InGaAs high-sensitivity photodiode (ThorLabs
+ PDA10CS).
+ The remaining 10% proceeds back to the laser, where it is blocked by a
+ Faraday isolator.
  
 \end_layout
 
@@ -2628,7 +2649,7 @@ m, numerical aperture (
 \end_inset
 
  into vacuum (refractive index 1) is 
-\begin_inset Formula $R=\frac{1-n}{1+n}$
+\begin_inset Formula $R=\frac{1-n}{1+n}=$
 \end_inset
 
 .
@@ -2787,8 +2808,14 @@ Fiber thermal noise
 \end_layout
 
 \begin_layout Standard
-As Saulson XXX(cite) neatly described, all mechanical oscillators have intrinsic
- thermal noise.
+As Saulson and González neatly described 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "saulson1990thermal,Gonz\\'alez199512,1995PhDT........16G"
+
+\end_inset
+
+, all mechanical oscillators have intrinsic thermal noise.
  Through the fluctuation-dissipation theorem, any lossy oscillator at finite
  temperature drives itself with thermal fluctuations.
  
@@ -2805,8 +2832,8 @@ A torsion balance suspended in sufficiently high vacuum is 'internally damped'.
 \begin_inset Formula $\phi=\frac{1}{Q}$
 \end_inset
 
- (XXX 2s?) is the 'loss angle' of the fiber.
- In torque units, the thermal noise is
+ is the 'loss angle' of the fiber.
+ In torque units, thermal noise is
 \begin_inset Formula 
 \[
 \tau^{2}(f)=4k_{B}T\frac{\kappa}{2\pi fQ}
@@ -2815,10 +2842,6 @@ A torsion balance suspended in sufficiently high vacuum is 'internally damped'.
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-XXX-recheck.FormulaProbablyWrong.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2846,8 +2869,14 @@ proximity-enhanced gas damping
 \begin_inset Quotes erd
 \end_inset
 
- (XXX cite us and aggregation paper), torsion balances in imperfect vacuum
- are damped by the residual atmosphere.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "schlamminger2010indirect,cavalleri2009increased,dolesi2011brownian"
+
+\end_inset
+
+, torsion balances in imperfect vacuum are damped by the residual atmosphere.
  Microscopically, there is only one form of gas damping - collisions between
  gas particles and an oscillator allow momentum and energy exchange.
  Experimentally, when the particle mean free path is larger than the dimensions
@@ -2932,7 +2961,7 @@ Q=XXX.
 \end_layout
 
 \begin_layout Paragraph
-Noiseanti-aliasing
+Noise anti-aliasing
 \end_layout
 
 \begin_layout Standard
