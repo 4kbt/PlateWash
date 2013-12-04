@@ -25,27 +25,29 @@ w1=pendulumBodyWidth; % Pendulum Width
 j1=pendulumBodyWidth/2.0-inlayWidth;%Distance from pendulum center to step.
 a1=inlayThickness; % inset thickness
 thickness1=pendulumBodyThickness;
-ph1=rhoTa;  %Ta
+ph1=rhoTaP;  %Ta
 pl1=rhoTi; %Ti
-insetWidth=w1/2-j1;
+insetWidth=inlayWidth;
 momentArm=insetWidth/2+j1;
 
 %%%%%% ATTRACTOR %%%%%
 %CamelCase variables from jan13Attractor.
-InfiniteRadius = 0.3
+InfiniteRadius = 0.3;                  printSigNumber(InfiniteRadius         , [HOMEDIR '/extracted/InfiniteRadius.tex']          , 1);
 
-rhoAl=2700
-rhoTa=16650
+rhoAl=2700  ;			       printSigNumber(rhoAl                  , [HOMEDIR '/extracted/rhoAl.tex']                   , 2);
+rhoTaA=16650;                          printSigNumber(rhoTaA		     , [HOMEDIR '/extracted/rhoTaA.tex']		  , 2);
 
-AttractorDiameter= 3*0.0254-1350e-6
-AttractorPlateThickness= 30e-3*0.0254
-AttractorFullThickness = 12.91e-3
-AttractorRimHeight = 0.0254*.4129
-AttractorBackerThickness= AttractorFullThickness - AttractorPlateThickness - AttractorRimHeight
-AttractorRimWidth= (AttractorDiameter - 0.0254*1.915)/2.0
+AttractorDiameter= 3*0.0254-1350e-6;   printSigNumber(AttractorDiameter      , [HOMEDIR '/extracted/AttractorDiameter.tex'       ], 4);
+AttractorPlateThickness= 30e-3*0.0254; printSigNumber(AttractorPlateThickness, [HOMEDIR '/extracted/AttractorPlateThickness.tex' ], 2);
+AttractorFullThickness = 12.91e-3 ;    printSigNumber(AttractorFullThickness , [HOMEDIR '/extracted/AttractorFullThickness.tex'  ], 4);
+AttractorRimHeight = 0.0254*.4129 ;    printSigNumber(AttractorRimHeight     , [HOMEDIR '/extracted/AttractorRimHeight.tex'      ], 4);
+AttractorBackerThickness= AttractorFullThickness - AttractorPlateThickness - AttractorRimHeight;
+				       printSigNumber(AttractorBackerThickness,[HOMEDIR '/extracted/AttractorBackerThickness.tex'], 4);
+AttractorInnerDiameter=0.0254*1.915;   printSigNumber(AttractorInnerDiameter , [HOMEDIR '/extracted/AttractorInnerDiameter.tex'  ], 4);
+AttractorRimWidth= (AttractorDiameter - AttractorInnerDiameter)/2.0;
 
 
-pa1=rhoTa; % #Ta
+pa1=rhoTaA; % #Ta
 pal1=rhoAl; % #Al
 da1=AttractorPlateThickness; %# Ta attractor thickness
 dal1=AttractorBackerThickness; % Al attractor thickness

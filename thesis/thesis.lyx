@@ -1856,13 +1856,78 @@ attractor
 \end_inset
 
 , was constructed of a 
-\begin_inset Formula $380XXX\,\mu$
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/AttractorPlateThickness.tex"
+
 \end_inset
 
-m thick Ta sheet glued to an Al alloy (7075) backer/gravitational compensator.
- The backer was 75XXX mm in diameter, with a thickness of 2.5XXX mm.
- In addition, the monocoque backer's rim extended 4XXX mm, with an inner
- diameter of 70XXXmm.
+
+\begin_inset space ~
+\end_inset
+
+m thick Ta sheet glued to an Al alloy (7075 alloy, density 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/rhoAl.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+kg/m
+\begin_inset Formula $^{3}$
+\end_inset
+
+) backer/gravitational compensator.
+ The backer was 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/AttractorDiameter.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+m in diameter, with a thickness of 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/AttractorBackerThickness.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+m.
+ In addition, the monocoque backer's rim extended 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/AttractorRimHeight.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+m, with an inner diameter of 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/AttractorInnerDiameter.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+m.
  Three aluminum spindles (80XXXmm long, 6XXX mm diameter) were attached
  to the back of the backer with aluminum set screws.
  Each spindle was attached, via machinable glass electrical isolators, to
