@@ -1,4 +1,4 @@
 function o = HOMEDIR
 
-	o = '/home/charlie/trialEotwash/Eotwash/';
+	%inject o = 'path_to_homedir'; here. 
 end

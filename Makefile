@@ -1,11 +1,14 @@
 include Makefile.inc
 
-CURRENTDIR = $(shell pwd)
+CURRENTDIR := $(shell pwd)
+PATHINJECT := pathinject
 
 dissertation: gitlog.log
 	$(if $(shell ls data), ,$(shell ln -s /mnt/ssd/PWData/ data))
 	$(shell bin/countXXXs.sh thesis/thesis.lyx >> data/xxxCount.dat)
 	$(shell sed -i  "s|HOMEDIR := .*|HOMEDIR := $(CURRENTDIR)/|" Makefile.inc)
+	$(shell echo "o = '$(HOMEDIR)';" > $(PATHINJECT) )
+	$(shell sed -i "/inject/r $(PATHINJECT)" $(HOMEDIR)/mlib/HOMEDIR.m)
 	$(MAKE) -j 3 -C mlib
 	$(MAKE) -j 3 -C calibration
 	$(MAKE) -j 3 -C runAnalysis
