@@ -21,3 +21,4 @@ octave-core
 *.aux
 *.pdf
 *.bib.bak
+pathinject
