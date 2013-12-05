@@ -4,6 +4,8 @@
 
 HOMEDIR
 
+setenv("HOMEDIR", HOMEDIR);
+
 warning off Octave:possible-matlab-short-circuit-operator
 
 tpath = [HOMEDIR '/mlib/'];

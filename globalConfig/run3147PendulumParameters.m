@@ -1,6 +1,8 @@
 %CODATA
 G =  6.67428e-11;
 
+HOMEDIR = getenv("HOMEDIR");
+
 %%%%% PENDULUM TiTa %%%%%%
 
         'jan13Pendulum'
