@@ -1,7 +1,7 @@
 include Makefile.inc
 
 CURRENTDIR := $(shell pwd)
-PATHINJECT := pathinject
+PATHINJECT := tmp/pathinject
 
 dissertation: gitlog.log
 	$(if $(shell ls data), ,$(shell ln -s /mnt/ssd/PWData/ data))
