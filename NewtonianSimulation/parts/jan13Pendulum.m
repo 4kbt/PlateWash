@@ -1,6 +1,6 @@
 function P = jan13Pendulum 
 
-	'jan13Pendulum'
+%	'jan13Pendulum'
 	run3147PendulumParameters
 
 	pendulumBody=genPointMassRect(pendulumBodyMass, pendulumBodyThickness, pendulumBodyWidth, pendulumBodyHeight, 10, 28 ,15);

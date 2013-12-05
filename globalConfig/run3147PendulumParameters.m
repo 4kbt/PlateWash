@@ -12,8 +12,8 @@ pendulumBodyThickness= 0.070*0.0254; printSigNumber(pendulumBodyThickness, [HOME
 pendulumBodyMass=rhoTi*pendulumBodyHeight*pendulumBodyWidth*pendulumBodyThickness;
 
 rhoTaP=16650; printInteger(rhoTaP, [HOMEDIR '/extracted/inlayDensity.tex' ]);
-rhoInlay=rhoTaP-rhoTi
-inlayHeight=pendulumBodyHeight
+rhoInlay=rhoTaP-rhoTi;
+inlayHeight=pendulumBodyHeight;
 inlayThickness=0.010*0.0254 ; printSigNumber(inlayThickness, [HOMEDIR '/extracted/inlayThickness.tex' ], 2);
 inlayWidth=pendulumBodyWidth-27.610e-3 ; printSigNumber(inlayWidth, [HOMEDIR '/extracted/inlayWidth.tex' ], 5);
 inlayMass=rhoInlay*inlayHeight*inlayThickness*inlayWidth; printSigNumber(inlayMass, [HOMEDIR '/extracted/inlayMass.tex' ], 2);
