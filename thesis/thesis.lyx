@@ -320,8 +320,15 @@ The inverse square law
 \end_layout
 
 \begin_layout Standard
-Newton proposed the gravitational inverse square law in 16XXX in order to
- explain the motions of celestial bodies.
+Newton proposed the gravitational inverse square law in 1687 in order to
+ explain the motions of celestial bodies 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Newton1687"
+
+\end_inset
+
+.
  He suggested that the gravitational force between two objects is always
  attractive, is proportional to the mass of each object, and inversely proportio
 nal to the square of the distance between them.
@@ -661,7 +668,8 @@ If measured in accordance with the usual FRW parametrization, XXX ...
 \end_layout
 
 \begin_layout Standard
-If the supernova measurements are used to extract a value for 
+If the measurements of the Hubble Constant (WMAP: XXX, Planck: XXX, Supernova
+ searches: XXX) are used to extract a value for 
 \begin_inset Formula $\Lambda$
 \end_inset
 
@@ -827,9 +835,23 @@ Chameleons
 \end_layout
 
 \begin_layout Standard
-XXX, XXX, and Nelson noted in XXX that the simple addition of a self-interacting
- term to the Lagrangian to any new interaction could hide it from long range
- experimental searches.
+Khoury and Weltman 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "PhysRevD.69.044026,PhysRevLett.93.171104"
+
+\end_inset
+
+ in 2004, and Feldman and Walsh with Nelson, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "feldman2006new,PhysRevD.77.095006"
+
+\end_inset
+
+ in 2006, and 2008 respectively, explored the notion that the addition of
+ a self-interacting term to the Lagrangian can hide it from long range experimen
+tal searches.
  Self interactions act to 
 \begin_inset Quotes eld
 \end_inset
@@ -839,11 +861,10 @@ screen
 \end_inset
 
  the effect of any new interaction.
- As self-interaction is a general property of fields, the notion is quite
+ As self-interaction is a general property of fields, the notion is very
  reasonable.
- In its simplest form as a scalar field, XXX (Lagrangian), a chameleon interacti
-on must be constrained by limiting not only the exchange particle's mass
- 
+ In its simplest form as a scalar field, a chameleon interaction must be
+ constrained by limiting not only the exchange particle's mass 
 \begin_inset Formula $m$
 \end_inset
 
@@ -871,11 +892,47 @@ In addition to their physical motiviation, chameleon interactions are ready-made
 \end_layout
 
 \begin_layout Standard
-XXX Uphadye calculable boundaries
+XXX Uphadye calculable boundaries 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "PhysRevD.86.102003"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-XXX New PRL regarding viability of chameleons
+XXX New PRL regarding viability of chameleons 
+\end_layout
+
+\begin_layout Standard
+XXX Symmetrons from Upadhye
+\begin_inset CommandInset citation
+LatexCommand citet
+key "PhysRevLett.110.031301"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+XXX 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "2013arXiv1309.5389J"
+
+\end_inset
+
+ 2013 Snowmass DE/Chameleon paper.
+\end_layout
+
+\begin_layout Standard
+The PlateWash geometry is of particular use in these new classes of theories,
+ as calculations which require challenging numerical models for the hole-
+ and wedge-pendulum geometries can be much simpler with planar attractor
+ and detector masses.
 \end_layout
 
 \begin_layout Subsection
