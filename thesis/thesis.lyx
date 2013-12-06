@@ -193,14 +193,34 @@ The Standard Model is a triumph.
  The exceptions are, therefore, very important.
  The Standard Model has one major remaining prediction - the existence of
  the so-called Higgs boson, a lynchpin for the theory, which may have been
- discovered at the LHC in 2012 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "Aad20121,Chatrchyan201230"
+ discovered at the LHC in 2012 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXX insert from bibtex.huge: Observation of a new particle in the search
+ for the Standard Model Higgs boson with the 
+\backslash
+{ATLAS
+\backslash
+} detector at the 
+\backslash
+{LHC
+\backslash
+} , Observation of a new boson at a mass of 125 GeV with the 
+\backslash
+{CMS
+\backslash
+} experiment at the 
+\backslash
+{LHC
+\backslash
+}
+\end_layout
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Standard
@@ -619,7 +639,18 @@ key "2007PhRvL..98b1101K"
 
 m for one extra dimension.
  Greater numbers of extra dimensions are more stringently constrained by
- collider experiments XXX, at scales below XXX 
+ collider experiments XXX
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Insert citation from bibtex.huge.Search for Signatures of Extra Dimensions
+ in the Diphoton Mass Spectrum at the Large Hadron Collider 
+\end_layout
+
+\end_inset
+
+, at scales below XXX 
 \begin_inset Formula $\mu$
 \end_inset
 
