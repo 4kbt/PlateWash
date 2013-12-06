@@ -5,7 +5,7 @@ HOMEDIR = getenv("HOMEDIR");
 
 %%%%% PENDULUM TiTa %%%%%%
 
-        'jan13Pendulum'
+%        'jan13Pendulum'
 
 rhoTi=4507; printInteger(rhoTi, [HOMEDIR '/extracted/titaniumDensity.tex' ]);
 pendulumBodyHeight=0.0321203; printSigNumber(pendulumBodyHeight, [HOMEDIR '/extracted/pendulumBodyHeight.tex' ],6);
