@@ -245,8 +245,7 @@ key "lrr-2006-3"
 \end_inset
 
 , but does not contain any hint of quantum probability or uncertainty.
- Gravity and quantum mechanics are mathematically incompatible.
- 
+ General Relativity and quantum mechanics have no known mathematical connection.
 \end_layout
 
 \begin_layout Standard
@@ -353,7 +352,8 @@ key "Newton1687"
  attractive, is proportional to the mass of each object, and inversely proportio
 nal to the square of the distance between them.
  This model was remarkably good at predicting the motion of celestial orbits,
- the tides, and gave the first quantitative value for the mass of the Earth.
+ the tides, and gave the first quantitative estimate of the mass of the
+ Earth.
 \end_layout
 
 \begin_layout Standard
@@ -406,7 +406,14 @@ key "2007PhRvL..98t1101T,PhysRevLett.108.081101"
 
 \end_inset
 
-, University of Indiana, Washington University at St.
+, University of Indiana 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "long2012experimental"
+
+\end_inset
+
+, Washington University at St.
  Louis
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -449,14 +456,14 @@ key "E.Chalkley2011"
 
 \end_inset
 
-, Düsseldorf 
+, and Düsseldorf 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Schiller2006"
 
 \end_inset
 
-, and XXX.
+.
 \end_layout
 
 \begin_layout Standard
@@ -699,8 +706,14 @@ If measured in accordance with the usual FRW parametrization, XXX ...
 \end_layout
 
 \begin_layout Standard
-If the measurements of the Hubble Constant (WMAP: XXX, Planck: XXX, Supernova
- searches: XXX) are used to extract a value for 
+If the measurements of the Hubble Constant (WMAP: XXX, Planck: 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Ade:2013ktc,Ade:2013zuv"
+
+\end_inset
+
+, Supernova searches: XXX) are used to extract a value for 
 \begin_inset Formula $\Lambda$
 \end_inset
 
