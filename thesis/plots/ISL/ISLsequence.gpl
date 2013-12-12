@@ -1,0 +1,911 @@
+
+
+
+
+
+
+
+
+
+#torque(x,y)=pi/4*G*h*w*w*ph*(ph-pl)*y*y*(x+y)*exp(-x/y)
+torque(x,y)=pi/4*G*h*w*w*pa*(ph-pl)*y*y*exp(-x/y)
+G=6.674215e-11
+h=0.0254*1.5
+w=0.0254*3
+ph=21450 #Au
+pl=1848 #Al
+pa=19300 #Cu
+
+a=150e-6
+dm=1000e-6
+da=1000e-6 # attractor thickness
+atorque(x,y)=torque(x,y)* (1-exp(-1.0*a/y)) * (1-exp(-1.0*(a+dm)/y))* (1-exp(-1.0*da/y))
+
+
+mtorque=7.1e-15
+magtorque(x)=mtorque/(atorque(x,100e-6)-atorque(5e-3,100e-6))
+
+print 1.0
+print magtorque(100e-6)
+
+
+set term postscript enhanced color solid 
+set size 0.6,0.6
+set output 'ISLsequence.ps'
+#0.79 fJ/day
+Tmin100=0.5/sqrt(10)/2.25*1e-15*2.0 #(2.0 brings us to 95% limits) 2.25 from a 4.5". sqrt(10)from 10 days integration 1e-15 from fJ
+Tmin500=Tmin100
+Tmin1000=Tmin100
+#0.79e-15 "conservative"
+Tmin4000=Tmin100/10
+#set style line 1 @black lw2 # everyone's plot
+
+set xlabel "log_{10}({/Symbol l}) (meters)"
+set ylabel "log_{10}(|{/Symbol a}|)"
+
+#Homemade script for explicitly making xtics logged properly.
+load 'logtics.gpl'
+set ytics 1
+
+#set style line 1 lt rgb "black" lw 2
+#pl [x=1e-6:1e-2] Tmin/atorque(1e-3,x), Tmin/atorque(1e-4,x), Tmin/atorque(1e-5,x), Tmin/atorque(70e-6,x), 'shortwashprediction.dat' w lp
+
+unset key
+set label 1 "Experimentally Excluded" at -3,4 center front 	font "Helvetica, 15"
+set label 2 "Proposed Experiment" at -4.2,0.3 center front rotate by -39 font "Helvetica, 11"
+set label 3 "Gravitational Strength" at -5.05,-3 front font "Helvetica, 9"
+set label 4 "Stanford 05     [3]"  at -4.5, log10(1.5e5) center front font "Helvetica, 11"
+set label 5 "Colorado 03 [8]" at -3.7,1.8 center front font "Helvetica, 11"
+set label 6 "Washington 04 [1]" at -3.1,-0.5 center front font "Helvetica, 11"
+set label 7 "Irvine 80 [9]" at -2.55,-1.0 front font "Helvetica, 11"
+#set label 8 "Likely Accessible" at -4.6, -3.5 center front font "Helvetica, 11" 
+
+
+#Washington
+set arrow 1 from -3,-0.8 to -3.2,-1.5 lt -1 front
+#Colorado
+set arrow 2 from -3.9,1.6 to -4.1,1.2 lt -1 front
+#Irvine
+set arrow 3 from -2.2,-1.3 to -2.3,-3.1  lt -1 front
+#Stanford
+set arrow 4 from -4.85, 5.15 to -5.,4.9 lt -1 front 
+#Gravitational Strength
+set arrow 5 from -4.7,-2.5 to -5,0 lt 9  lw 1 front
+
+
+limit100(x)=Tmin100/(atorque(100e-6,x)-atorque(5e-3,x)) #could be improved if we could back up further.
+#limit50(x)=Tmin100*100/(atorque(50e-6,x)-atorque(5e-3,x))
+#limit20(x)=Tmin100*10000/(atorque(20e-6,x)-atorque(5e-3,x))
+
+#This is a little overzealous... need big thick attractor plate, thick pendulum?
+
+ourlimit100(x)=Tmin100/(atorque(100e-6,x)-atorque(200e-6,x))
+ourlimit500(x)=Tmin500/(atorque(500e-6,x)-atorque(750e-6,x))
+ourlimit1000(x)=Tmin1000/(atorque(1e-3,x)-atorque(5e-3,x))
+goodcase(x)=Tmin100/10.0/(atorque(75e-6,x)-atorque(175e-6,x))
+goodcaselimit(x)= Tmin100/10.0/(atorque(75e-6,x)-atorque(5e-3,x))
+
+print limit100(100e-6)
+#greatcase(x)=Tmin100/100.0/(atorque(50e-6,x)-atorque(150e-6,x))
+#greatcaselimit(x)=Tmin100/100.0/(atorque(50e-6,x)-atorque(5e-3,x))
+
+#set style fill solid 0.5
+#set logsc
+#set yrange[-11:27]
+#pl [x=-10:14]  \
+#set yrange [-6.5 : 5]
+set yrange[-4.5:6]
+pl [x=-5.2:-2] \
+	log10(goodcaselimit(10**x)) w l lt 0,\
+	log10(limit100(10**x))     w filledcurve x2 lt 5, log10(limit100(10**x))  	lt -1,\
+	'2004prd.dat' u (log10($1)):(log10($2)) 		smooth csplines w filledcurve x2 lt 4 ,\
+	'stanfordPRD2005.dat' u (log10($1)):(log10($2)) 	smooth csplines w filledcurve x2 lt 4 ,\
+	'Irvine1985.dat'  u (log10($1)):(log10(2.0*$2)) 	smooth csplines w filledcurve x2 lt 4 ,\
+	'coloradoNature2003.dat' u (log10($1)):(log10($2)) 	smooth csplines w filledcurve x2 lt 4 ,\
+	'coloradoNature2003.dat' u (log10($1)):(log10($2)) 	smooth csplines w l lt -1 ,\
+	'2004prd.dat' u (log10($1)):(log10($2)) 		smooth csplines w l lt -1 ,\
+	'stanfordPRD2005.dat' u (log10($1)):(log10($2)) 	smooth csplines w l lt -1 ,\
+	'Irvine1985.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+	'CD01.dat' u (log10($1*1e-3)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+	'kapnerNov06.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+	'Moscow.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+	0.0   lt 0 
+
+	#2.0 in Irvine limit due to 68% confidence limit
+	#'shortwashprediction.dat' w lp, \
+	#log10(limit20(10**x)) w l lt 0, \
+	#log10(limit50(10**x)) w l lt 0, \
+	#log10(greatcase(10**x)) w l lt 0,\
+	#log10(greatcaselimit(10**x)) w l lt 1,\
+	#log10(ourlimit1000(10**x)) w filledcurve x2 lt 5, log10(ourlimit1000(10**x)) 	lt 3 ,\
+	#log10(ourlimit500(10**x))  w filledcurve x2 lt 5, log10(ourlimit500(10**x)) 	lt 3 ,\
+	#log10(ourlimit100(10**x))  w filledcurve x2 lt 5, log10(ourlimit100(10**x))  	lt 3 ,\
+	#'kapner95limit.dat' u  (log10($1)):(log10($2)) w lines  lt 0,\
+	#log10(goodcase(10**x)) w l lt 0,\
+
+
+#unset output
+#set term x11
+
+######################## BEGIN SEQUENCE1 ##########################
+unset arrow
+unset label
+
+unset key
+set label 1 "Experimentally Excluded" at -3,4 center front 	font "Helvetica, 15"
+#set label 2 "Proposed Experiment" at -4.2,0.3 center front rotate by -39 font "Helvetica, 11"
+set label 3 "Gravitational Strength" at -5.05,-3 front font "Helvetica, 9"
+#set label 4 "Stanford 05    "  at -4.5, log10(1.5e5) center front font "Helvetica, 11"
+#set label 5 "Colorado 03" at -3.7,1.8 center front font "Helvetica, 11"
+#set label 6 "Washington 04" at -3.1,-0.5 center front font "Helvetica, 11"
+set label 7 "Irvine 80" at -2.55,-1.0 front font "Helvetica, 11"
+#set label 8 "Likely Accessible" at -4.6, -3.5 center front font "Helvetica, 11" 
+set label 10 "Moscow 63" at -3,2 center front font "Helvetica, 11"
+
+#Washington
+#set arrow 1 from -3,-0.8 to -3.2,-1.5 lt -1 front
+#Colorado
+#set arrow 2 from -3.9,1.6 to -4.1,1.2 lt -1 front
+#Irvine
+set arrow 3 from -2.2,-1.3 to -2.3,-3.1  lt -1 front
+#Stanford
+#set arrow 4 from -4.85, 5.15 to -5.,4.9 lt -1 front 
+#Gravitational Strength
+set arrow 5 from -4.7,-2.5 to -5,0 lt 9  lw 1 front
+set arrow 10 from -3,1.7 to -3.3,0.9 lt -1 front
+
+set output 'ISLsequence1.eps'
+
+set yrange[-4.5:6]
+pl [x=-5.2:-2] \
+	'Irvine1985.dat'  u (log10($1)):(log10(2.0*$2)) 	smooth csplines w filledcurve x2 lt 5 ,\
+	'srMoscow.dat' u (log10($1*0.001)):(log10($2)) 		smooth csplines w filledcurve x2 lt 5 ,\
+	'Irvine1985.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+	'srMoscow.dat' u (log10($1*0.001)):(log10($2)) 		smooth csplines w l lt -1 ,\
+	0.0   lt 0 
+
+#	log10(goodcaselimit(10**x)) w l lt 0,\
+#	log10(limit100(10**x))     w filledcurve x2 lt 5, log10(limit100(10**x))  	lt -1,\
+#	'2004prd.dat' u (log10($1)):(log10($2)) 		smooth csplines w filledcurve x2 lt 4 ,\
+#	'stanfordPRD2005.dat' u (log10($1)):(log10($2)) 	smooth csplines w filledcurve x2 lt 4 ,\
+#	'Irvine1985.dat'  u (log10($1)):(log10(2.0*$2)) 	smooth csplines w filledcurve x2 lt 4 ,\
+#	'coloradoNature2003.dat' u (log10($1)):(log10($2)) 	smooth csplines w filledcurve x2 lt 4 ,\
+#	'coloradoNature2003.dat' u (log10($1)):(log10($2)) 	smooth csplines w l lt -1 ,\
+#	'2004prd.dat' u (log10($1)):(log10($2)) 		smooth csplines w l lt -1 ,\
+#	'stanfordPRD2005.dat' u (log10($1)):(log10($2)) 	smooth csplines w l lt -1 ,\
+#	'Irvine1985.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+#	'CD01.dat' u (log10($1*1e-3)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+#	'kapnerNov06.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+#	'Moscow.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+#	0.0   lt 0 
+	#2.0 in Irvine limit due to 68% confidence limit
+	#'shortwashprediction.dat' w lp, \
+	#log10(limit20(10**x)) w l lt 0, \
+	#log10(limit50(10**x)) w l lt 0, \
+	#log10(greatcase(10**x)) w l lt 0,\
+	#log10(greatcaselimit(10**x)) w l lt 1,\
+	#log10(ourlimit1000(10**x)) w filledcurve x2 lt 5, log10(ourlimit1000(10**x)) 	lt 3 ,\
+	#log10(ourlimit500(10**x))  w filledcurve x2 lt 5, log10(ourlimit500(10**x)) 	lt 3 ,\
+	#log10(ourlimit100(10**x))  w filledcurve x2 lt 5, log10(ourlimit100(10**x))  	lt 3 ,\
+	#'kapner95limit.dat' u  (log10($1)):(log10($2)) w lines  lt 0,\
+	#log10(goodcase(10**x)) w l lt 0,\
+
+
+#unset output
+#set term x11
+######################## BEGIN SEQUENCE2 ##########################
+unset arrow
+unset label
+
+unset key
+set label 1 "Experimentally Excluded" at -3,4 center front 	font "Helvetica, 15"
+#set label 2 "Proposed Experiment" at -4.2,0.3 center front rotate by -39 font "Helvetica, 11"
+set label 3 "Gravitational Strength" at -5.05,-3 front font "Helvetica, 9"
+#set label 4 "Stanford 05    "  at -4.5, log10(1.5e5) center front font "Helvetica, 11"
+#set label 5 "Colorado 03" at -3.7,1.8 center front font "Helvetica, 11"
+#set label 6 "Washington 04" at -3.1,-0.5 center front font "Helvetica, 11"
+set label 7 "Irvine 80" at -2.55,-1.0 front font "Helvetica, 11"
+#set label 8 "Likely Accessible" at -4.6, -3.5 center front font "Helvetica, 11" 
+set label 10 "Moscow 63" at -3,2 center front font "Helvetica, 11"
+set label 11 "Hoyle 01" at -3,-3 center front font "Helvetica, 11"
+
+
+#Washington
+#set arrow 1 from -3,-0.8 to -3.2,-1.5 lt -1 front
+#Colorado
+#set arrow 2 from -3.9,1.6 to -4.1,1.2 lt -1 front
+#Irvine
+set arrow 3 from -2.2,-1.3 to -2.3,-3.1  lt -1 front
+#Stanford
+#set arrow 4 from -4.85, 5.15 to -5.,4.9 lt -1 front 
+#Gravitational Strength
+set arrow 5 from -4.7,-2.5 to -5,0 lt 9  lw 1 front
+set arrow 10 from -3,1.7 to -3.3,0.9 lt -1 front
+set arrow 11 from -3,-2.7 to -3.05,-2 lt -1 front
+
+set output 'ISLsequence2.eps'
+
+set yrange[-4.5:6]
+pl [x=-5.2:-2] \
+	'Irvine1985.dat'  u (log10($1)):(log10(2.0*$2)) 	smooth csplines w filledcurve x2 lt 5 ,\
+	'CD01.dat' u (log10($1*1e-3)):(log10(($2))) 	smooth csplines w filledcurve x2 lt 5 ,\
+	'Irvine1985.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+	'srMoscow.dat' u (log10($1*0.001)):(log10($2)) 		smooth csplines w l lt -1 ,\
+	'CD01.dat' u (log10($1*1e-3)):(log10(($2))) 	smooth csplines w l lt -1 ,\
+	0.0   lt 0 
+
+#	log10(goodcaselimit(10**x)) w l lt 0,\
+#	log10(limit100(10**x))     w filledcurve x2 lt 5, log10(limit100(10**x))  	lt -1,\
+#	'2004prd.dat' u (log10($1)):(log10($2)) 		smooth csplines w filledcurve x2 lt 4 ,\
+#	'stanfordPRD2005.dat' u (log10($1)):(log10($2)) 	smooth csplines w filledcurve x2 lt 4 ,\
+#	'Irvine1985.dat'  u (log10($1)):(log10(2.0*$2)) 	smooth csplines w filledcurve x2 lt 4 ,\
+#	'coloradoNature2003.dat' u (log10($1)):(log10($2)) 	smooth csplines w filledcurve x2 lt 4 ,\
+#	'coloradoNature2003.dat' u (log10($1)):(log10($2)) 	smooth csplines w l lt -1 ,\
+#	'2004prd.dat' u (log10($1)):(log10($2)) 		smooth csplines w l lt -1 ,\
+#	'stanfordPRD2005.dat' u (log10($1)):(log10($2)) 	smooth csplines w l lt -1 ,\
+#	'Irvine1985.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+#	'kapnerNov06.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+#	'Moscow.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+#	0.0   lt 0 
+	#2.0 in Irvine limit due to 68% confidence limit
+	#'shortwashprediction.dat' w lp, \
+	#log10(limit20(10**x)) w l lt 0, \
+	#log10(limit50(10**x)) w l lt 0, \
+	#log10(greatcase(10**x)) w l lt 0,\
+	#log10(greatcaselimit(10**x)) w l lt 1,\
+	#log10(ourlimit1000(10**x)) w filledcurve x2 lt 5, log10(ourlimit1000(10**x)) 	lt 3 ,\
+	#log10(ourlimit500(10**x))  w filledcurve x2 lt 5, log10(ourlimit500(10**x)) 	lt 3 ,\
+	#log10(ourlimit100(10**x))  w filledcurve x2 lt 5, log10(ourlimit100(10**x))  	lt 3 ,\
+	#'kapner95limit.dat' u  (log10($1)):(log10($2)) w lines  lt 0,\
+	#log10(goodcase(10**x)) w l lt 0,\
+######################## BEGIN SEQUENCE3 ##########################
+unset arrow
+unset label
+
+unset key
+set label 1 "Experimentally Excluded" at -3,4 center front 	font "Helvetica, 15"
+#set label 2 "Proposed Experiment" at -4.2,0.3 center front rotate by -39 font "Helvetica, 11"
+set label 3 "Gravitational Strength" at -5.05,-3 front font "Helvetica, 9"
+#set label 4 "Stanford 05    "  at -4.5, log10(1.5e5) center front font "Helvetica, 11"
+set label 5 "Colorado 03" at -3.7,1.8 center front font "Helvetica, 11"
+#set label 6 "Washington 04" at -3.1,-0.5 center front font "Helvetica, 11"
+set label 7 "Irvine 80" at -2.55,-1.0 front font "Helvetica, 11"
+#set label 8 "Likely Accessible" at -4.6, -3.5 center front font "Helvetica, 11" 
+set label 11 "Hoyle 01" at -3,-3 center front font "Helvetica, 11"
+set label 10 "Moscow 63" at -3,2 center front font "Helvetica, 11"
+
+#Washington
+#set arrow 1 from -3,-0.8 to -3.2,-1.5 lt -1 front
+#Colorado
+set arrow 2 from -3.9,1.6 to -4.1,1.2 lt -1 front
+#Irvine
+set arrow 3 from -2.2,-1.3 to -2.3,-3.1  lt -1 front
+#Stanford
+#set arrow 4 from -4.85, 5.15 to -5.,4.9 lt -1 front 
+#Gravitational Strength
+set arrow 5 from -4.7,-2.5 to -5,0 lt 9  lw 1 front
+set arrow 10 from -3,1.7 to -3.3,0.9 lt -1 front
+set arrow 11 from -3,-2.7 to -3.05,-2 lt -1 front
+
+set output 'ISLsequence3.eps'
+
+set yrange[-4.5:6]
+pl [x=-5.2:-2] \
+	'Irvine1985.dat'  u (log10($1)):(log10(2.0*$2)) 	smooth csplines w filledcurve x2 lt 5 ,\
+	'CD01.dat' u (log10($1*1e-3)):(log10(($2))) 	smooth csplines w filledcurve x2 lt 5 ,\
+	'coloradoNature2003.dat' u (log10($1)):(log10($2)) 	smooth csplines w filledcurve x2 lt 5 ,\
+	'coloradoNature2003.dat' u (log10($1)):(log10($2)) 	smooth csplines w l lt -1 ,\
+	'srMoscow.dat' u (log10($1*1e-3)):(log10(($2))) 		smooth csplines w l lt -1 ,\
+	'Irvine1985.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+	'CD01.dat' u (log10($1*1e-3)):(log10(($2))) 	smooth csplines w l lt -1 ,\
+	0.0   lt 0 
+
+#	log10(goodcaselimit(10**x)) w l lt 0,\
+#	log10(limit100(10**x))     w filledcurve x2 lt 5, log10(limit100(10**x))  	lt -1,\
+#	'2004prd.dat' u (log10($1)):(log10($2)) 		smooth csplines w filledcurve x2 lt 4 ,\
+#	'stanfordPRD2005.dat' u (log10($1)):(log10($2)) 	smooth csplines w filledcurve x2 lt 4 ,\
+#	'Irvine1985.dat'  u (log10($1)):(log10(2.0*$2)) 	smooth csplines w filledcurve x2 lt 4 ,\
+#	'coloradoNature2003.dat' u (log10($1)):(log10($2)) 	smooth csplines w filledcurve x2 lt 4 ,\
+#	'coloradoNature2003.dat' u (log10($1)):(log10($2)) 	smooth csplines w l lt -1 ,\
+#	'2004prd.dat' u (log10($1)):(log10($2)) 		smooth csplines w l lt -1 ,\
+#	'stanfordPRD2005.dat' u (log10($1)):(log10($2)) 	smooth csplines w l lt -1 ,\
+#	'Irvine1985.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+#	'kapnerNov06.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+#	'Moscow.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+#	0.0   lt 0 
+	#2.0 in Irvine limit due to 68% confidence limit
+	#'shortwashprediction.dat' w lp, \
+	#log10(limit20(10**x)) w l lt 0, \
+	#log10(limit50(10**x)) w l lt 0, \
+	#log10(greatcase(10**x)) w l lt 0,\
+	#log10(greatcaselimit(10**x)) w l lt 1,\
+	#log10(ourlimit1000(10**x)) w filledcurve x2 lt 5, log10(ourlimit1000(10**x)) 	lt 3 ,\
+	#log10(ourlimit500(10**x))  w filledcurve x2 lt 5, log10(ourlimit500(10**x)) 	lt 3 ,\
+	#log10(ourlimit100(10**x))  w filledcurve x2 lt 5, log10(ourlimit100(10**x))  	lt 3 ,\
+	#'kapner95limit.dat' u  (log10($1)):(log10($2)) w lines  lt 0,\
+	#log10(goodcase(10**x)) w l lt 0,\
+######################## BEGIN SEQUENCE4 ##########################
+unset arrow
+unset label
+
+unset key
+set label 1 "Experimentally Excluded" at -3,4 center front 	font "Helvetica, 15"
+#set label 2 "Proposed Experiment" at -4.2,0.3 center front rotate by -39 font "Helvetica, 11"
+set label 3 "Gravitational Strength" at -5.05,-3 front font "Helvetica, 9"
+#set label 4 "Stanford 05    "  at -4.5, log10(1.5e5) center front font "Helvetica, 11"
+set label 5 "Colorado 03" at -3.7,1.8 center front font "Helvetica, 11"
+set label 6 "Washington 04" at -3.1,-0.5 center front font "Helvetica, 11"
+set label 7 "Irvine 80" at -2.55,-1.0 front font "Helvetica, 11"
+#set label 8 "Likely Accessible" at -4.6, -3.5 center front font "Helvetica, 11" 
+
+
+#Washington
+set arrow 1 from -3,-0.8 to -3.2,-1.5 lt -1 front
+#Colorado
+set arrow 2 from -3.9,1.6 to -4.1,1.2 lt -1 front
+#Irvine
+set arrow 3 from -2.2,-1.3 to -2.3,-3.1  lt -1 front
+#Stanford
+#set arrow 4 from -4.85, 5.15 to -5.,4.9 lt -1 front 
+#Gravitational Strength
+set arrow 5 from -4.7,-2.5 to -5,0 lt 9  lw 1 front
+
+set output 'ISLsequence4.eps'
+
+set yrange[-4.5:6]
+pl [x=-5.2:-2] \
+	'Irvine1985.dat'  u (log10($1)):(log10(2.0*$2)) 	smooth csplines w filledcurve x2 lt 5 ,\
+	'2004prd.dat' u (log10($1)):(log10($2)) 		smooth csplines w filledcurve x2 lt 5 ,\
+	'coloradoNature2003.dat' u (log10($1)):(log10($2)) 	smooth csplines w filledcurve x2 lt 5 ,\
+	'coloradoNature2003.dat' u (log10($1)):(log10($2)) 	smooth csplines w l lt -1 ,\
+	'Irvine1985.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+	'2004prd.dat' u (log10($1)):(log10($2)) 		smooth csplines w l lt -1 ,\
+	0.0   lt 0 
+
+#	log10(goodcaselimit(10**x)) w l lt 0,\
+#	log10(limit100(10**x))     w filledcurve x2 lt 5, log10(limit100(10**x))  	lt -1,\
+#	'2004prd.dat' u (log10($1)):(log10($2)) 		smooth csplines w filledcurve x2 lt 4 ,\
+#	'stanfordPRD2005.dat' u (log10($1)):(log10($2)) 	smooth csplines w filledcurve x2 lt 4 ,\
+#	'Irvine1985.dat'  u (log10($1)):(log10(2.0*$2)) 	smooth csplines w filledcurve x2 lt 4 ,\
+#	'coloradoNature2003.dat' u (log10($1)):(log10($2)) 	smooth csplines w filledcurve x2 lt 4 ,\
+#	'coloradoNature2003.dat' u (log10($1)):(log10($2)) 	smooth csplines w l lt -1 ,\
+#	'2004prd.dat' u (log10($1)):(log10($2)) 		smooth csplines w l lt -1 ,\
+#	'stanfordPRD2005.dat' u (log10($1)):(log10($2)) 	smooth csplines w l lt -1 ,\
+#	'Irvine1985.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+#	'kapnerNov06.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+#	'Moscow.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+#	0.0   lt 0 
+	#2.0 in Irvine limit due to 68% confidence limit
+	#'shortwashprediction.dat' w lp, \
+	#log10(limit20(10**x)) w l lt 0, \
+	#log10(limit50(10**x)) w l lt 0, \
+	#log10(greatcase(10**x)) w l lt 0,\
+	#log10(greatcaselimit(10**x)) w l lt 1,\
+	#log10(ourlimit1000(10**x)) w filledcurve x2 lt 5, log10(ourlimit1000(10**x)) 	lt 3 ,\
+	#log10(ourlimit500(10**x))  w filledcurve x2 lt 5, log10(ourlimit500(10**x)) 	lt 3 ,\
+	#log10(ourlimit100(10**x))  w filledcurve x2 lt 5, log10(ourlimit100(10**x))  	lt 3 ,\
+	#'kapner95limit.dat' u  (log10($1)):(log10($2)) w lines  lt 0,\
+	#log10(goodcase(10**x)) w l lt 0,\
+######################## BEGIN SEQUENCE5 ##########################
+unset arrow
+unset label
+
+unset key
+set label 1 "Experimentally Excluded" at -3,4 center front 	font "Helvetica, 15"
+#set label 2 "Proposed Experiment" at -4.2,0.3 center front rotate by -39 font "Helvetica, 11"
+set label 3 "Gravitational Strength" at -5.05,-3 front font "Helvetica, 9"
+set label 4 "Stanford 05     "  at -4.5, log10(1.5e5) center front font "Helvetica, 11"
+set label 5 "Colorado 03 " at -3.7,1.8 center front font "Helvetica, 11"
+set label 6 "Washington 04" at -3.1,-0.5 center front font "Helvetica, 11"
+set label 7 "Irvine 80 " at -2.55,-1.0 front font "Helvetica, 11"
+#set label 8 "Likely Accessible" at -4.6, -3.5 center front font "Helvetica, 11" 
+
+
+#Washington
+set arrow 1 from -3,-0.8 to -3.2,-1.5 lt -1 front
+#Colorado
+set arrow 2 from -3.9,1.6 to -4.1,1.2 lt -1 front
+#Irvine
+set arrow 3 from -2.2,-1.3 to -2.3,-3.1  lt -1 front
+#Stanford
+set arrow 4 from -4.85, 5.15 to -5.,4.9 lt -1 front 
+#Gravitational Strength
+set arrow 5 from -4.7,-2.5 to -5,0 lt 9  lw 1 front
+
+set output 'ISLsequence5.eps'
+
+set yrange[-4.5:6]
+pl [x=-5.2:-2] \
+	'Irvine1985.dat'  u (log10($1)):(log10(2.0*$2)) 	smooth csplines w filledcurve x2 lt 5 ,\
+	'2004prd.dat' u (log10($1)):(log10($2)) 		smooth csplines w filledcurve x2 lt 5 ,\
+	'coloradoNature2003.dat' u (log10($1)):(log10($2)) 	smooth csplines w filledcurve x2 lt 5 ,\
+	'stanfordPRD2005.dat' u (log10($1)):(log10($2)) 	smooth csplines w filledcurve x2 lt 5 ,\
+	'coloradoNature2003.dat' u (log10($1)):(log10($2)) 	smooth csplines w l lt -1 ,\
+	'Irvine1985.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+	'2004prd.dat' u (log10($1)):(log10($2)) 		smooth csplines w l lt -1 ,\
+	'stanfordPRD2005.dat' u (log10($1)):(log10($2)) 	smooth csplines w l lt -1 ,\
+	0.0   lt 0 
+
+#	log10(goodcaselimit(10**x)) w l lt 0,\
+#	log10(limit100(10**x))     w filledcurve x2 lt 5, log10(limit100(10**x))  	lt -1,\
+#	'2004prd.dat' u (log10($1)):(log10($2)) 		smooth csplines w filledcurve x2 lt 4 ,\
+#	'stanfordPRD2005.dat' u (log10($1)):(log10($2)) 	smooth csplines w filledcurve x2 lt 4 ,\
+#	'Irvine1985.dat'  u (log10($1)):(log10(2.0*$2)) 	smooth csplines w filledcurve x2 lt 4 ,\
+#	'coloradoNature2003.dat' u (log10($1)):(log10($2)) 	smooth csplines w filledcurve x2 lt 4 ,\
+#	'coloradoNature2003.dat' u (log10($1)):(log10($2)) 	smooth csplines w l lt -1 ,\
+#	'2004prd.dat' u (log10($1)):(log10($2)) 		smooth csplines w l lt -1 ,\
+#	'stanfordPRD2005.dat' u (log10($1)):(log10($2)) 	smooth csplines w l lt -1 ,\
+#	'Irvine1985.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+#	'kapnerNov06.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+#	'Moscow.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+#	0.0   lt 0 
+	#2.0 in Irvine limit due to 68% confidence limit
+	#'shortwashprediction.dat' w lp, \
+	#log10(limit20(10**x)) w l lt 0, \
+	#log10(limit50(10**x)) w l lt 0, \
+	#log10(greatcase(10**x)) w l lt 0,\
+	#log10(greatcaselimit(10**x)) w l lt 1,\
+	#log10(ourlimit1000(10**x)) w filledcurve x2 lt 5, log10(ourlimit1000(10**x)) 	lt 3 ,\
+	#log10(ourlimit500(10**x))  w filledcurve x2 lt 5, log10(ourlimit500(10**x)) 	lt 3 ,\
+	#log10(ourlimit100(10**x))  w filledcurve x2 lt 5, log10(ourlimit100(10**x))  	lt 3 ,\
+	#'kapner95limit.dat' u  (log10($1)):(log10($2)) w lines  lt 0,\
+	#log10(goodcase(10**x)) w l lt 0,\
+######################## BEGIN SEQUENCE6 ##########################
+unset arrow
+unset label
+
+unset key
+set label 1 "Experimentally Excluded" at -3,4 center front 	font "Helvetica, 15"
+#set label 2 "Proposed Experiment" at -4.2,0.3 center front rotate by -39 font "Helvetica, 11"
+set label 3 "Gravitational Strength" at -5.05,-3 front font "Helvetica, 9"
+set label 4 "Stanford 05    "  at -4.5, log10(1.5e5) center front font "Helvetica, 11"
+set label 5 "Colorado 03" at -3.7,1.8 center front font "Helvetica, 11"
+set label 6 "Washington 04" at -3.1,-0.5 center front font "Helvetica, 11"
+set label 7 "Irvine 80" at -2.55,-1.0 front font "Helvetica, 11"
+#set label 8 "Likely Accessible" at -4.6, -3.5 center front font "Helvetica, 11" 
+set label 9 "Kapner 05" at -3.7, -3 center front font "Helvetica, 11"
+
+#Washington
+set arrow 1 from -3,-0.8 to -3.2,-1.5 lt -1 front
+#Colorado
+set arrow 2 from -3.9,1.6 to -4.1,1.2 lt -1 front
+#Irvine
+set arrow 3 from -2.2,-1.3 to -2.3,-3.1  lt -1 front
+#Stanford
+set arrow 4 from -4.85, 5.15 to -5.,4.9 lt -1 front 
+#Gravitational Strength
+set arrow 5 from -4.7,-2.5 to -5,0 lt 9  lw 1 front
+set arrow 9 from -3.7,-2.7 to -3.6,-1.9 lt -1 front 
+
+set output 'ISLsequence6.eps'
+
+set yrange[-4.5:6]
+pl [x=-5.2:-2] \
+	'Irvine1985.dat'  u (log10($1)):(log10(2.0*$2)) 	smooth csplines w filledcurve x2 lt 5 ,\
+	'2004prd.dat' u (log10($1)):(log10($2)) 		smooth csplines w filledcurve x2 lt 5 ,\
+	'stanfordPRD2005.dat' u (log10($1)):(log10($2)) 	smooth csplines w filledcurve x2 lt 5 ,\
+	'kapner95limit.dat' u (log10($1)):(log10($2)) 	smooth csplines w filledcurve x2 lt 5 ,\
+	'coloradoNature2003.dat' u (log10($1)):(log10($2)) 	smooth csplines w l lt -1 ,\
+	'Irvine1985.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+	'2004prd.trim.dat' u (log10($1)):(log10($2)) 		smooth csplines w l lt -1 ,\
+	'stanfordPRD2005.dat' u (log10($1)):(log10($2)) 	smooth csplines w l lt -1 ,\
+	'kapner95limit.dat' u (log10($1)):(log10($2)) 	smooth csplines w l lt -1 ,\
+	0.0   lt 0 
+
+#	log10(goodcaselimit(10**x)) w l lt 0,\
+#	log10(limit100(10**x))     w filledcurve x2 lt 5, log10(limit100(10**x))  	lt -1,\
+#	'2004prd.dat' u (log10($1)):(log10($2)) 		smooth csplines w filledcurve x2 lt 4 ,\
+#	'stanfordPRD2005.dat' u (log10($1)):(log10($2)) 	smooth csplines w filledcurve x2 lt 4 ,\
+#	'Irvine1985.dat'  u (log10($1)):(log10(2.0*$2)) 	smooth csplines w filledcurve x2 lt 4 ,\
+#	'coloradoNature2003.dat' u (log10($1)):(log10($2)) 	smooth csplines w filledcurve x2 lt 4 ,\
+#	'coloradoNature2003.dat' u (log10($1)):(log10($2)) 	smooth csplines w l lt -1 ,\
+#	'2004prd.dat' u (log10($1)):(log10($2)) 		smooth csplines w l lt -1 ,\
+#	'stanfordPRD2005.dat' u (log10($1)):(log10($2)) 	smooth csplines w l lt -1 ,\
+#	'Irvine1985.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+#	'kapnerNov06.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+#	'Moscow.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+#	'kapnerNov06.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+#	0.0   lt 0 
+	#2.0 in Irvine limit due to 68% confidence limit
+	#'shortwashprediction.dat' w lp, \
+	#log10(limit20(10**x)) w l lt 0, \
+	#log10(limit50(10**x)) w l lt 0, \
+	#log10(greatcase(10**x)) w l lt 0,\
+	#log10(greatcaselimit(10**x)) w l lt 1,\
+	#log10(ourlimit1000(10**x)) w filledcurve x2 lt 5, log10(ourlimit1000(10**x)) 	lt 3 ,\
+	#log10(ourlimit500(10**x))  w filledcurve x2 lt 5, log10(ourlimit500(10**x)) 	lt 3 ,\
+	#log10(ourlimit100(10**x))  w filledcurve x2 lt 5, log10(ourlimit100(10**x))  	lt 3 ,\
+	#'kapner95limit.dat' u  (log10($1)):(log10($2)) w lines  lt 0,\
+	#log10(goodcase(10**x)) w l lt 0,\
+######################## BEGIN SEQUENCE7 ##########################
+unset arrow
+unset label
+
+unset key
+set label 1 "Experimentally Excluded" at -3,4 center front 	font "Helvetica, 15"
+#set label 2 "Proposed Experiment" at -4.2,0.3 center front rotate by -39 font "Helvetica, 11"
+set label 3 "Gravitational Strength" at -5.05,-3 front font "Helvetica, 9"
+set label 4 "Stanford 05    "  at -4.5, log10(1.5e5) center front font "Helvetica, 11"
+#set label 5 "Colorado 03" at -3.7,1.8 center front font "Helvetica, 11"
+set label 6 "Washington 04" at -3.1,-0.5 center front font "Helvetica, 11"
+set label 7 "Irvine 80" at -2.55,-1.0 front font "Helvetica, 11"
+#set label 8 "Likely Accessible" at -4.6, -3.5 center front font "Helvetica, 11" 
+set label 9 "Washington 06" at -3.7, -3 center front font "Helvetical, 11"
+
+#Washington
+set arrow 1 from -3,-0.8 to -3.2,-1.5 lt -1 front
+#Colorado
+#set arrow 2 from -3.9,1.6 to -4.1,1.2 lt -1 front
+#Irvine
+set arrow 3 from -2.2,-1.3 to -2.3,-3.1  lt -1 front
+#Stanford
+set arrow 4 from -4.85, 5.15 to -5.,4.9 lt -1 front 
+#Gravitational Strength
+set arrow 5 from -4.7,-2.5 to -5,0 lt 9  lw 1 front
+set arrow 9 from -3.7,-2.7 to -3.6,-1.9 lt -1 front 
+
+set output 'ISLsequence7.eps'
+
+set yrange[-4.5:6]
+pl [x=-5.2:-2] \
+	'Irvine1985.dat'  u (log10($1)):(log10(2.0*$2)) 	smooth csplines w filledcurve x2 lt 5 ,\
+	'2004prd.dat' u (log10($1)):(log10($2)) 		smooth csplines w filledcurve x2 lt 5 ,\
+	'stanfordPRD2005.dat' u (log10($1)):(log10($2)) 	smooth csplines w filledcurve x2 lt 5 ,\
+	'sr2006.dat' u (log10($1/1000.)):(log10($2))		smooth csplines w filledcurve x2 lt 5 ,\
+	'Irvine1985.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+	'2004prd.trim.dat' u (log10($1)):(log10($2)) 		smooth csplines w l lt -1 ,\
+	'stanfordPRD2005.dat' u (log10($1)):(log10($2)) 	smooth csplines w l lt -1 ,\
+	'sr2006.dat' u (log10($1/1000.)):(log10($2))		smooth csplines w l lt -1 ,\
+	0.0   lt 0 
+
+#	'kapnerPRLArxiV.dat' u (log10($1)):(log10($2))	 	smooth csplines w l lt -1 ,\
+#	log10(goodcaselimit(10**x)) w l lt 0,\
+#	log10(limit100(10**x))     w filledcurve x2 lt 5, log10(limit100(10**x))  	lt -1,\
+#	'2004prd.dat' u (log10($1)):(log10($2)) 		smooth csplines w filledcurve x2 lt 4 ,\
+#	'stanfordPRD2005.dat' u (log10($1)):(log10($2)) 	smooth csplines w filledcurve x2 lt 4 ,\
+#	'Irvine1985.dat'  u (log10($1)):(log10(2.0*$2)) 	smooth csplines w filledcurve x2 lt 4 ,\
+#	'coloradoNature2003.dat' u (log10($1)):(log10($2)) 	smooth csplines w filledcurve x2 lt 4 ,\
+#	'coloradoNature2003.dat' u (log10($1)):(log10($2)) 	smooth csplines w l lt -1 ,\
+#	'2004prd.dat' u (log10($1)):(log10($2)) 		smooth csplines w l lt -1 ,\
+#	'stanfordPRD2005.dat' u (log10($1)):(log10($2)) 	smooth csplines w l lt -1 ,\
+#	'Irvine1985.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+#	'kapnerNov06.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+#	'Moscow.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+#	'kapnerNov06.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+#	0.0   lt 0 
+	#2.0 in Irvine limit due to 68% confidence limit
+	#'shortwashprediction.dat' w lp, \
+	#log10(limit20(10**x)) w l lt 0, \
+	#log10(limit50(10**x)) w l lt 0, \
+	#log10(greatcase(10**x)) w l lt 0,\
+	#log10(greatcaselimit(10**x)) w l lt 1,\
+	#log10(ourlimit1000(10**x)) w filledcurve x2 lt 5, log10(ourlimit1000(10**x)) 	lt 3 ,\
+	#log10(ourlimit500(10**x))  w filledcurve x2 lt 5, log10(ourlimit500(10**x)) 	lt 3 ,\
+	#log10(ourlimit100(10**x))  w filledcurve x2 lt 5, log10(ourlimit100(10**x))  	lt 3 ,\
+	#'kapner95limit.dat' u  (log10($1)):(log10($2)) w lines  lt 0,\
+	#log10(goodcase(10**x)) w l lt 0,\
+
+######################## BEGIN SEQUENCE8 ##########################
+unset arrow
+unset label
+
+unset key
+set label 1 "Experimentally Excluded" at -3,4 center front 	font "Helvetica, 15"
+#set label 2 "Proposed Experiment" at -4.2,0.3 center front rotate by -39 font "Helvetica, 11"
+set label 3 "Gravitational Strength" at -5.05,-3 front font "Helvetica, 9"
+set label 4 "Stanford 05    "  at -4.5, log10(1.5e5) center front font "Helvetica, 11"
+#set label 5 "Colorado 03" at -3.7,1.8 center front font "Helvetica, 11"
+set label 6 "Washington 04" at -3.1,-0.5 center front font "Helvetica, 11"
+set label 7 "Irvine 80" at -2.55,-1.0 front font "Helvetica, 11"
+#set label 8 "Likely Accessible" at -4.6, -3.5 center front font "Helvetica, 11" 
+set label 9 "Washington 06" at -3.7, -3 center front font "Helvetica, 11"
+set label 12 "Huazhong 07" at -3.8, 1 center front font "Helvetica, 11"
+
+#Washington
+set arrow 1 from -3,-0.8 to -3.2,-1.5 lt -1 front
+#Colorado
+#set arrow 2 from -3.9,1.6 to -4.1,1.2 lt -1 front
+#Irvine
+set arrow 3 from -2.2,-1.3 to -2.3,-3.1  lt -1 front
+#Stanford
+set arrow 4 from -4.85, 5.15 to -5.,4.9 lt -1 front 
+#Gravitational Strength
+set arrow 5 from -4.7,-2.5 to -5,0 lt 9  lw 1 front
+set arrow 9 from -3.7,-2.7 to -3.6,-1.9 lt -1 front 
+set arrow 12 from -3.85,0.7 to -4.1,0 lt -1 front
+
+set output 'ISLsequence8.eps'
+
+set yrange[-4.5:6]
+pl [x=-5.2:-2] \
+	'Irvine1985.dat'  u (log10($1)):(log10(2.0*$2)) 	smooth csplines w filledcurve x2 lt 5 ,\
+	'2004prd.dat' u (log10($1)):(log10($2)) 		smooth csplines w filledcurve x2 lt 5 ,\
+	'stanfordPRD2005.dat' u (log10($1)):(log10($2)) 	smooth csplines w filledcurve x2 lt 5 ,\
+	'sr2006.dat' u (log10($1/1000.)):(log10($2))		smooth csplines w filledcurve x2 lt 5 ,\
+	'Irvine1985.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+	'2004prd.trim.dat' u (log10($1)):(log10($2)) 		smooth csplines w l lt -1 ,\
+	'stanfordPRD2005.dat' u (log10($1)):(log10($2)) 	smooth csplines w l lt -1 ,\
+	'sr2006.dat' u (log10($1/1000.)):(log10($2))		smooth csplines w l lt -1 ,\
+	'Huazhong.dat' u (log10($1)):(log10($2)) 	smooth csplines w l lt -1 ,\
+	0.0   lt 0 
+
+#	'kapnerPRLArxiV.dat' u (log10($1)):(log10($2))	 	smooth csplines w l lt -1 ,\
+#	log10(goodcaselimit(10**x)) w l lt 0,\
+#	log10(limit100(10**x))     w filledcurve x2 lt 5, log10(limit100(10**x))  	lt -1,\
+#	'2004prd.dat' u (log10($1)):(log10($2)) 		smooth csplines w filledcurve x2 lt 4 ,\
+#	'stanfordPRD2005.dat' u (log10($1)):(log10($2)) 	smooth csplines w filledcurve x2 lt 4 ,\
+#	'Irvine1985.dat'  u (log10($1)):(log10(2.0*$2)) 	smooth csplines w filledcurve x2 lt 4 ,\
+#	'coloradoNature2003.dat' u (log10($1)):(log10($2)) 	smooth csplines w filledcurve x2 lt 4 ,\
+#	'coloradoNature2003.dat' u (log10($1)):(log10($2)) 	smooth csplines w l lt -1 ,\
+#	'2004prd.dat' u (log10($1)):(log10($2)) 		smooth csplines w l lt -1 ,\
+#	'stanfordPRD2005.dat' u (log10($1)):(log10($2)) 	smooth csplines w l lt -1 ,\
+#	'Irvine1985.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+#	'kapnerNov06.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+#	'Moscow.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+#	'kapnerNov06.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+#	0.0   lt 0 
+	#2.0 in Irvine limit due to 68% confidence limit
+	#'shortwashprediction.dat' w lp, \
+	#log10(limit20(10**x)) w l lt 0, \
+	#log10(limit50(10**x)) w l lt 0, \
+	#log10(greatcase(10**x)) w l lt 0,\
+	#log10(greatcaselimit(10**x)) w l lt 1,\
+	#log10(ourlimit1000(10**x)) w filledcurve x2 lt 5, log10(ourlimit1000(10**x)) 	lt 3 ,\
+	#log10(ourlimit500(10**x))  w filledcurve x2 lt 5, log10(ourlimit500(10**x)) 	lt 3 ,\
+	#log10(ourlimit100(10**x))  w filledcurve x2 lt 5, log10(ourlimit100(10**x))  	lt 3 ,\
+	#'kapner95limit.dat' u  (log10($1)):(log10($2)) w lines  lt 0,\
+	#log10(goodcase(10**x)) w l lt 0,\
+
+######################## BEGIN SEQUENCE9 ##########################
+#torque(x,y)=pi/4*G*h*w*w*ph*(ph-pl)*y*y*(x+y)*exp(-x/y)
+torque1(x,y)=pi*G*h1*(w1*w1/4-j1*j1)*pa1*(ph1-pl1)*y*y*exp(-x/y)
+G=6.674215e-11
+#h1=0.0254*2 # Pendulum height
+#w1=0.0254*2.5 # Pendulum Width
+#j1=0.0254*0.5 #Distance from pendulum center to step.
+#thickness1=0.0254*1/16.
+#ph1=21450 #Pt
+#pl1=4507 #Ti www.webelements
+#pa1=21450 #Pt
+#pa=4507
+h1=50e-3 # Pendulum height
+w1=2.5*25e-3 # Pendulum Width
+#h1=50e-3 # Pendulum height
+#w1=60e-3 # Pendulum Width
+j1=3e-3  #Distance from pendulum center to step.
+thickness1=2e-3
+ph1=21450 #Pt
+pl1=4507 #Ti www.webelements
+pa1=21450 #Pt
+a1=300e-6 # inset thickness
+da1=300e-6 # attractor thickness
+
+dm1=thickness1-2.0*a1 #pendulum thickness
+atorque1(x,y)=torque1(x,y)* (1-exp(-1.0*a1/y)) * (1-exp(-1.0*(a1+dm1)/y))* (1-exp(-1.0*da1/y))
+
+print "Pendulum 1 Mass in kg"
+print (w1*h1*pl1*thickness1+2*(w1/2-j1)*h1*ph1*a1-2*(w1/2-j1)*h1*pl1*a1)
+
+#Long Range(year 3)
+
+#torque(x,y)=pi/4*G*h*w*w*ph*(ph-pl)*y*y*(x+y)*exp(-x/y)
+torque3(x,y)=pi*G*h3*(w3*w3/4-j3*j3)*pa3*(ph3-pl3)*y*y*exp(-x/y)
+h3=0.0254*2 # Pendulum height
+w3=0.0254*2.5 # Pendulum Width
+j3=0.0254*0.5 #Distance from pendulum center to step.
+thickness3=0.0254*1/4.
+ph3=21450 #Pt
+pl3=4507 #Ti www.webelements
+pa3=18000 #HeavyMet?
+#pa=4507
+
+
+a3=300e-6 # inset thickness
+dm3=thickness3-2.0*a3 #pendulum thickness
+da3=3e-3 #100e-6 # attractor thickness
+atorque3(x,y)=torque3(x,y)* (1-exp(-1.0*a3/y)) * (1-exp(-1.0*(a3+dm3)/y))* (1-exp(-1.0*da3/y))
+
+print "Pendulum 3 Mass in kg"
+print (w3*h3*pl3*thickness3+2*(w3/2-j3)*h3*ph3*a3-2*(w3/2-j3)*h3*pl3*a3)
+
+#pl [x=1e-4:2e-4] atorque(x,1e-3), atorque(x,1e-4),atorque(x,5e-5), atorque(x,1e-5),atorque(x,5e-6), atorque(x,1e-6), torque(x,1e-3), torque(x,1e-4), torque(x,1e-5), torque(x,1e-6)
+
+#mtorque=7.1e-15
+#magtorque(x)=mtorque/(atorque(x,100e-6)-atorque(5e-3,100e-6))
+
+#print 1.0
+#print magtorque(100e-6)
+
+
+set term postscript enhanced color solid 
+set size 0.6,0.6
+set output 'nsf_sger_proposal.LogPlot.ps'
+#0.79 fJ/day
+#PREPROPOSAL
+#Tmin100=0.5/sqrt(10)/2.25*1e-15*2.0 #(2.0 brings us to 95% limits) 2.25 from a 4.5". sqrt(10)from 10  days integration 1e-15 from fJ
+#PROPOSAL
+#Tmin100=1.7e-16*2.0
+Tmin100=.7e-16*2.0
+Tmin500=Tmin100
+Tmin1000=Tmin100
+#0.79e-15 "conservative"
+Tmin4000=Tmin100/3.2
+
+#set style line 1 @black lw2 # everyone's plot
+
+#set title 'Detection limits for minimum torque of 1.14e-16 J'
+set xlabel "log_{10}({/Symbol l}) (meters)"
+set ylabel "log_{10}(|{/Symbol a}|)"
+
+#Homemade script for explicitly making xtics logged properly.
+load 'logtics.gpl'
+set ytics 1
+
+#set style line 1 lt rgb "black" lw 2
+#pl [x=1e-6:1e-2] Tmin/atorque(1e-3,x), Tmin/atorque(1e-4,x), Tmin/atorque(1e-5,x), Tmin/atorque(70e-6,x), 'shortwashprediction.dat' w lp
+
+unset key
+set label 1 "Experimentally Excluded" at -3,4 center front      font "Helvetica, 15"
+set label 2 "Phase 1" at -4.2,0.3 center front rotate by -39 font "Helvetica, 11"
+set label 3 "Gravitational Strength" at -5.05,-3 front font "Helvetica, 9"
+set label 4 "Stanford 05 [5]"  at -4.5, log10(1.5e5) center front font "Helvetica, 11"
+set label 5 "Colorado 03 [11]" at -3.7,1.8 center front font "Helvetica, 11"
+set label 6 "Washington 04 [4]" at -3.1,-0.5 center front font "Helvetica, 11"
+set label 7 "Irvine 80 [2]" at -2.55,-1.0 front font "Helvetica, 11"
+set label 8 "Phase 2" at -4.35, -.85 center front rotate by -39 font "Helvetica, 11" 
+set label 9 "Phase 3" at -2.8, -3. center front font "Helvetica, 11" 
+
+
+#Washington
+set arrow 1 from -3,-0.8 to -3.2,-1.5 lt -1 front
+#Colorado
+set arrow 2 from -3.9,1.6 to -4.1,1.2 lt -1 front
+#Irvine
+set arrow 3 from -2.2,-1.3 to -2.3,-3.1  lt -1 front
+#Stanford
+set arrow 4 from -4.85, 5.15 to -5.,4.9 lt -1 front 
+#Gravitational Strength
+set arrow 5 from -4.7,-2.5 to -5,0 lt 9  lw 1 front
+
+#Tmin100=6e-15
+
+
+#limit100(x)=Tmin100/(atorque1(100e-6,x)-atorque1(e-3,x)) #could be improved if we could back up further.
+#limit50(x)=Tmin100*100/(atorque(50e-6,x)-atorque(5e-3,x))
+#limit20(x)=Tmin100*10000/(atorque(20e-6,x)-atorque(5e-3,x))
+
+#This is a little overzealous... need big thick attractor plate, thick pendulum?
+
+ourlimit100(x)=Tmin100/(atorque1(100e-6,x)-atorque1(500e-6,x))
+#ourlimit500(x)=Tmin500/(atorque1(500e-6,x)-atorque1(750e-6,x))
+#ourlimit1000(x)=Tmin1000/(atorque1(1e-3,x)-atorque1(5e-3,x))
+#goodcase(x)=Tmin100/10.0/(atorque1(75e-6,x)-atorque1(500e-6,x)) #175
+goodcaselimit(x)= Tmin100/5/(atorque1(75e-6,x)-atorque1(5e-3,x))
+
+ourlimit3_500(x)=Tmin4000/(atorque3(500e-6,x)-atorque3(5e-3,x))
+goodcase3_500(x)=ourlimit3_500(x)/10.0
+
+#print ourlimit100(100e-6)
+#greatcase(x)=Tmin100/100.0/(atorque(50e-6,x)-atorque(150e-6,x))
+#greatcaselimit(x)=Tmin100/100.0/(atorque(50e-6,x)-atorque(5e-3,x))
+
+set yrange[-4.3:6]
+pl [x=-5.2:-1.9] \
+        log10(goodcaselimit(10**x)) w l lt 2,\
+        log10(ourlimit3_500(10**x)) w filledcurve x2 lt 6,\
+        log10(ourlimit3_500(10**x)) w l lt -1,\
+        log10(ourlimit100(10**x))     w filledcurve x2 lt 5, log10(ourlimit100(10**x))          lt -1,\
+        '~/physics/eot-vos/2004prd.dat' u (log10($1)):(log10($2))               smooth csplines w filledcurve x2 lt 4 ,\
+        '~/physics/eot-vos/stanfordPRD2005.dat' u (log10($1)):(log10($2))       smooth csplines w filledcurve x2 lt 4 ,\
+        '~/physics/eot-vos/Irvine1985.dat'  u (log10($1)):(log10(2.0*$2))       smooth csplines w filledcurve x2 lt 4 ,\
+        '~/physics/eot-vos/coloradoNature2003.dat' u (log10($1)):(log10($2))    smooth csplines w filledcurve x2 lt 4 ,\
+        '~/physics/eot-vos/coloradoNature2003.dat' u (log10($1)):(log10($2))    smooth csplines w l lt -1 ,\
+        '~/physics/eot-vos/2004prd.dat' u (log10($1)):(log10($2))               smooth csplines w l lt -1 ,\
+        '~/physics/eot-vos/stanfordPRD2005.dat' u (log10($1)):(log10($2))       smooth csplines w l lt -1 ,\
+        '~/physics/eot-vos/Irvine1985.dat' u (log10($1)):(log10(2.0*($2)))      smooth csplines w l lt -1 ,\
+        0.0   lt 0
+
+        #2.0 in Irvine limit due to 68% confidence limit
+        #'shortwashprediction.dat' w lp, \
+        #log10(limit20(10**x)) w l lt 0, \
+        #log10(limit50(10**x)) w l lt 0, \
+        #log10(greatcase(10**x)) w l lt 0,\
+        #log10(greatcaselimit(10**x)) w l lt 1,\
+        #log10(ourlimit1000(10**x)) w filledcurve x2 lt 5, log10(ourlimit1000(10**x))   lt 3 ,\
+        #log10(ourlimit500(10**x))  w filledcurve x2 lt 5, log10(ourlimit500(10**x))    lt 3 ,\
+        #log10(ourlimit100(10**x))  w filledcurve x2 lt 5, log10(ourlimit100(10**x))    lt 3 ,\
+        #'kapner95limit.dat' u  (log10($1)):(log10($2)) w lines  lt 0,\
+        #log10(goodcase(10**x)) w l lt 0,\
+        #log10(goodcase3_500(10**x)) w l lt 0,\
+
+
+
+
+
+
+
+
+
+unset arrow
+unset label
+
+unset key
+set label 1 "Experimentally Excluded" at -3,4 center front 	font "Helvetica, 15"
+#set label 2 "Proposed Experiment" at -4.2,0.3 center front rotate by -39 font "Helvetica, 11"
+set label 3 "Gravitational Strength" at -5.05,-3 front font "Helvetica, 9"
+set label 4 "Stanford 05    "  at -4.5, log10(1.5e5) center front font "Helvetica, 11"
+#set label 5 "Colorado 03" at -3.7,1.8 center front font "Helvetica, 11"
+#set label 6 "Washington 04" at -3.1,-0.5 center front font "Helvetica, 11"
+set label 7 "Irvine 80" at -2.55,-1.0 front font "Helvetica, 11"
+#set label 8 "Likely Accessible" at -4.6, -3.5 center front font "Helvetica, 11" 
+set label 9 "Washington 06" at -3.1, -0.5 center front font "Helvetica, 11"
+set label 12 "Huazhong 07" at -3.8, 1 center front font "Helvetica, 11"
+set label 13 "Phase 1" at -4,-1.35 center front rotate by -37 font "Helvetica, 11"
+set label 14 "Phase 2" at -4,-2.3 center front rotate by -30 font "Helvetica, 11"
+set label 15 "The Future!" at -2.7,-3 center front font "Helvetica, 11"
+
+
+#Washington
+#set arrow 1 from -3,-0.8 to -3.2,-1.5 lt -1 front
+#Colorado
+#set arrow 2 from -3.9,1.6 to -4.1,1.2 lt -1 front
+#Irvine
+set arrow 3 from -2.2,-1.3 to -2.3,-3.1  lt -1 front
+#Stanford
+set arrow 4 from -4.85, 5.15 to -5.,4.9 lt -1 front 
+#Gravitational Strength
+set arrow 5 from -4.7,-2.5 to -5,0 lt 9  lw 1 front
+set arrow 9 from -3,-0.8 to -3.6,-1.9 lt -1 front 
+set arrow 12 from -3.85,0.7 to -4.1,0 lt -1 front
+
+set output 'ISLsequence9.eps'
+
+set yrange[-4.5:6]
+pl [x=-5.2:-2] \
+        log10(goodcaselimit(10**x)) w filledcurve x2 lt 8,\
+        log10(goodcaselimit(10**x)) w l lt -1,\
+        log10(ourlimit3_500(10**x)) w filledcurve x2 lt 6,\
+        log10(ourlimit3_500(10**x)) w l lt -1,\
+        log10(ourlimit100(10**x))   w filledcurve x2 lt 1,\
+	log10(ourlimit100(10**x))   lt -1,\
+	'Irvine1985.dat'  u (log10($1)):(log10(2.0*$2)) 	smooth csplines w filledcurve x2 lt 5 ,\
+	'stanfordPRD2005.dat' u (log10($1)):(log10($2)) 	smooth csplines w filledcurve x2 lt 5 ,\
+	'sr2006.dat' u (log10($1/1000.)):(log10($2))		smooth csplines w filledcurve x2 lt 5 ,\
+	'Irvine1985.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+	'stanfordPRD2005.dat' u (log10($1)):(log10($2)) 	smooth csplines w l lt -1 ,\
+	'sr2006.dat' u (log10($1/1000.)):(log10($2))		smooth csplines w l lt -1 ,\
+	'Huazhong.dat' u (log10($1)):(log10($2)) 	smooth csplines w l lt -1 ,\
+	0.0   lt 0 
+
+#	'kapnerPRLArxiV.dat' u (log10($1)):(log10($2))	 	smooth csplines w l lt -1 ,\
+#	log10(goodcaselimit(10**x)) w l lt 0,\
+#	log10(limit100(10**x))     w filledcurve x2 lt 5, log10(limit100(10**x))  	lt -1,\
+#	'2004prd.dat' u (log10($1)):(log10($2)) 		smooth csplines w filledcurve x2 lt 4 ,\
+#	'stanfordPRD2005.dat' u (log10($1)):(log10($2)) 	smooth csplines w filledcurve x2 lt 4 ,\
+#	'Irvine1985.dat'  u (log10($1)):(log10(2.0*$2)) 	smooth csplines w filledcurve x2 lt 4 ,\
+#	'coloradoNature2003.dat' u (log10($1)):(log10($2)) 	smooth csplines w filledcurve x2 lt 4 ,\
+#	'coloradoNature2003.dat' u (log10($1)):(log10($2)) 	smooth csplines w l lt -1 ,\
+#	'2004prd.dat' u (log10($1)):(log10($2)) 		smooth csplines w l lt -1 ,\
+#	'stanfordPRD2005.dat' u (log10($1)):(log10($2)) 	smooth csplines w l lt -1 ,\
+#	'Irvine1985.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+#	'kapnerNov06.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+#	'Moscow.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+#	'kapnerNov06.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
+#	0.0   lt 0 
+	#2.0 in Irvine limit due to 68% confidence limit
+	#'shortwashprediction.dat' w lp, \
+	#log10(limit20(10**x)) w l lt 0, \
+	#log10(limit50(10**x)) w l lt 0, \
+	#log10(greatcase(10**x)) w l lt 0,\
+	#log10(greatcaselimit(10**x)) w l lt 1,\
+	#log10(ourlimit1000(10**x)) w filledcurve x2 lt 5, log10(ourlimit1000(10**x)) 	lt 3 ,\
+	#log10(ourlimit500(10**x))  w filledcurve x2 lt 5, log10(ourlimit500(10**x)) 	lt 3 ,\
+	#log10(ourlimit100(10**x))  w filledcurve x2 lt 5, log10(ourlimit100(10**x))  	lt 3 ,\
+	#'kapner95limit.dat' u  (log10($1)):(log10($2)) w lines  lt 0,\
+	#log10(goodcase(10**x)) w l lt 0,\
+
+        #log10(goodcaselimit(10**x)) w l lt 2,\
+        #log10(ourlimit3_500(10**x)) w filledcurve x2 lt 6,\
+        #log10(ourlimit3_500(10**x)) w l lt -1,\
+        #log10(ourlimit100(10**x))     w filledcurve x2 lt 5,\
+	#log10(ourlimit100(10**x))          lt -1,\

@@ -1,0 +1,10 @@
+#Taken from the upper chart (95% confidence limit) of Kapultnik's 2005 prd
+#L	alpha
+4e-6	1.5e8
+6e-6	2.0e6
+10e-6	5.1e4
+18e-6	3.7e3
+34e-6	8.4e2
+66e-6	4.4e2
+#130e-6	3.6e2
+#258e-6	3.3e2
