@@ -172,8 +172,15 @@ Four fundamental interactions are known.
  planetary motions; electromagnetism, which describes the interactions of
  electrically charged objects, and the weak force and strong forces, which
  govern nuclear and subnuclear dynamics.
- The electric and weak forces were unified theoretically by XXX as the electrowe
-ak interaction in XXX.
+ The electric and weak forces were unified theoretically by Glashow, Salam,
+ and Weinberg as the electroweak interaction in 1967
+\begin_inset CommandInset citation
+LatexCommand citet
+key "GSWNobelPrize"
+
+\end_inset
+
+.
  The strong force is described well by quantum chromodynamics.
  The resulting theory of the electroweak and the strong, precisely tested,
  finely tuned, and quantum in nature, is known as the Standard Model.
@@ -245,7 +252,8 @@ key "lrr-2006-3"
 \end_inset
 
 , but does not contain any hint of quantum probability or uncertainty.
- General Relativity and quantum mechanics have no known mathematical connection.
+ Gravity and quantum mechanics are mathematically incompatible.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -284,7 +292,14 @@ Dark Energy
 \begin_inset Formula $10^{120}$
 \end_inset
 
- times too large XXX.
+ times too large
+\begin_inset CommandInset citation
+LatexCommand citet
+key "CosmologicalConstantProblem"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -352,8 +367,7 @@ key "Newton1687"
  attractive, is proportional to the mass of each object, and inversely proportio
 nal to the square of the distance between them.
  This model was remarkably good at predicting the motion of celestial orbits,
- the tides, and gave the first quantitative estimate of the mass of the
- Earth.
+ the tides, and gave the first quantitative value for the mass of the Earth.
 \end_layout
 
 \begin_layout Standard
@@ -395,7 +409,7 @@ key "adelberger2003tests"
  of Washington 
 \begin_inset CommandInset citation
 LatexCommand citet
-key "Cook2013"
+key "Cook2013,NewmanProgressOnExperimentalTest2011"
 
 \end_inset
 
@@ -406,14 +420,7 @@ key "2007PhRvL..98t1101T,PhysRevLett.108.081101"
 
 \end_inset
 
-, University of Indiana 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "long2012experimental"
-
-\end_inset
-
-, Washington University at St.
+, University of Indiana, Washington University at St.
  Louis
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -608,15 +615,16 @@ If parametrized as a particle-exchange theory, string theory predicts two
 \end_layout
 
 \begin_layout Standard
-In general, the compactification scales are quite small, 
-\begin_inset Formula $10^{-XXX}$
+In general, the compactification scales can be as small as the Planck scale,
+ 
+\begin_inset Formula $\sim10^{-35}$
 \end_inset
 
 
 \begin_inset space ~
 \end_inset
 
-m or smaller.
+m.
  It was shown in 1998 by Arkani-Hamed, Dimopoulos, and Dvali that, using
  the then-current limits on the gravitational inverse square law, the compactifi
 cation scale of one or more of these extra dimensions could be as large
@@ -646,22 +654,29 @@ key "2007PhRvL..98b1101K"
 
 m for one extra dimension.
  Greater numbers of extra dimensions are more stringently constrained by
- collider experiments XXX
+ collider experiments 
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-Insert citation from bibtex.huge.Search for Signatures of Extra Dimensions
+XXX Insert citation from bibtex.huge.Search for Signatures of Extra Dimensions
  in the Diphoton Mass Spectrum at the Large Hadron Collider 
 \end_layout
 
 \end_inset
 
-, at scales below XXX 
+ at scales below 40 
 \begin_inset Formula $\mu$
 \end_inset
 
-m.
+m
+\begin_inset CommandInset citation
+LatexCommand citet
+key "antoniadis2011short"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -693,7 +708,7 @@ dark energy
  negative pressure.
  
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 If measured in accordance with the usual FRW parametrization, XXX ...
@@ -706,10 +721,17 @@ If measured in accordance with the usual FRW parametrization, XXX ...
 \end_layout
 
 \begin_layout Standard
-If the measurements of the Hubble Constant (WMAP: XXX, Planck: 
+If the measurements of the Hubble Constant (WMAP: 
 \begin_inset CommandInset citation
 LatexCommand citet
-key "Ade:2013ktc,Ade:2013zuv"
+key "WMAPYear9"
+
+\end_inset
+
+, Planck: 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Ade:2013zuv,Ade:2013ktc"
 
 \end_inset
 
@@ -795,7 +817,14 @@ key "Misner_1973"
 \begin_inset Formula $\Lambda_{ParticleTheory}\sim10^{120}\Lambda_{Observed}$
 \end_inset
 
- XXX.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "CosmologicalConstantProblem"
+
+\end_inset
+
+.
  Without a physically-motivated infrared cutoff to the necessary integrals,
  there is no known explanation for this discrepancy.
 \end_layout
@@ -984,15 +1013,30 @@ Unparticles
 \end_layout
 
 \begin_layout Standard
-Weinberg kicked off a flurry of theoretical work by noting the possibility
- of interactions with novel dispersion relations, where the particle propagator
- was XXX instead of 
+Georgi kicked off a flurry of theoretical work by noting the possibility
+ of interactions with novel dispersion relations, with a scale-invariant
+ particle propagator instead of 
 \begin_inset Formula $\frac{1}{k^{2}+m^{2}}$
 \end_inset
 
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "PhysRevLett.98.221601,Georgi2007275"
+
+\end_inset
+
 .
- Unparticle interactions would appear in tests of short range gravity by
- XXX.
+ In particular, the properties of an interaction might be scale-invariant
+ without requiring that the propagating particle have zero mass.
+ Unparticle interactions could appear in tests of short range gravity
+\begin_inset CommandInset citation
+LatexCommand citet
+key "PhysRevLett.100.031803UnparticleTestability"
+
+\end_inset
+
+.
  The existing body of inverse square law tests served to place the most
  stringent constraints on XXX.
  The tight constraints, on new theory, that stem from precision tests of
@@ -1005,7 +1049,7 @@ Other
 \end_layout
 
 \begin_layout Standard
-Chinese QCD scale stuff? LHC gravity physics
+Chinese QCD scale stuff? LHC gravity physics XXX
 \end_layout
 
 \begin_layout Section
@@ -1018,6 +1062,14 @@ Tests of gravity using test bodies with known masses have now spanned about
  Gravity itself has been observed consistent with an inverse square law
  over the roughly sixteen orders of magnitude from the solar system scale
  down to the size of a human hair.
+ Useful reviews are more comprehensive than will be presented here 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "adelberger2003tests,antoniadis2011short,NewmanBoyntonReview2009"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -1029,23 +1081,49 @@ Precision measurements of the distance dependence of gravity may have begun
  Astronomical tests of gravity remain the most precise, providing direct
  tests of General Relativity in addition to Newton's Laws.
  In order of decreasing range and increasing precision, the currently leading
- solar system tests of gravity are the Pioneer spacecraft [XXX], the Cassini
- mission to Saturn [XXX], radar ranging to Mars [XXX], and the very precise
- lunar laser ranging [XXX].
- The lunar results are, up to any theoretical uncertainties in the complicated
- astronomical modeling code, by far the most precise tests of gravity.
- The experimental data are consistent with the inverse square law at the
- 
-\begin_inset Formula $10^{-XXX}$
+ solar system tests of gravity are the Pioneer spacecraft 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "PhysRevLett.108.241101"
+
 \end_inset
 
- level [XXX].
+, the Cassini mission to Saturn [XXX], radar ranging to Mars [XXX], and
+ the very precise lunar laser ranging 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Murphy2008,MurphyLLRReview"
+
+\end_inset
+
+.
+ The lunar results are, up to any theoretical uncertainties in the complicated
+ astronomical modeling code, by far the most precise tests of gravity.
+ The experimental data are consistent with the inverse square law at better
+ than the 
+\begin_inset Formula $10^{-10}$
+\end_inset
+
+ level 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "adelberger2003tests"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-In the laboratory, direct observations began with XXX and Cavendish with
- a torsion balance in XXX, observing gravity at scales of tens of centimeters
- to meters.
+In the laboratory, direct observations began with Michell and Cavendish's
+ torsion balance in 1798 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Cavendish1798"
+
+\end_inset
+
+, observing gravity at scales of tens of centimeters to meters.
  Successive improvements on that method and tests with improved gravimeters
  have extended tests of gravity out to scales the size of Earth [XXX](XXX
  Do gravimeter measurements actually hit 
@@ -1089,9 +1167,23 @@ key "PhysRevLett.44.1645"
 \end_inset
 
 .
- XXX Paik/MoodyThis remains the best published limit from scales of XXX-XXX
- cm, though an improved result from XXX, Boynton, Newman, and collaborators
- is expected soon.
+ A novel superconducting Gauss' Law test by Moody and Paik remains the best
+ published limit from scales for scales of about a meter 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "PhysRevLett.70.1195"
+
+\end_inset
+
+, though an improved result from Boynton, Newman, and collaborators is expected
+ soon
+\begin_inset CommandInset citation
+LatexCommand citet
+key "NewmanProgressOnExperimentalTest2011"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -1306,7 +1398,7 @@ vation of unexpected physics, and beyond the scope of this thesis.
 
 \begin_layout Standard
 Gravitational tests for micron-scale extra dimensions with astrophysical
- sources has been proposed by Simonetti et al.
+ sources have been proposed by Simonetti et al.
  
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -1315,6 +1407,43 @@ key "Simonetti:2010mk,Kavic:2008qb"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Section
+Experimenter's motivation
+\end_layout
+
+\begin_layout Standard
+If the theoretical arguments in favor of short-range gravity tests are insuffici
+ent, perhaps this will suffice: Pick up a caliper and dial it to 
+\begin_inset Formula $50$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m.
+ If no caliper is handy, pluck a hair from your head.
+ We know almost nothing about gravity on that scale.
+ For every other known interaction of nature, our understanding reaches
+ far below the diameter of a proton.
+ That's more than 10,000,000,000 times smaller.
+ At scales of a micron, gravity could be repulsive and 
+\begin_inset Formula $10^{10}$
+\end_inset
+
+ times stronger.
+ We don't know.
+\end_layout
+
+\begin_layout Standard
+That's why this work is important.
+ 
 \end_layout
 
 \begin_layout Chapter
