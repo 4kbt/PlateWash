@@ -1331,15 +1331,9 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-XXX ISL existing limits
-\end_layout
+\begin_inset Graphics
+	filename plots/ISL/ISLFullRange.eps
+	width 50text%
 
 \end_inset
 
@@ -1347,6 +1341,14 @@ XXX ISL existing limits
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+ISL existing limits
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -1356,6 +1358,39 @@ XXX ISL existing limits
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename plots/ISL/ISLShortRange.eps
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Laboratory Tests of Gravity
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
 At distances shorter than 
 \begin_inset Formula $\sim5\,\mu$
 \end_inset
@@ -1618,11 +1653,12 @@ When
 \begin_inset Formula $\lambda\rightarrow\infty$
 \end_inset
 
-, the Yukawa interaction is blurred into an altered 
+, the Yukawa interaction is indistinguishable from an altered 
 \begin_inset Formula $G$
 \end_inset
 
-, 
+.
+ 
 \begin_inset Formula $F_{Y}\rightarrow2\pi G\rho_{1}\rho_{2}A\alpha t_{1}t_{2}$
 \end_inset
 
@@ -2213,8 +2249,18 @@ foil
 \begin_inset Formula $12.5\,\mu$
 \end_inset
 
-m thick BeCu alloy foil over the tapered end of an 79XXX mm inner diameter
- Al tube like a drumhead.
+m 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXX verify thickness
+\end_layout
+
+\end_inset
+
+thick BeCu alloy foil (Micro-Tek, Diamond Bar CA) over the tapered end of
+ an 79XXX mm inner diameter Al tube like a drumhead.
  The foil was flat to XXX 
 \begin_inset Formula $\mu$
 \end_inset
@@ -2474,7 +2520,7 @@ The attractor's flexure stage was electric-discharge machined from a single
  It was actuated by an internal bronze bellows that was driven by a pulse-width
  modulated reed valve/vented accumulator apparatus external to the vacuum
  enclosure.
- The motion of the stage was monitored by a Micro-E 3000V XXX encoder system
+ The motion of the stage was monitored by a Micro-E 3000V encoder system
  with a claimed interpolated resolution of 20 nm 
 \begin_inset Note Note
 status open
@@ -2611,9 +2657,9 @@ q-tester
 kg lead blocks were hung on opposite sides of the vacuum jar by nylon straps
  attached to a rotating armature which operated continuously during data
  acquisition.
- The blocks were weighed with a common bathroom scale (XXX how to calibrate?
- linearity?), and computed by averaging seven measured differences between
- the experimentalist's body weight with and without each block.
+ The blocks were weighed with a bathroom scale (XXX how to calibrate? linearity?
+), and computed by averaging seven measured differences between the experimental
+ist's body weight with and without each block.
  The 
 \begin_inset Formula $4"\times4"\times8"$
 \end_inset
@@ -3176,7 +3222,14 @@ where
 \end_layout
 
 \begin_layout Standard
-For PlateWash, which we used in XXX, we found that
+For PlateWash, which we used in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "schlamminger2010indirect"
+
+\end_inset
+
+, we found that
 \end_layout
 
 \begin_layout Standard
