@@ -2,7 +2,9 @@ include ../Makefile.inc
 
 EXTRACTEDDEPS := $(shell grep filename thesis.lyx | awk '{print $$2}' | sed 's/\"//g')
 
-PLOTTARGETS := $(shell grep eps  plots/Makefile | awk '{print $$1}' | grep eps | sed 's/^/plots\//')
+DEEPMAKES := $(shell find `pwd`/plots/ -name Makefile)
+
+PLOTTARGETS := $(shell grep eps  $(DEEPMAKES) | awk '{print $$1}' | grep eps | sed 's/Makefile://g'| sed 's/://g')
 
 
 thesis.pdf : thesis.lyx $(EXTRACTEDDEPS)
