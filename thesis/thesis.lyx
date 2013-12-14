@@ -234,7 +234,7 @@ XXX insert from bibtex.huge: Observation of a new particle in the search
 Observations which the Standard Model cannot explain:
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 Gravity: There is no tree-level coupling between uncharged objects in the
  Standard Model.
  Furthermore, on a charge for charge basis, the interactions in the Standard
@@ -256,7 +256,7 @@ key "lrr-2006-3"
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 Neutrino mass, oscillation: The Standard Model admits only massless left-handed
  neutrinos, yet they are observed to have a small but very significant,
  mass.
@@ -275,7 +275,7 @@ standard
  theory XXX.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 The Cosmological Constant Problem/Dark Energy: Astronomical observations
  suggest that the universe is expanding, and doing so at a rate which is
  increasing XXX.
@@ -302,7 +302,7 @@ key "CosmologicalConstantProblem"
 .
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 Dark Matter: Beginning with the study of galactic rotation curves, a compelling
  body of observations point toward the existence of a novel form of matter,
  perhaps a new family of particles, that, at accessible temperatures, couples
@@ -367,12 +367,22 @@ key "Newton1687"
  attractive, is proportional to the mass of each object, and inversely proportio
 nal to the square of the distance between them.
  This model was remarkably good at predicting the motion of celestial orbits,
- the tides, and gave the first quantitative value for the mass of the Earth.
+ the tides, and gave the first quantitative estimate for the mass of the
+ Earth.
 \end_layout
 
 \begin_layout Standard
-XXX Did Newton also compute the strength at Earth's surface? Was it empirical,
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Did Newton also compute the strength at Earth's surface? Was it empirical,
  or did he invoke a dimensionality argument?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -499,8 +509,15 @@ F_{G}\propto\frac{1}{r^{2+\epsilon}},
 \begin_layout Standard
 In modern work, proposed inverse square law violations are parametrized
  as forces mediated by an exchange particle.
- For both scalar and vector particles XXX, when the fields are weak, the
- modified potential takes the form 
+ For both scalar and vector particles 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "1999snng.book.....F"
+
+\end_inset
+
+ (confirm XXX), when the fields are weak, the modified potential takes the
+ approximate form 
 \end_layout
 
 \begin_layout Standard
@@ -956,12 +973,12 @@ screen
 In addition to their physical motiviation, chameleon interactions are ready-made
  to evade traditional inverse square law tests.
  All precision tests of short-range gravity at gravitational strength to
- date, including the experiment described here, make use of an isolating
- metal foil between the source and detector masses.
- Because of XXX, the isolating foil significantly enhances the effective
- self-screening of the chameleon interaction.
- When searching for this class of interactions, the isolating material must
- be made as thin as possible, or dispensed with entirely.
+ date, including our experiment, place an isolating metal foil between the
+ source and detector masses.
+ Because of the self-screening within materials the isolating foil significantly
+ diminishes the apparent strength of the observable interaction.
+ When searching for chameleons, isolating shields must be made as thin and
+ of as low a density as possible, or dispensed with entirely.
 \end_layout
 
 \begin_layout Standard
@@ -1125,20 +1142,19 @@ key "Cavendish1798"
 
 , observing gravity at scales of tens of centimeters to meters.
  Successive improvements on that method and tests with improved gravimeters
- have extended tests of gravity out to scales the size of Earth [XXX](XXX
- Do gravimeter measurements actually hit 
-\begin_inset Formula $\alpha=1$
+ have extended tests of gravity out to scales the size of Earth 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "1999snng.book.....F"
+
 \end_inset
 
- at Earth radii?).
- From scales of 10 cm out to XXX km, the leading direct measurements of
- gravity are ....
- XXX!
+.
 \end_layout
 
 \begin_layout Standard
-At scales of approximately meters and below, tests of the inverse square
- law become more specialized.
+At scales of meters and below, tests of the inverse square law become more
+ specialized.
  Experimental designs become more and more carefully crafted to suppress
  systematics that would otherwise hide the signature of gravity entirely.
  Prior to 2001, the shortest distance at which gravity had been observed
@@ -1167,8 +1183,8 @@ key "PhysRevLett.44.1645"
 \end_inset
 
 .
- A novel superconducting Gauss' Law test by Moody and Paik remains the best
- published limit from scales for scales of about a meter 
+ A novel superconducting Gauss' Law test by Moody and Paik in 1994 remains
+ the best published limit from scales for scales of about a meter 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "PhysRevLett.70.1195"
@@ -1427,6 +1443,15 @@ key "PhysRevD.77.034020,antoniadis2011short"
 \end_inset
 
 .
+ A very different experiment attempts to place limits on new interactions
+ by searching for on-shell bosons from the sun 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Horvat201121"
+
+\end_inset
+
+.
  At still shorter scales, limits are collider-based, restricted by the non-obser
 vation of unexpected physics, and beyond the scope of this thesis.
 \end_layout
@@ -1476,11 +1501,6 @@ m.
  We don't know.
 \end_layout
 
-\begin_layout Standard
-That's why this work is important.
- 
-\end_layout
-
 \begin_layout Chapter
 Apparatus
 \end_layout
@@ -1493,12 +1513,20 @@ Principle - Gauss' Law Test
 For Coulomb potentials, the field of an infinite sheet of charge is uniform.
  Its strength does not vary with distance from the sheet, nor does its direction.
  This is normally derived by making use of Gauss' law.
- Indeed, it may be shown that, in three dimensions, any force that obeys
+ Indeed, it is easily shown that, in three dimensions, any force that obeys
  a 
 \begin_inset Formula $1/r$
 \end_inset
 
- potential satisfies Gauss' law XXX and vice versa XXX.
+ potential satisfies Gauss' law 
+\begin_inset Formula 
+\[
+-Gm\oiint_{S}\frac{\vec{r}}{|r|^{3}}\cdot d\hat{r}=-4\pi Gm
+\]
+
+\end_inset
+
+ and vice versa.
  Our experiment is a test of the uniformity of the gravitational field of
  an 
 \begin_inset Quotes eld
