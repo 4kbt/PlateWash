@@ -33,7 +33,7 @@
 \use_esint 1
 \use_mhchem 1
 \use_mathdots 1
-\cite_engine basic
+\cite_engine natbib_numerical
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -175,7 +175,7 @@ Four fundamental interactions are known.
  The electric and weak forces were unified theoretically by Glashow, Salam,
  and Weinberg as the electroweak interaction in 1967
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "GSWNobelPrize"
 
 \end_inset
@@ -294,7 +294,7 @@ Dark Energy
 
  times too large
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "CosmologicalConstantProblem"
 
 \end_inset
@@ -315,7 +315,7 @@ Furthermore, the angular power spectra of the cosmic microwave background,
  cosmology theory that includes dark energy and cold dark matter and are
  essentially incompatible with theories that do not 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "Ade:2013ktc,Ade:2013zuv"
 
 \end_inset
@@ -357,7 +357,7 @@ The inverse square law
 Newton proposed the gravitational inverse square law in 1687 in order to
  explain the motions of celestial bodies 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "Newton1687"
 
 \end_inset
@@ -418,7 +418,7 @@ key "adelberger2003tests"
  Current tests of the inverse square law are underway at the University
  of Washington 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "Cook2013,NewmanProgressOnExperimentalTest2011"
 
 \end_inset
@@ -511,7 +511,7 @@ In modern work, proposed inverse square law violations are parametrized
  as forces mediated by an exchange particle.
  For both scalar and vector particles 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "1999snng.book.....F"
 
 \end_inset
@@ -688,7 +688,7 @@ XXX Insert citation from bibtex.huge.Search for Signatures of Extra Dimensions
 
 m
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "antoniadis2011short"
 
 \end_inset
@@ -740,14 +740,14 @@ If measured in accordance with the usual FRW parametrization, XXX ...
 \begin_layout Standard
 If the measurements of the Hubble Constant (WMAP: 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "WMAPYear9"
 
 \end_inset
 
 , Planck: 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "Ade:2013zuv,Ade:2013ktc"
 
 \end_inset
@@ -836,7 +836,7 @@ key "Misner_1973"
 
  
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "CosmologicalConstantProblem"
 
 \end_inset
@@ -864,7 +864,7 @@ Fat Graviton
 \begin_layout Standard
 Raman Sundrum showed in 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "PhysRevD.69.044014"
 
 \end_inset
@@ -887,7 +887,7 @@ fat graviton
  occur at scales greater than 20 microns.
  Experimental attempts to constrain the interaction 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "2007PhRvL..98m1104A"
 
 \end_inset
@@ -912,7 +912,7 @@ et al.
 \emph default
 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "2007PhRvL..98m1104A"
 
 \end_inset
@@ -927,14 +927,14 @@ Chameleons
 \begin_layout Standard
 Khoury and Weltman 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "PhysRevD.69.044026,PhysRevLett.93.171104"
 
 \end_inset
 
  in 2004, and Feldman and Walsh with Nelson, 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "feldman2006new,PhysRevD.77.095006"
 
 \end_inset
@@ -984,7 +984,7 @@ In addition to their physical motiviation, chameleon interactions are ready-made
 \begin_layout Standard
 XXX Uphadye calculable boundaries 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "PhysRevD.86.102003"
 
 \end_inset
@@ -999,7 +999,7 @@ XXX New PRL regarding viability of chameleons
 \begin_layout Standard
 XXX Symmetrons from Upadhye
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "PhysRevLett.110.031301"
 
 \end_inset
@@ -1010,7 +1010,7 @@ key "PhysRevLett.110.031301"
 \begin_layout Standard
 XXX 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "2013arXiv1309.5389J"
 
 \end_inset
@@ -1038,7 +1038,7 @@ Georgi kicked off a flurry of theoretical work by noting the possibility
 
 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "PhysRevLett.98.221601,Georgi2007275"
 
 \end_inset
@@ -1048,7 +1048,7 @@ key "PhysRevLett.98.221601,Georgi2007275"
  without requiring that the propagating particle have zero mass.
  Unparticle interactions could appear in tests of short range gravity
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "PhysRevLett.100.031803UnparticleTestability"
 
 \end_inset
@@ -1081,7 +1081,7 @@ Tests of gravity using test bodies with known masses have now spanned about
  down to the size of a human hair.
  Useful reviews are more comprehensive than will be presented here 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "adelberger2003tests,antoniadis2011short,NewmanBoyntonReview2009"
 
 \end_inset
@@ -1100,7 +1100,7 @@ Precision measurements of the distance dependence of gravity may have begun
  In order of decreasing range and increasing precision, the currently leading
  solar system tests of gravity are the Pioneer spacecraft 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "PhysRevLett.108.241101"
 
 \end_inset
@@ -1108,7 +1108,7 @@ key "PhysRevLett.108.241101"
 , the Cassini mission to Saturn [XXX], radar ranging to Mars [XXX], and
  the very precise lunar laser ranging 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "Murphy2008,MurphyLLRReview"
 
 \end_inset
@@ -1123,7 +1123,7 @@ key "Murphy2008,MurphyLLRReview"
 
  level 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "adelberger2003tests"
 
 \end_inset
@@ -1135,7 +1135,7 @@ key "adelberger2003tests"
 In the laboratory, direct observations began with Michell and Cavendish's
  torsion balance in 1798 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "Cavendish1798"
 
 \end_inset
@@ -1144,7 +1144,7 @@ key "Cavendish1798"
  Successive improvements on that method and tests with improved gravimeters
  have extended tests of gravity out to scales the size of Earth 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "1999snng.book.....F"
 
 \end_inset
@@ -1186,7 +1186,7 @@ key "PhysRevLett.44.1645"
  A novel superconducting Gauss' Law test by Moody and Paik in 1994 remains
  the best published limit from scales for scales of about a meter 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "PhysRevLett.70.1195"
 
 \end_inset
@@ -1194,7 +1194,7 @@ key "PhysRevLett.70.1195"
 , though an improved result from Boynton, Newman, and collaborators is expected
  soon
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "NewmanProgressOnExperimentalTest2011"
 
 \end_inset
@@ -1256,7 +1256,7 @@ key "2007PhRvL..98b1101K"
 
 m 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "Cook2013"
 
 \end_inset
@@ -1302,7 +1302,7 @@ key "2005PhRvD..72l2001S"
 
  and 2008 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "weld2008new"
 
 \end_inset
@@ -1319,7 +1319,7 @@ key "weld2008new"
 
 m 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "2007PhRvL..98t1101T"
 
 \end_inset
@@ -1332,7 +1332,7 @@ key "2007PhRvL..98t1101T"
 
 m 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "Venkateswara2010"
 
 \end_inset
@@ -1446,7 +1446,7 @@ key "PhysRevD.77.034020,antoniadis2011short"
  A very different experiment attempts to place limits on new interactions
  by searching for on-shell bosons from the sun 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "Horvat201121"
 
 \end_inset
@@ -1510,24 +1510,31 @@ Principle - Gauss' Law Test
 \end_layout
 
 \begin_layout Standard
-For Coulomb potentials, the field of an infinite sheet of charge is uniform.
- Its strength does not vary with distance from the sheet, nor does its direction.
- This is normally derived by making use of Gauss' law.
- Indeed, it is easily shown that, in three dimensions, any force that obeys
- a 
+It is easily shown that, in three dimensions, any force that obeys a 
 \begin_inset Formula $1/r$
 \end_inset
 
  potential satisfies Gauss' law 
 \begin_inset Formula 
 \[
--Gm\oiint_{S}\frac{\vec{r}}{|r|^{3}}\cdot d\hat{r}=-4\pi Gm
+-Gm\oiint_{S}\frac{\vec{r}}{|r|^{3}}\cdot d\hat{r}=-4\pi Gm.
 \]
 
 \end_inset
 
- and vice versa.
- Our experiment is a test of the uniformity of the gravitational field of
+ The converse is true, too: If a force law satisfies Gauss' Law, then the
+ field flux through a sphere centered on a point charge must be constant
+ for all sphere radii.
+ As the surface area of the sphere is proportional to the square of its
+ radius, then the field strength must fall as 
+\begin_inset Formula $1/r^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Our experiment is a test of the uniformity of the gravitational field of
  an 
 \begin_inset Quotes eld
 \end_inset
@@ -1545,11 +1552,7 @@ Gauss' law test of gravity.
 \begin_inset Quotes erd
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-For any force, the field from an infinite two-dimensional sheet of charge
+ For any force, the field from an infinite two-dimensional sheet of charge
  must, by symmetry, be perpendicular to the plane of the sheet.
  Furthermore, if the interaction obeys Gauss' law, the flux of field remains
  constant with increasing distance from the sheet..
@@ -1567,12 +1570,12 @@ null-test
 \begin_inset Quotes erd
 \end_inset
 
- for any violation of the inverse square law.
- More colloquially, it might be referred to as a 
+ for any deviation from an inverse square law.
+ Colloquially, it might be referred to as an 
 \begin_inset Quotes eld
 \end_inset
 
-Does-the-inverse-square-law-break-o-meter
+Inverse-Square-Law-Break-O-Meter
 \begin_inset Quotes erd
 \end_inset
 
@@ -1580,17 +1583,25 @@ Does-the-inverse-square-law-break-o-meter
 \end_layout
 
 \begin_layout Standard
-In its idealized form, our experiment compares the gravitational field strength
+In idealized form, our experiment compares the gravitational field strength
  at two distances from an infinite sheet of mass.
  Finite sheet masses are suspended on opposite sides of a torsion pendulum
  aligned parallel to their moment arms, but displaced in opposite directions
- perpendicular to the arms.
- If there is an inverse square law violating force between the sheets on
+ perpendicular to the arms (see Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Simple Parallel plate cartoon"
+
+\end_inset
+
+).
+ If there is an inverse-square-law violating force between the sheets on
  the pendulum and an infinite sheet of matter, the pendulum will feel a
  torque.
  If the distance between the pendulum and the sheet is modulated, the torque
  will vary in sync with the modulation.
- If there are no inverse square law violating interactions between the pendulum
+ If there are no inverse-square law-violating interactions between the pendulum
  and sheet, the pendulum will experience 
 \emph on
 no torque
@@ -1608,6 +1619,43 @@ infinite sheet
  approximation is valid and that gravity is the only messenger between the
  sheet and the pendulum.
  
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "Simple Parallel plate cartoon"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+XXX Simple Apparatus Diagram
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -1726,6 +1774,10 @@ When
 
 \begin_layout Subsection
 Flat plate torque
+\end_layout
+
+\begin_layout Standard
+XXX Copy me in!
 \end_layout
 
 \begin_layout Subsection
@@ -2093,11 +2145,18 @@ m diameter fiber in the magnetic field of a small ring magnet to damp the
  a ceramic electrical isolator, to a motorized two-axis translation and
  one-axis rotary stage.
  Electrical contact to the pendulum was established by way of a thin (XXX
- gauge) wire clipped to the otherwise isolated fiber support.
+ gauge) wire clipped to the otherwise-isolated fiber support.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
+
+\begin_layout Plain Layout
+XXX
+\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption
@@ -2111,10 +2170,6 @@ Phitop/Damper
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -2124,7 +2179,11 @@ Phitop/Damper
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
+
+\begin_layout Plain Layout
+XXX
+\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption
@@ -2147,7 +2206,11 @@ Attractor schematic with dimensions
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
+
+\begin_layout Plain Layout
+XXX
+\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption
@@ -2155,6 +2218,37 @@ status collapsed
 \begin_layout Plain Layout
 Attractor on spindles with sensors mounted to flexure, preferably with pendulum
  hanging.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+XXX
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Pendulum scans
 \end_layout
 
 \end_inset
@@ -2272,7 +2366,7 @@ Both large faces of the pendulum and the front face of the attractor were
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption
@@ -2329,7 +2423,42 @@ m over its width.
  layer by e-beam evaporation.
  The foil was mounted to an electrically isolated frame to allow us to vary
  its electrostatic potential.
- 
+ The foil was mounted with a screw/flexure arrangement that permitted small
+ tip and tilt adjustment of the foil.
+ Two of the three screws were connected via long aluminum screwdrivers to
+ in-vacuum adjustment motors.
+ The motors were electrically isolated from ground, floating with the foil.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+XXX
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Foil Flatness
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2391,10 +2520,6 @@ Autocollimator optical diagram
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -2585,7 +2710,7 @@ The attractor's flexure stage was electric-discharge machined from a single
 status open
 
 \begin_layout Plain Layout
-XXX check settings
+XXX check data
 \end_layout
 
 \end_inset
@@ -2793,7 +2918,7 @@ The isolating foil is the most important defense against systematic error.
 \begin_layout Standard
 The foil interferometer is a Fizeau interferometer 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "Fizeau1862"
 
 \end_inset
@@ -2802,7 +2927,7 @@ key "Fizeau1862"
  Inspired by the designs and sensitivities of early atomic force microscope
  (AFM) readout systems
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "rugar1988force,rugar1989improved"
 
 \end_inset
@@ -3145,7 +3270,7 @@ Fiber thermal noise
 \begin_layout Standard
 As Saulson and González neatly described 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "saulson1990thermal,Gonz\\'alez199512,1995PhDT........16G"
 
 \end_inset
@@ -3206,7 +3331,7 @@ proximity-enhanced gas damping
 
  
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "schlamminger2010indirect,cavalleri2009increased,dolesi2011brownian"
 
 \end_inset
@@ -3283,7 +3408,7 @@ where
 \begin_layout Standard
 For PlateWash, which we used in 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "schlamminger2010indirect"
 
 \end_inset
@@ -3378,7 +3503,7 @@ Contact potential noise
 \begin_layout Standard
 Electrical connections generally form small galvanic batteries
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "lamoreaux1997demonstration"
 
 \end_inset
@@ -4165,7 +4290,7 @@ Charge carriers in any material at finite temperature are in constant motion.
  These random currents create magnetic fields.
  They have been experimentally observed in several contexts 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "varpula1984magnetic,lee2008calculation"
 
 \end_inset
@@ -4537,7 +4662,7 @@ rad
 
  
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "bantel2000high"
 
 \end_inset
@@ -4684,7 +4809,7 @@ Thermal Noise
 \begin_layout Standard
 The intrinsic noise in a torsion balance is known 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "GonzÃ¡lez199512,1995PhDT........16G,saulson1990thermal"
 
 \end_inset
