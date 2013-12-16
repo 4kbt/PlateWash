@@ -33,7 +33,7 @@
 \use_esint 1
 \use_mhchem 1
 \use_mathdots 1
-\cite_engine natbib_numerical
+\cite_engine basic
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -1549,6 +1549,37 @@ Gauss' law test of gravity.
 \end_layout
 
 \begin_layout Standard
+For any force, the field from an infinite two-dimensional sheet of charge
+ must, by symmetry, be perpendicular to the plane of the sheet.
+ Furthermore, if the interaction obeys Gauss' law, the flux of field remains
+ constant with increasing distance from the sheet..
+ Therefore, the strength of the interaction cannot vary with distance.
+ This fact immediately suggests a simple test for whether an interaction
+ follows Gauss' Law: Measure the force acting upon a test charge at two
+ different distances from a sheet of charge.
+ If the two measured forces are inconsistent, then the interaction does
+ not obey Gauss' Law.
+ Such an experiment is a 
+\begin_inset Quotes eld
+\end_inset
+
+null-test
+\begin_inset Quotes erd
+\end_inset
+
+ for any violation of the inverse square law.
+ More colloquially, it might be referred to as a 
+\begin_inset Quotes eld
+\end_inset
+
+Does-the-inverse-square-law-break-o-meter
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 In its idealized form, our experiment compares the gravitational field strength
  at two distances from an infinite sheet of mass.
  Finite sheet masses are suspended on opposite sides of a torsion pendulum
@@ -1575,7 +1606,7 @@ infinite sheet
 \end_inset
 
  approximation is valid and that gravity is the only messenger between the
- infinite sheet and the pendulum.
+ sheet and the pendulum.
  
 \end_layout
 
