@@ -1,32 +1,18 @@
 function m2 = jan13Spindles
 	
-	rhoAl = 2700
+	run3147PendulumParameters
 
-	rhoGap = -rhoAl
+	Spindle = genPointMassAnnlSheet(spindleMass, 0, spindleDiameter/2.0, spindleLength, 5	, 5);
 
-	gapLength = 50e-3
-	gapDiameter = 0.2*0.0254
-
-	gapMass = pi * (gapDiameter/2.0)^2*gapLength * rhoGap
-
-	gapDistance = 5e-3
-	gapRadialPosition = 72e-3/2
-	gapHeight = gapRadialPosition
-	gapOffset = 0
-
-	gapDisplacement = 7e-3;
-
-	Gap = genPointMassAnnlSheet(gapMass, 0, gapDiameter/2.0, gapLength, 5	, 5);
-
-	trans = [gapDistance + gapLength/2.0 0 gapRadialPosition];
+	trans = [spindleTipDistance + spindleLength/2.0 0 spindleRadialPosition];
 
 
-	G1 = translatePMArray(Gap, trans);
+	S1 = translatePMArray(Spindle, trans);
 
 	m2 = [];
 
 	for i = 0:2
-		m2 = [m2; rotatePMArray(G1, i*2*pi/3, [1 0 0])];
+		m2 = [m2; rotatePMArray(S1, i*2*pi/3, [1 0 0])];
 	end
 
 end

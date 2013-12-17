@@ -2347,8 +2347,29 @@ filename "../extracted/AttractorInnerDiameter.tex"
 \end_inset
 
 m.
- Three aluminum spindles (80XXXmm long, 6XXX mm diameter) were attached
- to the back of the backer with aluminum set screws.
+ Three aluminum spindles ( 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/spindleLength.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+m long, 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/spindleDiameter.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+m diameter) were attached to the back of the backer with aluminum set screws.
  Each spindle was attached, via machinable glass electrical isolators, to
  a pneumatically-driven flexure translation stage.
 \end_layout

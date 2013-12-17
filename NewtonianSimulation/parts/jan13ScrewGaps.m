@@ -1,20 +1,6 @@
 function m2 = jan13ScrewGaps
 	
-	rhoAl = 2700
-
-	rhoGap = -rhoAl
-
-	gapLength = 1e-3
-	gapDiameter = 0.110*0.0254
-
-	gapMass = pi * (gapDiameter/2.0)^2*gapLength * rhoGap
-
-	gapDistance = 1e-3
-	gapRadialPosition = 72e-3/2
-	gapHeight = gapRadialPosition
-	gapOffset = 0
-
-	gapDisplacement = 7e-3;
+	run3147PendulumParameters
 
 	Gap = genPointMassAnnlSheet(gapMass, 0, gapDiameter/2.0, gapLength, 5	, 5);
 

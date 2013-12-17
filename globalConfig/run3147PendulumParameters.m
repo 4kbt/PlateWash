@@ -53,3 +53,32 @@ pa1=rhoTaA; % #Ta
 pal1=rhoAl; % #Al
 da1=AttractorPlateThickness; %# Ta attractor thickness
 dal1=AttractorBackerThickness; % Al attractor thickness
+
+
+
+%%%%% Screw gaps %%%%%
+
+rhoGap = -rhoAl;
+
+gapLength = 1e-3;			printSigNumber(gapLength  , [HOMEDIR '/extracted/screwGapLength.tex'  ], 1);
+gapDiameter = 0.110*0.0254; 		printSigNumber(gapDiameter, [HOMEDIR '/extracted/screwGapDiameter.tex'], 2);
+
+
+gapMass = pi * (gapDiameter/2.0)^2*gapLength * rhoGap;
+
+%Distance from attractor plane to gap end
+gapDistance = 1e-3; 			 printSigNumber(gapDistance  	   , [HOMEDIR '/extracted/screwGapDistFromPlane.tex'   ], 1);
+gapRadialPosition = 72e-3/2;		 printSigNumber(gapRadialPosition  , [HOMEDIR '/extracted/screwGapRadialPosition.tex'  ], 2);
+
+%%%%% Spindles %%%%
+
+rhoSpindle = rhoAl;
+
+spindleLength = 50e-3;			printSigNumber(spindleLength        , [HOMEDIR '/extracted/spindleLength.tex'   ], 2);
+spindleDiameter = 0.2*0.0254;		printSigNumber(spindleDiameter      , [HOMEDIR '/extracted/spindleDiameter.tex'   ], 2);
+
+spindleMass = pi * (spindleDiameter/2.0)^2*spindleLength * rhoSpindle;
+
+spindleTipDistance = AttractorFullThickness;
+spindleRadialPosition = gapRadialPosition;
+
