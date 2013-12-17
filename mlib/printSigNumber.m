@@ -2,10 +2,14 @@
 ## prints data using save --ascii into the specified file. Filename is a string.
 ## <precision> specifies the number of significant digits.
 
-function printSigNumber(data, filename, prec)
+function printSigNumber(data, filename, precision)
 	filename;
 
-	prec = prec - 1;
+	assert(precision > 0);
+        assert(precision - floor(precision) == 0 );
+        assert(size(data) == [1 1]);
+
+	precision = precision - 1;
 
         cl   = floor( log10( abs(data ) ) );
 
@@ -14,6 +18,6 @@ function printSigNumber(data, filename, prec)
 	formatString = '%.*f %s %d %s';
 
 	fid  = fopen( filename, "w", "native");
-	fprintf( fid, formatString, prec, cnum, "\\times 10^{", cl, "}");
+	fprintf( fid, formatString, precision, cnum, "\\times 10^{", cl, "}");
 	fclose(fid);
 end

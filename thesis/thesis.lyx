@@ -2801,6 +2801,30 @@ Power outage 3/13, Run3146 pw begins begins 3/13.!
 \end_inset
 
  following a power outage, and >2 months under vacuum (XXX check runtitles).
+ With the pump valved off, the pressure rise was measured at the end of
+ the science run to be 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../systematics/pressure/extracted/pressureRiseRate.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Torr/s, or approximately 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../systematics/pressure/extracted/pressureRiseRateTorrLS.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Torr-l/s.
 \end_layout
 
 \begin_layout Subsection

@@ -1,16 +1,19 @@
-all : therm mag resist elec
+all : therm mag resist elec press
 
 mag: 
-	$(MAKE) -C magnetic
+	$(MAKE) -C -j 3 magnetic
 
 therm: 
-	$(MAKE) -C thermal
+	$(MAKE) -C -j 3 thermal
 
 resist: 
-	$(MAKE) -C resistor
+	$(MAKE) -C -j 3 resistor
 
 elec :
-	$(MAKE) -C electrical
+	$(MAKE) -C -j 3 electrical
+
+press:
+	$(MAKE) -C -j 3 pressure
 
 
 clean:
@@ -18,4 +21,5 @@ clean:
 	$(MAKE) -C thermal clean
 	$(MAKE) -C resistor clean
 	$(MAKE) -C electrical clean
+	$(MAKE) -C pressure clean
 	
