@@ -1,0 +1,11 @@
+# lifted from the plot in Adelberger, Heckel, Nelson
+#L	Alpha
+1e-9	1e27
+3e-9	1e23
+1e-8	1e19
+3e-8	1e16
+1e-7	1e14
+5e-7	1e11
+2.5e-6	1e10
+5e-6	1e8
+#last two lifted from shorter range plot

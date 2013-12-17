@@ -1,0 +1,75 @@
+set xlabel 'log_{10}({/Symbol l}/m)'
+set ylabel 'log_{10}({/Symbol a})'
+
+set size ratio 0.5 
+set term postscript enhanced solid color 22 eps
+
+set output 'ISLFullRange.eps'
+set xtics 3 
+
+l=20e-6
+set key noauto
+
+set label 1 "Experimentally Excluded" at 3,10 center front  font "Helvetica, 15"
+
+pl [-12:] \
+   'veryLongRangeISL.dat'  u (log10($1)):(log10( $2 ))  smooth csplines w filledcurve x2 lt 5, \
+   'veryShortRangeISL.dat' u (log10($1)):(log10( $2 ))  smooth csplines w filledcurve x2 lt 5, \
+   'sr2006.dat'    u (log10($1*1e-3)):(log10( $2 ))  	smooth csplines w filledcurve x2 lt 5, \
+   'stanfordPRD2005.dat'   u (log10($1)):(log10( $2 ))  smooth csplines w filledcurve x2 lt 5, \
+   'Irvine1985.dat'   u (log10($1)):(log10( $2 ))       smooth csplines w filledcurve x2 lt 5, \
+   'cookData.dat' u (log10($1)):(log10($2))             smooth csplines w filledcurve x2 lt 5, \
+   'hstLR.dat'    u (log10($1)):(log10($2))             smooth csplines w filledcurve x2 lt 5, \
+   'suskov2011.dat' u (log10($1)):(log10($2))		smooth csplines w filledcurve x2 lt 5, \
+   'neutronsNMore.dat'   u (log10($1)):(log10( $2 ))    smooth csplines w filledcurve x2 lt 5, \
+   'veryLongRangeISL.dat'  u (log10($1)):(log10( $2 ))  smooth csplines lw 2 lt -1 title 'Geophysics and Astronomical Observations', \
+   'veryShortRangeISL.dat' u (log10($1)):(log10( $2 ))  smooth csplines lw 2 lt 1 title 'Casimir Force Measurements', \
+   'suskov2011.dat' u (log10($1)):(log10($2))		smooth csplines lw 2 lt 1 ,\
+   'sr2006.dat'    u (log10($1*1e-3)):(log10( $2 ))  	smooth csplines lw 2 lt 3 title 'Laboratory Measurements', \
+   'stanfordPRD2005.dat'   u (log10($1)):(log10( $2 ))  smooth csplines lw 2 lt 3, \
+   'Irvine1985.dat'   u (log10($1)):(log10( $2 ))  	smooth csplines lw 2 lt 3, \
+   'cookData.dat' u (log10($1)):(log10($2))             smooth csplines lw 2 lt 3 ,\
+   'hstLR.dat'    u (log10($1)):(log10($2))             smooth csplines lw 2 lt 3 ,\
+   'neutronsNMore.dat'   u (log10($1)):(log10( $2 ))  	smooth csplines lw 2 lt 4 title 'Neutrons/Spectroscopy', \
+    0 lw 3 lt 0
+
+
+  #  log10(10**x*exp(l/10**x)/(10**x+2*l+l*l/10**x )),\
+  #  log10(exp(20e-6/10**x)),\
+
+#set output 'ISLFullRangeBox.ps'
+#pl\
+   'veryLongRangeISL.dat'  u (log10($1)):(log10( $2 ))  smooth csplines w filledcurve x2 lt 5, \
+   'veryShortRangeISL.dat' u (log10($1)):(log10( $2 ))  smooth csplines w filledcurve x2 lt 5, \
+   'sr2006.dat'    u (log10($1*1e-3)):(log10( $2 ))  smooth csplines w filledcurve x2 lt 5, \
+   'stanfordPRD2005.dat'   u (log10($1)):(log10( $2 ))  smooth csplines w filledcurve x2 lt 5, \
+   'Irvine1985.dat'   u (log10($1)):(log10( $2 ))  smooth csplines w filledcurve x2 lt 5, \
+   'filldata.dat' smooth csplines w filledcurves y2=6 lt 6,  \
+   'veryLongRangeISL.dat'  u (log10($1)):(log10( $2 ))  smooth csplines lw 2 lt -1 title 'Geophysics and Astronomical Observations', \
+   'veryShortRangeISL.dat' u (log10($1)):(log10( $2 ))  smooth csplines lw 2 lt 1 title 'Casimir Force Measurements', \
+   'sr2006.dat'    u (log10($1*1e-3)):(log10( $2))  smooth csplines lw 2 lt 3 title 'Laboratory Measurements', \
+   'stanfordPRD2005.dat'   u (log10($1)):(log10( $2 ))  smooth csplines lw 2 lt 3, \
+   'Irvine1985.dat'   u (log10($1)):(log10( $2 ))  smooth csplines lw 2 lt 3, \
+    0 lw 3 lt 0
+		  
+
+#set output 'ISLFullRangeNotSoTall.ps'
+#set size ratio 0.25
+#unset label 1
+#pl \
+   'veryLongRangeISL.dat'  u (log10($1)):(log10( $2 ))  smooth csplines w filledcurve x2 lt 5, \
+   'veryShortRangeISL.dat' u (log10($1)):(log10( $2 ))  smooth csplines w filledcurve x2 lt 5, \
+   'sr2006.dat'    u (log10($1*1e-3)):(log10( $2 ))  smooth csplines w filledcurve x2 lt 5, \
+   'stanfordPRD2005.dat'   u (log10($1)):(log10( $2 ))  smooth csplines w filledcurve x2 lt 5, \
+   'Irvine1985.dat'   u (log10($1)):(log10( $2 ))  smooth csplines w filledcurve x2 lt 5, \
+   'filldata.dat' smooth csplines w filledcurves y2=6 lt 6,  \
+   'veryLongRangeISL.dat'  u (log10($1)):(log10( $2 ))  smooth csplines lw 2 lt -1 title 'Geophysics and Astronomical Observations', \
+   'veryShortRangeISL.dat' u (log10($1)):(log10( $2 ))  smooth csplines lw 2 lt 1 title 'Casimir Force Measurements', \
+   'sr2006.dat'    u (log10($1*1e-3)):(log10( $2 ))  smooth csplines lw 2 lt 3 title 'Laboratory Measurements', \
+   'stanfordPRD2005.dat'   u (log10($1)):(log10( $2 ))  smooth csplines lw 2 lt 3, \
+   'Irvine1985.dat'   u (log10($1)):(log10( $2 ))  smooth csplines lw 2 lt 3, \
+   0 lw 3 lt 0
+	
+#set output 'ISLFullRangeNotSoTall.ps'
+#set size ratio 0.25
+#replot

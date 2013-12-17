@@ -1,0 +1,19 @@
+#Lifted in rough fashion from Adelberger, Heckel, Nelson
+#L	Alpha
+1e-2	2.5e-4
+1e-1	1e-3
+1e0	2e-3
+1e1	1.5e-3
+1e2	1.5e-3
+1e3	4e-4
+1e4	3e-4
+1e5	6e-5
+1e6	4e-6
+1e7	2e-8
+1e8	2e-10
+1e9	1.5e-10
+1e10	1e-8
+1e11	2e-9
+1e12	2e-8
+1e13	2e-6
+1e14	2e-4

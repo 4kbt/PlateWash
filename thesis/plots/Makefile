@@ -1,6 +1,7 @@
 include ../../Makefile.inc
 
 all : lagSNR.eps lagFrequencySNR.eps pwTransferFunction.eps
+	make -j 3 -C ISL
 
 lagSNR.eps : lagSNR.gpl
 	$(GNU) lagSNR.gpl
@@ -12,5 +13,6 @@ pwTransferFunction.eps : pwTransferFunction.gpl
 	$(GNU) pwTransferFunction.gpl
 
 clean : 
+	make -C ISL clean
 	-rm *.eps
 	-rm *.pdf

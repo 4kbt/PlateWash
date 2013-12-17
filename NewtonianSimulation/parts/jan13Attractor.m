@@ -1,20 +1,8 @@
 function Attractor = jan13Attractor
-	InfiniteRadius = 0.3
 
-	rhoAl=2700
-	rhoTa=16650
+	run3147PendulumParameters
 
-	AttractorDiameter= 3*0.0254-1350e-6
-	AttractorPlateThickness= 30e-3*0.0254
-	AttractorFullThickness = 12.91e-3
-	AttractorRimHeight = 0.0254*.4129
-	AttractorBackerThickness= AttractorFullThickness - AttractorPlateThickness - AttractorRimHeight
-	AttractorRimWidth= (AttractorDiameter - 0.0254*1.915)/2.0
-
-
-	%AttractorPlateMass= rhoTa*pi*(AttractorDiameter/2)^2*AttractorPlateThickness
-	AttractorPlateMass= rhoTa*pi*(InfiniteRadius^2-(AttractorDiameter/2)^2)*AttractorPlateThickness
-	%AttractorBackerMass=rhoAl*pi*(AttractorDiameter/2)^2*AttractorBackerThickness
+	AttractorPlateMass= rhoTaA*pi*(InfiniteRadius^2-(AttractorDiameter/2)^2)*AttractorPlateThickness
 	AttractorBackerMass=rhoAl*pi*(InfiniteRadius^2-(AttractorDiameter/2)^2)*AttractorBackerThickness
 	AttractorRimMass=   rhoAl*pi*(AttractorDiameter/2)^2*AttractorRimHeight-\
 			    rhoAl*pi*((AttractorDiameter-2*AttractorRimWidth)/2)^2*AttractorRimHeight
