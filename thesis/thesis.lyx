@@ -3671,7 +3671,14 @@ filename "../systematics/pressure/extracted/finalPressurePa.tex"
 \end_inset
 
 Pa, 
-\begin_inset Formula $Q\sim XXX$
+\begin_inset Formula $Q\sim$
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "/home/charlie/trialEotwash/Eotwash/systematics/pressure/extracted/unconstrainedQ.tex"
+
 \end_inset
 
 .

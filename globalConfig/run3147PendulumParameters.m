@@ -1,5 +1,4 @@
-%CODATA
-G =  6.67428e-11;
+fundamentalConstants
 
 HOMEDIR = getenv("HOMEDIR");
 
