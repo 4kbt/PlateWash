@@ -3595,10 +3595,43 @@ key "schlamminger2010indirect,cavalleri2009increased,dolesi2011brownian"
  of the chamber, gas damping appears in two forms: 'free' damping and 'proximity
 -enhanced' damping.
  Free gas damping is independent of an oscillator's location in a vacuum
- chamber, and depends only upon properties of the gas: 
+ chamber, and depends only upon properties of the gas and the dimensions
+ of the pendulum.
+ For a rectangular pendulum with moment of inertia 
+\begin_inset Formula $I$
+\end_inset
+
+, resonant frequency 
+\begin_inset Formula $f_{o}$
+\end_inset
+
+, width 
+\begin_inset Formula $l$
+\end_inset
+
+, and height 
+\begin_inset Formula $h$
+\end_inset
+
+ immersed in a gas with pressure 
+\begin_inset Formula $P$
+\end_inset
+
+, temperature 
+\begin_inset Formula $T$
+\end_inset
+
+, and molecular mass 
+\begin_inset Formula $m$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \[
-C_{F}XXX
+Q_{unconstrained}=\frac{32\pi If_{0}\sqrt{8k_{B}T/(\pi m)}}{l^{3}hP}\alpha.
 \]
 
 \end_inset
@@ -3607,16 +3640,41 @@ C_{F}XXX
 \end_layout
 
 \begin_layout Standard
-where 
-\begin_inset Formula $C_{F}$
-\end_inset
-
- is a constant of order unity (in PlateWash it's 
-\begin_inset Formula $\sim XXX$
-\end_inset
-
-).
+There remains some disagreement in the literature regarding the coefficient
  
+\begin_inset Formula $\alpha$
+\end_inset
+
+, which takes values of 
+\begin_inset Formula $16/\pi$
+\end_inset
+
+, 
+\begin_inset Formula $16$
+\end_inset
+
+, and 
+\begin_inset Formula $24$
+\end_inset
+
+.
+ For both theoretical and experimental reasons, we prefer 16.
+ For PlateWash at an operating pressure of 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../systematics/pressure/extracted/finalPressurePa.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Pa, 
+\begin_inset Formula $Q\sim XXX$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -3633,12 +3691,18 @@ Proximity-enhanced gas damping is geometry dependent.
 \end_inset
 
 , the effect becomes lossy.
+ If the constrained flow is determined by a distance of closest-proximity,
+ 
+\begin_inset Formula $d$
+\end_inset
+
+,
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \[
-Q=CXXX
+\frac{1}{Q_{PED}}=\frac{1}{Q}\left(\alpha+\frac{\sqrt{8k_{B}T/(\pi m)}\tau_{eq}(d)}{d}\right)
 \]
 
 \end_inset
@@ -3648,35 +3712,34 @@ Q=CXXX
 
 \begin_layout Standard
 where 
-\begin_inset Formula $C$
+\begin_inset Formula $\tau_{eq}(d)$
 \end_inset
 
  is, in general, a complicated function of oscillator/chamber geometry.
+ The scaling of 
+\begin_inset Formula $\tau_{eq}(d)$
+\end_inset
+
+ is approximately a fractional power law for most geometries, with connections
+ to an underlying Lévy walk of the gas molecules.
  Analytical approximations exist for certain geometries, but in any application
  where these effects matter quantitatively, experimentation and accurate
  Monte Carlo simulation is essential.
-\end_layout
-
-\begin_layout Standard
-For PlateWash, which we used in 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "schlamminger2010indirect"
-
+ Our experiments with PlateWash showed that, for small 
+\begin_inset Formula $d$
 \end_inset
 
-, we found that
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-Q=XXX.
-\]
-
+, 
+\begin_inset Formula $Q\propto d^{1.6\pm0.3}$
 \end_inset
 
+; our simulations predicted 
+\begin_inset Formula $Q\propto d^{1.85}$
+\end_inset
 
+.
+ At the pressures and separations used in this inverse square law test,
+ the implied gas damping Q is approximately 800.
 \end_layout
 
 \begin_layout Paragraph
@@ -3883,13 +3946,75 @@ Earthquakes worldwide can affect the balance.
  Large quakes, such as the recent Chilean and Japanese quakes, disturb Earth
  so violently that it can take a day or more before aftershocks and low-frequenc
 y modes of terrestrial vibration have damped.
- XXX figure
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+XXX
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Earthquake!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 PlateWash also sees less-palpable seismic effects, such as the 'microseismic
  peak' XXX and the effects of nearby humanity (traffic and laboratory noise).
  
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Daily noise variation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subparagraph
@@ -3932,7 +4057,34 @@ While the coupling mechanism to wind is presumably seismic, tilt, gravitational
 \end_layout
 
 \begin_layout Standard
-XXX figure.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+XXX
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Wind and torque noise
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
@@ -3959,7 +4111,13 @@ As elucidated above, the electrostatic environment near the pendulum is
 \end_inset
 
  in order to eliminate a possible systematic effect.
- Direct grounding of the foil is no longer required.
+ With further investigation, the systematic was traced to a bypass capacitor.
+ Direct grounding of the foil is no longer required, and we will re-enable
+ the 
+\begin_inset Formula $V_{PF}$
+\end_inset
+
+ control.
  Future pendulum designs and future iterations of this experiment must minimize
  
 \begin_inset Formula $V_{PF}$
@@ -3972,6 +4130,41 @@ As elucidated above, the electrostatic environment near the pendulum is
 XXX Pendulum battery Figure.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Evidence for a 
+\begin_inset Quotes eld
+\end_inset
+
+pendulum battery
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Paragraph
 Temperature
 \end_layout
@@ -3979,8 +4172,7 @@ Temperature
 \begin_layout Standard
 The PlateWash apparatus is sensitive to temperature.
  The fiber's equilibrium position and drift rate are perhaps most temperature
- dependent, but there are uncountably many temperature sensitive elements
- in the apparatus.
+ dependent, but there are many temperature sensitive elements in the apparatus.
  To limit the effects of temperature variation, the instrument is located
  in a temperature controlled room.
  The room temperature varies by less than XXX through the year and XXX every
@@ -3992,7 +4184,7 @@ The PlateWash apparatus is sensitive to temperature.
 As passive isolation, the vacuum system is an excellent insulator, with
  a time constant of about a week XXX for the internal aluminum baseplate
  with respect to the outside world.
- As further, rather limited, insulation, the clean room fans are turned
+ As further, rather limited, insulation, the clean-room fans are turned
  off during measurement periods, trapping a volume of air around the apparatus.
 \end_layout
 
@@ -6023,10 +6215,13 @@ Signal Extraction
 \begin_layout Standard
 This section describes the way in which XXX seconds of raw data are converted
  from three independent raw timeseries into 
-\begin_inset Formula $\sim1350$
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/numberOfCuts.tex"
+
 \end_inset
 
- XXX 'cuts' for further analysis.
+ 'cuts' for further analysis.
  
 \end_layout
 
