@@ -19,6 +19,7 @@ thesis.pdf : thesis.lyx $(EXTRACTEDDEPS)
 
 $(PLOTTARGETS) :
 	$(MAKE) -C plots
+	$(MAKE) $(PARALLEL) -C Pictures
 
 test:
 	echo $(PLOTTARGETS)
