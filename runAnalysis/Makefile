@@ -34,6 +34,7 @@ listRuns :
 
 results/run3147pM3FilterMerge.dat : $(DEPLIST) run3147pLDAFiltermerge.sh $(HOMEDIR)/bin/makeMake.sh
 	./run3147pLDAFiltermerge.sh
+	wc -l run3147pM3FilterMerge.dat | awk '{print $$1}' > ../extracted/numberOfCuts.tex
 
 path : 
 	$(OCT) --verbose pathTest.m

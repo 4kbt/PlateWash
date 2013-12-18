@@ -6471,8 +6471,14 @@ name "fig:Measured Effect of FIR Filters"
 
 \begin_layout Standard
 This procedure correlates three cuts.
- As the total science dataset consists of ~XXX cuts, the effect of cut-to-cut
- correlation is limited.
+ As the total science dataset consists of 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/numberOfCuts.tex"
+
+\end_inset
+
+ cuts, the effect of cut-to-cut correlation is limited.
  XXX cut-correlation estimation.
  The 3-cut length of the FIR filter was chosen by balancing the need for
  effective suppression of the rising 100
