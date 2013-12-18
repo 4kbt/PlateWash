@@ -2393,10 +2393,22 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\begin_inset Graphics
+	filename Pictures/small/RearViewMotorsSpindlesAttractorFoilDecember212011.jpg
+	width 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Foil, front and back, to show adjustment motors
+Rear view.
+ Shows flexure, encoder, attractor, spindles, foil holder, foil adjustment
+ motors.
 \end_layout
 
 \end_inset
@@ -2707,10 +2719,21 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\begin_inset Graphics
+	filename Pictures/small/HighQuarterViewOfPendulumIFOFoilDecember222011.jpg
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Feedback Electrodes
+Left to right: Interferometer fiber, interferometer holder, feedback electrodes,
+ pendulum, isolating foil, mu-metal shielding, foil adjustment leaf spring.
 \end_layout
 
 \end_inset
@@ -3305,7 +3328,13 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXX
+\begin_inset Graphics
+	filename Pictures/small/InterferometerTipDecember222011.jpg
+	width 50page%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -8905,6 +8934,29 @@ Bash is the scripting language for a standard UNIX shell (and the name of
  Sed, the 'string editor', is a tool designed for rapidly traversing text
  files and operating on them; think of it as find-and-replace on steroids.
  
+\end_layout
+
+\begin_layout Subsection
+TeX, LaTeX, LyX, BibTeX, JabRef
+\end_layout
+
+\begin_layout Standard
+The finest document processing software on the planet.
+ It's also some of the hardest to use.
+ This document is written using LyX, a graphical interface to LaTeX.
+ As most physicists are familiar with the TeX tools, no further elaboration
+ is required.
+ 
+\end_layout
+
+\begin_layout Standard
+PlateWash-specific: Most numbers in this text are automatically generated
+ from data after processing in Octave.
+ Numbers intended for publication are saved, after accounting for significant
+ digits, into text files.
+ After a shell script wraps them in TeX's desired $ symbols, the file is
+ included as a child document into the LyX/LaTeX document.
+ Voilà, data analysis flows directly into text!
 \end_layout
 
 \begin_layout Subsection
