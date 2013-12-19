@@ -4350,12 +4350,41 @@ Residual gas pressure
 
 \begin_layout Standard
 The foil's stiffness is XXX.
- The diffusion time out of the attractor-foil gap is XXX.
- As we wait XXX seconds between moving the attractor and taking data, any
- remaining pressure gradient should be, at most, comparable to the ambient
- pressure itself.
- XXX torr acting on XXX area yields a foil displacement of XXX and related
- torque of XXX.
+ The diffusion time out of the attractor-foil gap is 
+\begin_inset Formula $\sim40$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+ms.
+ As we wait more than 1
+\begin_inset space ~
+\end_inset
+
+s between moving the attractor and taking data, any remaining pressure gradient
+ should be, at most, comparable to the ambient pressure itself.
+ 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../systematics/pressure/extracted/finalPressurePa.tex"
+
+\end_inset
+
+ acting on a 
+\begin_inset CommandInset include
+LatexCommand input
+filename "/home/charlie/trialEotwash/Eotwash/extracted/AttractorDiameter.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+m diameter circle yields a foil displacement of XXX and related torque of
+ XXX.
 \end_layout
 
 \begin_layout Paragraph
