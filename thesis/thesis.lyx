@@ -28,7 +28,7 @@
 \spacing double
 \use_hyperref false
 \papersize default
-\use_geometry false
+\use_geometry true
 \use_amsmath 1
 \use_esint 1
 \use_mhchem 1
@@ -43,6 +43,13 @@
 \shortcut idx
 \color #008000
 \end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 1in
+\headsep 1in
+\footskip 1in
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -3053,7 +3060,13 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXX
+\begin_inset Graphics
+	filename diagrams/Interferometer.pdf
+	BoundingBox 0bp 0bp 794bp 560bp
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -3482,7 +3495,22 @@ Within this range, we use the approximation
 \begin_inset Formula $\frac{\pi\lambda}{8\sqrt{2}A_{0}}\sim\frac{370\mbox{ nm}}{\mbox{fringe (peak-to-peak) }}$
 \end_inset
 
- to convert measured output to displacement.
+ to convertOur Ti (
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/titaniumDensity.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+kg/m
+\begin_inset Formula $^{3}$
+\end_inset
+
+) measured output to displacement.
 \end_layout
 
 \begin_layout Section
