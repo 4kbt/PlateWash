@@ -279,7 +279,14 @@ standard
 \begin_inset Quotes erd
 \end_inset
 
- theory XXX.
+ theory 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "2012PDG"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Itemize
@@ -313,7 +320,14 @@ key "CosmologicalConstantProblem"
 Dark Matter: Beginning with the study of galactic rotation curves, a compelling
  body of observations point toward the existence of a novel form of matter,
  perhaps a new family of particles, that, at accessible temperatures, couples
- to ordinary matter only gravitationally XXX .
+ to ordinary matter only gravitationally 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "2012PDG"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -1582,7 +1596,7 @@ null-test
 \begin_inset Quotes eld
 \end_inset
 
-Inverse-Square-Law-Break-O-Meter
+Does-the-Inverse-Square-Law-Break-O-Meter
 \begin_inset Quotes erd
 \end_inset
 
@@ -2664,16 +2678,16 @@ Diff/Sum
 
 \begin_layout Standard
 In addition, the autocollimator was operated with a software lock-in technique.
- The laser drive current was modulated at XXX
+ The laser drive current was modulated at 500
 \begin_inset space ~
 \end_inset
 
 Hz, creating an approximately square-wave signal at the photodiode.
- The photodiode signal was digitized at XXX
+ The photodiode signal was digitized at 25
 \begin_inset space ~
 \end_inset
 
-Hz; XXX samples were recorded with the laser on, and XXX samples with the
+kHz; 25 samples were recorded with the laser on, and 25 samples with the
  laser off.
  By taking the difference, we suppress the influence of any photodiode dark
  current.
@@ -8986,7 +9000,7 @@ The method used to recover
 
 \begin_layout Standard
 In order to generate results that are independent of any physics-model,
- we choose to fit a piecewise-linear XXX function to the data.
+ we choose to fit a piecewise-linear function to the data.
  Each piece is XXX 
 \begin_inset Formula $\mu$
 \end_inset
@@ -9304,9 +9318,11 @@ For the last months of this analysis, the data analysis and thesis were
  rebuilt from scratch hourly.
  This enables quick catching of integration bugs and allows collaborators
  to contribute to any part of the work at any time.
- Furthermore, daily builds provide a clear picture of the deliverable state
- of the project.
- XXX extend me.
+ Furthermore, frequent builds provide a clear picture of the deliverable
+ state of the project.
+ For a blinded experiment with an automated unblinding procedure, this is
+ essential.
+ A primitive bug-tracking system allowed quantitative tracking of progress.
 \end_layout
 
 \begin_layout Section
