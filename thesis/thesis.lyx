@@ -3391,10 +3391,6 @@ m.
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -3417,9 +3413,129 @@ Leading noise source
 \end_layout
 
 \begin_layout Standard
-Believed to be polarization rotation in the fiber.
- New polarization-maintaining fiber is on-hand for an upgraded version of
- the experiment.
+At sub-Hz frequencies, noise in the interferometer is believed to be polarizatio
+n rotation in the fiber.
+ Differential stress in optical fibers can rotate the polarization throughout
+ the entire Bloch sphere 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "ThorlabsPolarizationControl,ulrich1980bending,ross1984rotation"
+
+\end_inset
+
+.
+ As the light emitted from the laser is, in general, polarized, the beamsplitter
+ is likely to be polarization-sensitive, and the cavity and detector may
+ have some polarization sensitivity, any change in polarization throughout
+ the fibers may yield changing results.
+ The effect of simply jostling the fiber is easily noted in the readout
+ of the apparatus; listening to the photodiode output with headphones yields
+ a siren-like tone, giving extra credence to the polarization-rotation explanati
+on of the noise.
+ Securing the fiber, where possible, to immovable objects with tape yielded
+ a substantial improvement in sub-Hz noise.
+ Noise from within the science run is plotted in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Interferometer-low-frequency-pow"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Polarization-maintaining fiber is on-hand for an upgraded version of the
+ experiment.
+\end_layout
+
+\begin_layout Standard
+At higher frequencies, the instrument appears to be limited by electronic
+ noise, but the sensitivity is more than sufficient for our needs, see Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Interferometer-high-frequency"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+XXX
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Interferometer-high-frequency"
+
+\end_inset
+
+Interferometer high-frequency power spectrum
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+XXX
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Interferometer-low-frequency-pow"
+
+\end_inset
+
+Interferometer low-frequency power spectrum
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -3447,11 +3563,15 @@ Determining fringe contrast can be done by displacing the foil.
  translation stage.
  If valves are manipulated to permit a slow retreat of the attractor (or
  using the very slow leak of the isolation valve), a fringe pattern may
- be obtained.
-\end_layout
+ be obtained, as in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Foil-interferometer-signal-as-fcn-of-pressure-position"
 
-\begin_layout Standard
-XXX image.
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -3465,8 +3585,14 @@ XXX image
 \end_layout
 
 \begin_layout Standard
-In Fig XXX, we have the interferometer signal plotted over the duration
- of the experiment.
+In Fig 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Interferometer-Duration"
+
+\end_inset
+
+, we have the interferometer signal plotted over the duration of the experiment.
  Given the spatial extent of the materials involved and the heterogeneous
  nature of the assembly, the <XXX 
 \begin_inset Formula $\mu$
@@ -3476,6 +3602,43 @@ m differential displacement over a period of more than a month is satisfying.
  Much of the experiment took place near a turning point, which limits our
  ability to constrain the foil motion for each individual run.
  
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+XXX
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Interferometer-Duration"
+
+\end_inset
+
+Interferometer signal over the duration of the experiment.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
@@ -3838,7 +4001,14 @@ The gold-coated surfaces of our pendulum and foil are some mixture of amorphous
  This gives rise to a changing electrostatic environment at each surface.
  Our pendulum and foil are gold coated in order to minimise this effect
  - gold's work function is only weakly-dependent on crystal orientation
- XXX.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "GoldWorkFunction"
+
+\end_inset
+
+.
  Once the pendulum-foil separation is small compared to the characteristic
  size of any metallic patches, we expect this effect to be important.
  
@@ -3856,8 +4026,9 @@ Estimating or measuring the size of this effect is a challenge.
 Experimentally, all of our group's short-range experiments have seen increased
  noise at small separations.
  This is one of the boogey-men invoked to explain it.
- We generally see improved noise performance from newly-coated foils immediately
- after pump-down, but don't have a satisfactory understanding of the effect.
+ Improved noise performance is seen from newly-coated foils immediately
+ after pump-down in both PlateWash and our other short-range experiment,
+ but don't have a satisfactory nor quantitative understanding of any effect.
 \end_layout
 
 \begin_layout Subsubsection
@@ -3901,6 +4072,13 @@ XXX continues...
 
 \begin_layout Subsubsection
 Autocollimator noise
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Autocollimator-noise"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4909,6 +5087,15 @@ If there is a temperature gradient between the foil and the attractor, attractor
  to magnify and study this effect.
  Studies by XXX show that heat transfer is enhanced over very short distances
  in vacuum by an effect similar to proximity-enhanced gas damping.
+ Furthermore, thermal conductivity is enhanced by near-field effects, somewhat
+ like the Casimir interaction, as in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Jones2013349"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Paragraph
@@ -4984,7 +5171,15 @@ XXX! The experiment was initially aligned using the autocollimator.
  that the light returned to near the center of the sensor.
  The up-down and left-right angles were recorded.
  The attractor was then translated through its full range of motion, and
- the position on the autocollimator recorded (XXX plot me).
+ the position on the autocollimator recorded, see Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Flexure-runout"
+
+\end_inset
+
+.
  The attractor was adjusted to a point ~20
 \begin_inset space ~
 \end_inset
@@ -5009,6 +5204,43 @@ rad, a capacitance of ~3-400 pF was achieved, and the capacitance seemed
  to be at a minimum as a function of attractor-foil angle, the system was
  declared to be aligned.
  
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+XXX
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Flexure-runout"
+
+\end_inset
+
+Flexure runout, as measured by the autocollimator
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -5429,7 +5661,14 @@ No physical measurement has arbitrary precision; we must consider the effects
 \begin_inset Formula $\delta\theta$
 \end_inset
 
- (a practical approximation, see XXX (ref autocollimator noise) ).
+ (a practical approximation, see 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Autocollimator noise"
+
+\end_inset
+
+).
  Our minimum resolvable torque signal at any given frequency is 
 \begin_inset Formula 
 \[
@@ -5648,8 +5887,14 @@ In order to avoid any velocity-dependent systematic uncertainties, the attractor
 \begin_inset Formula $n$
 \end_inset
 
-).
- XXX cite Arfken.
+) 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "ArfkenForPhysics"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -6037,7 +6282,14 @@ name "sub:Lags"
 A number of properties of the instrument require finite time.
  The pneumatically-driven attractor takes XXX s to move to a new position.
  The feedback loop requires ~XXX s to settle.
- The data acquisition system samples every XXX
+ The data acquisition system samples every 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/TheoSampleTime.tex"
+
+\end_inset
+
+
 \begin_inset space ~
 \end_inset
 
@@ -6053,14 +6305,28 @@ s anti-aliasing filters.
 
 s of padding.
  For these reasons, the first 
-\begin_inset Formula $\sim XXX$
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/dTime.tex"
+
 \end_inset
 
 
 \begin_inset space ~
 \end_inset
 
-s after a position change must be excluded to reject any position-change
+s after a position change and 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/pTime.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+s preceding a position change must be excluded to reject any position-change
  related effects (see section XXX for further discussion of lags).
  As a consequence, the highest available switch frequency is 
 \begin_inset Formula $\sim XXX$
