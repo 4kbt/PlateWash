@@ -7690,7 +7690,8 @@ Does algorithm keep everything that's good?
 status collapsed
 
 \begin_layout Section
-Signal Extraction
+XXY: If Re-implementing this section, confront XXYs.
+ Signal Extraction
 \end_layout
 
 \begin_layout Plain Layout
@@ -7704,22 +7705,22 @@ s, an integer number of 0.8
 \end_inset
 
 s data acquisition samples.
- At every position change, after an XXX
+ At every position change, after an XXY
 \begin_inset space ~
 \end_inset
 
 s delay to allow the attractor and pendulum feedback systems to come into
- equilibrium, the pendulum torque was measured for XXX
+ equilibrium, the pendulum torque was measured for XXY
 \begin_inset space ~
 \end_inset
 
 s.
  The absolute torque measurements were converted into torque differences
- by subtracting the mean (XXX windowing!) of the torque measurements when
+ by subtracting the mean (XXY windowing!) of the torque measurements when
  the pendulum-attractor distance was small from the mean of the torque measureme
 nts when the distance was large that immediately preceded and succeeded
- it XXX.
-  XXX lockAve, windowing length.
+ it XXY.
+  XXY lockAve, windowing length.
 \end_layout
 
 \begin_layout Subsection
@@ -7730,7 +7731,7 @@ Synchronization
 Data are imported from three separate sources (torsion balance, attractor
  control, interferometer), and trimmed in length to present only data with
  complete temporal overlap.
- If needed (runs XXX), any timing offsets between the three clocks are incorpora
+ If needed (runs XXY), any timing offsets between the three clocks are incorpora
 ted before trimming.
  In instances where interferometer data are unavailable, the interferometer's
  data structures are created and filled with zeros, except the timing informatio
@@ -7763,7 +7764,7 @@ status open
 
 \begin_layout Plain Layout
 Transfer functions of software low-pass filters.
- XXX data before/after, show data that contains signal, show that science
+ XXY data before/after, show data that contains signal, show that science
  is unfiltered.
 \end_layout
 
@@ -7802,7 +7803,7 @@ Three columns of data are fed through FIR filters of length 9600 samples
 \end_inset
 
  lowpass filter.
- [XXX get frequencies right] This is primarily done to guarantee that the
+ [XXY get frequencies right] This is primarily done to guarantee that the
  attractor and interferometer signals share timebase/phase with the signal
  from the pendulum.
  To finish the filtering step, the first 14400 samples (1.5 
@@ -7811,7 +7812,7 @@ Three columns of data are fed through FIR filters of length 9600 samples
 
  9600) are clipped from the beginning of all data to remove the filter-initializ
 ing effects.
- XXX What order to put this section in WRT calibration?
+ XXY What order to put this section in WRT calibration?
 \end_layout
 
 \begin_layout Subsection
@@ -7822,7 +7823,7 @@ Edge Finding
 To ensure that the phases of each run are correct with respect to the attractor
  256 s carrier frequency, an adaptive edge finding method detects rising
  and falling edges of attractor motion.
- In the many runs which featured XXX
+ In the many runs which featured XXY
 \end_layout
 
 \begin_layout Subsection
@@ -7859,9 +7860,9 @@ ver', applied to the data's time derivative.
  As the calibration signal is continuous, transient signals are interpreted
  as spurious.
  Any 100 s region of data centered on a suspected spike is excised completely.
- Spike detection uses a an aggressive version of Chauvenet's criterion XXX
+ Spike detection uses a an aggressive version of Chauvenet's criterion XXY
  (ref).
- XXX (Peirce's criteron may actually be better for this?) The implementation
+ XXY (Peirce's criteron may actually be better for this?) The implementation
  loops 20 iterations of the spike removing code to ensure that spikes of
  multiple scales (or spikes sufficiently numerous to pull the initial standard
  deviation) are rejected.
@@ -8587,7 +8588,7 @@ Attractor-correlated torque measurement
 
 \begin_layout Plain Layout
 The attractor moves every 128 s.
- After XXX s, the attractor is nearly stationary until its next movement.
+ After XXY s, the attractor is nearly stationary until its next movement.
  The science signal is the difference in torque on the pendulum between
  stationary steps.
  For narrowed bandwidth, we alternate 10 times between two states.
@@ -8598,7 +8599,7 @@ reference "sub:Aggregation/Differencing"
 
 \end_inset
 
-) measurements ('bins' below XXX word choice) comprises a 'cut'.
+) measurements ('bins' below XXY word choice) comprises a 'cut'.
  
 \end_layout
 
@@ -8608,15 +8609,15 @@ Padding
 
 \begin_layout Plain Layout
 In order to prevent the contamination of each bin by transient effects from
- attractor motion and by small XXX (size?) synchronization errors between
+ attractor motion and by small XXY (size?) synchronization errors between
  the three data acquisition computers, the analysis does not accept measurements
- until XXX s after each position change and ceases to accept them XXXs before
- each position change (XXX do I do this in seconds or samples? Does it matter?
+ until XXY s after each position change and ceases to accept them XXYs before
+ each position change (XXY do I do this in seconds or samples? Does it matter?
  Does it beat?)
 \end_layout
 
 \begin_layout Plain Layout
-XXX Need plots to justify choices.
+XXY Need plots to justify choices.
 \end_layout
 
 \begin_layout Subsubsection
@@ -8654,7 +8655,7 @@ Preventing the aliasing of high frequency noise into low frequency measurements
 \end_layout
 
 \begin_layout Plain Layout
-XXX Plot of transfer function with and without windowing.
+XXY Plot of transfer function with and without windowing.
 \end_layout
 
 \begin_layout Subsubsection
@@ -8665,7 +8666,7 @@ Implementation
 The code below is trimmed from the original implementation (alternate weighting
  schema and supporting variables were the primary redaction), and may not
  execute properly.
- XXX (clean it up?)
+ XXY (clean it up?)
 \end_layout
 
 \begin_layout LyX-Code
