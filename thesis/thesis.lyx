@@ -4333,7 +4333,14 @@ As elucidated above, the electrostatic environment near the pendulum is
 \end_inset
 
  as well as should be possible in principle.
- Furthermore, as seen in section XXX, we chose to give up control of 
+ Furthermore, as seen in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Capacitor-Systematic"
+
+\end_inset
+
+, we chose to give up control of 
 \begin_inset Formula $V_{PF}$
 \end_inset
 
@@ -4354,14 +4361,14 @@ As elucidated above, the electrostatic environment near the pendulum is
 \end_layout
 
 \begin_layout Standard
-XXX Pendulum battery Figure.
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
 status open
+
+\begin_layout Plain Layout
+XXX
+\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption
@@ -4427,7 +4434,7 @@ Many electronic effects can create excess noise.
 analog conversion noise can couple to the pendulum.
  These effects may be assessed by comparing the pendulum noise with and
  without the feedback electrodes grounded.
- XXX figure.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -4437,7 +4444,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
+XXX
 \end_layout
 
 \begin_layout Plain Layout
@@ -9661,8 +9668,42 @@ Quantified uncertainties
 Narrative
 \end_layout
 
+\begin_layout Standard
+There is insufficient space and time to recount the entire story associated
+ with PlateWash.
+ Several investigations germane to the final result are described in this
+ chapter.
+ A chronological history of the experiment may be found in the CENPA Annual
+ Reports 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "CENPA-AR-2007,CENPA-AR-2008,CENPA-AR-2009,CENPA-AR-2010,CENPA-AR-2011,CENPA-AR-2012,CENPA-AR-2013"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Interferometer
+\end_layout
+
+\begin_layout Standard
+We spent a lot of time trying to figure out how to make do without a measurement
+ of the foil position.
+ We were never able to find another way.
+ 
+\end_layout
+
 \begin_layout Section
 Capacitor Systematic
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Capacitor-Systematic"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
