@@ -292,7 +292,7 @@ key "2012PDG"
 \begin_layout Itemize
 The Cosmological Constant Problem/Dark Energy: Astronomical observations
  suggest that the universe is expanding, and doing so at a rate which is
- increasing XXX.
+ increasing.
  The phenomenon can be explained by proposing the existence of 
 \begin_inset Quotes eld
 \end_inset
@@ -323,7 +323,7 @@ Dark Matter: Beginning with the study of galactic rotation curves, a compelling
  to ordinary matter only gravitationally 
 \begin_inset CommandInset citation
 LatexCommand citet
-key "2012PDG"
+key "2012PDG,SilkDarkMatterTheory"
 
 \end_inset
 
@@ -1118,16 +1118,32 @@ Precision measurements of the distance dependence of gravity may have begun
  of the theory itself [XXX].
  Astronomical tests of gravity remain the most precise, providing direct
  tests of General Relativity in addition to Newton's Laws.
- In order of decreasing range and increasing precision, the currently leading
- solar system tests of gravity are the Pioneer spacecraft 
+ In order of decreasing range and increasing precision, the leading solar
+ system tests of the inverse square law are the Pioneer spacecraft 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "PhysRevLett.108.241101"
 
 \end_inset
 
-, the Cassini mission to Saturn [XXX], radar ranging to Mars [XXX], and
- the very precise lunar laser ranging 
+, 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+the Cassini mission to Saturn [XXY],
+\end_layout
+
+\end_inset
+
+ planetary orbits 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "PhysRevLett.61.1159Talmadge,1999snng.book.....F"
+
+\end_inset
+
+, and the very-precise lunar laser ranging 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Murphy2008,MurphyLLRReview"
@@ -1136,7 +1152,7 @@ key "Murphy2008,MurphyLLRReview"
 
 .
  The lunar results are, up to any theoretical uncertainties in the complicated
- astronomical modeling code, by far the most precise tests of gravity.
+ astronomical modeling code, the most precise tests of gravity.
  The experimental data are consistent with the inverse square law at better
  than the 
 \begin_inset Formula $10^{-10}$
@@ -1522,6 +1538,54 @@ m.
  We don't know.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+XXX
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+A kindergartener's perspective: the inverse square law, with allowed possiblitie
+s plotted.
+ Force laws are drawn from the edge of the Yukawa and 
+\begin_inset Quotes eld
+\end_inset
+
+fat graviton
+\begin_inset Quotes erd
+\end_inset
+
+ constraints by Kapner
+\begin_inset CommandInset citation
+LatexCommand citet
+key "2007PhRvL..98b1101K,2007PhRvL..98m1104A"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter
 Apparatus
 \end_layout
@@ -1649,9 +1713,8 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "Simple Parallel plate cartoon"
+\begin_inset Graphics
+	filename diagrams/SimpleExperimentalDiagram.pdf
 
 \end_inset
 
@@ -1662,7 +1725,14 @@ name "Simple Parallel plate cartoon"
 \begin_inset Caption
 
 \begin_layout Plain Layout
-XXX Simple Apparatus Diagram
+XXX
+\begin_inset CommandInset label
+LatexCommand label
+name "Simple Parallel plate cartoon"
+
+\end_inset
+
+ Simple Apparatus Diagram
 \end_layout
 
 \end_inset
@@ -3578,10 +3648,6 @@ reference "fig:Foil-interferometer-signal-as-fcn-of-pressure-position"
 The very first fringe (at XXX psi) is our best measure of fringe contrast.
  We can identify the turning points and sensitive regions of intensity.
  
-\end_layout
-
-\begin_layout Standard
-XXX image
 \end_layout
 
 \begin_layout Standard
