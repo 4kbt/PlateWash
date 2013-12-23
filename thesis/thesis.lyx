@@ -4475,8 +4475,8 @@ The PlateWash apparatus is sensitive to temperature.
  dependent, but there are many temperature sensitive elements in the apparatus.
  To limit the effects of temperature variation, the instrument is located
  in a temperature controlled room.
- The room temperature varies by less than XXX through the year and XXX every
- day.
+ The room temperature varies by less than 1 degree through the year and
+ <0.2 degrees daily.
  
 \end_layout
 
@@ -4555,8 +4555,23 @@ Systematic uncertainties are the primary challenge of this measurement.
  Ensuring that no gravitational signals are mimiced nor masked demands great
  care.
  For this section, estimates are made of a torque difference between an
- attractor-pendulum distance of closest approach (XXX um) and a point XXX
- um away.
+ attractor-pendulum distance of closest approach (XXX
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m) and a point XXX
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m away.
 \end_layout
 
 \begin_layout Subsubsection
@@ -4572,9 +4587,9 @@ Any effect that is not directly related to attractor motion, but is aware
  The valve is positioned downstream of the electronic pressure gauge.
  The valve may be closed, and 
 \bar under
-every 
+every
 \bar default
-electrical signal associated with the operation of the experiment is unchanged.
+ electrical signal associated with the operation of the experiment is unchanged.
  The data analysis system is also unchanged, making it possible to test
  for these systematics directly.
  This ability is greatest strength of the pneumatic drive system; any electrical
@@ -6353,7 +6368,7 @@ name "sub:Lags"
 
 \begin_layout Standard
 A number of properties of the instrument require finite time.
- The pneumatically-driven attractor takes XXX s to move to a new position.
+ The pneumatically-driven attractor takes ~XXX s to move to a new position.
  The feedback loop requires ~XXX s to settle.
  The data acquisition system samples every 
 \begin_inset CommandInset include
@@ -6400,7 +6415,14 @@ filename "../extracted/pTime.tex"
 \end_inset
 
 s preceding a position change must be excluded to reject any position-change
- related effects (see section XXX for further discussion of lags).
+ related effects (see section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Lags-1"
+
+\end_inset
+
+ for further discussion of lags).
  As a consequence, the highest available switch frequency is 
 \begin_inset Formula $\sim XXX$
 \end_inset
@@ -6965,7 +6987,14 @@ Three columns of data are fed through finite impulse response (FIR) filters
  The filters are designed by the octave-forge function 'fir1'.
  The function designs 'windowed filters' with linear phase response.
  Filters with linear phase response have frequency-independent phase delays
- [XXX cite].
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Oppenheim:1999:DSP:294797"
+
+\end_inset
+
+.
   The torsion balance feedback signal is sent through a filter with passband
  from 
 \begin_inset CommandInset include
@@ -7151,6 +7180,13 @@ lstparams "caption={findRisingEdge.m},language=Matlab"
 
 \begin_layout Subsubsection
 Lags
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Lags-1"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -9808,6 +9844,10 @@ The Capacitor Systematic schematic
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+Newtonian Simulation
 \end_layout
 
 \begin_layout Chapter
