@@ -9868,7 +9868,95 @@ lstparams "caption={pointMatrixGravity.m},language=Matlab"
 
 \end_layout
 
+\begin_layout Subsection
+Display
+\end_layout
+
 \begin_layout Standard
+It is essential to know what it is that you're modelling.
+ This data format lends itself to simple plotting of mass configurations.
+ When the mass configurations are simply-plotted, many kinds of errors are
+ trivially apparent.
+ Plotting is as simple as 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../mlib/gravity/displayPoints.m"
+lstparams "caption={mlib/gravity/displayPoints.m},language=Matlab"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+With these plots, an image like Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:DisplayPoints"
+
+\end_inset
+
+ can be panned and zoomed in three dimensions, giving easy intuitive access
+ to the model.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+XXX
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:DisplayPoints"
+
+\end_inset
+
+DisplayPoints output.
+ Test mass in blue, field mass in red.
+ Forces and torques are computed about the origin.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
