@@ -20,3 +20,22 @@ function rotArray = rotatePMArray(array, angle, rotVec)
 	rotArray(:,2:4) = (R*points)';
 
 end
+
+%!test
+%! m = [1 1 0 0];
+%! o = rotatePMArray(m, pi/2.0, [0 0 1]); 
+%! assert(  sum( o - [1 0 1 0]) < 4 * eps)
+
+%!test
+%! nMasses = 6;
+%! for nSteps = 1:100
+%!   m = randn(nMasses,4);
+%!   rvec = randn(1,3);
+%!   ang = 2 * pi / nSteps;
+%!   o = m;
+%!   for ctr = 1:nSteps
+%!     o = rotatePMArray(o, ang , rvec);
+%!   end
+%!   totalErr = sum(sum( o - m));
+%!   assert(totalErr < eps * nSteps*nMasses*4)
+%! end
