@@ -292,7 +292,7 @@ key "2012PDG"
 \begin_layout Itemize
 The Cosmological Constant Problem/Dark Energy: Astronomical observations
  suggest that the universe is expanding, and doing so at a rate which is
- increasing XXX.
+ increasing.
  The phenomenon can be explained by proposing the existence of 
 \begin_inset Quotes eld
 \end_inset
@@ -323,7 +323,7 @@ Dark Matter: Beginning with the study of galactic rotation curves, a compelling
  to ordinary matter only gravitationally 
 \begin_inset CommandInset citation
 LatexCommand citet
-key "2012PDG"
+key "2012PDG,SilkDarkMatterTheory"
 
 \end_inset
 
@@ -1118,16 +1118,32 @@ Precision measurements of the distance dependence of gravity may have begun
  of the theory itself [XXX].
  Astronomical tests of gravity remain the most precise, providing direct
  tests of General Relativity in addition to Newton's Laws.
- In order of decreasing range and increasing precision, the currently leading
- solar system tests of gravity are the Pioneer spacecraft 
+ In order of decreasing range and increasing precision, the leading solar
+ system tests of the inverse square law are the Pioneer spacecraft 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "PhysRevLett.108.241101"
 
 \end_inset
 
-, the Cassini mission to Saturn [XXX], radar ranging to Mars [XXX], and
- the very precise lunar laser ranging 
+, 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+the Cassini mission to Saturn [XXY],
+\end_layout
+
+\end_inset
+
+ planetary orbits 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "PhysRevLett.61.1159Talmadge,1999snng.book.....F"
+
+\end_inset
+
+, and the very-precise lunar laser ranging 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Murphy2008,MurphyLLRReview"
@@ -1136,7 +1152,7 @@ key "Murphy2008,MurphyLLRReview"
 
 .
  The lunar results are, up to any theoretical uncertainties in the complicated
- astronomical modeling code, by far the most precise tests of gravity.
+ astronomical modeling code, the most precise tests of gravity.
  The experimental data are consistent with the inverse square law at better
  than the 
 \begin_inset Formula $10^{-10}$
@@ -1522,6 +1538,54 @@ m.
  We don't know.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+XXX
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+A kindergartener's perspective: the inverse square law, with allowed possiblitie
+s plotted.
+ Force laws are drawn from the edge of the Yukawa and 
+\begin_inset Quotes eld
+\end_inset
+
+fat graviton
+\begin_inset Quotes erd
+\end_inset
+
+ constraints by Kapner
+\begin_inset CommandInset citation
+LatexCommand citet
+key "2007PhRvL..98b1101K,2007PhRvL..98m1104A"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter
 Apparatus
 \end_layout
@@ -1649,9 +1713,8 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "Simple Parallel plate cartoon"
+\begin_inset Graphics
+	filename diagrams/SimpleExperimentalDiagram.pdf
 
 \end_inset
 
@@ -1662,7 +1725,14 @@ name "Simple Parallel plate cartoon"
 \begin_inset Caption
 
 \begin_layout Plain Layout
-XXX Simple Apparatus Diagram
+XXX
+\begin_inset CommandInset label
+LatexCommand label
+name "Simple Parallel plate cartoon"
+
+\end_inset
+
+ Simple Apparatus Diagram
 \end_layout
 
 \end_inset
@@ -3581,10 +3651,6 @@ The very first fringe (at XXX psi) is our best measure of fringe contrast.
 \end_layout
 
 \begin_layout Standard
-XXX image
-\end_layout
-
-\begin_layout Standard
 In Fig 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -4333,7 +4399,14 @@ As elucidated above, the electrostatic environment near the pendulum is
 \end_inset
 
  as well as should be possible in principle.
- Furthermore, as seen in section XXX, we chose to give up control of 
+ Furthermore, as seen in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Capacitor-Systematic"
+
+\end_inset
+
+, we chose to give up control of 
 \begin_inset Formula $V_{PF}$
 \end_inset
 
@@ -4354,14 +4427,14 @@ As elucidated above, the electrostatic environment near the pendulum is
 \end_layout
 
 \begin_layout Standard
-XXX Pendulum battery Figure.
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
 status open
+
+\begin_layout Plain Layout
+XXX
+\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption
@@ -4402,8 +4475,8 @@ The PlateWash apparatus is sensitive to temperature.
  dependent, but there are many temperature sensitive elements in the apparatus.
  To limit the effects of temperature variation, the instrument is located
  in a temperature controlled room.
- The room temperature varies by less than XXX through the year and XXX every
- day.
+ The room temperature varies by less than 1 degree through the year and
+ <0.2 degrees daily.
  
 \end_layout
 
@@ -4427,7 +4500,7 @@ Many electronic effects can create excess noise.
 analog conversion noise can couple to the pendulum.
  These effects may be assessed by comparing the pendulum noise with and
  without the feedback electrodes grounded.
- XXX figure.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -4437,7 +4510,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
+XXX
 \end_layout
 
 \begin_layout Plain Layout
@@ -4482,8 +4555,23 @@ Systematic uncertainties are the primary challenge of this measurement.
  Ensuring that no gravitational signals are mimiced nor masked demands great
  care.
  For this section, estimates are made of a torque difference between an
- attractor-pendulum distance of closest approach (XXX um) and a point XXX
- um away.
+ attractor-pendulum distance of closest approach (XXX
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m) and a point XXX
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m away.
 \end_layout
 
 \begin_layout Subsubsection
@@ -4499,9 +4587,9 @@ Any effect that is not directly related to attractor motion, but is aware
  The valve is positioned downstream of the electronic pressure gauge.
  The valve may be closed, and 
 \bar under
-every 
+every
 \bar default
-electrical signal associated with the operation of the experiment is unchanged.
+ electrical signal associated with the operation of the experiment is unchanged.
  The data analysis system is also unchanged, making it possible to test
  for these systematics directly.
  This ability is greatest strength of the pneumatic drive system; any electrical
@@ -6280,7 +6368,7 @@ name "sub:Lags"
 
 \begin_layout Standard
 A number of properties of the instrument require finite time.
- The pneumatically-driven attractor takes XXX s to move to a new position.
+ The pneumatically-driven attractor takes ~XXX s to move to a new position.
  The feedback loop requires ~XXX s to settle.
  The data acquisition system samples every 
 \begin_inset CommandInset include
@@ -6327,7 +6415,14 @@ filename "../extracted/pTime.tex"
 \end_inset
 
 s preceding a position change must be excluded to reject any position-change
- related effects (see section XXX for further discussion of lags).
+ related effects (see section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Lags-1"
+
+\end_inset
+
+ for further discussion of lags).
  As a consequence, the highest available switch frequency is 
 \begin_inset Formula $\sim XXX$
 \end_inset
@@ -6892,7 +6987,14 @@ Three columns of data are fed through finite impulse response (FIR) filters
  The filters are designed by the octave-forge function 'fir1'.
  The function designs 'windowed filters' with linear phase response.
  Filters with linear phase response have frequency-independent phase delays
- [XXX cite].
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Oppenheim:1999:DSP:294797"
+
+\end_inset
+
+.
   The torsion balance feedback signal is sent through a filter with passband
  from 
 \begin_inset CommandInset include
@@ -7078,6 +7180,13 @@ lstparams "caption={findRisingEdge.m},language=Matlab"
 
 \begin_layout Subsubsection
 Lags
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Lags-1"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -7683,7 +7792,8 @@ Does algorithm keep everything that's good?
 status collapsed
 
 \begin_layout Section
-Signal Extraction
+XXY: If Re-implementing this section, confront XXYs.
+ Signal Extraction
 \end_layout
 
 \begin_layout Plain Layout
@@ -7697,22 +7807,22 @@ s, an integer number of 0.8
 \end_inset
 
 s data acquisition samples.
- At every position change, after an XXX
+ At every position change, after an XXY
 \begin_inset space ~
 \end_inset
 
 s delay to allow the attractor and pendulum feedback systems to come into
- equilibrium, the pendulum torque was measured for XXX
+ equilibrium, the pendulum torque was measured for XXY
 \begin_inset space ~
 \end_inset
 
 s.
  The absolute torque measurements were converted into torque differences
- by subtracting the mean (XXX windowing!) of the torque measurements when
+ by subtracting the mean (XXY windowing!) of the torque measurements when
  the pendulum-attractor distance was small from the mean of the torque measureme
 nts when the distance was large that immediately preceded and succeeded
- it XXX.
-  XXX lockAve, windowing length.
+ it XXY.
+  XXY lockAve, windowing length.
 \end_layout
 
 \begin_layout Subsection
@@ -7723,7 +7833,7 @@ Synchronization
 Data are imported from three separate sources (torsion balance, attractor
  control, interferometer), and trimmed in length to present only data with
  complete temporal overlap.
- If needed (runs XXX), any timing offsets between the three clocks are incorpora
+ If needed (runs XXY), any timing offsets between the three clocks are incorpora
 ted before trimming.
  In instances where interferometer data are unavailable, the interferometer's
  data structures are created and filled with zeros, except the timing informatio
@@ -7756,7 +7866,7 @@ status open
 
 \begin_layout Plain Layout
 Transfer functions of software low-pass filters.
- XXX data before/after, show data that contains signal, show that science
+ XXY data before/after, show data that contains signal, show that science
  is unfiltered.
 \end_layout
 
@@ -7795,7 +7905,7 @@ Three columns of data are fed through FIR filters of length 9600 samples
 \end_inset
 
  lowpass filter.
- [XXX get frequencies right] This is primarily done to guarantee that the
+ [XXY get frequencies right] This is primarily done to guarantee that the
  attractor and interferometer signals share timebase/phase with the signal
  from the pendulum.
  To finish the filtering step, the first 14400 samples (1.5 
@@ -7804,7 +7914,7 @@ Three columns of data are fed through FIR filters of length 9600 samples
 
  9600) are clipped from the beginning of all data to remove the filter-initializ
 ing effects.
- XXX What order to put this section in WRT calibration?
+ XXY What order to put this section in WRT calibration?
 \end_layout
 
 \begin_layout Subsection
@@ -7815,7 +7925,7 @@ Edge Finding
 To ensure that the phases of each run are correct with respect to the attractor
  256 s carrier frequency, an adaptive edge finding method detects rising
  and falling edges of attractor motion.
- In the many runs which featured XXX
+ In the many runs which featured XXY
 \end_layout
 
 \begin_layout Subsection
@@ -7852,9 +7962,9 @@ ver', applied to the data's time derivative.
  As the calibration signal is continuous, transient signals are interpreted
  as spurious.
  Any 100 s region of data centered on a suspected spike is excised completely.
- Spike detection uses a an aggressive version of Chauvenet's criterion XXX
+ Spike detection uses a an aggressive version of Chauvenet's criterion XXY
  (ref).
- XXX (Peirce's criteron may actually be better for this?) The implementation
+ XXY (Peirce's criteron may actually be better for this?) The implementation
  loops 20 iterations of the spike removing code to ensure that spikes of
  multiple scales (or spikes sufficiently numerous to pull the initial standard
  deviation) are rejected.
@@ -8580,7 +8690,7 @@ Attractor-correlated torque measurement
 
 \begin_layout Plain Layout
 The attractor moves every 128 s.
- After XXX s, the attractor is nearly stationary until its next movement.
+ After XXY s, the attractor is nearly stationary until its next movement.
  The science signal is the difference in torque on the pendulum between
  stationary steps.
  For narrowed bandwidth, we alternate 10 times between two states.
@@ -8591,7 +8701,7 @@ reference "sub:Aggregation/Differencing"
 
 \end_inset
 
-) measurements ('bins' below XXX word choice) comprises a 'cut'.
+) measurements ('bins' below XXY word choice) comprises a 'cut'.
  
 \end_layout
 
@@ -8601,15 +8711,15 @@ Padding
 
 \begin_layout Plain Layout
 In order to prevent the contamination of each bin by transient effects from
- attractor motion and by small XXX (size?) synchronization errors between
+ attractor motion and by small XXY (size?) synchronization errors between
  the three data acquisition computers, the analysis does not accept measurements
- until XXX s after each position change and ceases to accept them XXXs before
- each position change (XXX do I do this in seconds or samples? Does it matter?
+ until XXY s after each position change and ceases to accept them XXYs before
+ each position change (XXY do I do this in seconds or samples? Does it matter?
  Does it beat?)
 \end_layout
 
 \begin_layout Plain Layout
-XXX Need plots to justify choices.
+XXY Need plots to justify choices.
 \end_layout
 
 \begin_layout Subsubsection
@@ -8647,7 +8757,7 @@ Preventing the aliasing of high frequency noise into low frequency measurements
 \end_layout
 
 \begin_layout Plain Layout
-XXX Plot of transfer function with and without windowing.
+XXY Plot of transfer function with and without windowing.
 \end_layout
 
 \begin_layout Subsubsection
@@ -8658,7 +8768,7 @@ Implementation
 The code below is trimmed from the original implementation (alternate weighting
  schema and supporting variables were the primary redaction), and may not
  execute properly.
- XXX (clean it up?)
+ XXY (clean it up?)
 \end_layout
 
 \begin_layout LyX-Code
@@ -9661,8 +9771,42 @@ Quantified uncertainties
 Narrative
 \end_layout
 
+\begin_layout Standard
+There is insufficient space and time to recount the entire story associated
+ with PlateWash.
+ Several investigations germane to the final result are described in this
+ chapter.
+ A chronological history of the experiment may be found in the CENPA Annual
+ Reports 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "CENPA-AR-2007,CENPA-AR-2008,CENPA-AR-2009,CENPA-AR-2010,CENPA-AR-2011,CENPA-AR-2012,CENPA-AR-2013"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Interferometer
+\end_layout
+
+\begin_layout Standard
+We spent a lot of time trying to figure out how to make do without a measurement
+ of the foil position.
+ We were never able to find another way.
+ 
+\end_layout
+
 \begin_layout Section
 Capacitor Systematic
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Capacitor-Systematic"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -9700,6 +9844,10 @@ The Capacitor Systematic schematic
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+Newtonian Simulation
 \end_layout
 
 \begin_layout Chapter
