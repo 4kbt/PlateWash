@@ -99,7 +99,7 @@ m.
 
 \begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Chapter
 Introduction
@@ -7158,7 +7158,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -9848,6 +9848,450 @@ The Capacitor Systematic schematic
 
 \begin_layout Section
 Newtonian Simulation
+\end_layout
+
+\begin_layout Chapter
+Newtonian Simulation
+\end_layout
+
+\begin_layout Standard
+While the 
+\begin_inset Quotes eld
+\end_inset
+
+infinite plate
+\begin_inset Quotes erd
+\end_inset
+
+ geometry affords us many luxuries of alignment, where many corrections
+ to gravitational imperfections in the basic setup are second-order, it
+ is essential to have the ability to simulate the forces and torques between
+ arbitrary mass configurations.
+ Furthermore, the calculations must be sufficiently simple that they may
+ be easily audited.
+ 
+\end_layout
+
+\begin_layout Standard
+While it is less computationally-efficient, and can have numerical rounding
+ concerns, we have chosen to simulate the Newtonian signals in PlateWash
+ by breaking field and test masses into aggregations of many small point
+ masses and computing the simple sums of forces and torques between them.
+ Done this way, there is only the inverse square law to implement correctly.
+\end_layout
+
+\begin_layout Section
+Data Format
+\end_layout
+
+\begin_layout Standard
+The data structure used to describe a point mass in this framework is simple:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+[m,x,y,z]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Collections of masses are simple aggregations of point masses:
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccc}
+m_{1} & x_{1} & y_{1} & z_{1}\\
+m_{2} & x_{2} & y_{2} & z_{2}\\
+m_{3} & x_{3} & y_{3} & z_{3}
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Forces and torques
+\end_layout
+
+\begin_layout Standard
+The force 
+\begin_inset Formula $\vec{F}$
+\end_inset
+
+ and torques 
+\begin_inset Formula $\vec{\tau}$
+\end_inset
+
+ between mass collections 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ are computed as follows.
+ The torques on 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ are measured around 
+\begin_inset Formula $(0,0,0)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../mlib/gravity/pointMatrixGravity.m"
+lstparams "caption={pointMatrixGravity.m},language=Matlab"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Where the inverse square law is evaluated by:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../mlib/gravity/Gmmr2Array.m "
+lstparams "caption={pointMatrixGravity.m},language=Matlab"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Movement
+\end_layout
+
+\begin_layout Standard
+It is convenient to programatically translate and rotate mass distributions.
+\end_layout
+
+\begin_layout Subsection
+Translation
+\end_layout
+
+\begin_layout Standard
+Translation is defined by a three-vector.
+ XXX
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../mlib/gravity/translatePMArray.m"
+lstparams "caption={translatePMArray.m},language=Matlab"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Rotation
+\end_layout
+
+\begin_layout Standard
+XXX
+\end_layout
+
+\begin_layout Section
+Shapes
+\end_layout
+
+\begin_layout Standard
+It is convenient to define a small library of basic shapes from which larger
+ objects may be created.
+\end_layout
+
+\begin_layout Standard
+XXX
+\end_layout
+
+\begin_layout Section
+Display
+\end_layout
+
+\begin_layout Standard
+It is essential to know what it is that you're modelling.
+ This data format lends itself to simple plotting of mass configurations.
+ When the mass configurations are simply-plotted, many kinds of errors are
+ trivially apparent.
+ Plotting is as simple as 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../mlib/gravity/displayPoints.m"
+lstparams "caption={mlib/gravity/displayPoints.m},language=Matlab"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+With these plots, an image like Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:DisplayPoints"
+
+\end_inset
+
+ can be panned and zoomed in three dimensions, giving easy intuitive access
+ to the model.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+XXX
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:DisplayPoints"
+
+\end_inset
+
+DisplayPoints output.
+ Test mass in blue, field mass in red.
+ Forces and torques are computed about the origin.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Parts
+\end_layout
+
+\begin_layout Standard
+XXX
+\end_layout
+
+\begin_layout Subsection
+Pendulum
+\end_layout
+
+\begin_layout Standard
+XXX
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../NewtonianSimulation/parts/jan13Pendulum.m"
+lstparams "caption={Pendulum},language=Matlab"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Attractor
+\end_layout
+
+\begin_layout Standard
+XXX
+\end_layout
+
+\begin_layout Subsection
+Spindles
+\end_layout
+
+\begin_layout Standard
+XXX
+\end_layout
+
+\begin_layout Subsection
+Bellows
+\end_layout
+
+\begin_layout Standard
+XXX
+\end_layout
+
+\begin_layout Section
+Verification
+\end_layout
+
+\begin_layout Subsection
+Point-point forces make sense XXX
+\end_layout
+
+\begin_layout Subsection
+Point-point torques make sense XXX
+\end_layout
+
+\begin_layout Subsection
+Forces go to 1/r^2 at long range XXX 
+\end_layout
+
+\begin_layout Subsection
+Uniformity of infinite plane force XXX
+\end_layout
+
+\begin_layout Subsection
+Smooth torque from rings XXX
+\end_layout
+
+\begin_layout Subsection
+Q-tester is in rough agreement XXX
+\end_layout
+
+\begin_layout Section
+Newtonian Simulations of Platewash
+\end_layout
+
+\begin_layout Standard
+Centered torques XXX
+\end_layout
+
+\begin_layout Standard
+Off-center torques XXX
+\end_layout
+
+\begin_layout Standard
+Angled torques XXX
 \end_layout
 
 \begin_layout Chapter
