@@ -2700,7 +2700,7 @@ filename "../extracted/detectorWidthMillimeters.tex"
 mm (
 \begin_inset CommandInset include
 LatexCommand input
-filename "/home/charlie/trialEotwash/Eotwash/extracted/autocollDynamicRangePeak2PeakmRad.tex"
+filename "../extracted/autocollDynamicRangePeak2PeakmRad.tex"
 
 \end_inset
 
@@ -3948,7 +3948,7 @@ Pa,
 
 \begin_inset CommandInset include
 LatexCommand input
-filename "/home/charlie/trialEotwash/Eotwash/systematics/pressure/extracted/unconstrainedQ.tex"
+filename "../systematics/pressure/extracted/unconstrainedQ.tex"
 
 \end_inset
 
@@ -4683,7 +4683,7 @@ filename "../systematics/pressure/extracted/finalPressurePa.tex"
  acting on a 
 \begin_inset CommandInset include
 LatexCommand input
-filename "/home/charlie/trialEotwash/Eotwash/extracted/AttractorDiameter.tex"
+filename "../extracted/AttractorDiameter.tex"
 
 \end_inset
 
@@ -6566,7 +6566,7 @@ s.
 s is an integer (320) multiple of the 
 \begin_inset CommandInset include
 LatexCommand input
-filename "/home/charlie/trialEotwash/Eotwash/extracted/TheoSampleTime.tex"
+filename "../extracted/TheoSampleTime.tex"
 
 \end_inset
 
