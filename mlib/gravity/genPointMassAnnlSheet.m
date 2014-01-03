@@ -6,8 +6,6 @@ function array= genPointMassAnnlSheet(mass, iRadius, oRadius, thickness, nxpoint
 	nzpoints= nypoints;
 
 	density = mass/(pi*(oRadius^2-iRadius^2)*thickness)
-
-
 	
 	pointMass = density*xgrid*ygrid*zgrid
 
@@ -30,12 +28,6 @@ function array= genPointMassAnnlSheet(mass, iRadius, oRadius, thickness, nxpoint
 		end
 	end
 
-%	if(rows(array)!= npoints)
-%		error('counting problem in AnnlSheet')
-%		array=0;
-%	end
-
-	
 	MassDiscrepancyRatio = sum(array(:,1))/mass
 
 	if( abs( MassDiscrepancyRatio - 1) > 1e-4)
