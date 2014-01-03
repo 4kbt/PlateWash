@@ -10003,7 +10003,7 @@ status open
 \size small
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "../mlib/gravity/Gmmr2Array.m "
+filename "../mlib/gravity/Gmmr2Array.m"
 lstparams "caption={pointMatrixGravity.m},language=Matlab"
 
 \end_inset
