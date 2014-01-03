@@ -2,6 +2,9 @@ include ../Makefile.inc
 
 EXTRACTEDDEPS := $(shell grep filename thesis.lyx | awk '{print $$2}' | sed 's/\"//g')
 
+#Goes hunting for all directories named extracted, points at all tex files within them.
+KNOWNEXTRACTED := $(shell find ../ -type d | grep extracted)
+KNOWNEXTRACTED := $(addsuffix /*.tex, $(KNOWNEXTRACTED))
 
 #These three variables go together to mine eps filenames out of higher directory makefiles
 DEEPMAKES := $(shell find `pwd`/plots/ -name Makefile)
@@ -14,6 +17,7 @@ PLOTTARGETS := $(shell grep eps  $(DEEPMAKES) | awk '{print $$1}' \
 thesis.pdf : thesis.lyx $(EXTRACTEDDEPS)
 	$(OCT) ../globalConfig/run3147FixedParameters.m
 	$(HOMEDIR)/bin/mathify.sh $(HOMEDIR)/extracted/*
+	$(HOMEDIR)/bin/mathify.sh $(KNOWNEXTRACTED) 
 	$(LYX) thesis.lyx
 	date > buildDate.txt
 
@@ -23,6 +27,9 @@ $(PLOTTARGETS) :
 
 test:
 	echo $(PLOTTARGETS)
+	echo $(KNOWNEXTRACTED)
+
+
 
 clean : 
 	-rm *.pdf
