@@ -10030,7 +10030,8 @@ Translation
 
 \begin_layout Standard
 Translation is defined by a three-vector.
- XXX
+ Translating is as simple as adding the desired three-vector to the spatial
+ components of a mass distribution.
 \end_layout
 
 \begin_layout Standard
@@ -10070,7 +10071,50 @@ Rotation
 \end_layout
 
 \begin_layout Standard
-XXX
+Rotation is, as always, more complicated.
+ The rotation scheme used here is to define a direction in space, as viewed
+ from the origin, then specify a rotation angle about that axis.
+ Each sub-component point mass of a distribution is individually rotated
+ through multiplication by a rotation matrix 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "GruberQuaternionRotation"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../mlib/gravity/rotatePMArray.m"
+lstparams "caption={rotatePMArray.m},language=Matlab"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -10080,10 +10124,107 @@ Shapes
 \begin_layout Standard
 It is convenient to define a small library of basic shapes from which larger
  objects may be created.
+ In combination with translation and rotation, a few shapes can be used
+ to represent almost anything.
+ The simple mass-distribution representation also allows the easy construction
+ of more ornate combinations.
+ 
 \end_layout
 
 \begin_layout Standard
-XXX
+Central to PlateWash design are flat plates.
+ These come in two types, round and rectangular.
+\end_layout
+
+\begin_layout Subsection
+Right Annular Prism
+\end_layout
+
+\begin_layout Standard
+It is convenient to develop a function for generating both round sheets
+ and rings at the same time, as a round sheet is a ring with zero inner
+ radius.
+ This function places points on a cartesian grid, with points accepted if
+ they're internal to the specified mass.
+ Grid spacing along the in-plane direction and axial direction may be independen
+tly selected.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../mlib/gravity/genPointMassAnnlSheet.m"
+lstparams "caption={genPointMassAnnlSheet.m},language=Matlab"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Right Rectangular Prism
+\end_layout
+
+\begin_layout Standard
+The other major shape used in PlateWash modelling is the right rectangular
+ prism.
+ All dimensions may be specified, and grid spacings along each dimension
+ may be independently specified.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../mlib/gravity/genPointMassRect.m"
+lstparams "caption={genPointMassRect.m},language=Matlab"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -10183,7 +10324,8 @@ Parts
 \end_layout
 
 \begin_layout Standard
-XXX
+For PlateWash-specific modelling, it is convenient to define a few assemblies.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -10191,7 +10333,10 @@ Pendulum
 \end_layout
 
 \begin_layout Standard
-XXX
+The pendulum is assembled from three components, a rectangular-prism body,
+ and two rectangular-prism inlays.
+ The density of the inlays are chosen to yield the actual inlay density
+ when summed with the body's density.
 \end_layout
 
 \begin_layout Standard
@@ -10231,7 +10376,76 @@ Attractor
 \end_layout
 
 \begin_layout Standard
-XXX
+The attractor is rendered from three components.
+ Two planar sheets to generate the effect of the cylindrical attractor,
+ and one annular ring for the 
+\begin_inset Quotes eld
+\end_inset
+
+compensation
+\begin_inset Quotes erd
+\end_inset
+
+ rim.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Superposition
+\end_layout
+
+\begin_layout Standard
+The planar sheets utilize a critical principle of superposition.
+ In the region where the pendulum-attractor separation is comparable to
+ the grid spacing, any pointwise calculation of forces and torques is almost
+ guaranteed to be erroneous or require careful attention.
+ This difficulty can be bypassed entirely by superposition.
+ The gravitational field from a cylindrical sheet can be computed either
+ directly, or by computing the force from a large annulus that represents
+ the 
+\begin_inset Quotes eld
+\end_inset
+
+missing
+\begin_inset Quotes erd
+\end_inset
+
+ mass from an infinite sheet that the cylindrical sheet purports to represent
+ and subtracting it from the known-uniform force due to an infinite sheet.
+ As all pointwise separations are large in the latter case, any questions
+ of grid overlap are rendered moot.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../NewtonianSimulation/parts/jan13Attractor.m"
+lstparams "caption={jan13Attractor.m},language=Matlab"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -10239,7 +10453,50 @@ Spindles
 \end_layout
 
 \begin_layout Standard
-XXX
+The attractor is supported by aluminum 
+\begin_inset Quotes eld
+\end_inset
+
+spindles
+\begin_inset Quotes erd
+\end_inset
+
+ (see XXX).
+ The gravitational effect of the spindles should be very small, but they
+ are incorporated into the simulation.
+ Each spindle is simulated as a cylindrical column of aluminum.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../NewtonianSimulation/parts/jan13Spindles.m"
+lstparams "caption={jan13Spindles.m},language=Matlab"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -10247,7 +10504,95 @@ Bellows
 \end_layout
 
 \begin_layout Standard
+The Newtonian influence of gas flowing into and out of the bellows is easily
+ simulated by computing the gravitational effect of a nearby cylinder of
+ varying density.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../NewtonianSimulation/parts/jan13Bellows.m"
+lstparams "caption={jan13Bellows.m},language=Matlab"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Diagram
+\end_layout
+
+\begin_layout Standard
+When all of the parts of the attractor and pendulum assemblies are plotted
+ together, they appear as in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Complete-Newtonian-Assembly"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
 XXX
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Complete-Newtonian-Assembly"
+
+\end_inset
+
+Complete Newtonian Assembly
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
