@@ -14,7 +14,7 @@ PLOTTARGETS := $(shell grep eps  $(DEEPMAKES) | awk '{print $$1}' \
 		| sed "s|$(PWD)/||g")
 
 
-thesis.pdf : thesis.lyx $(EXTRACTEDDEPS)
+thesis.pdf : thesis.lyx $(EXTRACTEDDEPS) thesis.bib
 	$(OCT) ../globalConfig/run3147FixedParameters.m
 	$(HOMEDIR)/bin/mathify.sh $(HOMEDIR)/extracted/*
 	$(HOMEDIR)/bin/mathify.sh $(KNOWNEXTRACTED) 
