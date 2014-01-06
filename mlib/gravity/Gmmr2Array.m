@@ -1,8 +1,7 @@
 %Returns the three axis force on mass1 by mass2 (vector)
 function force=Gmmr2Array(mass1, mass2)
 
-	%CODATA '06
-	G=6.67428e-11;
+	fundamentalConstants
 
 	%Which way does the force act?
 	rvec=mass2(:,2:4)- ones(rows(mass2),1)*mass1(2:4);
