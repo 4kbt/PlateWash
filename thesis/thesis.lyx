@@ -157,7 +157,7 @@ The Standard Model is a triumph.
 status open
 
 \begin_layout Plain Layout
-XXX insert from bibtex.huge: Observation of a new particle in the search
+XXXRC insert from bibtex.huge: Observation of a new particle in the search
  for the Standard Model Higgs boson with the 
 \backslash
 {ATLAS
@@ -291,7 +291,7 @@ key "Ade:2013ktc,Ade:2013zuv"
 status open
 
 \begin_layout Plain Layout
-XXX nucleosynthesis
+XXXMA nucleosynthesis
 \end_layout
 
 \end_inset
@@ -482,8 +482,7 @@ key "1999snng.book.....F"
 
 \end_inset
 
- (confirm XXX), when the fields are weak, the modified potential takes the
- approximate form 
+, the modified potential takes the approximate form 
 \end_layout
 
 \begin_layout Standard
@@ -642,7 +641,7 @@ m for one extra dimension.
 status open
 
 \begin_layout Plain Layout
-XXX Insert citation from bibtex.huge.Search for Signatures of Extra Dimensions
+XXXRC Insert citation from bibtex.huge.Search for Signatures of Extra Dimensions
  in the Diphoton Mass Spectrum at the Large Hadron Collider 
 \end_layout
 
@@ -694,7 +693,7 @@ dark energy
 status collapsed
 
 \begin_layout Plain Layout
-If measured in accordance with the usual FRW parametrization, XXX ...
+If measured in accordance with the usual FRW parametrization, XXXMI ...
  
 \end_layout
 
@@ -718,7 +717,7 @@ key "Ade:2013zuv,Ade:2013ktc"
 
 \end_inset
 
-, Supernova searches: XXX) are used to extract a value for 
+, Supernova searches: XXXMA) are used to extract a value for 
 \begin_inset Formula $\Lambda$
 \end_inset
 
@@ -930,7 +929,7 @@ screen
 
 .
  Because chameleon interactions are self-screening, the screening length
- XXX becomes the relevant length scale at which the new interaction may
+ XXXMA becomes the relevant length scale at which the new interaction may
  emerge from camoflage.
  
 \end_layout
@@ -948,7 +947,7 @@ In addition to their physical motiviation, chameleon interactions are ready-made
 \end_layout
 
 \begin_layout Standard
-XXX Uphadye calculable boundaries 
+XXXMA Uphadye calculable boundaries 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "PhysRevD.86.102003"
@@ -959,11 +958,11 @@ key "PhysRevD.86.102003"
 \end_layout
 
 \begin_layout Standard
-XXX New PRL regarding viability of chameleons 
+XXXMA New PRL regarding viability of chameleons 
 \end_layout
 
 \begin_layout Standard
-XXX Symmetrons from Upadhye
+XXXMI Symmetrons from Upadhye
 \begin_inset CommandInset citation
 LatexCommand citep
 key "PhysRevLett.110.031301"
@@ -974,7 +973,7 @@ key "PhysRevLett.110.031301"
 \end_layout
 
 \begin_layout Standard
-XXX 
+XXXMA 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "2013arXiv1309.5389J"
@@ -1021,18 +1020,24 @@ key "PhysRevLett.100.031803UnparticleTestability"
 
 .
  The existing body of inverse square law tests served to place the most
- stringent constraints on XXX.
+ stringent constraints on XXXMA.
  The tight constraints, on new theory, that stem from precision tests of
  gravity are the guaranteed payoff that come with incremental improvement
  in the laboratory.
-\end_layout
+\begin_inset Note Note
+status open
 
 \begin_layout Subsection
 Other
 \end_layout
 
-\begin_layout Standard
-Chinese QCD scale stuff? LHC gravity physics XXX
+\begin_layout Plain Layout
+Chinese QCD scale stuff? LHC gravity physics XXXMI
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -1058,9 +1063,9 @@ key "adelberger2003tests,antoniadis2011short,NewmanBoyntonReview2009"
 \begin_layout Standard
 Precision measurements of the distance dependence of gravity may have begun
  with Kepler.
- Kepler's Laws [XXX] are now taught to students as necessary corrolaries
+ Kepler's Laws [XXXRC] are now taught to students as necessary corrolaries
  of Newton's theory, but Kepler's data were essential to the formulation
- of the theory itself [XXX].
+ of the theory itself [XXXMI].
  Astronomical tests of gravity remain the most precise, providing direct
  tests of General Relativity in addition to Newton's Laws.
  In order of decreasing range and increasing precision, the leading solar
@@ -1490,7 +1495,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXX
+XXXRC
 \end_layout
 
 \begin_layout Plain Layout
@@ -1670,7 +1675,6 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-XXX
 \begin_inset CommandInset label
 LatexCommand label
 name "Simple Parallel plate cartoon"
@@ -1813,7 +1817,7 @@ Flat plate torque
 \end_layout
 
 \begin_layout Standard
-XXX Copy me in!
+XXXRC Copy me in!
 \end_layout
 
 \begin_layout Subsection
@@ -1992,20 +1996,7 @@ Evaluating the integral:
 \end_layout
 
 \begin_layout Standard
-XXX - recheck.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-XXX check against Josh Long's formula - josh long doesn't have one.
-\end_layout
-
-\end_inset
-
-
+XXXRC - recheck.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2147,7 +2138,7 @@ filename "../extracted/inlayWidth.tex"
 
  wide.
  The pendulum was threaded onto a thin copper tube crimped onto an 
-\begin_inset Formula $8.9XXX$
+\begin_inset Formula $8.9XXXRC$
 \end_inset
 
  cm long 
@@ -2156,7 +2147,7 @@ filename "../extracted/inlayWidth.tex"
 
 m diameter W torsion fiber.
  The upper end of the fiber was connected to a 
-\begin_inset Formula $30XXX$
+\begin_inset Formula $30XXXRC$
 \end_inset
 
  g cylindrical copper 
@@ -2168,11 +2159,11 @@ prehanger
 \end_inset
 
  mass that was suspended by a 
-\begin_inset Formula $8.9XXX$
+\begin_inset Formula $8.9XXXRC$
 \end_inset
 
  cm long 
-\begin_inset Formula $50XXX\,\mu$
+\begin_inset Formula $50XXXRC\,\mu$
 \end_inset
 
 m diameter fiber in the magnetic field of a small ring magnet to damp the
@@ -2194,7 +2185,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXX
+XXXRC
 \end_layout
 
 \begin_layout Plain Layout
@@ -2221,7 +2212,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXX
+XXXRC
 \end_layout
 
 \begin_layout Plain Layout
@@ -2248,7 +2239,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXX
+XXXRC
 \end_layout
 
 \begin_layout Plain Layout
@@ -2280,7 +2271,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXX
+XXXRC
 \end_layout
 
 \begin_layout Plain Layout
@@ -2417,7 +2408,7 @@ m diameter) were attached to the back of the backer with aluminum set screws.
 Both large faces of the pendulum and the front face of the attractor were
  hand polished to a mirror finish with silicon-carbide and 3M diamond sandpaper.
  After ultrasonic cleaning in isopropyl alcohol, a thick (~3000 Angstrom
- XXX) layer of gold was deposited by thermal evaporation on all surfaces
+ XXXMA) layer of gold was deposited by thermal evaporation on all surfaces
  of the pendulum and on the front face of the attractor.
  A thin titanium layer was used beneath the gold to promote adhesion.
 \end_layout
@@ -2479,20 +2470,28 @@ m
 status open
 
 \begin_layout Plain Layout
-XXX verify thickness
+XXXRC verify thickness
 \end_layout
 
 \end_inset
 
 thick BeCu alloy foil (Micro-Tek, Diamond Bar CA) over the tapered end of
- an 79XXX mm inner diameter Al tube like a drumhead.
- The foil was flat to XXX 
+ an 79XXXMA mm inner diameter Al tube like a drumhead.
+ The foil was flat to XXXRC 
 \begin_inset Formula $\mu$
 \end_inset
 
-m over its width.
- We coated the outside of the foil with XXX nm of Au over an XXX nm Ti adhesion
- layer by e-beam evaporation.
+m over its width (see Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "FoilFlatness"
+
+\end_inset
+
+).
+ We coated the outside of the foil with XXXRC nm of Au over an XXXRC nm
+ Ti adhesion layer by e-beam evaporation.
  The foil was mounted to an electrically isolated frame to allow us to vary
  its electrostatic potential.
  The foil was mounted with a screw/flexure arrangement that permitted small
@@ -2509,22 +2508,24 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXX
+XXXRC
 \end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "FoilFlatness"
+
+\end_inset
+
 Foil Flatness
 \end_layout
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -2547,6 +2548,13 @@ name "Autocollimator Photo"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+XXXRC
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Caption
 
 \begin_layout Plain Layout
@@ -2584,6 +2592,10 @@ name "Autocollimator Diagram"
 \end_layout
 
 \begin_layout Plain Layout
+XXXMA
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Caption
 
 \begin_layout Plain Layout
@@ -2617,8 +2629,8 @@ reference "Autocollimator Diagram"
 \end_inset
 
 .
- Light from a 780 nm (XXX) laser diode was directed through a pinhole, collimate
-d, and directed at the pendulum.
+ Light from a 780 nm (XXXMA) laser diode was directed through a pinhole,
+ collimated, and directed at the pendulum.
  Light reflected from the pendulum passed back through the collimating lens
  and was focused, via a beamsplitter, onto a position sensitive photodiode.
  The detector (UDT SC-10D 
@@ -2626,7 +2638,7 @@ d, and directed at the pendulum.
 status collapsed
 
 \begin_layout Plain Layout
-XXX (confirm on apparatus)
+XXXMA (confirm on apparatus)
 \end_layout
 
 \end_inset
@@ -2654,7 +2666,7 @@ filename "../extracted/autocollDynamicRangePeak2PeakmRad.tex"
 \end_inset
 
 mrad) dynamic range in both tip and twist.
- The autocollimator noise gave a sensitivity of XXX rad/
+ The autocollimator noise gave a sensitivity of XXXRC rad/
 \begin_inset Formula $\sqrt{\mbox{Hz}}$
 \end_inset
 
@@ -2832,7 +2844,7 @@ The attractor's flexure stage was electric-discharge machined from a single
 status open
 
 \begin_layout Plain Layout
-XXX check data
+XXXMA check data
 \end_layout
 
 \end_inset
@@ -2856,13 +2868,13 @@ The electric signals needed to operate the experiment were conducted through
 
 \begin_layout Standard
 The pendulum support, autocollimator, foil, attractor stage, and feedback
- electrodes were all firmly clamped to a single 5 cm XXX thick aluminum
+ electrodes were all firmly clamped to a single 5 cm XXXMA thick aluminum
  optical bench.
  The bench was secured, via three 1/2
 \begin_inset Quotes erd
 \end_inset
 
- XXX diameter stainless threaded rods with aluminum adapters on the ends
+ XXXMA diameter stainless threaded rods with aluminum adapters on the ends
  to the stainless steel baseplate of the bell jar.
  The jar itself sat atop three aluminum legs with adjustable levelling feet.
  The entire apparatus was installed upon a U-shaped solid masonry block
@@ -2904,14 +2916,21 @@ See photo in ~/platewash/photos
 \end_inset
 
 .
- Past experience with the jar has shown that pressures of XXX
+ Past experience with the jar 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "schlamminger2010indirect"
+
+\end_inset
+
+ has shown that pressures of XXXRC
 \begin_inset space ~
 \end_inset
 
-Torr are reliably obtained by XXX days after pumpdown from atmosphere, and
- pressure of XXX Torr are obtained after XXX hours when pumping down from
- roughing pressures.
- Science measurements began XXX hours after pumpdown from roughing pressures
+Torr are reliably obtained by XXXRC days after pumpdown from atmosphere,
+ and pressures of XXXRC Torr are obtained after XXXRC hours when pumping
+ down from roughing pressures after a brief pressure rise from high vacuum.
+ Science measurements began XXXRC hours after pumpdown from roughing pressures
  
 \begin_inset Note Note
 status open
@@ -2922,7 +2941,7 @@ Power outage 3/13, Run3146 pw begins begins 3/13.!
 
 \end_inset
 
- following a power outage, and >2 months under vacuum (XXX check runtitles).
+ following a power outage, and >2 months under vacuum (XXXRC check runtitles).
  With the pump valved off, the pressure rise was measured at the end of
  the science run to be 
 \begin_inset CommandInset include
@@ -2966,7 +2985,7 @@ The torque scale of the apparatus was set gravitationally by rotating a
 \begin_inset Formula $Q_{22}q_{22}$
 \end_inset
 
- coupling XXX, the 
+ coupling XXXRC, the 
 \begin_inset Quotes eld
 \end_inset
 
@@ -2974,8 +2993,7 @@ q-tester
 \begin_inset Quotes erd
 \end_inset
 
- would cause a gravitational torque on the pendulum at twice the rotation
- frequency.
+ causes a gravitational torque on the pendulum at twice the rotation frequency.
  Two 
 \begin_inset Formula $23.88\pm0.34$
 \end_inset
@@ -2987,24 +3005,24 @@ q-tester
 kg lead blocks were hung on opposite sides of the vacuum jar by nylon straps
  attached to a rotating armature which operated continuously during data
  acquisition.
- The blocks were weighed with a bathroom scale (XXX how to calibrate? linearity?
-), and computed by averaging seven measured differences between the experimental
-ist's body weight with and without each block.
+ The blocks were weighed with a bathroom scale (XXXRC how to calibrate?
+ linearity?), and computed by averaging seven measured differences between
+ the experimentalist's body weight with and without each block.
  The 
 \begin_inset Formula $4"\times4"\times8"$
 \end_inset
 
- bricks were suspended vertically and located with their inner faces XXX
+ bricks were suspended vertically and located with their inner faces XXXRC
 \begin_inset space ~
 \end_inset
 
-m from the center of the jar and bottom faces XXX
+m from the center of the jar and bottom faces XXXRC
 \begin_inset space ~
 \end_inset
 
 m above the center of the pendulum.
- (XXX Centering?) The rotation was controlled by a PIC microprocessor driving
- a geared-down stepper motor.
+ (XXXRC Centering?) The rotation was controlled by a PIC microprocessor
+ driving a geared-down stepper motor.
  The frequency stability of the calibration tone was observed to be comparable
  to, or better than, the stability of the data acquisition clock.
  The sinusoidally varying gravitational torque appeared twice the rotation
@@ -3029,7 +3047,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXX
+XXXRC
 \end_layout
 
 \begin_layout Plain Layout
@@ -3073,8 +3091,8 @@ clean room
  from the ceiling of the room, keeping it at slightly positive pressure
  and flushing airborne dust out of the room through an opening along the
  floor.
- HEPA/Class XXX When the apparatus was under vacuum, the blowers were turned
- off; the enclosure then provided some added wind and thermal isolation.
+ HEPA/Class XXXMA When the apparatus was under vacuum, the blowers were
+ turned off; the enclosure then provided some added wind and thermal isolation.
  
 \end_layout
 
@@ -3412,11 +3430,11 @@ m.
 \end_layout
 
 \begin_layout Standard
-XXX plotted in ifoSim.gpl on watson.
+XXXRC plotted in ifoSim.gpl on watson.
 \end_layout
 
 \begin_layout Standard
-XXX Blah Blah blah
+XXXRC Blah Blah blah
 \end_layout
 
 \begin_layout Subsubsection
@@ -3486,7 +3504,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXX
+XXXRC
 \end_layout
 
 \begin_layout Plain Layout
@@ -3523,7 +3541,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXX
+XXXRC
 \end_layout
 
 \begin_layout Plain Layout
@@ -3590,7 +3608,7 @@ reference "fig:Foil-interferometer-signal-as-fcn-of-pressure-position"
 \end_layout
 
 \begin_layout Standard
-The very first fringe (at XXX psi) is our best measure of fringe contrast.
+The very first fringe (at XXXRC psi) is our best measure of fringe contrast.
  We can identify the turning points and sensitive regions of intensity.
  
 \end_layout
@@ -3605,11 +3623,11 @@ reference "fig:Interferometer-Duration"
 
 , we have the interferometer signal plotted over the duration of the experiment.
  Given the spatial extent of the materials involved and the heterogeneous
- nature of the assembly, the <XXX 
+ nature of the assembly, the <XXXRC 
 \begin_inset Formula $\mu$
 \end_inset
 
-m differential displacement over a period of more than a month is satisfying.
+m differential displacement over a period of more than a month is excellent.
  Much of the experiment took place near a turning point, which limits our
  ability to constrain the foil motion for each individual run.
  
@@ -3622,7 +3640,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXX
+XXXRC
 \end_layout
 
 \begin_layout Plain Layout
@@ -4007,8 +4025,15 @@ Patch effect
 \begin_layout Standard
 The gold-coated surfaces of our pendulum and foil are some mixture of amorphous
  and polycrystalline materials.
- According to XXX (who?!?!?) the surface environment evolves over time,
- as crystals slowly change.
+ The surface environment evolves over time, as crystals slowly change and
+ residual gas particles adsorbed onto the surface move about 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "PhysRevA.84.023412,PhysRevLett.109.103001WinelandGasNoise"
+
+\end_inset
+
+.
  This gives rise to a changing electrostatic environment at each surface.
  Our pendulum and foil are gold coated in order to minimise this effect
  - gold's work function is only weakly-dependent on crystal orientation
@@ -4077,7 +4102,7 @@ mV/month drift), and initially unpredictable in value.
 \end_layout
 
 \begin_layout Standard
-XXX continues...
+XXXRC continues...
  
 \end_layout
 
@@ -4096,8 +4121,8 @@ name "sub:Autocollimator-noise"
 The opto-electronic system used to measure pendulum twist has its own inherent
  noise.
  By design, the autocollimator's relatively white noise floor is chosen
- to sit below the low-frequency thermally-driven angle noise of XXX.
- The PlateWash autocollimator's noise floor is approximately XXX, as seen
+ to sit below the low-frequency thermally-driven angle noise of XXXRC.
+ The PlateWash autocollimator's noise floor is approximately XXXRC, as seen
  in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -4168,7 +4193,15 @@ Electrostatic interaction with nearby surfaces: For PlateWash, and most
  on the pendulum.
  Careful minimization of contact potentials is essential to reduce tilt/swing
  couplings.
- XXX elaborate.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ XXXMI elaborate.
+\end_layout
+
+\end_inset
+
  With simple modification and bias voltages, the PlateWash balance can become
  a powerful tilt sensor.
 \end_layout
@@ -4194,7 +4227,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXX
+XXXMA
 \end_layout
 
 \begin_layout Plain Layout
@@ -4220,7 +4253,17 @@ Earthquake!
 
 \begin_layout Standard
 PlateWash also sees less-palpable seismic effects, such as the 'microseismic
- peak' XXX and the effects of nearby humanity (traffic and laboratory noise).
+ peak' 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMA
+\end_layout
+
+\end_inset
+
+ and the effects of nearby humanity (traffic and laboratory noise).
  
 \end_layout
 
@@ -4231,7 +4274,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
+XXXRC
 \end_layout
 
 \begin_layout Plain Layout
@@ -4239,6 +4282,13 @@ status open
 
 \begin_layout Plain Layout
 Daily noise variation
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Daily-noise-variation"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -4260,7 +4310,7 @@ Tilt
 \end_layout
 
 \begin_layout Standard
-XXX
+XXXRC
 \end_layout
 
 \begin_layout Paragraph
@@ -4276,8 +4326,8 @@ The majority of Eöt-Wash pendulums are designed to have vanishing low-order
 
  moment (it's a flat plate, with masses on the end).
  Recent estimates by Krishna Venkateswara and Todd Wagner put the ambient
- gravitational gradient noise at approximately XXX.
- This noise level converts to torque noise of XXX.
+ gravitational gradient noise at less than XXXRC.
+ This noise level converts to torque noise of XXXRC.
  
 \end_layout
 
@@ -4301,7 +4351,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXX
+XXXMA
 \end_layout
 
 \begin_layout Plain Layout
@@ -4378,7 +4428,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXX
+XXXRC
 \end_layout
 
 \begin_layout Plain Layout
@@ -4427,7 +4477,7 @@ The PlateWash apparatus is sensitive to temperature.
 
 \begin_layout Standard
 As passive isolation, the vacuum system is an excellent insulator, with
- a time constant of about a week XXX for the internal aluminum baseplate
+ a time constant of about a week XXXMA for the internal aluminum baseplate
  with respect to the outside world.
  As further, rather limited, insulation, the clean-room fans are turned
  off during measurement periods, trapping a volume of air around the apparatus.
@@ -4455,7 +4505,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXX
+XXXMA
 \end_layout
 
 \begin_layout Plain Layout
@@ -4484,7 +4534,7 @@ Noise model
 \end_layout
 
 \begin_layout Standard
-XXX
+XXXRC
 \end_layout
 
 \begin_layout Subsubsection
@@ -4500,7 +4550,7 @@ Systematic uncertainties are the primary challenge of this measurement.
  Ensuring that no gravitational signals are mimiced nor masked demands great
  care.
  For this section, estimates are made of a torque difference between an
- attractor-pendulum distance of closest approach (XXX
+ attractor-pendulum distance of closest approach (XXXRC
 \begin_inset space ~
 \end_inset
 
@@ -4508,7 +4558,7 @@ Systematic uncertainties are the primary challenge of this measurement.
 \begin_inset Formula $\mu$
 \end_inset
 
-m) and a point XXX
+m) and a point XXXRC
 \begin_inset space ~
 \end_inset
 
@@ -4558,7 +4608,8 @@ Foil displacement
 Any attractor-correlated displacement of the isolating foil is a cause for
  concern.
  The pendulum interacts electrostatically with the foil with a coupling
- of ~XXX N-m/um.
+ of ~XXXRC N-m/um.
+ See XXXRC.
  
 \end_layout
 
@@ -4579,7 +4630,7 @@ bounce test
 
 ).
  Effort has been made to keep the active surfaces very clean, with class
- XXX clean room procedures.
+ XXXMA clean room procedures.
  We see the effects of dust in perhaps 50% of our initial cleanings of a
  surface.
  The presence of dust is inferred with the interferometer.
@@ -4602,7 +4653,7 @@ Residual gas pressure
 \end_layout
 
 \begin_layout Standard
-The foil's stiffness is XXX.
+The foil's stiffness is XXXRC.
  The diffusion time out of the attractor-foil gap is 
 \begin_inset Formula $\sim40$
 \end_inset
@@ -4636,8 +4687,8 @@ filename "../extracted/AttractorDiameter.tex"
 \begin_inset space ~
 \end_inset
 
-m diameter circle yields a foil displacement of XXX and related torque of
- XXX.
+m diameter circle yields a foil displacement of XXXRC and hence a torque
+ of XXXRC.
 \end_layout
 
 \begin_layout Paragraph
@@ -4653,13 +4704,19 @@ The foil is in constant motion, especially in its resonant modes.
  of thousands or more.
  If those vibration amplitudes change with attractor position, a false signal
  may emerge in the pendulum.
- The ambient modes can be damped by proximity-enhanced gas damping XXX or
- some electrical effect (XXX RC or eddy currents?).
+ The ambient modes can be damped by proximity-enhanced gas damping 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "schlamminger2010indirect,dolesi2011brownian"
+
+\end_inset
+
+ or some electrical effect (XXX RC or eddy currents?).
  
 \end_layout
 
 \begin_layout Standard
-XXX studied this.
+XXXMA studied this.
 \end_layout
 
 \begin_layout Paragraph
@@ -4671,7 +4728,7 @@ From the interferometer, we can see that the attractor, at the end of its
  spindles, vibrates with 60 Hz and its harmonics considerably more than
  the foil alone.
  The attractor must also have its own seismically driven vibrational modes.
- XXX we must place a limit on this from on-line ifo traces.
+ XXXRC we must place a limit on this from on-line ifo traces.
 \end_layout
 
 \begin_layout Paragraph
@@ -4730,20 +4787,23 @@ As the attractor does not have the spatial extent of an infinite sheet,
  were written.
  When completed, it was discovered that one trivial bug separated the two
  codes from nearly exact agreement.
- See XXX for a description of both methods.
+ See 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Newtonian-Simulation"
+
+\end_inset
+
+ for a description of both methods.
  As expected from flat surfaces in the near field, the torque vs.
  distance curves are predominantly linear.
- For a properly centered pendulum, the expected torque is XXX N-m/m.
- The quadratic term is XXX N-m/m^2.
+ For a properly centered pendulum, the expected torque is XXXRC N-m/m.
+ The quadratic term is XXXRC N-m/m^2.
  There is a left-right asymmetry of the curve due to the asymmetry of the
- pendulum, but for a displacement of the pendulum XXX horizontally and XXX
- vertically, the linear term becomes XXX N-m/m and the quadratic term XXX
- N-m/m^2.
+ pendulum, but for a displacement of the pendulum XXXRC horizontally and
+ XXXRC vertically, the linear term becomes XXXRC N-m/m and the quadratic
+ term XXXRC N-m/m^2.
  
-\end_layout
-
-\begin_layout Standard
-XXX attractor plots go here?
 \end_layout
 
 \begin_layout Paragraph
@@ -4760,9 +4820,9 @@ Small non-uniformities in density of the attractor or pendulum materials
  In the absence of a pendulum non-uniformity, an attractor void will cause
  a lateral position-dependent torque.
  If the attractor void were to occur near the outer corner of the pendulum
- (worst case), the torque would be XXX N-m/ (cubic micron of attractor).
+ (worst case), the torque would be XXXRC N-m/ (cubic micron of attractor).
  In the event that two voids are laterally coincident, the maximum torque
- difference would be XXX N-m/(cubic micron of void).
+ difference would be XXXRC N-m/(cubic micron of void).
  
 \end_layout
 
@@ -4770,7 +4830,7 @@ Small non-uniformities in density of the attractor or pendulum materials
 Horizontal displacement of the pendulum is an excellent test for the local
  effects.
  The largest voids observed in the surfaces under a microscope are about
- XXX in size.
+ XXXRC in size.
  Note that a distribution of voids across the surface can, with sufficiently
  many voids, be viewed as a reduction in the density of the material.
  This is especially true if the voids are smaller than a characteristic
@@ -4784,18 +4844,27 @@ Attractor mount/flexure/bellows gravity
 \begin_layout Standard
 The motion of the attractor mount, spindles, flexure, and bellows introduces
  a small, largely linear, torque background.
- The linear background is expected to be XXX Nm/m.
+ The linear background is expected to be XXXRC Nm/m.
  The spindles contribute the dominant nonlinear term, which is expected
- to be < XXX N-m/m^2 (or N-m/m^3).
+ to be < XXXRC N-m/m^2 (or N-m/m^3).
  
 \end_layout
+
+\begin_layout Paragraph
+\begin_inset Note Note
+status open
 
 \begin_layout Paragraph
 Caterpillaring of the bellows
 \end_layout
 
-\begin_layout Standard
-XXX The bellows might deform sideways slightly?
+\begin_layout Plain Layout
+XXXMA The bellows might deform sideways slightly?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
@@ -4805,9 +4874,24 @@ Weight of drive gas
 \begin_layout Standard
 The flow of gas into the attractor drive bellows changes the mass distribution
  near the pendulum.
- XXX cm^3 of gas at 50 psi has a mass of XXX kg.
- The expected torque on the pendulum due to the appearance of XXX kg XXX
- m from the pendulum is XXX
+ XXXRC
+\begin_inset space ~
+\end_inset
+
+cm
+\begin_inset Formula $^{3}$
+\end_inset
+
+ of gas at 50 psi has a mass of XXXRC kg.
+ The expected torque on the pendulum due to the appearance of XXXRC
+\begin_inset space ~
+\end_inset
+
+kg XXXRC
+\begin_inset space ~
+\end_inset
+
+m from the pendulum is XXXRC.
 \end_layout
 
 \begin_layout Paragraph
@@ -4820,7 +4904,7 @@ The dense inlays of the attractor and the dense material of the attractor
  It is possible that an air bubble may have become laterally very large
  when the glue layer was pressed.
  Assuming a 1 cm diameter by 1 micron thick glue bubble in both the pendulum
- and attractor, the associated torque is <XXX.
+ and attractor, the associated torque is <XXXRC.
 \end_layout
 
 \begin_layout Paragraph
@@ -4830,7 +4914,7 @@ Spindle screw voids
 \begin_layout Standard
 The attractor's aluminum body is attached to aluminum spindles using aluminum
  set screws.
- The screws are matched in length and mass to better than XXX um and XXX
+ The screws are matched in length and mass to better than XXXRC um and XXXRC
  g.
  The screws and spindles are installed such that the mass distribution is
  most mirror-symmetric about the vertical plane perpendicular to the attractor
@@ -4838,7 +4922,7 @@ The attractor's aluminum body is attached to aluminum spindles using aluminum
  The set screws were screwed all the way into the attractor, then the spindles
  were screwed onto the screws.
  The remaining voids in the attractor and spindle housings are expected
- to give rise to torques of XXX N-m/m and nonlinearities of XXX N-m/m^2.
+ to give rise to torques of XXXRC N-m/m and nonlinearities of XXXRC N-m/m^2.
 \end_layout
 
 \begin_layout Paragraph
@@ -4846,8 +4930,8 @@ Surface flatness
 \end_layout
 
 \begin_layout Standard
-The attractor and pendulum were lapped to XXX um (attractor) XXX um (pendulum)
- rms flatness.
+The attractor and pendulum were lapped to XXXRC um (attractor) XXXRC um
+ (pendulum) rms flatness.
  The surfaces were 
 \begin_inset Quotes eld
 \end_inset
@@ -4857,19 +4941,29 @@ dished
 \end_inset
 
  by the lapping process, which dominates the rms flatness.
- After a spatial lowpass at XXX scale, the rms roughness of the surfaces
- was XXX um (attractor) and XXX um (pendulum).
+ After a spatial lowpass at XXXRC scale, the rms roughness of the surfaces
+ was XXXRC um (attractor) and XXXRC um (pendulum).
  In addition, the pendulum materials' differing hardnesses led to a step
- at the dense/light interface of XXX um.
+ at the dense/light interface of XXXRC um.
  A plot of all the surfaces is shown in Fig XXX.
  
 \end_layout
 
 \begin_layout Standard
 The torque due to the flatness variations of attractor and pendulum was
- estimated numerically to be XXX N-m/m in the near field and negligible
+ estimated numerically to be XXXRC N-m/m in the near field and negligible
  elsewhere.
- XXX How the F do we do this reliably?
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMA How the F do we do this reliably?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -4906,10 +5000,10 @@ The apparatus may have attractor-related tilt for a number of reasons, including
  of the attractor mount, and changing geometry of the attractor air line.
  The flexure was mounted from its center in order to minimize any deformation
  of the apparatus as a whole.
- The deflection is expected to be both small and primarily linear, limiting
- the impact on the measurement.
+ The deflection is expected to be both small and linear, limiting the impact
+ on the measurement.
  We initially estimated the effect of tilt by considering only center of
- mass motion, finding ~XXX N-m
+ mass motion, finding ~XXXRC N-m
 \end_layout
 
 \begin_layout Paragraph
@@ -4926,7 +5020,8 @@ One interesting systematic effect that can exhibit considerable nonlinearity
  If the double-compensating mechanism of the flexure experiences nonlinear
  stress near the (artificially-placed with mechanical stops) end of its
  travel, nonlinear stresses might be communicated to the baseplate.
- XXX not sure how to estimate this.
+ By looking at the nonlinearity of the vertical axis of the pendulum output,
+ we can constrain the nonlinearity to XXXRC, yielding a torque of XXXRC.
 \end_layout
 
 \begin_layout Subsubsection
@@ -4980,7 +5075,7 @@ Pendulum magnetic moment
 The pendulum has a magnetic moment.
  It may be measured by applying a time-varying uniform magnetic field to
  the apparatus.
- XXX expand.
+ XXXRC expand/cross-ref.
  
 \end_layout
 
@@ -5022,7 +5117,7 @@ key "weld2008new"
 status collapsed
 
 \begin_layout Plain Layout
-XXX Isn't the best reference for this stuff.
+XXXMI Isn't the best reference for this stuff.
 \end_layout
 
 \end_inset
@@ -5078,7 +5173,7 @@ Attractor drift
 
 \begin_layout Standard
 The attractor pneumatic drive valves leak slowly, causing the attractor
- to retract at ~XXX um/minute.
+ to retract at ~XXXRC um/minute.
  A changing magnetic environment may give rise to a pseudo-DC magnetic field
  that penetrates the foil.
 \end_layout
@@ -5118,10 +5213,8 @@ If there is a temperature gradient between the foil and the attractor, attractor
  rise to a false signal.
  Heaters and thermistors were installed on board the attractor spindles
  to magnify and study this effect.
- Studies by XXX show that heat transfer is enhanced over very short distances
- in vacuum by an effect similar to proximity-enhanced gas damping.
- Furthermore, thermal conductivity is enhanced by near-field effects, somewhat
- like the Casimir interaction, as in 
+ Heat transfer is enhanced over very short distances in vacuum by near-field
+ electromagnetic effects, somewhat like the Casimir interaction, as in 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "Jones2013349"
@@ -5129,6 +5222,8 @@ key "Jones2013349"
 \end_inset
 
 .
+ Gas effects similar to proximity-enhanced gas damping may also have an
+ effect.
 \end_layout
 
 \begin_layout Paragraph
@@ -5150,8 +5245,8 @@ Overall temperature change at attractor frequency
 \begin_layout Standard
 The temperature of the instrument itself may change as gas flows into and
  out of the attractor bellows.
- Thermistors are installed (but not continuously monitored XXX) in several
- locations throughout the apparatus.
+ Thermistors are installed (but not continuously monitored) in several locations
+ throughout the apparatus.
 \end_layout
 
 \begin_layout Subsubsection
@@ -5183,7 +5278,7 @@ Casimir effect
 
 \begin_layout Standard
 The Casimir effect is not expected to penetrate the foil.
- See XXX.
+ See XXXRC.
  If it did, the effect would be interesting in its own right.
  
 \end_layout
@@ -5197,7 +5292,7 @@ Initial Alignment
 \end_layout
 
 \begin_layout Standard
-XXX! The experiment was initially aligned using the autocollimator.
+XXXRC! The experiment was initially aligned using the autocollimator.
  The attractor was fixed in place against two registry blocks and firmly
  clamped.
  The autocollimator was then centered on the attractor and aligned such
@@ -5229,7 +5324,7 @@ m from the desired working position.
  a measurement of the attractor-foil capacitance.
  Gross alignment was done by hand.
  Fine adjustment was done using the Belleville washers on the foil mount.
- When optical alignment reached XXX 
+ When optical alignment reached XXXRC 
 \begin_inset Formula $\mu$
 \end_inset
 
@@ -5246,7 +5341,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXX
+XXXRC
 \end_layout
 
 \begin_layout Plain Layout
@@ -5325,14 +5420,21 @@ The critical distances between and relative orientations of the pendulum,
  As the attractor displaced the foil, the angular amplitude of the tapping
  signal necessarily decreased to zero.
  The point where this occurred was used as a reference to determine the
- absolute distance between the pendulum and the attractor (XXX we should
- repeat at another phitop position?).
- The pendulum twist at this point was taken to be the angle at which the
- pendulum was parallel to the attractor (XXX what about 
-\begin_inset Formula $\psi$
+ absolute distance between the pendulum and the attractor 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+(XXXMI we should repeat at another phitop position?)
+\end_layout
+
 \end_inset
 
-?) 
+.
+ The pendulum horizontal and vertical angles, as measured by the autocollimator,
+ at this point were taken to be the angles at which the pendulum was parallel
+ to the attractor.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -5342,7 +5444,7 @@ The pendulum-foil capacitance was measured as a function of pendulum position
 \end_layout
 
 \begin_layout Standard
-XXX Plots
+XXXRC Plots
 \end_layout
 
 \begin_layout Standard
@@ -5735,7 +5837,16 @@ reference "sub:Statistical-Uncertainty"
 ent noise.
  Some of this noise is time-dependent, correlated with wind, human activity,
  and worldwide seismic activity.
- (XXX needs expansion (how to do it?))
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ (XXXMI needs expansion (how to do it?))
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -5754,7 +5865,7 @@ Emphasize here where the optimal noise is.
 \end_layout
 
 \begin_layout Standard
-XXX Insert raw noise plot (take from stationary run).
+XXXRC Insert raw noise plot (take from stationary run).
 \end_layout
 
 \begin_layout Subsection
@@ -5857,7 +5968,17 @@ reference "sub:Filtering"
 \end_inset
 
  were smaller, the experiment's livetime would be greater.
- XXX glitch/day?
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMI glitch/day?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -6313,8 +6434,16 @@ name "sub:Lags"
 
 \begin_layout Standard
 A number of properties of the instrument require finite time.
- The pneumatically-driven attractor takes ~XXX s to move to a new position.
- The feedback loop requires ~XXX s to settle.
+ The pneumatically-driven attractor takes ~XXXRC
+\begin_inset space ~
+\end_inset
+
+s to move to a new position.
+ The feedback loop requires ~XXXRC
+\begin_inset space ~
+\end_inset
+
+s to settle.
  The data acquisition system samples every 
 \begin_inset CommandInset include
 LatexCommand input
@@ -6332,7 +6461,7 @@ s and has 3-5
 
 s anti-aliasing filters.
  Synchronization errors between the three data acquisition computers require
- XXX
+ XXXRC
 \begin_inset space ~
 \end_inset
 
@@ -6536,7 +6665,7 @@ As the pendulum is locked in feedback, there are multiple data channels
  The pendulum twist angle and the P (proportional) term of the loop are
  necessarily equivalent.
  In practice, the twist signal and P term were anti-aliased differently.
- The P term had an (XXX 3, just recheck) s filter applied, making it the
+ The P term had an (XXXRC 3, just recheck) s filter applied, making it the
  signal of choice for a twist measurement.
  The loop was operated with zero I-term, so the I channel contains no signal.
  The D (derivative) term responds like 
@@ -6584,12 +6713,21 @@ Data Analysis
 \end_layout
 
 \begin_layout Standard
-XXX Calibration stability through the runs.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMA Calibration stability through the runs.
  What can explain observed calibration variation?
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
-XXX Systematics on calibration signal.
+XXXRC Systematics on calibration signal.
 \end_layout
 
 \begin_layout Section
@@ -6597,7 +6735,7 @@ Signal Extraction
 \end_layout
 
 \begin_layout Standard
-This section describes the way in which XXX seconds of raw data are converted
+This section describes the way in which XXXRC seconds of raw data are converted
  from three independent raw timeseries into 
 \begin_inset CommandInset include
 LatexCommand input
@@ -6642,7 +6780,17 @@ name "fig:Gravitational-calibration"
 
 \end_inset
 
-XXX Reexamine near 1180.
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMA Reexamine near 1180.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -6801,7 +6949,7 @@ decrease
 status open
 
 \begin_layout Plain Layout
-XXX include code?
+XXXMA include code?
 \end_layout
 
 \end_inset
@@ -6814,7 +6962,7 @@ Timing
 \end_layout
 
 \begin_layout Standard
-XXX TO COLLABORATORS: This section is not yet really begun.
+XXXRC TO COLLABORATORS: This section is not yet really begun.
  This is potentially a huge issue.
  I think the only correct response is to lock in to each individual switch
  of the attractor.
@@ -6856,7 +7004,7 @@ Synchronization
 Data are imported from three separate sources (torsion balance, attractor
  control, interferometer), and trimmed in length to present only data with
  complete temporal overlap.
- If needed (runs XXX-XXX), any timing offsets between the three clocks are
+ If needed (runs XXXRC), any timing offsets between the three clocks are
  incorporated before trimming.
  All three sources sample with a fixed 0.8
 \begin_inset space ~
@@ -7065,7 +7213,7 @@ filename "../extracted/numberOfCuts.tex"
 \end_inset
 
  cuts, the effect of cut-to-cut correlation is limited.
- XXX cut-correlation estimation.
+ (XXXRC cut-correlation estimation).
  The 3-cut length of the FIR filter was chosen by balancing the need for
  effective suppression of the rising 100
 \begin_inset space ~
@@ -7175,8 +7323,8 @@ mHz.
 \end_inset
 
 s (one sample-time).
- In the case of clock drifts, which affect runs XXX-XXX, it can be as large
- as XXX.
+ In the case of clock drifts, which affect runs XXXRC, it can be as large
+ as XXXRC.
  The autocollimator (and on-line feedback) DAQ filter corner was 1
 \begin_inset space ~
 \end_inset
@@ -7303,7 +7451,7 @@ Pendulum, in PD feedback, coherently-averaged response to periodic magnetic
 status open
 
 \begin_layout Plain Layout
-XXX WTF?!
+XXXRC WTF?!
 \begin_inset CommandInset include
 LatexCommand input
 filename "../extracted/filterHigh3220.tex"
@@ -7344,11 +7492,11 @@ The general problem of filter combination is simple in frequency-space,
 
 \begin_layout Standard
 Serendipity provides a solution to the problem.
- The pendulum has a magnetic moment (see XXX).
+ The pendulum has a magnetic moment (see XXXRC).
  Using a coil placed around the apparatus for systematic tests, it is possible
  to produce arbitrary torques on the pendulum.
  The attractor position is measured using an analog electronic pressure
- gauge (see XXX).
+ gauge (see XXXRC).
  By combining the gauge with the coil and an amplifier, it is possible to
  make an exact and magnified simulation of a gravitational signal that is
  linear in attractor position.
@@ -7384,8 +7532,8 @@ name "ElectronicTorqueLag"
 
 \begin_layout Plain Layout
 Injected torques for lag determination after all filters.
- (XXX this plot is modified from ~/pWDA/, make sure it makes sense; run3224preSM
-3A is quite different.)
+ (XXXRC this plot is modified from ~/pWDA/, make sure it makes sense; run3224pre
+SM3A is quite different.)
 \end_layout
 
 \end_inset
@@ -7921,7 +8069,7 @@ ver', applied to the data's time derivative.
 status collapsed
 
 \begin_layout Plain Layout
-XXX spike-removal plots
+XXXMI spike-removal plots
 \end_layout
 
 \end_inset
@@ -8676,7 +8824,7 @@ Weighting/windowing
 status collapsed
 
 \begin_layout Plain Layout
-XXX Weighting seems important, even if I choose not to use it here.
+XXXMI Weighting seems important, even if I choose not to use it here.
  
 \end_layout
 
@@ -8702,7 +8850,7 @@ Preventing the aliasing of high frequency noise into low frequency measurements
 \end_layout
 
 \begin_layout Plain Layout
-XXY Plot of transfer function with and without windowing.
+XXY Plot of transfer function with and without owing.
 \end_layout
 
 \begin_layout Subsubsection
@@ -9079,7 +9227,7 @@ reference "TriangleScatterPlot"
 \end_inset
 
  is dominated by the noisiest points.
- As shown in XXX (plot of noise vs.
+ As shown in (plot of noise vs.
  time), the noise in PlateWash varies by orders of magnitude with environmental
  conditions; we're interested mostly in the points with least scatter.
  
@@ -9137,7 +9285,7 @@ i.e.
 
  significance), the remainder of the circle is filled in with color.
  To represent the sign of the datapoint, yellow is negative, and blue is
- positive XXX (check sign).
+ positive XXXRC (check sign).
  Any force of nature should satisfy 
 \begin_inset Formula $\Delta\tau(a,a)=0$
 \end_inset
@@ -9322,20 +9470,20 @@ The method used to recover
 \begin_layout Standard
 In order to generate results that are independent of any physics-model,
  we choose to fit a piecewise-linear function to the data.
- Each piece is XXX 
+ Each piece is XXXRC 
 \begin_inset Formula $\mu$
 \end_inset
 
 m long for 
-\begin_inset Formula $d\in[0,XXX)$
+\begin_inset Formula $d\in[0,XXXRC)$
 \end_inset
 
- and XXX
+ and XXXRC
 \begin_inset Formula $\mu$
 \end_inset
 
 m long for 
-\begin_inset Formula $d\in[XXX,XXX]$
+\begin_inset Formula $d\in[XXXRC,XXXRC]$
 \end_inset
 
 .
@@ -9377,8 +9525,7 @@ PlateWash is not a blind experiment.
  because we had not discovered a way to monitor the health of the experiment
  without access to data which included the central values of each measurement.
  In the latter half of science data-taking, it became clear that watching
- the errorbars on each cut XXX(terminology?) was sufficient to ensure data
- quality.
+ the errorbars on each cut was sufficient to ensure data quality.
  In this first iteration of PlateWash, our understanding of the instrument's
  metrology was in continuous refinement, which frustrated any attempt to
  inject a fake signal into the data as they were acquired.
@@ -9389,7 +9536,17 @@ PlateWash is not a blind experiment.
 \begin_layout Standard
 The analysis proceeded as if it were blind, to demonstrate the suitability
  of the analysis toolchain for a future blind analysis.
- XXX (need actual procedure followed here).
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMA (need actual procedure followed here).
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
@@ -9804,6 +9961,13 @@ Newtonian Simulation
 
 \begin_layout Chapter
 Newtonian Simulation
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Newtonian-Simulation"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -10243,7 +10407,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXX
+XXXMA
 \end_layout
 
 \begin_layout Plain Layout
@@ -10413,7 +10577,17 @@ spindles
 \begin_inset Quotes erd
 \end_inset
 
- (see XXX).
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+(see XXXMA)
+\end_layout
+
+\end_inset
+
+.
  The gravitational effect of the spindles should be very small, but they
  are incorporated into the simulation.
  Each spindle is simulated as a cylindrical column of aluminum.
@@ -10517,7 +10691,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXX
+XXXRC
 \end_layout
 
 \begin_layout Plain Layout
@@ -10691,7 +10865,7 @@ Matt Turner's independent calculation
 \begin_layout Standard
 Prior to the development of this Newtonian modelling package, Matt Turner
  developed a package for computing the PlateWash torques using formalism
- XXX.
+ XXXRC.
  These results were found to be in agreement with this simulation package
  for all pendulum/attractor combinations attempted.
  
@@ -10715,15 +10889,15 @@ Newtonian Simulations of Platewash
 \end_layout
 
 \begin_layout Standard
-Centered torques XXX
+Centered torques XXXRC
 \end_layout
 
 \begin_layout Standard
-Off-center torques XXX
+Off-center torques XXXRC
 \end_layout
 
 \begin_layout Standard
-Angled torques XXX
+Angled torques XXXRC
 \end_layout
 
 \begin_layout Chapter
@@ -10779,13 +10953,13 @@ To assess the effect of changing the attractor/foil resistance, we tried
 status open
 
 \begin_layout Plain Layout
-XXXAlg: algorithm me!
+XXXMI: algorithm me!
 \end_layout
 
 \end_inset
 
 .
- The circuit is modelled as an LCR resonator, see XXX.
+ The circuit is modelled as an LCR resonator, see XXXRC.
  When the circuit 
 \begin_inset Formula $Q$
 \end_inset
@@ -10853,13 +11027,13 @@ Magnetism
 \end_layout
 
 \begin_layout Standard
-A large (XXX
+A large (XXXRC
 \begin_inset space ~
 \end_inset
 
-cm diameter ) coil with XXX turns of wire was placed near and on the apparatus
+cm diameter ) coil with XXXRC turns of wire was placed near and on the apparatus
  to gauge any change in signal as a function of applied magnetic field.
- The coil was driven with current of XXX
+ The coil was driven with current of XXXRC
 \begin_inset space ~
 \end_inset
 
@@ -10868,17 +11042,27 @@ A.
 \end_layout
 
 \begin_layout Standard
-XXX photo
+XXXRC photo
 \end_layout
 
 \begin_layout Standard
-XXX diagram
+XXXRC diagram
 \end_layout
 
 \begin_layout Standard
-The change in field at the pendulum was estimated (XXX measured?!) to be
- XXX vertical, XXX horizontal, and XXX axial in the on-apparatus configuration
- and XXX horizontal in the position at the side of the instrument.
+The change in field at the pendulum was estimated 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+(XXXMA measured?!)
+\end_layout
+
+\end_inset
+
+ to be XXXRC vertical, XXXRC transverse, and XXXRC attractor-axial in the
+ on-apparatus configuration and XXXRC horizontal in the position at the
+ side of the instrument.
 \end_layout
 
 \begin_layout Standard
@@ -11006,8 +11190,8 @@ Attractor Bias
 \end_layout
 
 \begin_layout Standard
-The attractor was biased to XXX V through a resistor, and the experiment
- was operated with XXX stroke.
+The attractor was biased to XXXRC V through a resistor, and the experiment
+ was operated with XXXRC stroke.
  
 \end_layout
 
@@ -11102,12 +11286,12 @@ Temperature gradient
 
 \begin_layout Standard
 Using the on-board heating resistors, one leg of the attractor was heated
- with XXX mW of power, both heating the attractor and providing a spatial
+ with XXXRC mW of power, both heating the attractor and providing a spatial
  gradient.
- This was observed to create an XXX K rise in attractor temperature and
- create an XXX K temperature gradient across the attractor.
- The attractor was operated with strokes of XXX and XXX, and the run analyzed
- blind.
+ This was observed to create an XXXRC K rise in attractor temperature and
+ create an XXXRC K temperature gradient across the attractor.
+ The attractor was operated with strokes of XXXRC and XXXRC, and the run
+ analyzed blind.
 \end_layout
 
 \begin_layout Subsubsection
@@ -11115,7 +11299,7 @@ Temperature variation at attractor frequency
 \end_layout
 
 \begin_layout Standard
-In runs XXX-XXX, the experiment was operated with wireless sensors reading
+In runs XXXRC, the experiment was operated with wireless sensors reading
  out the resistance of the on-attractor thermistors.
  Theg
 \end_layout
@@ -11136,7 +11320,7 @@ t-side of the pressure gauge.
 exactly
 \emph default
  as if the true experiment were underway, but the attractor did not move.
- After XXX seconds of data, the torque difference over a long stroke was
+ After XXXRC seconds of data, the torque difference over a long stroke was
  
 \begin_inset CommandInset include
 LatexCommand input
