@@ -98,61 +98,6 @@ m.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Chapter
-Introduction
-\end_layout
-
-\begin_layout Plain Layout
-Not every thesis requires introduction.
- For reasons which will hopefully become clear, this one does.
- The experimental challenges that shaped the design, implementation, analysis,
- and results of the PlateWash experiment should be introduced even before
- we begin.
- 
-\end_layout
-
-\begin_layout Plain Layout
-The motivation for this experiment is simple.
- Nobody knows what gravity does over distances shorter than ~100 microns.
- 
-\end_layout
-
-\begin_layout Plain Layout
-The Newtonian theory of gravity, and its refinement General Relativity,
- agree with every experimental test yet completed.
- Using these theories, we have considerable predictive power, particularly
- for orbital mechanics.
- These theories are mathematically incompatible with the 
-\emph on
-exceedingly
-\emph default
- well-tested theory of the Standard Model.
- An important example: There is no quantum mechanics in the theory of gravity.
- New theories that attempt to resolve this tension tend to predict novel
- behavior of gravity over short distance.
-\end_layout
-
-\begin_layout Plain Layout
-The forces with which we are concerned are small -- ~50 fN.
- On the scale of modern gravitational experiment, however, they're somewhat
- large; our group's equivalence principle measurements measure forces on
- similar masses that are 100 times smaller.
- So, the primary task is not to prove that such an experiment is sufficiently
- sensitive, but rather to prove that we're not seeing or hiding a Standard
- Model background that mimics gravity.
-\end_layout
-
-\begin_layout Plain Layout
-This experiment is complimentary to our group's world-leading short-range
- gravity test.
- Blah blahXXX
-\end_layout
-
-\end_inset
-
 
 \end_layout
 
@@ -10746,7 +10691,10 @@ Matt Turner's independent calculation
 \begin_layout Standard
 Prior to the development of this Newtonian modelling package, Matt Turner
  developed a package for computing the PlateWash torques using formalism
- XXX
+ XXX.
+ These results were found to be in agreement with this simulation package
+ for all pendulum/attractor combinations attempted.
+ 
 \end_layout
 
 \begin_layout Standard
