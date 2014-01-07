@@ -26,11 +26,8 @@ end
 %! [F T] = pointMatrixGravity(m1,m2);
 %! Fg = G;
 %! assert(abs(F(1) - Fg) < 2*eps)
-%! assert(abs(F(2)) < 2*eps)
-%! assert(abs(F(3)) < 2*eps)
-%! assert(abs(T(1)) < 2*eps)
-%! assert(abs(T(2)) < 2*eps)
-%! assert(abs(T(3)) < 2*eps)
+%! assert(abs(F(2:3)) < 2*eps)
+%! assert(abs(T) < 2*eps)
 
 %!test
 %! 'pointMatrix torque test'
@@ -40,10 +37,8 @@ end
 %! [F T] = pointMatrixGravity(m1,m2);
 %! Fg = G;
 %! assert(abs(F(1) - Fg) < 2*eps)
-%! assert(abs(F(2)) < 2*eps)
-%! assert(abs(F(3)) < 2*eps)
-%! assert(abs(T(1)) < 2*eps)
-%! assert(abs(T(2)) < 2*eps)
+%! assert(abs(F(2:3)) < 2*eps)
+%! assert(abs(T(1:2) < 2*eps)
 %! assert(abs(T(3)+ Fg) < 2*eps)
 
 %!test 
