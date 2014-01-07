@@ -38,7 +38,7 @@ end
 %! Fg = G;
 %! assert(abs(F(1) - Fg) < 2*eps)
 %! assert(abs(F(2:3)) < 2*eps)
-%! assert(abs(T(1:2) < 2*eps)
+%! assert(abs(T(1:2)) < 2*eps)
 %! assert(abs(T(3)+ Fg) < 2*eps)
 
 %!test 
@@ -64,7 +64,6 @@ end
 %! sheet = genPointMassAnnlSheet(m , 0, r, t, t/xspacing, r/rspacing);
 %! v = [];
 %! for ctr = 1:10
-%!	ctr
 %!	d = rand+rspacing; %yes, rand
 %!	y = randn*rspacing;
 %!	z = randn*rspacing;
@@ -79,10 +78,14 @@ end
 %! "newton's shell theorem"
 %! shell = genPointMassSphericalRandomShell(1, 10, 100000);
 %! v = [];
-%! for ctr = 1:100
+%! for ctr = 1:300
 %! 	p = randn(1,3);
 %!	m = [1 0 0 0];
 %!	s = translatePMArray(shell, p);
-%!	v = [v; p, pointMatrixGravity(m, s)]
+%!	v = [v; p, pointMatrixGravity(m, s)];
 %! end
-%!  plot( v(:,3), sqrt( sum(v(:,4:6).^2,2)) )
+%! scatter = sum(v(:,4:6).^2,2);
+%! [fullF fullT] = pointMatrixGravity(m, [1, 10, 0, 0]);
+%! 'fractional error'
+%! fe = sqrt(max(scatter))/fullF(1)
+%! assert( fe < 0.01 ); 
