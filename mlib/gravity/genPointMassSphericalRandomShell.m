@@ -1,23 +1,27 @@
+%Generates a spherical shell with mass M, radius R, and approximately N points.
 function sph = genPointMassSphericalRandomShell( M, R, N)
 
-	%Check for integer number of points
-	sph = [];
-	
-	while rows(sph) < N
+        %From Marsaglia (1972)
+        %http://mathworld.wolfram.com/SpherePointPicking.html
 
-		x = rand(1,2)*2.0-1.0;
+	%Generate 2
+	x = 2*rand(floor(N*4/pi), 2) - 1;
 
-		%From Marsaglia (1972)
-		%http://mathworld.wolfram.com/SpherePointPicking.html
-		x2 = sum(x.^2);
-		if (sqrt(x2) < 1)
-			sph = [sph; 1, ...
-				2 * x(1) * sqrt(1 - x2), ...
-				2 * x(2) * sqrt(1 - x2), ...
-				1 - 2*x2];
-		end
-	end 
+	%Cut into circle
+	x2 = sum(x.^2, 2);
+	x = x( x2 < 1, :);
+	x2 = x2( x2 < 1 );
 
+	%speed
+	sx2 = sqrt(1-x2);
+
+	%conformally map
+	sph = [ ones(rows(x),1), ...
+		2 * x(:,1) .* sx2, ...
+		2 * x(:,2) .* sx2, ...
+		1 - 2 * x2];	
+
+	%set radius, mass
 	sph(:,2:4) = sph(:,2:4) * R;
 	sph(:,1) = sph(:,1) * M / sum( sph(:,1));
 
