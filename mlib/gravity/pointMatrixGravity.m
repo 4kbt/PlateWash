@@ -26,11 +26,8 @@ end
 %! [F T] = pointMatrixGravity(m1,m2);
 %! Fg = G;
 %! assert(abs(F(1) - Fg) < 2*eps)
-%! assert(abs(F(2)) < 2*eps)
-%! assert(abs(F(3)) < 2*eps)
-%! assert(abs(T(1)) < 2*eps)
-%! assert(abs(T(2)) < 2*eps)
-%! assert(abs(T(3)) < 2*eps)
+%! assert(abs(F(2:3)) < 2*eps)
+%! assert(abs(T) < 2*eps)
 
 %!test
 %! 'pointMatrix torque test'
@@ -40,10 +37,8 @@ end
 %! [F T] = pointMatrixGravity(m1,m2);
 %! Fg = G;
 %! assert(abs(F(1) - Fg) < 2*eps)
-%! assert(abs(F(2)) < 2*eps)
-%! assert(abs(F(3)) < 2*eps)
-%! assert(abs(T(1)) < 2*eps)
-%! assert(abs(T(2)) < 2*eps)
+%! assert(abs(F(2:3)) < 2*eps)
+%! assert(abs(T(1:2)) < 2*eps)
 %! assert(abs(T(3)+ Fg) < 2*eps)
 
 %!test 
@@ -64,30 +59,37 @@ end
 %! 'pointMatrix sheet uniformity test'
 %! fundamentalConstants
 %! tm = [1 0 0 0];
-%! %r = 20; t = 0.01; xspacing = 0.0025; rspacing = 0.05; m = 20000*pi*r*r*t;
-%! r = 20; t = 0.01; xspacing = 0.0025; rspacing = 0.5; m = 20000*pi*r*r*t;
+%! r = 140; t = 0.01; xspacing = 0.005; rspacing = 0.5; m = 1*pi*r*r*t;
 %! sheet = genPointMassAnnlSheet(m , 0, r, t, t/xspacing, r/rspacing);
 %! v = [];
-%! for ctr = 1:10
-%!	ctr
-%!	d = rand+rspacing; %yes, rand
+%! for ctr = 1:100
+%!	d = 2.0*rand+rspacing; %yes, rand
 %!	y = randn*rspacing;
 %!	z = randn*rspacing;
 %!	s = translatePMArray( sheet, [d,y,z]);
 %!	v = [v; d y z pointMatrixGravity(tm, s)];
 %!	clear s
 %! end
-%! plot(v(:,1), v(:,4), '+')
+%! save( ["gravity/testOutput/flatSheet.dat"], "v");
+%! plot( v(:,1), v(:,4), '+' )
+%! expectedForce = 2*pi*G;
+%! longerRange = v(v(:,1) > 1, :);
+%! assert(abs(longerRange/expectedForce - 1) < 0.01);
 
 
 %!test 
 %! "newton's shell theorem"
 %! shell = genPointMassSphericalRandomShell(1, 10, 100000);
 %! v = [];
-%! for ctr = 1:100
+%! for ctr = 1:300
 %! 	p = randn(1,3);
 %!	m = [1 0 0 0];
 %!	s = translatePMArray(shell, p);
-%!	v = [v; p, pointMatrixGravity(m, s)]
+%!	v = [v; p, pointMatrixGravity(m, s)];
 %! end
-%!  plot( v(:,3), sqrt( sum(v(:,4:6).^2,2)) )
+%! save( ["gravity/testOutput/sphereShell.dat"], "v");
+%! scatter = sum(v(:,4:6).^2,2);
+%! [fullF fullT] = pointMatrixGravity(m, [1, 10, 0, 0]);
+%! 'fractional error'
+%! fe = sqrt(max(scatter))/fullF(1)
+%! assert( fe < 0.01 ); 

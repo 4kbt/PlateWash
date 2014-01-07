@@ -9703,6 +9703,13 @@ For the last months of this analysis, the data analysis and thesis were
 
 \begin_layout Section
 Testing
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Testing"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -10586,10 +10593,6 @@ Complete Newtonian Assembly
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -10599,28 +10602,164 @@ Complete Newtonian Assembly
 Verification
 \end_layout
 
-\begin_layout Subsection
-Point-point forces make sense XXX
+\begin_layout Standard
+As discussed in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Testing"
+
+\end_inset
+
+ and described in code in the program listings above, the software libraries
+ are tested with unit-tests before each build of the analysis.
+ Some of these sanity-checks are described below.
+\end_layout
+
+\begin_layout Paragraph
+Point-point forces make sense:
+\end_layout
+
+\begin_layout Standard
+A direct check of the force between one-kg masses at 1 m has value 
+\begin_inset Formula $G$
+\end_inset
+
+ within numerical precision.
+\end_layout
+
+\begin_layout Paragraph
+Point-point torques make sense:
+\end_layout
+
+\begin_layout Standard
+The torque about the origin on a point mass placed 1 m from the origin (at
+ (0,1,0)) and acted upon by a point mass placed 1
+\begin_inset space ~
+\end_inset
+
+m away along the direction perpendicular to the test mass's displacement
+ from the origin (at (1,1,0)) has numerical value 
+\begin_inset Formula $G$
+\end_inset
+
+, and the correct vector direction.
+\end_layout
+
+\begin_layout Paragraph
+Forces go to 
+\begin_inset Formula $1/r^{2}$
+\end_inset
+
+ at long range: 
+\end_layout
+
+\begin_layout Standard
+Two cylindrical masses placed at 100 random separations large compared to
+ their individual size follow the inverse square law at better than the
+ 0.1% level.
+\end_layout
+
+\begin_layout Paragraph
+Infinite Sheet
+\end_layout
+
+\begin_layout Standard
+The force on a point mass toward a 140
+\begin_inset space ~
+\end_inset
+
+m radius cylindrical sheet is computed for displacements from ~0.2-2.2
+\begin_inset space ~
+\end_inset
+
+m away from the sheet.
+ To test for any grid-sensitivity, the sheet is randomly-translated in-plane
+ with standard deviation of the grid spacing.
+ At distances greater than 1
+\begin_inset space ~
+\end_inset
+
+m, the force is within <1% of the expected value.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMI figure
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Newton's shell theorem
+\end_layout
+
+\begin_layout Standard
+The force on a test particle placed with standard deviation of 1
+\begin_inset space ~
+\end_inset
+
+m near the center of a randomly-generated 10
+\begin_inset space ~
+\end_inset
+
+m-radius spherical shell with 100,000 component masses is always less than
+ 1% of the force that would be present if the shell's mass were concentrated
+ at a point 10
+\begin_inset space ~
+\end_inset
+
+m away.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMI figure showing arrangement
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Simple quadrupole and point mass XXXRC
+\end_layout
+
+\begin_layout Paragraph
+Q-tester is in rough agreement XXXRC
 \end_layout
 
 \begin_layout Subsection
-Point-point torques make sense XXX
+Matt Turner's independent calculation
 \end_layout
 
-\begin_layout Subsection
-Forces go to 1/r^2 at long range XXX 
+\begin_layout Standard
+Prior to the development of this Newtonian modelling package, Matt Turner
+ developed a package for computing the PlateWash torques using formalism
+ XXX
 \end_layout
 
-\begin_layout Subsection
-Uniformity of infinite plane force XXX
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+(XXXMA comparison plot)
 \end_layout
 
-\begin_layout Subsection
-Smooth torque from rings XXX
-\end_layout
+\end_inset
 
-\begin_layout Subsection
-Q-tester is in rough agreement XXX
+
 \end_layout
 
 \begin_layout Section
