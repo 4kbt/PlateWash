@@ -70,11 +70,10 @@ end
 %!	v = [v; d y z pointMatrixGravity(tm, s)];
 %!	clear s
 %! end
-%! save( ["gravity/testOutput/flatSheet.dat"], "v");
-%! plot( v(:,1), v(:,4), '+' )
-%! expectedForce = 2*pi*G;
+%! save( ["testOutput/flatSheet.dat"], "v");
+%! expectedForce = 2*pi*G*t;
 %! longerRange = v(v(:,1) > 1, :);
-%! assert(abs(longerRange/expectedForce - 1) < 0.01);
+%! assert(abs(longerRange(:,4)/expectedForce - 1) < 0.02);
 
 
 %!test 
@@ -87,7 +86,7 @@ end
 %!	s = translatePMArray(shell, p);
 %!	v = [v; p, pointMatrixGravity(m, s)];
 %! end
-%! save( ["gravity/testOutput/sphereShell.dat"], "v");
+%! save( ["testOutput/sphereShell.dat"], "v");
 %! scatter = sum(v(:,4:6).^2,2);
 %! [fullF fullT] = pointMatrixGravity(m, [1, 10, 0, 0]);
 %! 'fractional error'
