@@ -2952,21 +2952,20 @@ See photo in ~/platewash/photos
 \end_inset
 
 .
- Past experience with the jar has shown that pressures of XXXRC
-\begin_inset space ~
-\end_inset
-
-Torr are reliably obtained by XXXRC days after pumpdown from atmosphere,
- and pressures of XXXRC Torr are obtained after XXXRC hours when pumping
- down from roughing pressures after a brief pressure rise from high vacuum
- 
+ Past experience with the jar 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "schlamminger2010indirect"
 
 \end_inset
 
-.
+ has shown that pressures of XXXRC
+\begin_inset space ~
+\end_inset
+
+Torr are reliably obtained by XXXRC days after pumpdown from atmosphere,
+ and pressures of XXXRC Torr are obtained after XXXRC hours when pumping
+ down from roughing pressures after a brief pressure rise from high vacuum.
  Science measurements began XXXRC hours after pumpdown from roughing pressures
  
 \begin_inset Note Note
@@ -3018,7 +3017,11 @@ name "sec:Calibration"
 
 The torque scale of the apparatus was set gravitationally by rotating a
  quadrupole mass distribution from a bearing above the apparatus.
- By coupling to the quadrupole moment of the plate pendulum the 
+ By way of the 
+\begin_inset Formula $Q_{22}q_{22}$
+\end_inset
+
+ coupling XXXRC, the 
 \begin_inset Quotes eld
 \end_inset
 
@@ -3045,12 +3048,7 @@ kg lead blocks were hung on opposite sides of the vacuum jar by nylon straps
 \begin_inset Formula $4"\times4"\times8"$
 \end_inset
 
- bricks were suspended vertically and located with their inner faces XXXRC(7.5-11.
-5
-\begin_inset Quotes erd
-\end_inset
-
- from the walls as they go around)
+ bricks were suspended vertically and located with their inner faces XXXRC
 \begin_inset space ~
 \end_inset
 
@@ -4041,7 +4039,7 @@ With the PlateWash atmosphere, we expect gas damping-driven noise to be
  roughly 
 \begin_inset Formula 
 \[
-\tau^{2}(f)=XXXRC
+\tau^{2}(f)=XXX
 \]
 
 \end_inset
@@ -4691,8 +4689,7 @@ Residual gas pressure
 \end_layout
 
 \begin_layout Standard
-The foil's stiffness is XXXRC, as estimated from the foil's XXXRC resonant
- frequency.
+The foil's stiffness is XXXRC.
  The diffusion time out of the attractor-foil gap is 
 \begin_inset Formula $\sim40$
 \end_inset
@@ -5101,7 +5098,7 @@ Diffuse contamination
 \begin_layout Standard
 If impurities are sufficiently numerous, then their presence will only appear
  in the force/torque once the pendulum/attractor separation is smaller than
- the characteristic separation/size of the impurities.
+ the characteristic separation of the impurities.
  Only one surface must be contaminated for this effect to appear, as all
  materials in the problem have magnetic permeability different from vacuum.
 \end_layout
@@ -5114,14 +5111,7 @@ Pendulum magnetic moment
 The pendulum has a magnetic moment.
  It may be measured by applying a time-varying uniform magnetic field to
  the apparatus.
- See 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sub:Magnetic-Moment"
-
-\end_inset
-
-.
+ XXXRC expand/cross-ref.
  
 \end_layout
 
@@ -5134,8 +5124,7 @@ The attractor/flexure/bellows assembly contains magnetic materials, primarily
  stainless-steel screws positioned more than an attractor diameter away
  from the pendulum.
  Any magnetic fields from these sources should vary almost linearly with
- attractor position, as the displacement is small compared to the separation,
- and the sources are far away.
+ attractor position,
 \end_layout
 
 \begin_layout Paragraph
@@ -7546,14 +7535,7 @@ The general problem of filter combination is simple in frequency-space,
 
 \begin_layout Standard
 Serendipity provides a solution to the problem.
- The pendulum has a magnetic moment (see 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sub:Magnetic-Moment"
-
-\end_inset
-
-).
+ The pendulum has a magnetic moment (see XXXRC).
  Using a coil placed around the apparatus for systematic tests, it is possible
  to produce arbitrary torques on the pendulum.
  The attractor position is measured using an analog electronic pressure
@@ -11130,10 +11112,6 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXXRC
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Caption
 
 \begin_layout Plain Layout
@@ -11303,17 +11281,6 @@ Perpendicular vertical
 
 \begin_layout Subsubsection
 Perpendicular parallel
-\end_layout
-
-\begin_layout Subsubsection
-Magnetic Moment
-\begin_inset CommandInset label
-LatexCommand label
-name "sub:Magnetic-Moment"
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection
