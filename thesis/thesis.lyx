@@ -6764,8 +6764,15 @@ Signal Extraction
 \end_layout
 
 \begin_layout Standard
-This section describes the way in which XXXRC seconds of raw data are converted
- from three independent raw timeseries into 
+This section describes the way in which more than 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/totalAcceptedSeconds.tex"
+
+\end_inset
+
+ seconds of raw data are converted from three independent raw timeseries
+ into 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../extracted/numberOfCuts.tex"
@@ -11096,6 +11103,10 @@ A.
 wide false
 sideways false
 status open
+
+\begin_layout Plain Layout
+XXXRC
+\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption

@@ -32,9 +32,14 @@ listRuns :
 #end parallelization section. 
 
 
-results/run3147pM3FilterMerge.dat : $(DEPLIST) run3147pLDAFiltermerge.sh $(HOMEDIR)/bin/makeMake.sh
+results/run3147pM3FilterMerge.dat : $(DEPLIST) run3147pLDAFiltermerge.sh $(HOMEDIR)/bin/makeMake.sh ../extracted/*.tex
 	./run3147pLDAFiltermerge.sh
 	wc -l results/run3147pM3FilterMerge.dat | awk '{print $$1}' > ../extracted/numberOfCuts.tex
+	cat ../extracted/calibCutLength.tex\
+	    ../extracted/TheoSampleTime.tex\
+	    ../extracted/numberOfCuts.tex |\
+	     sed 's/\$/\t/' | tr -d '\n' | \
+	     awk '{print $$1*$$2*$$3}' > ../extracted/totalAcceptedSeconds.tex
 
 path : 
 	$(OCT) --verbose pathTest.m
