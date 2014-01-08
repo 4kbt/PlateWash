@@ -2,7 +2,7 @@ include ../../Makefile.inc
 
 PREREQUISITES = $(HOMEDIR)/runAnalysis/results Makefile
 
-all: shortStroke longStroke
+all: shortStroke longStroke field
 	$(MAKE) -C plots
 
 shortStroke :  coilOnCanShortStroke.m $(PREREQUISITES)
@@ -11,6 +11,10 @@ shortStroke :  coilOnCanShortStroke.m $(PREREQUISITES)
 
 longStroke  :  coilOnCanLongStroke.m $(PREREQUISITES)
 	$(OCT) coilOnCanLongStroke.m
+	$(HOMEDIR)/bin/mathify.sh extracted/*
+
+field       :  magneticField.m coilProperties.m $(PREREQUISITES)
+	$(OCT) magneticField.m
 	$(HOMEDIR)/bin/mathify.sh extracted/*
 
 

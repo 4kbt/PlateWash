@@ -1430,6 +1430,15 @@ key "PhysRevD.77.034020,antoniadis2011short"
 \end_inset
 
 .
+ A new variation on the Casimir technique will use ultracold Strontium spectrosc
+opy to test theoretical predictions of the Van der Waals interaction 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "NISTPMG2013"
+
+\end_inset
+
+.
  A very different experiment attempts to place limits on new interactions
  by searching for on-shell bosons from the sun 
 \begin_inset CommandInset citation
@@ -2145,7 +2154,7 @@ filename "../extracted/inlayWidth.tex"
 \begin_inset Formula $18\,\mu$
 \end_inset
 
-m diameter W torsion fiber.
+m diameter tungsten torsion fiber.
  The upper end of the fiber was connected to a 
 \begin_inset Formula $30XXXRC$
 \end_inset
@@ -2255,10 +2264,6 @@ Attractor on spindles with sensors mounted to flexure, preferably with pendulum
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -2283,10 +2288,6 @@ Pendulum scans
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -2406,11 +2407,39 @@ m diameter) were attached to the back of the backer with aluminum set screws.
 
 \begin_layout Standard
 Both large faces of the pendulum and the front face of the attractor were
- hand polished to a mirror finish with silicon-carbide and 3M diamond sandpaper.
- After ultrasonic cleaning in isopropyl alcohol, a thick (~3000 Angstrom
- XXXMA) layer of gold was deposited by thermal evaporation on all surfaces
- of the pendulum and on the front face of the attractor.
- A thin titanium layer was used beneath the gold to promote adhesion.
+ hand polished to a mirror finish with silicon-carbide and 3M lapping paper
+ (aluminum oxide, possibly diamond).
+ The pendulum was etched in hydrochloric acid to remove any ferromagnetic
+ impurities.
+ After ultrasonic cleaning and a final rinse in de-ionized water, 31
+\begin_inset space ~
+\end_inset
+
+nm Ti and 100
+\begin_inset space ~
+\end_inset
+
+nm Au were deposited by thermal evaporation.
+ The titanium layer was used beneath the gold to promote adhesion.
+ 
+\end_layout
+
+\begin_layout Standard
+The pendulum and attractors used in this experiment are actually our prototypes.
+ A second higher-quality Ti-Pt pendulum and awas built and operated for
+ more than a year in vacuum before it was noted that the inlay glue had
+ failed, and the surfaces had bubbled by more than 20
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m.
+ A refined attractor suffered a similar problem.
+ Fortunately, the prototypes are sufficient to deliver an interesting measuremen
+t.
 \end_layout
 
 \begin_layout Standard
@@ -11027,13 +11056,34 @@ Magnetism
 \end_layout
 
 \begin_layout Standard
-A large (XXXRC
+A large (
+\begin_inset CommandInset include
+LatexCommand input
+filename "../systematics/magnetic/extracted/CoilDiameter.tex"
+
+\end_inset
+
+
 \begin_inset space ~
 \end_inset
 
-cm diameter ) coil with XXXRC turns of wire was placed near and on the apparatus
- to gauge any change in signal as a function of applied magnetic field.
- The coil was driven with current of XXXRC
+m diameter ) coil with 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../systematics/magnetic/extracted/CoilDiameter.tex"
+
+\end_inset
+
+ turns of wire was placed near and on the apparatus to gauge any change
+ in signal as a function of applied magnetic field.
+ The coil was driven with current of 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../systematics/magnetic/extracted/CoilCurrent.tex"
+
+\end_inset
+
+
 \begin_inset space ~
 \end_inset
 
@@ -11042,7 +11092,30 @@ A.
 \end_layout
 
 \begin_layout Standard
-XXXRC photo
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Coil in the on-apparatus position
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -11060,9 +11133,20 @@ status open
 
 \end_inset
 
- to be XXXRC vertical, XXXRC transverse, and XXXRC attractor-axial in the
- on-apparatus configuration and XXXRC horizontal in the position at the
- side of the instrument.
+ to be 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../systematics/magnetic/extracted/CoilFieldAtCenter.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+T vertical, XXXRC transverse, and XXXRC attractor-axial in the on-apparatus
+ configuration and XXXRC horizontal in the position at the side of the instrumen
+t.
 \end_layout
 
 \begin_layout Standard
