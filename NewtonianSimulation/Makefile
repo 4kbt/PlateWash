@@ -4,22 +4,23 @@ OCT := $(OCT) -p $(HOMEDIR)/mlib/gravity/ -p parts/
 
 MASSES=jan13Attractor.m jan13Pendulum.m
 
-all: brick simulation
+all: simulation plots/brickDemo.eps
 
-brick : 
+plots/brickDemo.eps : $(MLIB) brickDemo.m brickDemo.gpl
 	$(OCT) brickDemo.m
+	$(GNU) brickDemo.gpl
 
-washCycleBrick:
+washCycleBrick: $(MLIB)
 	$(OCT) washCycleDemo.m
 
-tiltmeterQTester:
+tiltmeterQTester: $(MLIB)
 	$(OCT) tiltmeterDemo.m
 
-spinCalibration:
+spinCalibration: $(MLIB)
 	$(OCT) spinPendulumDemo.m
 
 # Non-infinite torque
-simulation : 
+simulation : $(MLIB) processRun.m
 	$(OCT) processRun.m
 
 clean :

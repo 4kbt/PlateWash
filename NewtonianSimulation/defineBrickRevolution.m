@@ -1,6 +1,6 @@
 function d = defineBrickRevolution
 
-	d = (0:1/30:1)*2*pi;
+	d = (0:1/60:1)*2*pi;
 
 	d = d';
 

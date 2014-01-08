@@ -1,0 +1,10 @@
+set term postscript solid color eps
+set output 'plots/brickDemo.eps'
+
+set xlabel 'calibration quadrupole angle w.r.t. pendulum (rad)'
+set ylabel 'gravitational torque, z-axis (fN-m)'
+
+set key noauto
+
+pl [0:2*pi]\
+	'SimulationOutput/jun10Brick.dat' u 1:($13*1e15) w p pt 7 lc 3
