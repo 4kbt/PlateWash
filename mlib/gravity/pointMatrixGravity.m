@@ -107,10 +107,11 @@ end
 %! for a = 0:2*pi/60:2*pi
 %!	Q = rotatePMArray(q, a, [0 0 1]);
 %!	K = 2* 6.0 * G * M * m * d^2/R^3 * (-sin (a)) * cos (a);
+%!	Tau = 2*G*M*m*d/R^2 * -sin(a) * ( 1./(1 - 2*d/R * cos(a) + (d/R)^2)^(3/2) - 1./(1 + 2*d/R * cos(a) + (d/R)^2)^(3/2) );
 %!	[f, t] = pointMatrixGravity(p,Q);
-%!	v = [v; a K f t Q(1,:)];
+%!	v = [v; a K f t Q(1,:) Tau];
 %! end
 %! save( "testOutput/quadrupoleTest.dat" , "v");
-%! %plot( v(:,1), 1- v(:,8)./v(:,2)) % , v(:,1), v(:,2)  )
-%! plot( v(:,1), mod(atan(v(:,10)./v(:,11)), pi/2) - mod( v(:,1), pi/2) )
+%! plot( v(:,1), 1- v(:,8)./v(:,2), v(:,1), 1- v(:,13)./v(:,2) ) % , v(:,1), v(:,2)  )
+%! %plot( v(:,1), mod(atan(v(:,10)./v(:,11)), pi/2) - mod( v(:,1), pi/2) )
 %! 
