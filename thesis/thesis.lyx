@@ -10612,22 +10612,12 @@ Spindles
 \end_layout
 
 \begin_layout Standard
-The attractor is supported by aluminum 
+The attractor is supported from the flexure by aluminum 
 \begin_inset Quotes eld
 \end_inset
 
 spindles
 \begin_inset Quotes erd
-\end_inset
-
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-(see XXXMA)
-\end_layout
-
 \end_inset
 
 .
@@ -10894,11 +10884,105 @@ XXXMI figure showing arrangement
 \end_layout
 
 \begin_layout Paragraph
-Simple quadrupole and point mass XXXRC
+Simple quadrupole and point mass
+\end_layout
+
+\begin_layout Standard
+The torque between a simple quadrupole (two masses 
+\begin_inset Formula $m$
+\end_inset
+
+ spaced a distance 
+\begin_inset Formula $d$
+\end_inset
+
+ in opposite directions from the origin), acted upon by two masses 
+\begin_inset Formula $M$
+\end_inset
+
+ a distance 
+\begin_inset Formula $R$
+\end_inset
+
+ from the origin, placed at an angle 
+\begin_inset Formula $\theta$
+\end_inset
+
+ is 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\tau=2G\frac{Mmd}{R^{2}}\sin(\theta)\left(\frac{1}{\left(1-2\frac{d}{R}\cos(\theta)+(d/R)^{2}\right)^{3/2}}-\frac{1}{\left(1+2\frac{d}{R}\cos(\theta)+(d/R)^{2}\right)^{3/2}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The numerical simulation reproduces this result at better than the part-per-bill
+ion level for 
+\begin_inset Formula $R/d$
+\end_inset
+
+ spanning 1.1 to 100.
 \end_layout
 
 \begin_layout Paragraph
-Q-tester is in rough agreement XXXRC
+Q-tester is in rough agreement
+\end_layout
+
+\begin_layout Standard
+As described in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Calibration"
+
+\end_inset
+
+, the outer calibration masses inject a calibration torque tone to the torque
+ signal.
+ The torque from the bricks, as measured by calibrating the torque signal
+ using the pendulum's calculated moment of inertia and XXXRC
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../NewtonianSimulation/plots/brickDemo.eps
+	width 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Torque between pendulum and lead-quadrupole calibration bricks.
+ Note the slight phase shift with respect to zero; because of the inlays,
+ the pendulum quadrupole's axis is not parallel to the pendulum face.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
