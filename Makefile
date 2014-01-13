@@ -8,10 +8,10 @@ dissertation: gitlog.log
 	$(shell bin/countXXXs.sh thesis/thesis.lyx >> data/xxxCount.dat)
 	$(shell sed -i  "s|HOMEDIR := .*|HOMEDIR := $(CURRENTDIR)/|" Makefile.inc)
 	$(MAKE) $(PARALLEL) -C mlib
+	$(MAKE) $(PARALLEL) -C NewtonianSimulation
 	$(MAKE) $(PARALLEL) -C calibration
 	$(MAKE) $(PARALLEL) -C runAnalysis
 	$(MAKE) $(PARALLEL) -C systematics 
-	$(MAKE) $(PARALLEL) -C NewtonianSimulation
 	$(MAKE) $(PARALLEL) -C bootstrap
 	$(MAKE) -C thesis 
 
