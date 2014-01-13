@@ -18,7 +18,6 @@ function [force, torque]=pointMatrixGravity(array1,array2)
 	end
 end
 
-%!#
 %!test
 %! 'pointMatrix force test'
 %! fundamentalConstants
@@ -30,7 +29,6 @@ end
 %! assert(abs(F(2:3)) < 2*eps)
 %! assert(abs(T) < 2*eps)
 
-%!#
 %!test
 %! 'pointMatrix torque test'
 %! fundamentalConstants
@@ -43,7 +41,6 @@ end
 %! assert(abs(T(1:2)) < 2*eps)
 %! assert(abs(T(3)+ Fg) < 2*eps)
 
-%!#
 %!test 
 %! 'pointMatrix ISL convergence test'
 %! fundamentalConstants
@@ -58,7 +55,6 @@ end
 %!	assert( abs(F(1) - G/d^2 ) / (G/d^2) < 0.001)
 %!  end
 
-%!#
 %!test
 %! 'pointMatrix sheet uniformity test'
 %! fundamentalConstants
@@ -79,7 +75,6 @@ end
 %! longerRange = v(v(:,1) > 1, :);
 %! assert(abs(longerRange(:,4)/expectedForce - 1) < 0.02);
 
-%!#
 %!test 
 %! "newton's shell theorem"
 %! shell = genPointMassSphericalRandomShell(1, 10, 100000);
@@ -99,19 +94,23 @@ end
 
 %!test
 %! "quadrupole torques"
+%! for iterations = 1:100
 %! fundamentalConstants
-%! d = 1; R = 1000; m = 1; M = 1
+%! d = 1; R = rand*100+1.1; m = 1; M = 1
 %! p = [m d  0 0; m -d  0 0];
 %! q = [M R 0 0; M -R 0 0]; 
 %! v = [];
 %! for a = 0:2*pi/60:2*pi
-%!	Q = rotatePMArray(q, a, [0 0 1]);
+%!	Q = rotatePMArray(q, a, [0 1 0]);
+%!	% Long-range quadrupole
 %!	K = 2* 6.0 * G * M * m * d^2/R^3 * (-sin (a)) * cos (a);
-%!	Tau = 2*G*M*m*d/R^2 * -sin(a) * ( 1./(1 - 2*d/R * cos(a) + (d/R)^2)^(3/2) - 1./(1 + 2*d/R * cos(a) + (d/R)^2)^(3/2) );
+%!	% Krishna's exact quadrupole torque
+%!     Tau = 2*G*M*m*d/R^2 * -sin(a) * ( 1./(1 - 2*d/R * cos(a) ...
+%!		+ (d/R)^2)^(3/2) - 1./(1 + 2*d/R * cos(a) + (d/R)^2)^(3/2) );
 %!	[f, t] = pointMatrixGravity(p,Q);
 %!	v = [v; a K f t Q(1,:) Tau];
 %! end
 %! save( "testOutput/quadrupoleTest.dat" , "v");
-%! plot( v(:,1), 1- v(:,8)./v(:,2), v(:,1), 1- v(:,13)./v(:,2) ) % , v(:,1), v(:,2)  )
-%! %plot( v(:,1), mod(atan(v(:,10)./v(:,11)), pi/2) - mod( v(:,1), pi/2) )
-%! 
+%! assert( abs(v(:,13) -  v(:,7)) < (mean(abs(v(:,13))) / 1e9 ) )
+%! assert( v(:,3:5) < 10 * eps);
+%! end %iterations 

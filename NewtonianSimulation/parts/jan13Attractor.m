@@ -14,7 +14,7 @@ function Attractor = jan13Attractor
 	AttractorBacker = genPointMassAnnlSheet( -AttractorBackerMass , AttractorDiameter/2, InfiniteRadius, AttractorBackerThickness, 4, 70);
 	AttractorRim = genPointMassAnnlSheet( AttractorRimMass , AttractorDiameter/2-AttractorRimWidth, AttractorDiameter/2, AttractorRimHeight, 10, 50);
 
-	AttractorPlate = translatePMArray(AttractorPlate, [AttractorPlateThickness/2,0,0]);
+	AttractorPlate  = translatePMArray(AttractorPlate, [AttractorPlateThickness/2,0,0]);
 	AttractorBacker = translatePMArray(AttractorBacker,[AttractorPlateThickness+AttractorBackerThickness/2,0,0]);
 	AttractorRim    = translatePMArray(AttractorRim, [AttractorPlateThickness + AttractorBackerThickness + AttractorRimHeight/2,0,0]);
 
