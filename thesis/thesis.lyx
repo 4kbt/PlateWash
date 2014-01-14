@@ -8333,7 +8333,7 @@ Once the lags are chosen, a window selected, and a leading edge found, locking
  There are 
 \begin_inset CommandInset include
 LatexCommand input
-filename "~/pWDA/extracted/lockAve.tex"
+filename "../extracted/lockAve.tex"
 
 \end_inset
 
@@ -10005,7 +10005,7 @@ status collapsed
 \size small
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "~/mlib/bootstrapData.m"
+filename "../mlib/bootstrapData.m"
 lstparams "breakatwhitespace=true,breaklines=true,caption={bootstrapData.m},emptylines=0,language=Matlab,linerange={1-17,19-23,71-104}"
 
 \end_inset
@@ -10105,7 +10105,7 @@ In order to generate results that are independent of any physics-model,
  Each piece is 
 \begin_inset CommandInset include
 LatexCommand input
-filename "../extracted/arbFitx1Spacing.tex"
+filename "../bootstrap/extracted/arbFitx1Spacing.tex"
 
 \end_inset
 
@@ -10120,7 +10120,7 @@ m long for
 
 \begin_inset CommandInset include
 LatexCommand input
-filename "../extracted/arbFitx1Start.tex"
+filename "../bootstrap/extracted/arbFitx1Start.tex"
 
 \end_inset
 
@@ -10131,7 +10131,7 @@ filename "../extracted/arbFitx1Start.tex"
 
 \begin_inset CommandInset include
 LatexCommand input
-filename "../extracted/arbFitx1Stop.tex"
+filename "../bootstrap/extracted/arbFitx1Stop.tex"
 
 \end_inset
 
@@ -10146,7 +10146,7 @@ filename "../extracted/arbFitx1Stop.tex"
 m and 
 \begin_inset CommandInset include
 LatexCommand input
-filename "../extracted/arbFitx2Spacing.tex"
+filename "../bootstrap/extracted/arbFitx2Spacing.tex"
 
 \end_inset
 
@@ -10161,7 +10161,7 @@ m long for
 
 \begin_inset CommandInset include
 LatexCommand input
-filename "../extracted/arbFitx2Start.tex"
+filename "../bootstrap/extracted/arbFitx2Start.tex"
 
 \end_inset
 
@@ -10172,7 +10172,7 @@ filename "../extracted/arbFitx2Start.tex"
 
 \begin_inset CommandInset include
 LatexCommand input
-filename "../extracted/arbFitx2Stop.tex"
+filename "../bootstrap/extracted/arbFitx2Stop.tex"
 
 \end_inset
 
