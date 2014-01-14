@@ -2520,8 +2520,12 @@ XXXRC verify thickness
 \end_inset
 
 thick BeCu alloy foil (Micro-Tek, Diamond Bar CA) over the tapered end of
- an 79XXXMA mm inner diameter Al tube like a drumhead.
- The foil was flat to XXXRC 
+ a 77
+\begin_inset space ~
+\end_inset
+
+mm inner-diameter Al tube like a drumhead.
+ The foil was flat to better than XXXRC 
 \begin_inset Formula $\mu$
 \end_inset
 
@@ -2534,8 +2538,21 @@ reference "FoilFlatness"
 \end_inset
 
 ).
- We coated the outside of the foil with XXXRC nm of Au over an XXXRC nm
- Ti adhesion layer by e-beam evaporation.
+ We coated the pendulum side of the foil with an optically-thick (~100
+\begin_inset space ~
+\end_inset
+
+nm) layer of Au over a Ti adhesion layer by e-beam evaporation 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMI get thickness numbers
+\end_layout
+
+\end_inset
+
+.
  The foil was mounted to an electrically isolated frame to allow us to vary
  its electrostatic potential.
  The foil was mounted with a screw/flexure arrangement that permitted small
@@ -2904,7 +2921,7 @@ The pendulum support, autocollimator, foil, attractor stage, and feedback
  Suspended from the pump were six lead bricks to prevent the bellows from
  compressing when the system was placed under vacuum.
  The turbo pump was backed by a small oil roughing pump.
- To eliminate the possible of electrostatic charging of any part of the
+ To eliminate the possibility of electrostatic charging of any part of the
  apparatus, the ion vacuum gauge was left off from pumpdown until the entire
  measurement was complete.
  After systematic checks were complete, the ion gauge was turned on, and
@@ -2927,20 +2944,28 @@ See photo in ~/platewash/photos
 \end_inset
 
 .
- Past experience with the jar 
+ Past experience with the jar has shown that pressures of 
+\begin_inset Formula $3\times10^{-7}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Torr are reliably obtained by 2-3 days after pumpdown from atmosphere, and
+ pressures of 
+\begin_inset Formula $4\times10^{-7}$
+\end_inset
+
+ Torr are obtained within 1.5 hours when pumping down following a brief pressure
+ rise up to roughing pressures from high vacuum 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "schlamminger2010indirect"
 
 \end_inset
 
- has shown that pressures of XXXRC
-\begin_inset space ~
-\end_inset
-
-Torr are reliably obtained by XXXRC days after pumpdown from atmosphere,
- and pressures of XXXRC Torr are obtained after XXXRC hours when pumping
- down from roughing pressures after a brief pressure rise from high vacuum.
+.
  Science measurements began XXXRC hours after pumpdown from roughing pressures
  
 \begin_inset Note Note
@@ -3129,9 +3154,19 @@ q-tester
 kg lead blocks were hung on opposite sides of the vacuum jar by nylon straps
  attached to a rotating armature which operated continuously during data
  acquisition.
- The blocks were weighed with a bathroom scale (XXXRC how to calibrate?
- linearity?), and computed by averaging seven measured differences between
- the experimentalist's body weight with and without each block.
+ The blocks were weighed with a bathroom scale (a calibration to 10% is
+ sufficient 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMI recalibrate, do it better
+\end_layout
+
+\end_inset
+
+), and computed by averaging seven measured differences between the experimental
+ist's body weight with and without each block.
  The 
 \begin_inset Formula $4"\times4"\times8"$
 \end_inset
@@ -3145,8 +3180,9 @@ m from the center of the jar and bottom faces XXXRC
 \end_inset
 
 m above the center of the pendulum.
- (XXXRC Centering?) The rotation was controlled by a PIC microprocessor
- driving a geared-down stepper motor.
+ The rotation axis was coincident with the torsion fiber to < 5 cm precision.
+ The rotation was controlled by a PIC microprocessor driving a geared-down
+ stepper motor.
  The frequency stability of the calibration tone was observed to be comparable
  to, or better than, the stability of the data acquisition clock.
  The sinusoidally varying gravitational torque appeared twice the rotation
@@ -4835,7 +4871,7 @@ key "schlamminger2010indirect,dolesi2011brownian"
 
 \end_inset
 
- or some electrical effect (XXX RC or eddy currents?).
+ or some electrical effect (XXXRC RC or eddy currents?).
  
 \end_layout
 
@@ -5069,7 +5105,7 @@ dished
  was XXXRC um (attractor) and XXXRC um (pendulum).
  In addition, the pendulum materials' differing hardnesses led to a step
  at the dense/light interface of XXXRC um.
- A plot of all the surfaces is shown in Fig XXX.
+ A plot of all the surfaces is shown in Fig XXXRC.
  
 \end_layout
 
@@ -6796,8 +6832,11 @@ As the pendulum is locked in feedback, there are multiple data channels
  The pendulum twist angle and the P (proportional) term of the loop are
  necessarily equivalent.
  In practice, the twist signal and P term were anti-aliased differently.
- The P term had an (XXXRC 3, just recheck) s filter applied, making it the
- signal of choice for a twist measurement.
+ The P term had an 5
+\begin_inset space ~
+\end_inset
+
+s filter applied, making it the signal of choice for a twist measurement.
  The loop was operated with zero I-term, so the I channel contains no signal.
  The D (derivative) term responds like 
 \begin_inset Formula $\omega$
@@ -7221,7 +7260,7 @@ Three columns of data are fed through finite impulse response (FIR) filters
  
 \begin_inset CommandInset citation
 LatexCommand citet
-key "Oppenheim:1999:DSP:294797"
+key "Oppenheim:1999:DSP:294797,OrfandisSignalProcessing"
 
 \end_inset
 
@@ -10126,7 +10165,7 @@ name "sec:Capacitor-Systematic"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard
@@ -11080,7 +11119,6 @@ The torque between a simple quadrupole (two masses
 \end_layout
 
 \begin_layout Standard
-Discrete-Time Signal Processing
 \begin_inset Formula 
 \[
 \tau=2G\frac{Mmd}{R^{2}}\sin(\theta)\left(\frac{1}{\left(1-2\frac{d}{R}\cos(\theta)+(d/R)^{2}\right)^{3/2}}-\frac{1}{\left(1+2\frac{d}{R}\cos(\theta)+(d/R)^{2}\right)^{3/2}}\right)
