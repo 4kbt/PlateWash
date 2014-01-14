@@ -3163,15 +3163,11 @@ reference "fig:Pneumatic-Drive-System"
  compressed air line.
  The line pressure fluctuates on timescales from hours to days as the system's
  accumulators fill and drain and as loads on the system change.
- The XXXRC precision regulator provided XXXRC
-\begin_inset Formula $\pm$
-\end_inset
-
-XXRC
+ The Omega PRG101-120 precision regulator provided ~50
 \begin_inset space ~
 \end_inset
 
-psig compressed air.
+psig compressed air, with claimed 0.02% stability.
  The 
 \begin_inset Quotes eld
 \end_inset
@@ -3222,8 +3218,8 @@ locking valve
 
 m away from the apparatus to limit any thermal systematic effect due to
  changes in modulation.
- (XXXRC verify only one accumulator.) When open, the locking valve permits
- air to flow from the accumulator, through a manual valve (the 
+ When open, the locking valve permits air to flow from the accumulator,
+ through a manual valve (the 
 \begin_inset Quotes eld
 \end_inset
 
@@ -3366,12 +3362,8 @@ locking valve
  Alas, the the pulse-width modulation was still measurable and unacceptably
  large at the attractor -- attractor motion in measurement phases opens
  whole classes of systematic effects we do not wish to consider.
- The modulator could not be switched much faster than XXXRC
-\begin_inset space ~
-\end_inset
-
-Hz, and any further passive low-pass filters would compromise the speed
- of our attractor motion.
+ The modulator could not be switched at higher frequencies, and any further
+ passive low-pass filters would compromise the speed of our attractor motion.
  So, we fell back to open loop control of the modulator duty cycle and the
  
 \begin_inset Quotes eld
@@ -3450,9 +3442,9 @@ random
 \end_layout
 
 \begin_layout Standard
-The pressure gauge is an Omega XXXRC absolute pressure gauge.
+The pressure gauge is an Omega PX409-100A10V absolute pressure gauge.
  In order to use it as a position encoder, we had to verify its linearity
- and stability against the Micro-E encoder, as shown in Fig.
+ and stability against the Micro-E encoder, shown in Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -3461,8 +3453,8 @@ reference "fig:Pressure-gauge-and-encoder"
 \end_inset
 
 .
- The result is remarkable, as it requires the linearity of the flexure,
- bellows, encoder, and pressure gauge to the XXXRC0.01% level.
+ The result is remarkable, as it requires excellent linearity from the flexure,
+ bellows, encoder, and pressure gauge.
  
 \end_layout
 
@@ -3523,7 +3515,7 @@ noise
  in different parts of the modulation every time.
  Therefore, the attractor stops in a slightly different location on every
  move.
- This dominates the XXXRC scatter in attractor position for each 
+ This dominates the position scatter in attractor position for each 
 \begin_inset Quotes eld
 \end_inset
 
@@ -3548,7 +3540,14 @@ On longer timescales, the fluctuation of atmospheric pressure is important.
  position.
  This effect limited how close we could reliably operate the attractor to
  the foil over long periods of time with a simple control strategy; if the
- attractor hits the foil, at least an hour of data are lost (see XXXRC).
+ attractor hits the foil, at least an hour of data are lost (see 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Statistics"
+
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Subsection
@@ -5782,7 +5781,15 @@ Attractor drift
 
 \begin_layout Standard
 The attractor pneumatic drive valves leak slowly, causing the attractor
- to retract at ~XXXRC um/minute.
+ to retract at ~XXXRC
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m/minute.
  A changing magnetic environment may give rise to a pseudo-DC magnetic field
  that penetrates the foil.
 \end_layout
@@ -7628,9 +7635,9 @@ Synchronization
 \begin_layout Standard
 Data are imported from three separate sources (torsion balance, attractor
  control, interferometer), and trimmed in length to present only data with
- complete temporal overlap.
- If needed (runs XXXRC), any timing offsets between the three clocks are
- incorporated before trimming.
+ complete temporal overlap between relevant sources.
+ If needed (runs XXXRC), any timing offsets between the clocks are incorporated
+ before trimming.
  All three sources sample with a fixed 0.8
 \begin_inset space ~
 \end_inset
