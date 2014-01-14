@@ -36,6 +36,7 @@ yukawaFitTest : $(PREREQUISITES)
 
 arbFit : $(PREREQUISITES)
 	$(OCT) arbFitWrapper.m
+	$(HOMEDIR)/bin/mathify.sh extracted/
 	./arbFitPlots.sh
 
 arbFitTest : $(PREREQUISITES)
