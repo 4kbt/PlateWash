@@ -2679,7 +2679,11 @@ Autocollimator
 
 \begin_layout Standard
 The twist angle of the pendulum was measured by an in-vacuum laser pseudo-autoco
-llimator with a 400 mm focal length, depicted in Figure 
+llimator with a 400
+\begin_inset space ~
+\end_inset
+
+mm focal length, depicted in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "Autocollimator Photo"
@@ -2694,8 +2698,12 @@ reference "Autocollimator Diagram"
 \end_inset
 
 .
- Light from a 780 nm (XXXMA) laser diode was directed through a pinhole,
- collimated, and directed at the pendulum.
+ Light from a 780
+\begin_inset space ~
+\end_inset
+
+nm (XXXMA) laser diode was directed through a pinhole, collimated, and directed
+ at the pendulum.
  Light reflected from the pendulum passed back through the collimating lens
  and was focused, via a beamsplitter, onto a position sensitive photodiode.
  The detector (UDT SC-10D 
@@ -3072,14 +3080,20 @@ See Fig.
 
 \end_inset
 
-
+ When science data were 
+\bar under
+not
+\bar default
+ being taken, the position of the stage could be monitored by a Micro-E
+ 3000V encoder system with a claimed interpolated resolution of 20 nm.
+ 
 \end_layout
 
 \begin_layout Standard
 The motion control system has one non-standard property for a precision
  translation stage: it is pneumatically actuated.
- In aggregate, getting this system to work acceptably well required months
- of effort.
+ In aggregate, getting this system to work well required many months of
+ effort.
  It was worth every day.
  A pneumatic actuation system is, by definition, not electrical.
  While the attractor flexure system was designed to accommodate standard
@@ -3095,26 +3109,446 @@ The motion control system has one non-standard property for a precision
 all
 \bar default
  attractor-correlated systematic effects that could be present throughout
- the data acquisition and control systems.
+ the data acquisition, sensing, and control systems.
 \end_layout
 
 \begin_layout Standard
-The motion of the stage was monitored by a Micro-E 3000V encoder system
- with a claimed interpolated resolution of 20 nm.
- The position of the system was controlled in a software PID feedback loop
- on the data acquisition computer.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+XXXRC
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Pneumatic-Drive-System"
+
+\end_inset
+
+Pneumatic Drive System
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-XXXRC diagram
+A diagram of the pneumatic drive system is shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Pneumatic-Drive-System"
+
+\end_inset
+
+.
+ The drive system begins with a precision regulator attached to the building's
+ compressed air line.
+ The line pressure fluctuates on timescales from hours to days as the system's
+ accumulators fill and drain and as loads on the system change.
+ The XXXRC precision regulator provided XXXRC
+\begin_inset Formula $\pm$
+\end_inset
+
+XXRC
+\begin_inset space ~
+\end_inset
+
+psig compressed air.
+ The 
+\begin_inset Quotes eld
+\end_inset
+
+psig
+\begin_inset Quotes erd
+\end_inset
+
+ is important - the regulated pressure is not absolute, but relative to
+ atmosphere.
+ The compressed air is then controlled by a pulse-width modulated valve,
+ with a 10
+\begin_inset space ~
+\end_inset
+
+Hz 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMI verify
+\end_layout
+
+\end_inset
+
+ carrier.
+ Several modulation valves were tried -- by far the best solution has been
+ automotive fuel injectors; they are very fast, low-leaking (in both directions)
+, durable, and inexpensive.
+ The modulated air is sent into an accumulator, a ~0.5
+\begin_inset space ~
+\end_inset
+
+L lecture bottle.
+ The bottle is connected to a permanent leak and to another fuel injector,
+ the 
+\begin_inset Quotes eld
+\end_inset
+
+locking valve
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Air that flows out of the permanent leak is ducted ~4
+\begin_inset space ~
+\end_inset
+
+m away from the apparatus to limit any thermal systematic effect due to
+ changes in modulation.
+ (XXXRC verify only one accumulator.) When open, the locking valve permits
+ air to flow from the accumulator, through a manual valve (the 
+\begin_inset Quotes eld
+\end_inset
+
+gauge valve
+\begin_inset Quotes erd
+\end_inset
+
+), past a precision absolute pressure gauge, through a second manual valve
+ (the 
+\begin_inset Quotes eld
+\end_inset
+
+apparatus valve
+\begin_inset Quotes erd
+\end_inset
+
+), through a copper pipe, through a vacuum feedthrough into the apparatus,
+ through a capillary tube, and into the flexure bellows.
+ The flow restrictions and the accumulative capacity of the bellows form
+ a second 
+\begin_inset Quotes eld
+\end_inset
+
+RC
+\begin_inset Quotes erd
+\end_inset
+
+ circuit element, further low-passing the pressure fluctuations from the
+ pulse-width modulation.
+ 
 \end_layout
 
 \begin_layout Standard
-XXXRC photo
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+XXXMI square-wave motion of the attractor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-XXXRC linearity/residuals figure.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+XXXRC
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Photographs of the gas-handling system
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The manual valves are important.
+ As described above, the 
+\begin_inset Quotes eld
+\end_inset
+
+apparatus valve
+\begin_inset Quotes erd
+\end_inset
+
+ enables complete isolation of the attractor from the outside world and
+ all measuring instruments.
+ The 
+\begin_inset Quotes eld
+\end_inset
+
+gauge valve
+\begin_inset Quotes erd
+\end_inset
+
+ is the equivalent of a lock on a pair of calipers; whatever air is present
+ in the bellows when the valve is closed is trapped there, and the pressure/posi
+tion is still measured continuously by the gauge.
+ If there are no leaks and the absolute temperature (K) does not change,
+ then the attractor can be held fixed in any position.
+ As an additional capability, it will be seen that it can be useful for
+ foil-interferometer calibration to have a controlled and very slow leak
+ in the attractor drive system; the manual valves make this possible.
+\end_layout
+
+\begin_layout Standard
+The gas-handling system was originally designed without the 
+\begin_inset Quotes eld
+\end_inset
+
+locking valve
+\begin_inset Quotes erd
+\end_inset
+
+, but it became critical to our success.
+ We had intended to operate with the pulse-width modulation valve operating
+ in continuous PID feedback to pressure or position sensors, this would
+ have enabled fast position changes and excellent control over the attractor's
+ position.
+ Alas, the the pulse-width modulation was still measurable and unacceptably
+ large at the attractor -- attractor motion in measurement phases opens
+ whole classes of systematic effects we do not wish to consider.
+ The modulator could not be switched much faster than XXXRC
+\begin_inset space ~
+\end_inset
+
+Hz, and any further passive low-pass filters would compromise the speed
+ of our attractor motion.
+ So, we fell back to open loop control of the modulator duty cycle and the
+ 
+\begin_inset Quotes eld
+\end_inset
+
+locking valve
+\begin_inset Quotes erd
+\end_inset
+
+, which isolates the modulator accumulator from the bellows at times when
+ pressure change is not desired.
+ In this application, the bi-directional isolation of the fuel injector
+ valves is essential.
+\end_layout
+
+\begin_layout Subsubsection
+Attractor position change procedure
+\end_layout
+
+\begin_layout Standard
+Unless the attractor is to change position, then the locking valve is closed,
+ and the modulator valve is off.
+ When the attractor-control computer is asked to change the attractor position,
+ the modulator valve begins modulating with the desired pulse-width for
+ XXXRC seconds before the locking valve opens.
+ After XXXRC seconds, the locking valve closes.
+ After XXXRC seconds, the modulator valve turns off, and the accumulator
+ vents.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Pressure gauge and position
+\end_layout
+
+\begin_layout Standard
+The original plan was to use the very-precise Micro-E encoder for position
+ readout.
+ The encoder has 20
+\begin_inset space ~
+\end_inset
+
+nm resolution, a nice glass encoder scale, an absolute encoder mark, and
+ low-noise readout.
+ Unfortunately, we were able to trace a systematic signal to the encoder.
+ Pickup somewhere in the apparatus, probably in the autocollimator preamplifiers
+, was able to sense the encoder grating period, yielding a substantial sinusoida
+l 25
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m signal.
+ This eluded us for some time, as 25
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m steps are natural gradations for a human experimenter -- effects like
+ these are the biggest motivation for the 
+\begin_inset Quotes eld
+\end_inset
+
+random
+\begin_inset Quotes erd
+\end_inset
+
+ attractor position selections we choose.
+ So, we were forced to use another position-sensing system.
+\end_layout
+
+\begin_layout Standard
+The pressure gauge is an Omega XXXRC absolute pressure gauge.
+ In order to use it as a position encoder, we had to verify its linearity
+ and stability against the Micro-E encoder, as shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Pressure-gauge-and-encoder"
+
+\end_inset
+
+.
+ The result is remarkable, as it requires the linearity of the flexure,
+ bellows, encoder, and pressure gauge to the XXXRC0.01% level.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+XXXRC
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Pressure-gauge-and-encoder"
+
+\end_inset
+
+Pressure gauge and linear encoder comparison
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Position uncertainty
+\end_layout
+
+\begin_layout Standard
+The dominant 
+\begin_inset Quotes eld
+\end_inset
+
+noise
+\begin_inset Quotes erd
+\end_inset
+
+ in the attractor position system comes from the pulse-width modulation
+ system itself.
+ The modulation valve and the locking valve are not coordinated at timescales
+ comparable to the modulation frequency, so the locking valve shuts off
+ in different parts of the modulation every time.
+ Therefore, the attractor stops in a slightly different location on every
+ move.
+ This dominates the XXXRC scatter in attractor position for each 
+\begin_inset Quotes eld
+\end_inset
+
+cut
+\begin_inset Quotes erd
+\end_inset
+
+ of data.
+\end_layout
+
+\begin_layout Standard
+On longer timescales, the fluctuation of atmospheric pressure is important.
+ The precision regulator that feeds the gas handling system is referenced
+ to atmospheric pressure.
+ The attractor flexure, on the other hand, is controlled by the pressure
+ relative to vacuum.
+ As the gas-handling system is nothing but a fancy pressure division device,
+ the open-loop duty-cycle control of the modulation rides along the carrier
+ of atmospheric pressure.
+ This effect can be seen in Fig.
+ XXXRC, where runs at constant duty cycle fluctuate slightly in absolute
+ position.
+ This effect limited how close we could reliably operate the attractor to
+ the foil over long periods of time with a simple control strategy; if the
+ attractor hits the foil, at least an hour of data are lost (see XXXRC).
 \end_layout
 
 \begin_layout Subsection
@@ -3364,7 +3798,7 @@ m), less light re-enters the fiber core after reflecting from the foil.
  and externally-reflected light to have comparable intensity, maximizing
  the interference contrast.
  In PlateWash, the operating point is 
-\begin_inset Formula $\sim XXX\pm XXX$
+\begin_inset Formula $\sim XXXRC\pm XXXRC$
 \end_inset
 
  from the foil (can get it from the crash plot), as seen in Fig.
@@ -3877,6 +4311,14 @@ kg/m
 \end_inset
 
 ) measured output to displacement.
+\end_layout
+
+\begin_layout Subsection
+Three computers
+\end_layout
+
+\begin_layout Standard
+XXXRC
 \end_layout
 
 \begin_layout Section
@@ -6606,6 +7048,12 @@ A number of properties of the instrument require finite time.
 \end_inset
 
 s to move to a new position.
+ Furthermore, the attractor control system begins tapping the modulator
+ valve XXXRC
+\begin_inset space ~
+\end_inset
+
+s before the position change.
  The feedback loop requires ~XXXRC
 \begin_inset space ~
 \end_inset
