@@ -1054,9 +1054,26 @@ key "adelberger2003tests,antoniadis2011short,NewmanBoyntonReview2009"
 \begin_layout Standard
 Precision measurements of the distance dependence of gravity may have begun
  with Kepler.
- Kepler's Laws [XXXRC] are now taught to students as necessary corrolaries
- of Newton's theory, but Kepler's data were essential to the formulation
- of the theory itself [XXXMI].
+ Kepler's Laws 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "KeplerFirstSecondLaws,KeplerThirdLaw"
+
+\end_inset
+
+ are now taught to students as necessary corrolaries of Newton's theory,
+ but Kepler's observations were essential to the formulation of the theory
+ itself 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+[XXXMI]
+\end_layout
+
+\end_inset
+
+.
  Astronomical tests of gravity remain the most precise, providing direct
  tests of General Relativity in addition to Newton's Laws.
  In order of decreasing range and increasing precision, the leading solar
@@ -2673,6 +2690,101 @@ Autocollimator optical diagram
 
 \end_layout
 
+\begin_layout Subsubsection
+Resonant frequency
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Foil-Resonant-frequency"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The resonant frequencies of a clamped circular tightly-stretched membrane
+ with negligible internal stiffness are 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\omega_{n,m}=\frac{\alpha_{n,m}}{r}\sqrt{\frac{T}{\sigma}},
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $r$
+\end_inset
+
+ is the membrane radius, 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ is the membrane mass per unit area, 
+\begin_inset Formula $T$
+\end_inset
+
+ is the surface tension, and 
+\begin_inset Formula $\alpha_{n,m}$
+\end_inset
+
+ are the Bessel function zeros that satisfy 
+\begin_inset Formula $J_{n}(\alpha_{n,m})=0$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "FetterAndWalecka"
+
+\end_inset
+
+.
+ The most important resonant frequency is the fundamental, for which 
+\begin_inset Formula $\alpha_{0,1}=2.4048$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "ArfkenForPhysics"
+
+\end_inset
+
+.
+ If all the other quantities are known, then the foil tension may be measured
+ as 
+\begin_inset Formula $T=\sigma r^{2}\omega_{n,m}^{2}/\alpha_{n,m}^{2}$
+\end_inset
+
+.
+ Using the yet-to-be-described foil interferometer (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Foil-Interferometer"
+
+\end_inset
+
+), the in-vacuum resonant frequency was measured to be XXXRC
+\begin_inset Formula $\pm$
+\end_inset
+
+XXXRC
+\begin_inset space ~
+\end_inset
+
+Hz.
+ Using the approximately-known density of beryllium copper XXXRC and the
+ foil thickness, we find that the foil tension is XXXRC.
+ 
+\end_layout
+
 \begin_layout Subsection
 Autocollimator
 \end_layout
@@ -3684,13 +3796,30 @@ clean room
  from the ceiling of the room, keeping it at slightly positive pressure
  and flushing airborne dust out of the room through an opening along the
  floor.
- HEPA/Class XXXMA When the apparatus was under vacuum, the blowers were
- turned off; the enclosure then provided some added wind and thermal isolation.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+HEPA/Class XXXMA 
+\end_layout
+
+\end_inset
+
+When the apparatus was under vacuum, the blowers were turned off; the enclosure
+ then provided limited wind and thermal isolation.
  
 \end_layout
 
 \begin_layout Subsection
 Foil Interferometer
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Foil-Interferometer"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
