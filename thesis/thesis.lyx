@@ -2764,14 +2764,14 @@ key "ArfkenForPhysics"
 \end_inset
 
 .
- Using the yet-to-be-described foil interferometer (
+ Using the foil interferometer (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Foil-Interferometer"
 
 \end_inset
 
-), the in-vacuum resonant frequency was measured to be XXXRC
+), the in-vacuum fundamental frequency was measured to be XXXRC
 \begin_inset Formula $\pm$
 \end_inset
 
