@@ -3159,15 +3159,16 @@ reference "fig:Pneumatic-Drive-System"
 \end_inset
 
 .
- The drive system begins with a precision regulator attached to the building's
+ The drive system begins with a pressure regulator attached to the building's
  compressed air line.
  The line pressure fluctuates on timescales from hours to days as the system's
  accumulators fill and drain and as loads on the system change.
- The Omega PRG101-120 precision regulator provided ~50
+ The coarse-regulated air is fed into an Omega PRG101-120 precision regulator,
+ tuned to ~50
 \begin_inset space ~
 \end_inset
 
-psig compressed air, with claimed 0.02% stability.
+psig, with claimed 0.02% stability.
  The 
 \begin_inset Quotes eld
 \end_inset
@@ -3388,10 +3389,13 @@ Unless the attractor is to change position, then the locking valve is closed,
  and the modulator valve is off.
  When the attractor-control computer is asked to change the attractor position,
  the modulator valve begins modulating with the desired pulse-width for
- XXXRC seconds before the locking valve opens.
- After XXXRC seconds, the locking valve closes.
- After XXXRC seconds, the modulator valve turns off, and the accumulator
- vents.
+ 10
+\begin_inset space ~
+\end_inset
+
+s before the locking valve opens.
+ After 10 s, the locking valve closes, the modulator valve turns off, and
+ the accumulator vents.
  
 \end_layout
 
@@ -3563,11 +3567,7 @@ name "sec:Calibration"
 
 The torque scale of the apparatus was set gravitationally by rotating a
  quadrupole mass distribution from a bearing above the apparatus.
- By way of the 
-\begin_inset Formula $Q_{22}q_{22}$
-\end_inset
-
- coupling XXXRC, the 
+ By way of the quadrupole coupling, the 
 \begin_inset Quotes eld
 \end_inset
 
@@ -4312,6 +4312,21 @@ kg/m
 ) measured output to displacement.
 \end_layout
 
+\begin_layout Subsubsection
+Pendulum-Foil coupling
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Pendulum-Foil-coupling"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+XXXRC
+\end_layout
+
 \begin_layout Subsection
 Three computers
 \end_layout
@@ -4925,10 +4940,43 @@ The majority of Eöt-Wash pendulums are designed to have vanishing low-order
 \begin_inset Formula $q_{22}$
 \end_inset
 
- moment (it's a flat plate, with masses on the end).
+ moment (it's a flat plate, with masses on the ends).
  Recent estimates by Krishna Venkateswara and Todd Wagner put the ambient
- gravitational gradient noise at less than XXXRC.
- This noise level converts to torque noise of XXXRC.
+ gravitational gradient noise at less than < 0.1
+\begin_inset space ~
+\end_inset
+
+E/
+\begin_inset Formula $\sqrt{\mbox{Hz}}$
+\end_inset
+
+.
+ This noise level converts to torque noise of <
+\begin_inset Formula $4\times10^{-16}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+N-m/
+\begin_inset Formula $\sqrt{\mbox{Hz}}$
+\end_inset
+
+, well below the lowest instrumental noise.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\tau\approx2\times1.5\mbox{ cm}\times0.1\times10^{-9}\times1.5\mbox{ cm}\times10\mbox{ g}=4\times10^{-16}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
  
 \end_layout
 
@@ -5210,7 +5258,14 @@ Any attractor-correlated displacement of the isolating foil is a cause for
  concern.
  The pendulum interacts electrostatically with the foil with a coupling
  of ~XXXRC N-m/um.
- See XXXRC.
+ See 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Pendulum-Foil-coupling"
+
+\end_inset
+
+.
  
 \end_layout
 
