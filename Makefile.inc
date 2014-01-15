@@ -8,13 +8,13 @@ OCT:= octave --no-init-file \
 
 GNU    := gnuplot -e 'set term dumb'
 
-MLIB   := $(shell find  $(HOMEDIR)/mlib/        ) 
+MLIB   := $(shell find  $(HOMEDIR)/mlib/        -type d) 
 
-GLOBAL := $(shell find $(HOMEDIR)/globalConfig/ )
+GLOBAL := $(shell find $(HOMEDIR)/globalConfig/ -type d)
 
-RUNS   := $(shell find $(HOMEDIR)/runConfig/    )
+RUNS   := $(shell find $(HOMEDIR)/runConfig/    -type d)
 
-DATA   := $(shell find $(HOMEDIR)/data/         )
+DATA   := $(shell find $(HOMEDIR)/data/         -type d)
 
 MLIB   := $(MLIB) $(GLOBAL)
 
