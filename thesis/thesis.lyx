@@ -2709,7 +2709,7 @@ The resonant frequencies of a clamped circular tightly-stretched membrane
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\omega_{n,m}=\frac{\alpha_{n,m}}{r}\sqrt{\frac{T}{\sigma}},
+f_{n,m}=\frac{\alpha_{n,m}}{2\pi r}\sqrt{\frac{T}{\sigma}},
 \]
 
 \end_inset
@@ -2760,7 +2760,7 @@ key "ArfkenForPhysics"
 .
  If all the other quantities are known, then the foil tension may be measured
  as 
-\begin_inset Formula $T=\sigma r^{2}\omega_{n,m}^{2}/\alpha_{n,m}^{2}$
+\begin_inset Formula $T=\sigma4\pi^{2}r^{2}f_{n,m}^{2}/\alpha_{n,m}^{2}$
 \end_inset
 
 .
