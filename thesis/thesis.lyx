@@ -3581,7 +3581,14 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXXRC
+\align center
+\begin_inset Graphics
+	filename ../calibration/pressure/run2937pressEncPlot.eps
+	width 50page%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
