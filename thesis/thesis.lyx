@@ -2304,14 +2304,39 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXXRC
+\align center
+\begin_inset Graphics
+	filename ../systematics/microscopeScans/pendulumScan1.eps
+	width 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../systematics/microscopeScans/pendulumScan2.eps
+	width 50page%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Pendulum scans
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:PendulumScans"
+
+\end_inset
+
+Laser scans of the pendulum surfaces.
+ The tantalum inlay is visible as the height-step at right
 \end_layout
 
 \end_inset
@@ -2431,6 +2456,51 @@ filename "../extracted/spindleDiameter.tex"
 m diameter) were attached to the back of the backer with aluminum set screws.
  Each spindle was attached, via machinable glass electrical isolators, to
  a pneumatically-driven flexure translation stage.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../systematics/microscopeScans/attractorScan.eps
+	width 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:AttractorScan"
+
+\end_inset
+
+Laser scan of the attractor surface -- installed orientation does not correspond
+ to alignment shown here
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2563,7 +2633,11 @@ filename "../extracted/foilDiameter.tex"
 \end_inset
 
 m inner-diameter Al tube like a drumhead.
- The foil was flat to better than XXXRC 
+ The foil was flat to better than 
+\begin_inset Formula $\sim\pm3$
+\end_inset
+
+ 
 \begin_inset Formula $\mu$
 \end_inset
 
@@ -2607,7 +2681,14 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXXRC
+\align center
+\begin_inset Graphics
+	filename ../systematics/microscopeScans/screenScan.eps
+	width 50page%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -2620,7 +2701,7 @@ name "FoilFlatness"
 
 \end_inset
 
-Foil Flatness
+Laser scan of the foil surface
 \end_layout
 
 \end_inset
@@ -2880,8 +2961,18 @@ reference "Autocollimator Diagram"
 \begin_inset space ~
 \end_inset
 
-nm (XXXMA) laser diode was directed through a pinhole, collimated, and directed
- at the pendulum.
+nm 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMA
+\end_layout
+
+\end_inset
+
+ laser diode was directed through a pinhole, collimated, and directed at
+ the pendulum.
  Light reflected from the pendulum passed back through the collimating lens
  and was focused, via a beamsplitter, onto a position sensitive photodiode.
  The detector (UDT SC-10D 
@@ -3082,14 +3173,33 @@ The electric signals needed to operate the experiment were conducted through
 
 \begin_layout Standard
 The pendulum support, autocollimator, foil, attractor stage, and feedback
- electrodes were all firmly clamped to a single 5 cm XXXMA thick aluminum
- optical bench.
+ electrodes were all firmly clamped to a single 5 cm 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMA 
+\end_layout
+
+\end_inset
+
+thick aluminum optical bench.
  The bench was secured, via three 1/2
 \begin_inset Quotes erd
 \end_inset
 
- XXXMA diameter stainless threaded rods with aluminum adapters on the ends
- to the stainless steel baseplate of the bell jar.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMA 
+\end_layout
+
+\end_inset
+
+diameter stainless threaded rods with aluminum adapters on the ends to the
+ stainless steel baseplate of the bell jar.
  The jar itself sat atop three aluminum legs with adjustable levelling feet.
  The entire apparatus was installed upon a U-shaped solid masonry block
  table that was mortared to the cement floor of the laboratory.
@@ -3246,7 +3356,7 @@ stiction
 \begin_inset Quotes erd
 \end_inset
 
- of non-flexure transation stages, and has minimal angular runout.
+ of non-flexure transation stages, and has minimal angular ruFoil Flatnessnout.
  
 \begin_inset Note Note
 status open
@@ -3701,7 +3811,7 @@ noise
  system itself.
  The modulation valve and the locking valve are not coordinated at timescales
  comparable to the modulation frequency, so the locking valve shuts off
- in different parts of the modulation every time.
+ in different parts of the modulation every Foil Flatnesstime.
  Therefore, the attractor stops in a slightly different location on every
  move.
  This dominates the position scatter in attractor position for each 
@@ -5079,6 +5189,10 @@ y modes of terrestrial vibration have damped.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -5100,16 +5214,13 @@ Earthquake!
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
+\end_inset
+
 PlateWash also sees less-palpable seismic effects, such as the 'microseismic
  peak' 
 \begin_inset Note Note
@@ -5410,10 +5521,14 @@ Many electronic effects can create excess noise.
 analog conversion noise can couple to the pendulum.
  These effects may be assessed by comparing the pendulum noise with and
  without the feedback electrodes grounded.
- 
+ No excess noise was seen.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -5435,7 +5550,8 @@ Free pendulum noise with and without grounded feedback electrodes
 
 \end_layout
 
-\begin_layout Plain Layout
+\end_inset
+
 
 \end_layout
 
@@ -5960,9 +6076,34 @@ dished
  After a spatial lowpass at XXXRC scale, the rms roughness of the surfaces
  was XXXRC um (attractor) and XXXRC um (pendulum).
  In addition, the pendulum materials' differing hardnesses led to a step
- at the dense/light interface of XXXRC um.
- A plot of all the surfaces is shown in Fig XXXRC.
- 
+ at the dense/light interface of 
+\begin_inset Formula $\sim5$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m.
+ Plots of the surfaces are shown in Figures 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:PendulumScans"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:AttractorScan"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
