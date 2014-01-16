@@ -1,0 +1,7 @@
+f(x,y) = a*x+b*y+c
+
+fit f(x,y) 'June2011TaScanFiberUpXupperLeft.dat' u 1:2:3:(1) via a,b,c
+
+splot [][][-0.02:0.007] 'June2011TaScanFiberUpXupperLeft.dat' u 1:2:($3-f($1,$2)) w d lc 3 
+
+

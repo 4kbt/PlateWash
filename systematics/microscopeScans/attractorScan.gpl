@@ -1,0 +1,7 @@
+f(x,y) = a*x+b*y+c
+
+fit f(x,y) 'charlieOldAttractorFine.dat' u 1:2:3:(1) via a,b,c
+
+splot [][][-0.01:0.01] 'charlieOldAttractorFine.dat' u 1:2:($3-f($1,$2)) w d
+
+
