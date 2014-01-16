@@ -1,3 +1,5 @@
+include ../Makefile.inc
+
 all : therm mag resist elec press
 
 mag: 
