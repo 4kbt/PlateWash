@@ -7640,7 +7640,7 @@ A number of properties of the instrument require finite time.
 
 s to move to a new position.
  Furthermore, the attractor control system begins tapping the modulator
- valve XXXRC
+ valve 10
 \begin_inset space ~
 \end_inset
 
@@ -7703,11 +7703,7 @@ reference "sub:Lags-1"
 \end_inset
 
  for further discussion of lags).
- As a consequence, the highest available switch frequency is 
-\begin_inset Formula $\sim XXX$
-\end_inset
-
-
+ As a consequence, the highest available switch frequency is XXXRC
 \begin_inset space ~
 \end_inset
 
@@ -11242,10 +11238,6 @@ The Capacitor Systematic schematic
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -12788,7 +12780,14 @@ t-side of the pressure gauge in runs 3167 and 3168.
 exactly
 \emph default
  as if the true experiment were underway, but the attractor did not move.
- The torque difference over a simulated long stroke was 
+ After 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/totalSecondslongStrokeL0.tex"
+
+\end_inset
+
+The torque difference over a simulated long stroke was 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../systematics/electrical/extracted/longStrokeL0Diff3167.tex"

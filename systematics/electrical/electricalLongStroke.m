@@ -5,6 +5,8 @@ resistorRuns = [\
 3167
 ];
 
+numCuts = 0;
+
 for resistorCtr = 1:rows(resistorRuns)
 	runString = num2str(resistorRuns(resistorCtr,1));
 
@@ -12,6 +14,8 @@ for resistorCtr = 1:rows(resistorRuns)
 	load(strcat( HOMEDIR , ['runAnalysis/alwaysUnblindedResults/run' runString 'pM3FilterOnly.dat']));
 
 	TorDiff = uncertaintyOverTime( pM(:,torqueCol), pM(:, torerrCol));
+
+	numCuts += rows(pM);
 
 	%Output...
 
@@ -36,3 +40,7 @@ for resistorCtr = 1:rows(resistorRuns)
 
 	save (['plots/longStrokeoHHist' runString '.dat'], "olHist");
 end
+
+totalTime = numCuts*stepPeriod*lockAve; 
+
+printInteger(totalTime, [filePath 'totalSecondslongStrokeL0.tex']);
