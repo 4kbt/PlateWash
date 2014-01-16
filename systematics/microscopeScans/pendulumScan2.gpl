@@ -1,5 +1,5 @@
 set term postscript enhanced solid color eps 
-set output 'pendulumScan1.eps'
+set output 'pendulumScan2.eps'
 
 set palette model RGB defined (-0.02 "red" , -0.01 "yellow", 0.01 "blue")
 
@@ -9,14 +9,14 @@ set key noauto
 
 set cbrange [-20:8]
 
-set title 'pendulum surface scan, side 1 (X-scratch at upper left)'
+set title 'pendulum surface scan, side 2 (X-scratch at upper right)'
 set xlabel 'millimeters'
 set ylabel 'millimeters'
 set cblabel 'surface height ({/Symbol m}m)'
 
 f(x,y) = a*x+b*y+c
 
-fn = 'June2011TaScanFiberUpXupperLeft.dat'
+fn = 'June2011TaScanFiberUpXupperRight.dat'
 
 fit f(x,y) fn u 1:2:3:(1) via a,b,c
 

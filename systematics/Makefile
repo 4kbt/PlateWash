@@ -1,6 +1,6 @@
 include ../Makefile.inc
 
-all : therm mag resist elec press foil
+all : therm mag resist elec press foil scans
 
 mag: 
 	$(MAKE)  $(PARALLEL) -C magnetic
@@ -19,6 +19,9 @@ press:
 
 foil: 
 	$(MAKE)  $(PARALLEL) -C foil
+
+scans:
+	$(MAKE)  $(PARALLEL) -C microscopeScans
 
 clean:
 	$(MAKE) -C magnetic clean
