@@ -5501,7 +5501,49 @@ ms.
 
 s between moving the attractor and taking data, any remaining pressure gradient
  should be, at most, comparable to the ambient pressure itself.
- 
+ The displacement, 
+\begin_inset Formula $w$
+\end_inset
+
+, of a tensioned circular membrane in response to uniform pressur is given
+ by Campbell as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+w(r)=\frac{a}{4}\frac{pa}{\sigma h}\left(1-\frac{r^{2}}{a^{2}}\right)\rightarrow w(0)=\frac{pa^{2}}{4\sigma h}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $a$
+\end_inset
+
+ is the membrane radius, 
+\begin_inset Formula $p$
+\end_inset
+
+ is the applied pressure, 
+\begin_inset Formula $h$
+\end_inset
+
+ is the thickness, and 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ is the initial tensile stress 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "campbell1956theory"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
 filename "../systematics/pressure/extracted/finalPressurePa.tex"
@@ -6709,10 +6751,38 @@ name "sub:Experimentally-determined-noise"
 
 \begin_layout Standard
 Emphasize here where the optimal noise is.
+ XXXRC
 \end_layout
 
 \begin_layout Standard
-XXXRC Insert raw noise plot (take from stationary run).
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+XXXRC
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Torque noise, from experimental run XXXRC with attractor stationary
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -8366,7 +8436,14 @@ reference "par:Pendulum-magnetic-moment"
  Using a coil placed around the apparatus for systematic tests, it is possible
  to produce arbitrary torques on the pendulum.
  The attractor position is measured using an analog electronic pressure
- gauge (see XXXRC).
+ gauge (see 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Attractor-position-control"
+
+\end_inset
+
+).
  By combining the gauge with the coil and an amplifier, it is possible to
  make an exact and magnified simulation of a gravitational signal that is
  linear in attractor position.
@@ -10891,10 +10968,6 @@ The Capacitor Systematic schematic
 
 \end_layout
 
-\begin_layout Section
-Newtonian Simulation
-\end_layout
-
 \begin_layout Chapter
 Newtonian Simulation
 \begin_inset CommandInset label
@@ -12064,10 +12137,6 @@ Coil in the on-apparatus position
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -12430,14 +12499,13 @@ Electrical Crosstalk
 
 \begin_layout Standard
 The experiment was operated with the pneumatic drive valved-off on the experimen
-t-side of the pressure gauge.
+t-side of the pressure gauge in runs 3167 and 3168.
  Electrically, the experiment proceeded 
 \emph on
 exactly
 \emph default
  as if the true experiment were underway, but the attractor did not move.
- After XXXRC seconds of data, the torque difference over a long stroke was
- 
+ The torque difference over a simulated long stroke was 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../systematics/electrical/extracted/longStrokeL0Diff3167.tex"
