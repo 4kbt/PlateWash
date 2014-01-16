@@ -3696,7 +3696,10 @@ q-tester
 
  causes a gravitational torque on the pendulum at twice the rotation frequency.
  Two 
-\begin_inset Formula $23.88\pm0.34$
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/brickMass.tex"
+
 \end_inset
 
 
@@ -3723,15 +3726,39 @@ ist's body weight with and without each block.
 \begin_inset Formula $4"\times4"\times8"$
 \end_inset
 
- bricks were suspended vertically and located with their inner faces XXXRC
+ bricks were suspended vertically and located with their centers 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/brickRadius.tex"
+
+\end_inset
+
+
 \begin_inset space ~
 \end_inset
 
-m from the center of the jar and bottom faces XXXRC
+m from the center of the jar and 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/brickHeight.tex"
+
+\end_inset
+
+
 \begin_inset space ~
 \end_inset
 
-m above the center of the pendulum.
+m above the center of the pendulum
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXRC verify metrology
+\end_layout
+
+\end_inset
+
+.
  The rotation axis was coincident with the torsion fiber to < 5 cm precision.
  The rotation was controlled by a PIC microprocessor driving a geared-down
  stepper motor.
@@ -3759,15 +3786,10 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXXRC
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Newtonian simulation of the q-Tester torque
-\end_layout
+\align center
+\begin_inset Graphics
+	filename ../NewtonianSimulation/plots/brickDemo.eps
+	width 50page%
 
 \end_inset
 
@@ -3775,6 +3797,24 @@ Newtonian simulation of the q-Tester torque
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Torque between pendulum and lead-quadrupole calibration bricks, as computed
+ by the newtonian simulation package (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Newtonian-Simulation"
+
+\end_inset
+
+).
+ Note the slight phase shift with respect to zero; because of the inlays,
+ the pendulum quadrupole's axis is not parallel to the pendulum face.
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -11800,42 +11840,6 @@ reference "sec:Calibration"
  signal.
  The torque from the bricks, as measured by calibrating the torque signal
  using the pendulum's calculated moment of inertia and XXXRC
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename ../NewtonianSimulation/plots/brickDemo.eps
-	width 50page%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Torque between pendulum and lead-quadrupole calibration bricks.
- Note the slight phase shift with respect to zero; because of the inlays,
- the pendulum quadrupole's axis is not parallel to the pendulum face.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection

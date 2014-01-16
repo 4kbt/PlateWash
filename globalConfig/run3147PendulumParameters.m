@@ -81,3 +81,18 @@ spindleMass = pi * (spindleDiameter/2.0)^2*spindleLength * rhoSpindle;
 spindleTipDistance = AttractorFullThickness;
 spindleRadialPosition = gapRadialPosition;
 
+%%%%%% Q-tester bricks %%%%%%%
+
+%brick mass
+brickMass = 23.88;
+brickMassErr = 0.34;			printSigError(brickMass, brickMassErr, [HOMEDIR '/extracted/brickMass.tex']);
+
+%brick dimensions
+brickHeight = 8*0.0254;			printSigNumber(brickHeight	    , [HOMEDIR '/extracted/brickHeight.tex'    ],2);
+brickWidth  = 4*0.0254;			printSigNumber(brickWidth	    , [HOMEDIR '/extracted/brickWidth.tex'     ],2);
+
+%brick positions
+brickRadius = 25*0.0254;		printSigNumber(brickRadius	    , [HOMEDIR '/extracted/brickRadius.tex'    ],2);
+% elevation to center of brick
+brickElevation = 16*0.0254;		printSigNumber(brickElevation	    , [HOMEDIR '/extracted/brickElevation.tex' ],2);
+
