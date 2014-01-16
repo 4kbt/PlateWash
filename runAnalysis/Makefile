@@ -1,7 +1,7 @@
 include ../Makefile.inc
 
 all: results/run3147pM3FilterMerge.dat
-	$(MAKE) -C supportingPlots
+	$(MAKE) $(PARALLEL) -C supportingPlots
 
 
 ANALYSISDEPS := analyzeRun.m ../calibration/ $(MLIB) $(RUNS) $(DATA) $(GLOBAL)

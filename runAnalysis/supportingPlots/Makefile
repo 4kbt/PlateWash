@@ -9,8 +9,9 @@ WIND := run3147windowTransferFunctions
 LAG20:= run3220torqueLag
 LAG24:= run3224torqueLag
 LAG69:= run3169lags
+TOR67:= run3167torqueNoise
 
-all: $(FFR).eps $(FILT).eps $(WIND).eps $(LAG20).eps $(LAG24).eps $(LAG69).eps
+all: $(FFR).eps $(FILT).eps $(WIND).eps $(LAG20).eps $(LAG24).eps $(LAG69).eps $(TOR67).eps
 
 #Filter transfer functions
 $(FFR).eps: $(FFR).m $(FFR).gpl
@@ -41,6 +42,11 @@ $(LAG24).eps : $(LAG24).m $(LAG24).gpl
 $(LAG69).eps : $(LAG69).m $(LAG69).gpl
 	$(OCT) $(LAG69).m
 	$(GNU) $(LAG69).gpl
+
+#Run3167 torque noise
+$(TOR67).eps : $(TOR67).m $(TOR67).gpl
+	$(OCT) $(TOR67).m
+	$(GNU) $(TOR67).gpl
 
 
 clean : 
