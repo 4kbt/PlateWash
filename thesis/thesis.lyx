@@ -2511,6 +2511,13 @@ Rear view.
 
 \begin_layout Subsection
 Isolating Foil
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Isolating-Foil"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2523,10 +2530,17 @@ foil
 \end_inset
 
  was made by stretching 
-\begin_inset Formula $12.5\,\mu$
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/foilThickness.tex"
+
 \end_inset
 
-m 
+
+\begin_inset space ~
+\end_inset
+
+m
 \begin_inset Note Note
 status open
 
@@ -2537,11 +2551,18 @@ XXXRC verify thickness
 \end_inset
 
 thick BeCu alloy foil (Micro-Tek, Diamond Bar CA) over the tapered end of
- a 77
+ a 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/foilDiameter.tex"
+
+\end_inset
+
+
 \begin_inset space ~
 \end_inset
 
-mm inner-diameter Al tube like a drumhead.
+m inner-diameter Al tube like a drumhead.
  The foil was flat to better than XXXRC 
 \begin_inset Formula $\mu$
 \end_inset
@@ -2771,17 +2792,62 @@ reference "sub:Foil-Interferometer"
 
 \end_inset
 
-), the in-vacuum fundamental frequency was measured to be XXXRC
-\begin_inset Formula $\pm$
+), the in-vacuum fundamental frequency was measured to be 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/foilResonance.tex"
+
 \end_inset
 
-XXXRC
+
 \begin_inset space ~
 \end_inset
 
-Hz.
- Using the approximately-known density of beryllium copper XXXRC and the
- foil thickness, we find that the foil tension is XXXRC.
+Hz
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMA: validate via something other than ifo headers
+\end_layout
+
+\end_inset
+
+.
+ Using the approximately-known density of beryllium copper 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/foilDensity.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+kg/m
+\begin_inset Formula $^{3}$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "CRC2000"
+
+\end_inset
+
+ and the foil thickness, we find that the foil tension is 
+\begin_inset CommandInset include
+LatexCommand input
+filename "/home/charlie/homeVersion/Eotwash/extracted/foilTension.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+N/m.
  
 \end_layout
 
@@ -4776,7 +4842,7 @@ where
 \end_layout
 
 \begin_layout Paragraph
-Noise anti-aliasing
+Noise anti-aliasing 
 \end_layout
 
 \begin_layout Standard
@@ -4995,7 +5061,7 @@ status open
 \end_inset
 
  With simple modification and bias voltages, the PlateWash balance can become
- a powerful tilt sensor.
+ a powerful tilt-amplifying sensor.
 \end_layout
 
 \begin_layout Subparagraph
@@ -5102,7 +5168,31 @@ Tilt
 \end_layout
 
 \begin_layout Standard
-XXXRC
+The effects of tilt are functionally indistinguishable from other ground
+ motion in PlateWash.
+ Qualititatively, we expect ground rotation to be our dominant source of
+ external noise at sub-mHz frequencies.
+ As an example, on sunny days, we can see the deformation of the building
+ at sunrise as the upper part of our laboratory wall is differentially heated
+ by the sun.
+ Tilt is also the experiment's strongest coupling to human activity.
+ Walking up to the apparatus deforms the floor, leading somehow through
+ the instrument to a tilt coupling.
+ When initially characterizing the apparatus, we took care to separate this
+ effect from gravity by suspending a ~40
+\begin_inset space ~
+\end_inset
+
+kg lead mass from our laboratory crane: lifting the mass only a millimeter
+ off the floor was sufficient to produce an instrument response comparable
+ to that seen from body weight.
+ Lifting it higher had negligible effect.
+ As with many of our external sources of noise, tilt noise in the lab is
+ least at night, giving us a daily 6-8
+\begin_inset space ~
+\end_inset
+
+hr window for our best measurements.
 \end_layout
 
 \begin_layout Paragraph
@@ -5461,12 +5551,32 @@ bounce test
 \end_inset
 
 ).
- Effort has been made to keep the active surfaces very clean, with class
- XXXMA clean room procedures.
+ Effort has been made to keep the active surfaces very clean through the
+ use of 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+class XXXMA 
+\end_layout
+
+\end_inset
+
+clean room procedures.
  We see the effects of dust in perhaps 50% of our initial cleanings of a
  surface.
  The presence of dust is inferred with the interferometer.
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMI expand-me
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subparagraph
@@ -5485,8 +5595,7 @@ Residual gas pressure
 \end_layout
 
 \begin_layout Standard
-The foil's stiffness is XXXRC.
- The diffusion time out of the attractor-foil gap is 
+The diffusion time out of the attractor-foil gap is 
 \begin_inset Formula $\sim40$
 \end_inset
 
@@ -5494,7 +5603,14 @@ The foil's stiffness is XXXRC.
 \begin_inset space ~
 \end_inset
 
-ms.
+ms 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "schlamminger2010indirect"
+
+\end_inset
+
+.
  As we wait more than 1
 \begin_inset space ~
 \end_inset
@@ -5505,14 +5621,14 @@ s between moving the attractor and taking data, any remaining pressure gradient
 \begin_inset Formula $w$
 \end_inset
 
-, of a tensioned circular membrane in response to uniform pressur is given
+, of a tensioned circular membrane in response to uniform pressure is given
  by Campbell as
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \[
-w(r)=\frac{a}{4}\frac{pa}{\sigma h}\left(1-\frac{r^{2}}{a^{2}}\right)\rightarrow w(0)=\frac{pa^{2}}{4\sigma h}
+w(r)=\frac{a}{4}\frac{pa}{\sigma h}\left(1-\frac{r^{2}}{a^{2}}\right)\rightarrow w(0)=\frac{pa^{2}}{4\sigma h}=\frac{pa^{2}}{4T}
 \]
 
 \end_inset
@@ -5529,11 +5645,22 @@ where
 \begin_inset Formula $h$
 \end_inset
 
- is the thickness, and 
+ is the thickness, 
 \begin_inset Formula $\sigma$
 \end_inset
 
- is the initial tensile stress 
+ is the initial tensile stress, and 
+\begin_inset Formula $T$
+\end_inset
+
+ the tension, computed in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Isolating-Foil"
+
+\end_inset
+
+ 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "campbell1956theory"
@@ -5561,8 +5688,14 @@ filename "../extracted/AttractorDiameter.tex"
 \begin_inset space ~
 \end_inset
 
-m diameter circle yields a foil displacement of XXXRC and hence a torque
- of XXXRC.
+m diameter circle yields a foil displacement of 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/gasFoilDisplacement.tex"
+
+\end_inset
+
+ and hence a torque of XXXRC.
 \end_layout
 
 \begin_layout Paragraph
@@ -5590,7 +5723,16 @@ key "schlamminger2010indirect,dolesi2011brownian"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 XXXMA studied this.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
