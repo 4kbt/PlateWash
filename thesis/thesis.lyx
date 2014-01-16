@@ -12313,7 +12313,7 @@ Temperature gradient
 
 \begin_layout Standard
 Using the on-board heating resistors, one leg of the attractor was heated
- with XXXRC mW (
+ with 20 mW (
 \begin_inset space ~
 \end_inset
 
@@ -12325,11 +12325,15 @@ V)
 \begin_inset Formula $^{2}/$
 \end_inset
 
-(XXXRC
+(1
 \begin_inset space ~
 \end_inset
 
-Ohm
+k
+\begin_inset Formula $\Omega$
+\end_inset
+
+
 \begin_inset space ~
 \end_inset
 
