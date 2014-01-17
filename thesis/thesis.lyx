@@ -6378,18 +6378,62 @@ Attractor drift
 \end_layout
 
 \begin_layout Standard
-The attractor pneumatic drive valves leak slowly, causing the attractor
- to retract at ~XXXRC
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../runAnalysis/supportingPlots/run3147attractorLeakBack.eps
+	width 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Attractor velocity, in 1
 \begin_inset space ~
 \end_inset
 
+s bins
+\end_layout
 
-\begin_inset Formula $\mu$
 \end_inset
 
-m/minute.
- A changing magnetic environment may give rise to a pseudo-DC magnetic field
- that penetrates the foil.
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The attractor pneumatic drive system leaks slowly, causing the attractor
+ to retract at 2
+\begin_inset space ~
+\end_inset
+
+nm/s.
+ There are many possible velocity-dependent systematic effects that one
+ might consider.
+ We believe, but cannot prove, that 2
+\begin_inset space ~
+\end_inset
+
+nm/s is sufficiently slow to render such effects negligible.
 \end_layout
 
 \begin_layout Paragraph
