@@ -2944,7 +2944,7 @@ key "CRC2000"
  and the foil thickness, we find that the foil tension is 
 \begin_inset CommandInset include
 LatexCommand input
-filename "/home/charlie/homeVersion/Eotwash/extracted/foilTension.tex"
+filename "../extracted/foilTension.tex"
 
 \end_inset
 
