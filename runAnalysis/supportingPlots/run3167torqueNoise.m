@@ -1,6 +1,8 @@
 run3167sync3
 run3147preSM3A
 
+pwData(:,torqueCol) = pwData(:,torqueCol)*torqueCal;
+
 lnStart = floor(1.25*86400/TheoSampleTime);
 lnEnd   = floor(1.4*86400/TheoSampleTime);
 

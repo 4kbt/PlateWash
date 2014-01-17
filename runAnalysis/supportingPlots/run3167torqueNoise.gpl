@@ -3,6 +3,7 @@ set output 'run3167torqueNoise.eps'
 
 set multiplot layout 2,1
 
+set title 'Representative noise data (3167)'
 set xlabel 'time (d)'
 set ylabel 'torque (fN-m)'
 
@@ -11,13 +12,15 @@ pl\
 	'run3167timeData.dat'   u ($1/86400):($2*1e15) w l lt 3,\
 	'run3167timeDataLN.dat' u ($1/86400):($2*1e15) w l lt 1
 
+unset title
 set xlabel 'frequency (Hz)'
-set ylabel 'torque spectral amp. (pN-m/{/Symbol @{\140\140}\326}Hz)'
+set ylabel 'torque spectral amp. (fN-m/{/Symbol @{\140\140}\326}Hz)'
+
 
 set logsc 
 
 pl [1e-3:0.1]\
-	'run3167fft.dat' u 1:(sqrt($2)*1e12) w l lt 3,\
-	'run3167fftLN.dat' u 1:(sqrt($2)*1e12) w l lt 1
+	'run3167fft.dat' u 1:(sqrt($2)*1e15) w l lt 3,\
+	'run3167fftLN.dat' u 1:(sqrt($2)*1e15) w l lt 1
 
 unset multiplot
