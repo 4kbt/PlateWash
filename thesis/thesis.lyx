@@ -1342,6 +1342,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename plots/ISL/ISLFullRange.eps
 	width 50text%
@@ -1375,6 +1376,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename plots/ISL/ISLShortRange.eps
 	width 50text%
@@ -1680,8 +1682,10 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename diagrams/SimpleExperimentalDiagram.pdf
+	width 50page%
 
 \end_inset
 
@@ -2547,6 +2551,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Pictures/small/RearViewMotorsSpindlesAttractorFoilDecember212011.jpg
 	width 50page%
@@ -3109,6 +3114,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Pictures/small/HighQuarterViewOfPendulumIFOFoilDecember222011.jpg
 	width 50text%
@@ -4052,8 +4058,10 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename diagrams/Interferometer.pdf
+	width 50page%
 	BoundingBox 0bp 0bp 794bp 560bp
 
 \end_inset
@@ -4333,6 +4341,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Pictures/small/InterferometerTipDecember222011.jpg
 	width 50page%
