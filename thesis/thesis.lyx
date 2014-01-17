@@ -920,8 +920,18 @@ screen
 
 .
  Because chameleon interactions are self-screening, the screening length
- XXXMA becomes the relevant length scale at which the new interaction may
- emerge from camoflage.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMA 
+\end_layout
+
+\end_inset
+
+becomes the relevant length scale at which the new interaction may emerge
+ from camoflage.
  
 \end_layout
 
@@ -938,6 +948,10 @@ In addition to their physical motiviation, chameleon interactions are ready-made
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 XXXMA Uphadye calculable boundaries 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -948,11 +962,11 @@ key "PhysRevD.86.102003"
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 XXXMA New PRL regarding viability of chameleons 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 XXXMI Symmetrons from Upadhye
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -963,7 +977,7 @@ key "PhysRevLett.110.031301"
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 XXXMA 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -972,6 +986,11 @@ key "2013arXiv1309.5389J"
 \end_inset
 
  2013 Snowmass DE/Chameleon paper.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5252,7 +5271,21 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXXRC
+\align center
+\begin_inset Graphics
+	filename ../runAnalysis/supportingPlots/run3147NoiseOverTime.eps
+	width 50page%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename ../runAnalysis/supportingPlots/run3147NoiseThroughTheDay.eps
+	width 50page%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -5266,7 +5299,7 @@ name "fig:Daily-noise-variation"
 
 \end_inset
 
-
+, in torque noise per cut
 \end_layout
 
 \end_inset
