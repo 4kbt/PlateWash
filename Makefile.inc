@@ -1,4 +1,4 @@
-HOMEDIR := /home/charlie/homeVersion/Eotwash/
+HOMEDIR := /home/charlie/trialEotwash/Eotwash/
 
 OCT:= octave --no-init-file \
 	--eval "HOMEDIR = \"$(HOMEDIR)\";"\
@@ -6,7 +6,7 @@ OCT:= octave --no-init-file \
 	-p $(HOMEDIR)/globalConfig/ \
 	-q 
 
-GNU    := gnuplot -e 'set term dumb'
+GNU    := gnuplot -e 'set term dumb' -e 'HOMEDIR = "$(HOMEDIR)"'
 
 MLIB   := $(shell find  $(HOMEDIR)/mlib/        -type d) 
 

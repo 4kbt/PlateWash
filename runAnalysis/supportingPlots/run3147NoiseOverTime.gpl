@@ -1,0 +1,28 @@
+set term postscript enhanced solid color eps
+
+set output 'run3147NoiseOverTime.eps'
+
+load HOMEDIR."glib/gnuplotColumns.gpl"
+
+fn = '../results/run3147pM3FilterMerge.dat'
+
+set logsc y
+
+set xlabel 'time (d)'
+set ylabel 'torque difference (fN-m))'
+
+set key noauto
+set title 'torque noise over time'
+
+pl \
+	fn u (column(pwTimeCol + numSensors)/86400):(column(torerrCol) * 1e15) w p pt 7 lt 3 ps 0.5
+
+
+set output 'run3147NoiseThroughTheDay.eps'
+
+set title 'torque noise through the day'
+set xlabel 'time (hr)'
+
+pl [0:24][:100]\
+	fn u (((column(pwTimeCol + numSensors)/86400 - floor(column(pwTimeCol + numSensors)/86400)))*24.0):\
+	(column(torerrCol) * 1e15) w p pt 7 lt 3 ps 0.3
