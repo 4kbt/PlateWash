@@ -4681,22 +4681,7 @@ Within this range, we use the approximation
 \begin_inset Formula $\frac{\pi\lambda}{8\sqrt{2}A_{0}}\sim\frac{370\mbox{ nm}}{\mbox{fringe (peak-to-peak) }}$
 \end_inset
 
- to convertOur Ti (
-\begin_inset CommandInset include
-LatexCommand input
-filename "../extracted/titaniumDensity.tex"
-
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-kg/m
-\begin_inset Formula $^{3}$
-\end_inset
-
-) measured output to displacement.
+ to convert measured output to displacement.
 \end_layout
 
 \begin_layout Subsubsection
