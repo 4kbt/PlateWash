@@ -9,7 +9,7 @@ fn = '../results/run3147pM3FilterMerge.dat'
 set logsc y
 
 set xlabel 'time (d)'
-set ylabel 'torque difference (fN-m))'
+set ylabel 'torque difference uncertainty per cut (fN-m))'
 
 set key noauto
 set title 'torque noise over time'
