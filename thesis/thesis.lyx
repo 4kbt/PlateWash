@@ -4462,7 +4462,11 @@ reference "fig:Interferometer-Duration"
 
 , we have the interferometer signal plotted over the duration of the experiment.
  Given the spatial extent of the materials involved and the heterogeneous
- nature of the assembly, the <XXXRC 
+ nature of the assembly, the <1
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset Formula $\mu$
 \end_inset
 
@@ -6057,6 +6061,9 @@ kg XXXRC
 \end_inset
 
 m from the pendulum is XXXRC.
+ This effect should be quite linear with pressure/displacement, as the center
+ of mass of the bellows displaces by perhaps 1/50th of the displacement
+ of the attractor.
 \end_layout
 
 \begin_layout Paragraph
