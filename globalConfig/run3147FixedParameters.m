@@ -108,3 +108,9 @@ foilDensity = 8230; printSigNumber(foilDensity, [HOMEDIR '/extracted/foilDensity
 
 foilDiameter = 77e-3; printSigNumber(foilDiameter, [HOMEDIR '/extracted/foilDiameter.tex'], 2);
 
+
+IFOFringeTop = 3.28;
+IFOFringeBot = 1.639;
+
+IFODistCal = 370e-9/(3.28-1.639);
+

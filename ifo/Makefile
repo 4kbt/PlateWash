@@ -1,6 +1,6 @@
 include ../Makefile.inc
 
-all : ifoAR.eps
+all : ifoAR.eps ifoLFSpectrum.eps
 
 
 ANALYSISDEPS :=
@@ -31,7 +31,7 @@ listRuns :
 #end parallelization section. 
 
 #$@ is the target.
-trim/ifoMerge.dat : $(DEPLIST)
+trim/ifoMerge.dat : $(DEPLIST) $(MLIB)
 	-rm $@
 	cat $(DEPLIST) >> $@
 	$(HOMEDIR)/bin/commentStrip.sh $@
@@ -40,6 +40,10 @@ trim/ifoMerge.dat : $(DEPLIST)
 
 ifoAR.eps : ifoAR.gpl trim/ifoMerge.dat
 	$(GNU) ifoAR.gpl
+
+ifoLFSpectrum.eps : ifoLFSpectrum.m ifoLFSpectrum.gpl $(MLIB)
+	$(OCT) ifoLFSpectrum.m
+	$(GNU) ifoLFSpectrum.gpl
 
 clean:
 	-rm trim/*

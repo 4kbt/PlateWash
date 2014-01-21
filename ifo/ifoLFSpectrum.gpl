@@ -1,0 +1,29 @@
+set term postscript enhanced solid color eps
+set output 'ifoLFSpectrum.eps'
+
+set title 'Run 3147, random attractor movement'
+set key noauto
+
+set multiplot layout 2,1
+
+set xlabel 'Day of 2012'
+set ylabel 'foil displacement, arb. zero (nm)'
+
+pl\
+	'ifoLFTimeDomain.dat' u ($1/86400-3*365):($2*1e9) w l lt 3 
+ 
+unset title
+
+set xlabel 'frequency (Hz)'
+set ylabel 'displacement spectral amplitude (nm/{/Symbol @{\140\140}\326}Hz) 
+
+
+set logsc 
+
+pl [1e-4:1][0.01:1000]\
+	'ifoLFSpectrum.dat' u 1:( sqrt($2) * 1e9 )  w l lt 3,\
+	'ifoLFSpectrum.dat' u 1:( sqrt($4) * 1e9 )  w l lt 1 tit 'size of a coherent 0.1 nm signal'
+	
+
+
+unset multiplot

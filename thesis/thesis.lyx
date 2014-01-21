@@ -4411,140 +4411,6 @@ XXXRC Blah Blah blah
 \end_layout
 
 \begin_layout Subsubsection
-Noise
-\end_layout
-
-\begin_layout Paragraph
-Leading noise source
-\end_layout
-
-\begin_layout Standard
-At sub-Hz frequencies, noise in the interferometer is believed to be polarizatio
-n rotation in the fiber.
- Differential stress in optical fibers can rotate the polarization throughout
- the entire Bloch sphere 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "ThorlabsPolarizationControl,ulrich1980bending,ross1984rotation"
-
-\end_inset
-
-.
- As the light emitted from the laser is, in general, polarized, the beamsplitter
- is likely to be polarization-sensitive, and the cavity and detector may
- have some polarization sensitivity, any change in polarization throughout
- the fibers may yield changing results.
- The effect of simply jostling the fiber is easily noted in the readout
- of the apparatus; listening to the photodiode output with headphones yields
- a siren-like tone, giving extra credence to the polarization-rotation explanati
-on of the noise.
- Securing the fiber, where possible, to immovable objects with tape yielded
- a substantial improvement in sub-Hz noise.
- Noise from within the science run is plotted in Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Interferometer-low-frequency-pow"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-Polarization-maintaining fiber is on-hand for an upgraded version of the
- experiment.
-\end_layout
-
-\begin_layout Standard
-At higher frequencies, the instrument appears to be limited by electronic
- noise, but the sensitivity is more than sufficient for our needs, see Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Interferometer-high-frequency"
-
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-XXXRC
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Interferometer-high-frequency"
-
-\end_inset
-
-Interferometer high-frequency power spectrum
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-XXXRC
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Interferometer-low-frequency-pow"
-
-\end_inset
-
-Interferometer low-frequency power spectrum
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
 Calibration
 \end_layout
 
@@ -4682,6 +4548,139 @@ Within this range, we use the approximation
 \end_inset
 
  to convert measured output to displacement.
+\end_layout
+
+\begin_layout Subsubsection
+Noise
+\end_layout
+
+\begin_layout Paragraph
+Leading noise source
+\end_layout
+
+\begin_layout Standard
+At sub-Hz frequencies, noise in the interferometer is believed to be polarizatio
+n rotation in the fiber.
+ Differential stress in optical fibers can rotate the polarization throughout
+ the entire Bloch sphere 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "ThorlabsPolarizationControl,ulrich1980bending,ross1984rotation"
+
+\end_inset
+
+.
+ As the light emitted from the laser is, in general, polarized, the beamsplitter
+ is likely to be polarization-sensitive, and the cavity and detector may
+ have some polarization sensitivity, any change in polarization throughout
+ the fibers may yield changing results.
+ The effect of simply jostling the fiber is easily noted in the readout
+ of the apparatus; listening to the photodiode output with headphones yields
+ a siren-like tone, giving extra credence to the polarization-rotation explanati
+on of the noise.
+ Securing the fiber, where possible, to immovable objects with tape yielded
+ a substantial improvement in sub-Hz noise.
+ Noise from within the science run is plotted in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Interferometer-low-frequency-pow"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Polarization-maintaining fiber is on-hand for an upgraded version of the
+ experiment.
+\end_layout
+
+\begin_layout Standard
+At higher frequencies, the instrument appears to be limited by electronic
+ noise, but the sensitivity is more than sufficient for our needs, see Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Interferometer-high-frequency"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+XXXRC
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Interferometer-high-frequency"
+
+\end_inset
+
+Interferometer high-frequency power spectrum
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../ifo/ifoLFSpectrum.eps
+	width 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Interferometer-low-frequency-pow"
+
+\end_inset
+
+Interferometer low-frequency power spectrum
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
