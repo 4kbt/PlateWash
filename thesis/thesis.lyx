@@ -6043,27 +6043,66 @@ Weight of drive gas
 \begin_layout Standard
 The flow of gas into the attractor drive bellows changes the mass distribution
  near the pendulum.
- XXXRC
+ 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/bellowsVolume.tex"
+
+\end_inset
+
+
 \begin_inset space ~
 \end_inset
 
-cm
+m
 \begin_inset Formula $^{3}$
 \end_inset
 
- of gas at 50 psi has a mass of XXXRC kg.
- The expected torque on the pendulum due to the appearance of XXXRC
+ of gas at 50 psi has a mass of 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/bellowsMass.tex"
+
+\end_inset
+
+ kg.
+ The expected 
+\bar under
+total
+\bar default
+ torque on the pendulum due to the appearance of 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/bellowsMass.tex"
+
+\end_inset
+
+
 \begin_inset space ~
 \end_inset
 
-kg XXXRC
+kg 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/bellowsDistance.tex"
+
+\end_inset
+
+
 \begin_inset space ~
 \end_inset
 
-m from the pendulum is XXXRC.
- This effect should be quite linear with pressure/displacement, as the center
- of mass of the bellows displaces by perhaps 1/50th of the displacement
- of the attractor.
+m from the pendulum is 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/bellowsTorque.tex"
+
+\end_inset
+
+.
+ Furthermore, this effect is quite linear with pressure/displacement, as
+ the center of mass of the bellows displaces by perhaps 1/50th of the displaceme
+nt of the attractor and about 1/1000th of the distance to the pendulum.
 \end_layout
 
 \begin_layout Paragraph
@@ -6075,8 +6114,29 @@ The dense inlays of the attractor and the dense material of the attractor
  face are attached with a thin layer of epoxy.
  It is possible that an air bubble may have become laterally very large
  when the glue layer was pressed.
- Assuming a 1 cm diameter by 1 micron thick glue bubble in both the pendulum
- and attractor, the associated torque is <XXXRC.
+ Assuming a 1 cm radius by 5 micron thick glue bubble in both the pendulum
+ and attractor, the associated 
+\bar under
+total
+\bar default
+ torque, not torque-difference, is <
+\begin_inset Formula $10^{-19}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+N-m.
+ With density near 1000
+\begin_inset space ~
+\end_inset
+
+kg/m
+\begin_inset Formula $^{3}$
+\end_inset
+
+, it's simply not dense-enough to matter.
 \end_layout
 
 \begin_layout Paragraph

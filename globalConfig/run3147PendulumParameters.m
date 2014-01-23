@@ -96,3 +96,20 @@ brickRadius = 25*0.0254;		printSigNumber(brickRadius	    , [HOMEDIR '/extracted/
 % elevation to center of brick
 brickElevation = 16*0.0254;		printSigNumber(brickElevation	    , [HOMEDIR '/extracted/brickElevation.tex' ],2);
 
+
+%%%% Bellows %%%% 
+
+rhoAir = 1;
+bellowsPressure = 50.0/14.0;
+
+bellowsLength = 70e-3;
+bellowsDiameter = 25e-3;
+
+bellowsVolume = pi * (bellowsDiameter/2.0)^2 * bellowsLength; 	printSigNumber(bellowsVolume, [HOMEDIR '/extracted/bellowsVolume.tex'], 2);
+
+bellowsMass = bellowsVolume * rhoAir * bellowsPressure;		printSigNumber(bellowsMass,   [HOMEDIR '/extracted/bellowsMass.tex'  ], 2);
+
+bellowsDistance = 180e-3; 					printSigNumber(bellowsDistance, [HOMEDIR '/extracted/bellowsDistance.tex'],2);
+bellowsHeight = 0;
+bellowsOffset = 0;
+
