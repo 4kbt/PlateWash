@@ -4707,7 +4707,148 @@ Three computers
 \end_layout
 
 \begin_layout Standard
-XXXRC
+Great care was exercised in the design of the data acquisition system.
+ In order to prevent any correlation of attractor-related information with
+ the pendulum readout, the attractor control was placed on an entirely separate
+ computer.
+ The computers shared only one ground, starred out from the main grounding
+ block (see 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Grounding"
+
+\end_inset
+
+).
+ While the interferometer readout could have been done by the pendulum control
+ computer, it was convenient to use a third computer, with its own data-acquisit
+ion board.
+ The data were acquired from these three machines in parallel, each with
+ their own clock.
+ The timing system was arranged to synchronize all three computer clocks
+ every 3141
+\begin_inset space ~
+\end_inset
+
+s to another master NTP server in the lab, later changed to a NIST reference.
+ 
+\end_layout
+
+\begin_layout Standard
+The synchronization system (Windows Time) would sometimes fail, and not
+ recover 3141
+\begin_inset space ~
+\end_inset
+
+s afterward.
+ This became a major experimental concern, as we had no built-in synchronization
+ signal, relying on hand-synchronization and attractor-foil interaction
+ for synchronization.
+ A future iteration of this experiment must have an external clock sending
+ optical pulses to all three DAQ systems.
+\end_layout
+
+\begin_layout Standard
+The torsion balance computer used a NI-6259 PCI DAQ card, sampling 32 analog
+ inputs at 25 kHz.
+ Careful attention was paid to the signal grounds.
+ When not used in fully-differential mode, the card allows the use of two
+ analog-input grounds.
+ One was referenced to the photodiode readout, and the second to XXXRC.
+ The attractor and interferometer DAQ systems used NI-6211 USB DAQ cards.
+\end_layout
+
+\begin_layout Subsection
+Grounding
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Grounding"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Good grounding is absolutely essential to any experiment.
+ After years of chasing ground loops, we embarked on a grounding purge.
+ A large copper plate was screwed to a nearby plywood wall and defined to
+ be 
+\begin_inset Quotes eld
+\end_inset
+
+Ground
+\begin_inset Quotes erd
+\end_inset
+
+.
+ The plate was connected by a heavy-gauge braided cable to a metallic connection
+ with a nearby 100-ton cyclotron magnet yoke.
+ From this grounding plate, we implemented a starred 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+(XXXMA cite grounding reference)
+\end_layout
+
+\end_inset
+
+ grounding pattern.
+ All circuits made exactly one grounding connection to this plate, all through
+ braided copper grounding straps.
+ It is possible to disconnect the grounding strap from the vacuum apparatus
+ and measure >20
+\begin_inset space ~
+\end_inset
+
+M
+\begin_inset Formula $\Omega$
+\end_inset
+
+ resistance to ground.
+ The vacuum pumping system was electrically isolated by a ceramic vacuum
+ break above the turbo pump.
+ In-vacuum electrical components which required a floating ground were floated
+ and had signal grounds attached outside the apparatus.
+ Control of the pendulum feedback electrodes was done using battery-powered
+ instrumentation amplifiers placed just outside the apparatus in order to
+ simplify grounding to a comprehensible few-component arrangement.
+ The connection from the pneumatic drive to the experiment passed through
+ a short section of plastic tubing.
+ The foil interferometer readout is, beautifully, entirely optical; the
+ nearest electronic components were more than a meter from the apparatus.
+\end_layout
+
+\begin_layout Standard
+For the thermal tests, our group's custom wireless XBee sensor readout systems
+ allowed guaranteed ground-loop free sensing of the attractor thermistors.
+ Attractor heating was done by battery-powered systems.
+ Though they were disabled for this iteration of the experiment, the 
+\begin_inset Quotes eld
+\end_inset
+
+contact potential pails
+\begin_inset Quotes erd
+\end_inset
+
+, battery-powered, externally motorized potentiometer resistive dividers,
+ had the capacity to set the foil and attractor voltages directly relative
+ to the pendulum's ground potential.
+\end_layout
+
+\begin_layout Standard
+In addition to a defined grounding arrangement, paring down the number of
+ sensors to the minimum set required greatly simplified the traceability
+ of system grounds.
+ All of this paid off, as seen in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Electrical-Crosstalk"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
@@ -5931,7 +6072,7 @@ normal
 \end_inset
 
  gravity that stem from imperfections in the experiment's design and execution.
- Some of these effects are essential, such as the necessarily finite size
+ Some of these effects are essential, such as the necessarily-finite size
  of the attractor.
  Other effects have been made small by careful design and construction,
  but residual effects must be quantified.
@@ -6128,12 +6269,19 @@ total
 \end_inset
 
 N-m.
- With density near 1000
+ With density near 1170
 \begin_inset space ~
 \end_inset
 
 kg/m
 \begin_inset Formula $^{3}$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "EccobondDatasheet"
+
 \end_inset
 
 , it's simply not dense-enough to matter.
@@ -6566,7 +6714,7 @@ The temperature of the instrument itself may change as gas flows into and
 \end_layout
 
 \begin_layout Subsubsection
-Pneumatic Drive Leak
+Pneumatic Drive Leak 
 \end_layout
 
 \begin_layout Standard
@@ -7785,7 +7933,7 @@ name "sub:Lags"
 
 \begin_layout Standard
 A number of properties of the instrument require finite time.
- The pneumatically-driven attractor takes ~XXXRC
+ The pneumatically-driven attractor takes ~15
 \begin_inset space ~
 \end_inset
 
@@ -7796,7 +7944,7 @@ s to move to a new position.
 \end_inset
 
 s before the position change.
- The feedback loop requires ~XXXRC
+ The feedback loop requires ~20
 \begin_inset space ~
 \end_inset
 
@@ -7845,7 +7993,7 @@ filename "../extracted/pTime.tex"
 \begin_inset space ~
 \end_inset
 
-s preceding a position change must be excluded to reject any position-change
+s preceding a position change are excluded to reject any position-change
  related effects (see section 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -7854,7 +8002,7 @@ reference "sub:Lags-1"
 \end_inset
 
  for further discussion of lags).
- As a consequence, the highest available switch frequency is XXXRC
+ As a consequence, the highest available switch frequency is <25
 \begin_inset space ~
 \end_inset
 
@@ -12921,6 +13069,13 @@ XXXRC
 
 \begin_layout Subsection
 Electrical Crosstalk
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Electrical-Crosstalk"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
