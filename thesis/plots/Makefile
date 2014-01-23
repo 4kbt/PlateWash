@@ -12,6 +12,9 @@ lagFrequencySNR.eps : lagFrequencySNR.gpl
 pwTransferFunction.eps : pwTransferFunction.gpl
 	$(GNU) pwTransferFunction.gpl
 
+ForceLaw.eps: 248plot.gpl
+	$(GNU) 248plot.gpl
+
 clean : 
 	make -C ISL clean
 	-rm *.eps

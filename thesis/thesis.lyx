@@ -1533,7 +1533,14 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXXRC
+\align center
+\begin_inset Graphics
+	filename plots/ForceLaw.eps
+	width 50page%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -10689,7 +10696,7 @@ Triangle Plot
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
