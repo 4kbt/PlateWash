@@ -4492,7 +4492,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/charlie/homeVersion/Eotwash/ifo/ifoAR.eps
+	filename ../ifo/ifoAR.eps
 	width 50page%
 
 \end_inset
