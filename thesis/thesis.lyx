@@ -12502,8 +12502,8 @@ Matt Turner's independent calculation
 
 \begin_layout Standard
 Prior to the development of this Newtonian modelling package, Matt Turner
- developed a package for computing the PlateWash torques using formalism
- XXXRC.
+ developed an independent package for computing the PlateWash torques using
+ a semi-analytic numerical approach.
  These results were found to be in agreement with this simulation package
  for all pendulum/attractor combinations attempted.
  
@@ -12526,15 +12526,63 @@ status open
 Newtonian Simulations of Platewash
 \end_layout
 
-\begin_layout Standard
-Centered torques XXXRC
+\begin_layout Subsection
+Centered torques 
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../NewtonianSimulation/plots/fullSimulation.eps
+	width 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Simulation output for a centered pendulum.
+ Non-linearities are below the 0.1 fN-m requirement, especially over the
+ ~600
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m stroke range of the attractor.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 Off-center torques XXXRC
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsection
 Angled torques XXXRC
 \end_layout
 
