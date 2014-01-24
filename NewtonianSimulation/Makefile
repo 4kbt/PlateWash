@@ -29,14 +29,20 @@ simulation : $(MLIB) processRun.m $(PARTS)
 	$(OCT) processRun.m
 	$(GNU) 
 
-SimulationOutput/%.dat : $(MLIB) $(PARTS) defineAttractorTranslation.m
+SimulationOutput/%.dat : $(MLIB) $(PARTS) defineAttractorTranslation.m processAttractorComponent.m
 	$(OCT) --eval 'attractors = {"$(*F)"}' processAttractorComponent.m
+	$(HOMEDIR)/bin/mathify.sh SimulationOutput/*.tex
 
 SDIR = SimulationOutput/
 
-plots/fullSimulation.eps: fullSimulation.gpl $(SDIR)jan13ScrewGaps.dat $(SDIR)jan13Spindles.dat $(SDIR)jan13Attractor.dat
+plots/fullSimulation.eps: fullSimulation.gpl\
+				$(SDIR)jan13ScrewGaps.dat\
+				$(SDIR)jan13Spindles.dat\
+				$(SDIR)jan13Attractor.dat\
+				$(SDIR)jan13OffsetAttractor.dat
 	$(GNU) fullSimulation.gpl
 
 
 clean :
 	-rm SimulationOutput/*.dat
+	-rm SimulationOutput/*.tex

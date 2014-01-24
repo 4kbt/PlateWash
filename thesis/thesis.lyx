@@ -6114,12 +6114,59 @@ reference "chap:Newtonian-Simulation"
  for a description of both methods.
  As expected from flat surfaces in the near field, the torque vs.
  distance curves are predominantly linear.
- For a properly centered pendulum, the expected torque is XXXRC N-m/m.
- The quadratic term is XXXRC N-m/m^2.
+ For a properly centered pendulum, the expected torque is 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../NewtonianSimulation/SimulationOutput/jan13Attractorlin.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+N-m/m.
+ The quadratic term is 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../NewtonianSimulation/SimulationOutput/jan13Attractorquad.tex"
+
+\end_inset
+
+ N-m/m
+\begin_inset Formula $^{2}$
+\end_inset
+
+.
  There is a left-right asymmetry of the curve due to the asymmetry of the
  pendulum, but for a displacement of the pendulum XXXRC horizontally and
- XXXRC vertically, the linear term becomes XXXRC N-m/m and the quadratic
- term XXXRC N-m/m^2.
+ XXXRC vertically, the linear term becomes 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../NewtonianSimulation/SimulationOutput/jan13OffsetAttractorlin.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+N-m/m and the quadratic term 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../NewtonianSimulation/SimulationOutput/jan13OffsetAttractorquad.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+N-m/m
+\begin_inset Formula $^{2}$
+\end_inset
+
+.
  
 \end_layout
 
@@ -6144,10 +6191,11 @@ Small non-uniformities in density of the attractor or pendulum materials
 \end_layout
 
 \begin_layout Standard
-Horizontal displacement of the pendulum is an excellent test for the local
- effects.
- The largest voids observed in the surfaces under a microscope are about
- XXXRC in size.
+Horizontal displacement of the pendulum is an excellent potential test for
+ local effects, which we did not do in the reported sequence of runs.
+ We did, however, do horizontal displacements prior to beginning this sequence,
+ without breaking vacuum in between; no The largest voids observed in the
+ surfaces under a microscope are about XXXRC in size.
  Note that a distribution of voids across the surface can, with sufficiently
  many voids, be viewed as a reduction in the density of the material.
  This is especially true if the voids are smaller than a characteristic
@@ -6316,7 +6364,33 @@ m and XXXRC g.
  The set screws were screwed all the way into the attractor, then the spindles
  were screwed onto the screws.
  The remaining voids in the attractor and spindle housings are expected
- to give rise to torques of XXXRC N-m/m and nonlinearities of XXXRC N-m/m^2.
+ to give rise to torques of 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../NewtonianSimulation/SimulationOutput/jan13ScrewGapslin.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+N-m/m and nonlinearities of 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../NewtonianSimulation/SimulationOutput/jan13ScrewGapsquad.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+N-m/m
+\begin_inset Formula $^{2}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Paragraph

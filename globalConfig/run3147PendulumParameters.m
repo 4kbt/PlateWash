@@ -53,7 +53,9 @@ pal1=rhoAl; % #Al
 da1=AttractorPlateThickness; %# Ta attractor thickness
 dal1=AttractorBackerThickness; % Al attractor thickness
 
-
+%These offsets are entirely unchecked!
+attrHorizOffset = 5e-3;
+attrVertOffset = 0.5e-3;
 
 %%%%% Screw gaps %%%%%
 
