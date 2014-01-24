@@ -6301,8 +6301,15 @@ Spindle screw voids
 \begin_layout Standard
 The attractor's aluminum body is attached to aluminum spindles using aluminum
  set screws.
- The screws are matched in length and mass to better than XXXRC um and XXXRC
- g.
+ The screws are matched in length and mass to better than XXXRC
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m and XXXRC g.
  The screws and spindles are installed such that the mass distribution is
  most mirror-symmetric about the vertical plane perpendicular to the attractor
  face and coincident with the torsion fiber.
@@ -6317,8 +6324,27 @@ Surface flatness
 \end_layout
 
 \begin_layout Standard
-The attractor and pendulum were lapped to XXXRC um (attractor) XXXRC um
- (pendulum) rms flatness.
+The attractor and pendulum were lapped to 
+\begin_inset Formula $<10$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m (attractor) and 
+\begin_inset Formula $<25$
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m (pendulum) absolute flatness.
  The surfaces were 
 \begin_inset Quotes eld
 \end_inset
@@ -6327,9 +6353,32 @@ dished
 \begin_inset Quotes erd
 \end_inset
 
- by the lapping process, which dominates the rms flatness.
- After a spatial lowpass at XXXRC scale, the rms roughness of the surfaces
- was XXXRC um (attractor) and XXXRC um (pendulum).
+ by the lapping process, which dominates the this number.
+ In the central region of both pendulum and attractor, flatness was better
+ than 
+\begin_inset Formula $5$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m (attractor) and 10
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m (pendulum).
+ The lapped surfaces were mirror-like and had centimeter-scale roughness
+ comparable to the limits of our measuring microscope, at the level of a
+ few microns.
  In addition, the pendulum materials' differing hardnesses led to a step
  at the dense/light interface of 
 \begin_inset Formula $\sim5$
@@ -6359,6 +6408,12 @@ reference "fig:AttractorScan"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+Torque differences were computed directly from the pendulum and attractor
+ scans to estimate the influence of the attractor dishing.
+ XXXRC.
 \end_layout
 
 \begin_layout Standard
