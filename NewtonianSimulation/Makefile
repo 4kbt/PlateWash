@@ -6,7 +6,7 @@ PARTS := parts/
 
 MASSES=jan13Attractor.m jan13Pendulum.m
 
-all: simulation plots/brickDemo.eps bellowsTorque
+all: plots/brickDemo.eps bellowsTorque plots/fullSimulation.eps
 
 plots/brickDemo.eps : $(MLIB) brickDemo.m brickDemo.gpl $(PARTS)
 	$(OCT) brickDemo.m
@@ -27,6 +27,16 @@ spinCalibration: $(MLIB)
 # Non-infinite torque
 simulation : $(MLIB) processRun.m $(PARTS)
 	$(OCT) processRun.m
+	$(GNU) 
+
+SimulationOutput/%.dat : $(MLIB) $(PARTS) defineAttractorTranslation.m
+	$(OCT) --eval 'attractors = {"$(*F)"}' processAttractorComponent.m
+
+SDIR = SimulationOutput/
+
+plots/fullSimulation.eps: fullSimulation.gpl $(SDIR)jan13ScrewGaps.dat $(SDIR)jan13Spindles.dat $(SDIR)jan13Attractor.dat
+	$(GNU) fullSimulation.gpl
+
 
 clean :
 	-rm SimulationOutput/*.dat

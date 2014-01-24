@@ -1,6 +1,6 @@
 function d = defineAttractorTranslation
 
-	d = linspace(0, 2e-3, 30);
+	d = linspace(0, 1e-3, 30);
 
 	d = d';
 

@@ -1,0 +1,40 @@
+set term postscript enhanced solid color eps
+set output 'plots/fullSimulation.eps'
+
+set key top left
+
+set ylabel 'torque (fN-m)'
+
+Gaps      = 'SimulationOutput/jan13ScrewGaps.dat'
+Spindles  = 'SimulationOutput/jan13Spindles.dat'
+Attractor = 'SimulationOutput/jan13Attractor.dat'
+
+gaps(x)      = mgaps      + sgaps      * x
+spindles(x)  = mspindles  + sspindles  * x
+attractor(x) = mattractor + sattractor * x
+
+fit gaps(x)      Gaps      u 5:13 via mgaps, sgaps
+fit spindles(x)  Spindles  u 5:13 via mspindles, sspindles
+fit attractor(x) Attractor u 5:13 via mattractor, sattractor
+
+
+set multiplot layout 2,1
+set key off
+set format x ""
+pl [0:]\
+	Gaps      u ($5*1e6-1000):(($13 )*1e15) w l tit 'Screw Gaps',\
+	Spindles  u ($5*1e6-1000):(($13 )*1e15) w l tit 'Spindles',\
+	Attractor u ($5*1e6-1000):(($13 )*1e15) w l  tit 'Attractor'
+
+
+set title 'non-linear residuals'
+set xlabel 'pendulum - attractor face separation ({/Symbol m}m)'
+set key below
+set format x "%g"
+
+pl [0:]\
+	Gaps      u ($5*1e6-1000):(($13 - gaps($5)     )*1e15) w l tit 'Screw Gaps',\
+	Spindles  u ($5*1e6-1000):(($13 - spindles($5) )*1e15) w l tit 'Spindles',\
+	Attractor u ($5*1e6-1000):(($13 - attractor($5))*1e15) w l  tit 'Attractor'
+
+unset multiplot
