@@ -226,7 +226,7 @@ standard
 
  theory 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "2012PDG"
 
 \end_inset
@@ -267,7 +267,7 @@ Dark Matter: Beginning with the study of galactic rotation curves, a compelling
  perhaps a new family of particles, that, at accessible temperatures, couples
  to ordinary matter only gravitationally 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "2012PDG,SilkDarkMatterTheory"
 
 \end_inset
@@ -1075,7 +1075,7 @@ Precision measurements of the distance dependence of gravity may have begun
  with Kepler.
  Kepler's Laws 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "KeplerFirstSecondLaws,KeplerThirdLaw"
 
 \end_inset
@@ -1115,7 +1115,7 @@ the Cassini mission to Saturn [XXY],
 
  planetary orbits 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "PhysRevLett.61.1159Talmadge,1999snng.book.....F"
 
 \end_inset
@@ -1462,7 +1462,7 @@ key "PhysRevD.77.034020,antoniadis2011short"
  A new variation on the Casimir technique will use ultracold Strontium spectrosc
 opy to test theoretical predictions of the Van der Waals interaction 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "NISTPMG2013"
 
 \end_inset
@@ -1559,7 +1559,7 @@ fat graviton
 
  constraints by Kapner
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "2007PhRvL..98b1101K,2007PhRvL..98m1104A"
 
 \end_inset
@@ -2873,7 +2873,7 @@ where
 
  
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "FetterAndWalecka"
 
 \end_inset
@@ -2885,7 +2885,7 @@ key "FetterAndWalecka"
 
  
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "ArfkenForPhysics"
 
 \end_inset
@@ -2943,7 +2943,7 @@ kg/m
 
  
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "CRC2000"
 
 \end_inset
@@ -3288,7 +3288,7 @@ Torr are reliably obtained by 2-3 days after pumpdown from atmosphere, and
  Torr are obtained within 1.5 hours when pumping down following a brief pressure
  rise up to roughing pressures from high vacuum 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "schlamminger2010indirect"
 
 \end_inset
@@ -4575,7 +4575,7 @@ n rotation in the fiber.
  Differential stress in optical fibers can rotate the polarization throughout
  the entire Bloch sphere 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "ThorlabsPolarizationControl,ulrich1980bending,ross1984rotation"
 
 \end_inset
@@ -5167,7 +5167,7 @@ The gold-coated surfaces of our pendulum and foil are some mixture of amorphous
  The surface environment evolves over time, as crystals slowly change and
  residual gas particles adsorbed onto the surface move about 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "PhysRevA.84.023412,PhysRevLett.109.103001WinelandGasNoise"
 
 \end_inset
@@ -5178,7 +5178,7 @@ key "PhysRevA.84.023412,PhysRevLett.109.103001WinelandGasNoise"
  - gold's work function is only weakly-dependent on crystal orientation
  
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "GoldWorkFunction"
 
 \end_inset
@@ -5906,7 +5906,7 @@ The diffusion time out of the attractor-foil gap is
 
 ms 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "schlamminger2010indirect"
 
 \end_inset
@@ -5963,7 +5963,7 @@ reference "sub:Isolating-Foil"
 
  
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "campbell1956theory"
 
 \end_inset
@@ -6014,7 +6014,7 @@ The foil is in constant motion, especially in its resonant modes.
  may emerge in the pendulum.
  The ambient modes can be damped by proximity-enhanced gas damping 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "schlamminger2010indirect,dolesi2011brownian"
 
 \end_inset
@@ -6334,7 +6334,7 @@ kg/m
 
  
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "EccobondDatasheet"
 
 \end_inset
@@ -6655,7 +6655,7 @@ The magnetic permeability of the attractor and pendulum materials will affect
 \begin_layout Standard
 As discussed by the group at Stanford 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "weld2008new"
 
 \end_inset
@@ -6816,7 +6816,7 @@ If there is a temperature gradient between the foil and the attractor, attractor
  Heat transfer is enhanced over very short distances in vacuum by near-field
  electromagnetic effects, somewhat like the Casimir interaction, as in 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "Jones2013349"
 
 \end_inset
@@ -7678,7 +7678,7 @@ In order to avoid any velocity-dependent systematic uncertainties, the attractor
 
 ) 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "ArfkenForPhysics"
 
 \end_inset
@@ -8729,7 +8729,7 @@ Three columns of data are fed through finite impulse response (FIR) filters
  Filters with linear phase response have frequency-independent phase delays
  
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "Oppenheim:1999:DSP:294797,OrfandisSignalProcessing"
 
 \end_inset
@@ -11310,7 +11310,7 @@ Git
 \begin_layout Standard
 Git 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "Git_1.8.4"
 
 \end_inset
@@ -11348,7 +11348,7 @@ GNU Make
 \begin_layout Standard
 Make 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "GNU_Make"
 
 \end_inset
@@ -11386,7 +11386,7 @@ GNU Octave
 \begin_layout Standard
 Octave 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "octave:2012"
 
 \end_inset
@@ -11409,7 +11409,7 @@ Gnuplot
 \begin_layout Standard
 Gnuplot 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "Gnuplot_4.6"
 
 \end_inset
@@ -11615,7 +11615,7 @@ There is insufficient space and time to recount the entire story associated
  A chronological history of the experiment may be found in the CENPA Annual
  Reports 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "CENPA-AR-2007,CENPA-AR-2008,CENPA-AR-2009,CENPA-AR-2010,CENPA-AR-2011,CENPA-AR-2012,CENPA-AR-2013"
 
 \end_inset
@@ -11912,7 +11912,7 @@ Rotation is, as always, more complicated.
  Each sub-component point mass of a distribution is individually rotated
  through multiplication by a rotation matrix 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "GruberQuaternionRotation"
 
 \end_inset
