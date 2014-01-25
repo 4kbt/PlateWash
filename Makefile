@@ -31,4 +31,5 @@ clean:
 	$(MAKE) -C systematics clean 
 	$(MAKE) -C bootstrap clean 
 	$(MAKE) -C NewtonianSimulation clean
+	$(MAKE) -C ifo clean
 	$(MAKE) -C thesis clean 
