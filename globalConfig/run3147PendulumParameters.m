@@ -72,13 +72,12 @@ gapDistance = 1e-3; 			 printSigNumber(gapDistance  	   , [HOMEDIR '/extracted/s
 gapRadialPosition = 72e-3/2;		 printSigNumber(gapRadialPosition  , [HOMEDIR '/extracted/screwGapRadialPosition.tex'  ], 2);
 
 %%%%% Spindles %%%%
+%See pg 82 of notebook
 
-rhoSpindle = rhoAl;
+spindleLength = 2.901*0.0254;			printSigNumber(spindleLength        , [HOMEDIR '/extracted/spindleLength.tex'   ], 2);
+spindleDiameter = 0.181*0.0254;		printSigNumber(spindleDiameter      , [HOMEDIR '/extracted/spindleDiameter.tex'   ], 2);
 
-spindleLength = 50e-3;			printSigNumber(spindleLength        , [HOMEDIR '/extracted/spindleLength.tex'   ], 2);
-spindleDiameter = 0.2*0.0254;		printSigNumber(spindleDiameter      , [HOMEDIR '/extracted/spindleDiameter.tex'   ], 2);
-
-spindleMass = pi * (spindleDiameter/2.0)^2*spindleLength * rhoSpindle;
+spindleMass = 3.1818e-3; 
 
 spindleTipDistance = AttractorFullThickness;
 spindleRadialPosition = gapRadialPosition;
