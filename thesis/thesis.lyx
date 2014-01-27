@@ -125,7 +125,7 @@ Four fundamental interactions are known.
  electrically charged objects, and the weak force and strong forces, which
  govern nuclear and subnuclear dynamics.
  The electric and weak forces were unified theoretically by Glashow, Salam,
- and Weinberg as the electroweak interaction in 1967
+ and Weinberg as the electroweak interaction in 1967 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "GSWNobelPrize"
@@ -196,7 +196,7 @@ Gravity: There is no tree-level coupling between uncharged objects in the
 
  times stronger than gravity, frustrating any unification attempts.
  The theory of gravity, General Relativity, is well-tested and in agreement
- with experiment
+ with experiment 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "lrr-2006-3"
@@ -251,7 +251,7 @@ Dark Energy
 \begin_inset Formula $10^{120}$
 \end_inset
 
- times too large
+ times too large 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "CosmologicalConstantProblem"
@@ -389,7 +389,7 @@ key "Cook2013,NewmanProgressOnExperimentalTest2011"
 
 \end_inset
 
-, Huazhong University
+, Huazhong University 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "2007PhRvL..98t1101T,PhysRevLett.108.081101"
@@ -404,14 +404,14 @@ key "Wagoner2010"
 
 \end_inset
 
-, Stanford University
+, Stanford University 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "2005PhRvD..72l2001S"
 
 \end_inset
 
-, Apache Point Observatory
+, Apache Point Observatory 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Murphy2008"
@@ -425,7 +425,7 @@ key "Venkateswara2010"
 
 \end_inset
 
-, Grenoble
+, Grenoble 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "PhysRevD.77.034020"
@@ -642,7 +642,7 @@ XXXRC Insert citation from bibtex.huge.Search for Signatures of Extra Dimensions
 \begin_inset Formula $\mu$
 \end_inset
 
-m
+m 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "antoniadis2011short"
@@ -708,7 +708,17 @@ key "Ade:2013zuv,Ade:2013ktc"
 
 \end_inset
 
-, Supernova searches: XXXMA) are used to extract a value for 
+, Supernova searches
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+: XXXMA
+\end_layout
+
+\end_inset
+
+) are used to extract a value for 
 \begin_inset Formula $\Lambda$
 \end_inset
 
@@ -1011,7 +1021,7 @@ Georgi kicked off a flurry of theoretical work by noting the possibility
 \begin_inset Formula $\frac{1}{k^{2}+m^{2}}$
 \end_inset
 
-
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "PhysRevLett.98.221601,Georgi2007275"
@@ -1021,7 +1031,7 @@ key "PhysRevLett.98.221601,Georgi2007275"
 .
  In particular, the properties of an interaction might be scale-invariant
  without requiring that the propagating particle have zero mass.
- Unparticle interactions could appear in tests of short range gravity
+ Unparticle interactions could appear in tests of short range gravity 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "PhysRevLett.100.031803UnparticleTestability"
@@ -1108,7 +1118,7 @@ key "PhysRevLett.108.241101"
 status open
 
 \begin_layout Plain Layout
-the Cassini mission to Saturn [XXY],
+the Cassini mission to Saturn [XXXMI],
 \end_layout
 
 \end_inset
@@ -1206,7 +1216,7 @@ key "PhysRevLett.70.1195"
 \end_inset
 
 , though an improved result from Boynton, Newman, and collaborators is expected
- soon
+ soon 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "NewmanProgressOnExperimentalTest2011"
@@ -1432,6 +1442,7 @@ m and longer than
 \end_inset
 
  nm, the best limits on gravity come from measurements of the Casimir force
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "PhysRevLett.107.171101"
@@ -1451,7 +1462,7 @@ bouncing
 \begin_inset Quotes erd
 \end_inset
 
- quantum-mechanically on tabletops
+ quantum-mechanically on tabletops 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "PhysRevD.77.034020,antoniadis2011short"
@@ -1557,7 +1568,7 @@ fat graviton
 \begin_inset Quotes erd
 \end_inset
 
- constraints by Kapner
+ constraints by Kapner 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "2007PhRvL..98b1101K,2007PhRvL..98m1104A"
@@ -1651,7 +1662,7 @@ null-test
 \end_inset
 
  for any deviation from an inverse square law.
- Colloquially, it might be referred to as an 
+ Colloquially, it might be referred to as a 
 \begin_inset Quotes eld
 \end_inset
 
@@ -2149,7 +2160,7 @@ filename "../extracted/pendulumBodyWidth.tex"
 
 \end_inset
 
- mm.
+ m.
  The Ta (
 \begin_inset CommandInset include
 LatexCommand input
@@ -5422,6 +5433,10 @@ status open
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename ../runAnalysis/supportingPlots/run3147NoiseThroughTheDay.eps
 	width 50page%
