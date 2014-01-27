@@ -42,7 +42,9 @@ plots/fullSimulation.eps: fullSimulation.gpl\
 				$(SDIR)jan13OffsetAttractor.dat\
 				$(SDIR)jan14MacorSpindles.dat\
 				$(SDIR)jan14SpindlePlate.dat\
-				$(SDIR)jan14Flexure.dat
+				$(SDIR)jan14Flexure.dat\
+				$(SDIR)fullAttractor.dat\
+				$(SDIR)nonAttractor.dat
 	$(GNU) fullSimulation.gpl
 
 
