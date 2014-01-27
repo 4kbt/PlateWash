@@ -14,7 +14,7 @@ PLOTTARGETS := $(shell grep eps  $(DEEPMAKES) | awk '{print $$1}' \
 		| sed "s|$(PWD)/||g")
 
 
-thesis.pdf : thesis.lyx $(EXTRACTEDDEPS) thesis.bib
+thesis.pdf : thesis.lyx $(EXTRACTEDDEPS) thesis.bib gitOut.txt
 	$(OCT) ../globalConfig/run3147FixedParameters.m
 	$(HOMEDIR)/bin/mathify.sh $(HOMEDIR)/extracted/*
 	$(HOMEDIR)/bin/mathify.sh $(KNOWNEXTRACTED) 
@@ -24,6 +24,9 @@ thesis.pdf : thesis.lyx $(EXTRACTEDDEPS) thesis.bib
 $(PLOTTARGETS) :
 	$(MAKE) -C plots
 	$(MAKE) $(PARALLEL) -C Pictures
+
+gitOut.txt:
+	git show --summary > $@
 
 test:
 	echo $(PLOTTARGETS)
