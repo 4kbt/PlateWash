@@ -6185,9 +6185,24 @@ Small non-uniformities in density of the attractor or pendulum materials
  a lateral position-dependent torque.
  If the attractor void were to occur near the outer corner of the pendulum
  (worst case), the torque would be XXXRC N-m/ (cubic micron of attractor).
- In the event that two voids are laterally coincident, the maximum torque
- difference would be XXXRC N-m/(cubic micron of void).
- 
+ In the unlikely event that two voids are laterally coincident, voids could
+ be >80 
+\begin_inset Formula $\mu$
+\end_inset
+
+m cubed before the maximum 
+\bar under
+total
+\bar default
+ torque at closest-approach would exceed the 
+\begin_inset Formula $10^{-16}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+N-m level.
 \end_layout
 
 \begin_layout Standard
@@ -6209,9 +6224,31 @@ Attractor mount/flexure/bellows gravity
 \begin_layout Standard
 The motion of the attractor mount, spindles, flexure, and bellows introduces
  a small, largely linear, torque background.
- The linear background is expected to be XXXRC Nm/m.
- The spindles contribute the dominant nonlinear term, which is expected
- to be < XXXRC N-m/m^2 (or N-m/m^3).
+ The linear background is expected to be 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../NewtonianSimulation/SimulationOutput/nonAttractorlin.tex"
+
+\end_inset
+
+ Nm/m.
+ The spindles contribute the dominant nonlinear term, which is, in aggregate,
+ 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../NewtonianSimulation/SimulationOutput/nonAttractorquad.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+N-m/m
+\begin_inset Formula $^{2}$
+\end_inset
+
+.
  
 \end_layout
 
