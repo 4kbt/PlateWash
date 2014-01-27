@@ -3434,7 +3434,7 @@ stiction
 \begin_inset Quotes erd
 \end_inset
 
- of non-flexure transation stages, and has minimal angular ruFoil Flatnessnout.
+ of non-flexure transation stages, and has minimal angular runout.
  
 \begin_inset Note Note
 status open
@@ -3889,7 +3889,7 @@ noise
  system itself.
  The modulation valve and the locking valve are not coordinated at timescales
  comparable to the modulation frequency, so the locking valve shuts off
- in different parts of the modulation every Foil Flatnesstime.
+ in different parts of the modulation every time.
  Therefore, the attractor stops in a slightly different location on every
  move.
  This dominates the position scatter in attractor position for each 
