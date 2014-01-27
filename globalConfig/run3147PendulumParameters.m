@@ -83,19 +83,19 @@ spindleTipDistance = AttractorFullThickness;
 spindleRadialPosition = gapRadialPosition;
 
 %%% Macor Spindles %%%
-mspindleLength = 1*0.0254;		printSigNumber(mspindleLength , [HOMEDIR '/extracted/mspindleLength.tex'], 3);
-mspindleDiameter = 0.25*0.0254;		printSigNumber(mspindleDiameter,[HOMEDIR '/extracted/mspindleDiameter.tex'], 3);
-mspindleMass = 4e-3;			printSigNumber(mspindleMass    ,[HOMEDIR '/extracted/mspindleMass.tex'  ] , 3);
+mspindleLength = 1.057*0.0254;		printSigNumber(mspindleLength , [HOMEDIR '/extracted/mspindleLength.tex'], 4);
+mspindleDiameter = 0.258*0.0254;		printSigNumber(mspindleDiameter,[HOMEDIR '/extracted/mspindleDiameter.tex'], 3);
+mspindleMass = 1.9722e-3;			printSigNumber(mspindleMass    ,[HOMEDIR '/extracted/mspindleMass.tex'  ] , 3);
 
 mspindleTipDistance = spindleLength + spindleTipDistance;
 mspindleRadialPosition = spindleRadialPosition;
 
 %%% Spindle Plate %%%
 
-spindlePlateMass =      40e-3;		printSigNumber(spindlePlateMass, [HOMEDIR '/extracted/spindlePlateMass.tex'] , 3);
+spindlePlateMass =      67.261e-3;		printSigNumber(spindlePlateMass, [HOMEDIR '/extracted/spindlePlateMass.tex'] , 4);
 spindlePlateID =        0.375*0.0254;	printSigNumber(spindlePlateID  , [HOMEDIR '/extracted/spindlePlateID.tex'  ] , 3);
-spindlePlateOD =        3.25*0.0254;	printSigNumber(spindlePlateOD  , [HOMEDIR '/extracted/spindlePlateOD.tex'  ] , 3);
-spindlePlateThickness = 0.25 * 0.0254;	printSigNumber(spindlePlateThickness, [HOMEDIR '/extracted/spindlePlateThickness.tex' ], 3);
+spindlePlateOD =        3.007*0.0254;	printSigNumber(spindlePlateOD  , [HOMEDIR '/extracted/spindlePlateOD.tex'  ] , 4);
+spindlePlateThickness = 0.250 * 0.0254;	printSigNumber(spindlePlateThickness, [HOMEDIR '/extracted/spindlePlateThickness.tex' ], 3);
 
 spindlePlateSetBack = mspindleTipDistance + mspindleLength; \
 					printSigNumber(spindlePlateSetBack  , [HOMEDIR '/extracted/spindlePlateSetBack.tex'   ], 3);
@@ -106,9 +106,9 @@ spindlePlateSetBack = mspindleTipDistance + mspindleLength; \
 rhoAl = 2700;
 
 flexureHeight = 3*0.0254;		printSigNumber(flexureHeight , [HOMEDIR '/extracted/flexureHeight.tex' ], 3);
-flexureWidth  = 1*0.0254;		printSigNumber(flexureWidth  , [HOMEDIR '/extracted/flexureWidth.tex'  ], 3);
+flexureWidth  = 1.0005*0.0254;		printSigNumber(flexureWidth  , [HOMEDIR '/extracted/flexureWidth.tex'  ], 3);
 flexureLength = 5*0.0254;		printSigNumber(flexureLength , [HOMEDIR '/extracted/flexureLength.tex' ], 3);
-wallThickness = 0.25*0.0254;		printSigNumber(wallThickness , [HOMEDIR '/extracted/wallThickness.tex' ], 3);
+wallThickness = 0.250*0.0254;		printSigNumber(wallThickness , [HOMEDIR '/extracted/wallThickness.tex' ], 3);
 
 flexureSetBack = spindlePlateSetBack + spindlePlateThickness;
 					printSigNumber(flexureSetBack, [HOMEDIR '/extracted/flexureSetBack.tex'], 3);
