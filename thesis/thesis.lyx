@@ -2022,30 +2022,7 @@ Evaluating the integral:
 \color none
 \begin_inset Formula 
 \[
-\tau=-\lambda^{2}h\rho_{p}C(1-e^{-t_{a}/\lambda})(1-e^{-t_{p}/\lambda})e^{-d/\lambda}\frac{1}{\theta}[e^{-b\theta/\lambda}(b+\frac{\lambda}{\theta})-e^{-a\theta/\lambda}(a+\frac{\lambda}{\theta})]
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-\begin_inset Formula 
-\[
-\tau=-\lambda^{2}h\rho C(1-e^{-t_{a}/\lambda})(1-e^{-t_{p}/\lambda})e^{-d/\lambda}\frac{1}{\theta}[e^{-b\theta/\lambda}(b+\frac{\lambda}{\theta})-e^{-a\theta/\lambda}(a+\frac{\lambda}{\theta})]
+\tau=-\lambda^{2}h\rho_{p}C\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{p}/\lambda}\right)e^{-d/\lambda}\frac{1}{\theta}\left[e^{-b\theta/\lambda}\left(b+\frac{\lambda}{\theta}\right)-e^{-a\theta/\lambda}\left(a+\frac{\lambda}{\theta}\right)\right]
 \]
 
 \end_inset
@@ -2066,6 +2043,60 @@ name "sub:Estimation-of-edge"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+The 
+\begin_inset Quotes eld
+\end_inset
+
+parallel-plate
+\begin_inset Quotes erd
+\end_inset
+
+ approximation underestimates the strength of the interaction between the
+ pendulum inlay and the attractor.
+ An estimate of the correction, 
+\begin_inset Formula $f_{c}$
+\end_inset
+
+, scales roughly as the perimeter of the inlay times 
+\begin_inset Formula $\lambda$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f_{c}=\frac{2(w+h)\lambda}{wh}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $w$
+\end_inset
+
+ and 
+\begin_inset Formula $h$
+\end_inset
+
+ are the width and height of the inlay.
+ For 
+\begin_inset Formula $\lambda\sim10^{-4}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+m, this effect is about 2%.
 \end_layout
 
 \begin_layout Section
@@ -3363,6 +3394,10 @@ name "sub:Attractor-position-control"
 wide false
 sideways false
 status open
+
+\begin_layout Plain Layout
+XXXRC
+\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption
