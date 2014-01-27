@@ -3305,7 +3305,7 @@ key "schlamminger2010indirect"
 \end_inset
 
 .
- Science measurements began XXXRC hours after pumpdown from roughing pressures
+ Science measurements began >1.5 hours after pumpdown from roughing pressures
  
 \begin_inset Note Note
 status open
@@ -3316,7 +3316,7 @@ Power outage 3/13, Run3146 pw begins begins 3/13.!
 
 \end_inset
 
- following a power outage, and >2 months under vacuum (XXXRC check runtitles).
+ following a power outage, and >2 months under vacuum.
  With the pump valved off, the pressure rise was measured at the end of
  the science run to be 
 \begin_inset CommandInset include
