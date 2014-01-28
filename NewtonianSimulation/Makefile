@@ -2,25 +2,52 @@ include ../Makefile.inc
 
 OCT := $(OCT) -p $(HOMEDIR)/mlib/gravity/ -p parts/
 
+PARTS := parts/
+
 MASSES=jan13Attractor.m jan13Pendulum.m
 
-all: brick simulation
+all: plots/brickDemo.eps bellowsTorque plots/fullSimulation.eps
 
-brick : 
+plots/brickDemo.eps : $(MLIB) brickDemo.m brickDemo.gpl $(PARTS)
 	$(OCT) brickDemo.m
+	$(GNU) brickDemo.gpl
 
-washCycleBrick:
+bellowsTorque: $(MLIB) $(PARTS)
+	$(OCT) bellowsTorque.m
+
+washCycleBrick: $(MLIB)
 	$(OCT) washCycleDemo.m
 
-tiltmeterQTester:
+tiltmeterQTester: $(MLIB)
 	$(OCT) tiltmeterDemo.m
 
-spinCalibration:
+spinCalibration: $(MLIB)
 	$(OCT) spinPendulumDemo.m
 
 # Non-infinite torque
-simulation : 
+simulation : $(MLIB) processRun.m $(PARTS)
 	$(OCT) processRun.m
+	$(GNU) 
+
+SimulationOutput/%.dat : $(MLIB) $(PARTS) defineAttractorTranslation.m processAttractorComponent.m
+	$(OCT) --eval 'attractors = {"$(*F)"}' processAttractorComponent.m
+	$(HOMEDIR)/bin/mathify.sh SimulationOutput/*.tex
+
+SDIR = SimulationOutput/
+
+plots/fullSimulation.eps: fullSimulation.gpl\
+				$(SDIR)jan13ScrewGaps.dat\
+				$(SDIR)jan13Spindles.dat\
+				$(SDIR)jan13Attractor.dat\
+				$(SDIR)jan13OffsetAttractor.dat\
+				$(SDIR)jan14MacorSpindles.dat\
+				$(SDIR)jan14SpindlePlate.dat\
+				$(SDIR)jan14Flexure.dat\
+				$(SDIR)fullAttractor.dat\
+				$(SDIR)nonAttractor.dat
+	$(GNU) fullSimulation.gpl
+
 
 clean :
 	-rm SimulationOutput/*.dat
+	-rm SimulationOutput/*.tex

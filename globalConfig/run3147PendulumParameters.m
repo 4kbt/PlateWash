@@ -1,5 +1,4 @@
-%CODATA
-G =  6.67428e-11;
+fundamentalConstants
 
 HOMEDIR = getenv("HOMEDIR");
 
@@ -53,3 +52,98 @@ pa1=rhoTaA; % #Ta
 pal1=rhoAl; % #Al
 da1=AttractorPlateThickness; %# Ta attractor thickness
 dal1=AttractorBackerThickness; % Al attractor thickness
+
+%These offsets are entirely unchecked!
+attrHorizOffset = 5e-3;
+attrVertOffset = 0.5e-3;
+
+%%%%% Screw gaps %%%%%
+
+rhoGap = -rhoAl;
+
+gapLength = 1e-3;			printSigNumber(gapLength  , [HOMEDIR '/extracted/screwGapLength.tex'  ], 1);
+gapDiameter = 0.110*0.0254; 		printSigNumber(gapDiameter, [HOMEDIR '/extracted/screwGapDiameter.tex'], 2);
+
+
+gapMass = pi * (gapDiameter/2.0)^2*gapLength * rhoGap;
+
+%Distance from attractor plane to gap end
+gapDistance = 1e-3; 			 printSigNumber(gapDistance  	   , [HOMEDIR '/extracted/screwGapDistFromPlane.tex'   ], 1);
+gapRadialPosition = 72e-3/2;		 printSigNumber(gapRadialPosition  , [HOMEDIR '/extracted/screwGapRadialPosition.tex'  ], 2);
+
+%%%%% Spindles %%%%
+%See pg 82 of notebook
+
+spindleLength = 2.901*0.0254;			printSigNumber(spindleLength        , [HOMEDIR '/extracted/spindleLength.tex'   ], 2);
+spindleDiameter = 0.181*0.0254;		printSigNumber(spindleDiameter      , [HOMEDIR '/extracted/spindleDiameter.tex'   ], 2);
+
+spindleMass = 3.1818e-3; 
+
+spindleTipDistance = AttractorFullThickness;
+spindleRadialPosition = gapRadialPosition;
+
+%%% Macor Spindles %%%
+mspindleLength = 1.057*0.0254;		printSigNumber(mspindleLength , [HOMEDIR '/extracted/mspindleLength.tex'], 4);
+mspindleDiameter = 0.258*0.0254;		printSigNumber(mspindleDiameter,[HOMEDIR '/extracted/mspindleDiameter.tex'], 3);
+mspindleMass = 1.9722e-3;			printSigNumber(mspindleMass    ,[HOMEDIR '/extracted/mspindleMass.tex'  ] , 3);
+
+mspindleTipDistance = spindleLength + spindleTipDistance;
+mspindleRadialPosition = spindleRadialPosition;
+
+%%% Spindle Plate %%%
+
+spindlePlateMass =      67.261e-3;		printSigNumber(spindlePlateMass, [HOMEDIR '/extracted/spindlePlateMass.tex'] , 4);
+spindlePlateID =        0.375*0.0254;	printSigNumber(spindlePlateID  , [HOMEDIR '/extracted/spindlePlateID.tex'  ] , 3);
+spindlePlateOD =        3.007*0.0254;	printSigNumber(spindlePlateOD  , [HOMEDIR '/extracted/spindlePlateOD.tex'  ] , 4);
+spindlePlateThickness = 0.250 * 0.0254;	printSigNumber(spindlePlateThickness, [HOMEDIR '/extracted/spindlePlateThickness.tex' ], 3);
+
+spindlePlateSetBack = mspindleTipDistance + mspindleLength; \
+					printSigNumber(spindlePlateSetBack  , [HOMEDIR '/extracted/spindlePlateSetBack.tex'   ], 3);
+
+
+%%% Flexure frame %%%
+
+rhoAl = 2700;
+
+flexureHeight = 3*0.0254;		printSigNumber(flexureHeight , [HOMEDIR '/extracted/flexureHeight.tex' ], 3);
+flexureWidth  = 1.0005*0.0254;		printSigNumber(flexureWidth  , [HOMEDIR '/extracted/flexureWidth.tex'  ], 3);
+flexureLength = 5*0.0254;		printSigNumber(flexureLength , [HOMEDIR '/extracted/flexureLength.tex' ], 3);
+wallThickness = 0.250*0.0254;		printSigNumber(wallThickness , [HOMEDIR '/extracted/wallThickness.tex' ], 3);
+
+flexureSetBack = spindlePlateSetBack + spindlePlateThickness;
+					printSigNumber(flexureSetBack, [HOMEDIR '/extracted/flexureSetBack.tex'], 3);
+
+
+
+%%%%%% Q-tester bricks %%%%%%%
+
+%brick mass
+brickMass = 23.88;
+brickMassErr = 0.34;			printSigError(brickMass, brickMassErr, [HOMEDIR '/extracted/brickMass.tex']);
+
+%brick dimensions
+brickHeight = 8*0.0254;			printSigNumber(brickHeight	    , [HOMEDIR '/extracted/brickHeight.tex'    ],2);
+brickWidth  = 4*0.0254;			printSigNumber(brickWidth	    , [HOMEDIR '/extracted/brickWidth.tex'     ],2);
+
+%brick positions
+brickRadius = 25*0.0254;		printSigNumber(brickRadius	    , [HOMEDIR '/extracted/brickRadius.tex'    ],2);
+% elevation to center of brick
+brickElevation = 16*0.0254;		printSigNumber(brickElevation	    , [HOMEDIR '/extracted/brickElevation.tex' ],2);
+
+
+%%%% Bellows %%%% 
+
+rhoAir = 1;
+bellowsPressure = 50.0/14.0;
+
+bellowsLength = 70e-3;
+bellowsDiameter = 25e-3;
+
+bellowsVolume = pi * (bellowsDiameter/2.0)^2 * bellowsLength; 	printSigNumber(bellowsVolume, [HOMEDIR '/extracted/bellowsVolume.tex'], 2);
+
+bellowsMass = bellowsVolume * rhoAir * bellowsPressure;		printSigNumber(bellowsMass,   [HOMEDIR '/extracted/bellowsMass.tex'  ], 2);
+
+bellowsDistance = 180e-3; 					printSigNumber(bellowsDistance, [HOMEDIR '/extracted/bellowsDistance.tex'],2);
+bellowsHeight = 0;
+bellowsOffset = 0;
+

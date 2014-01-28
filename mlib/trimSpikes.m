@@ -1,4 +1,4 @@
-function out = trimSpikes(data, column, threshold, delay)
+function out = trimSpikes(data, column, threshold, delay, retroDelay)
 
 	data = flipud(data);
 
@@ -12,6 +12,9 @@ function out = trimSpikes(data, column, threshold, delay)
 	for ctr = 1:rows(data)
 
 		if( s(ctr) > 0 )
+			if(rows(out) > retroDelay && flag == 0)
+				out = out(1:(end-retroDelay),:);
+			end
 			flag = delay;
 		else
 			if(flag > 0)

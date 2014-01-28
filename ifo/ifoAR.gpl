@@ -1,0 +1,39 @@
+set term postscript enhanced solid color eps
+set output 'ifoAR.eps'
+
+set xlabel 'days of 2012'
+set key noauto
+
+ft = 3.28
+
+lowTemp = 22.4
+highTemp = 24
+
+lowPres = 990
+highPres = 1030
+
+set multiplot
+set size .885,0.5
+set origin 0.013,0.5
+set ylabel 'interferometer intensity (a.u)'
+
+set key at 99,0.57 
+
+pl [72:112][0.48:1.05]\
+	'trim/ifoMerge.dat'      u (($1-94694400)/86400.0):($2/ft) w p ps 0.3 pt 7 lt 1,\
+	1        lt 0 lw 3 tit 'fringe top/bottom',\
+	1.639/ft lt 0 lw 3  
+
+set origin 0,0
+set size 1,0.5
+
+unset key
+set key at 112,23.9
+set ylabel  'room temperature (C)'
+set y2label 'ambient pressure (mbar)'
+set y2tics 10
+set ytics nomirror 0.5
+
+pl [72:112][22.4:24][]\
+	'rotWashTemp.dat' u ($1-365)               :($2) w p  lt 1 ps 0.3 pt 7 ax x1y1 tit 'temperature',\
+	'mergePress.dat'  u (($1-94694400)/86400.0):($2) w l  lt 3 lw 2  ax x1y2 tit 'pressure'

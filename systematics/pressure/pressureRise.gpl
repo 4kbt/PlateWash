@@ -1,0 +1,21 @@
+f(x) = m*x+b
+
+set key noauto
+set xlabel 'time (s)'
+set ylabel 'pressure (torr)'
+set title 'PlateWash final pressure rise after pump shutdown/valveoff'
+
+set key top left
+
+set fit errorvariables
+fit [2000:] f(x) 'pressureRise.dat' u (($1-12.0)*3600.0+$2*60+$3):4 via m,b
+
+set print 'pressureRiseFitParameters.dat'
+print m,m_err
+print b,b_err
+set print
+
+
+pl 'pressureRise.dat' u (($1-12.0)*3600.0+$2*60+$3):4 w p pt 7 lt -1\
+	tit 'data',\
+	f(x) lt 3 tit 'fit from 2000s onward'

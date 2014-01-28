@@ -22,11 +22,7 @@ function array= genPointMassRect(mass, thickness, width, height, nxpoints,nypoin
 					(j-(nypoints+1)/2)*ygrid,\
 					(k-(nzpoints+1)/2)*zgrid];
 
-	#			if(i==1 && i==j && i==k)
-	#				array = newMass;	
-	#			else
 					array = [array; newMass];
-	#			end
 			end
 		end
 	end

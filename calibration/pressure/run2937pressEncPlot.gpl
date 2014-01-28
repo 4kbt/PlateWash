@@ -1,0 +1,26 @@
+set term postscript enhanced solid color eps
+set output 'run2937pressEncPlot.eps'
+
+set key noauto top left
+
+set multiplot layout 2,1
+
+set ylabel 'bellows pressure (psi, absolute)'
+
+set ytics format "%1.1f"
+set xtics format ""
+
+pl \
+	'run2937pressEncData.dat' u 3:($1*10.0) w l lt 1 tit 'linear fit',\
+	''			  u 2:($1*10.0) w p pt 7 lt 3
+
+set ylabel 'fit residuals ({/Symbol m}m)'
+set xlabel 'encoder position ({/Symbol m}m), arbitrary offset'
+
+set xtics format "%g"
+set ytics (-1.0,0,1.0)
+
+pl [-600:200][:1]  0 lt -1,\
+	'run2937pressEncData.dat' u 2:($2-$3) w p pt 7 ps 0.5 lt 3 
+
+unset multiplot

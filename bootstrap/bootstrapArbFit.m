@@ -1,6 +1,13 @@
 %This function fits an arbitrary linear piecewise function the data defined in preFit.
 pause = 0; 
 
+arbFitx1Spacing = 15e-6;	printSigNumber(arbFitx1Spacing, 'extracted/arbFitx1Spacing.tex', 2);
+arbFitx2Spacing = 50e-6;	printSigNumber(arbFitx1Spacing, 'extracted/arbFitx2Spacing.tex', 2);
+arbFitx1Start   = pfTouch*1e-6;	printSigNumber(arbFitx1Spacing, 'extracted/arbFitx1Start.tex'  , 2);
+arbFitx1Stop    = 300e-6;	printSigNumber(arbFitx1Spacing, 'extracted/arbFitx1Stop.tex'   , 2);
+arbFitx2Start	= arbFitx1Stop;	printSigNumber(arbFitx1Spacing, 'extracted/arbFitx2Start.tex'  , 2);
+arbFitx2Stop    = 900e-6;	printSigNumber(arbFitx1Spacing, 'extracted/arbFitx2Stop.tex'   , 2);
+
 xpos1 = (pfTouch*1e-6):15e-6:300e-6;
 xpos2 = xpos1(end):50e-6:900e-6;
 

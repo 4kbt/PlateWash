@@ -1,0 +1,23 @@
+set term postscript enhanced solid color eps 
+set output 'attractorScan.eps'
+
+set palette model RGB defined (-0.01 "yellow", 0.01 "blue")
+
+set size square
+
+set key noauto 
+
+set cbrange [-10:7]
+
+set title 'attractor surface scan'
+set xlabel 'millimeters'
+set ylabel 'millimeters'
+set cblabel 'surface height ({/Symbol m}m)'
+
+f(x,y) = a*x+b*y+c
+
+fit f(x,y) 'charlieOldAttractorFine.dat' u 1:2:3:(1) via a,b,c
+
+plot [][][-10:10] 'charlieOldAttractorFine.dat' u 1:2:(1000.0*($3-f($1,$2))) w p pt 7 ps 0.3 palette
+
+

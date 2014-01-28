@@ -1,0 +1,27 @@
+set term postscript enhanced solid color eps
+set output 'run3147attractorLeakBack.eps'
+
+fn = 'run3147attractorLeakBack.dat'
+
+set key noauto
+
+set multiplot layout 2,1
+set title 'attractor velocity, averaged modulo attractor period, run 3147'
+set ylabel 'attractor velocity ({/Symbol m}m/s)'
+
+set xtics format ""
+
+pl [0:256]\
+	fn u 0:2:($4/sqrt($5)) w yerr lt 3 pt 7 ps 0.5
+
+unset title
+set xlabel 'time (s)'
+set ylabel 'attractor velocity (nm/s)'
+set xtics format "% g"
+
+pl [0:256][-5:5]\
+	fn u ($2*1000.0):(1000.0*$4/sqrt($5)) w yerr lt 3 pt 7 ps 0.5
+
+unset multiplot
+
+

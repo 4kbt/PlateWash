@@ -8,3 +8,21 @@ function transArray = translatePMArray(array, transVec)
 
 	transArray=array;
 end
+
+%!test
+%! o = translatePMArray([1 0 0 0], [1 1 1]);
+%! assert(o == [1 1 1 1]);
+
+
+%!test 
+%! numMasses = 6;
+%! for ctr = 1:100
+%! 	v = randn( 1 , 3 );
+%!	m = randn( numMasses , 4 );
+%!	o = translatePMArray(m,v);
+%!	assert(m(:,1) == o(:,1) );
+%!	newDiff = o(:,2:4) - m(:,2:4);
+%!	expectedDiff = repmat(v, numMasses,1);
+%!	totalError = sum(sum( newDiff - expectedDiff));
+%! 	assert( totalError < 3*numMasses*eps);
+%! end

@@ -6,19 +6,19 @@ OCT:= octave --no-init-file \
 	-p $(HOMEDIR)/globalConfig/ \
 	-q 
 
-GNU := gnuplot -e 'set term dumb'
+GNU    := gnuplot -e 'set term dumb' -e 'HOMEDIR = "$(HOMEDIR)"'
 
-MLIB := $(shell ls -d -1 $(HOMEDIR)/mlib/) 
+MLIB   := $(shell find  $(HOMEDIR)/mlib/        -type d) 
 
-GLOBAL := $(shell ls -d -1 $(HOMEDIR)/globalConfig/)
+GLOBAL := $(shell find $(HOMEDIR)/globalConfig/ -type d)
 
-RUNS := $(shell ls -d -1 $(HOMEDIR)/runConfig/)
+RUNS   := $(shell find $(HOMEDIR)/runConfig/    -type d)
 
-DATA := $(shell ls -d -1 $(HOMEDIR)/data/)
+DATA   := $(shell find $(HOMEDIR)/data/         -type d)
 
-MLIB := $(MLIB) $(GLOBAL)
+MLIB   := $(MLIB) $(GLOBAL)
 
-LYX := lyx -batch --export "pdf" -dbg info,latex
+LYX    := lyx -batch --export "pdf" -dbg info,latex
 
 .INTERACT: 
 	$(OCT) --persist
@@ -26,6 +26,8 @@ LYX := lyx -batch --export "pdf" -dbg info,latex
 .PHONY : 
 	@echo $(OCT)
 	@echo $(MLIB)
+
+PARALLEL := -j 3
 
 SINGLEQUOTECUTTER := sed -e "s/^.*'\(.*\)'.*$$/\1/"
 

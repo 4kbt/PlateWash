@@ -1,0 +1,18 @@
+f(x,y) = a*x+b*y+c
+
+fit f(x,y) 'charlieOldAttractorFine.dat' u 1:2:3:(1) via a,b,c
+
+
+g(x,y) = a2*x+b2*y+c2
+
+fit g(x,y) 'June2011TaScanFiberUpXupperLeft.dat' u 1:2:3:(1) via a2,b2,c2
+
+#splot [][][-0.02:0.007] 'June2011TaScanFiberUpXupperLeft.dat' u 1:2:($3-f($1,$2)) w d lc 3
+
+splot [][][-.03:.1] 'charlieOldAttractorFine.dat' u 1:2:($3-f($1,$2)) w d tit 'attractor' , 'June2011TaScanFiberUpXupperLeft.dat' u ($1-21.5):($2+15):(-$3+g($1,$2)+0.070) w d lc 3 tit 'pendulum'
+
+
+
+
+
+

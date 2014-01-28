@@ -1,7 +1,7 @@
 include ../../Makefile.inc
 
-all : lagSNR.eps lagFrequencySNR.eps pwTransferFunction.eps
-	make -j 3 -C ISL
+all : lagSNR.eps lagFrequencySNR.eps pwTransferFunction.eps ForceLaw.eps
+	make $(PARALLEL) -C ISL
 
 lagSNR.eps : lagSNR.gpl
 	$(GNU) lagSNR.gpl
@@ -11,6 +11,9 @@ lagFrequencySNR.eps : lagFrequencySNR.gpl
 
 pwTransferFunction.eps : pwTransferFunction.gpl
 	$(GNU) pwTransferFunction.gpl
+
+ForceLaw.eps: 248plot.gpl
+	$(GNU) 248plot.gpl
 
 clean : 
 	make -C ISL clean

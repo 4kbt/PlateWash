@@ -1,0 +1,103 @@
+m_n=1.67e-27
+G=6.674e-11
+
+set term postscript enhanced color solid eps
+set size 0.6,0.6
+
+set xlabel 'separation'
+
+set ylabel 'force (N)'
+
+yuk(x,a,l)=G*m_n*m_n/x/x*(1+a/l*x*exp(-x/l)+a*exp(-x/l))
+
+sundr(x,l)=G*m_n*m_n/x/x*(1-exp((-.914*x/l)**3))
+
+lambda=50e-6
+unset xtics
+set key noauto
+
+#set output 'Force1.ps'
+#
+#plot [1e-6:3e-4][-5e-56:1e-55]\
+#	yuk(x,0,1e8) lt -1
+#set output 'Force2.ps'
+#plot [1e-6:3e-4][-5e-56:1e-55]\
+#	yuk(x,0,1e8) lt -1, \
+#	yuk(x,1,56e-6)
+
+#set output 'Force2.ps'
+#plot [1e-6:3e-4][-5e-56:1e-55]\
+#	yuk(x,0,1e8) lt -1, \
+#	yuk(x,1,56e-6),\
+#	yuk(x,-1,56e-6)
+
+#set output 'Force3.ps'
+#plot [1e-6:3e-4][-5e-56:1e-55]\
+#	yuk(x,0,1e8) lt -1, \
+#	yuk(x,1,56e-6),\
+#	yuk(x,-1,56e-6),\
+#	yuk(x,10,30e-6)
+#set output 'Force4.ps'
+#plot [1e-6:3e-4][-5e-56:1e-55]\
+#	yuk(x,0,1e8) lt -1, \
+#	yuk(x,1,56e-6),\
+#	yuk(x,-1,56e-6),\
+#	yuk(x,10,30e-6),\
+#	yuk(x,-10,30e-6)
+#set output 'Force5.ps'
+#plot [1e-6:3e-4][-5e-56:1e-55]\
+#	yuk(x,0,1e8) lt -1, \
+#	yuk(x,1,56e-6),\
+#	yuk(x,-1,56e-6),\
+#	yuk(x,10,30e-6),\
+#	yuk(x,-10,30e-6),\
+#	yuk(x,1000,10e-6),\
+#	yuk(x,-1000,10e-6) lt 1
+#set output 'Force6.ps'
+#plot [1e-6:3e-4][-5e-56:1e-55]\
+#	yuk(x,0,1e8) lt -1, \
+#	yuk(x,1,56e-6),\
+#	yuk(x,-1,56e-6),\
+#	yuk(x,10,30e-6),\
+#	yuk(x,-10,30e-6),\
+#	yuk(x,1000,10e-6),\
+#	yuk(x,-1000,10e-6) lt 1,\
+#	sundr(x,98e-6) 
+set output 'ForceLaw.eps'
+set xlabel 'separation ({/Symbol m}m)'
+set ylabel 'Force x 10^{-56} (N)'
+set xtics
+plot [0:300][-5:10]\
+	1e56*yuk(1e-6*x,0,1e8) lt -1 lw 3 tit 'Newton',\
+	1e56*yuk(1e-6*x,1,56e-6)       lt 1 lw 2 tit 'Allowed',\
+	1e56*yuk(1e-6*x,-1,56e-6)      lt 1 lw 2,\
+	1e56*yuk(1e-6*x,15,30e-6)      lt 1 lw 2,\
+	1e56*yuk(1e-6*x,-15,30e-6)     lt 1 lw 2,\
+	1e56*yuk(1e-6*x,1000,15.5e-6)  lt 1 lw 2,\
+	1e56*yuk(1e-6*x,-1000,15.5e-6) lt 1 lw 2,\
+	1e56*sundr(1e-6*x,98e-6)       lt 1 lw 2,\
+	0 lt 0,\
+	1e56*yuk(1e-6*x,0,1e8) lt -1 lw 3
+
+set output 'ForceLawPWLimits.ps'
+plot [0:300][-5:10]\
+	1e56*yuk(1e-6*x,0,1e8) lt -1 lw 3 tit 'Newton',\
+	1e56*yuk(1e-6*x,1,56e-6)       lt 1 lw 2 tit 'Allowed',\
+	1e56*yuk(1e-6*x,-1,56e-6)      lt 1 lw 2,\
+	1e56*yuk(1e-6*x,15,30e-6)      lt 1 lw 2,\
+	1e56*yuk(1e-6*x,-15,30e-6)     lt 1 lw 2,\
+	1e56*yuk(1e-6*x,1000,15.5e-6)  lt 1 lw 2,\
+	1e56*yuk(1e-6*x,-1000,15.5e-6) lt 1 lw 2,\
+	1e56*sundr(1e-6*x,98e-6)       lt 1 lw 2,\
+\
+	1e56*yuk(1e-6*x,1,55e-6)     lt 3 lw 2 tit 'My experiment',\
+	1e56*yuk(1e-6*x,-1,55e-6)    lt 3 lw 2,\
+	1e56*yuk(1e-6*x,15,30e-6)    lt 3 lw 2,\
+	1e56*yuk(1e-6*x,-15,30e-6)   lt 3 lw 2,\
+	1e56*yuk(1e-6*x,1000,17e-6)  lt 3 lw 2,\
+	1e56*yuk(1e-6*x,-1000,17e-6) lt 3 lw 2,\
+	0 lt 0,\
+\
+	1e56*yuk(1e-6*x,1,30e-6)     lt 2 lw 2 tit 'Easy Upgrade',\
+	1e56*yuk(1e-6*x,-1,30e-6)    lt 2 lw 2,\
+	1e56*yuk(1e-6*x,0,1e8) lt -1 lw 3 
