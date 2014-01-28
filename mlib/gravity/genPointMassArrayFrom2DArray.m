@@ -17,8 +17,8 @@ function o = genPointMassArrayFrom2DArray( A, xSpacing , ySpacing, zSpacing, den
 	%Simple z-grid	
 	A = floor(A./zSpacing);
 
-	%preallocation of memory
-	o = zeros( sum(sum(A(~isnan(A)))) , 4);
+	%preallocation of memory. The two is an overcompensation, corrected at the end.
+	o = zeros( sum(sum(A(~isnan(A))))*2 , 4);
 
 	%Printing these may or may not be important, they're illuminating for prealloc errors
 	sum(sum(A(~isnan(A))))
@@ -59,5 +59,8 @@ function o = genPointMassArrayFrom2DArray( A, xSpacing , ySpacing, zSpacing, den
 		['Assembly is ' num2str(fraction) ' percent complete']
 		toc
 	end
+
+	%Compensates for over-allocating memory; fixes any trivialities, too.
+	o = o( o(:,1) > 0, :);
 end
 
