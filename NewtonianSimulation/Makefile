@@ -48,7 +48,7 @@ $(SDIR)/scans/%.try :
 
 
 plots/fullSimulation.eps: fullSimulation.gpl\
-				$(SDIR)/scan/attractorPMScan.dat\
+				$(SDIR)/scans/attractorPMScan.dat\
 				$(SDIR)/jan13ScrewGaps.dat\
 				$(SDIR)/jan13Spindles.dat\
 				$(SDIR)/jan13Attractor.dat\
