@@ -38,7 +38,8 @@ for attrCtr = 1:rows(attractors);
 
 %specified in makefile.
 %	outPath = 'SimulationOutput/'
-	outString = [ outPath '/' attrString '.dat' ];
+	outPath = [outPath '/']; %gets reused below
+	outString = [ outPath  attrString '.dat' ];
 
 	outMatrix = [t force torque];
 	save ("-text" , outString, "outMatrix")
