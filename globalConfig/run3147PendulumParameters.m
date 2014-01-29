@@ -119,7 +119,7 @@ flexureSetBack = spindlePlateSetBack + spindlePlateThickness;
 
 
 %was 100e-6
-pendulumPMScanGridSize =1000e-6;	printSigNumber(pendulumPMScanGridSize, [HOMEDIR '/extracted/pendulumPMScanGridSize.tex'],3);
+pendulumPMScanGridSize =750e-6;	printSigNumber(pendulumPMScanGridSize, [HOMEDIR '/extracted/pendulumPMScanGridSize.tex'],3);
 pendulumPMScanVertStep = 2.5e-6;	printSigNumber(pendulumPMScanVertStep, [HOMEDIR '/extracted/pendulumPMScanVertStep.tex'],2);
 pendulumPMBodyDensity = rhoTi;
 pendulumPMInlayDensity =  rhoTaP;
