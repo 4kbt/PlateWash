@@ -3424,13 +3424,26 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXXRC
+\align center
+\begin_inset Graphics
+	filename Pictures/small/FlexureLeftSideDecember212011.jpg
+	width 50page%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Flexure"
+
+\end_inset
+
 Flexure
 \end_layout
 
@@ -3445,8 +3458,16 @@ Flexure
 \end_layout
 
 \begin_layout Standard
-The attractor's flexure stage was electric-discharge machined from a single
- piece of 6061-T6 aluminum sheet.
+The attractor's flexure stage, shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Flexure"
+
+\end_inset
+
+, was electric-discharge machined from a single piece of 6061-T6 aluminum
+ sheet.
  It was actuated by an internal bronze bellows that was driven by a pulse-width-
 modulated valve/vented accumulator apparatus external to the vacuum enclosure.
  The flexure was electric-discharge machined in the UW Physics shop.
