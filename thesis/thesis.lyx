@@ -6683,16 +6683,6 @@ The torque due to the flatness variations of attractor and pendulum was
  estimated numerically to be XXXRC N-m/m in the near field and negligible
  elsewhere.
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMA How the F do we do this reliably?
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsubsection
