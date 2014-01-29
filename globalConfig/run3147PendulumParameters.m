@@ -1,5 +1,11 @@
 fundamentalConstants
 
+if(exist("DoNotExtractPendulumParameters"))
+	function printInteger() ;  end
+	function printSigNumber() ; end
+	function printSigError();  end
+end
+
 HOMEDIR = getenv("HOMEDIR");
 
 %%%%% PENDULUM TiTa %%%%%%
