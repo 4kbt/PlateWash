@@ -15,7 +15,18 @@ for attrCtr = 1:rows(attractors);
 
 	attrString = char(attractors(attrCtr));
 
+	if( exist(scatterMasses))
+		attrWholeString = attrString;
+		attrString = attrString(1:end-1); 
+	end
+
 	A = eval(attrString);
+
+	if( exist(scatterMasses) )
+		attrString = attrWholeString;
+		P = scatterPMMasses(P);
+		A = scatterPMMasses(A);
+	end
 
 	for ctr = 1:rows(t)
 

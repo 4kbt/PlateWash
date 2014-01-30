@@ -33,7 +33,7 @@ SDIR := SimulationOutput
 
 #This command must precede the $(SDIR)/%dat make, lest confusion result. May change with Make 3.82.
 $(SDIR)/scans/%.dat :  $(MLIB) $(PARTS) defineAttractorTranslation.m processAttractorComponent.m
-	$(OCT) --eval 'outPath = "$(@D)"; attractors = {"$(*F)"}; P = pendulumPMScan;' processAttractorComponent.m
+	$(OCT) --eval 'outPath = "$(@D)"; attractors = {"$(*F)"}; scatterMasses = 1; P = pendulumPMScan;' processAttractorComponent.m
 	$(HOMEDIR)/bin/mathify.sh SimulationOutput/*.tex
 
 $(SDIR)/%.dat : $(MLIB) $(PARTS) defineAttractorTranslation.m processAttractorComponent.m
@@ -48,7 +48,15 @@ $(SDIR)/scans/%.try :
 
 
 plots/fullSimulation.eps: fullSimulation.gpl\
-				$(SDIR)/scans/attractorPMScan.dat\
+				$(SDIR)/scans/attractorPMScan1.dat\
+				$(SDIR)/scans/attractorPMScan2.dat\
+				$(SDIR)/scans/attractorPMScan3.dat\
+				$(SDIR)/scans/attractorPMScan4.dat\
+				$(SDIR)/scans/attractorPMScan5.dat\
+				$(SDIR)/scans/attractorPMScan6.dat\
+				$(SDIR)/scans/attractorPMScan7.dat\
+				$(SDIR)/scans/attractorPMScan8.dat\
+				$(SDIR)/scans/attractorPMScan9.dat\
 				$(SDIR)/jan13ScrewGaps.dat\
 				$(SDIR)/jan13Spindles.dat\
 				$(SDIR)/jan13Attractor.dat\
