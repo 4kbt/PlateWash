@@ -22,10 +22,10 @@ for attrCtr = 1:rows(attractors);
 
 	A = eval(attrString);
 
-	if( exist(scatterMasses) )
+	if( exist("scatterMasses") )
 		attrString = attrWholeString;
-		P = scatterPMMasses(P);
-		A = scatterPMMasses(A);
+		P = scatterPMMassesYZGrid(P);
+		A = scatterPMMassesYZGrid(A);
 	end
 
 	for ctr = 1:rows(t)
