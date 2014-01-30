@@ -15,7 +15,7 @@ for attrCtr = 1:rows(attractors);
 
 	attrString = char(attractors(attrCtr));
 
-	if( exist(scatterMasses))
+	if( exist("scatterMasses"))
 		attrWholeString = attrString;
 		attrString = attrString(1:end-1); 
 	end
