@@ -1,0 +1,11 @@
+set term postscript enhanced solid color eps
+set output 'plots/pmScanPlot.eps'
+
+set title 'Newtonian torque between leading 25 {/Symbol m}m of pendulum and attractor'
+set xlabel 'pendulum-attractor separation {/Symbol m}m'
+set ylabel 'torque (fN-m)'
+
+set key noauto
+
+pl\
+	'SimulationOutput/scans/scanMerge.dat' u 5:($13*1e15) w p pt 7 lt 3

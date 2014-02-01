@@ -6,7 +6,7 @@ PARTS := parts/
 
 MASSES=jan13Attractor.m jan13Pendulum.m
 
-all: plots/brickDemo.eps bellowsTorque plots/fullSimulation.eps
+all: plots/brickDemo.eps bellowsTorque plots/fullSimulation.eps plots/pmScanPlot.eps
 
 plots/brickDemo.eps : $(MLIB) brickDemo.m brickDemo.gpl $(PARTS)
 	$(OCT) brickDemo.m
@@ -41,22 +41,7 @@ $(SDIR)/%.dat : $(MLIB) $(PARTS) defineAttractorTranslation.m processAttractorCo
 	$(HOMEDIR)/bin/mathify.sh SimulationOutput/*.tex
 
 
-
-$(SDIR)/scans/%.try : 
-	echo $(*F)
-	echo $(@D)
-
-
 plots/fullSimulation.eps: fullSimulation.gpl\
-				$(SDIR)/scans/attractorPMScan1.dat\
-				$(SDIR)/scans/attractorPMScan2.dat\
-				$(SDIR)/scans/attractorPMScan3.dat\
-				$(SDIR)/scans/attractorPMScan4.dat\
-				$(SDIR)/scans/attractorPMScan5.dat\
-				$(SDIR)/scans/attractorPMScan6.dat\
-				$(SDIR)/scans/attractorPMScan7.dat\
-				$(SDIR)/scans/attractorPMScan8.dat\
-				$(SDIR)/scans/attractorPMScan9.dat\
 				$(SDIR)/jan13ScrewGaps.dat\
 				$(SDIR)/jan13Spindles.dat\
 				$(SDIR)/jan13Attractor.dat\
@@ -68,7 +53,23 @@ plots/fullSimulation.eps: fullSimulation.gpl\
 				$(SDIR)/nonAttractor.dat
 	$(GNU) fullSimulation.gpl
 
+$(SDIR)/scans/scanMerge.dat : mergeScanComputations.sh\
+				$(SDIR)/scans/attractorPMScan1.dat\
+				$(SDIR)/scans/attractorPMScan2.dat\
+				$(SDIR)/scans/attractorPMScan3.dat\
+				$(SDIR)/scans/attractorPMScan4.dat\
+				$(SDIR)/scans/attractorPMScan5.dat\
+				$(SDIR)/scans/attractorPMScan6.dat\
+				$(SDIR)/scans/attractorPMScan7.dat\
+				$(SDIR)/scans/attractorPMScan8.dat\
+				$(SDIR)/scans/attractorPMScan9.dat
+	./mergeScanComputations.sh
+
+plots/pmScanPlot.eps : pmScanPlot.gpl $(SDIR)/scans/scanMerge.dat
+	$(GNU) pmScanPlot.gpl
+
 
 clean :
 	-rm SimulationOutput/*.dat
 	-rm SimulationOutput/*.tex
+	-rm plots/*.eps
