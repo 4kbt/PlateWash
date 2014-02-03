@@ -7355,6 +7355,88 @@ The bounce test was repeated holding the pendulum close to the foil and
  moving the attractor.
 \end_layout
 
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Pictures/small/Pre3147SideViewMarch132012092956.jpg
+	width 50text%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Pictures/small/Post3164SideViewMay092012064354.jpg
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Pictures/small/Pre3147BackSideViewMarch132012093012.jpg
+	width 50text%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Pictures/small/Post3164BackSideViewMay092012064412.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Pictures/small/Pre3147FiberPositionMarch132012093038.jpg
+	width 50text%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Pictures/small/Post3164FiberPositionMay092012064424.jpg
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Alignment photos before (left) and after (right) science run.
+ The upper photos look directly through the window, the middle photos are
+ the mirror-image of the side opposite the window, and the lower photos
+ are the reflected image of the fiber position against the foil's alignment
+ marks.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Typical Behavior
 \end_layout
