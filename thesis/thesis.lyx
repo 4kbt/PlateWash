@@ -12893,6 +12893,169 @@ Off-center torques XXXRC
 Angled torques XXXRC
 \end_layout
 
+\begin_layout Subsection
+Torques from surface scans
+\end_layout
+
+\begin_layout Standard
+The most challenging Newtonian task is to compute the effects of irregularities
+ in the attractor and pendulum surfaces.
+ The attractor and pendulum are slightly dome-shaped, as the hand lapping
+ procedure tends to remove more material at the edges than at the center.
+ Furthermore, in the case of the pendulum, the inlay and the pendulum body
+ are made from two different materials, with different responses to lapping.
+ Our SmartScope laser scanner allows us to scan these surfaces with better
+ than 100
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m spatial resolution, and with perhaps a micron's vertical resolution.
+ The maximum variation in surface height is less than 
+\begin_inset Formula $25$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Any
+\bar default
+ quadrature scheme that can resolve the measured surface variation will
+ require 
+\begin_inset Formula 
+\[
+N=\frac{L}{g_{h}}\frac{W}{g_{h}}\pi\left(\frac{R}{g_{h}}\right)^{2}\left(\frac{T}{g_{z}}\right)^{2}\approx3300\times\frac{1}{g_{h}^{4}g_{z}^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+individual calculations, where 
+\begin_inset Formula $L$
+\end_inset
+
+ and 
+\begin_inset Formula $W$
+\end_inset
+
+ are the pendulum dimensions, 
+\begin_inset Formula $R$
+\end_inset
+
+ is the attractor radius, 
+\begin_inset Formula $T$
+\end_inset
+
+ is the (
+\begin_inset Formula $\sim25$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m) depth of integration, and 
+\begin_inset Formula $g_{h}$
+\end_inset
+
+ and 
+\begin_inset Formula $g_{z}$
+\end_inset
+
+ are the horizontal and vertical grid sizes (in mm, for the 3300 formula
+ above).
+ In an optimal case, with 
+\begin_inset Formula $g_{h}=10$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m and 
+\begin_inset Formula $g_{z}=2.5$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m, a single calculation would require 
+\begin_inset Formula $5\times10^{16}$
+\end_inset
+
+ calculations.
+ Assuming perfect optimization, each calculation requires more than seven
+ floating-point operations (FLOPs), or 357 days on a modern quad-core desktop
+ computer (21 hr on the full CENPA cluster).
+ Clever tricks can help to reduce the necessary volume of computation somewhat,
+ but the detailed spatial resolution required sets the scale.
+ As we would like to make these calculations many times, for perhaps 30
+ separate positions, and repeated once every hour or two (for hourly builds),
+ we must find a way to tolerate much lower resolution.
+\end_layout
+
+\begin_layout Standard
+We are saved by the fact that we only 
+\bar under
+need
+\bar default
+ the size of the non-flat torques and the associated uncertainties in size
+ and linearity.
+ If they are small compared to our other uncertainties, we're done.
+ To generate speed, we use grid sizes of 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/pendulumPMScanGridSize.tex"
+
+\end_inset
+
+ horizontal and 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/pendulumPMScanVertStep.tex"
+
+\end_inset
+
+ vertical.
+ Given that the pendulum-attractor gap can be as small as 80-90 
+\begin_inset Formula $\mu$
+\end_inset
+
+m, this is woefully inadequate.
+ To provide insurance against XXXRC
+\end_layout
+
 \begin_layout Chapter
 Results
 \end_layout
