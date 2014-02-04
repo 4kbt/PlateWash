@@ -13209,8 +13209,15 @@ m, a single calculation would require
 
  calculations.
  Assuming perfect optimization, each calculation requires more than seven
- floating-point operations (FLOPs), or 357 days on a modern quad-core desktop
- computer (21 hr on the full CENPA cluster).
+ floating-point operations (FLOPs), or 357
+\begin_inset space ~
+\end_inset
+
+days on a modern quad-core desktop computer (21
+\begin_inset space ~
+\end_inset
+
+hr on the 5 teraflop CENPA cluster).
  Clever tricks can help to reduce the necessary volume of computation somewhat,
  but the detailed spatial resolution required sets the scale.
  As we would like to make these calculations many times, for perhaps 30
@@ -13233,20 +13240,73 @@ filename "../extracted/pendulumPMScanGridSize.tex"
 
 \end_inset
 
- horizontal and 
+ tangential and 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../extracted/pendulumPMScanVertStep.tex"
 
 \end_inset
 
- vertical.
+ perpendicular to the surface.
  Given that the pendulum-attractor gap can be as small as 80-90 
 \begin_inset Formula $\mu$
 \end_inset
 
 m, this is woefully inadequate.
- To provide insurance against XXXRC
+ To provide an estimate of the effects of the too-large gridsize, the integratio
+n was repeated several times, with the point-mass subcomponents of the pendulum
+ and attractor scattered horizontally with gaussian standard deviation of
+ one grid spacing.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../NewtonianSimulation/plots/pmScanPlot.eps
+	width 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Torques due to the leading 
+\begin_inset Formula $25$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m of the attractor and pendulum
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
