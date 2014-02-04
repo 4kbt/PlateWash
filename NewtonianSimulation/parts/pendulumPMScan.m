@@ -26,7 +26,9 @@ maxHeight = max(o(:,4));
 
 o = rotatePMArray( o, -pi/2, [1 0 0]);
 o = rotatePMArray( o, -pi/2, [0 0 1]);
-o = translatePMArray(o, [-maxHeight 0 0]);
+
+'TRANSLATING PENDULUM SCAN FACE TO MATCH TRADITIONAL PENDULUM BODY FACE'
+o = translatePMArray(o, [(-maxHeight+pendulumBodyThickness/2.0) 0 0]);
 
 
 end
