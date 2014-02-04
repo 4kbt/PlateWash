@@ -1624,6 +1624,45 @@ key "2007PhRvL..98b1101K,2007PhRvL..98m1104A"
 Apparatus
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Pictures/small/OverviewLastPhotoBeforeCloseDecember212011.jpg
+	width 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+The PlateWash Experiment.
+ Last photo before closing for science run, December 21, 2011.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Principle - Gauss' Law Test
 \end_layout
@@ -4836,6 +4875,78 @@ Interferometer low-frequency power spectrum
 \end_layout
 
 \begin_layout Subsubsection
+Translation stage
+\end_layout
+
+\begin_layout Standard
+With the introduction of the foil-positioning motors (see XXXRC), it was
+ necessary to make the interferometer tip directly controllable from outside
+ the vacuum vessel.
+ The interferometer tip was connected to a long flexure lever with a linear
+ reduction ratio of ~10:1, shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Interferometer-control-lever"
+
+\end_inset
+
+.
+ Before pumping down, the interferometer was translated as far from the
+ foil as it could go.
+ After the foil and attractor were aligned, then the interferometer was
+ slowly brought toward the foil until fringes were observed.
+ This must be done with care; going too far will puncture the foil with
+ the fiber tip.
+ The motorized approach is easier, faster, allows better fringe contrast,
+ and damages fewer foils than aligning by hand.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Pictures/small/InterferometerControlLeverDecember222011.jpg
+	rotateAngle 270
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Interferometer-control-lever"
+
+\end_inset
+
+Interferometer control lever
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
 Pendulum-Foil coupling
 \begin_inset CommandInset label
 LatexCommand label
@@ -7242,6 +7353,88 @@ The interferometer signal was measured as a function of attractor position.
 \begin_layout Standard
 The bounce test was repeated holding the pendulum close to the foil and
  moving the attractor.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Pictures/small/Pre3147SideViewMarch132012092956.jpg
+	width 50text%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Pictures/small/Post3164SideViewMay092012064354.jpg
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Pictures/small/Pre3147BackSideViewMarch132012093012.jpg
+	width 50text%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Pictures/small/Post3164BackSideViewMay092012064412.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Pictures/small/Pre3147FiberPositionMarch132012093038.jpg
+	width 50text%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Pictures/small/Post3164FiberPositionMay092012064424.jpg
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Alignment photos before (left) and after (right) science run.
+ The upper photos look directly through the window, the middle photos are
+ the mirror-image of the side opposite the window, and the lower photos
+ are the reflected image of the fiber position against the foil's alignment
+ marks.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
