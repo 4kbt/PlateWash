@@ -77,5 +77,6 @@ $(HOMEDIR)/extracted/%.tex : $(MLIB)
 
 clean :
 	-rm SimulationOutput/*.dat
+	-rm SimulationOutput/scans/*.dat
 	-rm SimulationOutput/*.tex
 	-rm plots/*.eps
