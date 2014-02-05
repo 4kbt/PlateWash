@@ -71,6 +71,9 @@ $(SDIR)/scans/scanMerge.dat : mergeScanComputations.sh\
 plots/pmScanPlot.eps : pmScanPlot.gpl $(SDIR)/scans/scanMerge.dat
 	$(GNU) pmScanPlot.gpl
 
+$(HOMEDIR)/extracted/%.tex : $(MLIB)
+	$(OCT) $(HOMEDIR)/globalConfig/run3147FixedParameters.m
+	$(OCT) $(HOMEDIR)/globalConfig/run3147PendulumParameters.m
 
 clean :
 	-rm SimulationOutput/*.dat
