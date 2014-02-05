@@ -13080,11 +13080,71 @@ m stroke range of the attractor.
 \end_layout
 
 \begin_layout Subsection
-Off-center torques XXXRC
+Off-center torques 
+\end_layout
+
+\begin_layout Standard
+The attractor is offset horizontally by XXXRC and vertically by XXXRC with
+ respect to the pendulum.
+ The torques due to the complete off-center attractory assembly are shown
+ in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:OffsetPendulumTorque"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../NewtonianSimulation/plots/offsetAttractorAssembly.eps
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:OffsetPendulumTorque"
+
+\end_inset
+
+Simulation output for the offset pendulum
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
-Angled torques XXXRC
+Angled torques
+\end_layout
+
+\begin_layout Standard
+The pendulum is oriented at an angle of XXXRC with respect to the attractor.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -13257,7 +13317,15 @@ m, this is woefully inadequate.
  To provide an estimate of the effects of the too-large gridsize, the integratio
 n was repeated several times, with the point-mass subcomponents of the pendulum
  and attractor scattered horizontally with gaussian standard deviation of
- one grid spacing.
+ one grid spacing, with results shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:PM-Scan-Torque"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -13281,6 +13349,12 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:PM-Scan-Torque"
+
+\end_inset
+
 Torques due to the leading 
 \begin_inset Formula $25$
 \end_inset

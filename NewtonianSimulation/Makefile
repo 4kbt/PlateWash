@@ -6,7 +6,7 @@ PARTS := parts/
 
 MASSES=jan13Attractor.m jan13Pendulum.m
 
-all: plots/brickDemo.eps bellowsTorque plots/fullSimulation.eps plots/pmScanPlot.eps
+all: plots/brickDemo.eps bellowsTorque plots/fullSimulation.eps plots/pmScanPlot.eps plots/offsetAttractorAssembly.eps
 
 plots/brickDemo.eps : $(MLIB) brickDemo.m brickDemo.gpl $(PARTS)
 	$(OCT) brickDemo.m
@@ -41,17 +41,20 @@ $(SDIR)/%.dat : $(MLIB) $(PARTS) defineAttractorTranslation.m processAttractorCo
 	$(HOMEDIR)/bin/mathify.sh SimulationOutput/*.tex
 
 
-plots/fullSimulation.eps: fullSimulation.gpl\
+plots/fullSimulation.eps: $(BIN) fullSimulation.gpl $(HOMEDIR)/extracted/pendulumBodyThickness.tex\
 				$(SDIR)/jan13ScrewGaps.dat\
 				$(SDIR)/jan13Spindles.dat\
 				$(SDIR)/jan13Attractor.dat\
-				$(SDIR)/jan13OffsetAttractor.dat\
 				$(SDIR)/jan14MacorSpindles.dat\
 				$(SDIR)/jan14SpindlePlate.dat\
 				$(SDIR)/jan14Flexure.dat\
 				$(SDIR)/fullAttractor.dat\
 				$(SDIR)/nonAttractor.dat
 	$(GNU) fullSimulation.gpl
+
+plots/offsetAttractorAssembly.eps: $(BIN) offsetAttractorAssembly.gpl $(HOMEDIR)/extracted/pendulumBodyThickness.tex\
+				$(SDIR)/jan13OffsetAttractor.dat
+	$(GNU) offsetAttractorAssembly.gpl
 
 $(SDIR)/scans/scanMerge.dat : mergeScanComputations.sh\
 				$(SDIR)/scans/attractorPMScan1.dat\
