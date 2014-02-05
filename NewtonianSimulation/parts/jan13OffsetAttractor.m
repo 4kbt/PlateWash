@@ -4,8 +4,8 @@ function Attractor = jan13OffsetAttractor
 	A = [jan13ScrewGaps;\
 		jan13Attractor;\
 		jan13Spindles;\
-		jan14MacorSpindles.dat;\
-		jan14Flexure.dat];
+		jan14MacorSpindles;\
+		jan14Flexure];
 
 	Attractor = translatePMArray(A, [0 attrHorizOffset attrVertOffset]);
 end

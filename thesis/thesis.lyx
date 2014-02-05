@@ -13084,10 +13084,23 @@ Off-center torques
 \end_layout
 
 \begin_layout Standard
-The attractor is offset horizontally by XXXRC and vertically by XXXRC with
- respect to the pendulum.
- The torques due to the complete off-center attractory assembly are shown
- in Fig.
+The attractor is offset horizontally by 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/attrHorizOffset.tex"
+
+\end_inset
+
+ (toward the window) and vertically by 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/attrVertOffset.tex"
+
+\end_inset
+
+ with respect to the pendulum.
+ (XXXRC verify numbers) The torques due to the complete off-center attractory
+ assembly are shown in Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref

@@ -62,8 +62,8 @@ da1=AttractorPlateThickness; %# Ta attractor thickness
 dal1=AttractorBackerThickness; % Al attractor thickness
 
 %These offsets are entirely unchecked!
-attrHorizOffset = 5e-3;
-attrVertOffset = 0.5e-3;
+attrHorizOffset = 3.5e-3;		printSigNumber(attrHorizOffset    , [HOMEDIR '/extracted/attrHorizOffset.tex'], 2);
+attrVertOffset = 0.5e-3;		printSigNumber(attrVertOffset	  , [HOMEDIR '/extracted/attrVertOffset.tex' ], 2);
 
 %%%%% Screw gaps %%%%%
 
