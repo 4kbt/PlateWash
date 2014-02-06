@@ -42,24 +42,35 @@ for attrCtr = 1:rows(attractors);
 
 	end
 
+	pin = [1 1];
+	stol = 1e-6; 
+	fitScaleFactor = 1e15
+	%Fit it linear
+	[f,p,cvg,iter,corp,covp,covr,stdresid,Z,r2] = leasqr(t(:,5),torque(:,3)*fitScaleFactor,pin,"pwPoly",stol);
+	linResiduals = torque(:,3) - f/fitScaleFactor;
+	linOut = [p sqrt(diag(covp)) ] /fitScaleFactor;
+
+	%Fit it quad
+	pin = [1 1 1];
+	[f,p,cvg,iter,corp,covp,covr,stdresid,Z,r2] = leasqr(t(:,5),torque(:,3)*fitScaleFactor,pin,"pwPoly",stol);
+	quadResiduals = torque(:,3) - f/fitScaleFactor;
+
+
+	%Save fit info, with errors
+	errs = sqrt(diag(covp))/fitScaleFactor;
+	p = p/fitScaleFactor;
+
+	fitOut = [p errs];
+
 %specified in makefile.
 	outPath = [outPath '/']; %gets reused below
 	outString = [ outPath  attrString '.dat' ];
-
-	outMatrix = [t force torque];
+	outMatrix = [t force torque linResiduals quadResiduals];
 	save ("-text" , outString, "outMatrix")
-
-	pin = [1 1 1] * 1e-15; 
-
-	%Fit it
-	[f,p,cvg,iter,corp,covp,covr,stdresid,Z,r2] = leasqr(t(:,5),torque(:,3),pin,"pwPoly");
-
-	%Save fit info, with errors
-	errs = sqrt(covr);
 
 	printSigError(p(1) , errs(1), [ outPath attrString 'quad.tex']);
 	printSigError(p(2) , errs(2), [ outPath attrString 'lin.tex']);
 	printSigError(p(3) , errs(3), [ outPath attrString 'const.tex']);
-	save([outPath attrString 'fit.dat'], 'errs');
-
+	save([outPath attrString 'QuadFit.dat'], 'fitOut');
+	save([outPath attrString 'LinFit.dat' ], 'linOut');
 end
