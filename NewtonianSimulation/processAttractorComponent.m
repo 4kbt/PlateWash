@@ -49,6 +49,8 @@ for attrCtr = 1:rows(attractors);
 	[f,p,cvg,iter,corp,covp,covr,stdresid,Z,r2] = leasqr(t(:,5),torque(:,3)*fitScaleFactor,pin,"pwPoly",stol);
 	linResiduals = torque(:,3) - f/fitScaleFactor;
 	linOut = [p sqrt(diag(covp)) ] /fitScaleFactor;
+	maxNonLin = max(abs(linResiduals));
+
 
 	%Fit it quad
 	pin = [1 1 1];
@@ -73,4 +75,5 @@ for attrCtr = 1:rows(attractors);
 	printSigError(p(3) , errs(3), [ outPath attrString 'const.tex']);
 	save([outPath attrString 'QuadFit.dat'], 'fitOut');
 	save([outPath attrString 'LinFit.dat' ], 'linOut');
+	printSigNumber(maxNonLin, [outPath attrString 'maxnonlin.tex'],1);
 end

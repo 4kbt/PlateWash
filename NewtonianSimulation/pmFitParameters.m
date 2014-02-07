@@ -18,6 +18,7 @@ pin = [1 1]*1e-3;
 linResiduals = eMerge(:,13) - f/fitScaleFactor;
 linFitOut = [p sqrt(diag(covp))]/ fitScaleFactor;
 
+maxNonLin = max(abs(linResiduals));
 
 
 pin = [1 1 1]*1e-3;
