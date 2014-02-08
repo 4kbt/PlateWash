@@ -18,7 +18,16 @@ if( testInjection == 1)
 	yo(:,2) = yo(:,1)*injSlope + yo(:,2);
 
 	%Fake it!
-	dBSArchive(:,3) = interp1(yo(:,1), yo(:,2), dBSArchive(:,1)) - interp1(yo(:,1), yo(:,2), dBSArchive(:,2))\
-		          + randn(rows(dBSArchive), 1).*dBSArchive(:,4);
+	dBSArchive(:,3) = genFakeData(yo, dBSArchive);
 end
 
+if ( 1 == exist("fileInjection" ))
+
+	sourceStruct = load(fileInjection);
+	sourceFile = sourceStruct.(fieldnames(sourceStruct){1});
+
+	run3147PendulumParameters
+	fl = [sourceFile(:,5)-pendulumBodyThickness/2.0 sourceFile(:,13)];
+
+	dBSArchive(:,3) = genFakeData(fl, dBSArchive);
+end
