@@ -12,7 +12,7 @@ FITG:=--eval 'alpha = -1;   lambda = 56e-6;  injSlope = -1e-11;'
 FITH:=--eval 'alpha = 200;  lambda = 30e-6;  injSlope =  0e-11;'
 FITI:=--eval 'alpha = 500;  lambda = 200e-6; injSlope =  1e-11;'
 
-all : yukawaFit arbFit test
+all : yukawaFit arbFit test newtonianInjection
 
 yukawaFit : $(PREREQUISITES)
 	$(OCT)  yukawaWrapper.m
@@ -21,10 +21,21 @@ yukawaFit : $(PREREQUISITES)
 
 test:yukawaFitTest arbFitTest
 
-FITN:= --eval 'fileInjection = "$(HOMEDIR)NewtonianSimulation/SimulationOutput/jan13OffsetAttractor.dat";'
+FITNPATH := $(HOMEDIR)NewtonianSimulation/SimulationOutput/
+FITNAFILE := jan13OffsetAttractor.dat
+FITNAPATH := $(FITNPATH)$(FITNAFILE)
+FITNA:= --eval 'fileInjection = "$(FITNAPATH)";'
+FITNBFILE := fullAttractor.dat
+FITNBPATH := $(FITNPATH)$(FITNBFILE)
+FITNB:= --eval 'fileInjection = "$(FITNBPATH)";'
+
+INJFILE := output/bootstrapYukawa.SimulFloataInjectedLevenburg.dat
 
 newtonianInjection : $(PREREQUISITES)
-	$(OCT) $(FITN) yukawaWrapper.m
+	$(OCT) $(FITNA) yukawaWrapper.m
+	cp $(INJFILE) $(INJFILE).$(FITNAFILE)
+	$(OCT) $(FITNB) yukawaWrapper.m
+	cp $(INJFILE) $(INJFILE).$(FITNBFILE)
 
 yukawaFitTest : $(PREREQUISITES)
 	$(OCT) $(FITA) yukawaWrapper.m
