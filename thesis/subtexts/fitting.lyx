@@ -710,7 +710,69 @@ This is just a restatement of Jason's trick, so
 \end_layout
 
 \begin_layout Standard
+Using the integral above,
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula $\sigma_{f}^{2}=\int(\sum_{k}\alpha_{k}B_{k}e^{-x/\lambda_{k}}\sum_{l}\alpha_{l}B_{l}e^{-x/\lambda_{l}}\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{B_{i}})dB_{i})P(x,\bar{x},\sigma_{x})dx+2C\sum_{l}\alpha_{l}\bar{B}_{l}e^{-\frac{\bar{x}}{\lambda_{l}}+\frac{\sigma_{x}^{2}}{2\lambda_{l}^{2}}}(\bar{x}-\frac{\sigma_{x}^{2}}{\lambda_{l}})+C^{2}\sigma_{x}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $-2\left(\sum_{j}\alpha_{j}\bar{B}_{j}e^{\sigma_{x}^{2}/2\lambda_{j}^{2}}e^{-\bar{x}/\lambda_{j}}\right)^{2}-2\sum_{k}\alpha_{k}\bar{B}_{k}e^{\sigma_{x}^{2}/2\lambda_{k}^{2}}e^{-\bar{x}/\lambda_{k}}C\bar{x}+2\sum_{m}\alpha_{m}\bar{B}_{m}e^{\sigma_{x}^{2}/2\lambda_{m}^{2}}e^{-\bar{x}/\lambda_{m}}\sum_{j}\alpha_{j}\bar{B}_{j}e^{\sigma_{x}^{2}/2\lambda_{j}^{2}}e^{-\bar{x}/\lambda_{j}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For the final integral, there are two cases, 
+\begin_inset Formula $k=l$
+\end_inset
+
+ and 
+\begin_inset Formula $k\not=l$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sigma_{f}^{2}=\int(\sum_{k}\sum_{l\not=k}\alpha_{k}B_{k}e^{-x/\lambda_{k}}\alpha_{l}B_{l}e^{-x/\lambda_{l}}\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{B_{i}})dB_{i})P(x,\bar{x},\sigma_{x})dx+\int(\sum_{k}\alpha_{k}^{2}B_{k}^{2}e^{-2x/\lambda_{k}}\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{B_{i}})dB_{i})P(x,\bar{x},\sigma_{x})dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $+2C\sum_{l}\alpha_{l}\bar{B}_{l}e^{-\frac{\bar{x}}{\lambda_{l}}+\frac{\sigma_{x}^{2}}{2\lambda_{l}^{2}}}(\bar{x}-\frac{\sigma_{x}^{2}}{\lambda_{l}})+C^{2}\sigma_{x}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $-2\left(\sum_{j}\alpha_{j}\bar{B}_{j}e^{\sigma_{x}^{2}/2\lambda_{j}^{2}}e^{-\bar{x}/\lambda_{j}}\right)^{2}-2\sum_{k}\alpha_{k}\bar{B}_{k}e^{\sigma_{x}^{2}/2\lambda_{k}^{2}}e^{-\bar{x}/\lambda_{k}}C\bar{x}+2\sum_{m}\alpha_{m}\bar{B}_{m}e^{\sigma_{x}^{2}/2\lambda_{m}^{2}}e^{-\bar{x}/\lambda_{m}}\sum_{j}\alpha_{j}\bar{B}_{j}e^{\sigma_{x}^{2}/2\lambda_{j}^{2}}e^{-\bar{x}/\lambda_{j}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Using the table above,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sigma_{f}^{2}=\sum_{k}\sum_{l\not=k}\alpha_{k}\bar{B}_{k}\alpha_{l}\bar{B}_{l}e^{\sigma_{x}^{2}(1/\lambda_{l}+1/\lambda_{k})^{2}/2}e^{-\bar{x}(1/\lambda_{l}+1/\lambda_{k})}+\sum_{k}\alpha_{k}^{2}(\bar{B_{k}}^{2}+\sigma_{B_{k}}^{2})e^{2\sigma_{x}^{2}/\lambda_{k}^{2}}e^{-2\bar{x}/\lambda_{k}})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $+2C\sum_{l}\alpha_{l}\bar{B}_{l}e^{-\frac{\bar{x}}{\lambda_{l}}+\frac{\sigma_{x}^{2}}{2\lambda_{l}^{2}}}(\bar{x}-\frac{\sigma_{x}^{2}}{\lambda_{l}})+C^{2}\sigma_{x}^{2}$
 \end_inset
 
 
