@@ -531,6 +531,89 @@ Using
 \end_layout
 
 \begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\int_{-\infty}^{\infty}ae^{-a/\lambda}P(a,\bar{a},\sigma_{a})=\frac{1}{\sigma_{a}\sqrt{2\pi}}\int_{-\infty}^{\infty}ae^{-a/\lambda}e^{-(a-\bar{a})^{2}/2\sigma_{a}^{2}}da$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $=\frac{1}{\sigma_{a}\sqrt{2\pi}}\int_{-\infty}^{\infty}ae^{-a/\lambda}e^{-(a^{2}-2a\bar{a}+\bar{a}^{2}+\frac{2\sigma_{a}^{2}}{\lambda}a)/2\sigma_{a}^{2}}da$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $=\frac{1}{\sigma_{a}\sqrt{2\pi}}\int_{-\infty}^{\infty}ae^{-a/\lambda}e^{-(a^{2}-2(\bar{a}+\frac{\sigma_{a}^{2}}{\lambda})a+\bar{a}^{2})/2\sigma_{a}^{2}}da$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(\bar{a}+\frac{\sigma_{a}^{2}}{\lambda})^{2}=\bar{a}^{2}+2\frac{\sigma_{a}^{2}}{\lambda}\bar{a}+\frac{\sigma_{a}^{4}}{\lambda^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $=\frac{1}{\sigma_{a}\sqrt{2\pi}}\int_{-\infty}^{\infty}ae^{-a/\lambda}e^{-(a^{2}-2(\bar{a}+\frac{\sigma_{a}^{2}}{\lambda})a+\bar{a}^{2}+)/2\sigma_{a}^{2}}da$
+\end_inset
+
+ <<< Finish this line!
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula $\clubsuit$
 \end_inset
 
