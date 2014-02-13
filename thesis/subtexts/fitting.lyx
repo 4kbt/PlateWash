@@ -562,7 +562,7 @@ Using
 \uwave off
 \noun off
 \color none
-\begin_inset Formula $=\frac{1}{\sigma_{a}\sqrt{2\pi}}\int_{-\infty}^{\infty}ae^{-a/\lambda}e^{-(a^{2}-2a\bar{a}+\bar{a}^{2}+\frac{2\sigma_{a}^{2}}{\lambda}a)/2\sigma_{a}^{2}}da$
+\begin_inset Formula $=\frac{1}{\sigma_{a}\sqrt{2\pi}}\int_{-\infty}^{\infty}ae^{-(a^{2}-2a\bar{a}+\bar{a}^{2}+\frac{2\sigma_{a}^{2}}{\lambda}a)/2\sigma_{a}^{2}}da$
 \end_inset
 
 
@@ -581,14 +581,14 @@ Using
 \uwave off
 \noun off
 \color none
-\begin_inset Formula $=\frac{1}{\sigma_{a}\sqrt{2\pi}}\int_{-\infty}^{\infty}ae^{-a/\lambda}e^{-(a^{2}-2(\bar{a}+\frac{\sigma_{a}^{2}}{\lambda})a+\bar{a}^{2})/2\sigma_{a}^{2}}da$
+\begin_inset Formula $=\frac{1}{\sigma_{a}\sqrt{2\pi}}\int_{-\infty}^{\infty}ae^{-(a^{2}-2(\bar{a}-\frac{\sigma_{a}^{2}}{\lambda})a+\bar{a}^{2})/2\sigma_{a}^{2}}da$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $(\bar{a}+\frac{\sigma_{a}^{2}}{\lambda})^{2}=\bar{a}^{2}+2\frac{\sigma_{a}^{2}}{\lambda}\bar{a}+\frac{\sigma_{a}^{4}}{\lambda^{2}}$
+\begin_inset Formula $(\bar{a}-\frac{\sigma_{a}^{2}}{\lambda})^{2}=\bar{a}^{2}-2\frac{\sigma_{a}^{2}}{\lambda}\bar{a}+\frac{\sigma_{a}^{4}}{\lambda^{2}}$
 \end_inset
 
 
@@ -607,10 +607,48 @@ Using
 \uwave off
 \noun off
 \color none
-\begin_inset Formula $=\frac{1}{\sigma_{a}\sqrt{2\pi}}\int_{-\infty}^{\infty}ae^{-a/\lambda}e^{-(a^{2}-2(\bar{a}+\frac{\sigma_{a}^{2}}{\lambda})a+\bar{a}^{2}+)/2\sigma_{a}^{2}}da$
+\begin_inset Formula $=\frac{1}{\sigma_{a}\sqrt{2\pi}}\int_{-\infty}^{\infty}ae^{-(a^{2}-2(\bar{a}-\frac{\sigma_{a}^{2}}{\lambda})a+(\bar{a}-\frac{\sigma_{a}^{2}}{\lambda})^{2}+2\frac{\sigma_{a}^{2}}{\lambda}\bar{a}-\frac{\sigma_{a}^{4}}{\lambda^{2}})/2\sigma_{a}^{2}}da$
 \end_inset
 
- <<< Finish this line!
+ 
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $=\frac{1}{\sigma_{a}\sqrt{2\pi}}e^{-\frac{\bar{a}}{\lambda}+\frac{\sigma_{a}^{2}}{2\lambda^{2}}}\int_{-\infty}^{\infty}ae^{-(a^{2}-(\bar{a}-\frac{\sigma_{a}^{2}}{\lambda}))^{2}/2\sigma_{a}^{2}}da$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $=e^{-\frac{\bar{a}}{\lambda}+\frac{\sigma_{a}^{2}}{2\lambda^{2}}}(\bar{a}-\frac{\sigma_{a}^{2}}{\lambda})$
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Standard
@@ -628,6 +666,29 @@ Using
 \end_layout
 
 \begin_layout Standard
+This is just a restatement of Jason's trick, so 
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $=e^{\sigma_{a}^{2}(1/\lambda_{1}+1/\lambda_{2})^{2}/2}e^{-\bar{a}(1/\lambda_{1}+1/\lambda_{2})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula $\clubsuit$
 \end_inset
 
@@ -636,6 +697,20 @@ Using
 
 \begin_layout Standard
 \begin_inset Formula $\sigma_{f}^{2}=\int(\sum_{k}\alpha_{k}B_{k}e^{-x/\lambda_{k}}\sum_{l}\alpha_{l}B_{l}e^{-x/\lambda_{l}}\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{B_{i}})dB_{i}+2Cx\sum_{l}\alpha_{l}\bar{B}_{l}e^{-x/\lambda_{l}})P(x,\bar{x},\sigma_{x})dx+C^{2}\sigma_{x}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $-2\left(\sum_{j}\alpha_{j}\bar{B}_{j}e^{\sigma_{x}^{2}/2\lambda_{j}^{2}}e^{-\bar{x}/\lambda_{j}}\right)^{2}-2\sum_{k}\alpha_{k}\bar{B}_{k}e^{\sigma_{x}^{2}/2\lambda_{k}^{2}}e^{-\bar{x}/\lambda_{k}}C\bar{x}+2\sum_{m}\alpha_{m}\bar{B}_{m}e^{\sigma_{x}^{2}/2\lambda_{m}^{2}}e^{-\bar{x}/\lambda_{m}}\sum_{j}\alpha_{j}\bar{B}_{j}e^{\sigma_{x}^{2}/2\lambda_{j}^{2}}e^{-\bar{x}/\lambda_{j}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sigma_{f}^{2}=\int(\sum_{k}\alpha_{k}B_{k}e^{-x/\lambda_{k}}\sum_{l}\alpha_{l}B_{l}e^{-x/\lambda_{l}}\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{B_{i}})dB_{i})P(x,\bar{x},\sigma_{x})dx+2C\sum_{l}\alpha_{l}\bar{B}_{l}e^{-\frac{\bar{x}}{\lambda_{l}}+\frac{\sigma_{x}^{2}}{2\lambda_{l}^{2}}}(\bar{x}-\frac{\sigma_{x}^{2}}{\lambda_{l}})+C^{2}\sigma_{x}^{2}$
 \end_inset
 
 
