@@ -547,7 +547,78 @@ This is just a restatement of Jason's trick, so
 \uwave off
 \noun off
 \color none
-\begin_inset Formula $\bar{G}=\int_{-\infty}^{\infty}\left(\sum_{i}\alpha_{i}\bar{B}_{i}e^{-x/\lambda_{i}}-\sum_{k}\alpha_{k}\bar{B}_{k}e^{-y/\lambda_{k}}\right)P(x,\bar{x},\sigma_{x})dxP(y,\bar{y},\sigma_{y})dy+C(\bar{x}-\bar{y})$
+\begin_inset Formula $\bar{G}=\sum_{i}\alpha_{i}\bar{B}_{i}e^{\sigma_{x}^{2}/2\lambda_{i}}e^{-\bar{x}/\lambda_{i}}-\sum_{k}\alpha_{k}\bar{B}_{k}e^{\sigma_{2}^{2}/2\lambda_{k}}e^{-\bar{a}/\lambda_{k}}+C(\bar{x}-\bar{y})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $\sigma_{G}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sigma_{G}^{2}=\int_{-\infty}^{\infty}(G(x,y,B_{1\ldots n},\alpha_{1\ldots n},\lambda_{1\ldots n})-\bar{G})^{2}P(x,\bar{x},\sigma_{x})dxP(y,\bar{y},\sigma_{y})dy\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\int_{-\infty}^{\infty}\left(\left(\sum_{j}\alpha_{j}B_{j}e^{-x/\lambda_{j}}+Cx-\sum_{k}\alpha_{k}B_{k}e^{-y/\lambda_{k}}-Cy\right)-\bar{G}\right)^{2}P(x,\bar{x},\sigma_{x})dxP(y,\bar{y},\sigma_{y})dy\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\int_{-\infty}^{\infty}\left(\left(\sum_{j}\alpha_{j}B_{j}e^{-x/\lambda_{j}}-\sum_{k}\alpha_{k}B_{k}e^{-y/\lambda_{k}}+C(x-y)\right)-\bar{G}\right)^{2}P(x,\bar{x},\sigma_{x})dxP(y,\bar{y},\sigma_{y})dy\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\int_{-\infty}^{\infty}\left(\left(\sum_{j}\alpha_{j}B_{j}e^{-x/\lambda_{j}}-\sum_{k}\alpha_{k}B_{k}e^{-y/\lambda_{k}}+C(x-y)\right)^{2}-2\bar{G}\left(\sum_{j}\alpha_{j}B_{j}e^{-x/\lambda_{j}}-\sum_{k}\alpha_{k}B_{k}e^{-y/\lambda_{k}}+C(x-y)\right)+\bar{G}^{2}\right)P(x,\bar{x},\sigma_{x})dxP(y,\bar{y},\sigma_{y})dy\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\int_{-\infty}^{\infty}\left(\sum_{j}\alpha_{j}B_{j}e^{-x/\lambda_{j}}-\sum_{k}\alpha_{k}B_{k}e^{-y/\lambda_{k}}+C(x-y)\right)^{2}P(x,\bar{x},\sigma_{x})dxP(y,\bar{y},\sigma_{y})dy\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $-2\bar{G}\int_{-\infty}^{\infty}\left(\sum_{j}\alpha_{j}B_{j}e^{-x/\lambda_{j}}-\sum_{k}\alpha_{k}B_{k}e^{-y/\lambda_{k}}\right)P(x,\bar{x},\sigma_{x})dxP(y,\bar{y},\sigma_{y})dy\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}-2\bar{G}C(\bar{x}-\bar{y})+\bar{G}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+By identification with 
+\begin_inset Formula $\bar{G}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\int_{-\infty}^{\infty}\left(\sum_{j}\alpha_{j}B_{j}e^{-x/\lambda_{j}}-\sum_{k}\alpha_{k}B_{k}e^{-y/\lambda_{k}}+C(x-y)\right)^{2}P(x,\bar{x},\sigma_{x})dxP(y,\bar{y},\sigma_{y})dy\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}-2\bar{G}^{2}+\bar{G}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\int_{-\infty}^{\infty}\left(\sum_{j}\alpha_{j}B_{j}e^{-x/\lambda_{j}}-\sum_{k}\alpha_{k}B_{k}e^{-y/\lambda_{k}}+C(x-y)\right)^{2}P(x,\bar{x},\sigma_{x})dxP(y,\bar{y},\sigma_{y})dy\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}-\bar{G}^{2}$
 \end_inset
 
 
