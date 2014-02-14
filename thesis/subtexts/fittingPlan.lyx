@@ -624,5 +624,110 @@ By identification with
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Formula $=\int_{-\infty}^{\infty}(\sum_{j}\alpha_{j}B_{j}e^{-x/\lambda_{j}}\sum_{j}\alpha_{j}B_{j}e^{-x/\lambda_{j}}-\sum_{k}\alpha_{k}B_{k}e^{-y/\lambda_{k}}\sum_{j}\alpha_{j}B_{j}e^{-x/\lambda_{j}}+C(x-y)\sum_{j}\alpha_{j}B_{j}e^{-x/\lambda_{j}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $-\sum_{k}\alpha_{k}B_{k}e^{-y/\lambda_{k}}\sum_{j}\alpha_{j}B_{j}e^{-x/\lambda_{j}}+\sum_{k}\alpha_{k}B_{k}e^{-y/\lambda_{k}}\sum_{k}\alpha_{k}B_{k}e^{-y/\lambda_{k}}-\sum_{k}\alpha_{k}B_{k}e^{-y/\lambda_{k}}C(x-y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $+C(x-y)\sum_{j}\alpha_{j}B_{j}e^{-x/\lambda_{j}}-C(x-y)\sum_{k}\alpha_{k}B_{k}e^{-y/\lambda_{k}}+C^{2}(x-y)^{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P(x,\bar{x},\sigma_{x})dxP(y,\bar{y},\sigma_{y})dy\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}-\bar{G}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\int_{-\infty}^{\infty}(\sum_{l}\alpha_{l}B_{l}e^{-x/\lambda_{l}}\sum_{j}\alpha_{j}B_{j}e^{-x/\lambda_{j}}-2\sum_{k}\alpha_{k}B_{k}e^{-y/\lambda_{k}}\sum_{j}\alpha_{j}B_{j}e^{-x/\lambda_{j}}+2C(x-y)\sum_{j}\alpha_{j}B_{j}e^{-x/\lambda_{j}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $+\sum_{m}\alpha_{m}B_{m}e^{-y/\lambda_{m}}\sum_{k}\alpha_{k}B_{k}e^{-y/\lambda_{k}}-2\sum_{k}\alpha_{k}B_{k}e^{-y/\lambda_{k}}C(x-y)+C^{2}(x-y)^{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P(x,\bar{x},\sigma_{x})dxP(y,\bar{y},\sigma_{y})dy\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}-\bar{G}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\int_{-\infty}^{\infty}((\sum_{l}\alpha_{l}B_{l}e^{-x/\lambda_{l}}\sum_{j}\alpha_{j}B_{j}e^{-x/\lambda_{j}}-2\sum_{k}\alpha_{k}B_{k}e^{-y/\lambda_{k}}\sum_{j}\alpha_{j}B_{j}e^{-x/\lambda_{j}}+\sum_{m}\alpha_{m}B_{m}e^{-y/\lambda_{m}}\sum_{k}\alpha_{k}B_{k}e^{-y/\lambda_{k}})\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $+2C(x-y)\sum_{j}\alpha_{j}\bar{B}_{j}e^{-x/\lambda_{j}}-2\sum_{k}\alpha_{k}\bar{B}_{k}e^{-y/\lambda_{k}}C(x-y)+C^{2}x^{2}+C^{2}y^{2})P(x,\bar{x},\sigma_{x})dxP(y,\bar{y},\sigma_{y})dy-2C^{2}\bar{x}\bar{y}-\bar{G}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\int_{-\infty}^{\infty}((\sum_{l}\alpha_{l}B_{l}e^{-x/\lambda_{l}}\sum_{j}\alpha_{j}B_{j}e^{-x/\lambda_{j}}-2\sum_{k}\alpha_{k}B_{k}e^{-y/\lambda_{k}}\sum_{j}\alpha_{j}B_{j}e^{-x/\lambda_{j}}+\sum_{m}\alpha_{m}B_{m}e^{-y/\lambda_{m}}\sum_{k}\alpha_{k}B_{k}e^{-y/\lambda_{k}})\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $+2C(x-y)\sum_{j}\alpha_{j}\bar{B}_{j}e^{-x/\lambda_{j}}-2\sum_{k}\alpha_{k}\bar{B}_{k}e^{-y/\lambda_{k}}C(x-y))P(x,\bar{x},\sigma_{x})dxP(y,\bar{y},\sigma_{y})dy+C^{2}((\bar{x}-\bar{y})^{2}+\sigma_{y}^{2}+\sigma_{x}^{2})-\bar{G}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\int_{-\infty}^{\infty}((\sum_{l}\alpha_{l}B_{l}e^{-x/\lambda_{l}}\sum_{j}\alpha_{j}B_{j}e^{-x/\lambda_{j}}-2\sum_{k}\alpha_{k}B_{k}e^{-y/\lambda_{k}}\sum_{j}\alpha_{j}B_{j}e^{-x/\lambda_{j}}+\sum_{m}\alpha_{m}B_{m}e^{-y/\lambda_{m}}\sum_{k}\alpha_{k}B_{k}e^{-y/\lambda_{k}})\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $+2C\sum_{j}\alpha_{j}\bar{B}_{j}e^{-x/\lambda_{j}}x-2C\sum_{j}\alpha_{j}\bar{B}_{j}e^{-x/\lambda_{j}}y-2\sum_{k}\alpha_{k}\bar{B}_{k}e^{-y/\lambda_{k}}Cx+2\sum_{k}\alpha_{k}\bar{B}_{k}e^{-y/\lambda_{k}}Cy)P(x,\bar{x},\sigma_{x})dxP(y,\bar{y},\sigma_{y})dy+C^{2}((\bar{x}-\bar{y})^{2}+\sigma_{y}^{2}+\sigma_{x}^{2})-\bar{G}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\int_{-\infty}^{\infty}(\sum_{l}\alpha_{l}B_{l}e^{-x/\lambda_{l}}\sum_{j}\alpha_{j}B_{j}e^{-x/\lambda_{j}}-2\sum_{k}\alpha_{k}B_{k}e^{-y/\lambda_{k}}\sum_{j}\alpha_{j}B_{j}e^{-x/\lambda_{j}}+\sum_{m}\alpha_{m}B_{m}e^{-y/\lambda_{m}}\sum_{k}\alpha_{k}B_{k}e^{-y/\lambda_{k}})\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}P(x,\bar{x},\sigma_{x})dxP(y,\bar{y},\sigma_{y})dy$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $+2C\sum_{j}\alpha_{j}\bar{B}_{j}e^{-\frac{\bar{x}}{\lambda_{j}}+\frac{\sigma_{x}^{2}}{2\lambda_{j}^{2}}}(\bar{x}-\frac{\sigma_{x}^{2}}{\lambda_{j}})-2C\sum_{j}\alpha_{j}\bar{B}_{j}e^{\sigma_{x}^{2}/2\lambda_{j}}e^{-\bar{x}/\lambda_{j}}\bar{y}-2\sum_{k}\alpha_{k}\bar{B}_{k}e^{\sigma_{y}^{2}/2\lambda_{k}}e^{-\bar{y}/\lambda_{k}}C\bar{x}+2C\sum_{k}\alpha_{k}\bar{B}_{k}e^{-\frac{\bar{y}}{\lambda}+\frac{\sigma_{y}^{2}}{2\lambda_{k}^{2}}}(\bar{y}-\frac{\sigma_{y}^{2}}{\lambda_{k}})+C^{2}((\bar{x}-\bar{y})^{2}+\sigma_{y}^{2}+\sigma_{x}^{2})-\bar{G}^{2}$
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
