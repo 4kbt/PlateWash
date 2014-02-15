@@ -547,7 +547,7 @@ This is just a restatement of Jason's trick, so
 \uwave off
 \noun off
 \color none
-\begin_inset Formula $\bar{G}=\sum_{i}\alpha_{i}\bar{B}_{i}e^{\sigma_{x}^{2}/2\lambda_{i}}e^{-\bar{x}/\lambda_{i}}-\sum_{k}\alpha_{k}\bar{B}_{k}e^{\sigma_{2}^{2}/2\lambda_{k}}e^{-\bar{a}/\lambda_{k}}+C(\bar{x}-\bar{y})$
+\begin_inset Formula $\bar{G}=\sum_{i}\alpha_{i}\bar{B}_{i}e^{\sigma_{x}^{2}/2\lambda_{i}}e^{-\bar{x}/\lambda_{i}}-\sum_{k}\alpha_{k}\bar{B}_{k}e^{\sigma_{y}^{2}/2\lambda_{k}}e^{-\bar{y}/\lambda_{k}}+C(\bar{x}-\bar{y})$
 \end_inset
 
 
@@ -835,7 +835,75 @@ By identification with
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $+2C\sum_{j}\alpha_{j}\bar{B}_{j}e^{-\frac{\bar{x}}{\lambda_{j}}+\frac{\sigma_{x}^{2}}{2\lambda_{j}^{2}}}(\bar{x}-\frac{\sigma_{x}^{2}}{\lambda_{j}})-2C\sum_{j}\alpha_{j}\bar{B}_{j}e^{\sigma_{x}^{2}/2\lambda_{j}}e^{-\bar{x}/\lambda_{j}}\bar{y}-2\sum_{k}\alpha_{k}\bar{B}_{k}e^{\sigma_{y}^{2}/2\lambda_{k}}e^{-\bar{y}/\lambda_{k}}C\bar{x}+2C\sum_{k}\alpha_{k}\bar{B}_{k}e^{-\frac{\bar{y}}{\lambda}+\frac{\sigma_{y}^{2}}{2\lambda_{k}^{2}}}(\bar{y}-\frac{\sigma_{y}^{2}}{\lambda_{k}})+C^{2}((\bar{x}-\bar{y})^{2}+\sigma_{y}^{2}+\sigma_{x}^{2})-\bar{G}^{2}$
+\begin_inset Formula $+2C\left(\sum_{j}\alpha_{j}\bar{B}_{j}e^{-\frac{\bar{x}}{\lambda_{j}}+\frac{\sigma_{x}^{2}}{2\lambda_{j}^{2}}}(\bar{x}-\frac{\sigma_{x}^{2}}{\lambda_{j}})-\sum_{j}\alpha_{j}\bar{B}_{j}e^{\sigma_{x}^{2}/2\lambda_{j}}e^{-\bar{x}/\lambda_{j}}\bar{y}-\sum_{k}\alpha_{k}\bar{B}_{k}e^{\sigma_{y}^{2}/2\lambda_{k}}e^{-\bar{y}/\lambda_{k}}\bar{x}+\sum_{k}\alpha_{k}\bar{B}_{k}e^{-\frac{\bar{y}}{\lambda}+\frac{\sigma_{y}^{2}}{2\lambda_{k}^{2}}}(\bar{y}-\frac{\sigma_{y}^{2}}{\lambda_{k}})\right)+C^{2}((\bar{x}-\bar{y})^{2}+\sigma_{y}^{2}+\sigma_{x}^{2})-\bar{G}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cleaning up, (the second sub-term of the first term appears to contain an
+ asymmetric part under interchange of 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $l$
+\end_inset
+
+ and 
+\begin_inset Formula $j$
+\end_inset
+
+ ).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\left(\sum_{l}\sum_{j\not=l}\alpha_{l}\bar{B}_{l}\alpha_{j}\bar{B}_{j}\left(e^{(\sigma_{x}^{2}/2-\bar{x})/\lambda_{l}+(\sigma_{x}^{2}/2-\bar{x})/\lambda_{j}}-2e^{(\sigma_{y}^{2}/2-\bar{y})/\lambda_{l}+(\sigma_{x}^{2}/2-\bar{x})/\lambda_{j}}+e^{(\sigma_{y}^{2}/2-\bar{y})/\lambda_{l}+(\sigma_{y}^{2}/2-\bar{y})/\lambda_{j}}\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $+\left(\sum_{l}\alpha_{l}^{2}(\bar{B}_{l}^{2}+\sigma_{l}^{2})(e^{(\sigma_{x}^{2}-2\bar{x})/\lambda_{l}}-2e^{(\sigma_{x}^{2}/2-\bar{x}+\sigma_{y}^{2}/2-\bar{y})/\lambda_{l}}+e^{(\sigma_{y}^{2}-2\bar{y})/\lambda_{l}}e)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $+2C\sum_{j}\alpha_{j}\bar{B}_{j}\left(e^{-\frac{\bar{x}}{\lambda_{j}}+\frac{\sigma_{x}^{2}}{2\lambda_{j}^{2}}}(\bar{x}-\frac{\sigma_{x}^{2}}{\lambda_{j}})+e^{-\frac{\bar{y}}{\lambda_{j}}+\frac{\sigma_{y}^{2}}{2\lambda_{j}^{2}}}(\bar{y}-\frac{\sigma_{y}^{2}}{\lambda_{j}})-e^{(\sigma_{x}^{2}/2-\bar{x})/\lambda_{j}}\bar{y}-e^{(\sigma_{y}^{2}/2-\bar{y})/\lambda_{j}}\bar{x}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $+C^{2}((\bar{x}-\bar{y})^{2}+\sigma_{y}^{2}+\sigma_{x}^{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $-\bar{G}^{2}$
 \end_inset
 
 
