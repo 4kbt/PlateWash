@@ -2278,7 +2278,7 @@ Evaluating the integral:
 \end_layout
 
 \begin_layout Standard
-XXXRC - recheck.
+XXXRC - recheck -- it's wrong.
 \end_layout
 
 \begin_layout Subsubsection
@@ -3076,6 +3076,10 @@ Autocollimator
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -3100,6 +3104,11 @@ XXXMA
 
 \begin_layout Plain Layout
 Autocollimator optical diagram
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -5692,7 +5701,14 @@ name "sub:Autocollimator-noise"
 The opto-electronic system used to measure pendulum twist has its own inherent
  noise.
  By design, the autocollimator's relatively white noise floor is chosen
- to sit below the low-frequency thermally-driven angle noise of XXXRC.
+ to sit below the low-frequency thermally-driven angle noise of 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/thermalAngleNoise.tex"
+
+\end_inset
+
+.
  The PlateWash autocollimator's noise floor is approximately XXXRC, as seen
  in Figure 
 \begin_inset CommandInset ref

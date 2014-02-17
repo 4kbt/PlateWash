@@ -2,6 +2,7 @@ fprintf('# defining parameters ');
 
 %From run3077free.m
 fprintf('FREQUENCY IS NOT PROPERLY DEFINED. CHECK run3077free.m for provenance!!!! Post-fit best fit is 13.2 mHz');
+fundamentalConstants
 
 pendulumF0=0.0128; 
 pendulumF0Width = 4e-3;
@@ -36,6 +37,9 @@ weight = 1;
 lockAve = 20;  printInteger(lockAve, [HOMEDIR 'extracted/lockAve.tex']);
 
 TheoSampleTime = 0.8; printDecimal(TheoSampleTime,[HOMEDIR 'extracted/TheoSampleTime.tex'], 1);
+
+thermalTorqueNoise = sqrt(4*k_B*293*kappa/pendulumQ/(2*pi/(2*stepPeriod)));  printSigNumber(thermalTorqueNoise, [HOMEDIR 'extracted/thermalTorqueNoise.tex'], 2);
+thermalAngleNoise = sqrt(4*k_B*293*kappa/pendulumQ/(2*pi/(2*stepPeriod)))/kappa;  printSigNumber(thermalAngleNoise, [HOMEDIR 'extracted/thermalAngleNoise.tex'], 2);
 
 qTesterFreq1=3e-3;
 qTesterWidth1=0.2e-3;
