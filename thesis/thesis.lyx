@@ -636,13 +636,9 @@ key "2007PhRvL..98b1101K"
 m for one extra dimension.
  Greater numbers of extra dimensions are more stringently constrained by
  collider experiments 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXRC Insert citation from bibtex.huge.Search for Signatures of Extra Dimensions
- in the Diphoton Mass Spectrum at the Large Hadron Collider 
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand citet
+key "PhysRevLett.108.111801"
 
 \end_inset
 
@@ -1922,7 +1918,211 @@ Flat plate torque
 \end_layout
 
 \begin_layout Standard
-XXXRC Copy me in!
+For a pendulum of height 
+\begin_inset Formula $h$
+\end_inset
+
+, width 
+\begin_inset Formula $w$
+\end_inset
+
+, and center to step distance 
+\begin_inset Formula $j$
+\end_inset
+
+, the torque on one inlay, neglecting factors from the attractor, is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula $\tau=2\pi\alpha Gh(w/2-j)((w/2-j)/2+j)(\rho_{h}-\rho_{l})\lambda^{2}e^{-\frac{x}{\lambda}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\tau=2\pi\alpha Gh(w/2-j)((w/4+j/2)(\rho_{h}-\rho_{l})\lambda^{2}e^{-\frac{x}{\lambda}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\tau=\pi\alpha Gh(w/2-j)(w/2+j)(\rho_{h}-\rho_{l})\lambda^{2}e^{-\frac{x}{\lambda}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\tau=\pi\alpha Gh(\frac{w^{2}}{4}+wj-jw-j^{2})(\rho_{h}-\rho_{l})\lambda^{2}e^{-\frac{x}{\lambda}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\tau=\pi\alpha\rho_{a}Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right))\lambda^{2}e^{-\frac{x}{\lambda}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The torque due to a single attractor sheet of density 
+\begin_inset Formula $\rho_{a}$
+\end_inset
+
+, thickness 
+\begin_inset Formula $t_{a}$
+\end_inset
+
+, with an inlay thickness 
+\begin_inset Formula $t_{i}$
+\end_inset
+
+ is 
+\begin_inset Formula $\tau_{one}=\rho_{a}\tau\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{i}/\lambda}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\tau_{one}(x)=\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}e^{-\frac{x}{\lambda}}\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{i}/\lambda}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Taking the difference between the inlay torques, with a pendulum thickness
+ 
+\begin_inset Formula $t_{p}$
+\end_inset
+
+, 
+\begin_inset Formula $\tau_{full}=\tau_{one}(x)-\tau_{one}(x+t_{p}-t_{i})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\tau_{full}=\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}\left(e^{-x/\lambda}-e^{-(x+t_{p}-t_{i})/\lambda}\right)\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{i}/\lambda}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+With an attractor stroke 
+\begin_inset Formula $s$
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Delta N_{full}=\pi\alpha Gh(\frac{w^{2}}{4}-j^{2})(\rho_{h}-\rho_{l})\rho_{a}\lambda^{2}(e^{-x/\lambda}-e^{-(x+t_{p}-t_{i})/\lambda}-e^{-(x+s)/\lambda}+e^{-(x+s+t_{p}-t_{i})/\lambda})(1-e^{-t_{a}/\lambda})(1-e^{-t_{i}/\lambda})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Delta\tau_{full}=\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}e^{-x/\lambda}\left(1-e^{-(t_{p}-t_{i})/\lambda}-e^{-s/\lambda}\left(1-e^{-(t_{p}-t_{i})/\lambda}\right)\right)\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{i}/\lambda}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $\lambda\ll t_{p},t_{i},t_{a}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Delta N_{full}\approx\pi\alpha Gh(\frac{w^{2}}{4}-j^{2})(\rho_{h}-\rho_{l})\rho_{a}\lambda^{2}(e^{-x/\lambda}-e^{-(x+s)/\lambda})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Delta\tau_{full}\approx\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}e^{-x/\lambda}\left(1-e^{-s/\lambda}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If, further, 
+\begin_inset Formula $\lambda\ll s$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Delta\tau_{full}\approx\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}e^{-x/\lambda}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
