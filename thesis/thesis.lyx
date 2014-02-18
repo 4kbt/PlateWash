@@ -13700,7 +13700,7 @@ m of the attractor and pendulum
 \end_layout
 
 \begin_layout Plain Layout
-
+XXXRC
 \end_layout
 
 \end_inset
@@ -13767,7 +13767,14 @@ XXXMI: algorithm me!
 \end_inset
 
 .
- The circuit is modelled as an LCR resonator, see XXXRC.
+ The circuit is modelled as an LCR resonator, see 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Capacitor-Systematic"
+
+\end_inset
+
+.
  When the circuit 
 \begin_inset Formula $Q$
 \end_inset
@@ -13911,7 +13918,7 @@ status open
  to be 
 \begin_inset CommandInset include
 LatexCommand input
-filename "../systematics/magnetic/extracted/CoilFieldAtCenter.tex"
+filename "../systematics/magnetic/extracted/verticalField.tex"
 
 \end_inset
 
@@ -13919,9 +13926,39 @@ filename "../systematics/magnetic/extracted/CoilFieldAtCenter.tex"
 \begin_inset space ~
 \end_inset
 
-T vertical, XXXRC transverse, and XXXRC attractor-axial in the on-apparatus
- configuration and XXXRC horizontal in the position at the side of the instrumen
-t.
+T vertical, 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../systematics/magnetic/extracted/transverselField.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+T transverse, and 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../systematics/magnetic/extracted/axialField.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+T attractor-axial in the on-apparatus configuration
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ and XXXMI horizontal in the position at the side of the instrument
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
