@@ -7362,10 +7362,125 @@ Casimir effect
 \end_layout
 
 \begin_layout Standard
-The Casimir effect is not expected to penetrate the foil.
- See XXXRC.
- If it did, the effect would be interesting in its own right.
- 
+The Casimir effect is not expected to penetrate a 10
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m beryllium-copper foil, according to calculations by Chesler, Yaffe, Andreev,
+ and Jaffe 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "2007PhRvL..98b1101K"
+
+\end_inset
+
+.
+ Furthermore, for the attractor-pendulum separations in this experiment,
+ the Casimir force is too weak.
+ As an example, the zero-temperature Casimir pressure on conducting plates
+ (
+\begin_inset Formula $P=-\pi^{2}\hbar c/240a^{4}$
+\end_inset
+
+) separated by 
+\begin_inset Formula $a=$
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/casimirClosestApproach.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+m is 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/casimirPressure.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+N/m
+\begin_inset Formula $^{2}$
+\end_inset
+
+, while the gravitational pressure between two 
+\begin_inset Formula $50$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m-thick infinite sheets of tantalum (or equivalently, the pressure due to
+ a 
+\begin_inset Formula $\lambda=50$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m, 
+\begin_inset Formula $\alpha=1$
+\end_inset
+
+ Yukawa interaction) is 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/yukawaPressureCasimirComparison.tex"
+
+\end_inset
+
+.
+ Finally, the symmetry of the PlateWash pendulum acts to suppress the Casimir
+ torque, as the pendulum is constructed of gold-coated conducting metals
+ (with differing resistivity).
+ If the pendulum were oriented parallel to the attractor and the resistivities
+ of the pendulum body and inlays equal (Ti: 390
+\begin_inset space ~
+\end_inset
+
+n
+\begin_inset Formula $\Omega$
+\end_inset
+
+-m, Ta: 122
+\begin_inset space ~
+\end_inset
+
+n
+\begin_inset Formula $\Omega$
+\end_inset
+
+-m 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "CRC2000"
+
+\end_inset
+
+), then the Casimir torque on the pendulum would be zero at all separations.
 \end_layout
 
 \begin_layout Section
