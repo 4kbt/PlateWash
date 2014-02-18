@@ -6,7 +6,9 @@ PARTS := parts/
 
 MASSES=jan13Attractor.m jan13Pendulum.m
 
-all: plots/brickDemo.eps bellowsTorque plots/fullSimulation.eps plots/pmScanPlot.eps plots/offsetAttractorAssembly.eps
+SDIR := SimulationOutput
+
+all: plots/brickDemo.eps bellowsTorque plots/fullSimulation.eps plots/pmScanPlot.eps plots/offsetAttractorAssembly.eps $(SDIR)/scanMaxDiff.tex
 
 plots/brickDemo.eps : $(MLIB) brickDemo.m brickDemo.gpl $(PARTS)
 	$(OCT) brickDemo.m
@@ -29,7 +31,6 @@ simulation : $(MLIB) processRun.m $(PARTS)
 	$(OCT) processRun.m
 	$(GNU) 
 
-SDIR := SimulationOutput
 
 #This command must precede the $(SDIR)/%dat make, lest confusion result. May change with Make 3.82.
 $(SDIR)/scans/%.dat :  $(MLIB) $(PARTS) defineAttractorTranslation.m processAttractorComponent.m
@@ -67,6 +68,13 @@ $(SDIR)/scans/scanMerge.dat : mergeScanComputations.sh\
 				$(SDIR)/scans/attractorPMScan8.dat\
 				$(SDIR)/scans/attractorPMScan9.dat
 	./mergeScanComputations.sh
+
+$(SDIR)/scanMaxDiff.tex : scanMaxDiff.m 
+# $(SDIR)/scans/scanMerge.dat
+	sed '/^\#/d' $(SDIR)/scans/scanMerge.dat | awk '{print $$13}' > $(SDIR)/scans/mergedTorqueOnly.dat
+	$(HOMEDIR)/bin/whiteLineStrip.sh $(SDIR)/scans/mergedTorqueOnly.dat
+	$(OCT) scanMaxDiff.m
+	$(HOMEDIR)/bin/mathify.sh SimulationOutput/*.tex
 
 plots/pmScanPlot.eps : pmScanPlot.gpl $(SDIR)/scans/scanMerge.dat
 	$(GNU) pmScanPlot.gpl

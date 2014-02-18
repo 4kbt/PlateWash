@@ -6661,12 +6661,42 @@ N-m level.
 Horizontal displacement of the pendulum is an excellent potential test for
  local effects, which we did not do in the reported sequence of runs.
  We did, however, do horizontal displacements prior to beginning this sequence,
- without breaking vacuum in between; no The largest voids observed in the
- surfaces under a microscope are about XXXRC in size.
- Note that a distribution of voids across the surface can, with sufficiently
- many voids, be viewed as a reduction in the density of the material.
+ without breaking vacuum in between; no prominent effect was observed.
+ The largest voids observed in the surfaces under a microscope are certainly
+ <
+\begin_inset Formula $10$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m in depth.
+ 
+\end_layout
+
+\begin_layout Standard
+A random distribution of voids across the surface can, with sufficiently-many
+ voids, be viewed as a reduction in the density of the material.
  This is especially true if the voids are smaller than a characteristic
  length-scale of interest.
+ We see no clear signs of a distribution of voids at the 
+\begin_inset Formula $>5$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m level; therefore such a correction is not required for our purposes.
 \end_layout
 
 \begin_layout Paragraph
@@ -6980,15 +7010,29 @@ reference "fig:AttractorScan"
 \end_layout
 
 \begin_layout Standard
-Torque differences were computed directly from the pendulum and attractor
- scans to estimate the influence of the attractor dishing.
- XXXRC.
-\end_layout
+The torque due to all known flatness variations (roughness, irregularities,
+ and dishing of surfaces) of attractor and pendulum were estimated numerically
+ (see 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Torques-from-surface"
 
-\begin_layout Standard
-The torque due to the flatness variations of attractor and pendulum was
- estimated numerically to be XXXRC N-m/m in the near field and negligible
- elsewhere.
+\end_inset
+
+) to be less than 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../NewtonianSimulation/SimulationOutput/scanMaxDiff.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+N-m for all possible strokes.
+ Models that include the smoothness of the torque curve can yield a better
+ limit if necessary.
  
 \end_layout
 
@@ -13473,6 +13517,13 @@ The pendulum is oriented at an angle of XXXRC with respect to the attractor.
 
 \begin_layout Subsection
 Torques from surface scans
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Torques-from-surface"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -13691,16 +13742,14 @@ Torques due to the leading
 \begin_inset Formula $\mu$
 \end_inset
 
-m of the attractor and pendulum
+m of the attractor and pendulum, computed directly from the laser-microscope
+ scans of the attractor and pendulum surfaces.
+ XXXRC Alignment
 \end_layout
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
-XXXRC
 \end_layout
 
 \end_inset
