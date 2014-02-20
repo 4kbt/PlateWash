@@ -14135,11 +14135,12 @@ Attractor Bias
 \end_layout
 
 \begin_layout Standard
-The attractor was biased to XXXRC
+The attractor was biased to 18
 \begin_inset space ~
 \end_inset
 
-V through a resistor, and the experiment was operated with XXXRC stroke.
+V through a resistor, and the experiment was operated with a random stroke
+ pattern.
  The difference in torque-difference between voltage-on and voltage-off
  states was XXXRC
 \begin_inset space ~
