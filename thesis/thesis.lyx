@@ -14245,15 +14245,39 @@ k
 \end_inset
 
 ) of power, both heating the attractor and providing a spatial gradient.
- This was observed to create an XXXRC
+ This was observed to create a 
+\begin_inset Formula $\sim300$
+\end_inset
+
+
 \begin_inset space ~
 \end_inset
 
-K rise in attractor temperature and create an XXXRC
+mK 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMA automate me!
+\end_layout
+
+\end_inset
+
+rise in attractor spindle temperature and create an 100
 \begin_inset space ~
 \end_inset
 
-K temperature gradient across the attractor.
+mK 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMA automate me!
+\end_layout
+
+\end_inset
+
+ temperature gradient across the attractor.
  The attractor was operated with long and short strokes and the run analyzed
  blind.
  For long strokes, the difference in torque-difference between heat-on and
