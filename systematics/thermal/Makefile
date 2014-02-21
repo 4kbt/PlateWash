@@ -29,9 +29,16 @@ $(LONGTEX) $(LONGDAT)  longStroke  :  $(TLONG) $(PREREQUISITES)
 	$(OCT) $(TLONG)
 	$(HOMEDIR)/bin/mathify.sh extracted/*
 
+aveTemp : $(HOMEDIR)/data/thermistorData/ avePlots.sh
+	./avePlots.sh $(HOMEDIR)/glib/averageThermData.awk $(HOMEDIR)/data/thermistorData/
+	
+	
+
+
 clean : 
 	-rm plots/*.dat
 	-rm extracted/*.tex
+	-rm aveTempData/*.dat
 	$(MAKE) -C plots clean
 
 toy : 
