@@ -14497,19 +14497,18 @@ Yukawa Potential
 \end_layout
 
 \begin_layout Subsection
-Power Law
+Other models:
 \end_layout
 
-\begin_layout Subsection
-Fat Graviton
-\end_layout
+\begin_layout Standard
+With these data, it is possible to place useful limits upon interactions
+ such as power-law, Fat Graviton, Chameleon, Unparticles, and more.
+ In each scenario, a new 
+\begin_inset Formula $\chi^{2}$
+\end_inset
 
-\begin_layout Subsection
-Chameleon
-\end_layout
-
-\begin_layout Subsection
-Unparticles
+ approach must be taken to properly address systematic uncertainties.
+ For this reason, this thesis must limit its results to Yukawa potentials.
 \end_layout
 
 \begin_layout Chapter
