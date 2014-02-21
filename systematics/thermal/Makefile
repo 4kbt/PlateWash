@@ -2,7 +2,7 @@ include ../../Makefile.inc
 
 PREREQUISITES := $(HOMEDIR)/runAnalysis/results Makefile
 
-all: shortStroke longStroke
+all: shortStroke longStroke plots/aveTempPlot.eps
 	$(MAKE) -C plots
 
 TSHORT := thermalShortStroke.m
@@ -32,7 +32,8 @@ $(LONGTEX) $(LONGDAT)  longStroke  :  $(TLONG) $(PREREQUISITES)
 aveTemp : $(HOMEDIR)/data/thermistorData/ avePlots.sh
 	./avePlots.sh $(HOMEDIR)/glib/averageThermData.awk $(HOMEDIR)/data/thermistorData/
 	
-	
+plots/aveTempPlot.eps : aveTempPlot.gpl aveTemp
+	$(GNU) aveTempPlot.gpl
 
 
 clean : 

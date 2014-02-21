@@ -14309,6 +14309,79 @@ N-m.
  
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../systematics/thermal/plots/aveTempPlot.eps
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Temperatures during thermal testing.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Short-Range
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+Rot-Wash
+\begin_inset Quotes erd
+\end_inset
+
+ are temperature sensors nearby in the room.
+ The attractor leg thermistors are on the attractor spindles at left and
+ right (but not top).
+ The baseplate thermistor is screwed into the large aluminum baseplate internal
+ to the apparatus.
+ Spikes prior to day ~608 are from heater-verification tests.
+ The large step (red above blue) is when the heater on leg 1 was turned
+ on.
+ The second step (blue above red) has the heater on leg 2 turned on, and
+ the heater on leg 1 turned off.
+ At the end of that sequence (~day 628), both heaters were turned off.
+ The sensors are hand calibrated to match each other and the exterior sensors
+ prior to day 608.
+ Reliability of this calibration is low, but sufficient, as the important
+ scaling quantities are the ratios of the heated temperature and gradient
+ to those measured without heating.
+ The DC discrepancy between internal and external sensors after day 630
+ is not understood, but no known instrumental effect accounts for it, so
+ it may correspond to a temperature rise within the PlateWash enclosure.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Temperature variation at attractor frequency
 \end_layout
@@ -14340,9 +14413,9 @@ mW of light is incident upon the foil.
 \end_inset
 
 m wavelength, copper is more than 95% reflective.
- Much of the light should make only one reflection.
+ Much of the light makes only one reflection.
  While only 4% of the reflected light re-couples into the fiber-optic core,
- much of it should couple back into the fiber cladding dissipate elsewhere.
+ much of it should couple back into the fiber cladding and dissipate elsewhere.
  Nonetheless, the few microwatts that must be dissipated through conduction
  in the foil may contribute to a slight foil temperature rise.
  To test for any related systematic effect, in runs XXXRC, we operated the
