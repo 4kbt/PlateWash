@@ -1,3 +1,15 @@
+%usage:
+%x: start position
+%y: end position
+%sx: std dev of x
+%sy: std dev of y
+%B: vector of systematic central values
+%sB: vector of systematic std devs
+%A: alpha
+%L: lambda
+%C: slope
+%This function presently calculates for force, not torque, the difference should only correspond to a shift in alpha.
+%This function assumes parallel plates.
 function vg = fittingvarG(x,y,sx,sy,B,sB, A,L,C)
 
 	accum = 0;
