@@ -5,8 +5,8 @@
 %sy: std dev of y
 %B: vector of systematic central values
 %sB: vector of systematic std devs
-%A: alpha
-%L: lambda
+%A: Vector of alphas
+%L: Vector of lambdas
 %C: slope
 %This function presently calculates for force, not torque, the difference should only correspond to a shift in alpha.
 %This function assumes parallel plates.

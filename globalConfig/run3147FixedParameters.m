@@ -89,10 +89,12 @@ pfTouch =  56+17+ 12+2 %swag
 touch2937 =  147 -2 + pfTouch
 
 
-aCol = 105
+aCol = 105;
+aErrCol = aCol + numSensors*15;
 bCol = 170;
+bErrCol = bCol + numSensors*15;
 torCol = torqueCol;
-torerrCol = 6*65+torCol;
+torerrCol = 6*numSensors+torCol;
 
 torErrThresh = 1e-14;
 torErrMin    = 1e-18;
