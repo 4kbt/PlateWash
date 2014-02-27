@@ -1,4 +1,4 @@
-function X2 = chiSquareWithSystematics( pM , alphas, lambdas, slope)
+function X2 = chiSquareWSystematics( pM , alphas, lambdas, slope)
 	run3147FixedParameters;
 
 	x1Vec = pM(:,aCol);
@@ -13,7 +13,6 @@ function X2 = chiSquareWithSystematics( pM , alphas, lambdas, slope)
 
 	X2 = sum( (pM(:,torCol) - GBV ).^2  %lqr
 		./(pM(:,torerrCol).^2 + varG )
-			) %division
 		); %sum
 
 end
