@@ -1,7 +1,7 @@
 HOMEDIR := /home/charlie/trialEotwash/Eotwash/
 
 OCT:= octave --no-init-file \
-	--eval "HOMEDIR = \"$(HOMEDIR)\";"\
+	--eval "global HOMEDIR = \"$(HOMEDIR)\";"\
 	--eval 'initializeOctave;'\
 	-p $(HOMEDIR)/globalConfig/ \
 	-q 
