@@ -2,8 +2,5 @@
 function out = bootstrapData(data)
 	%'bootstrapping'
 	r = floor(rand(rows(data),1)*rows(data)) + 1;
-	out = data;
-	for i = 1:rows(data)
-		out(i,:)  = data(r(i),:); 
-	end
+	out = data(r,:);
 endfunction
