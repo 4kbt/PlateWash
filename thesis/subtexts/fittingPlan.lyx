@@ -392,7 +392,7 @@ Linear Yukawa
 \uwave off
 \noun off
 \color none
-\begin_inset Formula $=\frac{1}{\sigma_{a}\sqrt{2\pi}}e^{-\frac{\bar{a}}{\lambda}+\frac{\sigma_{a}^{2}}{2\lambda^{2}}}\int_{-\infty}^{\infty}ae^{-(a^{2}-(\bar{a}-\frac{\sigma_{a}^{2}}{\lambda}))^{2}/2\sigma_{a}^{2}}da$
+\begin_inset Formula $=\frac{1}{\sigma_{a}\sqrt{2\pi}}e^{-\frac{\bar{a}}{\lambda}+\frac{\sigma_{a}^{2}}{2\lambda^{2}}}\int_{-\infty}^{\infty}ae^{-(a-(\bar{a}-\frac{\sigma_{a}^{2}}{\lambda}))^{2}/2\sigma_{a}^{2}}da$
 \end_inset
 
  
@@ -568,7 +568,7 @@ This is just a restatement of Jason's trick, so
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $=\int_{-\infty}^{\infty}\left(\left(\sum_{j}\alpha_{j}B_{j}e^{-x/\lambda_{j}}+Cx-\sum_{k}\alpha_{k}B_{k}e^{-y/\lambda_{k}}-Cy\right)-\bar{G}\right)^{2}P(x,\bar{x},\sigma_{x})dxP(y,\bar{y},\sigma_{y})dy\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}$
+\begin_inset Formula $=\int_{-\infty}^{\infty}\left(\left(\sum_{j}\alpha_{j}B_{j}e^{-x/\lambda_{j}}+Cx-\sum_{j\not=l}\sum_{k}\alpha_{k}B_{k}e^{-y/\lambda_{k}}-Cy\right)-\bar{G}\right)^{2}P(x,\bar{x},\sigma_{x})dxP(y,\bar{y},\sigma_{y})dy\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}$
 \end_inset
 
 
