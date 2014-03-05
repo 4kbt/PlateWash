@@ -65,11 +65,10 @@ The fitting plan:
 
 \begin_layout Enumerate
 Define a fitting function, 
-\begin_inset Formula $F(x,B_{1\dots n}|\alpha_{1\ldots n},\lambda_{1\ldots n})=\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}e^{-x/\lambda_{i}}+Cx$
+\begin_inset Formula $F(x,B_{1\dots n}|\alpha_{1\ldots n},\lambda_{1\ldots n})=\pi Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}\left(1-e^{-(t_{p}-t_{i})/\lambda_{i}}\right)\left(1-e^{-t_{a}/\lambda_{i}}\right)\left(1-e^{-t_{i}/\lambda_{i}}\right)e^{-x/\lambda_{i}}+Cx$
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Enumerate
