@@ -1971,6 +1971,11 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
+XXXRC - vectorized yukawa has a two here.
+ Why?
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \[
 \tau=\pi\alpha\rho_{a}Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right))\lambda^{2}e^{-\frac{x}{\lambda}}
