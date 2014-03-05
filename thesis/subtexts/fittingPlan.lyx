@@ -72,6 +72,22 @@ Define a fitting function,
 \end_layout
 
 \begin_layout Enumerate
+Let the thickness corrections be 
+\begin_inset Formula $T(\lambda)=\left(1-e^{-(t_{p}-t_{i})/\lambda_{i}}\right)\left(1-e^{-t_{a}/\lambda_{i}}\right)\left(1-e^{-t_{i}/\lambda_{i}}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+So, 
+\begin_inset Formula $F(x,B_{1\dots n}|\alpha_{1\ldots n},\lambda_{1\ldots n})=\pi Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}T(\lambda_{i})e^{-x/\lambda_{i}}+Cx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
 Define 
 \begin_inset Formula $G(x,y\dots)=F(x,\dots)-F(y,\dots)$
 \end_inset
@@ -475,7 +491,7 @@ This is just a restatement of Jason's trick, so
 \end_layout
 
 \begin_layout Subsection
-\begin_inset Formula $\bar{G}$
+\begin_inset Formula $\bar{F}$
 \end_inset
 
 
@@ -494,7 +510,7 @@ This is just a restatement of Jason's trick, so
 \uwave off
 \noun off
 \color none
-\begin_inset Formula $\bar{G}=\int_{-\infty}^{\infty}G(x,y,B_{1\ldots n},\alpha_{1\ldots n},\lambda_{1\ldots n})P(x,\bar{x},\sigma_{x})dxP(y,\bar{y},\sigma_{y})dy\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}$
+\begin_inset Formula $\bar{F}=\int_{-\infty}^{\infty}F(x,y,B_{1\ldots n},\alpha_{1\ldots n},\lambda_{1\ldots n})P(x,\bar{x},\sigma_{x})dx\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}$
 \end_inset
 
 
@@ -513,7 +529,7 @@ This is just a restatement of Jason's trick, so
 \uwave off
 \noun off
 \color none
-\begin_inset Formula $\bar{G}=\int_{-\infty}^{\infty}\left(\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}e^{-x/\lambda_{i}}+Cx-\sum_{k}\alpha_{k}B_{k}\lambda_{k}^{2}e^{-y/\lambda_{k}}-Cy\right)P(x,\bar{x},\sigma_{x})dxP(y,\bar{y},\sigma_{y})dy\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}$
+\begin_inset Formula $\bar{F}=\int_{-\infty}^{\infty}\left(\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}e^{-x/\lambda_{i}}+Cx\right)P(x,\bar{x},\sigma_{x})dx\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}$
 \end_inset
 
 
@@ -532,7 +548,7 @@ This is just a restatement of Jason's trick, so
 \uwave off
 \noun off
 \color none
-\begin_inset Formula $\bar{G}=\int_{-\infty}^{\infty}\left(\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}e^{-x/\lambda_{i}}-\sum_{k}\alpha_{k}B_{k}\lambda_{k}^{2}e^{-y/\lambda_{k}}\right)P(x,\bar{x},\sigma_{x})dxP(y,\bar{y},\sigma_{y})dy\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}+C(\bar{x}-\bar{y})$
+\begin_inset Formula $\bar{F}=\int_{-\infty}^{\infty}\left(\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}e^{-x/\lambda_{i}}\right)P(x,\bar{x},\sigma_{x})dx\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}+C\bar{x}$
 \end_inset
 
 
@@ -551,7 +567,7 @@ This is just a restatement of Jason's trick, so
 \uwave off
 \noun off
 \color none
-\begin_inset Formula $\bar{G}=\int_{-\infty}^{\infty}\left(\sum_{i}\alpha_{i}\bar{B}_{i}\lambda_{i}^{2}e^{-x/\lambda_{i}}-\sum_{k}\alpha_{k}\bar{B}_{k}\lambda_{k}^{2}e^{-y/\lambda_{k}}\right)P(x,\bar{x},\sigma_{x})dxP(y,\bar{y},\sigma_{y})dy+C(\bar{x}-\bar{y})$
+\begin_inset Formula $\bar{F}=\int_{-\infty}^{\infty}\left(\sum_{i}\alpha_{i}\bar{B}_{i}\lambda_{i}^{2}e^{-x/\lambda_{i}}\right)P(x,\bar{x},\sigma_{x})dx+C\bar{x}$
 \end_inset
 
 
@@ -570,7 +586,7 @@ This is just a restatement of Jason's trick, so
 \uwave off
 \noun off
 \color none
-\begin_inset Formula $\bar{G}=\sum_{i}\alpha_{i}\bar{B}_{i}\lambda_{i}^{2}e^{\sigma_{x}^{2}/2\lambda_{i}}e^{-\bar{x}/\lambda_{i}}-\sum_{k}\alpha_{k}\bar{B}_{k}\lambda_{k}^{2}e^{\sigma_{y}^{2}/2\lambda_{k}}e^{-\bar{y}/\lambda_{k}}+C(\bar{x}-\bar{y})$
+\begin_inset Formula $\bar{F}=\sum_{i}\alpha_{i}\bar{B}_{i}\lambda_{i}^{2}e^{\sigma_{x}^{2}/2\lambda_{i}}e^{-\bar{x}/\lambda_{i}}+C\bar{x}$
 \end_inset
 
 
