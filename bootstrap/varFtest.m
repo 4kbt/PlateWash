@@ -6,4 +6,6 @@ L = ones(3,1);
 A = L;
 C = 1;
 
+FBar(x,sx,B,A,L,C)
+
 varF(x,sx,B,sB,A,L,C)

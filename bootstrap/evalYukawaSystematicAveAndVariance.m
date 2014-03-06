@@ -27,16 +27,10 @@ function [GBV fvG] = evalYukawaSystematicAveAndVariance(x1Vec, x2Vec, sx1Vec, sx
 		error('malformed argument!');
 	end
 
-	for ctr = 1:r
+	GBV =   FBar(x1Vec,sx1Vec,BMat,alphas,lambdas,slope) ...
+	      - FBar(x2Vec,sx2Vec,BMat,alphas,lambdas,slope);
 
-		GBV(ctr) = GBar(x1Vec(ctr) , x2Vec(ctr), sx1Vec(ctr), sx2Vec(ctr),
-                                BMat(ctr,:), sBMat(ctr,:), alphas, lambdas, slope);
-		
-		fvG(ctr) = fittingvarG(x1Vec(ctr) , x2Vec(ctr), sx1Vec(ctr), sx2Vec(ctr),
-				BMat(ctr,:), sBMat(ctr,:), alphas, lambdas, slope);
-
-	end
-
-	GBV = GBV'; fvG = fvG';
+	fvG =   varF(x1Vec,sx1Vec,BMat,sBMat,alphas,lambdas,slope) ...
+	      + varF(x2Vec,sx2Vec,BMat,sBMat,alphas,lambdas,slope);
 
 end

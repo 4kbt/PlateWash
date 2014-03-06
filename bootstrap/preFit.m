@@ -37,12 +37,21 @@ else
 end
 
 
+
 %These are the data which will be fit.
 dBSArchive = [pM(:,aCol) pM(:,bCol) pM(:,torCol) pM(:,torerrCol)];
 
 %Calibrate distance
 dBSArchive(:,1) = (touch2937 - polyval(pressEncP, dBSArchive(:,1)) ) * 1e-6;
 dBSArchive(:,2) = (touch2937 - polyval(pressEncP, dBSArchive(:,2)) ) * 1e-6;
+
+
+postLockinSignalInjection;
+pM(:,aCol) = (touch2937 - polyval(pressEncP, pM(:,aCol)) ) * 1e-6;
+pM(:,bCol) = (touch2937 - polyval(pressEncP, pM(:,bCol)) ) * 1e-6;
+
+pM(:,torqueCol) = dBSArchive(:,3);
+
 
 %Torque threshold cut
 dBSArchive = dBSArchive(dBSArchive(:,4)      < torErrThresh,:);

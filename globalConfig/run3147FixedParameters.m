@@ -1,5 +1,13 @@
 fprintf('# defining parameters ');
 
+if(exist("DoNotExtractFixedParameters"))
+        function printInteger() ;  end
+        function printSigNumber() ; end
+        function printSigError();  end
+	function fprintf(); 	   end
+end
+
+
 %From run3077free.m
 fprintf('FREQUENCY IS NOT PROPERLY DEFINED. CHECK run3077free.m for provenance!!!! Post-fit best fit is 13.2 mHz');
 fundamentalConstants
