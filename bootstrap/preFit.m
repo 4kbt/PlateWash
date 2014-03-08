@@ -50,6 +50,9 @@ postLockinSignalInjection;
 pM(:,aCol) = (touch2937 - polyval(pressEncP, pM(:,aCol)) ) * 1e-6;
 pM(:,bCol) = (touch2937 - polyval(pressEncP, pM(:,bCol)) ) * 1e-6;
 
+pM(:,aErrCol) = pM(:,aErrCol) * pressEncP(1)*-1*1e-6;
+pM(:,bErrCol) = pM(:,bErrCol) * pressEncP(1)*-1*1e-6;
+
 pM(:,torqueCol) = dBSArchive(:,3);
 
 
