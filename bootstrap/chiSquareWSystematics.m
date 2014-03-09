@@ -23,21 +23,14 @@ function X2 = chiSquareWSystematics( pM , A, L, C)
 	sx2Vec = pM(:,bErrCol);
 
 	BMat = 1*ones(rows(x1Vec),Nsyst);
-	sBMat = 0.1*BMat;
+	BMat = repmat([1 0 0], rows(x1Vec), 1) ; 
+	sBMat = 0*BMat;
 
 	[GBV varG] = evalYukawaSystematicAveAndVariance(x1Vec, x2Vec, sx1Vec, sx2Vec, BMat, sBMat, alphas, lambdas, slope);
-
-	
-
-%	o = [pM(:,aCol), pM(:,bCol), pM(:,torCol), GBV]
-%	save 'plotme.dat' o
-%pause
 
 	X2 = sum( (pM(:,torCol) - GBV ).^2  %lqr
 		./(pM(:,torerrCol).^2 +varG )
 		) %sum
-
-%	X2 = (A-1).^2 +(L - 1).^2 + (C + 2).^2
 
 	if(X2 < 0)
 		error("Chi squared is less than zero. That is impossible! Go fix it!");

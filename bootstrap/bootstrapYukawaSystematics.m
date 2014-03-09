@@ -37,7 +37,7 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 %	ranSeed = [1.0001, 1, 2]; 
 %	ranSeed = [1.0001, 1]; 
 %	ranSeed = rand(1,2);
-%	try
+	try
 		%When analyzing, make a cut on csMin
 		switch fitAlgorithm
 		 case {'NMS'}
@@ -46,7 +46,7 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 			bootstrapOut(bootStrapCounter,:) = bsO; 
 		 case {'SQP'}
 %			[x, csMin, fitInfo, iter, nf]   = sqp(ranSeed, cSFunc, [], [], [1e-2, -realmax], [100, realmax],100)
-			[x, csMin, fitInfo, iter, nf]   = sqp(ranSeed, cSFunc, [], [], [1e-2, -realmax,-100], [100, realmax, 100],100)
+			[x, csMin, fitInfo, iter, nf]   = sqp(ranSeed, cSFunc, [], [], [1e-2, -1e8,-100], [100, 1e8, 100],100)
 %			[x, csMin, fitInfo, iter, nf]   = sqp(ranSeed, cSFunc, [], [], [], [], 500, 1e-22);
 			bsO = [ x(1) x(2) csMin nf iter fitInfo ranSeed 2];
 			%if fit converged, save it.
@@ -80,9 +80,9 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 			outfilename = ['output/bootstrapYukawa.SimulFloat' fitAlgorithm '.dat'];
 		end
 		save( outfilename, "bootstrapOut", "injParameters");
-%	catch
-%		'FIT ERROR!'
-%		errorMessage
-%	end
+	catch
+		'FIT ERROR!'
+		errorMessage
+	end
 
 end %bsCnt
