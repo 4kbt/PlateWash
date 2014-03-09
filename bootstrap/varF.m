@@ -1,5 +1,5 @@
 function vF = varF(x,sx,B,sB,A,L,C)
-%{
+
 	T = YukFiniteSizeCorrections(L);
 	if(T<0) error('T is broken. fix.'); end
 	Q = YukPreFactor;
@@ -13,9 +13,13 @@ function vF = varF(x,sx,B,sB,A,L,C)
 	sx2 = sx.^2;
 	ALT2m = ALT * ALT.';
 
+	exparg = zeros(rows(L),rows(L),rows(x));
+	preFactor = exparg;
+	
 	for ctr = 1:rows(x)
 		exparg(:,:,ctr) = (sx2(ctr)/2-x(ctr)) * Lij;
 		preFactor(:,:,ctr) = ALT2m.* (B(ctr,:) * B(ctr,:).');
+		%Strip the diagonal
 	end
 
 	expval = exp(exparg);
@@ -39,8 +43,8 @@ function vF = varF(x,sx,B,sB,A,L,C)
 		+ C^2*x.^2 
 		- FBar(x,sx,B,A,L,C).^2 
 		);
-%}
-	vF = 0;
+
+%	vF = 0;
 
 	if( vF < 0) 
 		error('variance of F is less than zero. Fix.');
