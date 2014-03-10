@@ -54,7 +54,7 @@ qTesterWidth1=0.2e-3;
 qTesterChunkCalibWidth1 = 0.5e-3;
 
 fitOneOmega = false;
-doNotFitTwoOmega = 1
+doNotFitTwoOmega = 1;
 
 qTesterFreq   = 3*2e-3;
 qTesterWidth  = 0.2e-3;
@@ -63,8 +63,7 @@ printSigNumber(qTesterTorque, [HOMEDIR 'extracted/qTesterTorque.tex'],3);
 
 spikeChopWidth = 100/TheoSampleTime; % in samples
 
-doNotRemoveSpikes = 1
-%doNotFitTwoOmega = 1
+doNotRemoveSpikes = 1;
 
 fprintf('# setup ');
 numSensors = 65;
@@ -93,8 +92,8 @@ filterSensorHigh = NyquistFrequency;   printInteger( 1000*filterSensorHigh,  [HO
 printInteger( 1.0./filterHigh/2, [HOMEDIR 'extracted/filterHighLag.tex']);
 
 %Fit configuration
-pfTouch =  56+17+ 12+2 %swag
-touch2937 =  147 -2 + pfTouch
+pfTouch =  56+17+ 12+2 ;  %swag
+touch2937 =  147 -2 + pfTouch;
 
 
 aCol = 105;
@@ -109,7 +108,7 @@ torErrMin    = 1e-18;
 
 %fprintf('# read Complete \n')
 
-'INSUFFICENT bootstrap counts'
+%'INSUFFICENT bootstrap counts'
 NumberOfYukawaBootstraps = 1000; %was 1000
 NumberOfArbFitBootstraps = NumberOfYukawaBootstraps; % was 300
 
