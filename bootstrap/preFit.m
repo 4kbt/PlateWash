@@ -60,6 +60,9 @@ pM(:,torqueCol) = dBSArchive(:,3);
 dBSArchive = dBSArchive(dBSArchive(:,4)      < torErrThresh,:);
 dBSArchive = dBSArchive(abs(dBSArchive(:,3)) < torErrThresh,:);
 
+pM = pM( (abs(pM(:,torCol)) < torErrThresh),:);
+pM = pM( (pM(:,torerrCol)   < torErrThresh),:);
+
 
 %Distance cut
 shortCut = (pfTouch+10)*1e-6
@@ -69,6 +72,9 @@ dBSArchive = dBSArchive(dBSArchive(:,1) >= shortCut,:);
 dBSArchive = dBSArchive(dBSArchive(:,2) >= shortCut,:);
 %dBSArchive = dBSArchive(dBSArchive(:,1) >= longCut,:);
 %dBSArchive = dBSArchive(dBSArchive(:,2) >= longCut,:);
+
+pM = pM( pM(:,aCol) >= shortCut , :);
+pM = pM( pM(:,bCol) >= shortCut , :);
 
 %Sanity check
 if rows(dBSArchive) < 2
