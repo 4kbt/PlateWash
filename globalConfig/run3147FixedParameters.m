@@ -66,14 +66,32 @@ spikeChopWidth = 100/TheoSampleTime; % in samples
 doNotRemoveSpikes = 1;
 
 fprintf('# setup ');
-numSensors = 65;
-numPWSensors = 25;
+
+numSystematics = 4;
+numPWSensors = 25+numSystematics;
 numPSSensors = 15;
 numIFOSensors = 25;
+numSensors = numPWSensors+numPSSensors+numIFOSensors;
+
 psSquareCol = 15;
 torqueCol   = 16;
 %torqueCol   = 23;
 ifoDataCol  = 2;
+pwTimeCol  = 10;
+psTimeCol  = 5 ;
+ifoTimeCol = 1 ;
+aCol = 105;
+aErrCol = aCol + numSensors*15;
+bCol = 170;
+bErrCol = bCol + numSensors*15;
+torCol = torqueCol;
+torerrCol = 6*numSensors+torCol;
+
+%Systematics
+magFieldCol         = numPWSensors+1;
+magField2Col        = numPWSensors+2;
+temperatureCol      = numPWSensors+3;
+tempGradientCol     = numPWSensors+4;
 
 fprintf('# filtering ');
 Nfilt = 2560*3/TheoSampleTime; printInteger(Nfilt, [HOMEDIR 'extracted/calibCutLength.tex']);
@@ -95,13 +113,6 @@ printInteger( 1.0./filterHigh/2, [HOMEDIR 'extracted/filterHighLag.tex']);
 pfTouch =  56+17+ 12+2 ;  %swag
 touch2937 =  147 -2 + pfTouch;
 
-
-aCol = 105;
-aErrCol = aCol + numSensors*15;
-bCol = 170;
-bErrCol = bCol + numSensors*15;
-torCol = torqueCol;
-torerrCol = 6*numSensors+torCol;
 
 torErrThresh = 1e-14;
 torErrMin    = 1e-18;
