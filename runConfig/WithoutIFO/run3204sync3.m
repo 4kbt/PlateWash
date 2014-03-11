@@ -15,3 +15,7 @@ preSync3
 %ifoStartSec = ifoStartSec + 4100;
 
 sync3
+
+pwData(:,magFieldCol) = 0.8;
+pwData(:,magField2Col) = 0.8^2;
+

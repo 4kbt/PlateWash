@@ -1,7 +1,8 @@
 #This script is executed by both Octave and Gnuplot. Choose syntax carefully.
 
 numSystematics = 4;
-numPWSensors = 25+numSystematics;
+numPWDAQSensors = 25
+numPWSensors = numPWDAQSensors+numSystematics;
 numPSSensors = 15;
 numIFOSensors = 25;
 numSensors = numPWSensors+numPSSensors+numIFOSensors;
@@ -20,7 +21,7 @@ torCol = torqueCol;
 torerrCol = 6*numSensors+torCol;
 
 #Systematics
-magFieldCol         = numPWSensors+1;
-magField2Col        = numPWSensors+2;
-temperatureCol      = numPWSensors+3;
-tempGradientCol     = numPWSensors+4;
+magFieldCol         = numPWDAQSensors+1;
+magField2Col        = numPWDAQSensors+2;
+temperatureCol      = numPWDAQSensors+3;
+tempGradientCol     = numPWDAQSensors+4;
