@@ -17,12 +17,22 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 
 	%Save the real data
 
+	SlopeFit  = [ 1 0 0 0 0 0 0];
+	YukawaFit = [ 0 1 1 0 0 0 0];
+	MagFit    = [ 0 0 0 1 1 0 0];
+	Mag2Fit   = [ 0 0 0 0 0 1 1];
+	FitOnlyThese = SlopeFit + YukawaFit + MagFit + Mag2Fit;
+
+	LowerBounds = [-100, 1e-2, -1e8, 1e-2, -1e8, 1e-2, -1e8];
+	UpperBounds = [ 100, 100 ,  1e8,  100,  1e8,  100,  1e8];
+	NumIterations = 100;
+
 	%lambdas, alphas
 	switch fitAlgorithm
 	 case {'NMS'} 
 		cSFunc = @(x) -chiSquareVectorYukawaWSlope(d, x(1), x(2), x(3));
 	 case {'SQP'}
-		cSFunc = @(x) chiSquareWSystematics(pMd, x(2), x(1), x(3));
+		cSFunc = @(x) chiSquareWSystematics(pMd, x);
 	%	cSFunc = @(x) chiSquareWSystematics(pMd, x(1), x(2), x(3));
 	 case {'Levenburg'}
 		%uses yukfit.m
@@ -32,12 +42,15 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 	endswitch
 
 	%Fit begins
-	ranSeed = [ 10^( rand*3.0-6)/1e-4 , (-1).^(round(rand)+1)*10^(rand*11-5), (rand-0.5)*10];
+	ranLam = 10^( rand(5) *3.0-6)/1e-4;
+	ranAlp = (-1).^(round(rand(5))+1)*10^(rand(5)*11-5);
+	ranSlo = (rand-0.5)*10;
+	ranSeed = [ ranSlo ranLam(1), ranAlp(1), ranLam(2), ranAlp(2), ranLam(3), ranAlp(3) ];
 %	ranSeed = [randn * 1e-4, randn, randn * 1e-12 ]
 %	ranSeed = [1.0001, 1, 2]; 
 %	ranSeed = [1.0001, 1]; 
 %	ranSeed = rand(1,2);
-	try
+%	try
 		%When analyzing, make a cut on csMin
 		switch fitAlgorithm
 		 case {'NMS'}
@@ -46,9 +59,9 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 			bootstrapOut(bootStrapCounter,:) = bsO; 
 		 case {'SQP'}
 %			[x, csMin, fitInfo, iter, nf]   = sqp(ranSeed, cSFunc, [], [], [1e-2, -realmax], [100, realmax],100)
-			[x, csMin, fitInfo, iter, nf]   = sqp(ranSeed, cSFunc, [], [], [1e-2, -1e8,-100], [100, 1e8, 100],100)
+			[x, csMin, fitInfo, iter, nf]   = sqp(ranSeed, cSFunc, [], [], LowerBounds, UpperBounds,NumIterations)
 %			[x, csMin, fitInfo, iter, nf]   = sqp(ranSeed, cSFunc, [], [], [], [], 500, 1e-22);
-			bsO = [ x(1) x(2) csMin nf iter fitInfo ranSeed 2];
+			bsO = [ transpose(x) csMin nf iter fitInfo ranSeed];
 			%if fit converged, save it.
 			if(fitInfo == 101) 
 	                        bootstrapOut = [bootstrapOut; bsO];
@@ -80,9 +93,9 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 			outfilename = ['output/bootstrapYukawa.SimulFloat' fitAlgorithm '.dat'];
 		end
 		save( outfilename, "bootstrapOut", "injParameters");
-	catch
-		'FIT ERROR!'
-		errorMessage
-	end
+%	catch
+%		'FIT ERROR!'
+%		errorMessage
+%	end
 
 end %bsCnt

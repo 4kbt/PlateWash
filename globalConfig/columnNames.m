@@ -1,7 +1,7 @@
 #This script is executed by both Octave and Gnuplot. Choose syntax carefully.
 
 numSystematics = 4;
-numPWDAQSensors = 25
+numPWDAQSensors = 25;
 numPWSensors = numPWDAQSensors+numSystematics;
 numPSSensors = 15;
 numIFOSensors = 25;
