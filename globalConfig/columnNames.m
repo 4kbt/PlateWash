@@ -1,0 +1,27 @@
+#This script is executed by both Octave and Gnuplot. Choose syntax carefully.
+
+numSystematics = 4;
+numPWDAQSensors = 25;
+numPWSensors = numPWDAQSensors+numSystematics;
+numPSSensors = 15;
+numIFOSensors = 25;
+numSensors = numPWSensors+numPSSensors+numIFOSensors;
+
+psSquareCol = 15;
+torqueCol   = 16;
+ifoDataCol  = 2;
+pwTimeCol  = 10;
+psTimeCol  = 5 ;
+ifoTimeCol = 1 ;
+aCol = 105;
+aErrCol = aCol + numSensors*15;
+bCol = 170;
+bErrCol = bCol + numSensors*15;
+torCol = torqueCol;
+torerrCol = 6*numSensors+torCol;
+
+#Systematics
+magFieldCol         = numPWDAQSensors+1;
+magField2Col        = numPWDAQSensors+2;
+temperatureCol      = numPWDAQSensors+3;
+tempGradientCol     = numPWDAQSensors+4;

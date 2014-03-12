@@ -1,17 +1,26 @@
-function X2 = chiSquareWSystematics( pM , A, L, C)
+function X2 = chiSquareWSystematics( pM , x)
 	global HOMEDIR
+	columnNames;
+	transpose(x)
 
-	[A L C ]
+%	[C A L BA BL B2A B2L] = x;
+	C = x(1);
+	A = x(2);
+	L = x(3);
+	BA = x(4);
+	BL = x(5);
+	B2A = x(6);
+	B2L = x(7);
 
-	Nsyst = 3;
-	prototype = ones (Nsyst,1);
+%	Nsyst = 3;
+%	prototype = ones (Nsyst,1);
 %	alphas = alphas*prototype;
-	lambdas = L*prototype;
+%	lambdas = L*prototype;
 
-	alphas = [A; 0 ; 0];
+%	alphas = [A; 0 ; 0];
 
-	alphas = alphas;
-	lambdas = lambdas * 1e-4;
+	alphas =  [A; BA; B2A];
+	lambdas = [L; BL; B2L]* 1e-4;
 	slope = C * 1e-12;
 	
 	DoNotExtractFixedParameters = 1;
@@ -22,9 +31,9 @@ function X2 = chiSquareWSystematics( pM , A, L, C)
 	sx1Vec = pM(:,aErrCol);
 	sx2Vec = pM(:,bErrCol);
 
-	BMat = 1*ones(rows(x1Vec),Nsyst);
-	BMat = repmat([1 0 0], rows(x1Vec), 1) ; 
-	sBMat = 0*BMat;
+	BMat = [ones(rows(x1Vec),1) pM(:,magFieldCol) pM(:,magField2Col) ];
+%	BMat = repmat([1 0 0], rows(x1Vec), 1) ; 
+	sBMat =[zeros(rows(x1Vec),1) ones(rows(x1Vec),1)*0.01, ones(rows(x1Vec),1)*0.0001];
 
 	[GBV varG] = evalYukawaSystematicAveAndVariance(x1Vec, x2Vec, sx1Vec, sx2Vec, BMat, sBMat, alphas, lambdas, slope);
 

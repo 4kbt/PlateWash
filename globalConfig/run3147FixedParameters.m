@@ -54,7 +54,7 @@ qTesterWidth1=0.2e-3;
 qTesterChunkCalibWidth1 = 0.5e-3;
 
 fitOneOmega = false;
-doNotFitTwoOmega = 1
+doNotFitTwoOmega = 1;
 
 qTesterFreq   = 3*2e-3;
 qTesterWidth  = 0.2e-3;
@@ -63,18 +63,11 @@ printSigNumber(qTesterTorque, [HOMEDIR 'extracted/qTesterTorque.tex'],3);
 
 spikeChopWidth = 100/TheoSampleTime; % in samples
 
-doNotRemoveSpikes = 1
-%doNotFitTwoOmega = 1
+doNotRemoveSpikes = 1;
 
 fprintf('# setup ');
-numSensors = 65;
-numPWSensors = 25;
-numPSSensors = 15;
-numIFOSensors = 25;
-psSquareCol = 15;
-torqueCol   = 16;
-%torqueCol   = 23;
-ifoDataCol  = 2;
+
+columnNames; %script that defines all the data columns
 
 fprintf('# filtering ');
 Nfilt = 2560*3/TheoSampleTime; printInteger(Nfilt, [HOMEDIR 'extracted/calibCutLength.tex']);
@@ -93,23 +86,16 @@ filterSensorHigh = NyquistFrequency;   printInteger( 1000*filterSensorHigh,  [HO
 printInteger( 1.0./filterHigh/2, [HOMEDIR 'extracted/filterHighLag.tex']);
 
 %Fit configuration
-pfTouch =  56+17+ 12+2 %swag
-touch2937 =  147 -2 + pfTouch
+pfTouch =  56+17+ 12+2 ;  %swag
+touch2937 =  147 -2 + pfTouch;
 
-
-aCol = 105;
-aErrCol = aCol + numSensors*15;
-bCol = 170;
-bErrCol = bCol + numSensors*15;
-torCol = torqueCol;
-torerrCol = 6*numSensors+torCol;
 
 torErrThresh = 1e-14;
 torErrMin    = 1e-18;
 
 %fprintf('# read Complete \n')
 
-'INSUFFICENT bootstrap counts'
+%'INSUFFICENT bootstrap counts'
 NumberOfYukawaBootstraps = 1000; %was 1000
 NumberOfArbFitBootstraps = NumberOfYukawaBootstraps; % was 300
 

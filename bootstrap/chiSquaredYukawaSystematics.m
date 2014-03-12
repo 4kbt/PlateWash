@@ -7,34 +7,37 @@ more off
 fitAlgorithm = 'SQP';
 
 %Bootstrap loop
-for bootStrapCounter = 1:NumberOfYukawaBootstraps
+lambdaShort = -6;
+lambdaLong = -3;
+lambdaStep = 1;
+alphaSmall = -3;
+alphaLarge = 10;
+alphaStep = 1;
 
-	['yukawa bootstrap counter ' num2str(bootStrapCounter)]
+lambdas = (10.^(lambdaShort:lambdaStep:lambdaLong))
+alphas = (10.^(alphaSmall:alphaStep:alphaLarge))
+alphas = [-fliplr(alphas) alphas];
 
-	pMd = bootstrapData(pM);
+ctr = 0;
 
-	%'bootstrapping complete'
+%rescaling
+lambdas = lambdas/1e-4;
 
-	%Save the real data
-
-	SlopeFit  = [ 1 0 0 0 0 0 0];
-	YukawaFit = [ 0 1 1 0 0 0 0];
-	MagFit    = [ 0 0 0 1 1 0 0];
-	Mag2Fit   = [ 0 0 0 0 0 1 1];
-	FitOnlyThese = SlopeFit + YukawaFit + MagFit + Mag2Fit;
-
-	LowerBounds = [-100, 1e-2, -1e8, 1e-2, -1e8, 1e-2, -1e8];
-	UpperBounds = [ 100, 100 ,  1e8,  100,  1e8,  100,  1e8];
-	NumIterations = 100;
+for lam = lambdas
+for alph = alphas
+	
+	['lambda ' num2str(lam) ' alpha ' num2str(alph)]
 
 	%lambdas, alphas
 	switch fitAlgorithm
 	 case {'NMS'} 
+		error('NMS not supported');
 		cSFunc = @(x) -chiSquareVectorYukawaWSlope(d, x(1), x(2), x(3));
 	 case {'SQP'}
-		cSFunc = @(x) chiSquareWSystematics(pMd, x);
+		cSFunc = @(x) chiSquareWSystematics(pM, alph, lam, x(1));
 	%	cSFunc = @(x) chiSquareWSystematics(pMd, x(1), x(2), x(3));
 	 case {'Levenburg'}
+		error('Levenburg not supported');
 		%uses yukfit.m
 	 otherwise
 		errstr = ['Fit algorithm ' fitAlgorithm ' is an invalid choice'];
@@ -42,14 +45,8 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 	endswitch
 
 	%Fit begins
-	ranLam = 10.^( rand(5,1) *3.0-6)/1e-4
-	ranAlp = (-1).^(round(rand(5,1))+1).*10.^(rand(5,1)*11-5)
-	ranSlo = (rand-0.5)*10;
-	ranSeed = [ ranSlo ranLam(1), ranAlp(1), ranLam(2), ranAlp(2), ranLam(3), ranAlp(3) ];
-%	ranSeed = [randn * 1e-4, randn, randn * 1e-12 ]
-%	ranSeed = [1.0001, 1, 2]; 
-%	ranSeed = [1.0001, 1]; 
-%	ranSeed = rand(1,2);
+%	ranSeed = [ 10^( rand*3.0-6)/1e-4 , (-1).^(round(rand)+1)*10^(rand*11-5), (rand-0.5)*10];
+	ranSeed = [ (rand-0.5)*10];
 	try
 		%When analyzing, make a cut on csMin
 		switch fitAlgorithm
@@ -59,9 +56,9 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 			bootstrapOut(bootStrapCounter,:) = bsO; 
 		 case {'SQP'}
 %			[x, csMin, fitInfo, iter, nf]   = sqp(ranSeed, cSFunc, [], [], [1e-2, -realmax], [100, realmax],100)
-			[x, csMin, fitInfo, iter, nf]   = sqp(ranSeed, cSFunc, [], [], LowerBounds, UpperBounds,NumIterations)
+			[x, csMin, fitInfo, iter, nf]   = sqp(ranSeed, cSFunc, [], [], [-100], [100],100)
 %			[x, csMin, fitInfo, iter, nf]   = sqp(ranSeed, cSFunc, [], [], [], [], 500, 1e-22);
-			bsO = [ transpose(x) csMin nf iter fitInfo ranSeed];
+			bsO = [ lam alph csMin nf iter fitInfo ranSeed x(1)];
 			%if fit converged, save it.
 			if(fitInfo == 101) 
 	                        bootstrapOut = [bootstrapOut; bsO];
@@ -84,18 +81,21 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 
 		if(1 == testInjection & ~exist("fileInjection"))
 			injParameters = [lambda alpha injSlope];
-			outfilename = ['output/bootstrapYukawa.SimulFloata' num2str(alpha) 'l' num2str(lambda) 'slop' num2str(injSlope) fitAlgorithm '.dat'];
+			outfilename = ['output/chiSquareYukawa.SimulFloata' num2str(alpha) 'l' num2str(lambda) 'slop' num2str(injSlope) fitAlgorithm '.dat'];
 		elseif(exist("fileInjection"))
 			injParameters = [0 0 0];
-			outfilename = ['output/bootstrapYukawa.SimulFloataInjected' fitAlgorithm '.dat']; 
+			outfilename = ['output/chiSquareYukawa.SimulFloataInjected' fitAlgorithm '.dat']; 
 		else
 			injParameters = [0 0 0];
-			outfilename = ['output/bootstrapYukawa.SimulFloat' fitAlgorithm '.dat'];
+			outfilename = ['output/chiSquareYukawa.SimulFloat' fitAlgorithm '.dat'];
 		end
 		save( outfilename, "bootstrapOut", "injParameters");
 	catch
 		'FIT ERROR!'
 		errorMessage
 	end
+%}
 
-end %bsCnt
+%}
+end %alph loop
+end %lam loop

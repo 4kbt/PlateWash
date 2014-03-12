@@ -30,5 +30,4 @@ if(abs(pwSampleTime-psSampleTime)>1e-1 | abs(ifoSampleTime - psSampleTime)>1e-1)
 	error("Sample Times do not match");
 end
 
-
-
+pwData = [pwData zeros(rows(pwData), numSystematics)];

@@ -6,9 +6,7 @@ OCT:= octave --no-init-file \
 	-p $(HOMEDIR)/globalConfig/ \
 	-q 
 
-#	--eval 'warning ("error", "Octave:broadcast");'\
-
-GNU    := gnuplot -e 'set term dumb' -e 'HOMEDIR = "$(HOMEDIR)"'
+GNU    := gnuplot -e 'set term dumb' -e 'HOMEDIR = "$(HOMEDIR)"' -d
 
 MLIB   := $(shell find  $(HOMEDIR)/mlib/        -type d) 
 
@@ -24,6 +22,10 @@ LYX    := lyx -batch --export "pdf" -dbg info,latex
 
 .INTERACT: 
 	$(OCT) --persist
+
+#The dash is meaningful.
+.GINTERACT:
+	$(GNU) -
 
 .PHONY : 
 	@echo $(OCT)
