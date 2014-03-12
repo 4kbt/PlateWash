@@ -6,6 +6,8 @@ OCT:= octave --no-init-file \
 	-p $(HOMEDIR)/globalConfig/ \
 	-q 
 
+#	--eval 'warning ("error", "Octave:broadcast");'\
+
 GNU    := gnuplot -e 'set term dumb' -e 'HOMEDIR = "$(HOMEDIR)"'
 
 MLIB   := $(shell find  $(HOMEDIR)/mlib/        -type d) 
