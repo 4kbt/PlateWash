@@ -53,7 +53,7 @@ function vF = varF(x,sx,B,sB,A,L,C)
 		- FBar(x,sx,B,A,L,C).^2 
 		);
 %}
-	vF = 0;
+%	vF = 0;
 
 %	save 'plotme2.dat' vF
 %	vF = 0*vF;
