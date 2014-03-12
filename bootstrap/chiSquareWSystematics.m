@@ -31,9 +31,10 @@ function X2 = chiSquareWSystematics( pM , x)
 	sx1Vec = pM(:,aErrCol);
 	sx2Vec = pM(:,bErrCol);
 
-	BMat = [ones(rows(x1Vec),1) pM(:,magFieldCol) pM(:,magField2Col) ];
+	YPF = YukPreFactor;
+	BMat = [ones(rows(x1Vec),1) pM(:,magFieldCol)*YPF pM(:,magField2Col)*YPF ];
 %	BMat = repmat([1 0 0], rows(x1Vec), 1) ; 
-	sBMat =[zeros(rows(x1Vec),1) ones(rows(x1Vec),1)*0.01, ones(rows(x1Vec),1)*0.0001];
+	sBMat =[zeros(rows(x1Vec),1) ones(rows(x1Vec),1)*0.01*YPF, ones(rows(x1Vec),1)*0.0001*YPF];
 
 	[GBV varG] = evalYukawaSystematicAveAndVariance(x1Vec, x2Vec, sx1Vec, sx2Vec, BMat, sBMat, alphas, lambdas, slope);
 
