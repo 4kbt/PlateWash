@@ -17,5 +17,10 @@ function Y = YukFiniteSizeCorrections(L)
 		exp(-da1./L) 	     ...%plate distance
 	    )
 	   );
+
+	if(Y < 0)
+		Y
+		warning('Yukawa finite size correction less than zero')
+	end
 	
 end

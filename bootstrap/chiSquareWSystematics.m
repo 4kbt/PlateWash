@@ -5,12 +5,12 @@ function X2 = chiSquareWSystematics( pM , x)
 
 %	[C A L BA BL B2A B2L] = x;
 	C = x(1);
-	A = x(2);
-	L = x(3);
+	L = x(2);
+	A = x(3);
 	BA = x(4);
 	BL = x(5);
-	B2A = x(6);
-	B2L = x(7);
+	B2L = x(6);
+	B2A = x(7);
 
 %	Nsyst = 3;
 %	prototype = ones (Nsyst,1);
