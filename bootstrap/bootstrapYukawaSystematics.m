@@ -42,15 +42,15 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 	endswitch
 
 	%Fit begins
-	ranLam = 10^( rand(5) *3.0-6)/1e-4;
-	ranAlp = (-1).^(round(rand(5))+1)*10^(rand(5)*11-5);
+	ranLam = 10.^( rand(5,1) *3.0-6)/1e-4
+	ranAlp = (-1).^(round(rand(5,1))+1).*10.^(rand(5,1)*11-5)
 	ranSlo = (rand-0.5)*10;
 	ranSeed = [ ranSlo ranLam(1), ranAlp(1), ranLam(2), ranAlp(2), ranLam(3), ranAlp(3) ];
 %	ranSeed = [randn * 1e-4, randn, randn * 1e-12 ]
 %	ranSeed = [1.0001, 1, 2]; 
 %	ranSeed = [1.0001, 1]; 
 %	ranSeed = rand(1,2);
-%	try
+	try
 		%When analyzing, make a cut on csMin
 		switch fitAlgorithm
 		 case {'NMS'}
@@ -93,9 +93,9 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 			outfilename = ['output/bootstrapYukawa.SimulFloat' fitAlgorithm '.dat'];
 		end
 		save( outfilename, "bootstrapOut", "injParameters");
-%	catch
-%		'FIT ERROR!'
-%		errorMessage
-%	end
+	catch
+		'FIT ERROR!'
+		errorMessage
+	end
 
 end %bsCnt
