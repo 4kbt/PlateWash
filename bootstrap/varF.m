@@ -49,7 +49,7 @@ function vF = varF(x,sx,B,sB,A,L,C)
 		Q^2 * crossTerm	
 		+ Q^2 * exp( sx2 * IL2 - 2 * x * IL ) .* ( B.^2 + sB.^2 ) * ALT.^2
 		+ 2*C*Q*exp( sx2/2.0 * IL2 - x * IL ) .* ( x - sx2 * IL ) .* B * ALT  ...
-		+ C^2*x.^2 
+		+ C^2*(x.^2 + sx2)
 		- FBar(x,sx,B,A,L,C).^2 
 		);
 %}
