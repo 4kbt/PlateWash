@@ -41,6 +41,10 @@ function X2 = chiSquareWSystematics( pM , x)
 		./(pM(:,torerrCol).^2 +varG )
 		) %sum
 
+	if(isnan(X2))
+		error("X2 threw a NaN, bailing back up");
+	end
+
 	if(X2 < 0)
 		error("Chi squared is less than zero. That is impossible! Go fix it!");
 	end
