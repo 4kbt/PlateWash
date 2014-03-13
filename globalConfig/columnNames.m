@@ -21,7 +21,7 @@ torCol = torqueCol;
 torerrCol = 6*numSensors+torCol;
 
 #Systematics
-magFieldCol         = numPWDAQSensors+1;
-magField2Col        = numPWDAQSensors+2;
-temperatureCol      = numPWDAQSensors+3;
-tempGradientCol     = numPWDAQSensors+4;
+magFieldCol         = numPWDAQSensors+1+numSensors;
+magField2Col        = numPWDAQSensors+2+numSensors;
+temperatureCol      = numPWDAQSensors+3+numSensors;
+tempGradientCol     = numPWDAQSensors+4+numSensors;

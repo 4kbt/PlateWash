@@ -12,6 +12,9 @@ function vF = varF(x,sx,B,sB,A,L,C)
 	LM = repmat(L,1,rows(L));
 	Lij = 1./LM + 1./LM.';
 
+	%This is not Lij^2. It's different, see calculation.
+	L2ij = 1./LM.^2 + 1./(LM.^2).';
+
 	exparg = zeros(rows(L), rows(L), rows(x));
 	preFactor = exparg;
 
@@ -19,12 +22,14 @@ function vF = varF(x,sx,B,sB,A,L,C)
 	ALT2m = ALT * ALT.';
 
 	for ctr = 1:rows(x)
-		exparg(:,:,ctr) = sx2(ctr) * (Lij.^2) / 2.0 - x(ctr) * Lij;
+		 exparg(:,:,ctr) = sx2(ctr) * (L2ij) / 2.0 - x(ctr) * Lij;
+		exparg2(:,:,ctr) = -2*sx2(ctr) * (L2ij.*(Lij).^2) * ( L * L.');  %yes, I do mean L * L')
 		preFactor(:,:,ctr) = ALT2m.* (B(ctr,:) * B(ctr,:).');
 	end
 
-	expval = exp(exparg);
-	crossTerms = expval.*preFactor;
+	 expval = exp(exparg);
+	expval2 = exp(exparg2);
+	crossTerms = expval.*(expval2 - 1) .* preFactor;
 
 	%Strip the diagonal
 	for ctr = 1:rows(L)
@@ -46,20 +51,19 @@ function vF = varF(x,sx,B,sB,A,L,C)
 	%compute vF
 	vF =   (
 		Q^2 * crossTerm	
-		+ Q^2 * exp( sx2 * IL2 - 2 * x * IL ) .* ( B.^2 + sB.^2 ) * ALT.^2
-		+ 2*C*Q*exp( sx2/2.0 * IL2 - x * IL ) .* ( x - sx2 * IL ) .* B * ALT  ...
-		+ C^2*(x.^2 + sx2)
-		- FBar(x,sx,B,A,L,C).^2 
+		+ Q^2 * exp( sx2 * IL2 - 2 * x * IL ) .* sB.^2 * ALT.^2
+		- 2*C*Q*exp( sx2/2.0 * IL2 - x * IL ) .* (sx2 * IL ) .* B * ALT  ...
+		+ C^2 * sx2
 		);
 %}
 %	vF = 0;
 
 %	save 'plotme2.dat' vF
 %	vF = 0*vF;
-        if(isnan(vF))
-                error('varFv1 threw a NaN');
-        end
 
+	if(isnan(vF))
+		error('varF2 threw a NaN');
+	end
 
 	svF = std(vF);
 
