@@ -14,6 +14,7 @@ function vF = varF(x,sx,B,sB,A,L,C)
 
 	%This is not Lij^2. It's different, see calculation.
 	L2ij = 1./LM.^2 + 1./(LM.^2).';
+	LiLj = 1 ./ ( L * L.' );
 
 	exparg = zeros(rows(L), rows(L), rows(x));
 	preFactor = exparg;
@@ -23,7 +24,7 @@ function vF = varF(x,sx,B,sB,A,L,C)
 
 	for ctr = 1:rows(x)
 		 exparg(:,:,ctr) = sx2(ctr) * (L2ij) / 2.0 - x(ctr) * Lij;
-		exparg2(:,:,ctr) = -2*sx2(ctr) * (L2ij.*(Lij).^2) * ( L * L.');  %yes, I do mean L * L')
+		exparg2(:,:,ctr) = sx2(ctr) * LiLj ; 
 		preFactor(:,:,ctr) = ALT2m.* (B(ctr,:) * B(ctr,:).');
 	end
 
@@ -62,7 +63,7 @@ function vF = varF(x,sx,B,sB,A,L,C)
 %	vF = 0*vF;
 
 	if(isnan(vF))
-		error('varF2 threw a NaN');
+		warning('varF2 threw a NaN');
 	end
 
 	svF = std(vF);

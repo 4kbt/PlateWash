@@ -34,16 +34,19 @@ function X2 = chiSquareWSystematics( pM , x)
 	YPF = YukPreFactor;
 	BMat = [ones(rows(x1Vec),1) pM(:,magFieldCol)*YPF pM(:,magField2Col)*YPF ];
 %	BMat = repmat([1 0 0], rows(x1Vec), 1) ; 
-	sBMat =[zeros(rows(x1Vec),1) ones(rows(x1Vec),1)*0.01*YPF, ones(rows(x1Vec),1)*0.0001*YPF];
+	sBMat =[zeros(rows(x1Vec),1) ones(rows(x1Vec),1)*0.01*YPF.^2, ones(rows(x1Vec),1)*0.0001*YPF.^2];
 
 	[GBV varG] = evalYukawaSystematicAveAndVariance(x1Vec, x2Vec, sx1Vec, sx2Vec, BMat, sBMat, alphas, lambdas, slope);
+
+	mean([(GBV- pM(:,torCol)).^2 varG pM(:,torerrCol).^2  varG ./ pM(:,torerrCol).^2])
 
 	X2 = sum( (pM(:,torCol) - GBV ).^2  %lqr
 		./(pM(:,torerrCol).^2 +varG )
 		) %sum
 
 	if(isnan(X2))
-		error("X2 threw a NaN, bailing back up");
+		warning("X2 threw a NaN");
+		X2 = Inf;
 	end
 
 	if(X2 < 0)

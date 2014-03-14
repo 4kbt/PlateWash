@@ -1,6 +1,6 @@
-#fn = 'output/bootstrapYukawa.SimulFloata1l0.0001slop2e-12SQP.dat'
+fn = 'output/bootstrapYukawa.SimulFloata1l0.0001slop2e-12SQP.dat'
 #fn = 'output/bootstrapYukawa.SimulFloata1000l0.0001slop2e-12SQP.dat'
-fn = 'output/bootstrapYukawa.SimulFloata0l0.0001slop2e-12SQP.dat'
+#fn = 'output/bootstrapYukawa.SimulFloata0l0.0001slop2e-12SQP.dat'
 
 set logsc x
 set logsc y
@@ -27,6 +27,7 @@ pl [0.009:102][1e-3:1e8]\
 	fn index 0 u ($8<chiCut ? $4: 1/0):(-($5)) w p pt 7 ps ptsz tit 'linear magnetic',\
 	fn index 0 u ($8<chiCut ? $6: 1/0):(-($7)) w p pt 7 ps ptsz tit 'quadratic magnetic'
 
+unset logsc x
 set yrange [:] noreverse
 set ylabel 'slope'
 set xlabel 'fit #'
