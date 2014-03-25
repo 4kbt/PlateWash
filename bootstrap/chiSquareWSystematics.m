@@ -69,6 +69,8 @@ function X2 = chiSquareWSystematics( pM , x)
 		[max(diag); mean(diag); median(diag); min(diag); std(diag)]
 		transpose(x)
 
+		save -append 'negErrors.dat' transpose(x)
+
 		error("Chi squared is less than zero. That is impossible! Go fix it!");
 	end
 end
