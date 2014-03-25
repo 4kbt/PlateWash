@@ -1,9 +1,10 @@
 function X2 = chiSquareWSystematics( pM , x)
 	global HOMEDIR
 	columnNames;
-	transpose(x)
 
-%	[C A L BA BL B2A B2L] = x;
+	%Uncomment for diagnostic output
+%	transpose(x)
+
 	C = x(1);
 	L = x(2);
 	A = x(3);
@@ -38,7 +39,18 @@ function X2 = chiSquareWSystematics( pM , x)
 
 	[GBV varG] = evalYukawaSystematicAveAndVariance(x1Vec, x2Vec, sx1Vec, sx2Vec, BMat, sBMat, alphas, lambdas, slope);
 
-	mean([(GBV- pM(:,torCol)).^2 varG pM(:,torerrCol).^2  varG ./ pM(:,torerrCol).^2])
+	%Uncomment for diagnostic information
+%	diag = [(GBV- pM(:,torCol)).^2 varG pM(:,torerrCol).^2  varG ./ pM(:,torerrCol).^2];
+%	[max(diag); mean(diag); median(diag); min(diag); std(diag)]
+
+
+%	hist(log10((pM(:,torCol) - GBV ).^2  %lqr
+ %               ./(pM(:,torerrCol).^2 +varG)),100)
+%	hist(log10(abs(GBV)), 100)
+%	hold on;
+%	hist(log10(abs(pM(:,torCol) - GBV )), 100)
+%	hist(log10(abs(pM(:,torerrCol))), 100)
+%	hold off; 
 
 	X2 = sum( (pM(:,torCol) - GBV ).^2  %lqr
 		./(pM(:,torerrCol).^2 +varG )
