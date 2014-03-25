@@ -1,3 +1,10 @@
+%x is a column vector, length N
+%sx is a column vector, length N
+%B is a matrix, size NxL
+%sB is a matrix, size NxL
+%A and L are size Lx1
+% in general, N >> L. 
+
 function vF = varF(x,sx,B,sB,A,L,C)
 
 %	sx = 0 * sx;
@@ -16,7 +23,9 @@ function vF = varF(x,sx,B,sB,A,L,C)
 	L2ij = 1./LM.^2 + 1./(LM.^2).';
 	LiLj = 1 ./ ( L * L.' );
 
+	%Preallocate for speed
 	exparg = zeros(rows(L), rows(L), rows(x));
+	exparg2 = exparg;
 	preFactor = exparg;
 
 	sx2 = sx.^2;
@@ -52,7 +61,7 @@ function vF = varF(x,sx,B,sB,A,L,C)
 	%compute vF
 	vF =   (
 		Q^2 * crossTerm	
-		+ Q^2 * exp( sx2 * IL2 - 2 * x * IL ) .* sB.^2 * ALT.^2
+		+ Q^2 * exp( 2 * sx2 * IL2 - 2 * x * IL ) .* (sB.^2 + B.^2 .* ( 1 - exp( - sx2 * ( 1 ./ transpose(L.*L) ) ) ) ) * ALT.^2
 		- 2*C*Q*exp( sx2/2.0 * IL2 - x * IL ) .* (sx2 * IL ) .* B * ALT  ...
 		+ C^2 * sx2
 		);
