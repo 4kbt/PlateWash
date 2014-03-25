@@ -54,7 +54,9 @@ function X2 = chiSquareWSystematics( pM , x)
 
 	X2 = sum( (pM(:,torCol) - GBV ).^2  %lqr
 		./(pM(:,torerrCol).^2 +varG )
-		) %sum
+		); %sum
+
+	X2PerNDF = [X2 X2/(rows(pM) - rows(x))]
 
 	if(isnan(X2))
 		warning("X2 threw a NaN");
@@ -62,6 +64,11 @@ function X2 = chiSquareWSystematics( pM , x)
 	end
 
 	if(X2 < 0)
+		printf('leasqrDiff, varG, torque^2, varG/torerr^2\n');
+		diag = [(GBV- pM(:,torCol)).^2 varG pM(:,torerrCol).^2  varG ./ pM(:,torerrCol).^2];
+		[max(diag); mean(diag); median(diag); min(diag); std(diag)]
+		transpose(x)
+
 		error("Chi squared is less than zero. That is impossible! Go fix it!");
 	end
 end

@@ -2,5 +2,6 @@ preFit
 if( 1 == testInjection)
 	postLockinSignalInjection
 end
-preFitPlot
+%preFitPlot
+format long
 bootstrapYukawaSystematics
