@@ -147,7 +147,7 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-Four fundamental interactions are known.
+Four fundamental interactions are known to Physics.
  In historical order of characterization, they are gravity, which governs
  planetary motions; electromagnetism, which describes the interactions of
  electrically charged objects, and the weak force and strong forces, which
@@ -179,10 +179,10 @@ The Standard Model is a triumph.
  resonances, and phenomena, with very few exceptions.
  The exceptions are, therefore, very important.
  The Standard Model has one major remaining prediction - the existence of
- the so-called Higgs boson, a lynchpin for the theory, which may have been
- discovered at the LHC in 2012 
+ the so-called 'Higgs boson', a lynchpin for the theory, which may have
+ been discovered at the LHC in 2012 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "Aad20121,Chatrchyan201230"
 
 \end_inset
@@ -202,7 +202,7 @@ Gravity: There is no tree-level coupling between uncharged objects in the
 \begin_inset Formula $>10^{40}$
 \end_inset
 
- times stronger than gravity, frustrating any unification attempts.
+ times stronger than gravity, perhaps hiding signatures of a unifying theory.
  The theory of gravity, General Relativity, is well-tested and in agreement
  with experiment 
 \begin_inset CommandInset citation
@@ -309,7 +309,15 @@ XXXMA nucleosynthesis
 \begin_inset Formula $^{3}$
 \end_inset
 
-, which, when converted to a length is roughly 86 micrometers.
+, which, when converted to a length using 
+\begin_inset Formula $\hbar$
+\end_inset
+
+ and 
+\begin_inset Formula $c$
+\end_inset
+
+, is roughly 86 micrometers.
 \end_layout
 
 \begin_layout Section
@@ -562,8 +570,8 @@ String Theory
 \begin_layout Standard
 String theory provided the catalyst for a resurgence of interest in the
  inverse square law at sub-millimeter scales in the late 1990s.
- At the cost of as many as seven extra dimensions, the theory offers a the
- promise of unifying gravity with the other forces.
+ At the cost of as many as seven extra dimensions, the theory offers a promise
+ of unifying gravity with the other forces.
  The extra dimensions are hidden away from normal observation with 
 \begin_inset Quotes eld
 \end_inset
@@ -572,15 +580,17 @@ compactification
 \begin_inset Quotes erd
 \end_inset
 
-; the introduction of a scale shorter than which extra dimensions are relevant
- to particle interactions and longer than which any effects of extra dimensions
- are suppressed.
+, introducing a lengthscale below which extra dimensions are relevant to
+ particle interactions and above which any effects of extra dimensions are
+ suppressed.
  Critically, the effects of gravity would be sensitive to the change in
  dimensionality by obeying Gauss' Law at all scales - diluting gravity into
  the many extra dimensions at short distances, while diluting into only
  three spatial dimensions at longer scales.
- String theories predict that gravity will get significantly more attractive
- at scales shorter than the compactification scale.
+ This motivates the comparatively low strength of gravity in the three-dimension
+al macroscopic world.
+ String theories predict that gravity is significantly more attractive at
+ scales shorter than the compactification scale.
  
 \end_layout
 
@@ -633,7 +643,7 @@ key "2007PhRvL..98b1101K"
 \begin_inset Formula $\mu$
 \end_inset
 
-m for one extra dimension.
+m for one large extra dimension.
  Greater numbers of extra dimensions are more stringently constrained by
  collider experiments 
 \begin_inset CommandInset citation
@@ -832,7 +842,7 @@ Fat Graviton
 \end_layout
 
 \begin_layout Standard
-Raman Sundrum showed in 
+Raman Sundrum showed 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "PhysRevD.69.044014"
@@ -920,7 +930,7 @@ screen
 \begin_inset Quotes erd
 \end_inset
 
- the effect of any new interaction.
+ any new interaction.
  As self-interaction is a general property of fields, the notion is very
  reasonable.
  In its simplest form as a scalar field, a chameleon interaction must be
@@ -953,12 +963,12 @@ becomes the relevant length scale at which the new interaction may emerge
 In addition to their physical motiviation, chameleon interactions are ready-made
  to evade traditional inverse square law tests.
  All precision tests of short-range gravity at gravitational strength to
- date, including our experiment, place an isolating metal foil between the
- source and detector masses.
- Because of the self-screening within materials the isolating foil significantly
- diminishes the apparent strength of the observable interaction.
+ date, including our experiment, place a metal foil between the source and
+ detector masses to suppress non-gravitational interactions.
+ Because of the self-screening within materials the foil significantly diminishe
+s the apparent strength of any chameleon interaction.
  When searching for chameleons, isolating shields must be made as thin and
- of as low a density as possible, or dispensed with entirely.
+ of as low a density material as possible, or dispensed with entirely.
 \end_layout
 
 \begin_layout Standard
@@ -1073,7 +1083,7 @@ Tests of gravity using test bodies with known masses have now spanned about
  thirty orders of magnitude in spatial extent.
  Gravity itself has been observed consistent with an inverse square law
  over the roughly sixteen orders of magnitude from the solar system scale
- down to the size of a human hair.
+ down to a few tens of micrometers.
  Useful reviews are more comprehensive than will be presented here 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -1096,7 +1106,7 @@ key "KeplerFirstSecondLaws,KeplerThirdLaw"
 
  are now taught to students as necessary corrolaries of Newton's theory,
  but Kepler's observations were essential to the formulation of the theory
- itself 
+ itself
 \begin_inset Note Note
 status open
 
@@ -1170,7 +1180,7 @@ key "Cavendish1798"
 
 , observing gravity at scales of tens of centimeters to meters.
  Successive improvements on that method and tests with improved gravimeters
- have extended tests of gravity out to scales the size of Earth 
+ have extended tests of gravity out to scales of the size of Earth 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "1999snng.book.....F"
@@ -1212,7 +1222,7 @@ key "PhysRevLett.44.1645"
 
 .
  A novel superconducting Gauss' Law test by Moody and Paik in 1994 remains
- the best published limit from scales for scales of about a meter 
+ the best published limit for scales of about a meter 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "PhysRevLett.70.1195"
@@ -1290,13 +1300,17 @@ key "Cook2013"
 \end_inset
 
 (2013).
- In parallel, a 1kHz tungsten oscillator experiment at the University of
- Colorado achieved their maximum sensitivity at 
-\begin_inset Formula $\alpha=\sim5$
+ In parallel, a 1
+\begin_inset space ~
+\end_inset
+
+kHz tungsten oscillator experiment at the University of Colorado achieved
+ their maximum sensitivity at 
+\begin_inset Formula $\alpha\sim5$
 \end_inset
 
 , 
-\begin_inset Formula $\lambda=\sim100$
+\begin_inset Formula $\lambda\sim100$
 \end_inset
 
 
@@ -1493,7 +1507,7 @@ key "Horvat201121"
 
 .
  At still shorter scales, limits are collider-based, restricted by the non-obser
-vation of unexpected physics, and beyond the scope of this thesis.
+vation of unexpected physics, beyond the scope of this thesis.
 \end_layout
 
 \begin_layout Standard
@@ -1507,6 +1521,16 @@ key "Simonetti:2010mk,Kavic:2008qb"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMI expand
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -12006,6 +12030,826 @@ XXXMA (need actual procedure followed here).
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+Goodness-of-fit, 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A weakness of bootstrapped analysis is its reliance upon computational power
+ to produce useful results.
+ If the dimension of a problem gets too high, it is difficult to ensure
+ that fitting parameter spaces are well-explored.
+ It is possible to include systematic effects into bootstrapped confidence
+ intervals by modelling each systematic and injecting the expected amount
+ of noise into the data to be fitted.
+ If little is known about the systematic effect, however, this approach
+ is a challenge.
+ 
+\end_layout
+
+\begin_layout Standard
+It is more-reliable to attempt to include poorly-known systematics into
+ the fit, fitting over all the data, including the systematic tests.
+ This is done here by ascribing a new fictitious force to each systematic,
+ parametrized conservatively as a Yukawa torque, with its own strength and
+ lengthscale.
+ 
+\end_layout
+
+\begin_layout Subsection
+The fitting plan:
+\end_layout
+
+\begin_layout Enumerate
+Define a fitting function, 
+\begin_inset Formula $F(x,B_{1\dots n}|\alpha_{1\ldots n},\lambda_{1\ldots n})=\pi Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}\left(1-e^{-(t_{p}-t_{i})/\lambda_{i}}\right)\left(1-e^{-t_{a}/\lambda_{i}}\right)\left(1-e^{-t_{i}/\lambda_{i}}\right)e^{-x/\lambda_{i}}+Cx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Let the thickness corrections be 
+\begin_inset Formula $T(\lambda)=\rho_{a}\left(1-e^{-(t_{p}-t_{i})/\lambda_{i}}\right)\left(1-e^{-t_{a}/\lambda_{i}}\right)\left(1-e^{-t_{i}/\lambda_{i}}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+So, 
+\begin_inset Formula $F(x,B_{1\dots n}|\alpha_{1\ldots n},\lambda_{1\ldots n})=\pi Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}T(\lambda_{i})e^{-x/\lambda_{i}}+Cx=Q\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}T(\lambda_{i})e^{-x/\lambda_{i}}+Cx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Define 
+\begin_inset Formula $G(x,y\dots)=F(x,\dots)-F(y,\dots)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Measure 
+\begin_inset Formula $\Delta\tau(x_{A},x_{B},B_{1},\ldots,B_{n},\sigma_{x_{A}},\sigma_{x_{B}},\sigma_{B_{1}},\ldots,\sigma_{B_{n}})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Define 
+\begin_inset Formula $P(a,\bar{a},\sigma_{a})=\frac{1}{\sigma_{a}\sqrt{2\pi}}e^{-(a-\bar{a})^{2}/2\sigma_{a}^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $\bar{G}=\int_{-\infty}^{\infty}G(x,y,B_{1\ldots n},\alpha_{1\ldots n},\lambda_{1\ldots n})P(x,\bar{x},\sigma_{x})dxP(y,\bar{y},\sigma_{y})dy\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $\bar{G}=\bar{F}_{x}-\bar{F}_{y}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $\sigma_{F_{x}}^{2}=\int_{-\infty}^{\infty}F(x,B_{1\ldots n},\alpha_{1\ldots n},\lambda_{1\ldots n})^{2}P(x,\bar{x},\sigma_{x})dxP(y,\bar{y},\sigma_{y})dy\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}-\bar{F}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{F_{y}}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $\sigma_{G}^{2}=\sigma_{F_{x}}^{2}+\sigma_{F_{y}}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\chi^{2}=\sum_{measurements}\frac{(\Delta\tau-\bar{G})^{2}}{\sigma_{\tau}^{2}+\sigma_{G}^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Integrals
+\end_layout
+
+\begin_layout Subsubsection
+Linear
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\int_{-\infty}^{\infty}aP(a,\bar{a},\sigma_{a})da=\frac{1}{\sigma_{a}\sqrt{2\pi}}\bar{a}\sqrt{2\sigma^{2}\pi}=\bar{a}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Quadratic
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\int_{-\infty}^{\infty}a^{2}P(a,\bar{a},\sigma_{a})da$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula $=\int_{-\infty}^{\infty}(\bar{a}-a)^{2}P(a,0,\sigma_{a})da$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $=\int_{-\infty}^{\infty}(\bar{a}^{2}-2a\bar{a}+a^{2})P(a,0,\sigma_{a})da$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $=\bar{a}^{2}-2\bar{a}\int_{-\infty}^{\infty}aP(a,0,\sigma_{a})da+\int_{-\infty}^{\infty}a^{2}P(a,0,\sigma_{a})da$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Using 
+\begin_inset Formula $\int_{-\infty}^{\infty}x^{2}e^{-cx^{2}}dx=\frac{1}{2}\sqrt{\frac{\pi}{c^{3}}}$
+\end_inset
+
+ and the previous result,
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $=\bar{a}^{2}-2\cdot0+\frac{1}{2\sigma_{a}\sqrt{2\pi}}\sqrt{8\sigma_{a}^{6}\pi}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\bar{a}^{2}+\sigma_{a}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Yukawa - Detwiler Observation
+\end_layout
+
+\begin_layout Standard
+The 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+ approach outlined here was enabled by Jason Detwiler's observation that
+ the following calculation should be possible.
+ If it were not true, a closed-form expression for 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+ might have been too unwieldy to use.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int_{-\infty}^{\infty}e^{-a/\lambda}P(a,\bar{a},\sigma_{a})da$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\frac{1}{\sigma_{a}\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-a/\lambda}e^{-(a-\bar{a})^{2}/2\sigma_{a}^{2}}da$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula $=\frac{1}{\sigma_{a}\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-(a^{2}-2a\bar{a}-\bar{a}^{2}+2\sigma^{2}a/\lambda)/2\sigma_{a}^{2}}da$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\frac{1}{\sigma_{a}\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-(a^{2}-2(\bar{a}-\frac{\sigma^{2}}{\lambda})a-\bar{a}^{2})/2\sigma_{a}^{2}}da$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Completing the square,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(\bar{a}-\frac{\sigma_{a}^{2}}{\lambda})^{2}=\bar{a}^{2}-2\frac{\sigma_{a}^{2}}{\lambda}\bar{a}+\frac{\sigma_{a}^{4}}{\lambda}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\frac{1}{\sigma_{a}\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-((a-(\bar{a}-\frac{\sigma_{a}^{2}}{\lambda}))^{2}+2\frac{\sigma_{a}^{2}}{\lambda}\bar{a}-\frac{\sigma_{a}^{4}}{\lambda})/2\sigma_{a}^{2}}da$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=e^{\sigma^{2}/2\lambda}e^{-\bar{a}/\lambda}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Linear Yukawa
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int_{-\infty}^{\infty}ae^{-a/\lambda}P(a,\bar{a},\sigma_{a})da$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $=\frac{1}{\sigma_{a}\sqrt{2\pi}}\int_{-\infty}^{\infty}ae^{-a/\lambda}e^{-(a-\bar{a})^{2}/2\sigma_{a}^{2}}da$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $=\frac{1}{\sigma_{a}\sqrt{2\pi}}\int_{-\infty}^{\infty}ae^{-(a^{2}-2a\bar{a}+\bar{a}^{2}+\frac{2\sigma_{a}^{2}}{\lambda}a)/2\sigma_{a}^{2}}da$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $=\frac{1}{\sigma_{a}\sqrt{2\pi}}\int_{-\infty}^{\infty}ae^{-(a^{2}-2(\bar{a}-\frac{\sigma_{a}^{2}}{\lambda})a+\bar{a}^{2})/2\sigma_{a}^{2}}da$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $(\bar{a}-\frac{\sigma_{a}^{2}}{\lambda})^{2}=\bar{a}^{2}-2\frac{\sigma_{a}^{2}}{\lambda}\bar{a}+\frac{\sigma_{a}^{4}}{\lambda^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $=\frac{1}{\sigma_{a}\sqrt{2\pi}}\int_{-\infty}^{\infty}ae^{-(a^{2}-2(\bar{a}-\frac{\sigma_{a}^{2}}{\lambda})a+(\bar{a}-\frac{\sigma_{a}^{2}}{\lambda})^{2}+2\frac{\sigma_{a}^{2}}{\lambda}\bar{a}-\frac{\sigma_{a}^{4}}{\lambda^{2}})/2\sigma_{a}^{2}}da$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $=\frac{1}{\sigma_{a}\sqrt{2\pi}}e^{-\frac{\bar{a}}{\lambda}+\frac{\sigma_{a}^{2}}{2\lambda^{2}}}\int_{-\infty}^{\infty}ae^{-(a-(\bar{a}-\frac{\sigma_{a}^{2}}{\lambda}))^{2}/2\sigma_{a}^{2}}da$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $=e^{-\frac{\bar{a}}{\lambda}+\frac{\sigma_{a}^{2}}{2\lambda^{2}}}(\bar{a}-\frac{\sigma_{a}^{2}}{\lambda})$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Additive Yukawa
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int_{-\infty}^{\infty}e^{-x(1/\lambda_{1}+1/\lambda_{2})}P(a,\bar{a},\sigma_{a})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This is just a restatement of Jason's trick, so 
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $=e^{\sigma_{a}^{2}(1/\lambda_{1}+1/\lambda_{2})/2}e^{-\bar{a}(1/\lambda_{1}+1/\lambda_{2})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $\bar{F}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\bar{F}=\int_{-\infty}^{\infty}F(x,y,B_{1\ldots n},\alpha_{1\ldots n},\lambda_{1\ldots n})P(x,\bar{x},\sigma_{x})dx\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\bar{F}=\int_{-\infty}^{\infty}\left(Q\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}T(\lambda_{i})e^{-x/\lambda_{i}}+Cx\right)P(x,\bar{x},\sigma_{x})dx\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\bar{F}=\int_{-\infty}^{\infty}\left(Q\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}T(\lambda_{i})e^{-x/\lambda_{i}}\right)P(x,\bar{x},\sigma_{x})dx\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}+C\bar{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\bar{F}=\int_{-\infty}^{\infty}\left(Q\sum_{i}\alpha_{i}\bar{B}_{i}\lambda_{i}^{2}T(\lambda_{i})e^{-x/\lambda_{i}}\right)P(x,\bar{x},\sigma_{x})dx+C\bar{x}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\bar{F}=Q\sum_{i}\alpha_{i}\bar{B}_{i}\lambda_{i}^{2}T(\lambda_{i})e^{\sigma_{x}^{2}/2\lambda_{i}}e^{-\bar{x}/\lambda_{i}}+C\bar{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $\sigma_{G}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sigma_{G}^{2}=\sigma_{F_{x}}^{2}+\sigma_{F_{y}}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sigma_{F_{x}}^{2}=\int_{-\infty}^{\infty}F(x,B_{1\ldots n},\alpha_{1\ldots n},\lambda_{1\ldots n})^{2}P(x,\bar{x},\sigma_{x})dx\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}-\bar{F}_{x}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sigma_{F_{x}}^{2}=\int_{-\infty}^{\infty}\left(Q\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}T(\lambda_{i})e^{-x/\lambda_{i}}+Cx\right)^{2}P(x,\bar{x},\sigma_{x})dx\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}-\bar{F}_{x}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sigma_{F_{x}}^{2}=\int_{-\infty}^{\infty}\left(Q\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}T(\lambda_{i})e^{-x/\lambda_{i}}\sum_{j}\alpha_{j}B_{j}\lambda_{j}^{2}T(\lambda_{j})e^{-x/\lambda_{j}}+2CxQ\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}T(\lambda_{i})e^{-x/\lambda_{i}}+C^{2}x^{2}\right)P(x,\bar{x},\sigma_{x})dx\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}-\bar{F}_{x}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\sigma_{F_{x}}^{2}=\int_{-\infty}^{\infty}\left(Q\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}T(\lambda_{i})e^{-x/\lambda_{i}}\sum_{j}\alpha_{j}B_{j}\lambda_{j}^{2}T(\lambda_{j})e^{-x/\lambda_{j}}+2CxQ\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}T(\lambda_{i})e^{-x/\lambda_{i}}\right)P(x,\bar{x},\sigma_{x})dx\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}+C^{2}\bar{x}^{2}-\bar{F}_{x}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\sigma_{F_{x}}^{2}=\int_{-\infty}^{\infty}Q\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}T(\lambda_{i})e^{-x/\lambda_{i}}\sum_{j}\alpha_{j}B_{j}\lambda_{j}^{2}T(\lambda_{j})e^{-x/\lambda_{j}}\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}P(x,\bar{x},\sigma_{x})dx+2CQ\sum_{i}\alpha_{i}\bar{B}_{i}\lambda_{i}^{2}T(\lambda_{i})e^{-\frac{\bar{x}}{\lambda_{i}}+\frac{\sigma_{x}^{2}}{2\lambda_{i}^{2}}}(\bar{x}-\frac{\sigma_{x}^{2}}{\lambda_{i}})+C^{2}\bar{x}^{2}-\bar{F}_{x}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\sigma_{F_{x}}^{2}=Q\sum_{i}\sum_{j\not=i}\alpha_{i}\alpha_{j}\bar{B}_{i}\bar{B}_{j}\lambda_{i}^{2}\lambda_{j}^{2}T(\lambda_{i})T(\lambda_{j})e^{(\sigma_{x}^{2}/2-\bar{x})(1/\lambda_{i}+1/\lambda_{j})}+\int_{-\infty}^{\infty}Q\sum_{i}\alpha_{i}^{2}B_{i}^{2}\lambda_{i}^{4}T(\lambda_{i})^{2}e^{-2x/\lambda_{i}}\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}P(x,\bar{x},\sigma_{x})dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $+2CQ\sum_{i}\alpha_{i}\bar{B}_{i}\lambda_{i}^{2}T(\lambda_{i})e^{-\frac{\bar{x}}{\lambda_{i}}+\frac{\sigma_{x}^{2}}{2\lambda_{i}^{2}}}(\bar{x}-\frac{\sigma_{x}^{2}}{\lambda_{i}})+C^{2}\bar{x}^{2}-\bar{F}_{x}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\sigma_{F_{x}}^{2}=Q\sum_{i}\sum_{j\not=i}\alpha_{i}\alpha_{j}\bar{B}_{i}\bar{B}_{j}\lambda_{i}^{2}\lambda_{j}^{2}T(\lambda_{i})T(\lambda_{j})e^{(\sigma_{x}^{2}/2-\bar{x})(1/\lambda_{i}+1/\lambda_{j})}+\int_{-\infty}^{\infty}Q\sum_{i}\alpha_{i}^{2}(\bar{B}_{i}^{2}+\sigma_{B_{i}}^{2})\lambda_{i}^{4}T(\lambda_{i})^{2}e^{-2x/\lambda_{i}}P(x,\bar{x},\sigma_{x})dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $+2CQ\sum_{i}\alpha_{i}\bar{B}_{i}\lambda_{i}^{2}T(\lambda_{i})e^{-\frac{\bar{x}}{\lambda_{i}}+\frac{\sigma_{x}^{2}}{2\lambda_{i}^{2}}}(\bar{x}-\frac{\sigma_{x}^{2}}{\lambda_{i}})+C^{2}\bar{x}^{2}-\bar{F}_{x}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\sigma_{F_{x}}^{2}=Q\sum_{i}\sum_{j\not=i}\alpha_{i}\alpha_{j}\bar{B}_{i}\bar{B}_{j}\lambda_{i}^{2}\lambda_{j}^{2}T(\lambda_{i})T(\lambda_{j})e^{(\sigma_{x}^{2}/2-\bar{x})(1/\lambda_{i}+1/\lambda_{j})}+Q\sum_{i}\alpha_{i}^{2}(\bar{B}_{i}^{2}+\sigma_{B_{i}}^{2})\lambda_{i}^{4}T(\lambda_{i})^{2}e^{\sigma_{x}^{2}/\lambda_{i}}e^{-2\bar{x}/\lambda_{i}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $+2CQ\sum_{i}\alpha_{i}\bar{B}_{i}\lambda_{i}^{2}T(\lambda_{i})e^{-\frac{\bar{x}}{\lambda_{i}}+\frac{\sigma_{x}^{2}}{2\lambda_{i}^{2}}}(\bar{x}-\frac{\sigma_{x}^{2}}{\lambda_{i}})+C^{2}\bar{x}^{2}-\bar{F}_{x}^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\sigma_{F_{x}}^{2}=Q\left(\sum_{i}\sum_{j\not=i}\alpha_{i}\alpha_{j}\bar{B}_{i}\bar{B}_{j}\lambda_{i}^{2}\lambda_{j}^{2}T(\lambda_{i})T(\lambda_{j})e^{(\sigma_{x}^{2}/2-\bar{x})(1/\lambda_{i}+1/\lambda_{j})}+\sum_{i}\alpha_{i}^{2}(\bar{B}_{i}^{2}+\sigma_{B_{i}}^{2})\lambda_{i}^{4}T(\lambda_{i})^{2}e^{(\sigma_{x}^{2}-2\bar{x})/\lambda_{i}}+2C\sum_{i}\alpha_{i}\bar{B}_{i}\lambda_{i}^{2}T(\lambda_{i})e^{(\sigma_{x}^{2}/2-x)/\lambda_{i}}(\bar{x}-\frac{\sigma_{x}^{2}}{\lambda_{i}})\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $+C^{2}\bar{x}^{2}-\bar{F}_{x}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+With this knowledge, we can compute 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+!
 \end_layout
 
 \begin_layout Chapter
