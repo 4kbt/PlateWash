@@ -56,7 +56,7 @@ function X2 = chiSquareWSystematics( pM , x)
 		./(pM(:,torerrCol).^2 +varG )
 		); %sum
 
-	X2PerNDF = [X2 X2/(rows(pM) - rows(x))]
+%	X2PerNDF = [X2 X2/(rows(pM) - rows(x))]
 
 	if(isnan(X2))
 		warning("X2 threw a NaN");

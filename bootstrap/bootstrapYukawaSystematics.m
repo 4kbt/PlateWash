@@ -42,8 +42,8 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 	endswitch
 
 	%Fit begins
-	ranLam = 10.^( rand(5,1) *3.0-6)/1e-4
-	ranAlp = (-1).^(round(rand(5,1))+1).*10.^(rand(5,1)*11-5)
+	ranLam = 10.^( rand(5,1) *3.0-6)/1e-4;
+	ranAlp = (-1).^(round(rand(5,1))+1).*10.^(rand(5,1)*11-5);
 	ranSlo = (rand-0.5)*10;
 	ranSeed = [ ranSlo ranLam(1), ranAlp(1), ranLam(2), ranAlp(2), ranLam(3), ranAlp(3) ];
 %	ranSeed = [randn * 1e-4, randn, randn * 1e-12 ]
@@ -58,10 +58,11 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 			bsO = [ x(1) x(2) csMax nf ranSeed x(3)];
 			bootstrapOut(bootStrapCounter,:) = bsO; 
 		 case {'SQP'}
+			tic
 %			[x, csMin, fitInfo, iter, nf]   = sqp(ranSeed, cSFunc, [], [], [1e-2, -realmax], [100, realmax],100)
 			[x, csMin, fitInfo, iter, nf]   = sqp(ranSeed, cSFunc, [], [], LowerBounds, UpperBounds,NumIterations)
 %			[x, csMin, fitInfo, iter, nf]   = sqp(ranSeed, cSFunc, [], [], [], [], 500, 1e-22);
-			bsO = [ transpose(x) csMin nf iter fitInfo ranSeed];
+			bsO = [ transpose(x) csMin nf iter fitInfo ranSeed bootStrapCounter toc];
 			%if fit converged, save it.
 			if(fitInfo == 101) 
 	                        bootstrapOut = [bootstrapOut; bsO];
