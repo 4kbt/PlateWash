@@ -88,9 +88,12 @@ printInteger( 1.0./filterHigh/2, [HOMEDIR 'extracted/filterHighLag.tex']);
 %Fit configuration
 pfTouch =  56+17+ 12+2 ;  %swag
 touch2937 =  147 -2 + pfTouch;
+%Distance cut
+shortCut = (pfTouch+10)*1e-6
 
 
-torErrThresh = 1e-14;
+%Commented because thresholding is now dynamic in preFit.m
+%torErrThresh = 1e-14;
 torErrMin    = 1e-18;
 
 %fprintf('# read Complete \n')
