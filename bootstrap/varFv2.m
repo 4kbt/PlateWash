@@ -19,8 +19,7 @@ function vF = varF(x,sx,B,sB,A,L,C)
 	LM = repmat(L,1,rows(L));
 	Lij = 1./LM + 1./LM.';
 
-	%This is not Lij^2. It's different, see calculation.
-	L2ij = 1./LM.^2 + 1./(LM.^2).';
+	L2ij = Lij.^2;
 	LiLj = 1 ./ ( L * L.' );
 
 	%Preallocate for speed
@@ -31,15 +30,44 @@ function vF = varF(x,sx,B,sB,A,L,C)
 	sx2 = sx.^2;
 	ALT2m = ALT * ALT.';
 
-	for ctr = 1:rows(x)
-		 exparg(:,:,ctr) = sx2(ctr) * (L2ij) / 2.0 - x(ctr) * Lij;
-		exparg2(:,:,ctr) = sx2(ctr) * LiLj ; 
-		preFactor(:,:,ctr) = ALT2m.* (B(ctr,:) * B(ctr,:).');
+	
+%	InvL = 1./L;
+%	TCross2 = -InvL*transpose(sx2);
+%	for ctr = 1:rows(L)
+%		test2(ctr,:,:) = InvL(ctr)*TCross2;
+%	end
+
+	for ctri = 1:rows(L)
+	for ctrj = 1:rows(L)
+                 exparg(ctri,ctrj,:) = sx2 * L2ij(ctri,ctrj) / 2.0 - x * Lij(ctri,ctrj);
+                exparg2(ctri,ctrj,:) = -sx2 * LiLj(ctri,ctrj) ;
+                preFactor(ctri,ctrj,:) = ALT2m(ctri,ctrj).* (B(:,ctri) .* B(:,ctrj));
+        end
 	end
+%	ea = exparg;
+%	ea2 = exparg2;
+%	pf = preFactor;
+
+%Reference
+%	for ctr = 1:rows(x)
+%		 exparg(:,:,ctr) = sx2(ctr) * (L2ij) / 2.0 - x(ctr) * Lij;
+%		exparg2(:,:,ctr) = -sx2(ctr) * LiLj ; 
+%		preFactor(:,:,ctr) = ALT2m.* (B(ctr,:) * B(ctr,:).');
+%	end
+
+%	1
+%	sum(sum(sum(preFactor)))
+%	2
+%	sum(sum(sum(pf)))
+%	3
+
+%	if(test2 == exparg2)
+%		error('woohoo')
+%	end
 
 	 expval = exp(exparg);
 	expval2 = exp(exparg2);
-	crossTerms = expval.*(expval2 - 1) .* preFactor;
+	crossTerms = expval.*(1 - expval2 ) .* preFactor;
 
 	%Strip the diagonal
 	for ctr = 1:rows(L)

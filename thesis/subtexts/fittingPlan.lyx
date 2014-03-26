@@ -1103,14 +1103,14 @@ status open
 
 \end_layout
 
+\begin_layout Plain Layout
+Let 
+\begin_inset Formula $\Lambda_{ij}=\frac{1}{\lambda_{j}^{2}}+\frac{1}{\lambda_{i}^{2}}$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
-Let 
-\begin_inset Formula $\Lambda_{ij}=\frac{1}{\lambda_{j}^{2}}+\frac{1}{\lambda_{i}^{2}}$
 \end_inset
 
 
@@ -1131,7 +1131,7 @@ Let
 \color none
 \begin_inset Formula 
 \begin{eqnarray*}
-\sigma_{F_{x}}^{2} & = & Q^{2}\sum_{i}\sum_{j\not=i}\alpha_{i}\alpha_{j}\bar{B}_{i}\bar{B}_{j}\lambda_{i}^{2}\lambda_{j}^{2}T(\lambda_{i})T(\lambda_{j})e^{\frac{\sigma_{x}^{2}}{2}\Lambda_{ij}-\bar{x}L_{ij}}\left(e^{\frac{\sigma_{x}^{2}}{\lambda_{j}\lambda_{i}}}-1\right)\\
+\sigma_{F_{x}}^{2} & = & Q^{2}\sum_{i}\sum_{j\not=i}\alpha_{i}\alpha_{j}\bar{B}_{i}\bar{B}_{j}\lambda_{i}^{2}\lambda_{j}^{2}T(\lambda_{i})T(\lambda_{j})e^{\frac{\sigma_{x}^{2}}{2}L_{ij}^{2}-\bar{x}L_{ij}}\left(1-e^{-\frac{\sigma_{x}^{2}}{\lambda_{j}\lambda_{i}}}\right)\\
  &  & +Q^{2}\sum_{i}\alpha_{i}^{2}\left(\sigma_{B_{i}}^{2}+\bar{B}_{i}^{2}\left(1-e^{-\sigma_{x}^{2}/\lambda_{i}^{2}}\right)\right)\lambda_{i}^{4}T(\lambda_{i})^{2}e^{2\sigma_{x}^{2}/\lambda_{i}^{2}-2\bar{x}/\lambda_{i}}\\
  &  & -2CQ\sigma_{x}^{2}\sum_{i}\alpha_{i}\bar{B}_{i}\lambda_{i}T(\lambda_{i})e^{\sigma_{x}^{2}/2\lambda_{i}^{2}-\bar{x}/\lambda_{i}}\\
  &  & +C^{2}\sigma_{x}^{2}
