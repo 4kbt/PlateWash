@@ -55,7 +55,7 @@ pM(:,bErrCol) = pM(:,bErrCol) * pressEncP(1)*-1*1e-6;
 
 pM(:,torqueCol) = dBSArchive(:,3);
 
-torErrThresh = 10*std(pM(:,torqueCol))
+torErrThresh = 5*std(pM(:,torqueCol))
 
 %Torque threshold cut
 dBSArchive = dBSArchive(dBSArchive(:,4)      < torErrThresh,:);
