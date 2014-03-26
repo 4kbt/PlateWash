@@ -1,11 +1,14 @@
-fn = 'output/bootstrapYukawa.SimulFloata1l0.0001slop2e-12SQP.dat'
+fn = 'output/bootstrapYukawa.SimulFloata300l0.0003slop2e-12SQP.dat'
+#fn = 'output/bootstrapYukawa.SimulFloata3000l0.0003slop2e-12SQP.dat'
+#fn = 'output/bootstrapYukawa.SimulFloata3l0.0001slop2e-12SQP.dat'
+#fn = 'output/bootstrapYukawa.SimulFloata1l0.0001slop2e-12SQP.dat'
 #fn = 'output/bootstrapYukawa.SimulFloata1000l0.0001slop2e-12SQP.dat'
 #fn = 'output/bootstrapYukawa.SimulFloata0l0.0001slop2e-12SQP.dat'
 
 set logsc x
 set logsc y
 
-chiCut = 1e80 
+chiCut = 1e4
 
 ptsz = 0.7
 set key noauto
@@ -13,9 +16,10 @@ set format x ""
 set ylabel 'alpha'
 set multiplot layout 4,1
 pl [0.009:102][1e-3:1e8]\
-	fn index 0 u ($8<chiCut ? $2: 1/0):( ($3)) w p pt 7 ps ptsz,\
-	fn index 0 u ($8<chiCut ? $4: 1/0):( ($5)) w p pt 7 ps ptsz,\
-	fn index 0 u ($8<chiCut ? $6: 1/0):( ($7)) w p pt 7 ps ptsz
+	fn index 0 u ($8<chiCut ? $4: 1/0):( ($5)) w p pt 7 lc 2 ps ptsz,\
+	fn index 0 u ($8<chiCut ? $6: 1/0):( ($7)) w p pt 7 lc 1 ps ptsz,\
+	fn index 0 u ($8<chiCut ? $2: 1/0):( ($3)) w p pt 7 lc 3 ps ptsz
+
 
 set yrange [:] reverse
 set key below
@@ -23,17 +27,17 @@ set format x "% g"
 set ylabel 'negative alpha'
 set xlabel 'lambda'
 pl [0.009:102][1e-3:1e8]\
-	fn index 0 u ($8<chiCut ? $2: 1/0):(-($3)) w p pt 7 ps ptsz tit 'yukawa',\
-	fn index 0 u ($8<chiCut ? $4: 1/0):(-($5)) w p pt 7 ps ptsz tit 'linear magnetic',\
-	fn index 0 u ($8<chiCut ? $6: 1/0):(-($7)) w p pt 7 ps ptsz tit 'quadratic magnetic'
+	fn index 0 u ($8<chiCut ? $4: 1/0):(-($5)) w p pt 7 lc 2 ps ptsz tit 'linear magnetic',\
+	fn index 0 u ($8<chiCut ? $6: 1/0):(-($7)) w p pt 7 lc 1 ps ptsz tit 'quadratic magnetic',\
+	fn index 0 u ($8<chiCut ? $2: 1/0):(-($3)) w p pt 7 lc 3 ps ptsz tit 'yukawa'
 
 unset logsc x
 set yrange [:] noreverse
 set ylabel 'slope'
 set xlabel 'fit #'
 pl \
-	fn index 0 u ( $1) w p pt 7 ps ptsz lc 1 tit 'positive',\
-	fn index 0 u (-$1) w p pt 7 ps ptsz lc 3 tit 'negative'
+	fn index 0 u ($8 < chiCut ?  $1 : 1/0) w p pt 7 ps ptsz lc 1 tit 'positive',\
+	fn index 0 u ($8 < chiCut ? -$1 : 1/0) w p pt 7 ps ptsz lc 3 tit 'negative'
 	
 
 set ylabel 'chi squared'

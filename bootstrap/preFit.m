@@ -55,7 +55,6 @@ pM(:,bErrCol) = pM(:,bErrCol) * pressEncP(1)*-1*1e-6;
 
 pM(:,torqueCol) = dBSArchive(:,3);
 
-
 %Torque threshold cut
 dBSArchive = dBSArchive(dBSArchive(:,4)      < torErrThresh,:);
 dBSArchive = dBSArchive(abs(dBSArchive(:,3)) < torErrThresh,:);
@@ -63,6 +62,9 @@ dBSArchive = dBSArchive(abs(dBSArchive(:,3)) < torErrThresh,:);
 pM = pM( (abs(pM(:,torCol)) < torErrThresh),:);
 pM = pM( (pM(:,torerrCol)   < torErrThresh),:);
 
+%Minimum noise threshold
+dBSArchive = dBSArchive(dBSArchive(:,4)      > torErrMin,:);
+pM = pM( (pM(:,torerrCol)   > torErrMin),:);
 
 %Distance cut
 shortCut = (pfTouch+10)*1e-6

@@ -23,8 +23,8 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 	Mag2Fit   = [ 0 0 0 0 0 1 1];
 	FitOnlyThese = SlopeFit + YukawaFit + MagFit + Mag2Fit;
 
-	LowerBounds = [-100, 1e-2, -1e8, 1e-2, -1e8, 1e-2, -1e8];
-	UpperBounds = [ 100, 100 ,  1e8,  100,  1e8,  100,  1e8];
+	LowerBounds = [-1000, 1e-2, -1e8, 1e-2, -1e8, 1e-2, -1e8];
+	UpperBounds = [ 1000, 100 ,  1e8,  100,  1e8,  100,  1e8];
 	NumIterations = 100;
 
 	%lambdas, alphas
