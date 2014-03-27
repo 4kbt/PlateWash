@@ -3,19 +3,19 @@ if( testInjection == 1)
 	
 	%Injected model parameters
 	if(0 == exist('alpha'))
-		alpha    = 0 
+		alpha    = 2 
 	end
 	if(0 == exist('lambda'))
 		lambda 	 = 300e-6
 	end
 	if(0 == exist('alpha1'))
-		alpha1    = 0 
+		alpha1    = 10000 
 	end
 	if(0 == exist('lambda1'))
 		lambda1	 = 100e-6
 	end
 	if(0 == exist('alpha2'))
-		alpha2    = 0 
+		alpha2    = 10000
 	end
 	if(0 == exist('lambda2'))
 		lambda2	 = 200e-6
