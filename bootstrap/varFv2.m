@@ -7,6 +7,9 @@
 
 function vF = varF(x,sx,B,sB,A,L,C)
 
+%	vF = 0;
+%	return
+
 	T = YukFiniteSizeCorrections(L);
 	Q = YukPreFactor;
 

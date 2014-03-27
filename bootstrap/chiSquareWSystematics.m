@@ -8,8 +8,8 @@ function X2 = chiSquareWSystematics( pM , x)
 	C = x(1);
 	L = x(2);
 	A = x(3);
-	BA = x(4);
-	BL = x(5);
+	BL = x(4);
+	BA = x(5);
 	B2L = x(6);
 	B2A = x(7);
 
@@ -21,8 +21,8 @@ function X2 = chiSquareWSystematics( pM , x)
 %	alphas = [A; 0 ; 0];
 
 	alphas =  [A; BA; B2A];
-	lambdas = [L; BL; B2L]* 1e-4;
-	slope = C * 1e-12;
+	lambdas = [L; BL; B2L]* XLUnits;
+	slope = C * XSUnits;
 	
 	DoNotExtractFixedParameters = 1;
 	run3147FixedParameters;

@@ -36,8 +36,6 @@ else
 	end
 end
 
-
-
 %These are the data which will be fit.
 dBSArchive = [pM(:,aCol) pM(:,bCol) pM(:,torCol) pM(:,torerrCol)];
 
@@ -45,24 +43,28 @@ dBSArchive = [pM(:,aCol) pM(:,bCol) pM(:,torCol) pM(:,torerrCol)];
 dBSArchive(:,1) = (touch2937 - polyval(pressEncP, dBSArchive(:,1)) ) * 1e-6;
 dBSArchive(:,2) = (touch2937 - polyval(pressEncP, dBSArchive(:,2)) ) * 1e-6;
 
-
-postLockinSignalInjection;
 pM(:,aCol) = (touch2937 - polyval(pressEncP, pM(:,aCol)) ) * 1e-6;
 pM(:,bCol) = (touch2937 - polyval(pressEncP, pM(:,bCol)) ) * 1e-6;
 
+postLockinSignalInjection;
+
+
+
 pM(:,aErrCol) = pM(:,aErrCol) * pressEncP(1)*-1*1e-6;
 pM(:,bErrCol) = pM(:,bErrCol) * pressEncP(1)*-1*1e-6;
+ 
 
-pM(:,torqueCol) = dBSArchive(:,3);
-
-torErrThresh = 5*std(pM(:,torqueCol))
+torErrThresh = 10; 5*std(pM(:,torqueCol))
 
 %Torque threshold cut
 dBSArchive = dBSArchive(dBSArchive(:,4)      < torErrThresh,:);
 dBSArchive = dBSArchive(abs(dBSArchive(:,3)) < torErrThresh,:);
 
+%pM(:,torCol)
+
 pM = pM( (abs(pM(:,torCol)) < torErrThresh),:);
 pM = pM( (pM(:,torerrCol)   < torErrThresh),:);
+
 
 %Minimum noise threshold
 dBSArchive = dBSArchive(dBSArchive(:,4)      > torErrMin,:);
@@ -78,7 +80,12 @@ pM = pM( pM(:,aCol) >= shortCut , :);
 pM = pM( pM(:,bCol) >= shortCut , :);
 
 %Sanity check
+if rows(pM) < 2
+	pM
+	error('Insufficient data in pM. Wrong channel? Cut too hard?');
+end
 if rows(dBSArchive) < 2
-	error('Insufficient data. Wrong channel? Cut too hard?');
+	dBSArchive
+	error('Insufficient data in dBSArchive. Wrong channel? Cut too hard?');
 end
 

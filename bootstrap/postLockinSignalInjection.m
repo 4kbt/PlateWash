@@ -1,27 +1,26 @@
 %Post-analysis signal injection.
 if( testInjection == 1)
-	
 	%Injected model parameters
 	if(0 == exist('alpha'))
-		alpha    = 2 
+		alpha    = 10 
 	end
 	if(0 == exist('lambda'))
-		lambda 	 = 300e-6
+		lambda 	 = 310e-6
 	end
 	if(0 == exist('alpha1'))
-		alpha1    = 10000 
+		alpha1    = 0 
 	end
 	if(0 == exist('lambda1'))
 		lambda1	 = 100e-6
 	end
 	if(0 == exist('alpha2'))
-		alpha2    = 10000
+		alpha2    = 0 
 	end
 	if(0 == exist('lambda2'))
 		lambda2	 = 200e-6
 	end
 	if(0 == exist('injSlope'))
-		injSlope = 2e-12 
+		injSlope = 1e-12 
 	end
 	
 
@@ -34,12 +33,19 @@ if( testInjection == 1)
 	yo(:,2) = yo(:,1)*injSlope + yo(:,2);
 
 	%Fake it!
-	dBSArchive(:,3) = genFakeData(yo, dBSArchive);
+%	dBSArchive(:,3) = genFakeData(yo, dBSArchive);
 	pM(:,torCol) = ...
-		genFakeData( yo, [pM(:,aCol), pM(:,bCol), pM(:,torCol), pM(:,torerrCol)]) + ...
-		genFakeData( yo1, [pM(:,aCol), pM(:,bCol), pM(:,torCol), pM(:,torerrCol)]) .* pM(:,magFieldCol ) + ...
-		genFakeData( yo2, [pM(:,aCol), pM(:,bCol), pM(:,torCol), pM(:,torerrCol)]) .* pM(:,magField2Col);
+		genFakeData( yo , [pM(:,aCol), pM(:,bCol), pM(:,torCol), pM(:,torerrCol)]) + ...
+		genFakeData( yo1, [pM(:,aCol), pM(:,bCol), pM(:,torCol), 0*pM(:,torerrCol)]) .* pM(:,magFieldCol ) + ...
+		genFakeData( yo2, [pM(:,aCol), pM(:,bCol), pM(:,torCol), 0*pM(:,torerrCol)]) .* pM(:,magField2Col);
 
+%	pM(:,torCol)
+	
+	X2Check = chiSquareWSystematics(pM, [ injSlope/XSUnits , lambda/XLUnits, alpha, lambda1/XLUnits, alpha1, lambda2/XLUnits, alpha2])
+	if(  X2Check > 2* rows(pM))
+		X2PerRows = X2Check/rows(pM)
+		error('chiSquared of the correct fit is too large!')
+	end
 end
 
 if ( 1 == exist("fileInjection" ))

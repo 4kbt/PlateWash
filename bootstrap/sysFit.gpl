@@ -6,20 +6,25 @@
 #fn = 'output/bootstrapYukawa.SimulFloata1000l0.0001slop2e-12SQP.dat'
 fn = 'output/bootstrapYukawa.SimulFloata0l0.0003slop2e-12SQP.dat'
 fn = 'output/bootstrapYukawa.SimulFloata2l0.0003slop2e-12SQP.dat'
+fn = 'output/bootstrapYukawa.SimulFloata4l0.0003slop2e-12SQP.dat'
+fn = 'output/bootstrapYukawa.SimulFloata4.01l0.0003slop2e-12SQP.dat'
+fn = 'output/bootstrapYukawa.SimulFloata0l0.00031slop0SQP.dat'
+fn = 'output/bootstrapYukawa.SimulFloata3.14l0.00031slop1e-12SQP.dat'
 
 set logsc x
 set logsc y
 
-chiCut = 1e4
+chiCut = 1e4 
 chiMin  = 1.60e3
 
 #chiCut = 1e3
-chiMin = 1e-9
+chiMin = 1e-6
+
 
 
 set title 'bootstrapped best fits, with systematics'
 
-alMax = 1e20
+alMax = 1e8
 alMin = 1e-6
 
 ptsz = 0.7

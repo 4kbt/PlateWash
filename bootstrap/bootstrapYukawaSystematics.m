@@ -24,10 +24,13 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 	FitOnlyThese = SlopeFit + YukawaFit + MagFit + Mag2Fit;
 
 	SysUB = 1e20;
+	LamLB = 1e-6/XLUnits;
+	LamUB = 1e-2/XLUnits;
+	SloUB = 1e-9/XSUnits;
 
-	LowerBounds = [-1000, 1e-2, -1e8, 1e-2, -SysUB, 1e-2, -SysUB];
-	UpperBounds = [ 1000, 100 ,  1e8,  100,  SysUB,  100,  SysUB];
-	NumIterations = 100;
+	LowerBounds = [-SloUB, LamLB, -1e8, LamLB, -SysUB, LamLB, -SysUB];
+	UpperBounds = [ SloUB, LamUB,  1e8, LamUB,  SysUB, LamUB,  SysUB];
+	NumIterations = 200; %default 100, but good fits are getting truncated
 
 	%lambdas, alphas
 	switch fitAlgorithm
@@ -44,9 +47,9 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 	endswitch
 
 	%Fit begins
-	ranLam = 10.^( rand(5,1) *3.0-6)/1e-4;
+	ranLam = 10.^( rand(5,1) *3.0-6)/XLUnits;
 	ranAlp = (-1).^(round(rand(5,1))+1).*10.^(rand(5,1)*11-5);
-	ranSlo = (rand-0.5)*10;
+	ranSlo = (rand-0.5)*10e-12/XSUnits;
 	ranSeed = [ ranSlo ranLam(1), ranAlp(1), ranLam(2), ranAlp(2), ranLam(3), ranAlp(3) ];
 %	ranSeed = [randn * 1e-4, randn, randn * 1e-12 ]
 %	ranSeed = [1.0001, 1, 2]; 

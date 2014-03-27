@@ -25,3 +25,9 @@ magFieldCol         = numPWDAQSensors+1+numSensors;
 magField2Col        = numPWDAQSensors+2+numSensors;
 temperatureCol      = numPWDAQSensors+3+numSensors;
 tempGradientCol     = numPWDAQSensors+4+numSensors;
+
+%Chisquared unit conversion factors, not columns, but needed for chisquaredWSystematics.m
+XSUnits = 1e-12;
+XLUnits = 1e-4;
+
+
