@@ -18,12 +18,15 @@ chiMin  = 1.60e3
 
 set title 'bootstrapped best fits, with systematics'
 
+alMax = 1e8
+alMin = 1e-6
+
 ptsz = 0.7
 set key noauto
 set format x ""
 set ylabel 'alpha'
 set multiplot layout 4,1
-pl [0.009:102][1e-12:1e8]\
+pl [0.009:102][alMin:alMax]\
 	fn index 0 u ($8<chiCut & $8>chiMin ? $4: 1/0):( ($5)) w p pt 7 lc 2 ps ptsz,\
 	fn index 0 u ($8<chiCut & $8>chiMin ? $6: 1/0):( ($7)) w p pt 7 lc 1 ps ptsz,\
 	fn index 0 u ($8<chiCut & $8>chiMin ? $2: 1/0):( ($3)) w p pt 7 lc 3 ps ptsz
@@ -35,7 +38,7 @@ set key below
 set format x "% g"
 set ylabel 'negative alpha'
 set xlabel 'lambda'
-pl [0.009:102][1e-12:1e8]\
+pl [0.009:102][alMin:alMax]\
 	fn index 0 u ($8<chiCut & $8>chiMin ? $4: 1/0):(-($5)) w p pt 7 lc 2 ps ptsz tit 'linear magnetic',\
 	fn index 0 u ($8<chiCut & $8>chiMin ? $6: 1/0):(-($7)) w p pt 7 lc 1 ps ptsz tit 'quadratic magnetic',\
 	fn index 0 u ($8<chiCut & $8>chiMin ? $2: 1/0):(-($3)) w p pt 7 lc 3 ps ptsz tit 'yukawa'
