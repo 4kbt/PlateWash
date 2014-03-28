@@ -45,13 +45,17 @@ dBSArchive(:,2) = (touch2937 - polyval(pressEncP, dBSArchive(:,2)) ) * 1e-6;
 
 pM(:,aCol) = (touch2937 - polyval(pressEncP, pM(:,aCol)) ) * 1e-6;
 pM(:,bCol) = (touch2937 - polyval(pressEncP, pM(:,bCol)) ) * 1e-6;
+pM(:,aErrCol) = pM(:,aErrCol) * pressEncP(1)*-1*1e-6;
+pM(:,bErrCol) = pM(:,bErrCol) * pressEncP(1)*-1*1e-6;
+
+%Minimum noise threshold (yes, will be repeated)
+dBSArchive = dBSArchive(dBSArchive(:,4)      > torErrMin,:);
+pM = pM( (pM(:,torerrCol)   > torErrMin),:);
 
 postLockinSignalInjection;
 
 
 
-pM(:,aErrCol) = pM(:,aErrCol) * pressEncP(1)*-1*1e-6;
-pM(:,bErrCol) = pM(:,bErrCol) * pressEncP(1)*-1*1e-6;
  
 
 torErrThresh = 10; 5*std(pM(:,torqueCol))
@@ -66,7 +70,7 @@ pM = pM( (abs(pM(:,torCol)) < torErrThresh),:);
 pM = pM( (pM(:,torerrCol)   < torErrThresh),:);
 
 
-%Minimum noise threshold
+%Minimum noise threshold (yes, repeated)
 dBSArchive = dBSArchive(dBSArchive(:,4)      > torErrMin,:);
 pM = pM( (pM(:,torerrCol)   > torErrMin),:);
 

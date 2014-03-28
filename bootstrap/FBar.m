@@ -12,9 +12,11 @@ function fbar = FBar(x,sx,B,A,L,C)
 	%alternative, also functional
 	fbar = C*x;
 	for ctr = 1:rows(L)
-		fbar = fbar + Q*exp( sx.^2 / 2.0 /L(ctr)^2- x/L(ctr ) ).* B(:,ctr) * (A(ctr).*L(ctr).^2.*T(ctr));
-%		fbar = fbar + Q*exp( -x./L(ctr ) ).* B(:,ctr) * (A(ctr).*L(ctr).^2.*T(ctr));
+		fbar = fbar + Q*exp( sx.^2 / 2.0 ./L(ctr).^2-x./L(ctr ) ).* B(:,ctr) * (A(ctr).*L(ctr).^2.*T(ctr));
+%		fbar = fbar + Q*exp(                       -x./L(ctr ) ).* B(:,ctr) * (A(ctr).*L(ctr).^2.*T(ctr));
 	end
+
+%	fbar
 %	sum(fbar1./fbar)
 %	sum(fbar1./fbar1)
 end

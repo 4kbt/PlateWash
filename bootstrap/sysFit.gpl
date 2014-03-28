@@ -10,6 +10,7 @@ fn = 'output/bootstrapYukawa.SimulFloata4l0.0003slop2e-12SQP.dat'
 fn = 'output/bootstrapYukawa.SimulFloata4.01l0.0003slop2e-12SQP.dat'
 fn = 'output/bootstrapYukawa.SimulFloata0l0.00031slop0SQP.dat'
 fn = 'output/bootstrapYukawa.SimulFloata3.14l0.00031slop1e-12SQP.dat'
+fn = 'output/bootstrapYukawa.SimulFloata10l0.00031slop1e-12SQP.dat'
 
 set logsc x
 set logsc y
@@ -18,7 +19,7 @@ chiCut = 1e4
 chiMin  = 1.60e3
 
 #chiCut = 1e3
-chiMin = 1e-6
+#chiMin = 1e-6
 
 
 

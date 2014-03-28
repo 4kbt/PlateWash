@@ -8,13 +8,13 @@ if( testInjection == 1)
 		lambda 	 = 310e-6
 	end
 	if(0 == exist('alpha1'))
-		alpha1    = 0 
+		alpha1    = -100 
 	end
 	if(0 == exist('lambda1'))
 		lambda1	 = 100e-6
 	end
 	if(0 == exist('alpha2'))
-		alpha2    = 0 
+		alpha2    = 66
 	end
 	if(0 == exist('lambda2'))
 		lambda2	 = 200e-6
@@ -40,6 +40,13 @@ if( testInjection == 1)
 		genFakeData( yo2, [pM(:,aCol), pM(:,bCol), pM(:,torCol), 0*pM(:,torerrCol)]) .* pM(:,magField2Col);
 
 %	pM(:,torCol)
+
+%	[GB V] = evalYukawaSystematicAveAndVariance(pM(:,aCol) , pM(:,bCol), pM(:,aErrCol), pM(:,bErrCol), [ones(rows(pM),1) , pM(:,magFieldCol), pM(:,magField2Col)], ...
+%			[zeros(rows(pM),1), ones(rows(pM), 1)*0.01, ones(rows(pM), 1)*0.0001], [alpha; alpha1; alpha2], [lambda; lambda1; lambda2], injSlope)
+%clear pause
+%	plot(pM(:,torCol), '.', G,'.');
+
+%pause
 	
 	X2Check = chiSquareWSystematics(pM, [ injSlope/XSUnits , lambda/XLUnits, alpha, lambda1/XLUnits, alpha1, lambda2/XLUnits, alpha2])
 	if(  X2Check > 2* rows(pM))
