@@ -30,7 +30,7 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 
 	LowerBounds = [-SloUB, LamLB, -1e8, LamLB, -SysUB, LamLB, -SysUB];
 	UpperBounds = [ SloUB, LamUB,  1e8, LamUB,  SysUB, LamUB,  SysUB];
-	NumIterations = 200; %default 100, but good fits are getting truncated
+	NumIterations = 400; %default 100, but good fits are getting truncated at 200
 
 	%lambdas, alphas
 	switch fitAlgorithm
