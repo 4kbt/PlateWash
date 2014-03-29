@@ -23,7 +23,7 @@ if( testInjection == 1)
 		injSlope = -4e-12 
 	end
 	
-	alphasInjected = [alpha alpha1 alpha2]
+	alphasInjected = [alpha alpha1 alpha2];
 	lambdasInjected = [lambda lambda1 lambda2]; 
 
 	%Make force law
