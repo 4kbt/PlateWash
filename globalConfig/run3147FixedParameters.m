@@ -120,6 +120,10 @@ IFODistCal = 370e-9/(3.28-1.639);
 
 %Systematic uncertainties
 NumSystematics = 3;
+enableSystematics = 0;
+if(enableSystematics == 0)
+	fprintf('Systematic uncertainties disabled!');
+end
 
 SysUB = 1e8;
 LamLB = 1e-6/XLUnits;

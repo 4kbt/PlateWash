@@ -1,4 +1,4 @@
-function [GBV fvG] = evalYukawaSystematicAveAndVariance(x1Vec, x2Vec, sx1Vec, sx2Vec, BMat, sBMat, alphas, lambdas, slope)
+function [GBV fvG] = evalYukawaSystematicAveAndVariance(x1Vec, x2Vec, sx1Vec, sx2Vec, BMat, sBMat, alphas, lambdas, slope, enableSystematics)
 
 	r = rows(x1Vec);
 	b = columns(BMat);
@@ -35,8 +35,8 @@ function [GBV fvG] = evalYukawaSystematicAveAndVariance(x1Vec, x2Vec, sx1Vec, sx
 
 %	v1 = fvG;
 	
-	fvG =   varFv2(x1Vec,sx1Vec,BMat,sBMat,alphas,lambdas,slope) ...
-	      + varFv2(x2Vec,sx2Vec,BMat,sBMat,alphas,lambdas,slope);
+	fvG =   varFv2(x1Vec,sx1Vec,BMat,sBMat,alphas,lambdas,slope, enableSystematics) ...
+	      + varFv2(x2Vec,sx2Vec,BMat,sBMat,alphas,lambdas,slope, enableSystematics);
 	
 %	[v1 fvG fvG/v1]
 

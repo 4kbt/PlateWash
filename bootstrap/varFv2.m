@@ -5,7 +5,7 @@
 %A and L are size Lx1
 % in general, N >> L. 
 
-function vF = varF(x,sx,B,sB,A,L,C)
+function vF = varF(x,sx,B,sB,A,L,C, enableSystematics)
 
 %	vF = 0;
 %	return
@@ -69,7 +69,7 @@ function vF = varF(x,sx,B,sB,A,L,C)
 	%compute vF
 	vF =   (
 		Q^2 *( crossTerm
-		+ exp( 2 * (sx2 * IL2 -  x * IL) ) .* (sB.^2 + B.^2 .* ( 1 - exp( - sx2 * ( 1 ./ transpose(L.*L) ) ) ) ) * ALT.^2 )
+		+ exp( 2 * (sx2 * IL2 -  x * IL) ) .* (sB.^2*enableSystematics + B.^2 .* ( 1 - exp( - sx2 * ( 1 ./ transpose(L.*L) ) ) ) ) * ALT.^2 )
 		- 2*C*Q*exp( sx2/2.0 * IL2 - x * IL ) .* (sx2 * IL ) .* B * ALT  ...
 		+ C^2 * sx2
 		);
