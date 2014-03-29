@@ -1,0 +1,86 @@
+#fn = 'output/bootstrapYukawa.SimulFloata400l0.0003slop2e-12SQP.dat'
+#fn = 'output/bootstrapYukawa.SimulFloata300l0.0003slop2e-12SQP.dat'
+#fn = 'output/bootstrapYukawa.SimulFloata3000l0.0003slop2e-12SQP.dat'
+#fn = 'output/bootstrapYukawa.SimulFloata3l0.0001slop2e-12SQP.dat'
+#fn = 'output/bootstrapYukawa.SimulFloata1l0.0001slop2e-12SQP.dat'
+#fn = 'output/bootstrapYukawa.SimulFloata1000l0.0001slop2e-12SQP.dat'
+fn = 'output/bootstrapYukawa.SimulFloata0l0.0003slop2e-12SQP.dat'
+fn = 'output/bootstrapYukawa.SimulFloata2l0.0003slop2e-12SQP.dat'
+fn = 'output/bootstrapYukawa.SimulFloata4l0.0003slop2e-12SQP.dat'
+fn = 'output/bootstrapYukawa.SimulFloata4.01l0.0003slop2e-12SQP.dat'
+fn = 'output/bootstrapYukawa.SimulFloata0l0.00031slop0SQP.dat'
+fn = 'output/bootstrapYukawa.SimulFloata3.14l0.00031slop1e-12SQP.dat'
+#beautiful clumping
+fn = 'output/bootstrapYukawa.SimulFloata10l0.00031slop1e-12SQP.dat'
+fn = 'output/bootstrapYukawa.SimulFloata5l0.00031slop-4e-12SQP.dat'
+fn = 'output/bootstrapYukawa.SimulFloata6l0.00031slop-4e-12.dat'
+
+
+set logsc x
+set logsc y
+
+chiCut = 3e3 
+chiMin  = 1.60e3
+
+#chiCut = 1e3
+#chiMin = 1e-6
+
+
+
+set title 'bootstrapped best fits, with systematics'
+
+NumSystematics = 3
+
+alMax = 1e8
+alMin = 1e-6
+
+ptsz = 0.7
+set key noauto
+set format x ""
+set ylabel 'alpha'
+set multiplot layout 4,1
+pl [0.009:102][alMin:alMax]\
+	for [ctr=NumSystematics:1:-1] \
+	fn index 0 u ($8<chiCut & $8>chiMin ? column(2*ctr): 1/0):( column(2*ctr+1)) w p lc ctr pt 7 ps ptsz,\
+	for [ctr=NumSystematics:1:-1] \
+	fn index 1 u (column(ctr)):(column(ctr+NumSystematics)) w p lc ctr pt 1 ps ptsz*3
+	
+
+unset title
+
+set yrange [:] reverse
+set key below
+set format x "% g"
+set ylabel 'negative alpha'
+set xlabel 'lambda'
+pl [0.009:102][alMin:alMax]\
+	for [ctr=NumSystematics:1:-1] \
+	fn index 0 u ($8<chiCut & $8>chiMin ? column(2*ctr): 1/0):( -column(2*ctr+1)) w p lc ctr pt 7 ps ptsz,\
+	for [ctr=NumSystematics:1:-1] \
+	fn index 1 u (column(ctr)):(-column(ctr+NumSystematics)) w p lc ctr pt 1 ps ptsz*3
+	
+#Titles could be implemented using columnheader?
+
+
+unset logsc x
+#unset logsc y 
+set yrange [:] noreverse
+set ylabel 'slope'
+set xlabel 'fit #'
+pl \
+	fn index 0 u ($8 < chiCut & $8>chiMin ?  $1 : 1/0) w p pt 7 ps ptsz lc 1 tit 'positive',\
+	fn index 0 u ($8 < chiCut & $8>chiMin ? -$1 : 1/0) w p pt 7 ps ptsz lc 3 tit 'negative',\
+	fn index 1 u (column(NumSystematics*2+1)) w p pt 1 ps ptsz*3 lc 1 tit 'injected signal, if positive',\
+	fn index 1 u (-column(NumSystematics*2+1)) w p pt 1 ps ptsz*3 lc 3 tit 'injected signal, if negative'
+	
+	
+set logsc y 
+set ylabel 'chi squared'
+pl \
+	fn index 0 u 8 w p pt 7 ps ptsz lc 3,\
+		chiMin lt 1 lw 2 tit 'min',\
+		chiCut lt 3 lw 2 tit 'max'
+
+unset multiplot
+unset xlabel
+

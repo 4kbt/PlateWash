@@ -117,3 +117,12 @@ IFOFringeBot = 1.639;
 
 IFODistCal = 370e-9/(3.28-1.639);
 
+
+%Systematic uncertainties
+NumSystematics = 3;
+
+SysUB = 1e8;
+LamLB = 1e-6/XLUnits;
+LamUB = 1e-2/XLUnits;
+SloUB = 1e-9/XSUnits;
+

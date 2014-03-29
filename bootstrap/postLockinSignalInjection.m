@@ -2,13 +2,13 @@
 if( testInjection == 1)
 	%Injected model parameters
 	if(0 == exist('alpha'))
-		alpha    = 10 
+		alpha    = 6 
 	end
 	if(0 == exist('lambda'))
 		lambda 	 = 310e-6
 	end
 	if(0 == exist('alpha1'))
-		alpha1    = -100 
+		alpha1    = -10 
 	end
 	if(0 == exist('lambda1'))
 		lambda1	 = 100e-6
@@ -17,13 +17,14 @@ if( testInjection == 1)
 		alpha2    = 66
 	end
 	if(0 == exist('lambda2'))
-		lambda2	 = 200e-6
+		lambda2	 = 50e-6
 	end
 	if(0 == exist('injSlope'))
-		injSlope = 1e-12 
+		injSlope = -4e-12 
 	end
 	
-
+	alphasInjected = [alpha alpha1 alpha2]
+	lambdasInjected = [lambda lambda1 lambda2]; 
 
 	%Make force law
 	yo = yukawaForceLaw(alpha, lambda, 1e-6, 3e-3, 1e-6);
