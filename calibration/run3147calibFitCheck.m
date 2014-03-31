@@ -16,4 +16,5 @@ try
 catch
 	['error in ' num2str(nameCtr) '!!!!!!!!!!!!!!!!!!!!!!!']
 	lasterr
+	errorMessage
 end
