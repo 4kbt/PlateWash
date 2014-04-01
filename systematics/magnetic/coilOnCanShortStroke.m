@@ -27,9 +27,9 @@ b0 = [b0; pM];
 
 clear pM;
 
-[lrDiff blBins blH brBins brH bLPositions bRPositions] = compareTwoSquareWavesBlind( bL,bR, torCol, torerrCol, torErrThresh, torErrMin, numPWSensors + psSquareCol, numSensors, 1, 2);
-[r0Diff brBins brH b0Bins b0H bRPositions b0Positions] = compareTwoSquareWavesBlind( bR,b0, torCol, torerrCol, torErrThresh, torErrMin, numPWSensors + psSquareCol, numSensors, 1, 2);
-[l0Diff blBins blH b0Bins b0H bLPositions b0Positions] = compareTwoSquareWavesBlind( bL,b0, torCol, torerrCol, torErrThresh, torErrMin, numPWSensors + psSquareCol, numSensors, 1, 2);
+[lrDiff blBins blH brBins brH bLPositions bRPositions] = compareTwoSquareWavesBlind( bL,bR, torCol, torerrCol, torErrMin, numPWSensors + psSquareCol, numSensors, 1, 2);
+[r0Diff brBins brH b0Bins b0H bRPositions b0Positions] = compareTwoSquareWavesBlind( bR,b0, torCol, torerrCol, torErrMin, numPWSensors + psSquareCol, numSensors, 1, 2);
+[l0Diff blBins blH b0Bins b0H bLPositions b0Positions] = compareTwoSquareWavesBlind( bL,b0, torCol, torerrCol, torErrMin, numPWSensors + psSquareCol, numSensors, 1, 2);
 
 
 %Output...

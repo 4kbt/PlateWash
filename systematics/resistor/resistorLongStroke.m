@@ -26,7 +26,7 @@ for resistorCtr = 1:rows(resistorRuns)
 
 	clear pM;
 
-	[l0Diff blBins blH b0Bins b0H bLPositions b0Positions] = compareTwoSquareWavesBlind( bL,b0, torCol, torerrCol, torErrThresh, torErrMin, numPWSensors + psSquareCol, numSensors, 1, 2);
+	[l0Diff blBins blH b0Bins b0H bLPositions b0Positions] = compareTwoSquareWavesBlind( bL,b0, torCol, torerrCol, torErrMin, numPWSensors + psSquareCol, numSensors, 1, 2);
 
 	b0Uncertainty = uncertaintyOverTime(b0(:,torCol), b0(:,torerrCol)) (end,2);
 	b0Uncertainty = [3154 20e6 0 0 b0Uncertainty];
