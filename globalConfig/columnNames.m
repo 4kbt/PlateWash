@@ -1,4 +1,4 @@
-#This script is executed by both Octave and Gnuplot. Choose syntax carefully.
+#This script is executed by both Octave and Gnuplot. Choose syntax carefully. Use only # as a comment character.
 
 numSystematics = 4;
 numPWDAQSensors = 25;
@@ -26,7 +26,7 @@ magField2Col        = numPWDAQSensors+2+numSensors;
 temperatureCol      = numPWDAQSensors+3+numSensors;
 tempGradientCol     = numPWDAQSensors+4+numSensors;
 
-%Chisquared unit conversion factors, not columns, but needed for chisquaredWSystematics.m
+#Chisquared unit conversion factors, not columns, but needed for chisquaredWSystematics.m
 XSUnits = 1e-12;
 XLUnits = 1e-4;
 
