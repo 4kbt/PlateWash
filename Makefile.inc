@@ -31,7 +31,7 @@ LYX    := lyx -batch --export "pdf" -dbg info,latex
 	@echo $(OCT)
 	@echo $(MLIB)
 
-PARALLEL := -j 3
+PARALLEL := -j 4
 
 SINGLEQUOTECUTTER := sed -e "s/^.*'\(.*\)'.*$$/\1/"
 
