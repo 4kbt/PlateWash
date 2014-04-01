@@ -43,13 +43,13 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 
 		if(1 == testInjection & ~exist("fileInjection"))
 			injParameters = [lambdasInjected/XLUnits alphasInjected injSlope/XSUnits];
-			outfilename = ['output/bootstrapYukawa.SimulFloata' num2str(alpha) 'l' num2str(lambda) 'slop' num2str(injSlope) '.dat'];
+			outfilename = ['output/bootstrapYukawa.Sysa' num2str(alpha) 'l' num2str(lambda) 'slop' num2str(injSlope) '.dat'];
 		elseif(exist("fileInjection"))
 			injParameters = [0 0 0];
-			outfilename = ['output/bootstrapYukawa.SimulFloataInjected' '.dat']; 
+			outfilename = ['output/bootstrapYukawa.SysaInjected' '.dat']; 
 		else
 			injParameters = [0 0 0];
-			outfilename = ['output/bootstrapYukawa.SimulFloat' '.dat'];
+			outfilename = ['output/bootstrapYukawa.Sys' '.dat'];
 		end
 		save( outfilename, "bootstrapOut", "injParameters");
 	catch
