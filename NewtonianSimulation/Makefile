@@ -57,7 +57,9 @@ plots/offsetAttractorAssembly.eps: $(BIN) offsetAttractorAssembly.gpl $(HOMEDIR)
 				$(SDIR)/jan13OffsetAttractor.dat
 	$(GNU) offsetAttractorAssembly.gpl
 
-$(SDIR)/scans/scanMerge.dat : mergeScanComputations.sh\
+MERGEFILE:=$(SDIR)/scans/scanMerge.dat
+
+$(MERGEFILE) : mergeScanComputations.sh\
 				$(SDIR)/scans/attractorPMScan1.dat\
 				$(SDIR)/scans/attractorPMScan2.dat\
 				$(SDIR)/scans/attractorPMScan3.dat\
@@ -69,9 +71,9 @@ $(SDIR)/scans/scanMerge.dat : mergeScanComputations.sh\
 				$(SDIR)/scans/attractorPMScan9.dat
 	./mergeScanComputations.sh
 
-$(SDIR)/scanMaxDiff.tex : scanMaxDiff.m 
+$(SDIR)/scanMaxDiff.tex : scanMaxDiff.m $(MERGEFILE)
 # $(SDIR)/scans/scanMerge.dat
-	sed '/^\#/d' $(SDIR)/scans/scanMerge.dat | awk '{print $$13}' > $(SDIR)/scans/mergedTorqueOnly.dat
+	sed '/^\#/d' $(MERGEFILE) | awk '{print $$13}' > $(SDIR)/scans/mergedTorqueOnly.dat
 	$(HOMEDIR)/bin/whiteLineStrip.sh $(SDIR)/scans/mergedTorqueOnly.dat
 	$(OCT) scanMaxDiff.m
 	$(HOMEDIR)/bin/mathify.sh SimulationOutput/*.tex
