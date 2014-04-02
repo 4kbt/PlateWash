@@ -35,7 +35,7 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 		%When analyzing, make a cut on csMin
 		tic
 		[x, csMin, fitInfo, iter, nf]   = sqp(ranSeed, cSFunc, [], [], LowerBounds, UpperBounds,NumIterations)
-		bsO = [ transpose(x) csMin nf iter fitInfo ranSeed bootStrapCounter toc];
+		bsO = [ transpose(x) csMin nf iter fitInfo ranSeed bootStrapCounter toc rows(pM)];
 		%if fit converged, save it.
 		if(fitInfo == 101) 
 	       		bootstrapOut = [bootstrapOut; bsO];
