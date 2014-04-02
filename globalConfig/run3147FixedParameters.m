@@ -119,7 +119,7 @@ IFODistCal = 370e-9/(3.28-1.639);
 
 
 %Systematic uncertainties
-NumSystematics = 3;
+NumFitSystematics = 3;
 enableSystematics = 0;
 if(enableSystematics == 0)
 	fprintf('Systematic uncertainties disabled!');
