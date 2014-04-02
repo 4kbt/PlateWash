@@ -64,6 +64,5 @@ if ( 1 == exist("fileInjection" ))
 	run3147PendulumParameters
 	fl = [sourceFile(:,5)-pendulumBodyThickness/2.0 sourceFile(:,13)];
 
-	dBSArchive(:,3) = genFakeData(fl, dBSArchive);
 	pM(:,torCol) = genFakeData(fl,  [pM(:,aCol), pM(:,bCol), pM(:,torCol), pM(:,torerrCol)]);
 end
