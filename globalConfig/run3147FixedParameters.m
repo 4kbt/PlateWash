@@ -98,8 +98,8 @@ torErrMin    = 1e-18;
 
 %fprintf('# read Complete \n')
 
-%'INSUFFICENT bootstrap counts'
-NumberOfYukawaBootstraps = 1000; %was 1000
+'INSUFFICENT bootstrap counts'
+NumberOfYukawaBootstraps = 20; %was 1000
 NumberOfArbFitBootstraps = NumberOfYukawaBootstraps; % was 300
 
 foilResonance = 1580;

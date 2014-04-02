@@ -125,8 +125,9 @@ flexureSetBack = spindlePlateSetBack + spindlePlateThickness;
 
 
 %was 100e-6
-pendulumPMScanGridSize =750e-6;	printSigNumber(pendulumPMScanGridSize, [HOMEDIR '/extracted/pendulumPMScanGridSize.tex'],3);
-pendulumPMScanVertStep = 2.5e-6;	printSigNumber(pendulumPMScanVertStep, [HOMEDIR '/extracted/pendulumPMScanVertStep.tex'],2);
+'Pendulum gridsize is insufficient. 750e-6 and 2.5e-6 are better.'
+pendulumPMScanGridSize =2000e-6;printSigNumber(pendulumPMScanGridSize, [HOMEDIR '/extracted/pendulumPMScanGridSize.tex'],3);
+pendulumPMScanVertStep = 5e-6;	printSigNumber(pendulumPMScanVertStep, [HOMEDIR '/extracted/pendulumPMScanVertStep.tex'],2);
 pendulumPMBodyDensity = rhoTi;
 pendulumPMInlayDensity =  rhoTaP;
 
