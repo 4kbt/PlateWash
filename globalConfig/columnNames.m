@@ -21,10 +21,14 @@ torCol = torqueCol;
 torerrCol = 6*numSensors+torCol;
 
 #Systematics
-magFieldCol         = numPWDAQSensors+1+numSensors;
-magField2Col        = numPWDAQSensors+2+numSensors;
-temperatureCol      = numPWDAQSensors+3+numSensors;
-tempGradientCol     = numPWDAQSensors+4+numSensors;
+magFieldCol         = numPWDAQSensors+1;
+magFieldACol        = magFieldCol+numSensors;
+magField2Col        = numPWDAQSensors+2;
+magField2ACol       = magField2Col+numSensors;
+temperatureCol      = numPWDAQSensors+3;
+temperatureACol     = temperatureCol+numSensors;
+tempGradientCol     = numPWDAQSensors+4;
+tempGradientACol    = tempGradientCol+numSensors;
 
 #Chisquared unit conversion factors, not columns, but needed for chisquaredWSystematics.m
 XSUnits = 1e-12;
