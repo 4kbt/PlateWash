@@ -6664,8 +6664,17 @@ Small non-uniformities in density of the attractor or pendulum materials
  expected to have no effect at all.
  In the absence of a pendulum non-uniformity, an attractor void will cause
  a lateral position-dependent torque.
- If the attractor void were to occur near the outer corner of the pendulum
- (worst case), the torque would be XXXRC N-m/ (cubic micron of attractor).
+ If the attractor void were to occur near the outer corner of the dense
+ pendulum inlay (worst case), the unmodulated torque change would be XXXRC
+ 
+\begin_inset Formula $<$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+N-m/ (cubic micron of attractor).
  In the unlikely event that two voids are laterally coincident, voids could
  be >80 
 \begin_inset Formula $\mu$
