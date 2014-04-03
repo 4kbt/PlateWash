@@ -21,7 +21,7 @@ FITSG:=--eval 'alpha= 200;  lambda=56e-6 ; injSlope=-1e-11; alpha1=4    ; lambda
 FITSH:=--eval 'alpha= 500;  lambda=30e-6 ; injSlope= 0e-11; alpha1=-20  ; lambda1=2e-4; alpha2=-0.1; lambda2=200e-6;'
 FITSI:=--eval 'alpha= 100;  lambda=200e-6; injSlope= 1e-11; alpha1=137  ; lambda1=8e-6; alpha2=4e4 ; lambda2=310e-6;'
 
-all : yukawaFit arbFit sysTest newtonianInjection
+all : yukawaFit arbFit sysTest newtonianInjection output/makeSymFigureSystematics.tex test
 
 yukawaFit : $(PREREQUISITES)
 	$(OCT)  yukawaWrapper.m
@@ -59,7 +59,13 @@ yukawaFitTest : $(PREREQUISITES)
 	./yukawaPlots.sh
 	$(MAKE) TeXFigure
 
-sysTest : yukSysFitA yukSysFitB yukSysFitC yukSysFitD yukSysFitE  yukSysFitF yukSysFitG yukSysFitH yukSysFitI
+sysTest : yukSysFitA yukSysFitB yukSysFitC yukSysFitD yukSysFitE  yukSysFitF yukSysFitG yukSysFitH yukSysFitI yukawaSystematicsPlots.sh
+	./yukawaSystematicsPlots.sh
+	
+output/makeSymFigureSystematics.tex: sysTest generatePlottingTeXSystematics.sh output
+	./generatePlottingTeXSystematics.sh $(HOMEDIR)
+	
+
 
 yukSysFitA: $(PREREQUISITES)
 	$(OCT) $(FITSA) yukawaSystematicsWrapper.m
