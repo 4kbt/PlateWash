@@ -13190,6 +13190,29 @@ With this knowledge, we can compute
 !
 \end_layout
 
+\begin_layout Standard
+If 
+\begin_inset Formula $\sigma_{x}$
+\end_inset
+
+ is zero, then
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sigma_{F_{x}}^{2}=Q^{2}\sum_{i}\alpha_{i}^{2}\lambda_{i}^{4}T(\lambda_{i})^{2}\sigma_{B_{i}}^{2}e^{-2\bar{x}/\lambda_{i}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
 \begin_layout Chapter
 Software
 \end_layout

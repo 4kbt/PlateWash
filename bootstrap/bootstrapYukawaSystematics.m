@@ -6,7 +6,13 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 
 	['yukawa bootstrap counter ' num2str(bootStrapCounter)]
 
+	%Bootstrapping
 	pMd = bootstrapData(pM);
+	if(SysNoX == 1)
+		%Fuzz x errorbars
+		pMd(:,aCol) = pMd(:,aCol) + randn(rows(pMd),1) .* pMd(:,aErrCol);
+		pMd(:,bCol) = pMd(:,bCol) + randn(rows(pMd),1) .* pMd(:,bErrCol);
+	end
 
 	%'bootstrapping complete'
 

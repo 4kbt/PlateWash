@@ -99,7 +99,7 @@ torErrMin    = 1e-18;
 %fprintf('# read Complete \n')
 
 %'INSUFFICENT bootstrap counts'
-NumberOfYukawaBootstraps = 20; %was 1000
+NumberOfYukawaBootstraps = 100; %was 1000
 NumberOfArbFitBootstraps = NumberOfYukawaBootstraps; % was 300
 
 foilResonance = 1580;
@@ -120,9 +120,13 @@ IFODistCal = 370e-9/(3.28-1.639);
 
 %Systematic uncertainties
 NumFitSystematics = 3;
-enableSystematics = 0;
+enableSystematics = 1;
 if(enableSystematics == 0)
 	fprintf('Systematic uncertainties disabled!');
+end
+SysNoX = 1;
+if(SysNoX == 1)
+	fprintf('Systematics handling by bootstrap');
 end
 
 SysUB = 1e8;

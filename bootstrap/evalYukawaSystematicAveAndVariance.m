@@ -1,4 +1,4 @@
-function [GBV fvG] = evalYukawaSystematicAveAndVariance(x1Vec, x2Vec, sx1Vec, sx2Vec, BMat, sBMat, alphas, lambdas, slope, enableSystematics)
+function [GBV fvG] = evalYukawaSystematicAveAndVariance(x1Vec, x2Vec, sx1Vec, sx2Vec, BMat, sBMat, alphas, lambdas, slope, enableSystematics, SysNoX)
 
 	r = rows(x1Vec);
 	b = columns(BMat);
@@ -30,8 +30,13 @@ function [GBV fvG] = evalYukawaSystematicAveAndVariance(x1Vec, x2Vec, sx1Vec, sx
 	GBV =   FBar(x1Vec,sx1Vec,BMat,alphas,lambdas,slope) ...
 	      - FBar(x2Vec,sx2Vec,BMat,alphas,lambdas,slope);
 
-	fvG =   varF(x1Vec,sx1Vec,BMat,sBMat,alphas,lambdas,slope, enableSystematics) ...
-	      + varF(x2Vec,sx2Vec,BMat,sBMat,alphas,lambdas,slope, enableSystematics);
+	if(SysNoX ~= 1)
+		fvG =   varF(x1Vec,sx1Vec,BMat,sBMat,alphas,lambdas,slope, enableSystematics) ...
+		      + varF(x2Vec,sx2Vec,BMat,sBMat,alphas,lambdas,slope, enableSystematics);
+	else
+		fvG =   varFNoX(x1Vec,sx1Vec,BMat,sBMat,alphas,lambdas,slope, enableSystematics) ...
+		      + varFNoX(x2Vec,sx2Vec,BMat,sBMat,alphas,lambdas,slope, enableSystematics);
+	end
 	
 %	[v1 fvG fvG/v1]
 
