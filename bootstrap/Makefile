@@ -22,6 +22,7 @@ FITSH:=--eval 'alpha= 500;  lambda=30e-6 ; injSlope= 0e-11; alpha1=-20  ; lambda
 FITSI:=--eval 'alpha= 100;  lambda=200e-6; injSlope= 1e-11; alpha1=137  ; lambda1=8e-6; alpha2=4e4 ; lambda2=310e-6;'
 
 all : yukawaFit arbFit sysTest newtonianInjection output/makeSymFigureSystematics.tex test
+	$(HOMEDIR)/bin/mathify.sh extracted/
 
 yukawaFit : $(PREREQUISITES)
 	$(OCT)  yukawaWrapper.m
