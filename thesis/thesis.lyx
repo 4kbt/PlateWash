@@ -49,7 +49,7 @@
 \bottommargin 1in
 \headheight 1in
 \headsep 1in
-\footskip 1in
+\footskip 20pt
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -13206,10 +13206,6 @@ If
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 
 \end_layout
 
