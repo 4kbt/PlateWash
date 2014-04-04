@@ -47,9 +47,9 @@
 \topmargin 1in
 \rightmargin 1in
 \bottommargin 1in
-\headheight 1in
-\headsep 1in
-\footskip 20pt
+\headheight 12pt
+\headsep 12pt
+\footskip 0.25in
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
