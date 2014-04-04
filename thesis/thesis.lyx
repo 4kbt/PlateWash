@@ -15188,7 +15188,7 @@ filename "../systematics/magnetic/extracted/verticalField.tex"
 T vertical, 
 \begin_inset CommandInset include
 LatexCommand input
-filename "../systematics/magnetic/extracted/transverselField.tex"
+filename "../systematics/magnetic/extracted/transverseField.tex"
 
 \end_inset
 
