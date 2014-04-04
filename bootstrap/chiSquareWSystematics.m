@@ -33,7 +33,7 @@ function X2 = chiSquareWSystematics( pM , x)
 	sx2Vec = pM(:,bErrCol);
 
 	BMat = [ones(rows(x1Vec),1) pM(:,magFieldACol) pM(:,magField2ACol) ];
-	sBMat =[zeros(rows(x1Vec),1) ones(rows(x1Vec),1)*0.01, ones(rows(x1Vec),1)*0.0001];
+	sBMat =[zeros(rows(x1Vec),1) ones(rows(x1Vec),1)*AppliedMagneticFieldUncertainty, ones(rows(x1Vec),1)*AppliedMagneticFieldUncertainty.^2];
 
 	[GBV varG] = evalYukawaSystematicAveAndVariance(x1Vec, x2Vec, sx1Vec, sx2Vec, BMat, sBMat, alphas, lambdas, slope, enableSystematics, SysNoX);
 

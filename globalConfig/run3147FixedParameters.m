@@ -132,5 +132,6 @@ end
 SysUB = 1e8;
 LamLB = 1e-6/XLUnits;
 LamUB = 1e-2/XLUnits;
-SloUB = 1e-9/XSUnits;
+SloUB = Inf; %1e-9/XSUnits;
 
+AppliedMagneticFieldUncertainty = 1e-8; %TotalBogus!

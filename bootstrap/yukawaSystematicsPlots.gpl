@@ -24,8 +24,10 @@ set output outfile
 set logsc x
 set logsc y
 
-chiCut = 1.6 
+chiCut = 2 #1.6 
 chiMin  = 0.75 
+#chiCut = 1.6e10 
+chiMin  = 0.75e-10
 
 #chiCut = 1e3
 #chiMin = 1e-6

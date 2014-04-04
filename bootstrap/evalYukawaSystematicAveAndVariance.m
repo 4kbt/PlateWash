@@ -27,13 +27,16 @@ function [GBV fvG] = evalYukawaSystematicAveAndVariance(x1Vec, x2Vec, sx1Vec, sx
 		error('malformed argument!');
 	end
 
-	GBV =   FBar(x1Vec,sx1Vec,BMat,alphas,lambdas,slope) ...
-	      - FBar(x2Vec,sx2Vec,BMat,alphas,lambdas,slope);
-
 	if(SysNoX ~= 1)
+		GBV =   FBar(x1Vec,sx1Vec,BMat,alphas,lambdas,slope) ...
+		      - FBar(x2Vec,sx2Vec,BMat,alphas,lambdas,slope);
+
 		fvG =   varF(x1Vec,sx1Vec,BMat,sBMat,alphas,lambdas,slope, enableSystematics) ...
 		      + varF(x2Vec,sx2Vec,BMat,sBMat,alphas,lambdas,slope, enableSystematics);
 	else
+		GBV =   FBarNoX(x1Vec,sx1Vec,BMat,alphas,lambdas,slope) ...
+		      - FBarNoX(x2Vec,sx2Vec,BMat,alphas,lambdas,slope);
+
 		fvG =   varFNoX(x1Vec,sx1Vec,BMat,sBMat,alphas,lambdas,slope, enableSystematics) ...
 		      + varFNoX(x2Vec,sx2Vec,BMat,sBMat,alphas,lambdas,slope, enableSystematics);
 	end
