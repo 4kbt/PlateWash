@@ -1683,8 +1683,9 @@ It is easily shown that, in three dimensions, any force that obeys a
  The converse is true, too: If a force law satisfies Gauss' Law, then the
  field flux through a sphere centered on a point charge must be constant
  for all sphere radii.
- As the surface area of the sphere is proportional to the square of its
- radius, then the field strength must fall as 
+ As the surface area of a three-dimensional sphere in three spatial dimensions
+ is proportional to the square of its radius, then the field strength must
+ fall as 
 \begin_inset Formula $1/r^{2}$
 \end_inset
 
@@ -1710,16 +1711,17 @@ Gauss' law test of gravity.
 \begin_inset Quotes erd
 \end_inset
 
- For any force, the field from an infinite two-dimensional sheet of charge
- must, by symmetry, be perpendicular to the plane of the sheet.
+ For any force in three spatial dimensions, the field from an infinite two-dimen
+sional sheet of charge must, by symmetry, be perpendicular to the plane
+ of the sheet.
  Furthermore, if the interaction obeys Gauss' law, the flux of field remains
  constant with increasing distance from the sheet..
  Therefore, the strength of the interaction cannot vary with distance.
  This fact immediately suggests a simple test for whether an interaction
  follows Gauss' Law: Measure the force acting upon a test charge at two
  different distances from a sheet of charge.
- If the two measured forces are inconsistent, then the interaction does
- not obey Gauss' Law.
+ If the two measured forces are not equal, then the interaction does not
+ obey Gauss' Law.
  Such an experiment is a 
 \begin_inset Quotes eld
 \end_inset
@@ -1743,9 +1745,9 @@ Does-the-Inverse-Square-Law-Break-O-Meter
 \begin_layout Standard
 In idealized form, our experiment compares the gravitational field strength
  at two distances from an infinite sheet of mass.
- Finite sheet masses are suspended on opposite sides of a torsion pendulum
- aligned parallel to their moment arms, but displaced in opposite directions
- perpendicular to the arms (see Fig.
+ Finite sheet masses are suspended on opposite arms of a torsion pendulum.
+ The sheet masses are aligned parallel to their moment arms, but displaced
+ in opposite directions perpendicular to the arms (see Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1757,14 +1759,14 @@ reference "Simple Parallel plate cartoon"
  If there is an inverse-square-law violating force between the sheets on
  the pendulum and an infinite sheet of matter, the pendulum will feel a
  torque.
- If the distance between the pendulum and the sheet is modulated, the torque
- will vary in sync with the modulation.
+ If the distance between the pendulum and the infinite sheet is modulated,
+ the torque will vary in sync with the modulation.
  If there are no inverse-square law-violating interactions between the pendulum
  and sheet, the pendulum will experience 
 \emph on
-no torque
+no torque change
 \emph default
-.
+ as the infinite sheet is translated.
  The difficulties in the measurement primarily involve ensuring that the
  
 \begin_inset Quotes eld
@@ -1774,8 +1776,8 @@ infinite sheet
 \begin_inset Quotes erd
 \end_inset
 
- approximation is valid and that gravity is the only messenger between the
- sheet and the pendulum.
+ approximation is valid and that gravity (and any new interaction) is the
+ only messenger between the sheet and the pendulum.
  
 \end_layout
 
@@ -1807,6 +1809,16 @@ name "Simple Parallel plate cartoon"
 \end_inset
 
  Simple Apparatus Diagram
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+XXXMA lines don't appear/print well
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1942,6 +1954,37 @@ Flat plate torque
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+XXXRC -- figure!
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Pendulum/Attractor schematic
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 For a pendulum of height 
 \begin_inset Formula $h$
 \end_inset
@@ -1954,7 +1997,16 @@ For a pendulum of height
 \begin_inset Formula $j$
 \end_inset
 
-, the torque on one inlay, neglecting factors from the attractor, is:
+, pendulum body density 
+\begin_inset Formula $\rho_{l}$
+\end_inset
+
+, pendulum inlay density 
+\begin_inset Formula $\rho_{h}$
+\end_inset
+
+, the Yukawa torque on one inlay, neglecting factors from the attractor,
+ is:
 \end_layout
 
 \begin_layout Standard
@@ -2002,7 +2054,7 @@ XXXRC - vectorized yukawa has a two here.
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\tau=\pi\alpha\rho_{a}Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right))\lambda^{2}e^{-\frac{x}{\lambda}}
+\tau=\pi\alpha\rho_{a}Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right))\lambda^{2}e^{-\frac{d}{\lambda}}
 \]
 
 \end_inset
@@ -2019,11 +2071,11 @@ The torque due to a single attractor sheet of density
 \begin_inset Formula $t_{a}$
 \end_inset
 
-, with an inlay thickness 
+, and a pendulum inlay thickness 
 \begin_inset Formula $t_{i}$
 \end_inset
 
- is 
+, is 
 \begin_inset Formula $\tau_{one}=\rho_{a}\tau\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{i}/\lambda}\right)$
 \end_inset
 
@@ -2033,7 +2085,7 @@ The torque due to a single attractor sheet of density
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\tau_{one}(x)=\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}e^{-\frac{x}{\lambda}}\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{i}/\lambda}\right)
+\tau_{one}(x)=\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}e^{-\frac{d}{\lambda}}\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{i}/\lambda}\right)
 \]
 
 \end_inset
@@ -2057,7 +2109,7 @@ Taking the difference between the inlay torques, with a pendulum thickness
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\tau_{full}=\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}\left(e^{-x/\lambda}-e^{-(x+t_{p}-t_{i})/\lambda}\right)\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{i}/\lambda}\right)
+\tau_{full}=\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}\left(e^{-d/\lambda}-e^{-(d+t_{p}-t_{i})/\lambda}\right)\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{i}/\lambda}\right)
 \]
 
 \end_inset
@@ -2070,7 +2122,11 @@ With an attractor stroke
 \begin_inset Formula $s$
 \end_inset
 
-, 
+ (and now 
+\begin_inset Formula $d$
+\end_inset
+
+ becomes the face-to-face distance of closest approach), 
 \end_layout
 
 \begin_layout Standard
@@ -2092,7 +2148,7 @@ status open
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\Delta\tau_{full}=\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}e^{-x/\lambda}\left(1-e^{-(t_{p}-t_{i})/\lambda}-e^{-s/\lambda}\left(1-e^{-(t_{p}-t_{i})/\lambda}\right)\right)\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{i}/\lambda}\right)
+\Delta\tau_{full}=\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}e^{-d/\lambda}\left(1-e^{-(t_{p}-t_{i})/\lambda}-e^{-s/\lambda}\left(1-e^{-(t_{p}-t_{i})/\lambda}\right)\right)\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{i}/\lambda}\right)
 \]
 
 \end_inset
@@ -2127,7 +2183,7 @@ status open
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\Delta\tau_{full}\approx\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}e^{-x/\lambda}\left(1-e^{-s/\lambda}\right)
+\Delta\tau_{full}\approx\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}e^{-d/\lambda}\left(1-e^{-s/\lambda}\right)
 \]
 
 \end_inset
@@ -2146,7 +2202,7 @@ If, further,
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\Delta\tau_{full}\approx\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}e^{-x/\lambda}
+\Delta\tau_{full}\approx\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}e^{-d/\lambda}
 \]
 
 \end_inset
@@ -2872,9 +2928,9 @@ nm Au were deposited by thermal evaporation.
 
 \begin_layout Standard
 The pendulum and attractors used in this experiment are actually our prototypes.
- A second higher-quality Ti-Pt pendulum and awas built and operated for
- more than a year in vacuum before it was noted that the inlay glue had
- failed, and the surfaces had bubbled by more than 20
+ A second higher-quality Ti-Pt pendulum and was built and operated for more
+ than a year in vacuum before it was noted that the inlay glue had failed,
+ and the surfaces had bubbled by more than 20
 \begin_inset space ~
 \end_inset
 
@@ -2969,8 +3025,8 @@ XXXRC verify thickness
 
 \end_inset
 
-thick BeCu alloy foil (Micro-Tek, Diamond Bar CA) over the tapered end of
- a 
+ thick BeCu alloy foil (Micro-Tek, Diamond Bar CA) over the tapered end
+ of a 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../extracted/foilDiameter.tex"
@@ -3253,7 +3309,7 @@ XXXMA: validate via something other than ifo headers
 \end_inset
 
 .
- Using the approximately-known density of beryllium copper 
+ Assuming a density of beryllium-copper 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../extracted/foilDensity.tex"
@@ -3378,8 +3434,8 @@ reference "Autocollimator noise"
 \end_inset
 
 .
- The four photodiode signal currents were measured by in-vacuum transimpedance
- amplifiers.
+ The four photodiode signal currents were measured by transimpedance pre-amplifi
+ers adjacent to the photodiode in vacuum.
  
 \end_layout
 
@@ -3414,8 +3470,9 @@ Hz, creating an approximately square-wave signal at the photodiode.
 \begin_inset space ~
 \end_inset
 
-kHz; 25 samples were recorded with the laser on, and 25 samples with the
- laser off.
+kHz.
+ In each cycle of the laser drive current, 25 samples were recorded with
+ the laser on, and 25 samples with the laser off.
  By taking the difference, we suppress the influence of any photodiode dark
  current.
  By averaging the locked-in signal, any interference at frequencies incommensura
@@ -3566,7 +3623,7 @@ diameter stainless threaded rods with aluminum adapters on the ends to the
  The gap between the O-rings was held under rough vacuum by the foreline
  pump.
  All high-vacuum seals except the bell-jar lid were made with copper gaskets.
- The 6
+ A 6
 \begin_inset Quotes erd
 \end_inset
 
@@ -3576,7 +3633,34 @@ diameter stainless threaded rods with aluminum adapters on the ends to the
  Suspended from the pump were six lead bricks to prevent the bellows from
  compressing when the system was placed under vacuum.
  The turbo pump was backed by a small oil roughing pump.
- To eliminate the possibility of electrostatic charging of any part of the
+ 
+\end_layout
+
+\begin_layout Standard
+When pumping the apparatus down from atmospheric pressure, the vacuum chamber
+ was baked.
+ Counter-wound wires around the exterior of the jar were driven by a DC
+ power supply to heat the walls of the jar.
+ Electrical heater tape was wound around the exterior baseplate.
+ In addition, copper tubing was spring-clamped around the perimeter of the
+ experiment's internal aluminum baseplate.
+ Hot air of 
+\begin_inset Formula $\sim40-50$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+C was forced through the tubing to heat the internal components.
+ After baking at least overnight, the electrical heaters were turned off,
+ and room-temperature air was forced through the baking lines to speed equilibra
+tion.
+ After about a day, the air was turned off, and commissioning could begin.
+\end_layout
+
+\begin_layout Standard
+To eliminate the possibility of electrostatic charging of any part of the
  apparatus, the ion vacuum gauge was left off from pumpdown until the entire
  measurement was complete.
  After systematic checks were complete, the ion gauge was turned on, and
@@ -3599,7 +3683,11 @@ See photo in ~/platewash/photos
 \end_inset
 
 .
- Past experience with the jar has shown that pressures of 
+ 
+\end_layout
+
+\begin_layout Standard
+Past experience with the jar has shown that pressures of 
 \begin_inset Formula $3\times10^{-7}$
 \end_inset
 
@@ -3724,10 +3812,9 @@ reference "fig:Flexure"
 \end_inset
 
 , was electric-discharge machined from a single piece of 6061-T6 aluminum
- sheet.
+ sheet by the UW Physics shop.
  It was actuated by an internal bronze bellows that was driven by a pulse-width-
 modulated valve/vented accumulator apparatus external to the vacuum enclosure.
- The flexure was electric-discharge machined in the UW Physics shop.
  The stage has 2
 \begin_inset space ~
 \end_inset
@@ -3756,9 +3843,20 @@ See Fig.
 \bar under
 not
 \bar default
- being taken, the position of the stage could be monitored by a Micro-E
- 3000V encoder system with a claimed interpolated resolution of 20 nm.
+ being taken (see below), the position of the stage could be monitored by
+ a Micro-E 3000V encoder system with a claimed interpolated resolution of
+ 20 nm.
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMA Make sure that the systematic effect is explained somewhere.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
