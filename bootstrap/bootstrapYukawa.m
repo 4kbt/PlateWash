@@ -1,4 +1,5 @@
-pause = 0; 
+pause = 0;
+more off 
 
 % 'SQP'
 % 'NMS'
@@ -61,9 +62,12 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 			error(errstr);
 		end
 
-		if(1 == testInjection)
+		if(1 == testInjection & ~exist("fileInjection"))
 			injParameters = [lambda alpha injSlope];
 			outfilename = ['output/bootstrapYukawa.SimulFloata' num2str(alpha) 'l' num2str(lambda) 'slop' num2str(injSlope) fitAlgorithm '.dat'];
+		elseif(exist("fileInjection"))
+			injParameters = [0 0 0];
+			outfilename = ['output/bootstrapYukawa.SimulFloataInjected' fitAlgorithm '.dat']; 
 		else
 			injParameters = [0 0 0];
 			outfilename = ['output/bootstrapYukawa.SimulFloat' fitAlgorithm '.dat'];

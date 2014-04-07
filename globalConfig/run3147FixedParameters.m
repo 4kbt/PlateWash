@@ -1,7 +1,16 @@
 fprintf('# defining parameters ');
 
+if(exist("DoNotExtractFixedParameters"))
+        function printInteger() ;  end
+        function printSigNumber() ; end
+        function printSigError();  end
+	function fprintf(); 	   end
+end
+
+
 %From run3077free.m
 fprintf('FREQUENCY IS NOT PROPERLY DEFINED. CHECK run3077free.m for provenance!!!! Post-fit best fit is 13.2 mHz');
+fundamentalConstants
 
 pendulumF0=0.0128; 
 pendulumF0Width = 4e-3;
@@ -37,12 +46,15 @@ lockAve = 20;  printInteger(lockAve, [HOMEDIR 'extracted/lockAve.tex']);
 
 TheoSampleTime = 0.8; printDecimal(TheoSampleTime,[HOMEDIR 'extracted/TheoSampleTime.tex'], 1);
 
+thermalTorqueNoise = sqrt(4*k_B*293*kappa/pendulumQ/(2*pi/(2*stepPeriod)));  printSigNumber(thermalTorqueNoise, [HOMEDIR 'extracted/thermalTorqueNoise.tex'], 2);
+thermalAngleNoise = sqrt(4*k_B*293*kappa/pendulumQ/(2*pi/(2*stepPeriod)))/kappa;  printSigNumber(thermalAngleNoise, [HOMEDIR 'extracted/thermalAngleNoise.tex'], 2);
+
 qTesterFreq1=3e-3;
 qTesterWidth1=0.2e-3;
 qTesterChunkCalibWidth1 = 0.5e-3;
 
 fitOneOmega = false;
-doNotFitTwoOmega = 1
+doNotFitTwoOmega = 1;
 
 qTesterFreq   = 3*2e-3;
 qTesterWidth  = 0.2e-3;
@@ -51,18 +63,11 @@ printSigNumber(qTesterTorque, [HOMEDIR 'extracted/qTesterTorque.tex'],3);
 
 spikeChopWidth = 100/TheoSampleTime; % in samples
 
-doNotRemoveSpikes = 1
-%doNotFitTwoOmega = 1
+doNotRemoveSpikes = 1;
 
 fprintf('# setup ');
-numSensors = 65;
-numPWSensors = 25;
-numPSSensors = 15;
-numIFOSensors = 25;
-psSquareCol = 15;
-torqueCol   = 16;
-%torqueCol   = 23;
-ifoDataCol  = 2;
+
+columnNames; %script that defines all the data columns
 
 fprintf('# filtering ');
 Nfilt = 2560*3/TheoSampleTime; printInteger(Nfilt, [HOMEDIR 'extracted/calibCutLength.tex']);
@@ -81,22 +86,20 @@ filterSensorHigh = NyquistFrequency;   printInteger( 1000*filterSensorHigh,  [HO
 printInteger( 1.0./filterHigh/2, [HOMEDIR 'extracted/filterHighLag.tex']);
 
 %Fit configuration
-pfTouch =  56+17+ 12+2 %swag
-touch2937 =  147 -2 + pfTouch
+pfTouch =  56+17+ 12+2 ;  %swag
+touch2937 =  147 -2 + pfTouch;
+%Distance cut
+shortCut = (pfTouch+10)*1e-6;
 
 
-aCol = 105
-bCol = 170;
-torCol = torqueCol;
-torerrCol = 6*65+torCol;
-
-torErrThresh = 1e-14;
+%Commented because thresholding is now dynamic in torErrThresh()
+%torErrThresh = 1e-14;
 torErrMin    = 1e-18;
 
 %fprintf('# read Complete \n')
 
-'INSUFFICENT bootstrap counts'
-NumberOfYukawaBootstraps = 5; %was 1000
+%'INSUFFICENT bootstrap counts'
+NumberOfYukawaBootstraps = 100; %was 1000
 NumberOfArbFitBootstraps = NumberOfYukawaBootstraps; % was 300
 
 foilResonance = 1580;
@@ -114,3 +117,21 @@ IFOFringeBot = 1.639;
 
 IFODistCal = 370e-9/(3.28-1.639);
 
+
+%Systematic uncertainties
+NumFitSystematics = 3;
+enableSystematics = 1;
+if(enableSystematics == 0)
+	fprintf('Systematic uncertainties disabled!');
+end
+SysNoX = 1;
+if(SysNoX == 1)
+	fprintf('Systematics handling by bootstrap');
+end
+
+SysUB = 1e8;
+LamLB = 1e-6/XLUnits;
+LamUB = 1e-2/XLUnits;
+SloUB = Inf; %1e-9/XSUnits;
+
+AppliedMagneticFieldUncertainty = 1e-8; %TotalBogus!

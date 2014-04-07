@@ -2,6 +2,7 @@
 
 function answer = yukawaVectorizedTorque(position, lambda, alpha)
 
+DoNotExtractPendulumParameters = 1;
 run3147PendulumParameters
 
 %Originally working:

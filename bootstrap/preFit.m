@@ -37,29 +37,36 @@ else
 end
 
 
-%These are the data which will be fit.
-dBSArchive = [pM(:,aCol) pM(:,bCol) pM(:,torCol) pM(:,torerrCol)];
-
 %Calibrate distance
-dBSArchive(:,1) = (touch2937 - polyval(pressEncP, dBSArchive(:,1)) ) * 1e-6;
-dBSArchive(:,2) = (touch2937 - polyval(pressEncP, dBSArchive(:,2)) ) * 1e-6;
+pM(:,aCol) = (touch2937 - polyval(pressEncP, pM(:,aCol)) ) * 1e-6;
+pM(:,bCol) = (touch2937 - polyval(pressEncP, pM(:,bCol)) ) * 1e-6;
+pM(:,aErrCol) = pM(:,aErrCol) * pressEncP(1)*-1*1e-6;
+pM(:,bErrCol) = pM(:,bErrCol) * pressEncP(1)*-1*1e-6;
+
+%Minimum noise threshold (yes, will be repeated)
+pM = pM( (pM(:,torerrCol)   > torErrMin),:);
+
+
+%Inject signals, if needed
+postLockinSignalInjection;
 
 %Torque threshold cut
-dBSArchive = dBSArchive(dBSArchive(:,4)      < torErrThresh,:);
-dBSArchive = dBSArchive(abs(dBSArchive(:,3)) < torErrThresh,:);
+torUB = torErrThresh(pM(:,torqueCol));
+pM = pM( (abs(pM(:,torCol)) < torUB),:);
+pM = pM( (pM(:,torerrCol)   < torUB),:);
 
-
-%Distance cut
-shortCut = (pfTouch+10)*1e-6
+%Minimum noise threshold (yes, repeated)
+pM = pM( (pM(:,torerrCol)   > torErrMin),:);
 
 %Execute distance cuts
-dBSArchive = dBSArchive(dBSArchive(:,1) >= shortCut,:);
-dBSArchive = dBSArchive(dBSArchive(:,2) >= shortCut,:);
-%dBSArchive = dBSArchive(dBSArchive(:,1) >= longCut,:);
-%dBSArchive = dBSArchive(dBSArchive(:,2) >= longCut,:);
+pM = pM( pM(:,aCol) >= shortCut , :);
+pM = pM( pM(:,bCol) >= shortCut , :);
 
 %Sanity check
-if rows(dBSArchive) < 2
-	error('Insufficient data. Wrong channel? Cut too hard?');
+if rows(pM) < 2
+	pM
+	error('Insufficient data in pM. Wrong channel? Cut too hard?');
 end
 
+%These are the data which will be fit.
+dBSArchive = [pM(:,aCol) pM(:,bCol) pM(:,torCol) pM(:,torerrCol)];

@@ -1,5 +1,11 @@
 fundamentalConstants
 
+if(exist("DoNotExtractPendulumParameters"))
+	function printInteger() ;  end
+	function printSigNumber() ; end
+	function printSigError();  end
+end
+
 HOMEDIR = getenv("HOMEDIR");
 
 %%%%% PENDULUM TiTa %%%%%%
@@ -30,6 +36,8 @@ ph1=rhoTaP;  %Ta
 pl1=rhoTi; %Ti
 insetWidth=inlayWidth;
 momentArm=insetWidth/2+j1;
+pendCenterToStep = j1;
+
 
 %%%%%% ATTRACTOR %%%%%
 %CamelCase variables from jan13Attractor.
@@ -54,8 +62,8 @@ da1=AttractorPlateThickness; %# Ta attractor thickness
 dal1=AttractorBackerThickness; % Al attractor thickness
 
 %These offsets are entirely unchecked!
-attrHorizOffset = 5e-3;
-attrVertOffset = 0.5e-3;
+attrHorizOffset = 3.5e-3;		printSigNumber(attrHorizOffset    , [HOMEDIR '/extracted/attrHorizOffset.tex'], 2);
+attrVertOffset = 0.5e-3;		printSigNumber(attrVertOffset	  , [HOMEDIR '/extracted/attrVertOffset.tex' ], 2);
 
 %%%%% Screw gaps %%%%%
 
@@ -113,6 +121,20 @@ wallThickness = 0.250*0.0254;		printSigNumber(wallThickness , [HOMEDIR '/extract
 flexureSetBack = spindlePlateSetBack + spindlePlateThickness;
 					printSigNumber(flexureSetBack, [HOMEDIR '/extracted/flexureSetBack.tex'], 3);
 
+%%% Microscope scan PM Array Parameters %%%%
+
+
+%was 100e-6
+%'Pendulum gridsize is insufficient. 750e-6 and 2.5e-6 are better.'
+pendulumPMScanGridSize =2000e-6;printSigNumber(pendulumPMScanGridSize, [HOMEDIR '/extracted/pendulumPMScanGridSize.tex'],3);
+pendulumPMScanVertStep = 5e-6;	printSigNumber(pendulumPMScanVertStep, [HOMEDIR '/extracted/pendulumPMScanVertStep.tex'],2);
+pendulumPMBodyDensity = rhoTi;
+pendulumPMInlayDensity =  rhoTaP;
+
+%was 200e-6
+attractorPMScanGridSize = pendulumPMScanGridSize;	printSigNumber(attractorPMScanGridSize, [HOMEDIR '/extracted/attractorPMScanGridSize.tex'],3);
+attractorPMScanVertStep = 2.5e-6;	printSigNumber(attractorPMScanVertStep, [HOMEDIR '/extracted/attractorPMScanVertStep.tex'],2);
+attractorPMDensity = rhoTaA;
 
 
 %%%%%% Q-tester bricks %%%%%%%

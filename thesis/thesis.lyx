@@ -47,9 +47,9 @@
 \topmargin 1in
 \rightmargin 1in
 \bottommargin 1in
-\headheight 1in
-\headsep 1in
-\footskip 1in
+\headheight 12pt
+\headsep 12pt
+\footskip 0.25in
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -58,6 +58,7 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
+\listings_params "aboveskip={-4ex},basicstyle={\ttfamily\singlespacing}"
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -147,7 +148,7 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-Four fundamental interactions are known.
+Four fundamental interactions are known to Physics.
  In historical order of characterization, they are gravity, which governs
  planetary motions; electromagnetism, which describes the interactions of
  electrically charged objects, and the weak force and strong forces, which
@@ -179,35 +180,15 @@ The Standard Model is a triumph.
  resonances, and phenomena, with very few exceptions.
  The exceptions are, therefore, very important.
  The Standard Model has one major remaining prediction - the existence of
- the so-called Higgs boson, a lynchpin for the theory, which may have been
- discovered at the LHC in 2012 .
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXRC insert from bibtex.huge: Observation of a new particle in the search
- for the Standard Model Higgs boson with the 
-\backslash
-{ATLAS
-\backslash
-} detector at the 
-\backslash
-{LHC
-\backslash
-} , Observation of a new boson at a mass of 125 GeV with the 
-\backslash
-{CMS
-\backslash
-} experiment at the 
-\backslash
-{LHC
-\backslash
-}
-\end_layout
+ the so-called 'Higgs boson', a lynchpin for the theory, which may have
+ been discovered at the LHC in 2012 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Aad20121,Chatrchyan201230"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard
@@ -222,7 +203,7 @@ Gravity: There is no tree-level coupling between uncharged objects in the
 \begin_inset Formula $>10^{40}$
 \end_inset
 
- times stronger than gravity, frustrating any unification attempts.
+ times stronger than gravity, perhaps hiding signatures of a unifying theory.
  The theory of gravity, General Relativity, is well-tested and in agreement
  with experiment 
 \begin_inset CommandInset citation
@@ -329,7 +310,15 @@ XXXMA nucleosynthesis
 \begin_inset Formula $^{3}$
 \end_inset
 
-, which, when converted to a length is roughly 86 micrometers.
+, which, when converted to a length using 
+\begin_inset Formula $\hbar$
+\end_inset
+
+ and 
+\begin_inset Formula $c$
+\end_inset
+
+, is roughly 86 micrometers.
 \end_layout
 
 \begin_layout Section
@@ -582,8 +571,8 @@ String Theory
 \begin_layout Standard
 String theory provided the catalyst for a resurgence of interest in the
  inverse square law at sub-millimeter scales in the late 1990s.
- At the cost of as many as seven extra dimensions, the theory offers a the
- promise of unifying gravity with the other forces.
+ At the cost of as many as seven extra dimensions, the theory offers a promise
+ of unifying gravity with the other forces.
  The extra dimensions are hidden away from normal observation with 
 \begin_inset Quotes eld
 \end_inset
@@ -592,15 +581,17 @@ compactification
 \begin_inset Quotes erd
 \end_inset
 
-; the introduction of a scale shorter than which extra dimensions are relevant
- to particle interactions and longer than which any effects of extra dimensions
- are suppressed.
+, introducing a lengthscale below which extra dimensions are relevant to
+ particle interactions and above which any effects of extra dimensions are
+ suppressed.
  Critically, the effects of gravity would be sensitive to the change in
  dimensionality by obeying Gauss' Law at all scales - diluting gravity into
  the many extra dimensions at short distances, while diluting into only
  three spatial dimensions at longer scales.
- String theories predict that gravity will get significantly more attractive
- at scales shorter than the compactification scale.
+ This motivates the comparatively low strength of gravity in the three-dimension
+al macroscopic world.
+ String theories predict that gravity is significantly more attractive at
+ scales shorter than the compactification scale.
  
 \end_layout
 
@@ -653,16 +644,12 @@ key "2007PhRvL..98b1101K"
 \begin_inset Formula $\mu$
 \end_inset
 
-m for one extra dimension.
+m for one large extra dimension.
  Greater numbers of extra dimensions are more stringently constrained by
  collider experiments 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXRC Insert citation from bibtex.huge.Search for Signatures of Extra Dimensions
- in the Diphoton Mass Spectrum at the Large Hadron Collider 
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand citet
+key "PhysRevLett.108.111801"
 
 \end_inset
 
@@ -856,7 +843,7 @@ Fat Graviton
 \end_layout
 
 \begin_layout Standard
-Raman Sundrum showed in 
+Raman Sundrum showed 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "PhysRevD.69.044014"
@@ -944,7 +931,7 @@ screen
 \begin_inset Quotes erd
 \end_inset
 
- the effect of any new interaction.
+ any new interaction.
  As self-interaction is a general property of fields, the notion is very
  reasonable.
  In its simplest form as a scalar field, a chameleon interaction must be
@@ -977,12 +964,12 @@ becomes the relevant length scale at which the new interaction may emerge
 In addition to their physical motiviation, chameleon interactions are ready-made
  to evade traditional inverse square law tests.
  All precision tests of short-range gravity at gravitational strength to
- date, including our experiment, place an isolating metal foil between the
- source and detector masses.
- Because of the self-screening within materials the isolating foil significantly
- diminishes the apparent strength of the observable interaction.
+ date, including our experiment, place a metal foil between the source and
+ detector masses to suppress non-gravitational interactions.
+ Because of the self-screening within materials the foil significantly diminishe
+s the apparent strength of any chameleon interaction.
  When searching for chameleons, isolating shields must be made as thin and
- of as low a density as possible, or dispensed with entirely.
+ of as low a density material as possible, or dispensed with entirely.
 \end_layout
 
 \begin_layout Standard
@@ -1097,7 +1084,7 @@ Tests of gravity using test bodies with known masses have now spanned about
  thirty orders of magnitude in spatial extent.
  Gravity itself has been observed consistent with an inverse square law
  over the roughly sixteen orders of magnitude from the solar system scale
- down to the size of a human hair.
+ down to a few tens of micrometers.
  Useful reviews are more comprehensive than will be presented here 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -1120,7 +1107,7 @@ key "KeplerFirstSecondLaws,KeplerThirdLaw"
 
  are now taught to students as necessary corrolaries of Newton's theory,
  but Kepler's observations were essential to the formulation of the theory
- itself 
+ itself
 \begin_inset Note Note
 status open
 
@@ -1194,7 +1181,7 @@ key "Cavendish1798"
 
 , observing gravity at scales of tens of centimeters to meters.
  Successive improvements on that method and tests with improved gravimeters
- have extended tests of gravity out to scales the size of Earth 
+ have extended tests of gravity out to scales of the size of Earth 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "1999snng.book.....F"
@@ -1236,7 +1223,7 @@ key "PhysRevLett.44.1645"
 
 .
  A novel superconducting Gauss' Law test by Moody and Paik in 1994 remains
- the best published limit from scales for scales of about a meter 
+ the best published limit for scales of about a meter 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "PhysRevLett.70.1195"
@@ -1314,13 +1301,17 @@ key "Cook2013"
 \end_inset
 
 (2013).
- In parallel, a 1kHz tungsten oscillator experiment at the University of
- Colorado achieved their maximum sensitivity at 
-\begin_inset Formula $\alpha=\sim5$
+ In parallel, a 1
+\begin_inset space ~
+\end_inset
+
+kHz tungsten oscillator experiment at the University of Colorado achieved
+ their maximum sensitivity at 
+\begin_inset Formula $\alpha\sim5$
 \end_inset
 
 , 
-\begin_inset Formula $\lambda=\sim100$
+\begin_inset Formula $\lambda\sim100$
 \end_inset
 
 
@@ -1517,7 +1508,7 @@ key "Horvat201121"
 
 .
  At still shorter scales, limits are collider-based, restricted by the non-obser
-vation of unexpected physics, and beyond the scope of this thesis.
+vation of unexpected physics, beyond the scope of this thesis.
 \end_layout
 
 \begin_layout Standard
@@ -1531,6 +1522,16 @@ key "Simonetti:2010mk,Kavic:2008qb"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMI expand
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -1624,6 +1625,45 @@ key "2007PhRvL..98b1101K,2007PhRvL..98m1104A"
 Apparatus
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Pictures/small/OverviewLastPhotoBeforeCloseDecember212011.jpg
+	width 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+The PlateWash Experiment.
+ Last photo before closing for science run, December 21, 2011.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Principle - Gauss' Law Test
 \end_layout
@@ -1644,8 +1684,9 @@ It is easily shown that, in three dimensions, any force that obeys a
  The converse is true, too: If a force law satisfies Gauss' Law, then the
  field flux through a sphere centered on a point charge must be constant
  for all sphere radii.
- As the surface area of the sphere is proportional to the square of its
- radius, then the field strength must fall as 
+ As the surface area of a three-dimensional sphere in three spatial dimensions
+ is proportional to the square of its radius, then the field strength must
+ fall as 
 \begin_inset Formula $1/r^{2}$
 \end_inset
 
@@ -1671,16 +1712,17 @@ Gauss' law test of gravity.
 \begin_inset Quotes erd
 \end_inset
 
- For any force, the field from an infinite two-dimensional sheet of charge
- must, by symmetry, be perpendicular to the plane of the sheet.
+ For any force in three spatial dimensions, the field from an infinite two-dimen
+sional sheet of charge must, by symmetry, be perpendicular to the plane
+ of the sheet.
  Furthermore, if the interaction obeys Gauss' law, the flux of field remains
  constant with increasing distance from the sheet..
  Therefore, the strength of the interaction cannot vary with distance.
  This fact immediately suggests a simple test for whether an interaction
  follows Gauss' Law: Measure the force acting upon a test charge at two
  different distances from a sheet of charge.
- If the two measured forces are inconsistent, then the interaction does
- not obey Gauss' Law.
+ If the two measured forces are not equal, then the interaction does not
+ obey Gauss' Law.
  Such an experiment is a 
 \begin_inset Quotes eld
 \end_inset
@@ -1704,9 +1746,9 @@ Does-the-Inverse-Square-Law-Break-O-Meter
 \begin_layout Standard
 In idealized form, our experiment compares the gravitational field strength
  at two distances from an infinite sheet of mass.
- Finite sheet masses are suspended on opposite sides of a torsion pendulum
- aligned parallel to their moment arms, but displaced in opposite directions
- perpendicular to the arms (see Fig.
+ Finite sheet masses are suspended on opposite arms of a torsion pendulum.
+ The sheet masses are aligned parallel to their moment arms, but displaced
+ in opposite directions perpendicular to the arms (see Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1718,14 +1760,14 @@ reference "Simple Parallel plate cartoon"
  If there is an inverse-square-law violating force between the sheets on
  the pendulum and an infinite sheet of matter, the pendulum will feel a
  torque.
- If the distance between the pendulum and the sheet is modulated, the torque
- will vary in sync with the modulation.
+ If the distance between the pendulum and the infinite sheet is modulated,
+ the torque will vary in sync with the modulation.
  If there are no inverse-square law-violating interactions between the pendulum
  and sheet, the pendulum will experience 
 \emph on
-no torque
+no torque change
 \emph default
-.
+ as the infinite sheet is translated.
  The difficulties in the measurement primarily involve ensuring that the
  
 \begin_inset Quotes eld
@@ -1735,8 +1777,8 @@ infinite sheet
 \begin_inset Quotes erd
 \end_inset
 
- approximation is valid and that gravity is the only messenger between the
- sheet and the pendulum.
+ approximation is valid and that gravity (and any new interaction) is the
+ only messenger between the sheet and the pendulum.
  
 \end_layout
 
@@ -1768,6 +1810,16 @@ name "Simple Parallel plate cartoon"
 \end_inset
 
  Simple Apparatus Diagram
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+XXXMA lines don't appear/print well
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1903,7 +1955,260 @@ Flat plate torque
 \end_layout
 
 \begin_layout Standard
-XXXRC Copy me in!
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+XXXRC -- figure!
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Pendulum/Attractor schematic
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For a pendulum of height 
+\begin_inset Formula $h$
+\end_inset
+
+, width 
+\begin_inset Formula $w$
+\end_inset
+
+, and center to step distance 
+\begin_inset Formula $j$
+\end_inset
+
+, pendulum body density 
+\begin_inset Formula $\rho_{l}$
+\end_inset
+
+, pendulum inlay density 
+\begin_inset Formula $\rho_{h}$
+\end_inset
+
+, the Yukawa torque on one inlay, neglecting factors from the attractor,
+ is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula $\tau=2\pi\alpha Gh(w/2-j)((w/2-j)/2+j)(\rho_{h}-\rho_{l})\lambda^{2}e^{-\frac{x}{\lambda}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\tau=2\pi\alpha Gh(w/2-j)((w/4+j/2)(\rho_{h}-\rho_{l})\lambda^{2}e^{-\frac{x}{\lambda}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\tau=\pi\alpha Gh(w/2-j)(w/2+j)(\rho_{h}-\rho_{l})\lambda^{2}e^{-\frac{x}{\lambda}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\tau=\pi\alpha Gh(\frac{w^{2}}{4}+wj-jw-j^{2})(\rho_{h}-\rho_{l})\lambda^{2}e^{-\frac{x}{\lambda}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+XXXRC - vectorized yukawa has a two here.
+ Why?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\tau=\pi\alpha\rho_{a}Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right))\lambda^{2}e^{-\frac{d}{\lambda}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The torque due to a single attractor sheet of density 
+\begin_inset Formula $\rho_{a}$
+\end_inset
+
+, thickness 
+\begin_inset Formula $t_{a}$
+\end_inset
+
+, and a pendulum inlay thickness 
+\begin_inset Formula $t_{i}$
+\end_inset
+
+, is 
+\begin_inset Formula $\tau_{one}=\rho_{a}\tau\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{i}/\lambda}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\tau_{one}(x)=\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}e^{-\frac{d}{\lambda}}\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{i}/\lambda}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Taking the difference between the inlay torques, with a pendulum thickness
+ 
+\begin_inset Formula $t_{p}$
+\end_inset
+
+, 
+\begin_inset Formula $\tau_{full}=\tau_{one}(x)-\tau_{one}(x+t_{p}-t_{i})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\tau_{full}=\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}\left(e^{-d/\lambda}-e^{-(d+t_{p}-t_{i})/\lambda}\right)\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{i}/\lambda}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+With an attractor stroke 
+\begin_inset Formula $s$
+\end_inset
+
+ (and now 
+\begin_inset Formula $d$
+\end_inset
+
+ becomes the face-to-face distance of closest approach), 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Delta N_{full}=\pi\alpha Gh(\frac{w^{2}}{4}-j^{2})(\rho_{h}-\rho_{l})\rho_{a}\lambda^{2}(e^{-x/\lambda}-e^{-(x+t_{p}-t_{i})/\lambda}-e^{-(x+s)/\lambda}+e^{-(x+s+t_{p}-t_{i})/\lambda})(1-e^{-t_{a}/\lambda})(1-e^{-t_{i}/\lambda})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Delta\tau_{full}=\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}e^{-d/\lambda}\left(1-e^{-(t_{p}-t_{i})/\lambda}-e^{-s/\lambda}\left(1-e^{-(t_{p}-t_{i})/\lambda}\right)\right)\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{i}/\lambda}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $\lambda\ll t_{p},t_{i},t_{a}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Delta N_{full}\approx\pi\alpha Gh(\frac{w^{2}}{4}-j^{2})(\rho_{h}-\rho_{l})\rho_{a}\lambda^{2}(e^{-x/\lambda}-e^{-(x+s)/\lambda})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Delta\tau_{full}\approx\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}e^{-d/\lambda}\left(1-e^{-s/\lambda}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If, further, 
+\begin_inset Formula $\lambda\ll s$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Delta\tau_{full}\approx\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}e^{-d/\lambda}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -2059,7 +2364,7 @@ Evaluating the integral:
 \end_layout
 
 \begin_layout Standard
-XXXRC - recheck.
+XXXRC - recheck -- it's wrong.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2624,9 +2929,9 @@ nm Au were deposited by thermal evaporation.
 
 \begin_layout Standard
 The pendulum and attractors used in this experiment are actually our prototypes.
- A second higher-quality Ti-Pt pendulum and awas built and operated for
- more than a year in vacuum before it was noted that the inlay glue had
- failed, and the surfaces had bubbled by more than 20
+ A second higher-quality Ti-Pt pendulum and was built and operated for more
+ than a year in vacuum before it was noted that the inlay glue had failed,
+ and the surfaces had bubbled by more than 20
 \begin_inset space ~
 \end_inset
 
@@ -2721,8 +3026,8 @@ XXXRC verify thickness
 
 \end_inset
 
-thick BeCu alloy foil (Micro-Tek, Diamond Bar CA) over the tapered end of
- a 
+ thick BeCu alloy foil (Micro-Tek, Diamond Bar CA) over the tapered end
+ of a 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../extracted/foilDiameter.tex"
@@ -2857,6 +3162,10 @@ Autocollimator
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -2881,6 +3190,11 @@ XXXMA
 
 \begin_layout Plain Layout
 Autocollimator optical diagram
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2996,7 +3310,7 @@ XXXMA: validate via something other than ifo headers
 \end_inset
 
 .
- Using the approximately-known density of beryllium copper 
+ Assuming a density of beryllium-copper 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../extracted/foilDensity.tex"
@@ -3121,8 +3435,8 @@ reference "Autocollimator noise"
 \end_inset
 
 .
- The four photodiode signal currents were measured by in-vacuum transimpedance
- amplifiers.
+ The four photodiode signal currents were measured by transimpedance pre-amplifi
+ers adjacent to the photodiode in vacuum.
  
 \end_layout
 
@@ -3157,8 +3471,9 @@ Hz, creating an approximately square-wave signal at the photodiode.
 \begin_inset space ~
 \end_inset
 
-kHz; 25 samples were recorded with the laser on, and 25 samples with the
- laser off.
+kHz.
+ In each cycle of the laser drive current, 25 samples were recorded with
+ the laser on, and 25 samples with the laser off.
  By taking the difference, we suppress the influence of any photodiode dark
  current.
  By averaging the locked-in signal, any interference at frequencies incommensura
@@ -3309,7 +3624,7 @@ diameter stainless threaded rods with aluminum adapters on the ends to the
  The gap between the O-rings was held under rough vacuum by the foreline
  pump.
  All high-vacuum seals except the bell-jar lid were made with copper gaskets.
- The 6
+ A 6
 \begin_inset Quotes erd
 \end_inset
 
@@ -3319,7 +3634,34 @@ diameter stainless threaded rods with aluminum adapters on the ends to the
  Suspended from the pump were six lead bricks to prevent the bellows from
  compressing when the system was placed under vacuum.
  The turbo pump was backed by a small oil roughing pump.
- To eliminate the possibility of electrostatic charging of any part of the
+ 
+\end_layout
+
+\begin_layout Standard
+When pumping the apparatus down from atmospheric pressure, the vacuum chamber
+ was baked.
+ Counter-wound wires around the exterior of the jar were driven by a DC
+ power supply to heat the walls of the jar.
+ Electrical heater tape was wound around the exterior baseplate.
+ In addition, copper tubing was spring-clamped around the perimeter of the
+ experiment's internal aluminum baseplate.
+ Hot air of 
+\begin_inset Formula $\sim40-50$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+C was forced through the tubing to heat the internal components.
+ After baking at least overnight, the electrical heaters were turned off,
+ and room-temperature air was forced through the baking lines to speed equilibra
+tion.
+ After about a day, the air was turned off, and commissioning could begin.
+\end_layout
+
+\begin_layout Standard
+To eliminate the possibility of electrostatic charging of any part of the
  apparatus, the ion vacuum gauge was left off from pumpdown until the entire
  measurement was complete.
  After systematic checks were complete, the ion gauge was turned on, and
@@ -3342,7 +3684,11 @@ See photo in ~/platewash/photos
 \end_inset
 
 .
- Past experience with the jar has shown that pressures of 
+ 
+\end_layout
+
+\begin_layout Standard
+Past experience with the jar has shown that pressures of 
 \begin_inset Formula $3\times10^{-7}$
 \end_inset
 
@@ -3424,13 +3770,26 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXXRC
+\align center
+\begin_inset Graphics
+	filename Pictures/small/FlexureLeftSideDecember212011.jpg
+	width 50page%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Flexure"
+
+\end_inset
+
 Flexure
 \end_layout
 
@@ -3445,11 +3804,18 @@ Flexure
 \end_layout
 
 \begin_layout Standard
-The attractor's flexure stage was electric-discharge machined from a single
- piece of 6061-T6 aluminum sheet.
+The attractor's flexure stage, shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Flexure"
+
+\end_inset
+
+, was electric-discharge machined from a single piece of 6061-T6 aluminum
+ sheet by the UW Physics shop.
  It was actuated by an internal bronze bellows that was driven by a pulse-width-
 modulated valve/vented accumulator apparatus external to the vacuum enclosure.
- The flexure was electric-discharge machined in the UW Physics shop.
  The stage has 2
 \begin_inset space ~
 \end_inset
@@ -3478,9 +3844,20 @@ See Fig.
 \bar under
 not
 \bar default
- being taken, the position of the stage could be monitored by a Micro-E
- 3000V encoder system with a claimed interpolated resolution of 20 nm.
+ being taken (see below), the position of the stage could be monitored by
+ a Micro-E 3000V encoder system with a claimed interpolated resolution of
+ 20 nm.
  
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMA Make sure that the systematic effect is explained somewhere.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3597,8 +3974,8 @@ XXXMI verify on PlateSlave config file
 \end_inset
 
 L lecture bottle.
- The bottle is connected to a permanent leak and to another fuel injector,
- the 
+ The bottle is connected to a permanent leak and to a pair of in-series
+ fuel injectors, the 
 \begin_inset Quotes eld
 \end_inset
 
@@ -3686,7 +4063,15 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXXRC
+\align center
+\begin_inset Graphics
+	filename Pictures/small/PneumaticGasHandlingSystemJanuary152014.jpg
+	width 50page%
+	rotateAngle 270
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -4180,6 +4565,44 @@ name "fig:Foil-Interferometer-Layout"
 \end_inset
 
 Foil Interferometer Layout Diagram
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Pictures/small/InterferometerOpticalLayoutJanuary152014.jpg
+	width 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Interferometer optical assembly
 \end_layout
 
 \end_inset
@@ -4769,6 +5192,78 @@ Interferometer low-frequency power spectrum
 \end_layout
 
 \begin_layout Subsubsection
+Translation stage
+\end_layout
+
+\begin_layout Standard
+With the introduction of the foil-positioning motors (see XXXRC), it was
+ necessary to make the interferometer tip directly controllable from outside
+ the vacuum vessel.
+ The interferometer tip was connected to a long flexure lever with a linear
+ reduction ratio of ~10:1, shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Interferometer-control-lever"
+
+\end_inset
+
+.
+ Before pumping down, the interferometer was translated as far from the
+ foil as it could go.
+ After the foil and attractor were aligned, then the interferometer was
+ slowly brought toward the foil until fringes were observed.
+ This must be done with care; going too far will puncture the foil with
+ the fiber tip.
+ The motorized approach is easier, faster, allows better fringe contrast,
+ and damages fewer foils than aligning by hand.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Pictures/small/InterferometerControlLeverDecember222011.jpg
+	rotateAngle 270
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Interferometer-control-lever"
+
+\end_inset
+
+Interferometer control lever
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
 Pendulum-Foil coupling
 \begin_inset CommandInset label
 LatexCommand label
@@ -5334,7 +5829,14 @@ name "sub:Autocollimator-noise"
 The opto-electronic system used to measure pendulum twist has its own inherent
  noise.
  By design, the autocollimator's relatively white noise floor is chosen
- to sit below the low-frequency thermally-driven angle noise of XXXRC.
+ to sit below the low-frequency thermally-driven angle noise of 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/thermalAngleNoise.tex"
+
+\end_inset
+
+.
  The PlateWash autocollimator's noise floor is approximately XXXRC, as seen
  in Figure 
 \begin_inset CommandInset ref
@@ -6261,8 +6763,17 @@ Small non-uniformities in density of the attractor or pendulum materials
  expected to have no effect at all.
  In the absence of a pendulum non-uniformity, an attractor void will cause
  a lateral position-dependent torque.
- If the attractor void were to occur near the outer corner of the pendulum
- (worst case), the torque would be XXXRC N-m/ (cubic micron of attractor).
+ If the attractor void were to occur near the outer corner of the dense
+ pendulum inlay (worst case), the unmodulated torque change would be XXXRC
+ 
+\begin_inset Formula $<$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+N-m/ (cubic micron of attractor).
  In the unlikely event that two voids are laterally coincident, voids could
  be >80 
 \begin_inset Formula $\mu$
@@ -6287,12 +6798,42 @@ N-m level.
 Horizontal displacement of the pendulum is an excellent potential test for
  local effects, which we did not do in the reported sequence of runs.
  We did, however, do horizontal displacements prior to beginning this sequence,
- without breaking vacuum in between; no The largest voids observed in the
- surfaces under a microscope are about XXXRC in size.
- Note that a distribution of voids across the surface can, with sufficiently
- many voids, be viewed as a reduction in the density of the material.
+ without breaking vacuum in between; no prominent effect was observed.
+ The largest voids observed in the surfaces under a microscope are certainly
+ <
+\begin_inset Formula $10$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m in depth.
+ 
+\end_layout
+
+\begin_layout Standard
+A random distribution of voids across the surface can, with sufficiently-many
+ voids, be viewed as a reduction in the density of the material.
  This is especially true if the voids are smaller than a characteristic
  length-scale of interest.
+ We see no clear signs of a distribution of voids at the 
+\begin_inset Formula $>5$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m level; therefore such a correction is not required for our purposes.
 \end_layout
 
 \begin_layout Paragraph
@@ -6606,26 +7147,30 @@ reference "fig:AttractorScan"
 \end_layout
 
 \begin_layout Standard
-Torque differences were computed directly from the pendulum and attractor
- scans to estimate the influence of the attractor dishing.
- XXXRC.
-\end_layout
+The torque due to all known flatness variations (roughness, irregularities,
+ and dishing of surfaces) of attractor and pendulum were estimated numerically
+ (see 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Torques-from-surface"
 
-\begin_layout Standard
-The torque due to the flatness variations of attractor and pendulum was
- estimated numerically to be XXXRC N-m/m in the near field and negligible
- elsewhere.
- 
-\begin_inset Note Note
-status open
+\end_inset
 
-\begin_layout Plain Layout
-XXXMA How the F do we do this reliably?
-\end_layout
+) to be less than 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../NewtonianSimulation/SimulationOutput/scanMaxDiff.tex"
 
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+N-m for all possible strokes.
+ Models that include the smoothness of the torque curve can yield a better
+ limit if necessary.
+ 
 \end_layout
 
 \begin_layout Subsubsection
@@ -6998,10 +7543,125 @@ Casimir effect
 \end_layout
 
 \begin_layout Standard
-The Casimir effect is not expected to penetrate the foil.
- See XXXRC.
- If it did, the effect would be interesting in its own right.
- 
+The Casimir effect is not expected to penetrate a 10
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m beryllium-copper foil, according to calculations by Chesler, Yaffe, Andreev,
+ and Jaffe 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "2007PhRvL..98b1101K"
+
+\end_inset
+
+.
+ Furthermore, for the attractor-pendulum separations in this experiment,
+ the Casimir force is too weak.
+ As an example, the zero-temperature Casimir pressure on conducting plates
+ (
+\begin_inset Formula $P=-\pi^{2}\hbar c/240a^{4}$
+\end_inset
+
+) separated by 
+\begin_inset Formula $a=$
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/casimirClosestApproach.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+m is 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/casimirPressure.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+N/m
+\begin_inset Formula $^{2}$
+\end_inset
+
+, while the gravitational pressure between two 
+\begin_inset Formula $50$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m-thick infinite sheets of tantalum (or equivalently, the pressure due to
+ a 
+\begin_inset Formula $\lambda=50$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m, 
+\begin_inset Formula $\alpha=1$
+\end_inset
+
+ Yukawa interaction) is 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/yukawaPressureCasimirComparison.tex"
+
+\end_inset
+
+.
+ Finally, the symmetry of the PlateWash pendulum acts to suppress the Casimir
+ torque, as the pendulum is constructed of gold-coated conducting metals
+ (with differing resistivity).
+ If the pendulum were oriented parallel to the attractor and the resistivities
+ of the pendulum body and inlays equal (Ti: 390
+\begin_inset space ~
+\end_inset
+
+n
+\begin_inset Formula $\Omega$
+\end_inset
+
+-m, Ta: 122
+\begin_inset space ~
+\end_inset
+
+n
+\begin_inset Formula $\Omega$
+\end_inset
+
+-m 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "CRC2000"
+
+\end_inset
+
+), then the Casimir torque on the pendulum would be zero at all separations.
 \end_layout
 
 \begin_layout Section
@@ -7185,6 +7845,89 @@ The interferometer signal was measured as a function of attractor position.
 \begin_layout Standard
 The bounce test was repeated holding the pendulum close to the foil and
  moving the attractor.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Pictures/small/Pre3147SideViewMarch132012092956.jpg
+	width 50text%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Pictures/small/Post3164SideViewMay092012064354.jpg
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Pictures/small/Pre3147BackSideViewMarch132012093012.jpg
+	width 50text%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Pictures/small/Post3164BackSideViewMay092012064412.jpg
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Pictures/small/Pre3147FiberPositionMarch132012093038.jpg
+	width 50text%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Pictures/small/Post3164FiberPositionMay092012064424.jpg
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Alignment photos before (left) and after (right) science run.
+ The upper photos look directly through the window, the middle photos are
+ the mirror-image of the side opposite the window, and the lower photos
+ are the reflected image of the fiber position against the foil's alignment
+ marks.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -11397,6 +12140,1174 @@ XXXMA (need actual procedure followed here).
 
 \end_layout
 
+\begin_layout Section
+Goodness-of-fit, 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A weakness of bootstrapped analysis is its reliance upon computational power
+ to produce useful results.
+ If the dimension of a problem gets too high, it is difficult to ensure
+ that fitting parameter spaces are well-explored.
+ It is possible to include systematic effects into bootstrapped confidence
+ intervals by modelling each systematic and injecting the expected amount
+ of noise into the data to be fitted.
+ If little is known about the systematic effect, however, this approach
+ is a challenge.
+ 
+\end_layout
+
+\begin_layout Standard
+It is more-reliable to attempt to include poorly-known systematics into
+ the fit, fitting over all the data, including the systematic tests.
+ This is done here by ascribing a new fictitious force to each systematic,
+ parametrized conservatively as a Yukawa torque, with its own strength and
+ lengthscale.
+ 
+\end_layout
+
+\begin_layout Subsection
+The fitting plan:
+\end_layout
+
+\begin_layout Standard
+The fitting plan:
+\end_layout
+
+\begin_layout Enumerate
+Define a fitting function, 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $F(x,B_{1\dots n}|\alpha_{1\ldots n},\lambda_{1\ldots n})=\pi Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}\left(1-e^{-(t_{p}-t_{i})/\lambda_{i}}\right)\left(1-e^{-t_{a}/\lambda_{i}}\right)\left(1-e^{-t_{i}/\lambda_{i}}\right)e^{-x/\lambda_{i}}+Cx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Let the thickness corrections be 
+\begin_inset Formula $T(\lambda)=\rho_{a}\left(1-e^{-(t_{p}-t_{i})/\lambda_{i}}\right)\left(1-e^{-t_{a}/\lambda_{i}}\right)\left(1-e^{-t_{i}/\lambda_{i}}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+So, 
+\begin_inset Formula $F(x,B_{1\dots n}|\alpha_{1\ldots n},\lambda_{1\ldots n})=\pi Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}T(\lambda_{i})e^{-x/\lambda_{i}}+Cx=Q\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}T(\lambda_{i})e^{-x/\lambda_{i}}+Cx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Define 
+\begin_inset Formula $G(x,y\dots)=F(x,\dots)-F(y,\dots)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Measure 
+\begin_inset Formula $\Delta\tau(x_{A},x_{B},B_{1},\ldots,B_{n},\sigma_{x_{A}},\sigma_{x_{B}},\sigma_{B_{1}},\ldots,\sigma_{B_{n}})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Define 
+\begin_inset Formula $P(a,\bar{a},\sigma_{a})=\frac{1}{\sigma_{a}\sqrt{2\pi}}e^{-(a-\bar{a})^{2}/2\sigma_{a}^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $\bar{G}=\int_{-\infty}^{\infty}G(x,y,B_{1\ldots n},\alpha_{1\ldots n},\lambda_{1\ldots n})P(x,\bar{x},\sigma_{x})dxP(y,\bar{y},\sigma_{y})dy\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $\bar{G}=\bar{F}_{x}-\bar{F}_{y}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $\sigma_{F_{x}}^{2}=\int_{-\infty}^{\infty}F(x,B_{1\ldots n},\alpha_{1\ldots n},\lambda_{1\ldots n})^{2}P(x,\bar{x},\sigma_{x})dxP(y,\bar{y},\sigma_{y})dy\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}-\bar{F}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{F_{y}}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $\sigma_{G}^{2}=\sigma_{F_{x}}^{2}+\sigma_{F_{y}}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\chi^{2}=\sum_{measurements}\frac{(\Delta\tau-\bar{G})^{2}}{\sigma_{\tau}^{2}+\sigma_{G}^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Integrals
+\end_layout
+
+\begin_layout Subsubsection
+Linear
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\int_{-\infty}^{\infty}aP(a,\bar{a},\sigma_{a})da$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\frac{1}{\sigma_{a}\sqrt{2\pi}}\bar{a}\sqrt{2\sigma^{2}\pi}=\bar{a}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Quadratic
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\int_{-\infty}^{\infty}a^{2}P(a,\bar{a},\sigma_{a})da$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula $=\int_{-\infty}^{\infty}(\bar{a}-a)^{2}P(a,0,\sigma_{a})da$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $=\int_{-\infty}^{\infty}(\bar{a}^{2}-2a\bar{a}+a^{2})P(a,0,\sigma_{a})da$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $=\bar{a}^{2}-2\bar{a}\int_{-\infty}^{\infty}aP(a,0,\sigma_{a})da+\int_{-\infty}^{\infty}a^{2}P(a,0,\sigma_{a})da$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Using 
+\begin_inset Formula $\int_{-\infty}^{\infty}x^{2}e^{-cx^{2}}dx=\frac{1}{2}\sqrt{\frac{\pi}{c^{3}}}$
+\end_inset
+
+ and the previous result,
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $=\bar{a}^{2}-2\cdot0+\frac{1}{2\sigma_{a}\sqrt{2\pi}}\sqrt{8\sigma_{a}^{6}\pi}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\bar{a}^{2}+\sigma_{a}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Yukawa - Detwiler observation
+\end_layout
+
+\begin_layout Standard
+The 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+ approach outlined here was enabled by Jason Detwiler's observation that
+ the following calculation should be possible.
+ If it were not true, a closed-form expression for 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+ might have been too unwieldy to use.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int_{-\infty}^{\infty}e^{-a/\lambda}P(a,\bar{a},\sigma_{a})da$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\frac{1}{\sigma_{a}\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-a/\lambda}e^{-(a-\bar{a})^{2}/2\sigma_{a}^{2}}da$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula $=\frac{1}{\sigma_{a}\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-(a^{2}-2a\bar{a}-\bar{a}^{2}+2\sigma^{2}a/\lambda)/2\sigma_{a}^{2}}da$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\frac{1}{\sigma_{a}\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-(a^{2}-2(\bar{a}-\frac{\sigma^{2}}{\lambda})a-\bar{a}^{2})/2\sigma_{a}^{2}}da$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Completing the square,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(\bar{a}-\frac{\sigma_{a}^{2}}{\lambda})^{2}=\bar{a}^{2}-2\frac{\sigma_{a}^{2}}{\lambda}\bar{a}+\frac{\sigma_{a}^{4}}{\lambda^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\frac{1}{\sigma_{a}\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-((a-(\bar{a}-\frac{\sigma_{a}^{2}}{\lambda}))^{2}+2\frac{\sigma_{a}^{2}}{\lambda}\bar{a}-\frac{\sigma_{a}^{4}}{\lambda^{2}})/2\sigma_{a}^{2}}da$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=e^{\sigma^{2}/2\lambda^{2}}e^{-\bar{a}/\lambda}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Linear Yukawa
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int_{-\infty}^{\infty}ae^{-a/\lambda}P(a,\bar{a},\sigma_{a})da$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $=\frac{1}{\sigma_{a}\sqrt{2\pi}}\int_{-\infty}^{\infty}ae^{-a/\lambda}e^{-(a-\bar{a})^{2}/2\sigma_{a}^{2}}da$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $=\frac{1}{\sigma_{a}\sqrt{2\pi}}\int_{-\infty}^{\infty}ae^{-(a^{2}-2a\bar{a}+\bar{a}^{2}+\frac{2\sigma_{a}^{2}}{\lambda}a)/2\sigma_{a}^{2}}da$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $=\frac{1}{\sigma_{a}\sqrt{2\pi}}\int_{-\infty}^{\infty}ae^{-(a^{2}-2(\bar{a}-\frac{\sigma_{a}^{2}}{\lambda})a+\bar{a}^{2})/2\sigma_{a}^{2}}da$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left(\bar{a}-\frac{\sigma_{a}^{2}}{\lambda}\right)^{2}=\bar{a}^{2}-2\frac{\sigma_{a}^{2}}{\lambda}\bar{a}+\frac{\sigma_{a}^{4}}{\lambda^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $=\frac{1}{\sigma_{a}\sqrt{2\pi}}\int_{-\infty}^{\infty}ae^{-(a^{2}-2(\bar{a}-\frac{\sigma_{a}^{2}}{\lambda})a+(\bar{a}-\frac{\sigma_{a}^{2}}{\lambda})^{2}+2\frac{\sigma_{a}^{2}}{\lambda}\bar{a}-\frac{\sigma_{a}^{4}}{\lambda^{2}})/2\sigma_{a}^{2}}da$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $=\frac{1}{\sigma_{a}\sqrt{2\pi}}e^{-\frac{\bar{a}}{\lambda}+\frac{\sigma_{a}^{2}}{2\lambda^{2}}}\int_{-\infty}^{\infty}ae^{-(a-(\bar{a}-\frac{\sigma_{a}^{2}}{\lambda}))^{2}/2\sigma_{a}^{2}}da$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $=e^{-\frac{\bar{a}}{\lambda}+\frac{\sigma_{a}^{2}}{2\lambda^{2}}}(\bar{a}-\frac{\sigma_{a}^{2}}{\lambda})$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Additive Yukawa
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int_{-\infty}^{\infty}e^{-x(1/\lambda_{1}+1/\lambda_{2})}P(a,\bar{a},\sigma_{a})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This is just a restatement of Jason's trick, so 
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $=e^{\sigma_{a}^{2}(1/\lambda_{1}+1/\lambda_{2})^{2}/2}e^{-\bar{a}(1/\lambda_{1}+1/\lambda_{2})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $\bar{F}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\bar{F}=\int_{-\infty}^{\infty}F(x,y,B_{1\ldots n},\alpha_{1\ldots n},\lambda_{1\ldots n})P(x,\bar{x},\sigma_{x})dx\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\bar{F}=\int_{-\infty}^{\infty}\left(Q\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}T(\lambda_{i})e^{-x/\lambda_{i}}+Cx\right)P(x,\bar{x},\sigma_{x})dx\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\bar{F}=\int_{-\infty}^{\infty}\left(Q\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}T(\lambda_{i})e^{-x/\lambda_{i}}\right)P(x,\bar{x},\sigma_{x})dx\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}+C\bar{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\bar{F}=\int_{-\infty}^{\infty}\left(Q\sum_{i}\alpha_{i}\bar{B}_{i}\lambda_{i}^{2}T(\lambda_{i})e^{-x/\lambda_{i}}\right)P(x,\bar{x},\sigma_{x})dx+C\bar{x}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\bar{F}=Q\sum_{i}\alpha_{i}\bar{B}_{i}\lambda_{i}^{2}T(\lambda_{i})e^{\sigma_{x}^{2}/2\lambda_{i}^{2}}e^{-\bar{x}/\lambda_{i}}+C\bar{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $\sigma_{G}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sigma_{G}^{2}=\sigma_{F_{x}}^{2}+\sigma_{F_{y}}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sigma_{F_{x}}^{2}=\int_{-\infty}^{\infty}F(x,B_{1\ldots n},\alpha_{1\ldots n},\lambda_{1\ldots n})^{2}P(x,\bar{x},\sigma_{x})dx\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}-\bar{F}_{x}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $L_{ij}=1/\lambda_{i}+1/\lambda_{j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sigma_{F_{x}}^{2}=\int_{-\infty}^{\infty}\left(Q\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}T(\lambda_{i})e^{-x/\lambda_{i}}+Cx\right)^{2}P(x,\bar{x},\sigma_{x})dx\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}-\bar{F}_{x}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sigma_{F_{x}}^{2}=\int_{-\infty}^{\infty}\left(Q^{2}\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}T(\lambda_{i})e^{-x/\lambda_{i}}\sum_{j}\alpha_{j}B_{j}\lambda_{j}^{2}T(\lambda_{j})e^{-x/\lambda_{j}}+2CxQ\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}T(\lambda_{i})e^{-x/\lambda_{i}}+C^{2}x^{2}\right)P(x,\bar{x},\sigma_{x})dx\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}-\bar{F}_{x}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\sigma_{F_{x}}^{2}=\int_{-\infty}^{\infty}\left(Q^{2}\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}T(\lambda_{i})e^{-x/\lambda_{i}}\sum_{j}\alpha_{j}B_{j}\lambda_{j}^{2}T(\lambda_{j})e^{-x/\lambda_{j}}+2CxQ\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}T(\lambda_{i})e^{-x/\lambda_{i}}\right)P(x,\bar{x},\sigma_{x})dx\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}+C^{2}(\bar{x}^{2}+\sigma_{x}^{2})-\bar{F}_{x}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\sigma_{F_{x}}^{2}=\int_{-\infty}^{\infty}Q^{2}\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}T(\lambda_{i})e^{-x/\lambda_{i}}\sum_{j}\alpha_{j}B_{j}\lambda_{j}^{2}T(\lambda_{j})e^{-x/\lambda_{j}}\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}P(x,\bar{x},\sigma_{x})dx+2CQ\sum_{i}\alpha_{i}\bar{B}_{i}\lambda_{i}^{2}T(\lambda_{i})e^{-\frac{\bar{x}}{\lambda_{i}}+\frac{\sigma_{x}^{2}}{2\lambda_{i}^{2}}}(\bar{x}-\frac{\sigma_{x}^{2}}{\lambda_{i}})+C^{2}(\bar{x}^{2}+\sigma_{x}^{2})-\bar{F}_{x}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\sigma_{F_{x}}^{2}=Q^{2}\sum_{i}\sum_{j\not=i}\alpha_{i}\alpha_{j}\bar{B}_{i}\bar{B}_{j}\lambda_{i}^{2}\lambda_{j}^{2}T(\lambda_{i})T(\lambda_{j})e^{\sigma_{x}^{2}L_{ij}^{2}/2-\bar{x}L_{ij}}+\int_{-\infty}^{\infty}Q^{2}\sum_{i}\alpha_{i}^{2}B_{i}^{2}\lambda_{i}^{4}T(\lambda_{i})^{2}e^{-2x/\lambda_{i}}\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}P(x,\bar{x},\sigma_{x})dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $+2CQ\sum_{i}\alpha_{i}\bar{B}_{i}\lambda_{i}^{2}T(\lambda_{i})e^{-\frac{\bar{x}}{\lambda_{i}}+\frac{\sigma_{x}^{2}}{2\lambda_{i}^{2}}}(\bar{x}-\frac{\sigma_{x}^{2}}{\lambda_{i}})+C^{2}(\bar{x}^{2}+\sigma_{x}^{2})-\bar{F}_{x}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\sigma_{F_{x}}^{2}=Q^{2}\sum_{i}\sum_{j\not=i}\alpha_{i}\alpha_{j}\bar{B}_{i}\bar{B}_{j}\lambda_{i}^{2}\lambda_{j}^{2}T(\lambda_{i})T(\lambda_{j})e^{\sigma_{x}^{2}L_{ij}^{2}/2-\bar{x}L_{ij}}+\int_{-\infty}^{\infty}Q^{2}\sum_{i}\alpha_{i}^{2}(\bar{B}_{i}^{2}+\sigma_{B_{i}}^{2})\lambda_{i}^{4}T(\lambda_{i})^{2}e^{-2x/\lambda_{i}}P(x,\bar{x},\sigma_{x})dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $+2CQ\sum_{i}\alpha_{i}\bar{B}_{i}\lambda_{i}^{2}T(\lambda_{i})e^{-\frac{\bar{x}}{\lambda_{i}}+\frac{\sigma_{x}^{2}}{2\lambda_{i}^{2}}}(\bar{x}-\frac{\sigma_{x}^{2}}{\lambda_{i}})+C^{2}(\bar{x}^{2}+\sigma_{x}^{2})-\bar{F}_{x}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\sigma_{F_{x}}^{2}=Q^{2}\sum_{i}\sum_{j\not=i}\alpha_{i}\alpha_{j}\bar{B}_{i}\bar{B}_{j}\lambda_{i}^{2}\lambda_{j}^{2}T(\lambda_{i})T(\lambda_{j})e^{\sigma_{x}^{2}L_{ij}^{2}/2-\bar{x}L_{ij}}+Q^{2}\sum_{i}\alpha_{i}^{2}(\bar{B}_{i}^{2}+\sigma_{B_{i}}^{2})\lambda_{i}^{4}T(\lambda_{i})^{2}e^{2\sigma_{x}^{2}/\lambda_{i}^{2}}e^{-2\bar{x}/\lambda_{i}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $+2CQ\sum_{i}\alpha_{i}\bar{B}_{i}\lambda_{i}^{2}T(\lambda_{i})e^{-\frac{\bar{x}}{\lambda_{i}}+\frac{\sigma_{x}^{2}}{2\lambda_{i}^{2}}}(\bar{x}-\frac{\sigma_{x}^{2}}{\lambda_{i}})+C^{2}(\bar{x}^{2}+\sigma_{x}^{2})-\bar{F}_{x}^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\begin{eqnarray*}
+\sigma_{F_{x}}^{2} & = & Q^{2}\sum_{i}\sum_{j\not=i}\alpha_{i}\alpha_{j}\bar{B}_{i}\bar{B}_{j}\lambda_{i}^{2}\lambda_{j}^{2}T(\lambda_{i})T(\lambda_{j})e^{\sigma_{x}^{2}L_{ij}^{2}/2-\bar{x}L_{ij}}\\
+ &  & +Q^{2}\sum_{i}\alpha_{i}^{2}(\bar{B}_{i}^{2}+\sigma_{B_{i}}^{2})\lambda_{i}^{4}T(\lambda_{i})^{2}e^{2\sigma_{x}^{2}/\lambda_{i}^{2}-2\bar{x}/\lambda_{i}}\\
+ &  & +2CQ\sum_{i}\alpha_{i}\bar{B}_{i}\lambda_{i}^{2}T(\lambda_{i})e^{\sigma_{x}^{2}/2\lambda_{i}^{2}-\bar{x}/\lambda_{i}}(\bar{x}-\frac{\sigma_{x}^{2}}{\lambda_{i}})\\
+ &  & +C^{2}(\bar{x}^{2}+\sigma_{x}^{2})-\bar{F}_{x}^{2}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This works great, but speed and stability of numerical evaluation urges
+ us farther.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\sigma_{F_{x}}^{2}=Q\left(Q\sum_{i}\sum_{j\not=i}\alpha_{i}\alpha_{j}\bar{B}_{i}\bar{B}_{j}\lambda_{i}^{2}\lambda_{j}^{2}T(\lambda_{i})T(\lambda_{j})e^{\sigma_{x}^{2}L_{ij}^{2}/2-\bar{x}L_{ij}}+Q\sum_{i}\alpha_{i}^{2}(\bar{B}_{i}^{2}+\sigma_{B_{i}}^{2})\lambda_{i}^{4}T(\lambda_{i})^{2}e^{2\sigma_{x}^{2}/\lambda_{i}^{2}-2\bar{x}/\lambda_{i}}+2C\sum_{i}\alpha_{i}\bar{B}_{i}\lambda_{i}^{2}T(\lambda_{i})e^{\sigma_{x}^{2}/2\lambda_{i}^{2}-\bar{x}/\lambda_{i}}(\bar{x}-\frac{\sigma_{x}^{2}}{\lambda_{i}})\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $+C^{2}(\bar{x}^{2}+\sigma_{x}^{2})-\left(Q\sum_{i}\alpha_{i}\bar{B}_{i}\lambda_{i}^{2}T(\lambda_{i})e^{\sigma_{x}^{2}/2\lambda_{i}^{2}}e^{-\bar{x}/\lambda_{i}}+C\bar{x}\right)^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\sigma_{F_{x}}^{2}=Q\left(Q\sum_{i}\sum_{j\not=i}\alpha_{i}\alpha_{j}\bar{B}_{i}\bar{B}_{j}\lambda_{i}^{2}\lambda_{j}^{2}T(\lambda_{i})T(\lambda_{j})e^{\sigma_{x}^{2}L_{ij}^{2}/2-\bar{x}L_{ij}}+Q\sum_{i}\alpha_{i}^{2}(\bar{B}_{i}^{2}+\sigma_{B_{i}}^{2})\lambda_{i}^{4}T(\lambda_{i})^{2}e^{2\sigma_{x}^{2}/\lambda_{i}^{2}-2\bar{x}/\lambda_{i}}+2C\sum_{i}\alpha_{i}\bar{B}_{i}\lambda_{i}^{2}T(\lambda_{i})e^{\sigma_{x}^{2}/2\lambda_{i}^{2}-\bar{x}/\lambda_{i}}(\bar{x}-\frac{\sigma_{x}^{2}}{\lambda_{i}})\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $+C^{2}(\bar{x}^{2}+\sigma_{x}^{2})-\left(Q^{2}\sum_{j}\alpha_{j}\bar{B}_{j}\lambda_{j}^{2}T(\lambda_{j})e^{\sigma_{x}^{2}/2\lambda_{j}^{2}}e^{-\bar{x}/\lambda_{j}}\sum_{i}\alpha_{i}\bar{B}_{i}\lambda_{i}^{2}T(\lambda_{i})e^{\sigma_{x}^{2}/2\lambda_{i}^{2}}e^{-\bar{x}/\lambda_{i}}+2C\bar{x}Q\sum_{i}\alpha_{i}\bar{B}_{i}\lambda_{i}^{2}T(\lambda_{i})e^{\sigma_{x}^{2}/2\lambda_{i}^{2}}e^{-\bar{x}/\lambda_{i}}+C^{2}\bar{x}^{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\sigma_{F_{x}}^{2}=Q\left(Q\sum_{i}\sum_{j\not=i}\alpha_{i}\alpha_{j}\bar{B}_{i}\bar{B}_{j}\lambda_{i}^{2}\lambda_{j}^{2}T(\lambda_{i})T(\lambda_{j})e^{\sigma_{x}^{2}L_{ij}^{2}/2-\bar{x}L_{ij}}+Q\sum_{i}\alpha_{i}^{2}(\bar{B}_{i}^{2}+\sigma_{B_{i}}^{2})\lambda_{i}^{4}T(\lambda_{i})^{2}e^{2\sigma_{x}^{2}/\lambda_{i}^{2}-2\bar{x}/\lambda_{i}}+2C\sum_{i}\alpha_{i}\bar{B}_{i}\lambda_{i}^{2}T(\lambda_{i})e^{\sigma_{x}^{2}/2\lambda_{i}^{2}-\bar{x}/\lambda_{i}}(\bar{x}-\frac{\sigma_{x}^{2}}{\lambda_{i}})\right)+C^{2}\sigma_{x}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $-Q\left(Q\sum_{j}\alpha_{j}\bar{B}_{j}\lambda_{j}^{2}T(\lambda_{j})e^{\sigma_{x}^{2}/2\lambda_{j}^{2}}e^{-\bar{x}/\lambda_{j}}\sum_{i}\alpha_{i}\bar{B}_{i}\lambda_{i}^{2}T(\lambda_{i})e^{\sigma_{x}^{2}/2\lambda_{i}^{2}}e^{-\bar{x}/\lambda_{i}}+2C\bar{x}\sum_{i}\alpha_{i}\bar{B}_{i}\lambda_{i}^{2}T(\lambda_{i})e^{\sigma_{x}^{2}/2\lambda_{i}^{2}-\bar{x}/\lambda_{i}}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\sigma_{F_{x}}^{2}=Q\left(Q\sum_{i}\sum_{j\not=i}\alpha_{i}\alpha_{j}\bar{B}_{i}\bar{B}_{j}\lambda_{i}^{2}\lambda_{j}^{2}T(\lambda_{i})T(\lambda_{j})e^{\sigma_{x}^{2}L_{ij}^{2}/2-\bar{x}L_{ij}}+Q\sum_{i}\alpha_{i}^{2}(\bar{B}_{i}^{2}+\sigma_{B_{i}}^{2})\lambda_{i}^{4}T(\lambda_{i})^{2}e^{2\sigma_{x}^{2}/\lambda_{i}^{2}-2\bar{x}/\lambda_{i}}-2C\sigma_{x}^{2}\sum_{i}\alpha_{i}\bar{B}_{i}\lambda_{i}T(\lambda_{i})e^{\sigma_{x}^{2}/2\lambda_{i}^{2}-\bar{x}/\lambda_{i}}\right)+C^{2}\sigma_{x}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $-Q\left(Q\sum_{j}\alpha_{j}\bar{B}_{j}\lambda_{j}^{2}T(\lambda_{j})e^{\sigma_{x}^{2}/2\lambda_{j}^{2}}e^{-\bar{x}/\lambda_{j}}\sum_{i}\alpha_{i}\bar{B}_{i}\lambda_{i}^{2}T(\lambda_{i})e^{\sigma_{x}^{2}/2\lambda_{i}^{2}}e^{-\bar{x}/\lambda_{i}}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\sigma_{F_{x}}^{2}=Q\left(Q\sum_{i}\sum_{j\not=i}\alpha_{i}\alpha_{j}\bar{B}_{i}\bar{B}_{j}\lambda_{i}^{2}\lambda_{j}^{2}T(\lambda_{i})T(\lambda_{j})e^{\sigma_{x}^{2}L_{ij}^{2}/2-\bar{x}L_{ij}}+Q\sum_{i}\alpha_{i}^{2}(\bar{B}_{i}^{2}+\sigma_{B_{i}}^{2})\lambda_{i}^{4}T(\lambda_{i})^{2}e^{2\sigma_{x}^{2}/\lambda_{i}^{2}-2\bar{x}/\lambda_{i}}-2C\sigma_{x}^{2}\sum_{i}\alpha_{i}\bar{B}_{i}\lambda_{i}T(\lambda_{i})e^{\sigma_{x}^{2}/2\lambda_{i}^{2}-\bar{x}/\lambda_{i}}\right)+C^{2}\sigma_{x}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $-Q^{2}\left(\sum_{i}\sum_{j\not=i}\alpha_{i}\alpha_{j}\lambda_{i}^{2}\lambda_{j}^{2}\bar{B}_{i}\bar{B}_{j}T(\lambda_{i})T(\lambda_{j})e^{\sigma_{x}^{2}/2\lambda_{j}^{2}-\bar{x}/\lambda_{j}}e^{\sigma_{x}^{2}/2\lambda_{i}^{2}-\bar{x}/\lambda_{i}}+\sum_{i}\alpha_{i}^{2}\bar{B}_{i}^{2}\lambda_{i}^{4}T(\lambda_{i})^{2}e^{\sigma_{x}^{2}/\lambda_{i}^{2}-2\bar{x}/\lambda_{i}}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\sigma_{F_{x}}^{2}=Q\left(Q\sum_{i}\sum_{j\not=i}\alpha_{i}\alpha_{j}\bar{B}_{i}\bar{B}_{j}\lambda_{i}^{2}\lambda_{j}^{2}T(\lambda_{i})T(\lambda_{j})e^{\sigma_{x}^{2}L_{ij}^{2}/2-\bar{x}L_{ij}}+Q\sum_{i}\alpha_{i}^{2}\left(\sigma_{B_{i}}^{2}+\bar{B}_{i}^{2}\left(1-e^{-\sigma_{x}^{2}/\lambda_{i}^{2}}\right)\right)\lambda_{i}^{4}T(\lambda_{i})^{2}e^{2\sigma_{x}^{2}/\lambda_{i}^{2}-2\bar{x}/\lambda_{i}}-2C\sigma_{x}^{2}\sum_{i}\alpha_{i}\bar{B}_{i}\lambda_{i}T(\lambda_{i})e^{\sigma_{x}^{2}/2\lambda_{i}^{2}-\bar{x}/\lambda_{i}}\right)+C^{2}\sigma_{x}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $-Q^{2}\left(\sum_{i}\sum_{j\not=i}\alpha_{i}\alpha_{j}\lambda_{i}^{2}\lambda_{j}^{2}\bar{B}_{i}\bar{B}_{j}T(\lambda_{i})T(\lambda_{j})e^{\sigma_{x}^{2}/2\lambda_{j}^{2}-\bar{x}/\lambda_{j}}e^{\sigma_{x}^{2}/2\lambda_{i}^{2}-\bar{x}/\lambda_{i}}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\sigma_{F_{x}}^{2}=Q\left(Q\sum_{i}\sum_{j\not=i}\alpha_{i}\alpha_{j}\bar{B}_{i}\bar{B}_{j}\lambda_{i}^{2}\lambda_{j}^{2}T(\lambda_{i})T(\lambda_{j})e^{\sigma_{x}^{2}L_{ij}^{2}/2-\bar{x}L_{ij}}+Q\sum_{i}\alpha_{i}^{2}\left(\sigma_{B_{i}}^{2}+\bar{B}_{i}^{2}\left(1-e^{-\sigma_{x}^{2}/\lambda_{i}^{2}}\right)\right)\lambda_{i}^{4}T(\lambda_{i})^{2}e^{2\sigma_{x}^{2}/\lambda_{i}^{2}-2\bar{x}/\lambda_{i}}-2C\sigma_{x}^{2}\sum_{i}\alpha_{i}\bar{B}_{i}\lambda_{i}T(\lambda_{i})e^{\sigma_{x}^{2}/2\lambda_{i}^{2}-\bar{x}/\lambda_{i}}\right)+C^{2}\sigma_{x}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $-Q^{2}\left(\sum_{i}\sum_{j\not=i}\alpha_{i}\alpha_{j}\lambda_{i}^{2}\lambda_{j}^{2}\bar{B}_{i}\bar{B}_{j}T(\lambda_{i})T(\lambda_{j})e^{\sigma_{x}^{2}/2\lambda_{j}^{2}+\sigma_{x}^{2}/2\lambda_{i}^{2}-\bar{x}L_{ij}}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\sigma_{F_{x}}^{2}=Q\left(Q\sum_{i}\sum_{j\not=i}\alpha_{i}\alpha_{j}\bar{B}_{i}\bar{B}_{j}\lambda_{i}^{2}\lambda_{j}^{2}T(\lambda_{i})T(\lambda_{j})\left(e^{\sigma_{x}^{2}L_{ij}^{2}/2-\bar{x}L_{ij}}-e^{\sigma_{x}^{2}/2\lambda_{j}^{2}+\sigma_{x}^{2}/2\lambda_{i}^{2}-\bar{x}L_{ij}}\right)+Q\sum_{i}\alpha_{i}^{2}\left(\sigma_{B_{i}}^{2}+\bar{B}_{i}^{2}\left(1-e^{-\sigma_{x}^{2}/\lambda_{i}^{2}}\right)\right)\lambda_{i}^{4}T(\lambda_{i})^{2}e^{2\sigma_{x}^{2}/\lambda_{i}^{2}-2\bar{x}/\lambda_{i}}-2C\sigma_{x}^{2}\sum_{i}\alpha_{i}\bar{B}_{i}\lambda_{i}T(\lambda_{i})e^{\sigma_{x}^{2}/2\lambda_{i}^{2}-\bar{x}/\lambda_{i}}\right)+C^{2}\sigma_{x}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\sigma_{F_{x}}^{2}=Q\left(Q\sum_{i}\sum_{j\not=i}\alpha_{i}\alpha_{j}\bar{B}_{i}\bar{B}_{j}\lambda_{i}^{2}\lambda_{j}^{2}T(\lambda_{i})T(\lambda_{j})e^{\frac{\sigma_{x}^{2}}{2}\left(\frac{1}{\lambda_{j}^{2}}+\frac{1}{\lambda_{i}^{2}}\right)-\bar{x}L_{ij}}\left(e^{\frac{\sigma_{x}^{2}}{2}\left(L_{ij}^{2}-\left(\frac{1}{\lambda_{j}^{2}}+\frac{1}{\lambda_{i}^{2}}\right)\right)}-1\right)+Q\sum_{i}\alpha_{i}^{2}\left(\sigma_{B_{i}}^{2}+\bar{B}_{i}^{2}\left(1-e^{-\sigma_{x}^{2}/\lambda_{i}^{2}}\right)\right)\lambda_{i}^{4}T(\lambda_{i})^{2}e^{2\sigma_{x}^{2}/\lambda_{i}^{2}-2\bar{x}/\lambda_{i}}-2C\sigma_{x}^{2}\sum_{i}\alpha_{i}\bar{B}_{i}\lambda_{i}T(\lambda_{i})e^{\sigma_{x}^{2}/2\lambda_{i}^{2}-\bar{x}/\lambda_{i}}\right)+C^{2}\sigma_{x}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $L_{ij}^{2}-\left(\frac{1}{\lambda_{j}^{2}}+\frac{1}{\lambda_{i}^{2}}\right)=\left(\frac{1}{\lambda_{j}}+\frac{1}{\lambda_{i}}\right)^{2}-\frac{1}{\lambda_{j}^{2}}-\frac{1}{\lambda_{i}^{2}}=\frac{1}{\lambda_{j}^{2}}+\frac{2}{\lambda_{j}\lambda_{i}}+\frac{1}{\lambda_{i}^{2}}-\frac{1}{\lambda_{j}^{2}}-\frac{1}{\lambda_{i}^{2}}=\frac{2}{\lambda_{j}\lambda_{i}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\sigma_{F_{x}}^{2}=Q\left(Q\sum_{i}\sum_{j\not=i}\alpha_{i}\alpha_{j}\bar{B}_{i}\bar{B}_{j}\lambda_{i}^{2}\lambda_{j}^{2}T(\lambda_{i})T(\lambda_{j})e^{\frac{\sigma_{x}^{2}}{2}\left(\frac{1}{\lambda_{j}^{2}}+\frac{1}{\lambda_{i}^{2}}\right)-\bar{x}L_{ij}}\left(e^{\frac{\sigma_{x}^{2}}{\lambda_{j}\lambda_{i}}}-1\right)+Q\sum_{i}\alpha_{i}^{2}\left(\sigma_{B_{i}}^{2}+\bar{B}_{i}^{2}\left(1-e^{-\sigma_{x}^{2}/\lambda_{i}^{2}}\right)\right)\lambda_{i}^{4}T(\lambda_{i})^{2}e^{2\sigma_{x}^{2}/\lambda_{i}^{2}-2\bar{x}/\lambda_{i}}-2C\sigma_{x}^{2}\sum_{i}\alpha_{i}\bar{B}_{i}\lambda_{i}T(\lambda_{i})e^{\sigma_{x}^{2}/2\lambda_{i}^{2}-\bar{x}/\lambda_{i}}\right)+C^{2}\sigma_{x}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Let 
+\begin_inset Formula $\Lambda_{ij}=\frac{1}{\lambda_{j}^{2}}+\frac{1}{\lambda_{i}^{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\begin{eqnarray*}
+\sigma_{F_{x}}^{2} & = & Q^{2}\sum_{i}\sum_{j\not=i}\alpha_{i}\alpha_{j}\bar{B}_{i}\bar{B}_{j}\lambda_{i}^{2}\lambda_{j}^{2}T(\lambda_{i})T(\lambda_{j})e^{\frac{\sigma_{x}^{2}}{2}L_{ij}^{2}-\bar{x}L_{ij}}\left(1-e^{-\frac{\sigma_{x}^{2}}{\lambda_{j}\lambda_{i}}}\right)\\
+ &  & +Q^{2}\sum_{i}\alpha_{i}^{2}\left(\sigma_{B_{i}}^{2}+\bar{B}_{i}^{2}\left(1-e^{-\sigma_{x}^{2}/\lambda_{i}^{2}}\right)\right)\lambda_{i}^{4}T(\lambda_{i})^{2}e^{2\sigma_{x}^{2}/\lambda_{i}^{2}-2\bar{x}/\lambda_{i}}\\
+ &  & -2CQ\sigma_{x}^{2}\sum_{i}\alpha_{i}\bar{B}_{i}\lambda_{i}T(\lambda_{i})e^{\sigma_{x}^{2}/2\lambda_{i}^{2}-\bar{x}/\lambda_{i}}\\
+ &  & +C^{2}\sigma_{x}^{2}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+With this knowledge, we can compute 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+!
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $\sigma_{x}$
+\end_inset
+
+ is zero, then
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sigma_{F_{x}}^{2}=Q^{2}\sum_{i}\alpha_{i}^{2}\lambda_{i}^{4}T(\lambda_{i})^{2}\sigma_{B_{i}}^{2}e^{-2\bar{x}/\lambda_{i}}
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter
 Software
 \end_layout
@@ -12829,11 +14740,326 @@ m stroke range of the attractor.
 \end_layout
 
 \begin_layout Subsection
-Off-center torques XXXRC
+Off-center torques 
+\end_layout
+
+\begin_layout Standard
+The attractor is offset horizontally by 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/attrHorizOffset.tex"
+
+\end_inset
+
+ (toward the window) and vertically by 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/attrVertOffset.tex"
+
+\end_inset
+
+ with respect to the pendulum.
+ (XXXRC verify numbers) The torques due to the complete off-center attractory
+ assembly are shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:OffsetPendulumTorque"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../NewtonianSimulation/plots/offsetAttractorAssembly.eps
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:OffsetPendulumTorque"
+
+\end_inset
+
+Simulation output for the offset pendulum
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
-Angled torques XXXRC
+Angled torques
+\end_layout
+
+\begin_layout Standard
+The pendulum is oriented at an angle of XXXRC with respect to the attractor.
+ 
+\end_layout
+
+\begin_layout Subsection
+Torques from surface scans
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Torques-from-surface"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The most challenging Newtonian task is to compute the effects of irregularities
+ in the attractor and pendulum surfaces.
+ The attractor and pendulum are slightly dome-shaped, as the hand lapping
+ procedure tends to remove more material at the edges than at the center.
+ Furthermore, in the case of the pendulum, the inlay and the pendulum body
+ are made from two different materials, with different responses to lapping.
+ Our SmartScope laser scanner allows us to scan these surfaces with better
+ than 100
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m spatial resolution, and with perhaps a micron's vertical resolution.
+ The maximum variation in surface height is less than 
+\begin_inset Formula $25$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Any
+\bar default
+ quadrature scheme that can resolve the measured surface variation will
+ require 
+\begin_inset Formula 
+\[
+N=\frac{L}{g_{h}}\frac{W}{g_{h}}\pi\left(\frac{R}{g_{h}}\right)^{2}\left(\frac{T}{g_{z}}\right)^{2}\approx3300\times\frac{1}{g_{h}^{4}g_{z}^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+individual calculations, where 
+\begin_inset Formula $L$
+\end_inset
+
+ and 
+\begin_inset Formula $W$
+\end_inset
+
+ are the pendulum dimensions, 
+\begin_inset Formula $R$
+\end_inset
+
+ is the attractor radius, 
+\begin_inset Formula $T$
+\end_inset
+
+ is the (
+\begin_inset Formula $\sim25$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m) depth of integration, and 
+\begin_inset Formula $g_{h}$
+\end_inset
+
+ and 
+\begin_inset Formula $g_{z}$
+\end_inset
+
+ are the horizontal and vertical grid sizes (in mm, for the 3300 formula
+ above).
+ In an optimal case, with 
+\begin_inset Formula $g_{h}=10$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m and 
+\begin_inset Formula $g_{z}=2.5$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m, a single calculation would require 
+\begin_inset Formula $5\times10^{16}$
+\end_inset
+
+ calculations.
+ Assuming perfect optimization, each calculation requires more than seven
+ floating-point operations (FLOPs), or 357
+\begin_inset space ~
+\end_inset
+
+days on a modern quad-core desktop computer (21
+\begin_inset space ~
+\end_inset
+
+hr on the 5 teraflop CENPA cluster).
+ Clever tricks can help to reduce the necessary volume of computation somewhat,
+ but the detailed spatial resolution required sets the scale.
+ As we would like to make these calculations many times, for perhaps 30
+ separate positions, and repeated once every hour or two (for hourly builds),
+ we must find a way to tolerate much lower resolution.
+\end_layout
+
+\begin_layout Standard
+We are saved by the fact that we only 
+\bar under
+need
+\bar default
+ the size of the non-flat torques and the associated uncertainties in size
+ and linearity.
+ If they are small compared to our other uncertainties, we're done.
+ To generate speed, we use grid sizes of 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/pendulumPMScanGridSize.tex"
+
+\end_inset
+
+ tangential and 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/pendulumPMScanVertStep.tex"
+
+\end_inset
+
+ perpendicular to the surface.
+ Given that the pendulum-attractor gap can be as small as 80-90 
+\begin_inset Formula $\mu$
+\end_inset
+
+m, this is woefully inadequate.
+ To provide an estimate of the effects of the too-large gridsize, the integratio
+n was repeated several times, with the point-mass subcomponents of the pendulum
+ and attractor scattered horizontally with gaussian standard deviation of
+ one grid spacing, with results shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:PM-Scan-Torque"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../NewtonianSimulation/plots/pmScanPlot.eps
+	width 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:PM-Scan-Torque"
+
+\end_inset
+
+Torques due to the leading 
+\begin_inset Formula $25$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m of the attractor and pendulum, computed directly from the laser-microscope
+ scans of the attractor and pendulum surfaces.
+ XXXRC Alignment
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
@@ -12895,7 +15121,14 @@ XXXMI: algorithm me!
 \end_inset
 
 .
- The circuit is modelled as an LCR resonator, see XXXRC.
+ The circuit is modelled as an LCR resonator, see 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Capacitor-Systematic"
+
+\end_inset
+
+.
  When the circuit 
 \begin_inset Formula $Q$
 \end_inset
@@ -13039,7 +15272,7 @@ status open
  to be 
 \begin_inset CommandInset include
 LatexCommand input
-filename "../systematics/magnetic/extracted/CoilFieldAtCenter.tex"
+filename "../systematics/magnetic/extracted/verticalField.tex"
 
 \end_inset
 
@@ -13047,9 +15280,39 @@ filename "../systematics/magnetic/extracted/CoilFieldAtCenter.tex"
 \begin_inset space ~
 \end_inset
 
-T vertical, XXXRC transverse, and XXXRC attractor-axial in the on-apparatus
- configuration and XXXRC horizontal in the position at the side of the instrumen
-t.
+T vertical, 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../systematics/magnetic/extracted/transverseField.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+T transverse, and 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../systematics/magnetic/extracted/axialField.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+T attractor-axial in the on-apparatus configuration
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ and XXXMI horizontal in the position at the side of the instrument
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -13177,11 +15440,12 @@ Attractor Bias
 \end_layout
 
 \begin_layout Standard
-The attractor was biased to XXXRC
+The attractor was biased to 18
 \begin_inset space ~
 \end_inset
 
-V through a resistor, and the experiment was operated with XXXRC stroke.
+V through a resistor, and the experiment was operated with a random stroke
+ pattern.
  The difference in torque-difference between voltage-on and voltage-off
  states was XXXRC
 \begin_inset space ~
@@ -13286,15 +15550,39 @@ k
 \end_inset
 
 ) of power, both heating the attractor and providing a spatial gradient.
- This was observed to create an XXXRC
+ This was observed to create a 
+\begin_inset Formula $\sim300$
+\end_inset
+
+
 \begin_inset space ~
 \end_inset
 
-K rise in attractor temperature and create an XXXRC
+mK 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMA automate me!
+\end_layout
+
+\end_inset
+
+rise in attractor spindle temperature and create an 100
 \begin_inset space ~
 \end_inset
 
-K temperature gradient across the attractor.
+mK 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMA automate me!
+\end_layout
+
+\end_inset
+
+ temperature gradient across the attractor.
  The attractor was operated with long and short strokes and the run analyzed
  blind.
  For long strokes, the difference in torque-difference between heat-on and
@@ -13324,6 +15612,79 @@ filename "../systematics/thermal/extracted/shortStrokeL0Diff.tex"
 
 N-m.
  
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../systematics/thermal/plots/aveTempPlot.eps
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Temperatures during thermal testing.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Short-Range
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+Rot-Wash
+\begin_inset Quotes erd
+\end_inset
+
+ are temperature sensors nearby in the room.
+ The attractor leg thermistors are on the attractor spindles at left and
+ right (but not top).
+ The baseplate thermistor is screwed into the large aluminum baseplate internal
+ to the apparatus.
+ Spikes prior to day ~608 are from heater-verification tests.
+ The large step (red above blue) is when the heater on leg 1 was turned
+ on.
+ The second step (blue above red) has the heater on leg 2 turned on, and
+ the heater on leg 1 turned off.
+ At the end of that sequence (~day 628), both heaters were turned off.
+ The sensors are hand calibrated to match each other and the exterior sensors
+ prior to day 608.
+ Reliability of this calibration is low, but sufficient, as the important
+ scaling quantities are the ratios of the heated temperature and gradient
+ to those measured without heating.
+ The DC discrepancy between internal and external sensors after day 630
+ is not understood, but no known instrumental effect accounts for it, so
+ it may correspond to a temperature rise within the PlateWash enclosure.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -13357,9 +15718,9 @@ mW of light is incident upon the foil.
 \end_inset
 
 m wavelength, copper is more than 95% reflective.
- Much of the light should make only one reflection.
+ Much of the light makes only one reflection.
  While only 4% of the reflected light re-couples into the fiber-optic core,
- much of it should couple back into the fiber cladding dissipate elsewhere.
+ much of it should couple back into the fiber cladding and dissipate elsewhere.
  Nonetheless, the few microwatts that must be dissipated through conduction
  in the foil may contribute to a slight foil temperature rise.
  To test for any related systematic effect, in runs XXXRC, we operated the
@@ -13441,19 +15802,18 @@ Yukawa Potential
 \end_layout
 
 \begin_layout Subsection
-Power Law
+Other models:
 \end_layout
 
-\begin_layout Subsection
-Fat Graviton
-\end_layout
+\begin_layout Standard
+With these data, it is possible to place useful limits upon interactions
+ such as power-law, Fat Graviton, Chameleon, Unparticles, and more.
+ In each scenario, a new 
+\begin_inset Formula $\chi^{2}$
+\end_inset
 
-\begin_layout Subsection
-Chameleon
-\end_layout
-
-\begin_layout Subsection
-Unparticles
+ approach must be taken to properly address systematic uncertainties.
+ For this reason, this thesis must limit its results to Yukawa potentials.
 \end_layout
 
 \begin_layout Chapter
@@ -13468,6 +15828,16 @@ Future
 \begin_inset CommandInset include
 LatexCommand input
 filename "../bootstrap/output/makeSymFigure.tex"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "../bootstrap/output/makeSymFigureSystematics.tex"
 
 \end_inset
 

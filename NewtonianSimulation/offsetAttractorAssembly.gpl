@@ -1,0 +1,32 @@
+set term postscript enhanced solid color eps
+set output 'plots/offsetAttractorAssembly.eps'
+
+set key top left
+
+set ylabel 'torque (fN-m)'
+
+Attractor = 'SimulationOutput/jan13OffsetAttractor.dat'
+
+attractor(x) = mattractor + sattractor * x
+
+fit attractor(x) Attractor u 5:13 via mattractor, sattractor
+
+
+pendOff = system( HOMEDIR."bin/texSigToNum.sh ".HOMEDIR."extracted/pendulumBodyThickness.tex")/2.0*1e6
+
+set multiplot layout 2,1
+set key off
+set format x ""
+pl [0:]\
+	Attractor u ($5*1e6-pendOff):(($13 )*1e15) w l  tit 'Attractor'
+
+
+set title 'non-linear residuals'
+set xlabel 'pendulum - attractor face separation ({/Symbol m}m)'
+set key below
+set format x "%g"
+
+pl [0:]\
+	Attractor u ($5*1e6-pendOff):(($14)*1e15) w l  tit 'Attractor'
+
+unset multiplot

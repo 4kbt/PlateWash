@@ -1,0 +1,4 @@
+name = 'globalConfig/columnNames.m';
+name = HOMEDIR.name;
+
+load(name);

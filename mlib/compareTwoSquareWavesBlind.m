@@ -1,12 +1,13 @@
 %Evaluates the difference of a-b. Attempts to preserve the blind.
 %*pMPosition denotes the location of the variable within the pM data structure. A should be 1, and B should be 2 in most reasonable calls.
-function [abDiff aBins aH bBins bH aLockPos bLockPos]  = compareTwoSquareWavesBlind( a, b, sciCol, scierrCol, sciErrThresh, sciErrMin, lockCol, numSensors, ApMPosition, BpMPosition)
+function [abDiff aBins aH bBins bH aLockPos bLockPos]  = compareTwoSquareWavesBlind( a, b, sciCol, scierrCol, sciErrMin, lockCol, numSensors, ApMPosition, BpMPosition)
 
 %Clean up signs (fixes any sign ambiguity)
 a(:,sciCol) = a(:, sciCol) .* sign(a(:, lockCol));
 b(:,sciCol) = b(:, sciCol) .* sign(b(:, lockCol));
 
 %Torque cut:
+sciErrThresh = torErrThresh([ a(:,sciCol); b(:,sciCol)]);
 a = a( a(:,scierrCol) < sciErrThresh , :);
 b = b( b(:,scierrCol) < sciErrThresh , :);
 

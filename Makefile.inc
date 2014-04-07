@@ -1,12 +1,12 @@
 HOMEDIR := /home/charlie/trialEotwash/Eotwash/
 
 OCT:= octave --no-init-file \
-	--eval "HOMEDIR = \"$(HOMEDIR)\";"\
+	--eval "global HOMEDIR = \"$(HOMEDIR)\";"\
 	--eval 'initializeOctave;'\
 	-p $(HOMEDIR)/globalConfig/ \
 	-q 
 
-GNU    := gnuplot -e 'set term dumb' -e 'HOMEDIR = "$(HOMEDIR)"'
+GNU    := gnuplot -e 'set term dumb' -e 'HOMEDIR = "$(HOMEDIR)"' -d
 
 MLIB   := $(shell find  $(HOMEDIR)/mlib/        -type d) 
 
@@ -23,11 +23,15 @@ LYX    := lyx -batch --export "pdf" -dbg info,latex
 .INTERACT: 
 	$(OCT) --persist
 
+#The dash is meaningful.
+.GINTERACT:
+	$(GNU) -
+
 .PHONY : 
 	@echo $(OCT)
 	@echo $(MLIB)
 
-PARALLEL := -j 3
+PARALLEL := -j 4
 
 SINGLEQUOTECUTTER := sed -e "s/^.*'\(.*\)'.*$$/\1/"
 

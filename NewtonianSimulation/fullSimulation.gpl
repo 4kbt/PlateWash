@@ -21,14 +21,16 @@ fit attractor(x) Attractor u 5:13 via mattractor, sattractor
 fit nonattractor(x) nonAttractor u 5:13 via mnonattractor, snonattractor
 
 
+pendOff = system( HOMEDIR."bin/texSigToNum.sh ".HOMEDIR."extracted/pendulumBodyThickness.tex")/2.0*1e6
+
 set multiplot layout 2,1
 set key off
 set format x ""
 pl [0:]\
-	Gaps      u ($5*1e6-1000):(($13 )*1e15) w l tit 'Screw Gaps',\
-	Spindles  u ($5*1e6-1000):(($13 )*1e15) w l tit 'Spindles',\
-	Attractor u ($5*1e6-1000):(($13 )*1e15) w l  tit 'Attractor',\
-	nonAttractor u ($5*1e6-1000):(($13 )*1e15) w l  tit 'All non-Attractor components'
+	Gaps      u ($5*1e6-pendOff):(($13 )*1e15) w l tit 'Screw Gaps',\
+	Spindles  u ($5*1e6-pendOff):(($13 )*1e15) w l tit 'Spindles',\
+	Attractor u ($5*1e6-pendOff):(($13 )*1e15) w l  tit 'Attractor',\
+	nonAttractor u ($5*1e6-pendOff):(($13 )*1e15) w l  tit 'All non-Attractor components'
 
 
 set title 'non-linear residuals'
@@ -37,9 +39,9 @@ set key below
 set format x "%g"
 
 pl [0:]\
-	Gaps      u ($5*1e6-1000):(($13 - gaps($5)     )*1e15) w l tit 'Screw Gaps',\
-	Spindles  u ($5*1e6-1000):(($13 - spindles($5) )*1e15) w l tit 'Spindles',\
-	Attractor u ($5*1e6-1000):(($13 - attractor($5))*1e15) w l  tit 'Attractor',\
-	nonAttractor u ($5*1e6-1000):(($13 - nonattractor($5))*1e15) w l  tit 'All non-Attractor components'
+	Gaps 	  u ($5*1e6-pendOff):(($14)*1e15) w l tit 'Screw Gaps',\
+	Spindles  u ($5*1e6-pendOff):(($14)*1e15) w l tit 'Spindles',\
+	Attractor u ($5*1e6-pendOff):(($14)*1e15) w l tit 'Attractor',\
+	nonAttractor u ($5*1e6-pendOff):(($14)*1e15) w l tit 'All non-Attractor components'
 
 unset multiplot

@@ -56,8 +56,10 @@ function o = genPointMassArrayFrom2DArray( A, xSpacing , ySpacing, zSpacing, den
 
 		fraction = xctr/columns(A)*100.0;
 
-		['Assembly is ' num2str(fraction) ' percent complete']
-		toc
+		if( mod(xctr,30) < 1 )
+			['Assembly is ' num2str(fraction) ' percent complete']
+			toc
+		end
 	end
 
 	%Compensates for over-allocating memory; fixes any trivialities, too.

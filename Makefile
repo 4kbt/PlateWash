@@ -5,12 +5,13 @@ PATHINJECT := tmp/pathinject
 
 dissertation: gitlog.log
 	#Make a gnuplot column index
-	$(shell grep Col     globalConfig/run3147FixedParameters.m | sed '/\%/d' >   glib/gnuplotColumns.gpl)
-	$(shell grep Sensors globalConfig/run3147FixedParameters.m | sed '/\%/d' >>  glib/gnuplotColumns.gpl)
-	$(shell grep Col mlib/preSync3.m  | head -n 3               | sed '/\%/d' >> glib/gnuplotColumns.gpl)
+#	$(shell grep Col     globalConfig/run3147FixedParameters.m | sed '/\%/d' >   glib/gnuplotColumns.gpl)
+#	$(shell grep Sensors globalConfig/run3147FixedParameters.m | sed '/\%/d' >>  glib/gnuplotColumns.gpl)
+#	$(shell grep Col mlib/preSync3.m  | head -n 3               | sed '/\%/d' >> glib/gnuplotColumns.gpl)
 	#There's a better way than the head command in the preceding line... 
 	$(if $(shell ls data), ,$(shell ln -s /mnt/ssd/PWData/ data))
 	$(shell bin/countXXXs.sh thesis/thesis.lyx >> data/xxxCount.dat)
+	$(shell bin/commitPlot.sh > data/gitCommitTimes.dat)
 	$(shell sed -i  "s|HOMEDIR := .*|HOMEDIR := $(CURRENTDIR)/|" Makefile.inc)
 	$(MAKE) $(PARALLEL) -C mlib
 	$(MAKE) $(PARALLEL) -C NewtonianSimulation

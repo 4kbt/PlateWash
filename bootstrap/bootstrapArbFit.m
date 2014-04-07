@@ -1,6 +1,8 @@
 %This function fits an arbitrary linear piecewise function the data defined in preFit.
 pause = 0; 
 
+%Ugly hack to reenable print functions
+clear -f
 arbFitx1Spacing = 15e-6;	printSigNumber(arbFitx1Spacing, 'extracted/arbFitx1Spacing.tex', 2);
 arbFitx2Spacing = 50e-6;	printSigNumber(arbFitx1Spacing, 'extracted/arbFitx2Spacing.tex', 2);
 arbFitx1Start   = pfTouch*1e-6;	printSigNumber(arbFitx1Spacing, 'extracted/arbFitx1Start.tex'  , 2);

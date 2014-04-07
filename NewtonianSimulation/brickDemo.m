@@ -25,10 +25,10 @@ for attrCtr = 1:rows(attractors);
 
 		[force(ctr, :) torque(ctr,:)] = pointMatrixGravity(P,At);
 
-		if (mod(ctr,10) == 1 )
-			displayPoints(P,At);
-			pause(0.1);
-		end
+%		if (mod(ctr,10) == 1 )
+%			displayPoints(P,At);
+%			pause(0.1);
+%		end
 
 		save -text 'temp.dat' force torque;
 
