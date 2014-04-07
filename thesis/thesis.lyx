@@ -58,6 +58,7 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
+\listings_params "aboveskip={-4ex},basicstyle={\ttfamily\singlespacing}"
 \tracking_changes false
 \output_changes false
 \html_math_output 0
