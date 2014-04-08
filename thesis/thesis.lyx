@@ -413,7 +413,14 @@ key "2007PhRvL..98t1101T,PhysRevLett.108.081101"
 
 \end_inset
 
-, University of Indiana, Washington University at St.
+, University of Indiana
+\begin_inset CommandInset citation
+LatexCommand citep
+key "yan2014thermal"
+
+\end_inset
+
+, Washington University at St.
  Louis
 \begin_inset CommandInset citation
 LatexCommand citep
