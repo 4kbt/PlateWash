@@ -6,7 +6,7 @@ preSync3
 
 %psStartSec  = pwStartSec+271;
 %psEndSec    = psEndSec-100;
-%psEndSec    = psEndSec - 86000*.8
+psEndSec    = psEndSec - 9600;
 %psStartSec  = psStartSec + 2431 
 %pwEndSec    = pwStartSec + 219000; 
 %pwStartSec  = pwStartSec + 6300;
