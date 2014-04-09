@@ -9480,7 +9480,12 @@ Timing
 \end_layout
 
 \begin_layout Standard
-XXXRC TO COLLABORATORS: This section is not yet really begun.
+XXXRC TO COLLABORATORS: 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+This section is not yet really begun.
  This is potentially a huge issue.
  I think the only correct response is to lock in to each individual switch
  of the attractor.
@@ -9489,25 +9494,77 @@ XXXRC TO COLLABORATORS: This section is not yet really begun.
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Look at 3169lags.
  On long runs, the difference between sample rate and attractor rate matters.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 No easy answer here? May have to continuously resync to edges? Tricky.
  No synchronous timing signal makes it harder.
  have to believe the clocks?
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Square wave in 3169 is locked to the clock, not to samples.
  Drift is ~60 degrees in phase through the whole 300,000
 \begin_inset space ~
 \end_inset
 
 s run.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+With three data acquisition computers running simultaneously, relative timing
+ is important.
+ As designed, the three computers would resynchronize their clocks with
+ an external reference every 3141 seconds.
+ The computer clocks' relative drift rates are better than 10
+\begin_inset space ~
+\end_inset
+
+s/day, so continuous resynchronization would yield overall synchronization
+ at better than the 1
+\begin_inset space ~
+\end_inset
+
+s level at all times.
  
+\end_layout
+
+\begin_layout Standard
+In practice, it was observed that the resynchronization system would fail
+ intermittently, making a hand accounting of known clock changes necessary.
+ In runs where the attractor touches the foil, we have synchronous signals
+ in all three computers, allowing some cross-checking of the accounting.
+\end_layout
+
+\begin_layout Standard
+Further complicating the synchronization effort is the fact that for the
+ torsion-balance and attractor computers, the data-acquisition system sample
+ rate is controlled by the data-acquisition card's clock, and not the computer
+ clock.
+ Furthermore, the attractor and torsion-balance DAQ system sample rates
+ are different at the 
+\begin_inset Formula $\sim0.1\%$
+\end_inset
+
+ level
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMI bound me
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
