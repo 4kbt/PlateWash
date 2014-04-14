@@ -9540,8 +9540,8 @@ s level at all times.
 \begin_layout Standard
 In practice, it was observed that the resynchronization system would fail
  intermittently, making a hand accounting of known clock changes necessary.
- In runs where the attractor touches the foil, we have synchronous signals
- in all three computers, allowing some cross-checking of the accounting.
+ In the two runs where the attractor touches the foil, we have synchronous
+ signals in all three computers, allowing some cross-checking of the accounting.
 \end_layout
 
 \begin_layout Standard
@@ -9565,6 +9565,18 @@ XXXMI bound me
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+3157, 3149, 
+\end_layout
+
+\begin_layout Standard
+Clock rolls
+\end_layout
+
+\begin_layout Standard
+Run-distribution plot?
 \end_layout
 
 \begin_layout Subsection
