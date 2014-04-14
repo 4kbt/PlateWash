@@ -20,14 +20,23 @@ try
 	%Analyze!
 	sm3squareA
 
+	runName = num2str(nameCtr);
+
+	if( 0 == FAKING_THE_INTERFEROMETER_ENTIRELY)
+		runName = [runName 'i'];
+	end
+	
+	eval(['save "results/run' runName 'correl.dat" correl']);
+
+
 	%Save blinded results
-	eval(['save "results/run' num2str(nameCtr) 'pM3Filter.dat" pM sizes times']);
-	eval(['save "results/run' num2str(nameCtr) 'pM3FilterOnly.dat" pM']);
+	eval(['save "results/run' runName 'pM3Filter.dat" pM sizes times']);
+	eval(['save "results/run' runName 'pM3FilterOnly.dat" pM']);
 
 	%Save unblinded results
 	pM = pMU; 
-	eval(['save "alwaysUnblindedResults/run' num2str(nameCtr) 'pM3Filter.dat" pM sizes times']);
-	eval(['save "alwaysUnblindedResults/run' num2str(nameCtr) 'pM3FilterOnly.dat" pM']);
+	eval(['save "alwaysUnblindedResults/run' runName 'pM3Filter.dat" pM sizes times']);
+	eval(['save "alwaysUnblindedResults/run' runName 'pM3FilterOnly.dat" pM']);
 	clear pM;
 
 catch
