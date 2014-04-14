@@ -1,4 +1,4 @@
-iclude ../Makefile.inc
+include ../Makefile.inc
 
 all: results/run3147pM3FilterMerge.dat results/run3147pM3iFilterMerge.dat
 	$(MAKE) $(PARALLEL) -C supportingPlots
