@@ -17,25 +17,8 @@ slopeOut = [];
 %Load analyzed torque data
 pM = load([HOMEDIR 'runAnalysis/results/run3147pM3FilterMerge.dat']);
 
-%Inject random data to preserve the blind. 
-if( max(abs(pM(:,torqueCol)) == 0) )
-	if( exist('unBlind') & unBlind == 0)
-		pM(:,torqueCol) = randn(rows(pM),1).*pM(:,torerrCol);
-	else
-		error('blind persists, but blind should not persist');
-	end
-else
-%Interlock to prevent unblinding
-	if( exist('unBlind') & unBlind == 0)
-		if(fakeTheData == 0)
-			error('Blind VIOLATED! WTF, MATE? This error should never happen');
-		end
-	else
-		'Torque column is unblinded. Are you ready for this?'
-			pause 
-	end
-end
-
+%Script to verify proper blinding.
+CheckImposeBlind
 
 %Calibrate distance
 pM(:,aCol) = (touch2937 - polyval(pressEncP, pM(:,aCol)) ) * 1e-6;
