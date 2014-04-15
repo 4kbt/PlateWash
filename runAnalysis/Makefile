@@ -42,13 +42,13 @@ ISUFFIX  := iFilter.dat
 #Throwaway variables to make external shell commands prior to parsing the subMake.inc file
 ithrowaway1 := $(shell $(HOMEDIR)/bin/genTargets.sh $(IRUNSTOBEANALYZED) $(IRUNLIST) )
 #No dollar-sign on analysisdeps for a reason, see script
-ithrowaway2 := $(shell $(HOMEDIR)/bin/makeMake.sh $(IRUNLIST) $(ISUBMAKE) $(IDEPFILE) $(ISUFFIX) analyzeRun.m ANALYSISDEPS results/run)
+ithrowaway2 := $(shell $(HOMEDIR)/bin/makeMake.sh $(IRUNLIST) $(ISUBMAKE) $(IDEPFILE) $(ISUFFIX) ianalyzeRun.m ANALYSISDEPS results/run)
 
 #include all the actual targets
 include $(ISUBMAKE) 
 
 #this variable contains the name of every analysis file to be built.
-IDEPLIST = $(shell cat $(DEPFILE))
+IDEPLIST = $(shell cat $(IDEPFILE))
 
 #Test target to ensure things are working correctly.
 ilistRuns : 
@@ -60,8 +60,8 @@ ilistRuns :
 
 
 #PW analysis
-results/run3147pM3FilterMerge.dat : $(DEPLIST) pLDAFiltermerge.sh $(HOMEDIR)/bin/makeMake.sh $(HOMEDIR)/extracted/*.tex
-	./pLDAFiltermerge.sh
+results/run3147pM3FilterMerge.dat : $(DEPLIST) pLDAFilterMerge.sh $(HOMEDIR)/bin/makeMake.sh $(HOMEDIR)/extracted/*.tex
+	./pLDAFilterMerge.sh
 	wc -l results/run3147pM3FilterMerge.dat | awk '{print $$1}' > ../extracted/numberOfCuts.tex
 	$(OCT) --eval "run3147FixedParameters"
 	$(HOMEDIR)/bin/mathify.sh $(HOMEDIR)/extracted/*.tex
@@ -73,8 +73,8 @@ results/run3147pM3FilterMerge.dat : $(DEPLIST) pLDAFiltermerge.sh $(HOMEDIR)/bin
 
 
 #IFO Analysis
-results/run3147pM3iFilterMerge.dat : $(IDEPLIST) pLDAiFiltermerge.sh $(HOMEDIR)/bin/makeMake.sh $(HOMEDIR)/extracted/*.tex
-	./pLDAiFiltermerge.sh
+results/run3147pM3iFilterMerge.dat : $(IDEPLIST) pLDAiFilterMerge.sh $(HOMEDIR)/bin/makeMake.sh $(HOMEDIR)/extracted/*.tex
+	./pLDAiFilterMerge.sh
 	wc -l results/run3147pM3iFilterMerge.dat | awk '{print $$1}' > ../extracted/numberOfIFOCuts.tex
 	$(OCT) --eval "run3147FixedParameters"
 	$(HOMEDIR)/bin/mathify.sh $(HOMEDIR)/extracted/*.tex
