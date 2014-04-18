@@ -1,6 +1,9 @@
 'Loading fixed parameters'
 run3147FixedParameters
 
+'calibrating IFO'
+ifoData(:,ifoDataCol) = ( (ifoData(:,ifoDataCol) - IFOFringeBot) / (IFOFringeTop-IFOFringeBot) ) * IFODistPerFringe;
+
 'dynamic configuration begins'
 
 qTesterCalibrationSignal = load([HOMEDIR '/calibration/run3147calFitChkMean.dat']);

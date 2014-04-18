@@ -25,6 +25,8 @@ try
 	%Analyze!
 	sm3squareA
 
+	pM = injectSystematicChannelUncertainties(pM);
+
 	runName = num2str(nameCtr);
 
 	if( 0 == FAKING_THE_INTERFEROMETER_ENTIRELY)

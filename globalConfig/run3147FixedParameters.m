@@ -115,7 +115,8 @@ foilDiameter = 77e-3; printSigNumber(foilDiameter, [HOMEDIR '/extracted/foilDiam
 IFOFringeTop = 3.28;
 IFOFringeBot = 1.639;
 
-IFODistCal = 370e-9/(3.28-1.639);
+IFODistPerFringe = 370e-9
+IFODistCal = IFODistPerFringe/(3.28-1.639);
 
 
 %Systematic uncertainties
@@ -134,4 +135,5 @@ LamLB = 1e-6/XLUnits;
 LamUB = 1e-2/XLUnits;
 SloUB = Inf; %1e-9/XSUnits;
 
-AppliedMagneticFieldUncertainty = 1e-8; %TotalBogus!
+%1e-8 gives beautiful fits, of course.
+AppliedMagneticFieldUncertainty = 1e-3; %TotalBogus!

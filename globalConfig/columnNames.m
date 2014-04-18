@@ -14,16 +14,19 @@ torerrCol = 6*numSensors+torCol;
 
 
 
+ABErrOffset = numSensors*15;
 psTimeCol   = 5 ;
 psSquareCol = 15;
 aCol = numSensors+numPWSensors+psSquareCol;
-aErrCol = aCol + numSensors*15;
+aErrCol = aCol + ABErrOffset;
 bCol = aCol+numSensors;
-bErrCol = bCol + numSensors*15;
+bErrCol = bCol + ABErrOffset;
 
 ifoTimeCol  = 1;
 ifoDataCol  = 2;
-ifopMCol = numPWSensors+numPSSensors+ifoDataCol; 
+ifopMCol = numPWSensors+numPSSensors+ifoDataCol;
+ifoACol = ifopMCol + numSensors;
+ifoBCol = ifopMCol + 2* numSensors;
 
 #Systematics
 magFieldCol         = numPWDAQSensors+1;

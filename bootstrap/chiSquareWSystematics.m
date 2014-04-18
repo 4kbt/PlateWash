@@ -1,4 +1,4 @@
-function X2 = chiSquareWSystematics( pM , x)
+function X2 = chiSquareWSystematics( pM , x, signalColumns)
 	global HOMEDIR
 	columnNames;
 
@@ -29,8 +29,19 @@ function X2 = chiSquareWSystematics( pM , x)
 	sx1Vec = pM(:,aErrCol);
 	sx2Vec = pM(:,bErrCol);
 
-	BMat = [ones(rows(x1Vec),1) pM(:,magFieldACol) pM(:,magField2ACol) ];
-	sBMat =[zeros(rows(x1Vec),1) ones(rows(x1Vec),1)*AppliedMagneticFieldUncertainty, ones(rows(x1Vec),1)*AppliedMagneticFieldUncertainty.^2];
+	%Dynamic allocation of signal and error columns.
+	BMat  = [];
+	sBMat = [];
+	for( sigCtr = 1:rows(signalColumns))
+		if( signalColumns(sigCtr) == 0 )
+
+			BMat  = [ BMat  ones( rows(x1Vec) , 1 ) ];
+			sBMat = [ sBMat zeros(rows(x1Vec) , 1 ) ];
+		else
+			BMat  = [ BMat pM(:, signalColumns(sigCtr)) ];
+			sBMat = [ BMat pM(:, signalColumns(sigCtr) + ABErrOffset) ]; 
+		end
+	end
 
 	[GBV varG] = evalYukawaSystematicAveAndVariance(x1Vec, x2Vec, sx1Vec, sx2Vec, BMat, sBMat, alphas, lambdas, slope, enableSystematics, SysNoX);
 

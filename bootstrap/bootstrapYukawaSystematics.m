@@ -30,7 +30,7 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 	NumIterations = 400; %default 100, but good fits are getting truncated at 200
 
 	%Define fit function
-	cSFunc = @(x) chiSquareWSystematics(pMd, x);
+	cSFunc = @(x) chiSquareWSystematics(pMd, x, [0; magFieldACol; magField2ACol]);
 
 	%Fit begins
 	ranLam = 10.^( rand(NumFitSystematics,1) *3.0-6)/XLUnits;
