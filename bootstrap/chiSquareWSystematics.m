@@ -5,20 +5,25 @@ function X2 = chiSquareWSystematics( pM , x, signalColumns)
 	%Uncomment for diagnostic output
 %	transpose(x)
 
-	if(rows(x) < 3)
+	if(length(x) < 3)
+		size(x)
 		error('insufficient number of arguments in x');
 	end
-	if(mod(rows(x),2) == 0)
+	if(mod(length(x),2) == 0)
 		error('wrong number of arguments to x')
 	end
+	if( rows(x) ~=1 & columns(x) ~=1)
+		error('x is a matrix, should be a vector');
+	end
+
 
 	alphas =[]; lambdas = [];
-	for( rowctr = 2:2:rows(x))
+	for( rowctr = 2:2:length(x))
 		lambdas = [lambdas; x(rowctr)  ];
 		alphas  = [alphas ; x(rowctr+1)];
 	end
 
-	lambdas = lambdas * XLUnits
+	lambdas = lambdas * XLUnits;
 	slope = x(1) * XSUnits;
 	
 	DoNotExtractFixedParameters = 1;
@@ -38,8 +43,8 @@ function X2 = chiSquareWSystematics( pM , x, signalColumns)
 			BMat  = [ BMat  ones( rows(x1Vec) , 1 ) ];
 			sBMat = [ sBMat zeros(rows(x1Vec) , 1 ) ];
 		else
-			BMat  = [ BMat pM(:, signalColumns(sigCtr)) ];
-			sBMat = [ BMat pM(:, signalColumns(sigCtr) + ABErrOffset) ]; 
+			BMat  = [ BMat  pM(:, signalColumns(sigCtr)) ];
+			sBMat = [ sBMat pM(:, signalColumns(sigCtr) + ABErrOffset) ]; 
 		end
 	end
 

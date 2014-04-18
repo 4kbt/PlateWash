@@ -115,7 +115,7 @@ foilDiameter = 77e-3; printSigNumber(foilDiameter, [HOMEDIR '/extracted/foilDiam
 IFOFringeTop = 3.28;
 IFOFringeBot = 1.639;
 
-IFODistPerFringe = 370e-9
+IFODistPerFringe = 370e-9;
 IFODistCal = IFODistPerFringe/(3.28-1.639);
 
 
