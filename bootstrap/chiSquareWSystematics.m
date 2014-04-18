@@ -5,24 +5,21 @@ function X2 = chiSquareWSystematics( pM , x)
 	%Uncomment for diagnostic output
 %	transpose(x)
 
-	C = x(1);
-	L = x(2);
-	A = x(3);
-	BL = x(4);
-	BA = x(5);
-	B2L = x(6);
-	B2A = x(7);
+	if(rows(x) < 3)
+		error('insufficient number of arguments in x');
+	end
+	if(mod(rows(x),2) == 0)
+		error('wrong number of arguments to x')
+	end
 
-%	Nsyst = 3;
-%	prototype = ones (Nsyst,1);
-%	alphas = alphas*prototype;
-%	lambdas = L*prototype;
+	alphas =[]; lambdas = [];
+	for( rowctr = 2:2:rows(x))
+		lambdas = [lambdas; x(rowctr)  ];
+		alphas  = [alphas ; x(rowctr+1)];
+	end
 
-%	alphas = [A; 0 ; 0];
-
-	alphas =  [A; BA; B2A];
-	lambdas = [L; BL; B2L]* XLUnits;
-	slope = C * XSUnits;
+	lambdas = lambdas * XLUnits
+	slope = x(1) * XSUnits;
 	
 	DoNotExtractFixedParameters = 1;
 	run3147FixedParameters;
