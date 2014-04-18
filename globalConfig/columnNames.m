@@ -7,18 +7,23 @@ numPSSensors = 15;
 numIFOSensors = 25;
 numSensors = numPWSensors+numPSSensors+numIFOSensors;
 
-psSquareCol = 15;
-torqueCol   = 16;
-ifoDataCol  = 2;
 pwTimeCol  = 10;
-psTimeCol  = 5 ;
-ifoTimeCol = 1 ;
+torqueCol  = 16;
+torCol = torqueCol;
+torerrCol = 6*numSensors+torCol;
+
+
+
+psTimeCol   = 5 ;
+psSquareCol = 15;
 aCol = numSensors+numPWSensors+psSquareCol;
 aErrCol = aCol + numSensors*15;
 bCol = aCol+numSensors;
 bErrCol = bCol + numSensors*15;
-torCol = torqueCol;
-torerrCol = 6*numSensors+torCol;
+
+ifoTimeCol  = 1;
+ifoDataCol  = 2;
+ifopMCol = numPWSensors+numPSSensors+ifoDataCol; 
 
 #Systematics
 magFieldCol         = numPWDAQSensors+1;
