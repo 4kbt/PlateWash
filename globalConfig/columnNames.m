@@ -31,12 +31,16 @@ ifoBCol = ifopMCol + 2* numSensors;
 #Systematics
 magFieldCol         = numPWDAQSensors+1;
 magFieldACol        = magFieldCol+numSensors;
+magFieldBCol        = magFieldCol+2*numSensors;
 magField2Col        = numPWDAQSensors+2;
 magField2ACol       = magField2Col+numSensors;
+magField2BCol       = magField2Col+2*numSensors;
 temperatureCol      = numPWDAQSensors+3;
 temperatureACol     = temperatureCol+numSensors;
+temperatureBCol     = temperatureCol+2*numSensors;
 tempGradientCol     = numPWDAQSensors+4;
 tempGradientACol    = tempGradientCol+numSensors;
+tempGradientBCol    = tempGradientCol+2*numSensors;
 
 #Chisquared unit conversion factors, not columns, but needed for chisquaredWSystematics.m
 XSUnits = 1e-12;

@@ -1,5 +1,6 @@
 %This function injects uncertainties into the applied-systematic test channels iafter the lockin.
 function pM = injectSystematicChannelUncertainties( pM )
+	global HOMEDIR
 
 	run3147FixedParameters
 
