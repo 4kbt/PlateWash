@@ -2,7 +2,9 @@
 run3147FixedParameters
 
 'calibrating IFO'
-ifoData(:,ifoDataCol) = ( (ifoData(:,ifoDataCol) - IFOFringeBot) / (IFOFringeTop-IFOFringeBot) ) * IFODistPerFringe;
+if( exist('ifoData'))
+	ifoData(:,ifoDataCol) = ( (ifoData(:,ifoDataCol) - IFOFringeBot) / (IFOFringeTop-IFOFringeBot) ) * IFODistPerFringe;
+end
 
 'dynamic configuration begins'
 
