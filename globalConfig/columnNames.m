@@ -6,11 +6,12 @@ numPWSensors = numPWDAQSensors+numSystematics;
 numPSSensors = 15;
 numIFOSensors = 25;
 numSensors = numPWSensors+numPSSensors+numIFOSensors;
+diffErrOffset = 6*numSensors;
 
 pwTimeCol  = 10;
 torqueCol  = 16;
 torCol = torqueCol;
-torerrCol = 6*numSensors+torCol;
+torerrCol = diffErrOffset+torCol;
 
 
 

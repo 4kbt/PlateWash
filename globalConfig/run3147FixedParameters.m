@@ -130,9 +130,9 @@ if(SysNoX == 1)
 	fprintf('Systematics handling by bootstrap');
 end
 
-SysUB = 1e8;
+SysUB = 1e20;
 LamLB = 1e-6/XLUnits;
-LamUB = 1e-2/XLUnits;
+LamUB = 1/XLUnits;
 SloUB = Inf; %1e-9/XSUnits;
 
 %1e-8 gives beautiful fits, of course.

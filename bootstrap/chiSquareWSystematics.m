@@ -1,6 +1,7 @@
-function X2 = chiSquareWSystematics( pM , x, signalColumns)
+function X2 = chiSquareWSystematics( pM , x, signalColumns, fitColumn)
 	global HOMEDIR
 	columnNames;
+	fitErrColumn = diffErrOffset + fitColumn;
 
 	%Uncomment for diagnostic output
 %	transpose(x)
@@ -63,8 +64,8 @@ function X2 = chiSquareWSystematics( pM , x, signalColumns)
 %	hist(log10(abs(pM(:,torerrCol))), 100)
 %	hold off; 
 
-	X2 = sum( (pM(:,torCol) - GBV ).^2  %lqr
-		./(pM(:,torerrCol).^2 +varG )
+	X2 = sum( (pM(:,fitColumn) - GBV ).^2  %lqr
+		./(pM(:,fitErrColumn).^2 +varG )
 		); %sum
 
 %	X2PerNDF = [X2 X2/(rows(pM) - rows(x))]
@@ -76,7 +77,7 @@ function X2 = chiSquareWSystematics( pM , x, signalColumns)
 
 	if(X2 < 0)
 		printf('leasqrDiff, varG, torque^2, varG/torerr^2\n');
-		diag = [(GBV- pM(:,torCol)).^2 varG pM(:,torerrCol).^2  varG ./ pM(:,torerrCol).^2];
+		diag = [(GBV- pM(:,fitColumn)).^2 varG pM(:,fitErrColumn).^2  varG ./ pM(:,fitErrColumn).^2];
 		[max(diag); mean(diag); median(diag); min(diag); std(diag)]
 		transpose(x)
 

@@ -17,6 +17,9 @@ slopeOut = [];
 %Load analyzed torque data
 pM = load([HOMEDIR 'runAnalysis/results/run3147pM3iFilterMerge.dat']);
 
+ifoYukawaFitFlag = 1;
+signalColumns = [0]; 
+
 %Script to verify proper blinding.
 CheckImposeBlind
 

@@ -49,7 +49,7 @@ if( testInjection == 1)
 
 %pause
 	
-	X2Check = chiSquareWSystematics(pM, [ injSlope/XSUnits , lambda/XLUnits, alpha, lambda1/XLUnits, alpha1, lambda2/XLUnits, alpha2], signalColumns)
+	X2Check = chiSquareWSystematics(pM, [ injSlope/XSUnits , lambda/XLUnits, alpha, lambda1/XLUnits, alpha1, lambda2/XLUnits, alpha2], signalColumns, torCol)
 	if(  X2Check > 2* rows(pM))
 		X2PerRows = X2Check/rows(pM)
 		error('chiSquared of the correct fit is too large!')
