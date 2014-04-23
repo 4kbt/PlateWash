@@ -1,0 +1,21 @@
+set term postscript enhanced solid color eps
+set output 'run3077free.eps'
+
+set xlabel 'frequency (Hz)'
+set ylabel 'angle spectral amplitude (nrad/{/Symbol @{\140\140}\326}Hz)'
+
+calFreq = 6e-3
+
+set arrow from calFreq,1 to calFreq,100
+set label "gravitational\ncalibration\ntone" at calFreq,0.5 center front
+
+set arrow from 0.05,10000 to 0.015,10000 
+set label 'pendulum resonance' at 0.15,10000 center front
+
+set title 'free (no feedback) pendulum/autocollimator noise'
+
+set logsc
+set key noauto
+
+pl [][0.001:]\
+	'run3077thetaPSD.dat' u 1:(sqrt($2)*1e9) w l lt 3	
