@@ -25,7 +25,7 @@ aErrCol = aCol + ABErrOffset;
 aMaxCol = aCol + 7*numSensors;
 bCol = aCol+numSensors;
 bErrCol = bCol + ABErrOffset;
-bMaxCol = bCol + 8*numSensors; %yes, aMaxCol++.
+bMaxCol = bCol + 8*numSensors; #yes, aMaxCol++.
 
 
 ifoTimeCol  = 1;

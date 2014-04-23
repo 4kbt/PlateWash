@@ -8,9 +8,9 @@ function rotArray = rotatePMArray(array, angle, rotVec)
 %	## http://www.gamedev.net/reference/articles/article1199.asp
 	c = cos(angle); s = sin(angle); t = 1.0 - c;
 
-	R = \
-	[ t*x*x + c,	t*x*y+s*z,	t*x*z-s*y;\
-	  t*x*y-s*z, 	t*y*y+c,	t*y*z+s*x;\
+	R = ...
+	[ t*x*x + c,	t*x*y+s*z,	t*x*z-s*y;...
+	  t*x*y-s*z, 	t*y*y+c,	t*y*z+s*x;...
 	  t*x*z+s*y,	t*y*z-s*x,	t*z*z+c];
 
 	points = array(:,2:4)';

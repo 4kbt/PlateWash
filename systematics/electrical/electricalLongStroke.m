@@ -1,7 +1,7 @@
 run3147FixedParameters
 
 %run#	resist	bypassCap
-resistorRuns = [\
+resistorRuns = [...
 3167
 ];
 

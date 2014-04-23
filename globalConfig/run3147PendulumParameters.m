@@ -105,7 +105,7 @@ spindlePlateID =        0.375*0.0254;	printSigNumber(spindlePlateID  , [HOMEDIR 
 spindlePlateOD =        3.007*0.0254;	printSigNumber(spindlePlateOD  , [HOMEDIR '/extracted/spindlePlateOD.tex'  ] , 4);
 spindlePlateThickness = 0.250 * 0.0254;	printSigNumber(spindlePlateThickness, [HOMEDIR '/extracted/spindlePlateThickness.tex' ], 3);
 
-spindlePlateSetBack = mspindleTipDistance + mspindleLength; \
+spindlePlateSetBack = mspindleTipDistance + mspindleLength; ...
 					printSigNumber(spindlePlateSetBack  , [HOMEDIR '/extracted/spindlePlateSetBack.tex'   ], 3);
 
 

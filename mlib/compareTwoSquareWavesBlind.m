@@ -48,9 +48,9 @@ aH = aH'; aBins = aBins';
 bH = bH'; bBins = bBins';
 
 %Return the positions of all the differences for future plotability.
-aLockPos = [ a(:, lockCol + ApMPosition * numSensors)  \
+aLockPos = [ a(:, lockCol + ApMPosition * numSensors)  ...
 	     a(:, lockCol + BpMPosition * numSensors) ];
-bLockPos = [ b(:, lockCol + ApMPosition * numSensors)  \
+bLockPos = [ b(:, lockCol + ApMPosition * numSensors)  ...
 	     b(:, lockCol + BpMPosition * numSensors) ];
 
 end
