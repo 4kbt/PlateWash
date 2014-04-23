@@ -1,6 +1,9 @@
 include ../Makefile.inc
 
-all : ifoAR.eps ifoLFSpectrum.eps
+IVCA := ifoVsClosestApproach
+PVT := positionVsTorque
+
+all : ifoAR.eps ifoLFSpectrum.eps $(IVCA).eps $(PVT).eps
 
 
 ANALYSISDEPS :=
@@ -45,7 +48,20 @@ ifoLFSpectrum.eps : ifoLFSpectrum.m ifoLFSpectrum.gpl $(MLIB)
 	$(OCT) ifoLFSpectrum.m
 	$(GNU) ifoLFSpectrum.gpl
 
+
+$(IVCA).dat shortCutPlot.dat ifoTorqueBestFit.dat $(PVT).dat touchingTorques.dat : ../runAnalysis/alwaysUnblindedResults/run3147pM3iFilterMerge.dat ifoTorqueCoupling.m
+	$(OCT) ifoTorqueCoupling.m
+
+$(IVCA).eps: $(IVCA).gpl $(IVCA).dat shortCutPlot.dat
+	$(GNU) $(IVCA).gpl
+
+
+$(PVT).eps : $(PVT).dat ifoTorqueBestFit.dat touchingTorques.dat $(PVT).gpl
+	$(GNU) $(PVT).gpl
+
+
 clean:
 	-rm trim/*
-	-rm ifoAR.eps
+	-rm *.eps
+	-rm $(IVCA).dat shortCutPlot.dat ifoTorqueBestFit.dat $(PVT).dat touchingTorques.dat
 

@@ -12,6 +12,8 @@ pwTimeCol  = 10;
 torqueCol  = 16;
 torCol = torqueCol;
 torerrCol = diffErrOffset+torCol;
+torqueACol = torqueCol + numSensors;
+torqueBCol = torqueCol + 2*numSensors; 
 
 
 
