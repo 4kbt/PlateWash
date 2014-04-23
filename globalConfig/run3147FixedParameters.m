@@ -97,7 +97,7 @@ IFOTouchThreshold = 4e-9;
 %torErrThresh = 1e-14;
 torErrMin    = 1e-18;
 %Used to for artifically increasing noise to provide partial-blindness.
-torqueBlur   = 1e-12;
+torqueBlur   = 1e-12;  printSigNumber(torqueBlur, [HOMEDIR 'extracted/torqueBlur.tex'], 2);
 
 %fprintf('# read Complete \n')
 

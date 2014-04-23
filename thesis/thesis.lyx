@@ -5282,7 +5282,100 @@ name "sub:Pendulum-Foil-coupling"
 \end_layout
 
 \begin_layout Standard
-XXXRC
+The critical foil-motion to pendulum-torque coupling was measured by using
+ those science data where the attractor pressed against the foil.
+ As we know from past experience 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+See XXXMA
+\end_layout
+
+\end_inset
+
+with the interferometer that attractor motion is directly translated into
+ foil motion once the attractor has made full contact with the foil, we
+ can use the attractor position as a proxy for foil motion.
+ In Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Pendulum-Foil-Coupling-Determina"
+
+\end_inset
+
+, we show the absolute torque (no differencing required) measured as a function
+ of attractor position.
+ These data are unblinded, but have been scattered by 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/torqueBlur.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+N-m, approximately 100 times the experiment's maximal per-cut error.
+ The points denoted as 'touching' have a clear signal in the interferometer
+ as having been associated with foil displacement.
+ The best fit of 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/translationTorqueFit.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+N-m/m is bootstrapped from all of the 'touching' points.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../ifo/positionVsTorque.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Pendulum-Foil Coupling Determination
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Pendulum-Foil-Coupling-Determina"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -6411,7 +6504,18 @@ Foil displacement
 Any attractor-correlated displacement of the isolating foil is a cause for
  concern.
  The pendulum interacts electrostatically with the foil with a coupling
- of ~XXXRC N-m/um.
+ of 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/translationTorqueFit.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+N-m/um.
  See 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -6583,7 +6687,14 @@ filename "../extracted/gasFoilDisplacement.tex"
 
 \end_inset
 
- and hence a torque of XXXRC.
+ and hence a torque of 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/gasFoilTorque.tex"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Paragraph
