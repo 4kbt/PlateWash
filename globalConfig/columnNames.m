@@ -15,6 +15,7 @@ torerrCol = diffErrOffset+torCol;
 torqueACol = torqueCol + numSensors;
 torqueBCol = torqueCol + 2*numSensors; 
 
+psdCol = 15; 
 
 
 ABErrOffset = numSensors*15;

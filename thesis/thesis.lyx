@@ -3430,7 +3430,18 @@ filename "../extracted/autocollDynamicRangePeak2PeakmRad.tex"
 \end_inset
 
 mrad) dynamic range in both tip and twist.
- The autocollimator noise gave a sensitivity of XXXRC rad/
+ The autocollimator noise gave a sensitivity of 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/autocolNoise.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+rad/
 \begin_inset Formula $\sqrt{\mbox{Hz}}$
 \end_inset
 
@@ -3494,6 +3505,13 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../autocollimator/run3077free.eps
+	width 50text%
+
+\end_inset
+
 
 \end_layout
 
@@ -5937,8 +5955,22 @@ filename "../extracted/thermalAngleNoise.tex"
 \end_inset
 
 .
- The PlateWash autocollimator's noise floor is approximately XXXRC, as seen
- in Figure 
+ The PlateWash autocollimator's noise floor is approximately 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/autocolNoise.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+rad/
+\begin_inset Formula $\sqrt{\mbox{Hz}}$
+\end_inset
+
+, as seen in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "Autocollimator noise"
