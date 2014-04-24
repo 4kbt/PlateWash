@@ -8080,6 +8080,83 @@ Alignment photos before (left) and after (right) science run.
 
 \end_layout
 
+\begin_layout Subsection
+Attractor-Foil touching
+\end_layout
+
+\begin_layout Standard
+To avoid any systematic effect due to direct attractor-foil touching, it
+ is essential to place a short-distance cutoff on attractor positions.
+ This is done on a per-measurement level.
+ In contrast to all other analysis, the mean cut position is not used; instead,
+ as each cut is an aggregate of individual measurements, the minimum position
+ of individual measurements within a cut, as seen in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Attractor-Foil-touching-determin"
+
+\end_inset
+
+.
+ The minimum-accepted attractor-pendulum separation is chosen conservatively
+ at 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/shortCut.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+m.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../ifo/ifoVsClosestApproach.eps
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Attractor-Foil-touching-determin"
+
+\end_inset
+
+Attractor-Foil touching determination
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Typical Behavior
 \end_layout

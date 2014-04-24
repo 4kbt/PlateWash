@@ -90,7 +90,7 @@ printInteger( 1.0./filterHigh/2, [HOMEDIR 'extracted/filterHighLag.tex']);
 pfTouch =  56+17+ 12+2 ;  %swag
 touch2937 =  147 -2 + pfTouch;
 %Distance cut
-shortCut = (pfTouch+10)*1e-6;
+shortCut = (pfTouch+10)*1e-6; printSigNumber(shortCut, [HOMEDIR 'extracted/shortCut.tex'], 2);
 IFOTouchThreshold = 4e-9;
 
 
