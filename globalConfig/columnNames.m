@@ -32,6 +32,7 @@ bMaxCol = bCol + 8*numSensors; #yes, aMaxCol++.
 ifoTimeCol  = 1;
 ifoDataCol  = 2;
 ifopMCol = numPWSensors+numPSSensors+ifoDataCol;
+ifoErrCol =  ifopMCol+diffErrOffset;
 ifoACol = ifopMCol + numSensors;
 ifoBCol = ifopMCol + 2* numSensors;
 

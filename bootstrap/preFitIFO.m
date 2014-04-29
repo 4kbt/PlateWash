@@ -21,4 +21,13 @@ pM = pM( (pM(:,ifoBCol) > minFringe), : );
 
 distanceCuts
 
-postPreFit
+save 'dataToBeIFOFit.dat' pM
+
+%Sanity check
+if rows(pM) < 2
+        pM
+        error('Insufficient data in pM. Wrong channel? Cut too hard?');
+end
+
+%These are the data which will be fit.
+dBSArchive = [pM(:,aCol) pM(:,bCol) pM(:,ifopMCol) pM(:,ifoErrCol)];
