@@ -21,7 +21,8 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 	if(1 == injectIFOSystematic)
 		%Fake torque
 		outTor = foilTranslationToTorque*fitVectorPolyLinearSpline( [pMd(:,aCol) pMd(:,bCol)], ifoP(bootStrapCounter,:), ifoV(bootStrapCounter, : ) );
-		pMd(:,torCol) = pMd(:,torCol) + outTor;
+		%Have to _subtract_ the systematic ;).
+		pMd(:,torCol) = pMd(:,torCol) - outTor;
 	end
 
 	if(SysNoX == 1)
