@@ -46,3 +46,6 @@ bestTouchFit = [touchingTorques(:, 1 ), touchingTorques(:,1) * m(1) + m(2)];
 save 'ifoTorqueBestFit.dat' bestTouchFit
 
 printSigError( m(1), s(1), '../extracted/translationTorqueFit.tex');
+
+foilTranslationToTorque = m;
+save 'foilTranslationToTorque.dat' foilTranslationToTorque

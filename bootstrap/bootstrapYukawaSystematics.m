@@ -1,6 +1,15 @@
 pause = 0;
 more off 
 
+if (1 == injectIFOSystematic)
+	%Update me!
+	load( [HOMEDIR '/ifo/foilTranslationToTorque.dat']);
+
+        %Load bootstrapped IFO
+	[ifoP ifoV] = loadBSFits( 'output/bootstrapArbFit.bootstrappedFits.dat');
+end
+
+
 %Bootstrap loop
 for bootStrapCounter = 1:NumberOfYukawaBootstraps
 
@@ -8,6 +17,13 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 
 	%Bootstrapping
 	pMd = bootstrapData(pM);
+
+	if(1 == injectIFOSystematic)
+		%Fake torque
+		outTor = foilTranslationToTorque*fitVectorPolyLinearSpline( [pMd(:,aCol) pMd(:,bCol)], ifoP(bootStrapCounter,:), ifoV(bootStrapCounter, : ) );
+		pMd(:,torCol) = pMd(:,torCol) + outTor;
+	end
+
 	if(SysNoX == 1)
 		%Fuzz x errorbars
 		pMd(:,aCol) = pMd(:,aCol) + randn(rows(pMd),1) .* pMd(:,aErrCol);

@@ -25,7 +25,7 @@ set logsc x
 set logsc y
 
 chiCut = 2 #1.6 
-chiMin  = 0.75 
+#chiMin  = 0.75 
 #chiCut = 1.6e10 
 chiMin  = 0.75e-10
 

@@ -6,5 +6,4 @@ function [pos val] = loadBSFits( filename );
 
 	pos = d(:, 1:(c/2));
 	val = d(:, (c/2+1):end);
-
 end

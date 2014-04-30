@@ -1,6 +1,6 @@
 include ../Makefile.inc
 
-PREREQUISITES =  *.m $(HOMEDIR)/calibration/pressure/run2937pressEncOutput.dat $(MLIB) $(HOMEDIR)/runAnalysis/results/run3147pM3FilterMerge.dat
+PREREQUISITES =  *.m $(HOMEDIR)/calibration/pressure/run2937pressEncOutput.dat $(MLIB) $(HOMEDIR)/runAnalysis/results/run3147pM3FilterMerge.dat $(HOMEDIR)/ifo/
 
 FITA:=--eval 'alpha = 100;  lambda = 200e-6; injSlope =  5e-11;'
 FITB:=--eval 'alpha = 0;    lambda = 200e-6; injSlope = -4e-12;'
