@@ -2,6 +2,8 @@ include ../Makefile.inc
 
 PREREQUISITES =  *.m $(HOMEDIR)/calibration/pressure/run2937pressEncOutput.dat $(MLIB) $(HOMEDIR)/runAnalysis/results/run3147pM3FilterMerge.dat $(HOMEDIR)/ifo/
 
+IFOOUT:=output/bootstrapArbFit.bootstrappedFits.dat
+
 FITA:=--eval 'alpha = 100;  lambda = 200e-6; injSlope =  5e-11;'
 FITB:=--eval 'alpha = 0;    lambda = 200e-6; injSlope = -4e-12;'
 FITC:=--eval 'alpha = -100; lambda = 200e-6; injSlope =  6e-12;'
@@ -68,23 +70,23 @@ output/makeSymFigureSystematics.tex: sysTest generatePlottingTeXSystematics.sh o
 	
 
 
-yukSysFitA: $(PREREQUISITES)
+yukSysFitA: $(PREREQUISITES) $(IFOOUT)
 	$(OCT) $(FITSA) yukawaSystematicsWrapper.m
-yukSysFitB: $(PREREQUISITES)
+yukSysFitB: $(PREREQUISITES) $(IFOOUT)
 	$(OCT) $(FITSB) yukawaSystematicsWrapper.m
-yukSysFitC: $(PREREQUISITES)
+yukSysFitC: $(PREREQUISITES) $(IFOOUT)
 	$(OCT) $(FITSC) yukawaSystematicsWrapper.m
-yukSysFitD: $(PREREQUISITES)
+yukSysFitD: $(PREREQUISITES) $(IFOOUT)
 	$(OCT) $(FITSD) yukawaSystematicsWrapper.m
-yukSysFitE: $(PREREQUISITES)
+yukSysFitE: $(PREREQUISITES) $(IFOOUT)
 	$(OCT) $(FITSE) yukawaSystematicsWrapper.m
-yukSysFitF: $(PREREQUISITES)
+yukSysFitF: $(PREREQUISITES) $(IFOOUT)
 	$(OCT) $(FITSF) yukawaSystematicsWrapper.m
-yukSysFitG: $(PREREQUISITES)
+yukSysFitG: $(PREREQUISITES) $(IFOOUT)
 	$(OCT) $(FITSG) yukawaSystematicsWrapper.m
-yukSysFitH: $(PREREQUISITES)
+yukSysFitH: $(PREREQUISITES) $(IFOOUT)
 	$(OCT) $(FITSH) yukawaSystematicsWrapper.m
-yukSysFitI: $(PREREQUISITES)
+yukSysFitI: $(PREREQUISITES) $(IFOOUT)
 	$(OCT) $(FITSI) yukawaSystematicsWrapper.m
 
 arbFit : $(PREREQUISITES)
@@ -103,6 +105,10 @@ arbFitTest : $(PREREQUISITES)
 	$(OCT) $(FITH) arbFitWrapper.m
 	$(OCT) $(FITI) arbFitWrapper.m
 	./arbFitPlots.sh
+
+
+$(IFOOUT) : $(PREREQUISITES)
+	$(OCT) ifoArbWrapper.m
 
 TeXFigure : generatePlottingTeX.sh output
 	./generatePlottingTeX.sh $(HOMEDIR)
