@@ -15,4 +15,16 @@ function pM = injectSystematicChannelUncertainties( pM )
 
 	pM(:, magField2BCol + ABErrOffset) = ...
 	pM(:, magField2ACol + ABErrOffset) ;
+
+	
+	pM(:, temperatureACol + ABErrOffset) = ...
+		ones(rows(pM) , 1) * heaterTemperatureUncertainty ; 
+	pM(:, tempGradientACol + ABErrOffset) = ...
+		ones(rows(pM) , 1) * heaterTempGradientUncertainty ; 
+
+	pM(:, temperatureBCol  + ABErrOffset) = ...
+	pM(:, temperatureACol  + ABErrOffset) ;
+	pM(:, tempGradientBCol + ABErrOffset) = ...
+	pM(:, tempGradientACol + ABErrOffset) ;
+
 end

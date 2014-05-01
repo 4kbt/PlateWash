@@ -4,7 +4,7 @@ prePreFit
 pM = load([HOMEDIR 'runAnalysis/results/run3147pM3FilterMerge.dat']);
 
 %Define which columns have fitted signals
-signalColumns = [0; magFieldACol; magField2ACol];
+signalColumns = [0; magFieldACol; magField2ACol; temperatureACol; tempGradientACol];
 
 %Script to verify proper blinding.
 CheckImposeBlind

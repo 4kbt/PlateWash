@@ -143,3 +143,5 @@ SloUB = Inf; %1e-9/XSUnits;
 
 %1e-8 gives beautiful fits, of course.
 AppliedMagneticFieldUncertainty = 1e-3; %TotalBogus!
+heaterTemperatureUncertainty = 0.020; %TotalBogus!
+heaterTempGradientUncertainty = 0.001; %TotalBogus!
