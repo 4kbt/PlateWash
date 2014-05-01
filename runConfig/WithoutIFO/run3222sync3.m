@@ -1,5 +1,5 @@
-pwrunNumber  = '3216'
-psrunNumber  = '3217';
+pwrunNumber  = '3222'
+psrunNumber  = '3222';
 iforunNumber = '3138';
 
 preSync3
@@ -16,5 +16,4 @@ preSync3
 sync3
 
 pwData(:,temperatureCol) = 0.2;
-pwData(:,tempGradientCol) = 0.05;
-
+pwData(:,tempGradientCol) = -0.05;
