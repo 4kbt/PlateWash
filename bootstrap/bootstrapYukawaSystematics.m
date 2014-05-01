@@ -53,7 +53,13 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 	ranLam = 10.^( rand(NumFitSystematics,1) *3.0-6)/XLUnits;
 	ranAlp = (-1).^(round(rand(NumFitSystematics,1))+1).*10.^(rand(NumFitSystematics,1)*11-5);
 	ranSlo = (rand-0.5)*10e-12/XSUnits;
-	ranSeed = [ ranSlo ranLam(1), ranAlp(1), ranLam(2), ranAlp(2), ranLam(3), ranAlp(3) ];
+
+	%Compose ranSeed
+	ranSeed = [ ranSlo ] 
+	for ranCtr = 1:length(ranLam)
+		ranSeed = [ranSeed ranLam(ranCtr) ranAlp(ranCtr)];
+	end
+	
 	try
 		%When analyzing, make a cut on csMin
 		tic

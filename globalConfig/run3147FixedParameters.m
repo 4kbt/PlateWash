@@ -126,7 +126,7 @@ injectIFOSystematic = 1;
 
 
 %Systematic uncertainties
-NumFitSystematics = 3;
+NumFitSystematics = numSystematics+1;
 enableSystematics = 1;
 if(enableSystematics == 0)
 	fprintf('Systematic uncertainties disabled!');
