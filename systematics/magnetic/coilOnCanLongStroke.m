@@ -14,18 +14,6 @@ clear pM;
 [l0Diff blBins blH b0Bins b0H bLPositions b0Positions] = compareTwoSquareWavesBlind( bL,b0, torCol, torerrCol, torErrMin, numPWSensors + psSquareCol, numSensors, 1, 2);
 
 
-%Output...
+strokeType = 'long';
 
-%filePath = [HOMEDIR 'extracted/'];
-filePath = ['extracted/'];
-
-printSigError( l0Diff(1), l0Diff(2) , [filePath 'longStrokeL0Diff.tex']);
-
-olHist = [blBins blH];
-o0Hist = [b0Bins b0H];
-
-save 'plots/longStrokeolHist.dat' olHist
-save 'plots/longStrokeo0Hist.dat' o0Hist
-
-save 'plots/longStrokeo0Positions.dat' b0Positions
-save 'plots/longStrokeoLPositions.dat' bLPositions
+blindSystematicCore
