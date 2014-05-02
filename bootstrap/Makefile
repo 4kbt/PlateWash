@@ -63,7 +63,7 @@ yukawaFitTest : $(PREREQUISITES)
 	$(MAKE) TeXFigure
 
 sysTest : yukSysFitA yukSysFitB yukSysFitC yukSysFitD yukSysFitE  yukSysFitF yukSysFitG yukSysFitH yukSysFitI yukawaSystematicsPlots.sh
-	./yukawaSystematicsPlots.sh
+	./yukawaSystematicsPlots.sh $(HOMEDIR)
 	
 output/makeSymFigureSystematics.tex: sysTest generatePlottingTeXSystematics.sh output
 	./generatePlottingTeXSystematics.sh $(HOMEDIR)

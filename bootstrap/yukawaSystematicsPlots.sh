@@ -4,6 +4,6 @@ for  PLOTME in `ls output/bootstrapYukawa.Sys*.dat`
 do
 	echo $PLOTME
 	export GNUPLOTME=$PLOTME
-	gnuplot yukawaSystematicsPlots.gpl
+	gnuplot -e "HOMEDIR = \"$1\"" yukawaSystematicsPlots.gpl
 done
 
