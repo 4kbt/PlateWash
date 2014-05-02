@@ -56,7 +56,7 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 
 	%Compose ranSeed
 	ranSeed = [ ranSlo ] 
-	for ranCtr = 1:length(ranLam)
+	for ranCtr = 1:rows(ranLam)
 		ranSeed = [ranSeed ranLam(ranCtr) ranAlp(ranCtr)];
 	end
 	
