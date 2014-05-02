@@ -26,6 +26,15 @@ if( testInjection == 1)
 	alphasInjected = [alpha alpha1 alpha2];
 	lambdasInjected = [lambda lambda1 lambda2]; 
 
+	%Expand columns
+	if(columns(alphasInjected) < (numSystematics+1) )
+		alphasInjected( 1, (numSystematics+1) ) = 0;
+	end
+	if(columns(lambdasInjected)< (numSystematics+1) )
+		lambdasInjected( 1, (numSystematics+1) ) = 100e-6;
+		lambdasInjected( lambdasInjected == 0 )  = 100e-6;
+	end
+
 	%Make force law
 	yo = yukawaForceLaw(alpha, lambda, 1e-6, 3e-3, 1e-6);
 	yo1 = yukawaForceLaw(alpha1, lambda1, 1e-6, 3e-3, 1e-6);
@@ -48,8 +57,13 @@ if( testInjection == 1)
 %	plot(pM(:,torCol), '.', G,'.');
 
 %pause
+
+	injectedSignalArray = [injSlope/XSUnits];
+	for injCtr = 1:columns(alphasInjected)
+		injectedSignalArray = [ injectedSignalArray lambdasInjected(injCtr)/XLUnits alphasInjected(injCtr) ];
+	end
 	
-	X2Check = chiSquareWSystematics(pM, [ injSlope/XSUnits , lambda/XLUnits, alpha, lambda1/XLUnits, alpha1, lambda2/XLUnits, alpha2], signalColumns, torCol)
+	X2Check = chiSquareWSystematics(pM, injectedSignalArray, signalColumns, torCol)
 	if(  X2Check > 2* rows(pM))
 		X2PerRows = X2Check/rows(pM)
 		error('chiSquared of the correct fit is too large!')
