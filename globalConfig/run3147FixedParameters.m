@@ -103,7 +103,7 @@ torqueBlur   = 1e-12;  printSigNumber(torqueBlur, [HOMEDIR 'extracted/torqueBlur
 %fprintf('# read Complete \n')
 
 %'INSUFFICENT bootstrap counts'
-NumberOfYukawaBootstraps = 100; %was 1000
+NumberOfYukawaBootstraps = 300; %was 1000
 NumberOfArbFitBootstraps = NumberOfYukawaBootstraps; % was 300
 
 foilResonance = 1580;
