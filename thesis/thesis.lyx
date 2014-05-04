@@ -5221,9 +5221,15 @@ Translation stage
 \end_layout
 
 \begin_layout Standard
-With the introduction of the foil-positioning motors (see XXXRC), it was
- necessary to make the interferometer tip directly controllable from outside
- the vacuum vessel.
+With the introduction of the foil-positioning motors (see 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Isolating-Foil"
+
+\end_inset
+
+), it was necessary to allow control of the interferometer tip position
+ from outside the vacuum vessel.
  The interferometer tip was connected to a long flexure lever with a linear
  reduction ratio of ~10:1, shown in Figure 
 \begin_inset CommandInset ref
@@ -5233,10 +5239,9 @@ reference "fig:Interferometer-control-lever"
 \end_inset
 
 .
- Before pumping down, the interferometer was translated as far from the
- foil as it could go.
- After the foil and attractor were aligned, then the interferometer was
- slowly brought toward the foil until fringes were observed.
+ Before pumping down, the fiber tip was translated as far from the foil.
+ After the foil and attractor were aligned, then the fiber tip was slowly
+ brought toward the foil until fringes were observed.
  This must be done with care; going too far will puncture the foil with
  the fiber tip.
  The motorized approach is easier, faster, allows better fringe contrast,
