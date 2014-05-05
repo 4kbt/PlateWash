@@ -7,7 +7,7 @@ if( exist('ifoData'))
 end
 
 'calibrating attractor'
-run2937pressEnc
+pressEncP = getPressEncP(HOMEDIR);
 psData(:,psSquareCol) = (touch2937 - polyval(pressEncP, psData(:,psSquareCol)) )*1e-6;
 
 'dynamic configuration begins'
