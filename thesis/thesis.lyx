@@ -4351,8 +4351,14 @@ On longer timescales, the fluctuation of atmospheric pressure is important.
  the open-loop duty-cycle control of the modulation rides along the carrier
  of atmospheric pressure.
  This effect can be seen in Fig.
- XXXRC, where runs at constant duty cycle fluctuate slightly in absolute
- position.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Attractor-positions-over"
+
+\end_inset
+
+, where runs at constant duty cycle fluctuate slightly in absolute position.
  This effect limited how close we could reliably operate the attractor to
  the foil over long periods of time with a simple control strategy; if the
  attractor hits the foil, at least an hour of data are lost (see 
@@ -9454,6 +9460,54 @@ By choosing the angle signal instead of the feedback signal as the science
  Furthermore, as the feedback signal is the sum of the P and the derived
  D terms, there's less opportunity for an error to enter into the science
  signal if the measured angle is used alone.
+\end_layout
+
+\begin_layout Section
+Attractor Positions
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../runAnalysis/supportingPlots/run3147AttractorOverTime.eps
+	width 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Attractor-positions-over"
+
+\end_inset
+
+Attractor positions over the duration of the experiment
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter

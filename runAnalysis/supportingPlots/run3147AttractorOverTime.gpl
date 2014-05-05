@@ -7,11 +7,12 @@ load HOMEDIR."glib/gnuplotColumns.gpl"
 fn = '../results/run3147pM3FilterMerge.dat'
 
 set xlabel 'time (d)'
-set ylabel 'pendulum-attractor separation ({/Symbol m}m))'
+set ylabel 'pendulum-attractor separation ({/Symbol m}m)'
+set key below
 
 set key noauto
 set title 'attractor position over time'
 
 pl \
-	fn u (column(pwTimeCol + numSensors)/86400):(column(aCol)) w p pt 7 lt 1 ps 0.5 tit "A Position",\
-	fn u (column(pwTimeCol + numSensors)/86400):(column(bCol)) w p pt 7 lt 3 ps 0.5 tit "B Position"
+	fn u (column(pwTimeCol + numSensors)/86400):(column(aCol)*1e6) w p pt 7 lt 1 ps 0.5 tit "A Position",\
+	fn u (column(pwTimeCol + numSensors)/86400):(column(bCol)*1e6) w p pt 7 lt 3 ps 0.5 tit "B Position"
