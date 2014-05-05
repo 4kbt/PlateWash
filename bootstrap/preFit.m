@@ -9,8 +9,6 @@ signalColumns = [0; magFieldACol; magField2ACol; temperatureACol; tempGradientAC
 %Script to verify proper blinding.
 CheckImposeBlind
 
-calibrateDistance
-
 %Minimum noise threshold (yes, will be repeated)
 pM = pM( (pM(:,torerrCol)   > torErrMin),:);
 

@@ -2,8 +2,6 @@ run3147FixedParameters
 
 pM = load('../runAnalysis/alwaysUnblindedResults/run3147pM3iFilterMerge.dat');
 
-calibrateDistance
-
 blurTorque
 
 plot(pM(:,aCol), pM(:,torqueACol),'.', pM(:,bCol), pM(:,torqueBCol),'.')
