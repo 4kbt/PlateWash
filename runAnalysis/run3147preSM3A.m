@@ -1,6 +1,12 @@
 'Loading fixed parameters'
 run3147FixedParameters
 
+'generating filter windows'
+%order is important here, in order to ensure supportingplots/run3147filter stuff gets access to fTorque
+%units are in units of the Nyquist Frequency (but not in radians?)
+fTorque  = fir1(Nfilt, (  [filterLow,qTesterFreq1-qTesterWidth1,qTesterFreq1+qTesterWidth1,qTesterFreq-qTesterWidth,qTesterFreq+qTesterWidth,filterHigh]/NyquistFrequency ));
+fSensors = fir1(Nfilt, [filterSensorHigh/NyquistFrequency] );
+
 'calibrating IFO'
 if( exist('ifoData'))
 	ifoData(:,ifoDataCol) = ( (ifoData(:,ifoDataCol) - IFOFringeBot) / (IFOFringeTop-IFOFringeBot) ) * IFODistPerFringe;
@@ -31,9 +37,7 @@ if( fakeTheData == 1)
 
 end
 
-%units are in units of the Nyquist Frequency (but not in radians?)
-fTorque  = fir1(Nfilt, (  [filterLow,qTesterFreq1-qTesterWidth1,qTesterFreq1+qTesterWidth1,qTesterFreq-qTesterWidth,qTesterFreq+qTesterWidth,filterHigh]/NyquistFrequency ));
-fSensors = fir1(Nfilt, [filterSensorHigh/NyquistFrequency] );
+'filtering data'
 
 pwData(:, torqueCol)   = filter(fTorque , 1 ,pwData(: , torqueCol  ));
 psData(:, psSquareCol) = filter(fSensors, 1 ,psData (:, psSquareCol));
