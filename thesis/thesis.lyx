@@ -4745,8 +4745,8 @@ name "fig:Foil-interferometer-signal-as-fcn-of-pressure-position"
 
 \end_inset
 
-Foil interferometer signal as a function of attractor pressure (top axis)
- and position (bottom axis).
+XXXRC Foil interferometer signal as a function of attractor pressure (top
+ axis) and position (bottom axis).
  
 \end_layout
 
@@ -5434,7 +5434,7 @@ s to another master NTP server in the lab, later changed to a NIST reference.
 \end_layout
 
 \begin_layout Standard
-The synchronization system (Windows Time) would sometimes fail, and not
+The synchronization system (Windows Time) would occasionally fail, and not
  recover 3141
 \begin_inset space ~
 \end_inset
@@ -5469,7 +5469,7 @@ name "sub:Grounding"
 \end_layout
 
 \begin_layout Standard
-Good grounding is absolutely essential to any experiment.
+Good electrical grounding is essential.
  After years of chasing ground loops, we embarked on a grounding purge.
  A large copper plate was screwed to a nearby plywood wall and defined to
  be 
@@ -6356,7 +6356,14 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXXRC
+\align center
+\begin_inset Graphics
+	filename plots/Run1646contactFlat.jpg
+	width 50text%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -6371,7 +6378,12 @@ pendulum battery
 \begin_inset Quotes erd
 \end_inset
 
- 
+, taken with an older pendulum.
+ The plot displays pendulum torque as a function of an applied pendulum-foil
+ voltage.
+ Each set of points is taken at a different pendulum angle.
+ In the absence of a pendulum-battery-like effect, the vertices of the approxima
+te-parabolas should align vertically.
 \end_layout
 
 \end_inset
