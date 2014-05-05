@@ -9,8 +9,6 @@ signalColumns = [0];
 %Script to verify proper blinding.
 CheckImposeBlind
 
-calibrateDistance
-
 %IFO threshold cut
 minFringe = (0.5-sqrt(2)/4 ) * IFODistPerFringe;
 maxFringe = (0.5+sqrt(2)/4 ) * IFODistPerFringe;
