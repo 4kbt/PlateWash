@@ -14,7 +14,7 @@ NOT47:= run3147NoiseOverTime
 AOT47:= run3147AttractorOverTime
 ALB47:= run3147attractorLeakBack
 
-all: $(FFR).eps $(FILT).eps $(WIND).eps $(LAG20).eps $(LAG24).eps $(LAG69).eps $(TOR67).eps $(NOT47).eps $(ALB47).eps $(AOT).eps
+all: $(FFR).eps $(FILT).eps $(WIND).eps $(LAG20).eps $(LAG24).eps $(LAG69).eps $(TOR67).eps $(NOT47).eps $(ALB47).eps $(AOT47).eps
 
 #Filter transfer functions
 $(FFR).eps: $(FFR).m $(FFR).gpl
