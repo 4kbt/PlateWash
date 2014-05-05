@@ -12,16 +12,17 @@ if( exist('ifoData'))
 	ifoData(:,ifoDataCol) = ( (ifoData(:,ifoDataCol) - IFOFringeBot) / (IFOFringeTop-IFOFringeBot) ) * IFODistPerFringe;
 end
 
-'calibrating attractor'
-pressEncP = getPressEncP(HOMEDIR);
-psData(:,psSquareCol) = (touch2937 - polyval(pressEncP, psData(:,psSquareCol)) )*1e-6;
-
 'dynamic configuration begins'
 
 qTesterCalibrationSignal = load([HOMEDIR '/calibration/run3147calFitChkMean.dat']);
 qTesterCalibrationSignal = qTesterCalibrationSignal(1,2);
 
 torqueCal = qTesterTorque / qTesterCalibrationSignal;
+
+'calibrating attractor'
+pressEncP = getPressEncP(HOMEDIR);
+psData(:,psSquareCol) = (touch2937 - polyval(pressEncP, psData(:,psSquareCol)) )*1e-6;
+
 
 if( fakeTheData == 1)
 
