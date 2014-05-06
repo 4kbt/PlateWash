@@ -10251,7 +10251,11 @@ filename "../extracted/filterSensorHigh.tex"
 \end_inset
 
 mHz.
- The pneumatic DAQ filter has a lowpass at 3 s.
+ The pneumatic DAQ filter has a lowpass at 3
+\begin_inset space ~
+\end_inset
+
+s.
  The synchronization uncertainty among the three acquisition computers is
  at most 0.8
 \begin_inset space ~
@@ -10270,7 +10274,11 @@ s.
 \end_inset
 
 s.
- Feedback P-term anti-aliasing (for storage only) 3 s.
+ Feedback P-term anti-aliasing (for storage only) 3
+\begin_inset space ~
+\end_inset
+
+s.
  The acausal torque passband FIR filter 
 \begin_inset CommandInset include
 LatexCommand input
