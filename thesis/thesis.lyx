@@ -9514,24 +9514,6 @@ Attractor positions over the duration of the experiment
 Data Analysis
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMA Calibration stability through the runs.
- What can explain observed calibration variation?
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-XXXRC Systematics on calibration signal.
-\end_layout
-
 \begin_layout Section
 Signal Extraction
 \end_layout
@@ -9764,6 +9746,81 @@ XXXMA include code?
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsubsection
+Calibration Systematics
+\end_layout
+
+\begin_layout Standard
+It is possible that the calibration torque has a non-gravitational component.
+ We do not expect that such an effect is of great concern for this measurement.
+\end_layout
+
+\begin_layout Standard
+As originally-designed, the calibration system had a magnetic-relay 
+\begin_inset Quotes eld
+\end_inset
+
+cycle-mark
+\begin_inset Quotes erd
+\end_inset
+
+, which would allow us to constrain the phase of the rotating attractor's
+ motion.
+ Both because the cycle mark had reliability trouble and because the rotating
+ magnet and associated electrical signals could inject a false signal of
+ its own, the cycle mark system was disabled, and the rotating magnet removed.
+\end_layout
+
+\begin_layout Standard
+The largest possible systematic signals (tilt and direct magnetic coupling
+ to the pendulum magnetic moment) should appear at the rotating attractor's
+ 1-
+\begin_inset Formula $\omega$
+\end_inset
+
+ frequency, not the critical 2-
+\begin_inset Formula $\omega$
+\end_inset
+
+ gravitational signal frequency.
+ While a clear 1-
+\begin_inset Formula $\omega$
+\end_inset
+
+ signal would occasionally appear, it was inconsistent and often absent;
+ the 2-
+\begin_inset Formula $\omega$
+\end_inset
+
+ calibration signal was far more consistent in fractional amplitude (see
+ Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Gravitational-calibration"
+
+\end_inset
+
+).
+ While a 2-
+\begin_inset Formula $\omega$
+\end_inset
+
+ signal is a possibility, perhaps through modulation of the background magnetic
+ field, the acoustic environment (an acoustic modulation was seen in acousticall
+y-driven studies of the foil interferometer), or the thermal environment,
+ any of these effects should be small.
+\end_layout
+
+\begin_layout Standard
+Most-importantly, as this is a null experiment, with no absolute gravitational
+ subtraction required, the calibration line is used primarily to set the
+ torque scale and to show that the torque scale remains approximately stable
+ throughout the experiment.
+ For this reason, systematics on the calibration signal are not of grave
+ concern.
 \end_layout
 
 \begin_layout Subsection
