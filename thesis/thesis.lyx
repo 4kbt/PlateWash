@@ -3063,7 +3063,11 @@ reference "FoilFlatness"
 \end_inset
 
 ).
- We coated the pendulum side of the foil with an optically-thick (~100
+ We coated the pendulum side of the foil with an optically-thick (
+\begin_inset Formula $\sim100$
+\end_inset
+
+
 \begin_inset space ~
 \end_inset
 
