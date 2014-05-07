@@ -2,7 +2,7 @@ include ../../Makefile.inc
 
 PREREQUISITES := $(HOMEDIR)/runAnalysis/results Makefile
 
-all: shortStroke longStroke plots/aveTempPlot.eps
+all: shortStroke longStroke plots/aveTempPlot.eps fftPlots
 	$(MAKE) -C plots
 
 TSHORT := thermalShortStroke.m
@@ -52,9 +52,13 @@ shorR.dat : aveTempData/aveTemp shorR.m
 rotWa.dat : aveTempData/aveTemp rotWa.m
 	$(OCT) rotWa.m
 
-run3218LongRedHigh.dat run3217ShortRedHigh.dat run3222LongBlueHigh.dat run3221ShortBlueHigh.dat:  attr1.dat attr2.dat baseP.dat shorR.dat rotWa.dat tempFFT.m
+FFTPLOTDATA := run3218LongRedHigh.dat run3217ShortRedHigh.dat run3222LongBlueHigh.dat run3221ShortBlueHigh.dat
+
+$(FFTPLOTDATA):  attr1.dat attr2.dat baseP.dat shorR.dat rotWa.dat tempFFT.m
 	$(OCT) tempFFT.m
 
+fftPlots : $(FFTPLOTDATA) makeFFTPlots.gpl
+	$(GNU) makeFFTPlots.gpl
 
 
 clean : 

@@ -1,0 +1,12 @@
+set term postscript enhanced solid color eps
+set output 'plots/'.fn.'.eps'
+
+set xlabel 'frequency (mHz)'
+set ylabel 'temperature spectral amplitude (mK/{/Symbol @{\140\140}\326}Hz)'
+
+set logsc y
+
+pl [3.7: 4.1][0.01:100]  \
+		fn.'.dat'  u ($1*1000):(sqrt($4)*1e3) w l tit 'baseplate',\
+		''	   u ($1*1000):(sqrt($2)*1e3) w l tit 'attractor leg 1',\
+		'' 	   u ($1*1000):(sqrt($3)*1e3) w l tit 'attractor leg 2'
