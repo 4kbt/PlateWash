@@ -8576,8 +8576,48 @@ name "sub:Experimentally-determined-noise"
 \end_layout
 
 \begin_layout Standard
-Emphasize here where the optimal noise is.
- XXXRC
+As can be seen in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Torque-noise,-from"
+
+\end_inset
+
+, the optimal noise is near ~25
+\begin_inset space ~
+\end_inset
+
+mHz, or a 40
+\begin_inset space ~
+\end_inset
+
+s period.
+ As will be seen below, neither the feedback loop nor the attractor drive
+ permit usable operation at such a high frequency.
+ Near the attractor frequency of 
+\begin_inset CommandInset include
+LatexCommand input
+filename "..//extracted/switchFrequency.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Hz, the noise is generally at the level of 
+\begin_inset Formula $2\times10^{-14}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+N-m/
+\begin_inset Formula $\sqrt{\mbox{Hz}}$
+\end_inset
+
+ or better during quiet periods.
 \end_layout
 
 \begin_layout Standard
@@ -8601,7 +8641,15 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Torque noise, from systematic test 3167 with attractor stationary
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Torque-noise,-from"
+
+\end_inset
+
+Experimentally-measured torque noise, from systematic test 3167.
+ Attractor stationary.
+ 
 \end_layout
 
 \end_inset

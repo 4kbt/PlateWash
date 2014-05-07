@@ -40,6 +40,7 @@ testInjection = 1;
 dTime = 55;   printInteger(dTime, [HOMEDIR 'extracted/dTime.tex']);
 pTime = 15;   printInteger(pTime, [HOMEDIR 'extracted/pTime.tex']);
 stepPeriod = 128; printInteger(stepPeriod, [HOMEDIR 'extracted/stepPeriod.tex']);
+printSigNumber(1/(stepPeriod*2), [HOMEDIR 'extracted/switchFrequency.tex'], 4);
 
 weight = 1;
 
