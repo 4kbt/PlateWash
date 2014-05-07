@@ -52,9 +52,9 @@ shorR.dat : aveTempData/aveTemp shorR.m
 rotWa.dat : aveTempData/aveTemp rotWa.m
 	$(OCT) rotWa.m
 
-FFTPLOTDATA := run3218LongRedHigh.dat run3217ShortRedHigh.dat run3222LongBlueHigh.dat run3221ShortBlueHigh.dat
+FFTPLOTDATA := run3218LongRedHigh.dat run3217ShortRedHigh.dat run3222LongBlueHigh.dat run3221ShortBlueHigh.dat  run3206LongNoHigh.dat
 
-$(FFTPLOTDATA):  attr1.dat attr2.dat baseP.dat shorR.dat rotWa.dat tempFFT.m
+$(FFTPLOTDATA):  attr1.dat attr2.dat baseP.dat shorR.dat rotWa.dat tempFFT.m trimAndFFT.m trimAndFFT2.m
 	$(OCT) tempFFT.m
 
 fftPlots : $(FFTPLOTDATA) makeFFTPlots.gpl

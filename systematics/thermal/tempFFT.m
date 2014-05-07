@@ -23,3 +23,9 @@ run3221sync3
 
 trimAndFFT( overlapStartSec , overlapEndSec, 'run3221ShortBlueHigh.dat', ...
 	 attr1, attr2, baseP, shorR, rotWa);
+
+run3206sync3
+
+%Note all-important "2"!
+trimAndFFT2( overlapStartSec , overlapEndSec, 'run3206LongNoHigh.dat', ...
+	 attr1, attr2, baseP, shorR, rotWa);

@@ -17,3 +17,8 @@ set title 'short stroke, blue high'
 fn = 'run3221ShortBlueHigh'
 
 load 'plotFFTGuts.gpl'
+
+set title 'long stroke, none high'
+fn = 'run3206LongNoHigh'
+
+load 'plotFFTGuts.gpl'
