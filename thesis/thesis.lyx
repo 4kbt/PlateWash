@@ -2634,14 +2634,59 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXXRC
+\align center
+\begin_inset Graphics
+	filename Pictures/small/DamperSlugJune102011.jpg
+	width 50page%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Phitop/Damper
+Magnetic damper, June 2011
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Pictures/small/PhitopAndAutocollimatorJanuary212011.jpg
+	width 50page%
+	rotateAngle 270
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Fiber positioning assembly, January 2011 (prior to foil-motor installation):
+ two axis translation, axial rotation through externally-controlled motors.
+ Axial translation by manual release of passive flexure/clamp.
+ Foil-covered autocollimator visible at right.
 \end_layout
 
 \end_inset
@@ -2688,15 +2733,64 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXXRC
+\align center
+\begin_inset Graphics
+	filename Pictures/small/NicerAttractorAndPlatinumPendulumWithoutFoilMay062009.jpg
+	width 50page%
+	rotateAngle 270
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Attractor on spindles with sensors mounted to flexure, preferably with pendulum
- hanging.
+Intermediate-prototype pendulum, attractor, and early feedback electrodes
+ demonstrating attractor/pendulum arrangement without the shielding foil.
+ May, 2009.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Pictures/small/SensorsOnSpindleLegsMay222011.jpg
+	width 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Attractor thermistor and heater glued to attractor spindle at center-left,
+ attractor grounding clip at center-top.
+ White cylinders are Macor isolators for the attractor.
+ Beryllium-copper foil-adjustment springs visible at top, foil-positioning
+ motor screwdriver at bottom left.
+ Over-thick attractor rim visible at center, with six-fold-symmetric screw
+ hole.
 \end_layout
 
 \end_inset
