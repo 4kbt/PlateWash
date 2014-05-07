@@ -1,10 +1,10 @@
 run3147FixedParameters
 
-%Heat On
+%Heat On Red High
 load(strcat( HOMEDIR , 'runAnalysis/alwaysUnblindedResults/run3217pM3FilterOnly.dat'));
 bL = pM;
 
-%Heat On
+%Heat On Blue High
 load(strcat( HOMEDIR , 'runAnalysis/alwaysUnblindedResults/run3221pM3FilterOnly.dat'));
 bR = pM;
 

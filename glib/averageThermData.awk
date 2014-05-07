@@ -20,7 +20,7 @@ BEGIN {
 	total5+=$5;
 	total6+=$6;
 
-	if(lines == 200){
+	if(lines == 4){
 		total1ave=total1/lines;
 		total3ave=total3/lines;
 		total4ave=total4/lines;
