@@ -5459,7 +5459,8 @@ The torsion balance computer used a NI-6259 PCI DAQ card, sampling 32 analog
  Careful attention was paid to the signal grounds.
  When not used in fully-differential mode, the card allows the use of two
  analog-input grounds.
- One was referenced to the photodiode readout, and the second to XXXRC.
+ One was referenced to the photodiode readout, and the second to the grounding
+ block.
  The attractor and interferometer DAQ systems used NI-6211 USB DAQ cards.
 \end_layout
 
