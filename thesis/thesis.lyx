@@ -3013,8 +3013,8 @@ Laser scan of the attractor surface -- installed orientation does not correspond
 Both large faces of the pendulum and the front face of the attractor were
  hand polished to a mirror finish with silicon-carbide and 3M lapping paper
  (aluminum oxide, possibly diamond).
- The pendulum was etched in hydrochloric acid to remove any ferromagnetic
- impurities.
+ The individual components of the pendulum were etched before assembly in
+ hydrochloric acid to remove any ferromagnetic impurities.
  After ultrasonic cleaning and a final rinse in de-ionized water, 31
 \begin_inset space ~
 \end_inset
@@ -5363,6 +5363,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename Pictures/small/InterferometerControlLeverDecember222011.jpg
+	width 50text%
 	rotateAngle 270
 
 \end_inset
