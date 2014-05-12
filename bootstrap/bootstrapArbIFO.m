@@ -83,13 +83,13 @@ for bootStrapCounter = 1:NumberOfArbFitBootstraps
 			error(errstr);
 		end
 
-		if ( 1 == testInjection)
-			outfilename = ['output/bootstrapArbFit.a' num2str(alpha) 'l' num2str(lambda) 'slop' num2str(injSlope) fitAlgorithm '.dat'];
-			save( outfilename, "bootstrapOut", "yo");
-		else
-			outfilename = ['output/bootstrapArbFit.' fitAlgorithm '.dat'];
-			save( outfilename, "bootstrapOut");
-		end
+%		if ( 1 == testInjection)
+%			outfilename = ['output/bootstrapArbFit.a' num2str(alpha) 'l' num2str(lambda) 'slop' num2str(injSlope) fitAlgorithm '.dat'];
+%			save( outfilename, "bootstrapOut", "yo");
+%		else
+%			outfilename = ['output/bootstrapArbFit.' fitAlgorithm '.dat'];
+%			save( outfilename, "bootstrapOut");
+%		end
 
 			outfilename = ['output/bootstrapArbFit.bootstrappedFits.dat'];
 			save( "-ascii", outfilename, "xsO");

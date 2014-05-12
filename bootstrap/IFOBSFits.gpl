@@ -1,0 +1,13 @@
+set term postscript enhanced solid color eps
+set output 'IFOBSFits.eps'
+
+
+set title  'PlateWash foil interferometer signal'
+set xlabel 'attractor-pendulum separation ({/Symbol m}m)'
+set ylabel 'reconstructed interferometer signal (nm)'
+
+pl [:800][-4:4]\
+	for [i=2:1000] \
+		'output/bootstrapArbFit.bootstrappedFits.plottable.dat'\
+			 u ($1*1e6):(column(i)*1e9) w l 
+
