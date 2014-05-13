@@ -5,7 +5,7 @@ function m2 = may14BeamBalance
 	Bar = may14Bar(BarLength);
 	EndMass = may14EndMass;
 
-	EndMass = translatePMArray(EndMass, [BarLength/2, 0,0]);
+	EndMass = translatePMArray(EndMass, [-BarLength/2, 0,0]);
 
 	EndMasses = [ EndMass ; rotatePMArray(EndMass, pi, [0 1 0])];
 

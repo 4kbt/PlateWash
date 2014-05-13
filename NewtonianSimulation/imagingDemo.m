@@ -1,12 +1,13 @@
 more off;
 
-P = [1.8, 1888*0.0254,0*0.0254,5.25*0.0254];
+P = may14BeamBalance
+% [1.8, 1888*0.0254,0*0.0254,5.25*0.0254];
 
 
 t = define3wRevolution;
 
 
-attractors = { "may143w" }
+attractors = { "may142w" }
 
 
 for attrCtr = 1:rows(attractors); 
@@ -25,7 +26,7 @@ for attrCtr = 1:rows(attractors);
 
 		[force(ctr, :) torque(ctr,:)] = pointMatrixGravity(P,At);
 
-%		if (mod(ctr,1000) == 1 )
+%		if (mod(ctr,10) == 1 )
 %			displayPoints(P,At);
 %			pause(0.1);
 %		end
