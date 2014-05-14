@@ -1,6 +1,6 @@
 function m2 = may14BeamBalance
 
-	BarLength = 1;
+	BarLength = 30*0.0254;
 
 	Bar = may14Bar(BarLength);
 	EndMass = may14EndMass;

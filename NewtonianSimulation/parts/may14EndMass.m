@@ -1,9 +1,9 @@
 function m2 = may14EndMass
 
 	OD = 2.5*0.0254;
-	ID = 1.5*0.0254;
+	ID = 1.25*0.0254;
 	Length = 3*0.0254;
-	CavDepth = 1.5*0.0254;
+	CavDepth = 1*0.0254;
 	RadialPoints = 5;
 	AxialPoints = 5;
 
