@@ -1843,6 +1843,14 @@ XXXMA lines don't appear/print well
 
 \end_layout
 
+\begin_layout Subsection
+Implementation
+\end_layout
+
+\begin_layout Standard
+To bridge the gap between the 
+\end_layout
+
 \begin_layout Section
 Expected Signal
 \end_layout
@@ -4013,7 +4021,14 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXXRC
+\align center
+\begin_inset Graphics
+	filename diagrams/pressureDiagram.png
+	width 50text%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -4031,10 +4046,6 @@ Pneumatic Drive System
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -6379,6 +6390,10 @@ While the coupling mechanism to wind is presumably seismic, tilt, gravitational
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -6400,7 +6415,8 @@ Wind and torque noise
 
 \end_layout
 
-\begin_layout Plain Layout
+\end_inset
+
 
 \end_layout
 
@@ -14154,14 +14170,14 @@ name "sec:Testing"
 \end_layout
 
 \begin_layout Standard
-This project has insufficient testing coverage.
- This is under continuous improvement, but our first results must be delivered
- before testing coverage is complete.
- Our most sincere apologies.
+This software project has insufficient testing coverage.
+ This is improving, but our first results must be delivered before testing
+ coverage is complete.
+ Most sincere apologies.
 \end_layout
 
 \begin_layout Standard
-Unit tests are used to verify that each individual library in a project
+Unit tests are used to verify that each individual function in a project
  delivers the expected output.
  If individual program units have failings, it is impossible for an assembly
  of those program units not to contain failures.
