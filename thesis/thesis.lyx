@@ -9697,30 +9697,6 @@ Data Analysis
 \end_layout
 
 \begin_layout Section
-Signal Extraction
-\end_layout
-
-\begin_layout Standard
-This section describes the way in which more than 
-\begin_inset CommandInset include
-LatexCommand input
-filename "../extracted/totalAcceptedSeconds.tex"
-
-\end_inset
-
- seconds of raw data are converted from three independent raw timeseries
- into 
-\begin_inset CommandInset include
-LatexCommand input
-filename "../extracted/numberOfCuts.tex"
-
-\end_inset
-
- 'cuts' for further analysis.
- 
-\end_layout
-
-\begin_layout Subsection
 Torque Calibration
 \end_layout
 
@@ -9930,7 +9906,7 @@ XXXMA include code?
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Calibration Systematics
 \end_layout
 
@@ -10005,7 +9981,7 @@ Most-importantly, as this is a null experiment, with no absolute gravitational
  concern.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Timing
 \end_layout
 
@@ -10109,11 +10085,35 @@ Clock rolls
 Run-distribution plot?
 \end_layout
 
+\begin_layout Section
+Signal Extraction
+\end_layout
+
+\begin_layout Standard
+This section describes the way in which more than 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/totalAcceptedSeconds.tex"
+
+\end_inset
+
+ seconds of raw data are converted from three independent raw timeseries
+ into 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/numberOfCuts.tex"
+
+\end_inset
+
+ 'cuts' for further analysis.
+ 
+\end_layout
+
 \begin_layout Subsection
 Attractor-correlated signal extraction
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Synchronization
 \end_layout
 
@@ -10133,7 +10133,7 @@ s sample interval, so any timing mismatch is at most 1.6 s.
  is copied from the torsion balance data.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Filtering
 \begin_inset CommandInset label
 LatexCommand label
@@ -10345,7 +10345,7 @@ mHz autocollimator noise (pushes to longer length) with the need to reject
  forgiving.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Edge finding
 \end_layout
 
@@ -10388,7 +10388,7 @@ lstparams "caption={findRisingEdge.m},language=Matlab"
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Lags
 \begin_inset CommandInset label
 LatexCommand label
@@ -10605,7 +10605,7 @@ mHz high-pass filter.
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 End-to-End measurement
 \end_layout
 
@@ -10685,7 +10685,7 @@ SM3A is quite different.)
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Delay times
 \end_layout
 
@@ -10743,7 +10743,7 @@ s.
  
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Windowing
 \end_layout
 
@@ -10825,7 +10825,7 @@ reference "fig:Windowing"
 .
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Lock-in
 \end_layout
 
@@ -12538,223 +12538,7 @@ The bootstrap makes comparison with any model straightforward.
  
 \end_layout
 
-\begin_layout Section
-\begin_inset Quotes eld
-\end_inset
-
-Force law
-\begin_inset Quotes erd
-\end_inset
-
- inversion
-\end_layout
-
-\begin_layout Standard
-In addition to extracting model parameters from the data, we can reconstruct
- the function 
-\begin_inset Formula $\tau(d)$
-\end_inset
-
-, the pendulum torque as a function of attractor/pendulum separation.
- The entire data set consists of differential measurements of 
-\begin_inset Formula $\tau(d)$
-\end_inset
-
-, where the attractor measures a 
-\begin_inset Formula $\Delta\tau=\tau(d_{1})-\tau(d_{2})$
-\end_inset
-
-.
- Recovering 
-\begin_inset Formula $\tau(d)$
-\end_inset
-
- is then similar to recovering a function using knowledge of its derivative.
- Just as in indefinite integration, there is a 
-\begin_inset Quotes eld
-\end_inset
-
-
-\begin_inset Formula $+C$
-\end_inset
-
-
-\begin_inset Quotes erd
-\end_inset
-
-, a free constant offset to which the experiment is insensitive.
-\end_layout
-
-\begin_layout Standard
-The method used to recover 
-\begin_inset Formula $\tau(d)$
-\end_inset
-
- is simple -- attempt to find a best-fit function which minimizes the difference
- between the measured torques 
-\begin_inset Formula $\Delta\tau_{meas}$
-\end_inset
-
- and those computed using the fitting function 
-\begin_inset Formula $\Delta\tau_{fit}$
-\end_inset
-
-.
- To provide confidence intervals on the fit parameters, we bootstrap the
- measured data many times; the distribution of the extracted fit parameters
- provides the necessary foundation.
- 
-\end_layout
-
-\begin_layout Standard
-In order to generate results that are independent of any physics-model,
- we choose to fit a piecewise-linear function to the data.
- Each piece is 
-\begin_inset CommandInset include
-LatexCommand input
-filename "../bootstrap/extracted/arbFitx1Spacing.tex"
-
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-m long for 
-\begin_inset Formula $d\in[$
-\end_inset
-
-
-\begin_inset CommandInset include
-LatexCommand input
-filename "../bootstrap/extracted/arbFitx1Start.tex"
-
-\end_inset
-
-
-\begin_inset Formula $\,,\,$
-\end_inset
-
-
-\begin_inset CommandInset include
-LatexCommand input
-filename "../bootstrap/extracted/arbFitx1Stop.tex"
-
-\end_inset
-
-
-\begin_inset Formula $)$
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-m and 
-\begin_inset CommandInset include
-LatexCommand input
-filename "../bootstrap/extracted/arbFitx2Spacing.tex"
-
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-m long for 
-\begin_inset Formula $d\in[$
-\end_inset
-
-
-\begin_inset CommandInset include
-LatexCommand input
-filename "../bootstrap/extracted/arbFitx2Start.tex"
-
-\end_inset
-
-
-\begin_inset Formula $\,,\,$
-\end_inset
-
-
-\begin_inset CommandInset include
-LatexCommand input
-filename "../bootstrap/extracted/arbFitx2Stop.tex"
-
-\end_inset
-
-
-\begin_inset Formula $]$
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-m.
- 
-\end_layout
-
-\begin_layout Section
-Blindness
-\end_layout
-
-\begin_layout Standard
-The most accurate experiments are free of bias.
- It is possible to perform an unbiased experiment without a blind, but it
- is difficult to guarantee that all pre-concieved notions of experimental
- results and implications are suppressed.
- Critics of blind experiments claim that, 
-\begin_inset Quotes eld
-\end_inset
-
-no experiment is truly blind,
-\begin_inset Quotes erd
-\end_inset
-
- in reference to the current reality that experimenters unblind their results
- prior to peer review and submission for publication.
- This is true, but it hides the power of the blind -- forcing complete and
- equal attention to each 
-\emph on
-known
-\emph default
- systematic effect.
- 
-\end_layout
-
-\begin_layout Standard
-PlateWash is not a blind experiment.
- It is a precursor to a blind experiment.
- More than half of the science data were taken without a blind, largely
- because we had not discovered a way to monitor the health of the experiment
- without access to data which included the central values of each measurement.
- In the latter half of science data-taking, it became clear that watching
- the errorbars on each cut was sufficient to ensure data quality.
- In this first iteration of PlateWash, our understanding of the instrument's
- metrology was in continuous refinement, which frustrated any attempt to
- inject a fake signal into the data as they were acquired.
- (Furthermore, the physical separation between pendulum and attractor DAQ
- systems would make doing so extremely difficult).
-\end_layout
-
-\begin_layout Standard
-The analysis proceeded as if it were blind, to demonstrate the suitability
- of the analysis toolchain for a future blind analysis.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMA (need actual procedure followed here).
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
+\begin_layout Subsection
 Goodness-of-fit, 
 \begin_inset Formula $\chi^{2}$
 \end_inset
@@ -12784,7 +12568,7 @@ It is more-reliable to attempt to include poorly-known systematics into
  
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 The fitting plan:
 \end_layout
 
@@ -12896,11 +12680,11 @@ Compute
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Integrals
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Paragraph
 Linear
 \end_layout
 
@@ -12930,7 +12714,7 @@ Linear
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Paragraph
 Quadratic
 \end_layout
 
@@ -13005,7 +12789,7 @@ Using
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Paragraph
 Yukawa - Detwiler observation
 \end_layout
 
@@ -13085,7 +12869,7 @@ Completing the square,
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Paragraph
 Linear Yukawa
 \end_layout
 
@@ -13238,7 +13022,7 @@ status collapsed
  
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Paragraph
 Additive Yukawa
 \end_layout
 
@@ -13272,7 +13056,7 @@ This is just a restatement of Jason's trick, so
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 \begin_inset Formula $\bar{F}$
 \end_inset
 
@@ -13395,7 +13179,7 @@ status collapsed
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 \begin_inset Formula $\sigma_{G}^{2}$
 \end_inset
 
@@ -13916,6 +13700,222 @@ If
 \[
 \sigma_{F_{x}}^{2}=Q^{2}\sum_{i}\alpha_{i}^{2}\lambda_{i}^{4}T(\lambda_{i})^{2}\sigma_{B_{i}}^{2}e^{-2\bar{x}/\lambda_{i}}
 \]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\begin_inset Quotes eld
+\end_inset
+
+Force law
+\begin_inset Quotes erd
+\end_inset
+
+ inversion
+\end_layout
+
+\begin_layout Standard
+In addition to extracting model parameters from the data, we can reconstruct
+ the function 
+\begin_inset Formula $\tau(d)$
+\end_inset
+
+, the pendulum torque as a function of attractor/pendulum separation.
+ The entire data set consists of differential measurements of 
+\begin_inset Formula $\tau(d)$
+\end_inset
+
+, where the attractor measures a 
+\begin_inset Formula $\Delta\tau=\tau(d_{1})-\tau(d_{2})$
+\end_inset
+
+.
+ Recovering 
+\begin_inset Formula $\tau(d)$
+\end_inset
+
+ is then similar to recovering a function using knowledge of its derivative.
+ Just as in indefinite integration, there is a 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $+C$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+, a free constant offset to which the experiment is insensitive.
+\end_layout
+
+\begin_layout Standard
+The method used to recover 
+\begin_inset Formula $\tau(d)$
+\end_inset
+
+ is simple -- attempt to find a best-fit function which minimizes the difference
+ between the measured torques 
+\begin_inset Formula $\Delta\tau_{meas}$
+\end_inset
+
+ and those computed using the fitting function 
+\begin_inset Formula $\Delta\tau_{fit}$
+\end_inset
+
+.
+ To provide confidence intervals on the fit parameters, we bootstrap the
+ measured data many times; the distribution of the extracted fit parameters
+ provides the necessary foundation.
+ 
+\end_layout
+
+\begin_layout Standard
+In order to generate results that are independent of any physics-model,
+ we choose to fit a piecewise-linear function to the data.
+ Each piece is 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../bootstrap/extracted/arbFitx1Spacing.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+m long for 
+\begin_inset Formula $d\in[$
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "../bootstrap/extracted/arbFitx1Start.tex"
+
+\end_inset
+
+
+\begin_inset Formula $\,,\,$
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "../bootstrap/extracted/arbFitx1Stop.tex"
+
+\end_inset
+
+
+\begin_inset Formula $)$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+m and 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../bootstrap/extracted/arbFitx2Spacing.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+m long for 
+\begin_inset Formula $d\in[$
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "../bootstrap/extracted/arbFitx2Start.tex"
+
+\end_inset
+
+
+\begin_inset Formula $\,,\,$
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "../bootstrap/extracted/arbFitx2Stop.tex"
+
+\end_inset
+
+
+\begin_inset Formula $]$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+m.
+ 
+\end_layout
+
+\begin_layout Section
+Blindness
+\end_layout
+
+\begin_layout Standard
+The most accurate experiments are free of bias.
+ It is possible to perform an unbiased experiment without a blind, but it
+ is difficult to guarantee that all pre-concieved notions of experimental
+ results and implications are suppressed.
+ Critics of blind experiments claim that, 
+\begin_inset Quotes eld
+\end_inset
+
+no experiment is truly blind,
+\begin_inset Quotes erd
+\end_inset
+
+ in reference to the current reality that experimenters unblind their results
+ prior to peer review and submission for publication.
+ This is true, but it hides the power of the blind -- forcing complete and
+ equal attention to each 
+\emph on
+known
+\emph default
+ systematic effect.
+ 
+\end_layout
+
+\begin_layout Standard
+PlateWash is not a blind experiment.
+ It is a precursor to a blind experiment.
+ More than half of the science data were taken without a blind, largely
+ because we had not discovered a way to monitor the health of the experiment
+ without access to data which included the central values of each measurement.
+ In the latter half of science data-taking, it became clear that watching
+ the errorbars on each cut was sufficient to ensure data quality.
+ In this first iteration of PlateWash, our understanding of the instrument's
+ metrology was in continuous refinement, which frustrated any attempt to
+ inject a fake signal into the data as they were acquired.
+ (Furthermore, the physical separation between pendulum and attractor DAQ
+ systems would make doing so extremely difficult).
+\end_layout
+
+\begin_layout Standard
+The analysis proceeded as if it were blind, to demonstrate the suitability
+ of the analysis toolchain for a future blind analysis.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMA (need actual procedure followed here).
+\end_layout
 
 \end_inset
 
