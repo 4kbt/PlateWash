@@ -14246,85 +14246,6 @@ Octave has a very handy syntax for integrating unit tests into functions.
 \end_layout
 
 \begin_layout Chapter
-Quantified uncertainties
-\end_layout
-
-\begin_layout Chapter
-Narrative
-\end_layout
-
-\begin_layout Standard
-There is insufficient space and time to recount the entire story associated
- with PlateWash.
- Several investigations germane to the final result are described in this
- chapter.
- A chronological history of the experiment may be found in the CENPA Annual
- Reports 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "CENPA-AR-2007,CENPA-AR-2008,CENPA-AR-2009,CENPA-AR-2010,CENPA-AR-2011,CENPA-AR-2012,CENPA-AR-2013"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Section
-Interferometer
-\end_layout
-
-\begin_layout Standard
-We spent a lot of time trying to figure out how to make do without a measurement
- of the foil position.
- We were never able to find another way.
- 
-\end_layout
-
-\begin_layout Section
-Capacitor Systematic
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Capacitor-Systematic"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename diagrams/CapacitorSystematic.pdf
-	width 50page%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-The Capacitor Systematic schematic
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Chapter
 Newtonian Simulation
 \begin_inset CommandInset label
 LatexCommand label
@@ -15344,10 +15265,6 @@ m stroke range of the attractor.
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -15677,30 +15594,85 @@ m of the attractor and pendulum, computed directly from the laser-microscope
 \end_layout
 
 \begin_layout Chapter
-Results
+Narrative
+\end_layout
+
+\begin_layout Standard
+There is insufficient space and time to recount the entire story associated
+ with PlateWash.
+ Several investigations germane to the final result are described in this
+ chapter.
+ A chronological history of the experiment may be found in the CENPA Annual
+ Reports 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "CENPA-AR-2007,CENPA-AR-2008,CENPA-AR-2009,CENPA-AR-2010,CENPA-AR-2011,CENPA-AR-2012,CENPA-AR-2013"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
-Description of runs
+Interferometer
 \end_layout
 
 \begin_layout Standard
-Attractor overview graphic
-\end_layout
-
-\begin_layout Standard
-Uncertainty overview
-\end_layout
-
-\begin_layout Standard
-Torque central value overview
+We spent a lot of time trying to figure out how to make do without a measurement
+ of the foil position.
+ We were never able to find another way.
+ 
 \end_layout
 
 \begin_layout Section
+Capacitor Systematic
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Capacitor-Systematic"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename diagrams/CapacitorSystematic.pdf
+	width 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+The Capacitor Systematic schematic
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
 Systematic Tests
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Resistor values
 \end_layout
 
@@ -15796,16 +15768,12 @@ Summary of resistor tests
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Magnetism
 \end_layout
 
@@ -15954,10 +15922,6 @@ Long-stroke Magnetic Tests
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -16037,19 +16001,19 @@ filename "../systematics/magnetic/extracted/shortStrokeR0Diff.tex"
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Perpendicular horizontal
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Perpendicular vertical
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Perpendicular parallel
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Attractor Bias
 \end_layout
 
@@ -16068,7 +16032,7 @@ V through a resistor, and the experiment was operated with a random stroke
 N-m and ld
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Temperature
 \end_layout
 
@@ -16133,7 +16097,7 @@ Short-stroke Thermal Tests
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Temperature gradient
 \end_layout
 
@@ -16292,16 +16256,12 @@ Rot-Wash
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Temperature variation at attractor frequency
 \end_layout
 
@@ -16386,16 +16346,12 @@ Temperature variation at attractor frequency
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Interferometer spot-heating
 \end_layout
 
@@ -16431,7 +16387,7 @@ m wavelength, copper is more than 95% reflective.
 XXXRC
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Electrical Crosstalk
 \begin_inset CommandInset label
 LatexCommand label
@@ -16471,6 +16427,26 @@ filename "../systematics/electrical/extracted/longStrokeL0Diff3167.tex"
 N-m.
 \end_layout
 
+\begin_layout Chapter
+Results
+\end_layout
+
+\begin_layout Section
+Description of runs
+\end_layout
+
+\begin_layout Standard
+Attractor overview graphic
+\end_layout
+
+\begin_layout Standard
+Uncertainty overview
+\end_layout
+
+\begin_layout Standard
+Torque central value overview
+\end_layout
+
 \begin_layout Section
 Raw data
 \end_layout
@@ -16489,6 +16465,10 @@ Force Law
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+Confidence intervals
 \end_layout
 
 \begin_layout Section
