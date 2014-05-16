@@ -8322,6 +8322,10 @@ Flexure motion
 Operation
 \end_layout
 
+\begin_layout Standard
+An introduction to the chapter goes here XXXRC.
+\end_layout
+
 \begin_layout Section
 Frequency
 \end_layout
@@ -9632,6 +9636,14 @@ By choosing the angle signal instead of the feedback signal as the science
  signal if the measured angle is used alone.
 \end_layout
 
+\begin_layout Subsection
+Cuts per block? XXXRC
+\end_layout
+
+\begin_layout Section
+Measurement scheme description XXXRC
+\end_layout
+
 \begin_layout Section
 Attractor Positions
 \end_layout
@@ -9671,13 +9683,13 @@ Attractor positions over the duration of the experiment
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+Campaign description XXXRC
 \end_layout
 
 \begin_layout Chapter
