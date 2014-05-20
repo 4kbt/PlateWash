@@ -1851,8 +1851,147 @@ Implementation
 Before launching into the full description of the method and apparatus,
  a qualitative description is appropriate.
  A more-accurate diagram of the apparatus is shown in Fig.
- XXXRC.
- The 
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Experimental-implementation-sche"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename diagrams/experimentDiagram5j.eps
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Experimental-implementation-sche"
+
+\end_inset
+
+Experimental implementation schematic.
+ The only not-to-scale dimensions are the pendulum-foil separation and the
+ attractor-foil separation; they are smaller in reality.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Throughout this thesis the moving-sheet field mass will be referred to as
+ the 
+\begin_inset Quotes eld
+\end_inset
+
+attractor
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+The first line of defense against any non-gravitational interaction between
+ the attractor and the pendulum is a tightly-stretched metal foil.
+ It acts as a Faraday shield against electrostatic interaction, blocks all
+ electromagnetic interaction at frequencies above 
+\begin_inset Formula $\sim30$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+MHz, blocks any residual gas interaction, and provides physical isolation
+ between the attractor and pendulum.
+ 
+\end_layout
+
+\begin_layout Itemize
+The infinite-sheet attractor must become finite; the addition of a rim to
+ the circular attractor can largely cancel the 
+\begin_inset Quotes eld
+\end_inset
+
+non-infinite
+\begin_inset Quotes erd
+\end_inset
+
+ gravitational signal.
+ In this iteration of the experiment, the rim is too-large, leading to a
+ small residual gravitational signal that is very linear in attractor position.
+ 
+\end_layout
+
+\begin_layout Itemize
+The rotation of the pendulum is measured by an autocollimating optical lever;
+ an autocollimator.
+ Typical sensitivities of our group's autocollimators can be as small as
+ fractions of a nanoradian in a second in the millihertz 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "arp2013reference"
+
+\end_inset
+
+, new prototype designs reach tens of picoradians in a second at higher
+ frequencies 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "turner2011picoradian"
+
+\end_inset
+
+.
+ The autocollimator used here can resolve rotations of 
+\begin_inset Formula $\sim30$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+nrad in a second at relevant frequencies.
+\end_layout
+
+\begin_layout Itemize
+The pendulum is held in electrostatic feedback: the electrostatic interactions
+ between the pendulum and the foil are far stronger than the torsion-fiber's
+ stiffness, making feedback a necessity.
+ The torque signal is extracted from the feedback loop, with continuous
+ gravitational calibration.
+\end_layout
+
+\begin_layout Itemize
+XXXRC more?
 \end_layout
 
 \begin_layout Section
@@ -3462,6 +3601,14 @@ filename "../extracted/foilTension.tex"
 
 N/m.
  
+\end_layout
+
+\begin_layout Subsubsection
+Foil-stretcher design
+\end_layout
+
+\begin_layout Standard
+XXXRC
 \end_layout
 
 \begin_layout Subsection
