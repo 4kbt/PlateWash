@@ -1991,7 +1991,53 @@ The pendulum is held in electrostatic feedback: the electrostatic interactions
 \end_layout
 
 \begin_layout Itemize
-XXXRC more?
+The attractor is moved toward and away from the pendulum in a square-wave
+ pattern to avoid any velocity-dependent systematic effects.
+ Groups of ten changes in position are lumped into a 
+\begin_inset Quotes eld
+\end_inset
+
+cut
+\begin_inset Quotes erd
+\end_inset
+
+ and used for further analysis.
+ The experiment was operated with both per-cut randomized start/stop locations
+ and continuous square-wave motion.
+\end_layout
+
+\begin_layout Itemize
+Great attention was paid to systematic effects.
+ As any foil motion could lead to a parasitic signal, a Fizeau fiber interferome
+ter was built to monitor the foil position.
+ We believe that this is the first inverse-square-law measurement to have
+ a dedicated foil monitor.
+\end_layout
+
+\begin_layout Itemize
+For the primary goal of constraining Yukawa-like violations of the inverse
+ square law, the data analysis makes a conservative choice to treat all
+ systematic effects as Yukawa interactions, with independent interaction
+ strengths and associated lengthscales.
+ 
+\end_layout
+
+\begin_layout Itemize
+While the measurement was begun before blinding, the experimental analysis
+ has been performed blind.
+ Early in the process of developing the analysis, the true experimental
+ results were accidentally viewed twice.
+ Thus, the experiment cannot be regarded as truly blind, but it points the
+ way to a future measurement.
+ 
+\end_layout
+
+\begin_layout Itemize
+In order to facilitate the unblinding of this complex analysis, and to guarantee
+ future reproducibility, the entire analysis and the creation of this document
+ is entirely automated.
+ A collection of free software, the git repository, and the experimental
+ data are all that are required to re-generate this result.
 \end_layout
 
 \begin_layout Section
