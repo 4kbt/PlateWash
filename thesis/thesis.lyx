@@ -3654,7 +3654,89 @@ Foil-stretcher design
 \end_layout
 
 \begin_layout Standard
-XXXRC
+The design of the mechanism for stretching foils is important.
+ The foil must be flat and tightly stretched.
+ More recently, it has become clear that the foil surface must be easy to
+ access and clean.
+ In the past, our group has constructed foils by clamping beryllium-copper
+ foils between strong aluminum rings while everything was submerged in liquid
+ nitrogen.
+ Upon warming to room temperature, the differential expansion of the aluminum
+ rings brought the foil to high uniform tension.
+\end_layout
+
+\begin_layout Standard
+The PlateWash foil stretcher is designed to provide good access to the front
+ face of the foil and excellent flatness.
+ It is constructed much like one would make a bongo drum; a clamping ring
+ holds the foil at its perimeter, and a rounded-edge inner 
+\begin_inset Quotes eld
+\end_inset
+
+pusher
+\begin_inset Quotes erd
+\end_inset
+
+ that pushes on the back of the foil to bring it up to tension.
+ Key to the success of this design is the rounded edge of the inner pusher.
+ The radius of the edge must be large compared to the foil thickness in
+ order to completely determine the state of the foil at the position of
+ last contact.
+ The radius of the edge should continue well past the point of last contact,
+ to ensure a smooth transition, without any burrs or varying radial position
+ of last contact.
+ Furthermore, after turning, sanding, and polishing on the lathe, the pusher
+ should be gently lapped, just for a moment, on a granite inspection plate
+ to make the final height determination of the point of last contact.
+ 
+\end_layout
+
+\begin_layout Standard
+In order to enable excellent access to the foil face, but preserve uniform
+ tension in the foil, it is essential that the front ring of the foil clamping
+ ring be very thin.
+ In the case of PlateWash, with parallel fiber/foil alignment, the fiber
+ is separated by only a millimeter from the foil face.
+ The front clamping ring is only XXXRC thick.
+ This allows the foil to remain nearly flat when being tensioned, requiring
+ minimum slack in the foil to permit the foil pusher to come into tension
+ while permitting full access to the foil face.
+ In this iteration of the experiment, the front ring does not retreat behind
+ the foil face, requiring a slight deflection of the fiber screw and inclination
+ of the apparatus in order to clear the torsion fiber.
+\end_layout
+
+\begin_layout Standard
+The dimensions of everything in this instrument are partially-set by the
+ availability of thin foils.
+ We were unable to find strong metal foils of thickness 
+\begin_inset Formula $<12$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m in widths larger than 4 inches.
+ This constrains the inner-bore for the foil stretcher, and hence the size
+ of the attractor.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMA Figure.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
