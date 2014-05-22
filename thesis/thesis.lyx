@@ -3314,17 +3314,7 @@ filename "../extracted/foilThickness.tex"
 \begin_inset space ~
 \end_inset
 
-m
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXRC verify thickness
-\end_layout
-
-\end_inset
-
- thick BeCu alloy foil (Micro-Tek, Diamond Bar CA) over the tapered end
+m thick BeCu alloy foil (Micro-Tek, Diamond Bar CA) over the tapered end
  of a 
 \begin_inset CommandInset include
 LatexCommand input

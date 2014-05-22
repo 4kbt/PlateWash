@@ -110,7 +110,9 @@ NumberOfArbFitBootstraps = NumberOfYukawaBootstraps; % was 300
 foilResonance = 1580;
 foilResonanceErr = 5;      printSigError(foilResonance, foilResonanceErr         , [HOMEDIR '/extracted/foilResonance.tex']);
 
-foilThickness = 12e-6; printSigNumber(foilThickness, [HOMEDIR '/extracted/foilThickness.tex'], 2);
+[foilThickness foilThicknessErr foilStd] = getFoilThickness;
+
+printSigError(foilThickness, foilThicknessErr , [HOMEDIR '/extracted/foilThickness.tex']);
 
 foilDensity = 8230; printSigNumber(foilDensity, [HOMEDIR '/extracted/foilDensity.tex'], 2);
 
