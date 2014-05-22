@@ -4265,7 +4265,14 @@ The motion control system has one non-standard property for a precision
  translation stage: it is pneumatically actuated.
  In aggregate, getting this system to work well required many months of
  effort.
- It was worth every day.
+ It was worth every day (see 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Encoder-narrative"
+
+\end_inset
+
+ for motivation).
  A pneumatic actuation system is, by definition, not electrical.
  While the attractor flexure system was designed to accommodate standard
  micrometer actuators, if needed, the actuator is a phosphor-bronze bellows.
@@ -5916,7 +5923,8 @@ M
  The connection from the pneumatic drive to the experiment passed through
  a short section of plastic tubing.
  The foil interferometer readout is, beautifully, entirely optical; the
- nearest electronic components were more than a meter from the apparatus.
+ nearest associated electronic components were more than a meter from the
+ apparatus.
 \end_layout
 
 \begin_layout Standard
@@ -13972,6 +13980,13 @@ If
 \end_layout
 
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Force-law-inversion"
+
+\end_inset
+
+
 \begin_inset Quotes eld
 \end_inset
 
@@ -15889,11 +15904,226 @@ We spent a lot of time trying to figure out how to make do without a measurement
  
 \end_layout
 
+\begin_layout Standard
+For experiments of this type, where the attractor is modulated toward and
+ away from the an isolating foil, estimates of the sensor/foil coupling
+ and the foil motion itself are essential.
+ 
+\end_layout
+
+\begin_layout Section
+Encoder
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Encoder-narrative"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Early in the experiment (2007-8), we uncovered an unexpected systematic
+ effect: The pendulum torque signal was periodic in the attractor stroke,
+ with periodicity of 
+\begin_inset Formula $25$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m.
+ This matches the encoder grating spacing on the Micro-e encoder used to
+ read out the attractor position.
+ We had operated for several months before noticing this effect; it is quite
+ natural when hunting for a signal with typical length 
+\begin_inset Formula $\sim50$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m to use strokes and starting positions in increments of 
+\begin_inset Formula $25$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m.
+ It was only when we tried essentially-random stroke lengths that the prominent
+ effect appeared.
+ Powering-off the attractor encoder eliminated the spatially-periodic torque
+ signal.
+ 
+\end_layout
+
+\begin_layout Standard
+This effect drove us to make two major changes:
+\end_layout
+
+\begin_layout Itemize
+Pneumatic attractor position metrology: This effect made it clear that electrica
+l pickup within the apparatus could become a concern.
+ By moving to the precision pressure gauge as a way of ascertaining the
+ attractor's position, it was possible to do a complete end-to-end test
+ for any electrical pickup associated with the attractor (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Attractor-position-control"
+
+\end_inset
+
+).
+ Once the pressure gauge was shown to be a useable encoder by intercomparison
+ with the position encoder, the position encoder was turned off and disconnected.
+\end_layout
+
+\begin_layout Itemize
+Strong emphasis on random/Monte Carlo-like attractor positioning.
+ For any given lengthscale and interaction type, there is, in general, an
+ optimum square-wave attractor motion to hunt for it.
+ Random positioning helps to elucidate any strange systematic effects, and
+ allows an unbiased search to answer the question 
+\begin_inset Quotes eld
+\end_inset
+
+What is the form of the gravitational force law at short distance
+\begin_inset Quotes erd
+\end_inset
+
+ through the techniques of 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Force-law-inversion"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+What we did not do, and should have, was to hunt down the way by which the
+ encoder signal coupled to the experiment.
+ The encoder operates at internal lock-in frequencies from 1-25
+\begin_inset space ~
+\end_inset
+
+MHz, with delicate grounding requirements.
+ We presume that the cross-coupling was through the autocollimator; exposed
+ and unshielded leads extend for several inches within the vacuum chamber
+ between the autocollimator's position-sensitive photodiode outputs and
+ the high-gain transimpedance preamplifiers.
+ This is a major target for future upgrades of the experiment.
+ It is straightforward to shorten the leads by an order of magnitude and
+ implement full electrical shielding for the photodiode and preamplifiers.
+ 
+\end_layout
+
 \begin_layout Section
 Capacitor Systematic
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:Capacitor-Systematic"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+An important and subtle systematic effect concerns the grounding arrangement
+ for the attractor, foil, and pendulum.
+ A simplified grounding schematic is shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-Capacitor-Systematic"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+It was decided early in the experiment (~2007-8) to ground the pendulum
+ directly to the internal grounding block, giving a clear reference for
+ ground.
+ Furthermore, it was observed early on that the addition of 0.1-10
+\begin_inset space ~
+\end_inset
+
+M
+\begin_inset Formula $\Omega$
+\end_inset
+
+ resistors to the grounding of the attractor and foil gave improved noise
+ and killed off any inexplicable signals we saw.
+ This was very early in our understanding of the instrument; it felt like
+ fine-tuning, but as we frequently run other experiments with 10-100
+\begin_inset space ~
+\end_inset
+
+k
+\begin_inset Formula $\Omega$
+\end_inset
+
+ resistors in series with the torsion fiber to protect it from electric
+ transients and because the equilibration time of even a nanofarad capacitance
+ across a megaohm resistor is 
+\begin_inset Formula $>10^{5}$
+\end_inset
+
+ times shorter than the signal frequency, we left them in and turned to
+ more-pressing concerns.
+\end_layout
+
+\begin_layout Standard
+Later, the sense that we had fine-tuned the apparatus and that at higher
+ frequencies, the foil and attractor were effectively floating crept back
+ in, and we decided that it would be better to bypass the resistors with
+ large capacitors.
+ We made that change and proceeded for years to refine the instrument.
+ 
+\end_layout
+
+\begin_layout Standard
+In 2012, the experiment was not blind, and an apparent inverse-square-law-violat
+ing signal was clearly resolved.
+ The signal was too large to have been an ISL violation, as prior experiments
+ would have trivially resolved it, too.
+ At a suggestion from Krishna Venkteswara, the wires leading to the capacitors
+ were clipped (at the same time we altered the lock-in frequency and, alas,
+ separately disconnected the contact-potential control system), and the
+ signal vanished, dropping into the noise resolvable overnight.
+ In addition, the instrumental performance improved.
+ Re-introducing the capacitors restored the signal, and shorting out the
+ resistor with a wire also yielded a large signal.
+ With no other reason to believe that the experiment had a problem, we began
+ the science run reported here shortly thereafter, with the capacitors removed.
+\end_layout
+
+\begin_layout Standard
+Our systematic tests to show that the science signal appears to be largely
+ independent of the choice of resistor value are described in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Resistor-values"
 
 \end_inset
 
@@ -15920,6 +16150,12 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:The-Capacitor-Systematic"
+
+\end_inset
+
 The Capacitor Systematic schematic
 \end_layout
 
@@ -15933,11 +16169,86 @@ The Capacitor Systematic schematic
 
 \end_layout
 
+\begin_layout Subsection
+Understanding the capacitor systematic
+\end_layout
+
+\begin_layout Standard
+As hinted by Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-Capacitor-Systematic"
+
+\end_inset
+
+, our best understanding is that the movement of the attractor tunes an
+ LCR resonance or resonances inside the experiment.
+ The capacitance between the attractor and foil changes with attractor position,
+ and the inductance of the wires connecting the elements together is sufficient
+ to form an LC resonator.
+ Adding sufficient series resistance to spoil the resonator 
+\begin_inset Formula $Q$
+\end_inset
+
+ will squelch the effect, which we believe the resistor does.
+ Bridging the resistor with a large capacitor provides an alternate path
+ for high-frequency currents, restoring the resonator's 
+\begin_inset Formula $Q$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Identifying the resonance gives us a culprit, but not a mechanism.
+ Our best guess as to how a tunable resonance might influence the torque
+ signal follows similar reasoning as in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Encoder-narrative"
+
+\end_inset
+
+; while the attractor encoder is left unpowered, an encoder monitoring the
+ fiber position perpendicular to the foil is left powered and operating
+ in order to retain datum information.
+ This encoder may be radiating RF power in the ~1-25
+\begin_inset space ~
+\end_inset
+
+MHz realm; easily in range of the expected LC resonant frequencies.
+ If the static encoder's RF signal couples to the autocollimator, and that
+ signal is modulated by the presence of a new resonance in the experimental
+ environment, a false apparent torque could emerge.
+\end_layout
+
+\begin_layout Standard
+In addition, the presence of the foil alllows a second possible, though
+ less likely, coupling mechanism.
+ Any mechanical resonance or displacement that could be driven by an increased
+ effective attractor-foil or pendulum-foil voltage could also appear as
+ a false torque.
+ 
+\end_layout
+
+\begin_layout Standard
+What is certain is that clipping the capacitors out of the system substantially
+ eliminates this systematic.
+ 
+\end_layout
+
 \begin_layout Chapter
 Systematic Tests
 \end_layout
 
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Resistor-values"
+
+\end_inset
+
 Resistor values
 \end_layout
 
@@ -16006,13 +16317,6 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "Resistor Tests"
-
-\end_inset
-
-
 \begin_inset Graphics
 	filename ../systematics/resistor/plots/resistorPlot.eps
 
@@ -16025,6 +16329,12 @@ name "Resistor Tests"
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "Resistor Tests"
+
+\end_inset
+
 Summary of resistor tests
 \end_layout
 
