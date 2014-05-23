@@ -12746,15 +12746,20 @@ The analysis presented here makes extensive use of a statistical method
 \end_layout
 
 \begin_layout Standard
-The resampling scheme used in this analysis was to replace a fraction 
-\begin_inset Formula $1/e$
-\end_inset
-
- of the data points in a data set with others randomly selected from the
- initial data set.
+The resampling scheme used in this analysis was to generate synthetic data
+ sets of the same size as the original set by randomly selecting measurements
+ (there are always duplicate picks, except in the special case where the
+ original data are recovered, out of order) from the initial data set.
  There is a related class of methods called 'the jackknife' that generate
- statistics by considering complete sets of subsets of data.
- 
+ statistics by considering complete sets of subsets of data, perhaps by
+ dividing the initial data into subsets, fitting each subset, and drawing
+ statistics from the fit outputs.
+ The jackknife may more readily accepted by those uncomfortable with the
+ bootstrap; in the case of this measurement, there are too few measurements
+ to allow meaningful statistics to be drawn from the fit outputs.
+ Halving or quartering the dataset could be possible, but cutting it into
+ ten pieces would result in too-little coverage in terms of varied attractor
+ displacements
 \end_layout
 
 \begin_layout Subsection
@@ -12807,8 +12812,14 @@ Model Comparison
 \end_layout
 
 \begin_layout Standard
-The bootstrap makes comparison with any model straightforward.
- 
+The bootstrap makes comparison with any proposed model straightforward.
+ No matter how exotic the fitting function and how sensitive it may be to
+ individual datapoints or non-Gaussianity in the initial data, it is straightfor
+ward to bootstrap the data, fit, bootstrap again, fit, etc...
+ The distribution of fit outcomes can always be studied, and qualitative
+ understanding is immediate.
+ Settling on an algorithm for generating confidence intervals is, however,
+ more difficult, especially in multi-parameter spaces.
 \end_layout
 
 \begin_layout Subsection
