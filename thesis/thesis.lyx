@@ -5448,6 +5448,13 @@ Interferometer signal over the duration of the experiment.
 
 \begin_layout Paragraph
 A conservative approach
+\begin_inset CommandInset label
+LatexCommand label
+name "par:A-conservative-approach"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -12815,6 +12822,13 @@ lstparams "breakatwhitespace=true,breaklines=true,caption={bootstrapData.m},empt
 
 \begin_layout Section
 Model Comparison
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Model-Comparison"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -16334,6 +16348,22 @@ What is certain is that clipping the capacitors out of the system substantially
 Systematic Tests
 \end_layout
 
+\begin_layout Standard
+This chapter describes individual systematic tests to give us an approximate
+ picture of this measurement's systematic susceptibilities.
+ As described in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Model-Comparison"
+
+\end_inset
+
+, the global impact of important systematics on physics results is determined
+ within a single fit.
+ These smaller analyses are more-interpretable and give insight into the
+ outcome of individual systematic tests.
+\end_layout
+
 \begin_layout Section
 \begin_inset CommandInset label
 LatexCommand label
@@ -17092,6 +17122,87 @@ filename "../systematics/electrical/extracted/longStrokeL0Diff3167.tex"
 \end_inset
 
 N-m.
+\end_layout
+
+\begin_layout Chapter
+Foil Systematic
+\end_layout
+
+\begin_layout Standard
+The foil systematic measurement is treated separately from the other systematic
+ uncertainties for three reasons: the analysis is very different, the outcome
+ is important, and, as a signal is clearly resolved, a correction must be
+ made.
+\end_layout
+
+\begin_layout Section
+Data/Fit
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Data/Fit"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We used the foil measurements that were in-range as described in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "par:A-conservative-approach"
+
+\end_inset
+
+.
+ After the lock-in/cut procedure of Chapter XXXRC, the resulting data are
+ plotted in Figure XXXRC.
+ 
+\end_layout
+
+\begin_layout Standard
+Triangle Plot, two views.
+\end_layout
+
+\begin_layout Standard
+As we do not have continuous full-sensitivity coverage of the entire measurement
+ with the interferometer, we must build a model of the foil displacement
+ as a function of attractor position and then apply it (with known uncertainties
+) via the foil-to-torque transfer function XXXRC to generate the foil-related
+ torque-difference expected for attractor-position pair.
+ To be conservative, we use the piecewise-linear technique outlined in XXXRC.
+ To generate an estimate of the uncertainty in the fit, we bootstrap the
+ observed data and generate many fits; the outcome is shown in Figure XXXRC.
+ 
+\end_layout
+
+\begin_layout Section
+Subtraction
+\end_layout
+
+\begin_layout Standard
+Subtracting the foil-related torque is delicate.
+ If we get the sign of the effect wrong, we double the systematic signal
+ instead of subtracting it.
+ For this reason, we will present our final results with the signal subtracted,
+ with no subtraction, and with the signal added, so the importance of the
+ effect will be apparent to the reader.
+ 
+\end_layout
+
+\begin_layout Standard
+Furthermore, we must address the uncertainty in the subtraction.
+ To do so, when bootstrapping the model fit, with each bootstrap, we subtract
+ a different one of the bootstrapped fits from 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Data/Fit"
+
+\end_inset
+
+, thus the scatter in the bootstrapped fits propagates directly into the
+ scatter of our model best-fits.
+ 
 \end_layout
 
 \begin_layout Chapter
