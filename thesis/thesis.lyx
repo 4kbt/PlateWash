@@ -12849,90 +12849,477 @@ It is more-reliable to attempt to include poorly-known systematics into
  This is done here by ascribing a new fictitious force to each systematic,
  parametrized conservatively as a Yukawa torque, with its own strength and
  lengthscale.
- 
+ Furthermore, if we're able to compute 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+ directly, there is a well-accepted approach to the determination of confidence
+ intervals and exclusion limits.
 \end_layout
 
 \begin_layout Subsubsection
-The fitting plan:
+Fitting approach -- first half
 \end_layout
 
 \begin_layout Standard
-XXXRC Horizontal errorbars, variance, why variance fails, fuzzing.
+We proceed down the well-trodden path:
 \end_layout
 
-\begin_layout Standard
-The fitting plan:
+\begin_layout Itemize
+We assume that the torque on the pendulum takes the form 
+\begin_inset Formula 
+\begin{equation}
+F(x,B_{1\dots n}|\alpha_{1\ldots n},\lambda_{1\ldots n})=\pi Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}\left(1-e^{-(t_{p}-t_{i})/\lambda_{i}}\right)\left(1-e^{-t_{a}/\lambda_{i}}\right)\left(1-e^{-t_{i}/\lambda_{i}}\right)e^{-x/\lambda_{i}}+Cx\label{eq:PrototypeFitFunction}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $n=1$
+\end_inset
+
+ is taken to be the gravity/science signal (
+\begin_inset Formula $B_{1}=1$
+\end_inset
+
+, always) and the remaining 
+\begin_inset Formula $B_{i}$
+\end_inset
+
+ correspond to externally-modified systematic parameters, each with associated
+ 
+\begin_inset Formula $\alpha_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda_{i}$
+\end_inset
+
+ .
+ The 
+\begin_inset Formula $Cx$
+\end_inset
+
+ term subsumes 
+\bar under
+all
+\bar default
+ signal that is linear in the attractor stroke.
 \end_layout
 
-\begin_layout Enumerate
-Define a fitting function, 
-\begin_inset Newline newline
+\begin_layout Itemize
+To simplify notation, we subsume the finite-thickness corrections into 
+\begin_inset Formula $T(\lambda_{i})=\rho_{a}\left(1-e^{-(t_{p}-t_{i})/\lambda_{i}}\right)\left(1-e^{-t_{a}/\lambda_{i}}\right)\left(1-e^{-t_{i}/\lambda_{i}}\right)$
+\end_inset
+
+ and constant factors int
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+o 
+\begin_inset Formula $Q=\pi Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)$
+\end_inset
+
+, yielding 
+\begin_inset Formula $F(x,B_{1\dots n}|\alpha_{1\ldots n},\lambda_{1\ldots n})=Q\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}T(\lambda_{i})e^{-x/\lambda_{i}}+Cx$
 \end_inset
 
 
-\begin_inset Formula $F(x,B_{1\dots n}|\alpha_{1\ldots n},\lambda_{1\ldots n})=\pi Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}\left(1-e^{-(t_{p}-t_{i})/\lambda_{i}}\right)\left(1-e^{-t_{a}/\lambda_{i}}\right)\left(1-e^{-t_{i}/\lambda_{i}}\right)e^{-x/\lambda_{i}}+Cx$
-\end_inset
-
-.
 \end_layout
 
-\begin_layout Enumerate
-Let the thickness corrections be 
-\begin_inset Formula $T(\lambda)=\rho_{a}\left(1-e^{-(t_{p}-t_{i})/\lambda_{i}}\right)\left(1-e^{-t_{a}/\lambda_{i}}\right)\left(1-e^{-t_{i}/\lambda_{i}}\right)$
-\end_inset
+\begin_layout Itemize
+As we measure the difference in torque between two different attractor positions
+, we define :
+\begin_inset Formula 
+\begin{equation}
+G(x_{A},x_{B}\dots)=F(x_{A},\dots)-F(x_{B},\dots)\label{eq:PrototypeDifferenceFunction}
+\end{equation}
 
-
-\end_layout
-
-\begin_layout Enumerate
-So, 
-\begin_inset Formula $F(x,B_{1\dots n}|\alpha_{1\ldots n},\lambda_{1\ldots n})=\pi Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}T(\lambda_{i})e^{-x/\lambda_{i}}+Cx=Q\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}T(\lambda_{i})e^{-x/\lambda_{i}}+Cx$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Enumerate
-Define 
-\begin_inset Formula $G(x,y\dots)=F(x,\dots)-F(y,\dots)$
+\begin_layout Itemize
+As a reminder, we measure a torque difference between positions 
+\begin_inset Formula $x_{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{B}$
+\end_inset
+
+, and all external systematic parameters 
+\begin_inset Formula $B_{2},\ldots,B_{n}$
+\end_inset
+
+ , with uncertainties 
+\begin_inset Formula $\sigma_{x_{A}},\sigma_{x_{B}},\sigma_{B_{1}},\ldots\sigma_{B_{n}}$
+\end_inset
+
+ as: 
+\begin_inset Formula 
+\[
+\Delta\tau(x_{A},x_{B},B_{1},\ldots,B_{n},\sigma_{x_{A}},\sigma_{x_{B}},\sigma_{B_{1}},\ldots,\sigma_{B_{n}})
+\]
+
 \end_inset
 
 
 \end_layout
 
-\begin_layout Enumerate
-Measure 
-\begin_inset Formula $\Delta\tau(x_{A},x_{B},B_{1},\ldots,B_{n},\sigma_{x_{A}},\sigma_{x_{B}},\sigma_{B_{1}},\ldots,\sigma_{B_{n}})$
-\end_inset
+\begin_layout Itemize
 
-.
-\end_layout
-
-\begin_layout Enumerate
-Define 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+We treat all measured uncertainties as Gaussian, distributed as 
 \begin_inset Formula $P(a,\bar{a},\sigma_{a})=\frac{1}{\sigma_{a}\sqrt{2\pi}}e^{-(a-\bar{a})^{2}/2\sigma_{a}^{2}}$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Enumerate
-Compute 
-\begin_inset Formula $\bar{G}=\int_{-\infty}^{\infty}G(x,y,B_{1\ldots n},\alpha_{1\ldots n},\lambda_{1\ldots n})P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}$
+\begin_layout Standard
+We pause on our path to confront nonlinearity.
+\end_layout
+
+\begin_layout Subsubsection
+Linearity and limitations
+\end_layout
+
+\begin_layout Standard
+It is traditional in this field 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Cook2013,Kapner2005"
+
+\end_inset
+
+ to assume that the effective uncertainty 
+\begin_inset Formula $\tilde{\sigma}_{G}$
+\end_inset
+
+ for a model quantity 
+\begin_inset Formula $G(a_{1},\ldots,a_{n})$
+\end_inset
+
+, with measured uncertainties 
+\begin_inset Formula $\sigma_{a_{1}},\ldots,\sigma_{a_{n}}$
+\end_inset
+
+ can be estimated (for the 
+\begin_inset Formula $j$
+\end_inset
+
+-th measurement) by 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\tilde{\sigma}_{G_{j}}^{2}=\sum_{i}\left(\sigma_{a_{i_{j}}}\left.\frac{\partial G}{\partial a_{i}}\right|_{\{a_{1},\ldots,a_{n}\}=\{a_{1_{j}},\ldots a_{n_{j}}\}}\right)^{2}\label{eq:Linearized Variance}
+\end{equation}
+
 \end_inset
 
 
 \end_layout
 
-\begin_layout Enumerate
-Compute 
-\begin_inset Formula $\bar{G}=\bar{F}_{x}-\bar{F}_{y}$
+\begin_layout Standard
+The 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+ is then de-weighted by 
+\begin_inset Formula 
+\begin{equation}
+\chi^{2}=\sum_{measurements}\frac{(\Delta\tau-\bar{G})^{2}}{\sigma_{\Delta\tau}^{2}+\tilde{\sigma}_{G}^{2}}\label{eq:X2 Statement}
+\end{equation}
+
 \end_inset
 
 
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Standard
+This approach is appropriate when the linearization of the function 
+\begin_inset Formula $G$
+\end_inset
+
+ is appropriate.
+ 
+\end_layout
+
+\begin_layout Standard
+In the case of PlateWash, it is clear from inspection of 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:PrototypeFitFunction"
+
+\end_inset
+
+ that when the effective Yukawa interaction range 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ becomes comparable to, or smaller than, the precision with which the attractor
+ position is determined, the experimental sensitivity should be degraded.
+ In the linearization approach, this corresponds to a diverging 
+\begin_inset Formula $\tilde{\sigma}_{f}^{2}$
+\end_inset
+
+.
+ Furthermore, linearizing 
+\begin_inset Formula $e^{-x/\lambda}$
+\end_inset
+
+ when 
+\begin_inset Formula $\sigma_{x}\gtrsim\lambda$
+\end_inset
+
+ is a recipe for trouble.
+ With the aid and inspiration of Jason Detwiler, we computed the full non-linear
+ variance of 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:PrototypeDifferenceFunction"
+
+\end_inset
+
+, shown in full detail in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Yukawa-Variance-and"
+
+\end_inset
+
+ (the 
+\begin_inset Quotes eld
+\end_inset
+
+Detwiler Trick
+\begin_inset Quotes erd
+\end_inset
+
+ is worth a look).
+ While we succeded, this entire approach has a fatal flaw; the flaw is in
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Linearized Variance"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+The Flaw
+\end_layout
+
+\begin_layout Standard
+The flaw is easy to see qualitatively.
+ In Equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:X2 Statement"
+
+\end_inset
+
+, when 
+\begin_inset Formula $\sigma_{G}^{2}$
+\end_inset
+
+ diverges, 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+ is driven to zero.
+ Any 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+-minimizing fitter will, given the opportunity, exploit this to favor locations
+ in which 
+\begin_inset Formula $\sigma_{G}^{2}$
+\end_inset
+
+ is huge.
+ Thus, fits with smaller 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ are incorrectly preferred over perfectly reasonable fits with larger 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+ Nikolai Tolich was the first of anyone with whom we spoke to reach a quantitati
+ve understanding of the problem.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Explanation - 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+ is not Likelihood
+\end_layout
+
+\begin_layout Standard
+If we take, as above, all our uncertainties to be distributed according
+ to 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $P(a,\bar{a},\sigma_{a})$
+\end_inset
+
+, then the probability distribution for our torque-difference measurements
+ should be
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P_{\Delta\tau}=G(x_{A},x_{B},B_{1},\ldots B_{n},\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n})P(x,\bar{x},\sigma_{x})P(y,\bar{y},\sigma_{y})\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{B_{i}})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+XXXRC Log-Likelihood explanation.
+\end_layout
+
+\begin_layout Paragraph
+Implication - giving up on quantitative use of 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Without a rigorous way to use 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+ in a way that bakes in uncertainties of dependent variables, we cannot
+ use it to pull out meaningful confidence intervals.
+ So, we return to the simple land of Monte Carlo tricks.
+ We'll keep the linearized variance approach for the 
+\begin_inset Formula $B_{i}$
+\end_inset
+
+, as it's appropriate there, but we'll resort to Monte Carlo to determine
+ the effect of 
+\begin_inset Formula $\sigma_{x}$
+\end_inset
+
+ uncertainties.
+ 
+\end_layout
+
+\begin_layout Standard
+To do so, we will bootstrap the torque data, generating a synthetic data
+ set.
+ When we do, we will 
+\begin_inset Quotes eld
+\end_inset
+
+fuzz
+\begin_inset Quotes erd
+\end_inset
+
+ the measured 
+\begin_inset Formula $x_{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{B}$
+\end_inset
+
+ positions by a normally-distributed amount determined by each measurement's
+ 
+\begin_inset Formula $\sigma_{x_{A}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{x_{B}}$
+\end_inset
+
+.
+ This fuzzing process, in concert with the bootstrapping of the torque data,
+ should distribute the best-fit points as expected from a more-sophisticated
+ approach to error analysis.
+ Making this choice tables for later the considerable problem of confidence-inte
+rval determination.
+\end_layout
+
+\begin_layout Subsubsection
+Fitting approach -- second half
+\end_layout
+
+\begin_layout Standard
+The fitting plan continues (see Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Yukawa-Variance-and"
+
+\end_inset
+
+ for what happens with non-zero 
+\begin_inset Formula $\sigma_{x}$
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Itemize
+Compute 
+\begin_inset Formula $\bar{F}=\int_{-\infty}^{\infty}F(x,B_{1\ldots n},\alpha_{1\ldots n},\lambda_{1\ldots n})P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Compute 
+\begin_inset Formula $\bar{G}=\bar{F}_{x_{A}}-\bar{F}_{x_{B}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
 Compute 
 \begin_inset Formula $\sigma_{F_{x}}^{2}=\int_{-\infty}^{\infty}F(x,B_{1\ldots n},\alpha_{1\ldots n},\lambda_{1\ldots n})^{2}\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}-\bar{F}^{2}$
 \end_inset
@@ -12944,15 +13331,15 @@ Compute
 
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Itemize
 Compute 
-\begin_inset Formula $\sigma_{G}^{2}=\sigma_{F_{x}}^{2}+\sigma_{F_{y}}^{2}$
+\begin_inset Formula $\tilde{\sigma}_{G}^{2}=\sigma_{F_{x}}^{2}+\sigma_{F_{y}}^{2}$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Itemize
 Compute 
 \begin_inset Formula $\chi^{2}$
 \end_inset
@@ -12968,19 +13355,39 @@ Compute
 
 \end_layout
 
-\begin_layout Subsubsection
-Integrals
-\end_layout
+\begin_layout Itemize
+Minimize 
+\begin_inset Formula $\chi^{2}$
+\end_inset
 
-\begin_layout Standard
-See 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Integrals"
+ as a function of 
+\begin_inset Formula $C$
+\end_inset
 
+, 
+\begin_inset Formula $\alpha_{1},\ldots,\alpha_{n}$
+\end_inset
+
+, and 
+\begin_inset Formula $\lambda_{1},\ldots,\lambda_{n}$
 \end_inset
 
 .
+ 
+\end_layout
+
+\begin_layout Itemize
+To extract science, consider the distribution of the 
+\begin_inset Formula $(\alpha_{1},\lambda_{1})$
+\end_inset
+
+ best-fit values over many bootstrapped/fuzzed fits.
+ 
+\end_layout
+
+\begin_layout Itemize
+To extract understanding of any systematic uncertainties, study the distribution
+ of all remaining fitted variables.
 \end_layout
 
 \begin_layout Subsubsection
@@ -12988,6 +13395,18 @@ reference "sec:Integrals"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+The integrals needed for this and subsequent subsubsections are worked out
+ in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Integrals"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -13003,7 +13422,7 @@ reference "sec:Integrals"
 \uwave off
 \noun off
 \color none
-\begin_inset Formula $\bar{F}=\int_{-\infty}^{\infty}F(x,y,B_{1\ldots n},\alpha_{1\ldots n},\lambda_{1\ldots n})\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}$
+\begin_inset Formula $\bar{F}=\int_{-\infty}^{\infty}F(x,B_{1\ldots n},\alpha_{1\ldots n},\lambda_{1\ldots n})\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}$
 \end_inset
 
 
@@ -13301,8 +13720,7 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-This works great, but speed and stability of numerical evaluation urges
- us farther.
+This works great, but speed, stability, and simplicity urges us farther.
 \end_layout
 
 \begin_layout Standard
@@ -16723,6 +17141,13 @@ options "bibtotoc,unsrtnat"
 \begin_layout Chapter
 \start_of_appendix
 Yukawa Variance and the Detwiler Square
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Yukawa-Variance-and"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
