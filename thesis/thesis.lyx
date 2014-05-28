@@ -3939,6 +3939,12 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:pendulum-foil-ifo closeup quarter"
+
+\end_inset
+
 Left to right: Interferometer fiber, interferometer holder, feedback electrodes,
  pendulum, isolating foil, mu-metal shielding, foil adjustment leaf spring.
 \end_layout
@@ -15928,17 +15934,73 @@ Interferometer
 \end_layout
 
 \begin_layout Standard
-We spent a lot of time trying to figure out how to make do without a measurement
- of the foil position.
+We spent a lot of time trying to figure out how to generate a satisfactory
+ test of the inverse square law without a measurement of the foil position.
  We were never able to find another way.
+ For experiments of this type, where the attractor is modulated toward and
+ away from the an isolating foil, estimates of the sensor/foil coupling
+ and the foil motion itself are essential.
+ This is the first measurement of which we are aware to make a direct on-line
+ measurement of the isolating foil's displacement; an important step forward.
  
 \end_layout
 
 \begin_layout Standard
-For experiments of this type, where the attractor is modulated toward and
- away from the an isolating foil, estimates of the sensor/foil coupling
- and the foil motion itself are essential.
+Fiber fizeau interferometers are common in the atomic-force-microscope world
  
+\begin_inset CommandInset citation
+LatexCommand citet
+key "rugar1988force,rugar1989improved"
+
+\end_inset
+
+.
+ They are commonly implemented with infrared lasers.
+ New to the field, we first used a visible system at 660
+\begin_inset space ~
+\end_inset
+
+nm.
+ Our laser suffered mightily from modehops and drifts.
+ Careful temperature control, current control, and current selection helped,
+ but could not make the instrument usable for more than tens of minutes.
+ A switch to a distributed-feedback 1330
+\begin_inset space ~
+\end_inset
+
+nm laser and the requisite complete exchange of optical fibers, couplers,
+ and sensors yielded a very stable instrument.
+ In fact, it is so stable against temperature drift that we have been unable
+ to use changes in the laser-head temperature to counter other fringe drifts
+ in the instrument.
+ 
+\end_layout
+
+\begin_layout Standard
+Another essential improvement is the micropositioning system (see Figures
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Interferometer-control-lever"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:pendulum-foil-ifo closeup quarter"
+
+\end_inset
+
+) we added to control the fiber/foil separation.
+ Without it, we spent hours attempting to position the fiber for proper
+ fringe contrast.
+ As the fiber-foil separation is on the order of tens of microns, it is
+ a very delicate operation.
+ On one somber occasion, we punctured a foil with the fiber tip.
+ The current system is simple and suffers the backlash and imprecision inherent
+ in servo actuation, but it is sufficient to gain useful control over fringe
+ contrast.
 \end_layout
 
 \begin_layout Section
