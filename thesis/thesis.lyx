@@ -9961,7 +9961,7 @@ name "fig:Attractor-positions-over"
 
 \end_inset
 
-Attractor positions over the duration of the experiment
+Attractor positions over the duration of the experiment.
 \end_layout
 
 \end_inset
@@ -9972,10 +9972,64 @@ Attractor positions over the duration of the experiment
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+The attractor position was modulated through both 
+\begin_inset Quotes eld
+\end_inset
+
+random
+\begin_inset Quotes erd
+\end_inset
+
+ and square-wave patterns.
+ About half of the science data were taken using various random patterns.
+ Essentially all of the systematic tests were done with 
+\begin_inset Quotes eld
+\end_inset
+
+short
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+long
+\begin_inset Quotes erd
+\end_inset
+
+ square wave measurements to allow more-straightforward intercomparison.
+ 
 \end_layout
 
 \begin_layout Section
-Campaign description XXXRC
+Campaign description 
+\end_layout
+
+\begin_layout Standard
+The measurements began with science data, comprising runs 3146/7 to 3167.
+ Systematics tests followed; bellows valve-off in 3168-3172; resistor tests
+ 3174-3183; magnetic tests from 3184-3205; heating/thermistor tests from
+ 3206-3222; magnetic signal injection 3223-3225; attractor electrical bias
+ 3234.
+ Some runs preceding 3234 had the interferometer laser turned off; more
+ archaeology awaits to determine if an interferometer-heating test can be
+ used.
+\end_layout
+
+\begin_layout Standard
+In the future, interleaving systematics tests with science runs would be
+ more satisfactory.
+ With the exception of thermal tests, which have long time constants, it's
+ possible to do a science measurement, magnetic tests, interferometer on/off
+ tests, and electrical bias tests programatically with each attractor setting,
+ merging them into a single super-block of measurements that comprise a
+ self-contained ISL test for one attractor position pair.
+ The ability to make incremental/aggregated ISL tests may be worth the added
+ programming complexity.
 \end_layout
 
 \begin_layout Chapter
@@ -9983,7 +10037,13 @@ Metrology
 \end_layout
 
 \begin_layout Standard
-Note to Jens - this stuff will be fast.
+Understanding the separation between attractor masses and test masses is
+ essential to any inverse square law test.
+ However, because of the nearly-null parallel-plate geometry, the implications
+ of an accidental error in metrology affect only the stated exclusion limits,
+ but not the presence nor absence of a purported ISL violation.
+ This is an important contrast to non-null experiments, where an error in
+ attractor/sensor separation alone 
 \end_layout
 
 \begin_layout Section
@@ -9994,6 +10054,14 @@ Pendulum-side
 XXXRC
 \end_layout
 
+\begin_layout Subsection
+Bounce test
+\end_layout
+
+\begin_layout Subsection
+Photos
+\end_layout
+
 \begin_layout Section
 Pendulum angle
 \end_layout
@@ -10002,12 +10070,28 @@ Pendulum angle
 XXXRC
 \end_layout
 
+\begin_layout Subsection
+Bounce test
+\end_layout
+
+\begin_layout Subsection
+Photos
+\end_layout
+
 \begin_layout Section
 Attractor-side
 \end_layout
 
 \begin_layout Standard
 XXXRC
+\end_layout
+
+\begin_layout Subsection
+Capacitor measurements
+\end_layout
+
+\begin_layout Subsection
+Touching
 \end_layout
 
 \begin_layout Section
@@ -10019,7 +10103,7 @@ XXXRC
 \end_layout
 
 \begin_layout Section
-Assignment of pendulum
+Assignment of attractor/foil separation
 \end_layout
 
 \begin_layout Standard
