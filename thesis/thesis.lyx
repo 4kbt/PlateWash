@@ -17257,29 +17257,6 @@ Model Constraints
 Yukawa Potential
 \end_layout
 
-\begin_layout Subsection
-Other models:
-\end_layout
-
-\begin_layout Standard
-With these data, it is possible to place useful limits upon interactions
- such as power-law, Fat Graviton, Chameleon, Unparticles, and more.
- In each scenario, a new 
-\begin_inset Formula $\chi^{2}$
-\end_inset
-
- approach must be taken to properly address systematic uncertainties.
- For this reason, this thesis must limit its results to Yukawa potentials.
-\end_layout
-
-\begin_layout Chapter
-Interpretation
-\end_layout
-
-\begin_layout Chapter
-Future
-\end_layout
-
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
@@ -17298,6 +17275,27 @@ filename "../bootstrap/output/makeSymFigureSystematics.tex"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Other models:
+\end_layout
+
+\begin_layout Standard
+With these data, it is possible to place useful limits upon other inverse-square
+ law modifications such as a power-law potential, Fat Gravitons, Chameleons,
+ Unparticles, and more.
+ For each scenario, a new approach must be taken to properly address systematic
+ uncertainties.
+ For this reason, this thesis limits its results to Yukawa potentials.
+\end_layout
+
+\begin_layout Chapter
+Interpretation
+\end_layout
+
+\begin_layout Chapter
+Future
 \end_layout
 
 \begin_layout Standard
