@@ -9979,6 +9979,54 @@ Campaign description XXXRC
 \end_layout
 
 \begin_layout Chapter
+Metrology
+\end_layout
+
+\begin_layout Standard
+Note to Jens - this stuff will be fast.
+\end_layout
+
+\begin_layout Section
+Pendulum-side
+\end_layout
+
+\begin_layout Standard
+XXXRC
+\end_layout
+
+\begin_layout Section
+Pendulum angle
+\end_layout
+
+\begin_layout Standard
+XXXRC
+\end_layout
+
+\begin_layout Section
+Attractor-side
+\end_layout
+
+\begin_layout Standard
+XXXRC
+\end_layout
+
+\begin_layout Section
+Foil Thickness
+\end_layout
+
+\begin_layout Standard
+XXXRC
+\end_layout
+
+\begin_layout Section
+Assignment of pendulum
+\end_layout
+
+\begin_layout Standard
+XXXRC
+\end_layout
+
+\begin_layout Chapter
 Data Analysis
 \end_layout
 
@@ -15779,8 +15827,7 @@ m) depth of integration, and
 \begin_inset Formula $g_{z}$
 \end_inset
 
- are the horizontal and vertical grid sizes (in mm, for the 3300 formula
- above).
+ are the horizontal and vertical grid sizes (in mm, for the formula above).
  In an optimal case, with 
 \begin_inset Formula $g_{h}=10$
 \end_inset
@@ -15842,14 +15889,22 @@ filename "../extracted/pendulumPMScanGridSize.tex"
 
 \end_inset
 
- tangential and 
+
+\begin_inset space ~
+\end_inset
+
+m tangential and 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../extracted/pendulumPMScanVertStep.tex"
 
 \end_inset
 
- perpendicular to the surface.
+
+\begin_inset space ~
+\end_inset
+
+m perpendicular to the surface.
  Given that the pendulum-attractor gap can be as small as 80-90 
 \begin_inset Formula $\mu$
 \end_inset
@@ -17110,7 +17165,11 @@ filename "../systematics/electrical/extracted/totalSecondslongStrokeL0.tex"
 
 \end_inset
 
-The torque difference over a simulated long stroke was 
+
+\begin_inset space ~
+\end_inset
+
+s the torque difference over a simulated long stroke was 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../systematics/electrical/extracted/longStrokeL0Diff3167.tex"
