@@ -10373,6 +10373,13 @@ Run-distribution plot?
 
 \begin_layout Section
 Signal Extraction
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Signal-Extraction"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -17155,25 +17162,113 @@ reference "par:A-conservative-approach"
 \end_inset
 
 .
- After the lock-in/cut procedure of Chapter XXXRC, the resulting data are
- plotted in Figure XXXRC.
+ After the lock-in/cut procedure (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Signal-Extraction"
+
+\end_inset
+
+) is applied to the interferometer signal, the resulting measurements are
+ plotted in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Raw-foil-displacement"
+
+\end_inset
+
+.
  
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
 Triangle Plot, two views.
+ XXXRC
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Raw-foil-displacement"
+
+\end_inset
+
+Raw foil displacement data
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 As we do not have continuous full-sensitivity coverage of the entire measurement
  with the interferometer, we must build a model of the foil displacement
  as a function of attractor position and then apply it (with known uncertainties
-) via the foil-to-torque transfer function XXXRC to generate the foil-related
- torque-difference expected for attractor-position pair.
- To be conservative, we use the piecewise-linear technique outlined in XXXRC.
+) via the foil-to-torque transfer function (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Pendulum-Foil-coupling"
+
+\end_inset
+
+) to generate the foil-related torque-difference expected for attractor-position
+ pair.
+ To be conservative, we use the piecewise-linear technique outlined in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Force-law-inversion"
+
+\end_inset
+
+.
  To generate an estimate of the uncertainty in the fit, we bootstrap the
  observed data and generate many fits; the outcome is shown in Figure XXXRC.
- 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Interferometer fit XXXRC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -17229,12 +17324,22 @@ Torque central value overview
 Raw data
 \end_layout
 
-\begin_layout Section
-Binned Triangle Plot
+\begin_layout Standard
+XXXRC raw torque plots; systematic subtracted, omitted, added.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Section: Binned Triangle Plot XXXMA
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
-Bootstrapped
+Bootstrapped 
 \begin_inset Quotes eld
 \end_inset
 
@@ -17243,10 +17348,6 @@ Force Law
 \end_inset
 
 
-\end_layout
-
-\begin_layout Section
-Confidence intervals
 \end_layout
 
 \begin_layout Section
@@ -17290,12 +17391,24 @@ With these data, it is possible to place useful limits upon other inverse-square
  For this reason, this thesis limits its results to Yukawa potentials.
 \end_layout
 
+\begin_layout Section
+Exclusion plots
+\end_layout
+
 \begin_layout Chapter
 Interpretation
 \end_layout
 
 \begin_layout Chapter
 Future
+\end_layout
+
+\begin_layout Section
+Lessons learned
+\end_layout
+
+\begin_layout Section
+Upgrade plans
 \end_layout
 
 \begin_layout Standard
