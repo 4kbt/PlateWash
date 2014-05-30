@@ -7200,6 +7200,10 @@ analog conversion noise can couple to the pendulum.
 status open
 
 \begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -7235,12 +7239,17 @@ Free pendulum noise with and without grounded feedback electrodes
 Noise model
 \end_layout
 
-\begin_layout Standard
-XXXRC
+\begin_layout Plain Layout
+XXXMA
 \end_layout
 
 \begin_layout Subsubsection
 Comparison with experiment
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -8596,12 +8605,24 @@ Typical Behavior
 Torque Trace
 \end_layout
 
+\begin_layout Standard
+XXXRC
+\end_layout
+
 \begin_layout Subsection
 Noise Plot
 \end_layout
 
+\begin_layout Standard
+XXXRC
+\end_layout
+
 \begin_layout Subsection
 Flexure motion
+\end_layout
+
+\begin_layout Standard
+XXXRC
 \end_layout
 
 \begin_layout Chapter
@@ -8609,7 +8630,8 @@ Operation
 \end_layout
 
 \begin_layout Standard
-An introduction to the chapter goes here XXXRC.
+This chapter describes the strategies and choices we made in the operation
+ of the instrument, from operating frequency to day-to-day operation.
 \end_layout
 
 \begin_layout Section
@@ -9923,11 +9945,34 @@ By choosing the angle signal instead of the feedback signal as the science
 \end_layout
 
 \begin_layout Subsection
-Cuts per block? XXXRC
+Switches per cut XXXRC
 \end_layout
 
 \begin_layout Section
-Measurement scheme description XXXRC
+Daily operation
+\end_layout
+
+\begin_layout Standard
+XXXRC
+\end_layout
+
+\begin_layout Section
+\begin_inset Quotes eld
+\end_inset
+
+Random
+\begin_inset Quotes erd
+\end_inset
+
+ attractor motion
+\end_layout
+
+\begin_layout Standard
+XXXRC
+\end_layout
+
+\begin_layout Standard
+Figure XXXRC.
 \end_layout
 
 \begin_layout Section
@@ -10051,15 +10096,283 @@ Pendulum-side
 \end_layout
 
 \begin_layout Standard
-XXXRC
+The most-difficult metrology is on the pendulum side of the foil.
+ The pendulum is hand-lapped, making its corners challenging to image and
+ understand.
 \end_layout
 
 \begin_layout Subsection
 Bounce test
 \end_layout
 
+\begin_layout Standard
+The pendulum is allowed to swing freely as the fiber support is moved toward
+ and away from the foil/attractor.
+ The autocollimator trace, plotted as a function of support-position shows
+ a clear pattern from which the point at which the pendulum touches the
+ foil may be extracted.
+ The results of pre-run and mid-run bounce tests are shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Pendulum-bounce-test-results"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+XXXRC
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Pendulum-bounce-test-results"
+
+\end_inset
+
+Pendulum bounce-test results
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Photos
+\end_layout
+
+\begin_layout Standard
+PlateWash is unique among our group's ISL experiments in that we have visual
+ access to the pendulum at all times through a glass vacuum viewport.
+ With the addition a mirror, we are able to see both (left and right) sides
+ of the pendulum and photograph them.
+ Using the known thickness of the pendulum, we can compare photos when the
+ pendulum is operating against photos where the pendulum is pressed lightly
+ against a flat surface (attractor or foil) to determine the operating pendulum'
+s distance from, and angle with respect to, the foil.
+ For the photos used in this determination, see Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Pendulum-position-photos"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+XXXRC
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Pendulum-position-photos"
+
+\end_inset
+
+Pendulum position photos
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Horizontal offset
+\end_layout
+
+\begin_layout Standard
+In addition to visual access to the pendulum's separation from the foil,
+ we installed a mirror that allows us to compare the horizontal (left/right)
+ position of the torsion fiber to a ruled grating on the foil-stretcher.
+ When the experiment is initially aligned, the fiber is centered on the
+ top of the attractor, where 
+\begin_inset Quotes eld
+\end_inset
+
+top
+\begin_inset Quotes erd
+\end_inset
+
+ is denoted as farthest from the plane of the optical bench.
+ The pendulum is translated attractor-axially away from the attractor, and
+ the foil is installed.
+ After the foil is fully aligned, but the fiber has not yet been translated
+ horizontally, the pendulum is again brought near the foil, and the location
+ of the fiber on the foil-stretcher's ruled grating is photographed via
+ the viewport and the dedicated mirror.
+ Once this is complete, then any horizontal translation of the fiber can
+ easily be compared with this reference position in order to determine the
+ horizontal position of the pendulum with respect to the top of the attractor.
+ 
+\end_layout
+
+\begin_layout Standard
+The reference photo and in-position photo for this measurement are shown
+ in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Horizontal-fiber-position"
+
+\end_inset
+
+.
+ This entire set of measurements was done with a substantial horizontal
+ position offset; the pendulum had been displaced horizontally in runs prior
+ to 3147 in hopes of better understanding the systematic signal that would
+ later be traced to the bypass capacitors 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Capacitor-Systematic"
+
+\end_inset
+
+.
+ As can be seen in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Off-center-torques"
+
+\end_inset
+
+, the impressive null-ness of this attractor geometry allows us to get away
+ with such a gross misalignment without measurable consequence.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+XXXRC
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Horizontal-fiber-position"
+
+\end_inset
+
+Horizontal fiber position
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Vertical position
+\end_layout
+
+\begin_layout Standard
+The vertical position of the pendulum was determined using a height-gauge
+ referenced from the optical bench.
+ Before installing the foil, the difference in height between the top of
+ the attractor and the top of the pendulum was set to be XXXRC, centering
+ the pendulum vertically to within XXXRC
+\begin_inset space ~
+\end_inset
+
+mm.
+ See Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Pendulum-vertical-positioning"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+XXXRC
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Pendulum-vertical-positioning"
+
+\end_inset
+
+Pendulum vertical positioning photos
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -10067,14 +10380,29 @@ Pendulum angle
 \end_layout
 
 \begin_layout Standard
-XXXRC
+The alignment angle of the pendulum with respect to the attractor is important
+ to the sensitivity of the instrument, in both vertical tip and in twist.
+\end_layout
+
+\begin_layout Standard
+When aligning the instrument, the entire instrument is tilted until the
+ pendulum rests firmly on the attractor.
+ The angle, as measured by the autocollimator is recorded.
 \end_layout
 
 \begin_layout Subsection
+Tip angle
+\end_layout
+
+\begin_layout Subsection
+Twist angle
+\end_layout
+
+\begin_layout Subsubsection
 Bounce test
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Photos
 \end_layout
 
@@ -10748,7 +11076,15 @@ filename "../extracted/numberOfCuts.tex"
 \end_inset
 
  cuts, the effect of cut-to-cut correlation is limited.
- (XXXRC cut-correlation estimation).
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+(XXXMA cut-correlation estimation).
+\end_layout
+
+\end_inset
+
  The 3-cut length of the FIR filter was chosen by balancing the need for
  effective suppression of the rising 100
 \begin_inset space ~
@@ -12730,7 +13066,7 @@ name "TriangleScatterPlot"
 
 \end_inset
 
-
+XXXRC
 \end_layout
 
 \begin_layout Plain Layout
@@ -15733,7 +16069,13 @@ m stroke range of the attractor.
 \end_layout
 
 \begin_layout Subsection
-Off-center torques 
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Off-center-torques"
+
+\end_inset
+
+Off-center torques
 \end_layout
 
 \begin_layout Standard
