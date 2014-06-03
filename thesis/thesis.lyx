@@ -17777,7 +17777,14 @@ reference "sec:Force-law-inversion"
 
 .
  To generate an estimate of the uncertainty in the fit, we bootstrap the
- observed data and generate many fits; the outcome is shown in Figure XXXRC.
+ observed data and generate many fits; the outcome is shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Interferometer-fit.-Each"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -17787,10 +17794,29 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../bootstrap/output/IFOBSFits.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Interferometer fit XXXRC
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Interferometer-fit.-Each"
+
+\end_inset
+
+Interferometer fit.
+ Each line is a different bootstrapped fit.
+ This fits are used individually for subtraction in the bootstrapped global
+ Yukawa fits.
 \end_layout
 
 \end_inset
