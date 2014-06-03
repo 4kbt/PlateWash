@@ -17005,6 +17005,17 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Pictures/small/MagneticTestCoilOnCan.jpg
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Caption
 
 \begin_layout Plain Layout
@@ -17151,6 +17162,10 @@ filename "../systematics/magnetic/extracted/longStrokeL0Diff.tex"
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+N-m
 \end_layout
 
 \begin_layout Standard
@@ -17162,6 +17177,10 @@ filename "../systematics/magnetic/extracted/shortStrokeL0Diff.tex"
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+N-m
 \end_layout
 
 \begin_layout Standard
@@ -17173,6 +17192,10 @@ filename "../systematics/magnetic/extracted/shortStrokeLRDiff.tex"
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+N-m
 \end_layout
 
 \begin_layout Standard
@@ -17184,6 +17207,10 @@ filename "../systematics/magnetic/extracted/shortStrokeR0Diff.tex"
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+N-m
 \end_layout
 
 \begin_layout Subsection
