@@ -10427,7 +10427,30 @@ Foil Thickness
 \end_layout
 
 \begin_layout Standard
-XXXRC
+The thickness of the foil was determined by making many micrometer measurements
+ of foil from an adjacent portion of the same roll.
+ Touching the foil, particularly with a hard/sharp-cornered object like
+ a micrometer can easily damage the foil by denting it.
+ Even a piece of dust, compressed between the micrometer jaw and the foil,
+ can be sufficient to dimple the foil and increase its effective thickness.
+ For this reason, we have not directly measured the actual foil's thickness.
+ If the foil thickness measurement were to become of increased concern,
+ we could destructively test it.
+\end_layout
+
+\begin_layout Standard
+As measured the foil is 
+\begin_inset CommandInset include
+LatexCommand input
+filename "/home/charlie/Eotwash/extracted/foilThickness.tex"
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+m thick.
 \end_layout
 
 \begin_layout Section
@@ -10435,7 +10458,8 @@ Assignment of attractor/foil separation
 \end_layout
 
 \begin_layout Standard
-XXXRC
+The distance between the pendulum and the attractor is determined to be
+ the sum of the XXXRC
 \end_layout
 
 \begin_layout Chapter
