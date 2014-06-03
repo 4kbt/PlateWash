@@ -4,6 +4,8 @@ PREREQUISITES =  *.m $(HOMEDIR)/calibration/pressure/run2937pressEncOutput.dat $
 
 IFOOUT:=output/bootstrapArbFit.bootstrappedFits.dat
 
+IFOFIGURE := IFOBSFits
+
 FITA:=--eval 'alpha = 100;  lambda = 200e-6; injSlope =  5e-11;'
 FITB:=--eval 'alpha = 0;    lambda = 200e-6; injSlope = -4e-12;'
 FITC:=--eval 'alpha = -100; lambda = 200e-6; injSlope =  6e-12;'
@@ -23,7 +25,7 @@ FITSG:=--eval 'alpha= 200;  lambda=56e-6 ; injSlope=-1e-11; alpha1=4    ; lambda
 FITSH:=--eval 'alpha= 500;  lambda=30e-6 ; injSlope= 0e-11; alpha1=-20  ; lambda1=2e-4; alpha2=-0.1; lambda2=200e-6;'
 FITSI:=--eval 'alpha= 100;  lambda=200e-6; injSlope= 1e-11; alpha1=137  ; lambda1=8e-6; alpha2=4e4 ; lambda2=310e-6;'
 
-all : yukawaFit arbFit sysTest newtonianInjection output/makeSymFigureSystematics.tex test
+all : yukawaFit arbFit sysTest newtonianInjection output/makeSymFigureSystematics.tex test output/$(IFOFIGURE).eps
 	$(HOMEDIR)/bin/mathify.sh extracted/
 
 yukawaFit : $(PREREQUISITES)
@@ -107,8 +109,14 @@ arbFitTest : $(PREREQUISITES)
 	./arbFitPlots.sh
 
 
-$(IFOOUT) : $(PREREQUISITES)
+$(IFOOUT) : $(PREREQUISITES) ifoArbWrapper.m
 	$(OCT) ifoArbWrapper.m
+
+
+output/$(IFOFIGURE).eps : $(IFOOUT) plottableBSFits.m $(IFOFIGURE).gpl
+	$(OCT) plottableBSFits.m
+	$(GNU) $(IFOFIGURE).gpl
+	
 
 TeXFigure : generatePlottingTeX.sh output
 	./generatePlottingTeX.sh $(HOMEDIR)
