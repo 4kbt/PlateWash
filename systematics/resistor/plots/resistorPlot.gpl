@@ -14,6 +14,8 @@ set logsc
 set xtics format '10^{%L}'
 
 pl [1e-4: 2e9][0.01:] \
-	'resistorMerge.dat'  u 2:($4*1e15):($5*1e15) w yerr pt 7 lc 1 tit 'no capacitor',\
-	'capacitorMerge.dat' u 2:($4*1e15):($5*1e15) w yerr pt 5 lc 3 tit 'capacitor installed',\
+	'resistorMerge.dat'  u 2:( $4*1e15):($5*1e15) w yerr pt 8  lc 1 tit 'no capacitor, positive',\
+	'resistorMerge.dat'  u 2:(-$4*1e15):($5*1e15) w yerr pt 10 lc 1 tit 'no capacitor, negative',\
+	'capacitorMerge.dat' u 2:( $4*1e15):($5*1e15) w yerr pt 9  lc 3 tit 'capacitor installed, positive',\
+	'capacitorMerge.dat' u 2:(-$4*1e15):($5*1e15) w yerr pt 11 lc 3 tit 'capacitor installed, negative',\
 	'b0Uncertainty.dat'  u 2:($4*1e15+0.01):($5*1e15) w yerr pt 1 lc -1 tit '20 MOhm operating point'
