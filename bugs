@@ -1,0 +1,73 @@
+Fig 7.5 -- need horizontal misalignment number to compute
+7.8.3 -- need number for pendulum angular orientation
+7.8.2 -- verify horizontal misalignment numbers
+7.7 -- Q-tester newtonian computation
+7.6.5 -- Newtonian Assembly figure
+5.6.1.3 -- explaination of log-likelihood
+5.4 -- Triangle-plot sign convention
+Figure 5.8 -- Demo triangle plot
+Figure 5.6 -- verify that end-to-end calibration figure makes sense
+Figure 5.5 -- filtering coefficient is wrong?
+5.3.5 -- runs affected by clock drift
+5.3.5 -- size of clock drift
+5.3.2 -- runs with clock offsets
+5.2 -- timing section remains a mess
+4.5 -- Assigning final number for distance metrology
+4.3 -- attractor-side metrology (cap and touching)
+4.2 -- Pendulum angle (tip) needs major work
+4.1.4 Vertical positioning pictures
+4.1.4 Vertical positioning distance
+4.1.4 Vertical positioning precision
+4.3 -- Horizontal positioning photo
+4.1.2 -- sideview positioning photos
+4.1.1 -- bounce test figure and numbers
+3.3 -- random attractor motion text
+3.3 -- random attractor motion figure
+3.2 -- daily operation description
+3.1.7 -- switches per cut description
+3.1.4 -- Lag padding number for synchronization
+2.6.3 -- typical flexure motion plot
+2.6.2 -- typical noise plot?
+2.6.1 -- typical torque trace
+2.5.2.5 -- expand on pendulum magnetic moment
+2.5.2.4 -- flexure non-linearity torque
+2.5.2.4 -- flexure non-linearity number
+2.5.2.4 -- nonlinear tilt feedthrough number
+2.5.2.3 -- number/cubic micron for torque void
+2.5.2.3 -- pendulum vertical position
+2.5.2.3 -- pendulum horizontal position
+2.5.2.2 -- attractor vibration coupling to foil
+2.5.2.2 -- modulation of ambient foil motion
+2.5.2 -- definition of "typical" systematic distance
+2.5.2 -- definition of "typical" systematic distance
+2.5.1.4 -- contact potential noise discussion
+2.4.3 -- online alignment plots
+2.4.1 -- Flexure runout figure
+2.4.1 -- initial alignment description
+2.4.1 -- optical alignment number
+2.3.9.2 -- high-frequency ifo spectrum
+2.3.9.1 -- "very first fringe" psi
+2.3.9 -- foil interferometer blah blah blah
+2.3.9 -- plot of ifoSim function
+2.3.9 -- Measured foil interferometer crash signal
+2.3.9 -- foil operating point
+2.3.9 -- foil operating point uncertainty
+2.3.7 -- verify calibration metrology
+2.3.2.2 -- foil stretcher clamping ring thickness
+2.3.2 -- autocollimator picture
+2.3.1 -- attractor schematic with dimensions
+2.2.3 -- angled plate torque formula is wrong
+2.2.2 -- recheck yukawa two
+2.2.2 -- pendulum/attractor schematic
+11.2 -- raw torque plots, systematic subtracted, omitted, added
+10.1 -- raw foil displacement figure, triangle-styl
+9.4.3 -- ifo spot heating torque uncertainty
+9.4.3 -- ifo spot heating torque value
+9.4.3 -- ifo spot heating stroke mode
+9.4.3 -- ifo spot heating runs
+9.4.2 -- expand attractor-frequency temperature variation
+9.3 -- biased attractor torque difference
+9.2 -- coil on apparatus diagram
+
+
+

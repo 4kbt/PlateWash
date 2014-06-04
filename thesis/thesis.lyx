@@ -10390,6 +10390,10 @@ When aligning the instrument, the entire instrument is tilted until the
  The angle, as measured by the autocollimator is recorded.
 \end_layout
 
+\begin_layout Standard
+XXXRC
+\end_layout
+
 \begin_layout Subsection
 Tip angle
 \end_layout
@@ -17672,8 +17676,8 @@ Foil Systematic
 \end_layout
 
 \begin_layout Standard
-The foil systematic measurement is treated separately from the other systematic
- uncertainties for three reasons: the analysis is very different, the outcome
+The foil systematic measurement is discussed separately from the other systemati
+c uncertainties for three reasons: the analysis is very different, the outcome
  is important, and, as a signal is clearly resolved, a correction must be
  made.
 \end_layout
