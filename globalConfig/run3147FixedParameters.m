@@ -140,8 +140,8 @@ if(SysNoX == 1)
 end
 
 SysUB = 1e20;
-LamLB = 1e-6/XLUnits;
-LamUB = 1/XLUnits;
+LamLB = -Inf; %1e-6/XLUnits;
+LamUB = Inf; %1/XLUnits;
 SloUB = Inf; %1e-9/XSUnits;
 
 %1e-8 gives beautiful fits, of course.
