@@ -66,6 +66,7 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 		tic
 		[x, csMin, fitInfo, iter, nf]   = sqp(ranSeed, cSFunc, [], [], LowerBounds, UpperBounds,NumIterations);
 		[csMin fitInfo iter nf]
+		x = unLogifyLambdas(x)
 		bsO = [ transpose(x) csMin nf iter fitInfo ranSeed bootStrapCounter toc rows(pM)];
 		%if fit converged, save it.
 		if(fitInfo == 101) 
