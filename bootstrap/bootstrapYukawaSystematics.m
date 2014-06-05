@@ -1,4 +1,3 @@
-clear pause
 more off 
 
 if (1 == injectIFOSystematic)
@@ -62,8 +61,6 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 
 	ranSeed
 
-	pause
-	
 	try
 		%When analyzing, make a cut on csMin
 		tic
