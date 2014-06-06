@@ -55,7 +55,9 @@ if( psEndSec < psStartSec)
 	psEndSec  = psData(rows( psData),  psTimeCol);
 end
 
-FAKING_THE_INTERFEROMETER_ENTIRELY = 1
+if(~exist('FAKING_THE_INTERFEROMETER_ENTIRELY'))
+	FAKING_THE_INTERFEROMETER_ENTIRELY = 1
+end
 
 if( FAKING_THE_INTERFEROMETER_ENTIRELY == 1)
 	ifoData = zeros(rows(pwData), columns(ifoData));

@@ -2,6 +2,8 @@ pwrunNumber  = '3151'
 psrunNumber  = '3151';
 iforunNumber = '3151';
 
+FAKING_THE_INTERFEROMETER_ENTIRELY = 0;
+
 preSync3
 
 %psStartSec  = psStartSec+9*128;

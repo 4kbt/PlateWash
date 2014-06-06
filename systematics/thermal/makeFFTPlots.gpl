@@ -1,0 +1,24 @@
+set title 'long stroke, red high'
+fn = 'run3218LongRedHigh'
+
+load 'plotFFTGuts.gpl'
+
+set title 'long stroke, blue high'
+fn = 'run3222LongBlueHigh'
+
+load 'plotFFTGuts.gpl'
+
+set title 'short stroke, red high'
+fn = 'run3217ShortRedHigh'
+
+load 'plotFFTGuts.gpl'
+
+set title 'short stroke, blue high'
+fn = 'run3221ShortBlueHigh'
+
+load 'plotFFTGuts.gpl'
+
+set title 'long stroke, none high'
+fn = 'run3206LongNoHigh'
+
+load 'plotFFTGuts.gpl'

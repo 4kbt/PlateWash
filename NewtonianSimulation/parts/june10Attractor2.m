@@ -16,7 +16,7 @@ AttractorRimWidth= (AttractorDiameter - 0.0254*1.915)/2.0
 AttractorPlateMass= rhoTa*pi*(InfiniteRadius^2-(AttractorDiameter/2)^2)*AttractorPlateThickness
 %AttractorBackerMass=rhoAl*pi*(AttractorDiameter/2)^2*AttractorBackerThickness
 AttractorBackerMass=rhoAl*pi*(InfiniteRadius^2-(AttractorDiameter/2)^2)*AttractorBackerThickness
-AttractorRimMass=   rhoAl*pi*(AttractorDiameter/2)^2*AttractorRimHeight-\
+AttractorRimMass=   rhoAl*pi*(AttractorDiameter/2)^2*AttractorRimHeight-...
                     rhoAl*pi*((AttractorDiameter-2*AttractorRimWidth)/2)^2*AttractorRimHeight
 
 AttractorMass=AttractorPlateMass+AttractorBackerMass+AttractorRimMass

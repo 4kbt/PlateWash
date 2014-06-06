@@ -16,10 +16,10 @@ vertBar  = genPointMassRect( vM, vT, vW, vH, 5, 5, 5);
 horizBar = genPointMassRect( hM, hL, hW, hH, 5, 5, 5);
 
 %double and place them correctly
-vB2 = [translatePMArray(vertBar, [ (flexureLength - wallThickness)/2.0, 0, 0]);\
+vB2 = [translatePMArray(vertBar, [ (flexureLength - wallThickness)/2.0, 0, 0]);...
        translatePMArray(vertBar, [-(flexureLength - wallThickness)/2.0, 0, 0])];
 
-hB2 = [translatePMArray(horizBar, [0, 0, (flexureHeight - wallThickness)/2.0]);\
+hB2 = [translatePMArray(horizBar, [0, 0, (flexureHeight - wallThickness)/2.0]);...
        translatePMArray(horizBar, [0, 0,-(flexureHeight - wallThickness)/2.0])];
 
 Flexure = [vB2; hB2];

@@ -1,6 +1,10 @@
 include ../Makefile.inc
 
-PREREQUISITES =  *.m $(HOMEDIR)/calibration/pressure/run2937pressEncOutput.dat $(MLIB) $(HOMEDIR)/runAnalysis/results/run3147pM3FilterMerge.dat
+PREREQUISITES =  *.m $(HOMEDIR)/calibration/pressure/run2937pressEncOutput.dat $(MLIB) $(HOMEDIR)/runAnalysis/results/run3147pM3FilterMerge.dat $(HOMEDIR)/ifo/
+
+IFOOUT:=output/bootstrapArbFit.bootstrappedFits.dat
+
+IFOFIGURE := IFOBSFits
 
 FITA:=--eval 'alpha = 100;  lambda = 200e-6; injSlope =  5e-11;'
 FITB:=--eval 'alpha = 0;    lambda = 200e-6; injSlope = -4e-12;'
@@ -21,7 +25,7 @@ FITSG:=--eval 'alpha= 200;  lambda=56e-6 ; injSlope=-1e-11; alpha1=4    ; lambda
 FITSH:=--eval 'alpha= 500;  lambda=30e-6 ; injSlope= 0e-11; alpha1=-20  ; lambda1=2e-4; alpha2=-0.1; lambda2=200e-6;'
 FITSI:=--eval 'alpha= 100;  lambda=200e-6; injSlope= 1e-11; alpha1=137  ; lambda1=8e-6; alpha2=4e4 ; lambda2=310e-6;'
 
-all : yukawaFit arbFit sysTest newtonianInjection output/makeSymFigureSystematics.tex test
+all : yukawaFit arbFit sysTest newtonianInjection output/makeSymFigureSystematics.tex test output/$(IFOFIGURE).eps
 	$(HOMEDIR)/bin/mathify.sh extracted/
 
 yukawaFit : $(PREREQUISITES)
@@ -61,30 +65,30 @@ yukawaFitTest : $(PREREQUISITES)
 	$(MAKE) TeXFigure
 
 sysTest : yukSysFitA yukSysFitB yukSysFitC yukSysFitD yukSysFitE  yukSysFitF yukSysFitG yukSysFitH yukSysFitI yukawaSystematicsPlots.sh
-	./yukawaSystematicsPlots.sh
+	./yukawaSystematicsPlots.sh $(HOMEDIR)
 	
 output/makeSymFigureSystematics.tex: sysTest generatePlottingTeXSystematics.sh output
 	./generatePlottingTeXSystematics.sh $(HOMEDIR)
 	
 
 
-yukSysFitA: $(PREREQUISITES)
+yukSysFitA: $(PREREQUISITES) $(IFOOUT)
 	$(OCT) $(FITSA) yukawaSystematicsWrapper.m
-yukSysFitB: $(PREREQUISITES)
+yukSysFitB: $(PREREQUISITES) $(IFOOUT)
 	$(OCT) $(FITSB) yukawaSystematicsWrapper.m
-yukSysFitC: $(PREREQUISITES)
+yukSysFitC: $(PREREQUISITES) $(IFOOUT)
 	$(OCT) $(FITSC) yukawaSystematicsWrapper.m
-yukSysFitD: $(PREREQUISITES)
+yukSysFitD: $(PREREQUISITES) $(IFOOUT)
 	$(OCT) $(FITSD) yukawaSystematicsWrapper.m
-yukSysFitE: $(PREREQUISITES)
+yukSysFitE: $(PREREQUISITES) $(IFOOUT)
 	$(OCT) $(FITSE) yukawaSystematicsWrapper.m
-yukSysFitF: $(PREREQUISITES)
+yukSysFitF: $(PREREQUISITES) $(IFOOUT)
 	$(OCT) $(FITSF) yukawaSystematicsWrapper.m
-yukSysFitG: $(PREREQUISITES)
+yukSysFitG: $(PREREQUISITES) $(IFOOUT)
 	$(OCT) $(FITSG) yukawaSystematicsWrapper.m
-yukSysFitH: $(PREREQUISITES)
+yukSysFitH: $(PREREQUISITES) $(IFOOUT)
 	$(OCT) $(FITSH) yukawaSystematicsWrapper.m
-yukSysFitI: $(PREREQUISITES)
+yukSysFitI: $(PREREQUISITES) $(IFOOUT)
 	$(OCT) $(FITSI) yukawaSystematicsWrapper.m
 
 arbFit : $(PREREQUISITES)
@@ -103,6 +107,16 @@ arbFitTest : $(PREREQUISITES)
 	$(OCT) $(FITH) arbFitWrapper.m
 	$(OCT) $(FITI) arbFitWrapper.m
 	./arbFitPlots.sh
+
+
+$(IFOOUT) : $(PREREQUISITES) ifoArbWrapper.m
+	$(OCT) ifoArbWrapper.m
+
+
+output/$(IFOFIGURE).eps : $(IFOOUT) plottableBSFits.m $(IFOFIGURE).gpl
+	$(OCT) plottableBSFits.m
+	$(GNU) $(IFOFIGURE).gpl
+	
 
 TeXFigure : generatePlottingTeX.sh output
 	./generatePlottingTeX.sh $(HOMEDIR)

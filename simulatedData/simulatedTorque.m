@@ -4,12 +4,13 @@ function simTor = simulatedTorque(torData, posData, torqueLaw, noiseLevel)
 
 	run3147FixedParameters
 
-	pressEncP = load([HOMEDIR 'calibration/pressure/run2937pressEncOutput.dat']); %bake dependencies into makefile
+	%pressEncP = load([HOMEDIR 'calibration/pressure/run2937pressEncOutput.dat']); %bake dependencies into makefile
 
 	interPos = interp1(posData(:,1), posData(:,2), torData(:,1));
 
 	%calibrate
-	calPos = (touch2937 - polyval(pressEncP, interPos) ) * 1e-6;
+	%calPos = (touch2937 - polyval(pressEncP, interPos) ) * 1e-6;
+	calPos = interPos;
 
 	plot(calPos)
 

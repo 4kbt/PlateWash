@@ -1,28 +1,31 @@
-function X2 = chiSquareWSystematics( pM , x)
+function X2 = chiSquareWSystematics( pM , x, signalColumns, fitColumn)
 	global HOMEDIR
 	columnNames;
+	fitErrColumn = diffErrOffset + fitColumn;
 
 	%Uncomment for diagnostic output
 %	transpose(x)
 
-	C = x(1);
-	L = x(2);
-	A = x(3);
-	BL = x(4);
-	BA = x(5);
-	B2L = x(6);
-	B2A = x(7);
+	if(length(x) < 3)
+		size(x)
+		error('insufficient number of arguments in x');
+	end
+	if(mod(length(x),2) == 0)
+		error('wrong number of arguments to x')
+	end
+	if( rows(x) ~=1 & columns(x) ~=1)
+		error('x is a matrix, should be a vector');
+	end
 
-%	Nsyst = 3;
-%	prototype = ones (Nsyst,1);
-%	alphas = alphas*prototype;
-%	lambdas = L*prototype;
 
-%	alphas = [A; 0 ; 0];
+	alphas =[]; lambdas = [];
+	for( rowctr = 2:2:length(x))
+		lambdas = [lambdas; x(rowctr)  ];
+		alphas  = [alphas ; x(rowctr+1)];
+	end
 
-	alphas =  [A; BA; B2A];
-	lambdas = [L; BL; B2L]* XLUnits;
-	slope = C * XSUnits;
+	lambdas = lambdas * XLUnits;
+	slope = x(1) * XSUnits;
 	
 	DoNotExtractFixedParameters = 1;
 	run3147FixedParameters;
@@ -32,8 +35,19 @@ function X2 = chiSquareWSystematics( pM , x)
 	sx1Vec = pM(:,aErrCol);
 	sx2Vec = pM(:,bErrCol);
 
-	BMat = [ones(rows(x1Vec),1) pM(:,magFieldACol) pM(:,magField2ACol) ];
-	sBMat =[zeros(rows(x1Vec),1) ones(rows(x1Vec),1)*AppliedMagneticFieldUncertainty, ones(rows(x1Vec),1)*AppliedMagneticFieldUncertainty.^2];
+	%Dynamic allocation of signal and error columns.
+	BMat  = [];
+	sBMat = [];
+	for( sigCtr = 1:rows(signalColumns))
+		if( signalColumns(sigCtr) == 0 )
+
+			BMat  = [ BMat  ones( rows(x1Vec) , 1 ) ];
+			sBMat = [ sBMat zeros(rows(x1Vec) , 1 ) ];
+		else
+			BMat  = [ BMat  pM(:, signalColumns(sigCtr)) ];
+			sBMat = [ sBMat pM(:, signalColumns(sigCtr) + ABErrOffset) ]; 
+		end
+	end
 
 	[GBV varG] = evalYukawaSystematicAveAndVariance(x1Vec, x2Vec, sx1Vec, sx2Vec, BMat, sBMat, alphas, lambdas, slope, enableSystematics, SysNoX);
 
@@ -50,8 +64,8 @@ function X2 = chiSquareWSystematics( pM , x)
 %	hist(log10(abs(pM(:,torerrCol))), 100)
 %	hold off; 
 
-	X2 = sum( (pM(:,torCol) - GBV ).^2  %lqr
-		./(pM(:,torerrCol).^2 +varG )
+	X2 = sum( (pM(:,fitColumn) - GBV ).^2  %lqr
+		./(pM(:,fitErrColumn).^2 +varG )
 		); %sum
 
 %	X2PerNDF = [X2 X2/(rows(pM) - rows(x))]
@@ -63,7 +77,7 @@ function X2 = chiSquareWSystematics( pM , x)
 
 	if(X2 < 0)
 		printf('leasqrDiff, varG, torque^2, varG/torerr^2\n');
-		diag = [(GBV- pM(:,torCol)).^2 varG pM(:,torerrCol).^2  varG ./ pM(:,torerrCol).^2];
+		diag = [(GBV- pM(:,fitColumn)).^2 varG pM(:,fitErrColumn).^2  varG ./ pM(:,fitErrColumn).^2];
 		[max(diag); mean(diag); median(diag); min(diag); std(diag)]
 		transpose(x)
 

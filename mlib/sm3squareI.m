@@ -53,9 +53,9 @@ if( !exist('doNotFitTwoOmega') )
 			qTesterFreq1 = bestFreq / 2.0;
 			qTesterWidth1 = 0.05*qTesterFreq1;
 			
-			[b1,s1,r1,bestFreq1,out1]=peakFitter3(torque(:,1),torque(:,2)\
-				-  b(1) * sin(2*pi*bestFreq * torque(:,1)) - \
-				   b(2) * cos(2*pi*bestFreq * torque(:,1))\
+			[b1,s1,r1,bestFreq1,out1]=peakFitter3(torque(:,1),torque(:,2)...
+				-  b(1) * sin(2*pi*bestFreq * torque(:,1)) - ...
+				   b(2) * cos(2*pi*bestFreq * torque(:,1))...
 				,qTesterFreq1-qTesterWidth1,qTesterFreq1+qTesterWidth1);
 		end
 	end
@@ -68,17 +68,17 @@ if( !exist('doNotFitTwoOmega') )
 
 	pwData(:,torqueCol) = pwData(:,torqueCol) - polyval(torqueDriftP, pwData(:,pwTimeCol),[],tDmu);
 
-	pwData(:,torqueCol) =torqueCal*( \
+	pwData(:,torqueCol) =torqueCal*( ...
 				pwData(:,torqueCol) - 
-				b(1) * sin(2*pi*bestFreq * pwData(:,pwTimeCol)) - \
-				b(2) * cos(2*pi*bestFreq * pwData(:,pwTimeCol))  \
+				b(1) * sin(2*pi*bestFreq * pwData(:,pwTimeCol)) - ...
+				b(2) * cos(2*pi*bestFreq * pwData(:,pwTimeCol))  ...
 				);
 
 	if( exist('fitOneOmega'))
 		if(fitOneOmega == true)
-			pwData(:,torqueCol) = pwData(:,torqueCol) - \
-				torqueCal*(b1(1) * sin(2*pi*bestFreq1 * pwData(:,pwTimeCol)) + \
-					   b1(2) * cos(2*pi*bestFreq1 * pwData(:,pwTimeCol))   \
+			pwData(:,torqueCol) = pwData(:,torqueCol) - ...
+				torqueCal*(b1(1) * sin(2*pi*bestFreq1 * pwData(:,pwTimeCol)) + ...
+					   b1(2) * cos(2*pi*bestFreq1 * pwData(:,pwTimeCol))   ...
 				) ;
 		end
 	end 

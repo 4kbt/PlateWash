@@ -11,19 +11,24 @@ f5(x) = 5.6540 * x + 20.6718
 
 DIR = 'aveTempData/'
 
-#set multiplot layout 2,1
+nump = 10;
 
-pl [588:650] \
-	1/0 w p pt 7 lc 1 tit 'attractor thermistor, leg 1',\
-	DIR.'merge13.dat' u ($1/86400):(($3-0.292)+23.847) w p pt 7 ps 0.2 lc 1,\
-	1/0 w p pt 7 lc 3 tit 'attractor thermistor, leg 2',\
-	DIR.'merge16.dat' u ($1/86400):(($3+0.4-0.12-0.292)+23.847) w p pt 7 ps 0.2 lc 3,\
-	1/0 w p pt 7 lc 2 tit 'baseplate thermistor',\
-	DIR.'merge15.dat' u ($1/86400):(($3+0.36-.22-0.292)+23.847) w p pt 7 ps 0.2 lc 2,\
+yr2 = 365*2
+
+#set multiplot layout 2,1
+#pl [585.9+yr2:587.8+yr2] [23.8:24]\
+
+pl [585+yr2:650+yr2] [:25]\
 	1/0 w p pt 7 lc 4 tit 'Short-Range',\
-	DIR.'merge5.dat' u ($1/86400):(f5($3)) w p pt 7 ps 0.2 lc 4,\
+	DIR.'merge5.dat' u ($1/86400+yr2):(f5($3)) every nump w p pt 7 ps 0.2 lc 4,\
 	1/0 w p pt 7 lc 5 tit 'Rot-Wash',\
-	DIR.'merge1.dat' u ($1/86400):(f1($3)) w p pt 7 ps 0.2 lc 5
+	DIR.'merge1.dat' u ($1/86400+yr2):(f1($3)) every nump w p pt 7 ps 0.2 lc 5,\
+	1/0 w p pt 7 lc 1 tit 'attractor thermistor, leg 1',\
+	DIR.'merge13.dat' u ($1/86400+yr2):(($3-0.292)+23.847) every nump w p pt 7 ps 0.2 lc 1,\
+	1/0 w p pt 7 lc 3 tit 'attractor thermistor, leg 2',\
+	DIR.'merge16.dat' u ($1/86400+yr2):(($3+0.4-0.12-0.292)+23.847) every nump w p pt 7 ps 0.2 lc 3,\
+	1/0 w p pt 7 lc 2 tit 'baseplate thermistor',\
+	DIR.'merge15.dat' u ($1/86400+yr2):(($3+0.36-.22-0.292)+23.847) every nump w p pt 7 ps 0.2 lc 2
 
 #	DIR.'merge4.dat' u ($1/86400):(f5($3)) w p pt 7 ps 0.2 lc 6,\
 	DIR.'merge3.dat' u ($1/86400):(f5($3)) w p pt 7 ps 0.2 lc 7

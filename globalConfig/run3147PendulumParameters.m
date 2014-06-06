@@ -13,8 +13,8 @@ HOMEDIR = getenv("HOMEDIR");
 %        'jan13Pendulum'
 
 rhoTi=4507; printInteger(rhoTi, [HOMEDIR '/extracted/titaniumDensity.tex' ]);
-pendulumBodyHeight=0.0321203; printSigNumber(pendulumBodyHeight, [HOMEDIR '/extracted/pendulumBodyHeight.tex' ],6);
-pendulumBodyWidth =0.0431448; printSigNumber(pendulumBodyWidth, [HOMEDIR '/extracted/pendulumBodyWidth.tex' ],6); %How did I get a part in 10^6?
+pendulumBodyHeight=0.0321203; printSigNumber(pendulumBodyHeight, [HOMEDIR '/extracted/pendulumBodyHeight.tex' ],4);
+pendulumBodyWidth =0.0431448; printSigNumber(pendulumBodyWidth,  [HOMEDIR '/extracted/pendulumBodyWidth.tex'  ],4); %How did I get a part in 10^6? Pg 57 of 
 pendulumBodyThickness= 0.070*0.0254; printSigNumber(pendulumBodyThickness, [HOMEDIR '/extracted/pendulumBodyThickness.tex' ], 2); %1 part in 10^2 seems coarse?
 pendulumBodyMass=rhoTi*pendulumBodyHeight*pendulumBodyWidth*pendulumBodyThickness;
 
@@ -105,7 +105,7 @@ spindlePlateID =        0.375*0.0254;	printSigNumber(spindlePlateID  , [HOMEDIR 
 spindlePlateOD =        3.007*0.0254;	printSigNumber(spindlePlateOD  , [HOMEDIR '/extracted/spindlePlateOD.tex'  ] , 4);
 spindlePlateThickness = 0.250 * 0.0254;	printSigNumber(spindlePlateThickness, [HOMEDIR '/extracted/spindlePlateThickness.tex' ], 3);
 
-spindlePlateSetBack = mspindleTipDistance + mspindleLength; \
+spindlePlateSetBack = mspindleTipDistance + mspindleLength; ...
 					printSigNumber(spindlePlateSetBack  , [HOMEDIR '/extracted/spindlePlateSetBack.tex'   ], 3);
 
 

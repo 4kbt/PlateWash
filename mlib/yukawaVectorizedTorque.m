@@ -13,9 +13,9 @@ run3147PendulumParameters
 
 
 %Streamlined
-%answer = alpha*2*pi*G*h1*insetWidth*momentArm*(ph1-pl1)*lambda.^2*(\
-%		pa1  * exp(-position/lambda)                      * (1-exp(-1.0*a1./lambda)) .* (1-exp(-1.0 * da1  /. lambda)) + \
-%		pal1 * exp(-(position+da1)./lambda)               * (1-exp(-1.0*a1./lambda)) .* (1-exp(-1.0 * dal1 /. lambda)) - \
+%answer = alpha*2*pi*G*h1*insetWidth*momentArm*(ph1-pl1)*lambda.^2*(...
+%		pa1  * exp(-position/lambda)                      * (1-exp(-1.0*a1./lambda)) .* (1-exp(-1.0 * da1  /. lambda)) + ...
+%		pal1 * exp(-(position+da1)./lambda)               * (1-exp(-1.0*a1./lambda)) .* (1-exp(-1.0 * dal1 /. lambda)) - ...
 %		pa1  * exp((a1-position-thickness1)/lambda)       * (1-exp(-1.0*a1./lambda)) .* (1-exp(-1.0 * da1  /. lambda)) + \ %%%% SHOULD BE MINUS?!?!?!
 %		pal1 * exp(-(position+thickness1-a1+da1)./lambda) * (1-exp(-1.0*a1./lambda)) .* (1-exp(-1.0 * dal1 /. lambda)));
 
@@ -27,9 +27,9 @@ Atten2l = (1-exp(-1.0 * dal1 ./ lambda));
 alphaM = repmat(alpha, [length(lambda) 1 length(position)]);
 alphaM = permute(alphaM, [3 1 2]);
 
-preans = factors * ( repmat( (lambda.^2 .* Atten1) , length(position), 1) .* (\
-		pa1  * repmat(Atten2 , length(position), 1)  .* ( exp(-position'       * (1./lambda ))-  exp( (a1-position-thickness1)'      * (1./lambda) ) ) + \
-		pal1 * repmat(Atten2l, length(position), 1)  .* ( exp(-(position+da1)' * (1./lambda)) -  exp( -(position+thickness1-a1+da1)' * (1./lambda) ) ) \
+preans = factors * ( repmat( (lambda.^2 .* Atten1) , length(position), 1) .* (...
+		pa1  * repmat(Atten2 , length(position), 1)  .* ( exp(-position'       * (1./lambda ))-  exp( (a1-position-thickness1)'      * (1./lambda) ) ) + ...
+		pal1 * repmat(Atten2l, length(position), 1)  .* ( exp(-(position+da1)' * (1./lambda)) -  exp( -(position+thickness1-a1+da1)' * (1./lambda) ) ) ...
 		 ) );
 
 	answer = zeros(length(position), length(lambda), length(alpha));

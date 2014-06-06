@@ -19,6 +19,7 @@ pendulumI=2.369e-6;
 kappa=4*pi*pi*pendulumF0*pendulumF0*pendulumI; printSigNumber(kappa,[HOMEDIR 'extracted/kappa.tex'],1);
 psdWidth=1.016e-2; printDecimal(psdWidth*10.0, [HOMEDIR 'extracted/detectorWidthMillimeters.tex'], 2); %Quoted number from OSI for SC-10.
 focalLength=400e-3;
+autocolNoise = 5e-8; printSigNumber(autocolNoise, [HOMEDIR 'extracted/autocolNoise.tex'],1);
 
 psdToRadians = psdWidth/focalLength/2.0/2.0; printDecimal(psdToRadians*2.0*1000, [HOMEDIR 'extracted/autocollDynamicRangePeak2PeakmRad.tex'], 2); %2 for detector width, 2 for single-bounce.
 
@@ -39,6 +40,7 @@ testInjection = 1;
 dTime = 55;   printInteger(dTime, [HOMEDIR 'extracted/dTime.tex']);
 pTime = 15;   printInteger(pTime, [HOMEDIR 'extracted/pTime.tex']);
 stepPeriod = 128; printInteger(stepPeriod, [HOMEDIR 'extracted/stepPeriod.tex']);
+printSigNumber(1/(stepPeriod*2), [HOMEDIR 'extracted/switchFrequency.tex'], 4);
 
 weight = 1;
 
@@ -89,23 +91,28 @@ printInteger( 1.0./filterHigh/2, [HOMEDIR 'extracted/filterHighLag.tex']);
 pfTouch =  56+17+ 12+2 ;  %swag
 touch2937 =  147 -2 + pfTouch;
 %Distance cut
-shortCut = (pfTouch+10)*1e-6;
+shortCut = (pfTouch+10)*1e-6; printSigNumber(shortCut, [HOMEDIR 'extracted/shortCut.tex'], 2);
+IFOTouchThreshold = 4e-9;
 
 
 %Commented because thresholding is now dynamic in torErrThresh()
 %torErrThresh = 1e-14;
 torErrMin    = 1e-18;
+%Used to for artifically increasing noise to provide partial-blindness.
+torqueBlur   = 1e-12;  printSigNumber(torqueBlur, [HOMEDIR 'extracted/torqueBlur.tex'], 2);
 
 %fprintf('# read Complete \n')
 
 %'INSUFFICENT bootstrap counts'
-NumberOfYukawaBootstraps = 100; %was 1000
+NumberOfYukawaBootstraps = 300; %was 1000
 NumberOfArbFitBootstraps = NumberOfYukawaBootstraps; % was 300
 
 foilResonance = 1580;
 foilResonanceErr = 5;      printSigError(foilResonance, foilResonanceErr         , [HOMEDIR '/extracted/foilResonance.tex']);
 
-foilThickness = 12e-6; printSigNumber(foilThickness, [HOMEDIR '/extracted/foilThickness.tex'], 2);
+[foilThickness foilThicknessErr foilStd] = getFoilThickness;
+
+printSigError(foilThickness, foilThicknessErr , [HOMEDIR '/extracted/foilThickness.tex']);
 
 foilDensity = 8230; printSigNumber(foilDensity, [HOMEDIR '/extracted/foilDensity.tex'], 2);
 
@@ -115,11 +122,14 @@ foilDiameter = 77e-3; printSigNumber(foilDiameter, [HOMEDIR '/extracted/foilDiam
 IFOFringeTop = 3.28;
 IFOFringeBot = 1.639;
 
-IFODistCal = 370e-9/(3.28-1.639);
+IFODistPerFringe = 370e-9;
+IFODistCal = IFODistPerFringe/(3.28-1.639);
+injectIFOSystematic = 1;
+
 
 
 %Systematic uncertainties
-NumFitSystematics = 3;
+NumFitSystematics = numSystematics+1;
 enableSystematics = 1;
 if(enableSystematics == 0)
 	fprintf('Systematic uncertainties disabled!');
@@ -129,9 +139,12 @@ if(SysNoX == 1)
 	fprintf('Systematics handling by bootstrap');
 end
 
-SysUB = 1e8;
+SysUB = 1e20;
 LamLB = 1e-6/XLUnits;
-LamUB = 1e-2/XLUnits;
+LamUB = 1/XLUnits;
 SloUB = Inf; %1e-9/XSUnits;
 
-AppliedMagneticFieldUncertainty = 1e-8; %TotalBogus!
+%1e-8 gives beautiful fits, of course.
+AppliedMagneticFieldUncertainty = 1e-3; %TotalBogus!
+heaterTemperatureUncertainty = 0.020; %TotalBogus!
+heaterTempGradientUncertainty = 0.001; %TotalBogus!

@@ -1,6 +1,15 @@
 pause = 0;
 more off 
 
+if (1 == injectIFOSystematic)
+	%Update me!
+	load( [HOMEDIR '/ifo/foilTranslationToTorque.dat']);
+
+        %Load bootstrapped IFO
+	[ifoP ifoV] = loadBSFits( 'output/bootstrapArbFit.bootstrappedFits.dat');
+end
+
+
 %Bootstrap loop
 for bootStrapCounter = 1:NumberOfYukawaBootstraps
 
@@ -8,6 +17,14 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 
 	%Bootstrapping
 	pMd = bootstrapData(pM);
+
+	if(1 == injectIFOSystematic)
+		%Fake torque
+		outTor = foilTranslationToTorque*fitVectorPolyLinearSpline( [pMd(:,aCol) pMd(:,bCol)], ifoP(bootStrapCounter,:), ifoV(bootStrapCounter, : ) );
+		%Have to _subtract_ the systematic ;).
+		pMd(:,torCol) = pMd(:,torCol) - outTor;
+	end
+
 	if(SysNoX == 1)
 		%Fuzz x errorbars
 		pMd(:,aCol) = pMd(:,aCol) + randn(rows(pMd),1) .* pMd(:,aErrCol);
@@ -30,13 +47,19 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 	NumIterations = 400; %default 100, but good fits are getting truncated at 200
 
 	%Define fit function
-	cSFunc = @(x) chiSquareWSystematics(pMd, x);
+	cSFunc = @(x) chiSquareWSystematics(pMd, x, signalColumns, torCol);
 
 	%Fit begins
 	ranLam = 10.^( rand(NumFitSystematics,1) *3.0-6)/XLUnits;
 	ranAlp = (-1).^(round(rand(NumFitSystematics,1))+1).*10.^(rand(NumFitSystematics,1)*11-5);
 	ranSlo = (rand-0.5)*10e-12/XSUnits;
-	ranSeed = [ ranSlo ranLam(1), ranAlp(1), ranLam(2), ranAlp(2), ranLam(3), ranAlp(3) ];
+
+	%Compose ranSeed
+	ranSeed = [ ranSlo ] 
+	for ranCtr = 1:rows(ranLam)
+		ranSeed = [ranSeed ranLam(ranCtr) ranAlp(ranCtr)];
+	end
+	
 	try
 		%When analyzing, make a cut on csMin
 		tic

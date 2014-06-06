@@ -2,7 +2,7 @@ include ../../Makefile.inc
 
 PREREQUISITES := $(HOMEDIR)/runAnalysis/results Makefile
 
-all: shortStroke longStroke plots/aveTempPlot.eps
+all: shortStroke longStroke plots/aveTempPlot.eps fftPlots
 	$(MAKE) -C plots
 
 TSHORT := thermalShortStroke.m
@@ -29,17 +29,43 @@ $(LONGTEX) $(LONGDAT)  longStroke  :  $(TLONG) $(PREREQUISITES)
 	$(OCT) $(TLONG)
 	$(HOMEDIR)/bin/mathify.sh extracted/*
 
-aveTemp : $(HOMEDIR)/data/thermistorData/ avePlots.sh
+aveTempData/aveTemp : $(HOMEDIR)/data/thermistorData/ avePlots.sh
 	./avePlots.sh $(HOMEDIR)/glib/averageThermData.awk $(HOMEDIR)/data/thermistorData/
+	touch aveTempData/aveTemp
 	
-plots/aveTempPlot.eps : aveTempPlot.gpl aveTemp
+plots/aveTempPlot.eps : aveTempPlot.gpl aveTempData/aveTemp
 	$(GNU) aveTempPlot.gpl
+
+#These five calls are very similar, broken out only for parallelism
+attr1.dat : aveTempData/aveTemp attr1.m
+	$(OCT) attr1.m
+
+attr2.dat : aveTempData/aveTemp attr2.m
+	$(OCT) attr2.m
+
+baseP.dat : aveTempData/aveTemp baseP.m
+	$(OCT) baseP.m
+
+shorR.dat : aveTempData/aveTemp shorR.m
+	$(OCT) shorR.m
+
+rotWa.dat : aveTempData/aveTemp rotWa.m
+	$(OCT) rotWa.m
+
+FFTPLOTDATA := run3218LongRedHigh.dat run3217ShortRedHigh.dat run3222LongBlueHigh.dat run3221ShortBlueHigh.dat  run3206LongNoHigh.dat
+
+$(FFTPLOTDATA):  attr1.dat attr2.dat baseP.dat shorR.dat rotWa.dat tempFFT.m trimAndFFT.m trimAndFFT2.m
+	$(OCT) tempFFT.m
+
+fftPlots : $(FFTPLOTDATA) makeFFTPlots.gpl
+	$(GNU) makeFFTPlots.gpl
 
 
 clean : 
 	-rm plots/*.dat
 	-rm extracted/*.tex
 	-rm aveTempData/*.dat
+	-rm aveTempData/aveTemp
 	$(MAKE) -C plots clean
 
 toy : 

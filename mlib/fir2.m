@@ -59,7 +59,7 @@ function b = fir2(n, f, m, grid_n, ramp_n, window)
   endif
 
   ## find the grid spacing and ramp width
-  if (nargin>4 && length(grid_n)>1) || \
+  if (nargin>4 && length(grid_n)>1) || ...
 	(nargin>5 && (length(grid_n)>1 || length(ramp_n)>1))
     usage("grid_n and ramp_n must be integers");
   endif

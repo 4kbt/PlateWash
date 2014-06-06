@@ -3,16 +3,6 @@ function [GBV fvG] = evalYukawaSystematicAveAndVariance(x1Vec, x2Vec, sx1Vec, sx
 	r = rows(x1Vec);
 	b = columns(BMat);
 
-%{		rows(x2Vec)  
-%                rows(sx1Vec)
-%                rows(sx2Vec)
-%                rows(BMat) 
-%                rows(sBMat) 
-%                columns(sBMat)
-%                rows(alphas)
-%                rows(lambdas)
-%                size( slope )
-%}
 
 	if( ~(  (rows(x2Vec)  == r ) & ...
 		(rows(sx1Vec) == r ) & ...
@@ -23,6 +13,16 @@ function [GBV fvG] = evalYukawaSystematicAveAndVariance(x1Vec, x2Vec, sx1Vec, sx
 		(rows(alphas) == b ) & ...
 		(rows(lambdas) == b) & ...
 		(size( slope ) == [1 1]) ) )
+
+		rows(x2Vec)  
+                rows(sx1Vec)
+                rows(sx2Vec)
+                rows(BMat) 
+                rows(sBMat) 
+                columns(sBMat)
+                rows(alphas)
+                rows(lambdas)
+		size( slope )
 
 		error('malformed argument!');
 	end

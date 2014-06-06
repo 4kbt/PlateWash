@@ -11,9 +11,10 @@ LAG24:= run3224torqueLag
 LAG69:= run3169lags
 TOR67:= run3167torqueNoise
 NOT47:= run3147NoiseOverTime
+AOT47:= run3147AttractorOverTime
 ALB47:= run3147attractorLeakBack
 
-all: $(FFR).eps $(FILT).eps $(WIND).eps $(LAG20).eps $(LAG24).eps $(LAG69).eps $(TOR67).eps $(NOT47).eps $(ALB47).eps
+all: $(FFR).eps $(FILT).eps $(WIND).eps $(LAG20).eps $(LAG24).eps $(LAG69).eps $(TOR67).eps $(NOT47).eps $(ALB47).eps $(AOT47).eps
 
 #Filter transfer functions
 $(FFR).eps: $(FFR).m $(FFR).gpl
@@ -52,6 +53,10 @@ $(TOR67).eps : $(TOR67).m $(TOR67).gpl
 
 run3147NoiseThroughTheDay.eps $(NOT47).eps : $(NOT47).gpl $(HOMEDIR)/glib/
 	$(GNU) $(NOT47).gpl
+
+$(AOT47).eps : $(AOT47).gpl $(HOMEDIR)/glib/
+	$(GNU) $(AOT47).gpl
+
 
 $(ALB47).eps : $(ALB47).m $(ALB47).gpl
 	$(OCT) $(ALB47).m

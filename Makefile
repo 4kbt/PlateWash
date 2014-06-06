@@ -16,10 +16,11 @@ dissertation: gitlog.log
 	$(MAKE) $(PARALLEL) -C mlib
 	$(MAKE) $(PARALLEL) -C NewtonianSimulation
 	$(MAKE) $(PARALLEL) -C calibration
+	$(MAKE) $(PARALLEL) -C autocollimator 
 	$(MAKE) $(PARALLEL) -C runAnalysis
+	$(MAKE) $(PARALLEL) -C ifo
 	$(MAKE) $(PARALLEL) -C systematics 
 	$(MAKE) $(PARALLEL) -C bootstrap
-	$(MAKE) $(PARALLEL) -C ifo
 	$(MAKE) -C thesis 
 
 gitlog.log: 

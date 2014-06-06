@@ -2,6 +2,8 @@ pwrunNumber  = '3153'
 psrunNumber  = '3153';
 iforunNumber = '3153';
 
+FAKING_THE_INTERFEROMETER_ENTIRELY = 0;
+
 preSync3
 
 

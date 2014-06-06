@@ -14,3 +14,6 @@ preSync3
 %ifoStartSec = ifoStartSec + 4100;
 
 sync3
+
+pwData(:,temperatureCol) = 0.2;
+pwData(:,tempGradientCol) = 0.05;

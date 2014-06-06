@@ -18,6 +18,8 @@ fn = 'output/bootstrapYukawa.SimulFloata6l0.00031slop-4e-12.dat'
 fn = system("echo $GNUPLOTME");
 outfile = fn .".eps"
 
+load HOMEDIR.'/globalConfig/columnNames.m'
+
 set term postscript enhanced solid color size 9,15
 set output outfile 
 
@@ -25,7 +27,7 @@ set logsc x
 set logsc y
 
 chiCut = 2 #1.6 
-chiMin  = 0.75 
+#chiMin  = 0.75 
 #chiCut = 1.6e10 
 chiMin  = 0.75e-10
 
@@ -36,7 +38,7 @@ chiMin  = 0.75e-10
 
 set title 'bootstrapped best fits, with systematics'
 
-NumSystematics = 3
+NumSystematics = numSystematics+1 #treats science as a systematic
 
 NDF = 1+2*NumSystematics+5+1+2*NumSystematics+2
 
