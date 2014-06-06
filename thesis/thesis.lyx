@@ -10446,7 +10446,7 @@ The thickness of the foil was determined by making many micrometer measurements
 As measured the foil is 
 \begin_inset CommandInset include
 LatexCommand input
-filename "/home/charlie/Eotwash/extracted/foilThickness.tex"
+filename "../extracted/foilThickness.tex"
 
 \end_inset
 
