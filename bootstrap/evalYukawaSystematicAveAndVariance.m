@@ -3,6 +3,10 @@ function [GBV fvG] = evalYukawaSystematicAveAndVariance(x1Vec, x2Vec, sx1Vec, sx
 	r = rows(x1Vec);
 	b = columns(BMat);
 
+	if( sum( lambdas < 0 ) > 0 )
+		lambdas
+		error("cannot evaluate negative lambdas!");
+	end
 
 	if( ~(  (rows(x2Vec)  == r ) & ...
 		(rows(sx1Vec) == r ) & ...

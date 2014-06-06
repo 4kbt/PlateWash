@@ -24,6 +24,7 @@ function X2 = chiSquareWSystematics( pM , x, signalColumns, fitColumn)
 		alphas  = [alphas ; x(rowctr+1)];
 	end
 
+	lambdas = 10.^lambdas; 
 	lambdas = lambdas * XLUnits;
 	slope = x(1) * XSUnits;
 	

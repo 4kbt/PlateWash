@@ -1,4 +1,3 @@
-pause = 0;
 more off 
 
 if (1 == injectIFOSystematic)
@@ -50,7 +49,7 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 	cSFunc = @(x) chiSquareWSystematics(pMd, x, signalColumns, torCol);
 
 	%Fit begins
-	ranLam = 10.^( rand(NumFitSystematics,1) *3.0-6)/XLUnits;
+	ranLam = log10(10.^( rand(NumFitSystematics,1) *3.0-6)/XLUnits);
 	ranAlp = (-1).^(round(rand(NumFitSystematics,1))+1).*10.^(rand(NumFitSystematics,1)*11-5);
 	ranSlo = (rand-0.5)*10e-12/XSUnits;
 
@@ -59,12 +58,15 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 	for ranCtr = 1:rows(ranLam)
 		ranSeed = [ranSeed ranLam(ranCtr) ranAlp(ranCtr)];
 	end
-	
+
+	ranSeed
+
 	try
 		%When analyzing, make a cut on csMin
 		tic
 		[x, csMin, fitInfo, iter, nf]   = sqp(ranSeed, cSFunc, [], [], LowerBounds, UpperBounds,NumIterations);
 		[csMin fitInfo iter nf]
+		x = unLogifyLambdas(x)
 		bsO = [ transpose(x) csMin nf iter fitInfo ranSeed bootStrapCounter toc rows(pM)];
 		%if fit converged, save it.
 		if(fitInfo == 101) 
