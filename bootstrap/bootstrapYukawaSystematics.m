@@ -8,7 +8,6 @@ if (1 == injectIFOSystematic)
 	[ifoP ifoV] = loadBSFits( 'output/bootstrapArbFit.bootstrappedFits.dat');
 end
 
-
 %Bootstrap loop
 for bootStrapCounter = 1:NumberOfYukawaBootstraps
 
@@ -20,8 +19,10 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 	if(1 == injectIFOSystematic)
 		%Fake torque
 		outTor = foilTranslationToTorque*fitVectorPolyLinearSpline( [pMd(:,aCol) pMd(:,bCol)], ifoP(bootStrapCounter,:), ifoV(bootStrapCounter, : ) );
-		%Have to _subtract_ the systematic ;).
-		pMd(:,torCol) = pMd(:,torCol) - outTor;
+
+		%Subtract the systematic
+		ifoSubtract = mod(bootStrapCounter,3) - 1;
+		pMd(:,torCol) = pMd(:,torCol) + ifoSubtract * outTor;
 	end
 
 	if(SysNoX == 1)
@@ -29,16 +30,6 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 		pMd(:,aCol) = pMd(:,aCol) + randn(rows(pMd),1) .* pMd(:,aErrCol);
 		pMd(:,bCol) = pMd(:,bCol) + randn(rows(pMd),1) .* pMd(:,bErrCol);
 	end
-
-	%'bootstrapping complete'
-
-	%Save the real data
-
-	SlopeFit  = [ 1 0 0 0 0 0 0];
-	YukawaFit = [ 0 1 1 0 0 0 0];
-	MagFit    = [ 0 0 0 1 1 0 0];
-	Mag2Fit   = [ 0 0 0 0 0 1 1];
-	FitOnlyThese = SlopeFit + YukawaFit + MagFit + Mag2Fit;
 
 	%bounds defined in FixedParameters
 	LowerBounds = [-SloUB, repmat([LamLB, -SysUB], 1, NumFitSystematics)];
@@ -64,10 +55,17 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 	try
 		%When analyzing, make a cut on csMin
 		tic
+
+		%Do the fit.
 		[x, csMin, fitInfo, iter, nf]   = sqp(ranSeed, cSFunc, [], [], LowerBounds, UpperBounds,NumIterations);
+
+		%Display fit outcome
 		[csMin fitInfo iter nf]
+
+		%Output fit results
 		x = unLogifyLambdas(x)
-		bsO = [ transpose(x) csMin nf iter fitInfo ranSeed bootStrapCounter toc rows(pM)];
+		bsO = [ transpose(x) csMin nf iter fitInfo ranSeed bootStrapCounter toc rows(pM) ifoSubtract];
+
 		%if fit converged, save it.
 		if(fitInfo == 101) 
 	       		bootstrapOut = [bootstrapOut; bsO];
