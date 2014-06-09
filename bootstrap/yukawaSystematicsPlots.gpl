@@ -1,20 +1,3 @@
-#fn = 'output/bootstrapYukawa.SimulFloata400l0.0003slop2e-12SQP.dat'
-#fn = 'output/bootstrapYukawa.SimulFloata300l0.0003slop2e-12SQP.dat'
-#fn = 'output/bootstrapYukawa.SimulFloata3000l0.0003slop2e-12SQP.dat'
-#fn = 'output/bootstrapYukawa.SimulFloata3l0.0001slop2e-12SQP.dat'
-#fn = 'output/bootstrapYukawa.SimulFloata1l0.0001slop2e-12SQP.dat'
-#fn = 'output/bootstrapYukawa.SimulFloata1000l0.0001slop2e-12SQP.dat'
-fn = 'output/bootstrapYukawa.SimulFloata0l0.0003slop2e-12SQP.dat'
-fn = 'output/bootstrapYukawa.SimulFloata2l0.0003slop2e-12SQP.dat'
-fn = 'output/bootstrapYukawa.SimulFloata4l0.0003slop2e-12SQP.dat'
-fn = 'output/bootstrapYukawa.SimulFloata4.01l0.0003slop2e-12SQP.dat'
-fn = 'output/bootstrapYukawa.SimulFloata0l0.00031slop0SQP.dat'
-fn = 'output/bootstrapYukawa.SimulFloata3.14l0.00031slop1e-12SQP.dat'
-#beautiful clumping
-fn = 'output/bootstrapYukawa.SimulFloata10l0.00031slop1e-12SQP.dat'
-fn = 'output/bootstrapYukawa.SimulFloata5l0.00031slop-4e-12SQP.dat'
-fn = 'output/bootstrapYukawa.SimulFloata6l0.00031slop-4e-12.dat'
-
 fn = system("echo $GNUPLOTME");
 outfile = fn .".eps"
 
