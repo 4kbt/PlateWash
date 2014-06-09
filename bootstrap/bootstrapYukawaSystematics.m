@@ -65,6 +65,7 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 		%Output fit results
 		x = unLogifyLambdas(x)
 		bsO = [ transpose(x) csMin nf iter fitInfo ranSeed bootStrapCounter toc rows(pM) ifoSubtract];
+		injSubCol = columns(bsO);
 
 		%if fit converged, save it.
 		if(fitInfo == 101) 
@@ -73,15 +74,17 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 
 		if(1 == testInjection & ~exist("fileInjection"))
 			injParameters = [lambdasInjected/XLUnits alphasInjected injSlope/XSUnits];
-			outfilename = ['output/bootstrapYukawa.Sysa' num2str(alpha) 'l' num2str(lambda) 'slop' num2str(injSlope) '.dat'];
+			outfilename = ['output/bootstrapYukawa.Sysa' num2str(alpha) 'l' num2str(lambda) 'slop' num2str(injSlope) ];
 		elseif(exist("fileInjection"))
 			injParameters = [0 0 0];
-			outfilename = ['output/bootstrapYukawa.SysaInjected' '.dat']; 
+			outfilename = ['output/bootstrapYukawa.SysaInjected' ]; 
 		else
 			injParameters = [0 0 0];
-			outfilename = ['output/bootstrapYukawa.Sys' '.dat'];
+			outfilename = ['output/bootstrapYukawa.Sys' ];
 		end
-		save( outfilename, "bootstrapOut", "injParameters");
+		
+		%Outputs
+		outputBSO( outfilename, bootstrapOut, injParameters, injSubCol );
 	catch
 		'FIT ERROR!'
 		errorMessage
