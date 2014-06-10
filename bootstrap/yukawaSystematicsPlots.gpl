@@ -1,3 +1,5 @@
+set macro
+
 fn = system("echo $GNUPLOTME");
 outfile = fn .".eps"
 
@@ -9,15 +11,13 @@ set output outfile
 set logsc x
 set logsc y
 
-chiCut = 2 #1.6 
-#chiMin  = 0.75 
-#chiCut = 1.6e10 
+chiCut = 2 
+#chiMin  = 0.75 #e-10
 chiMin  = 0.75e-10
 
-#chiCut = 1e3
-#chiMin = 1e-6
+iterMin =  15 
 
-
+cutFunc = "( (column(chiCol) < chiCut*column(NDF)) & (column(chiCol) > chiMin*column(NDF)) & (column(iterCol) > iterMin ))"
 
 set title 'bootstrapped best fits, with systematics'
 
@@ -25,6 +25,7 @@ NumSystematics = numSystematics+1 #treats science as a systematic
 
 NDF = 1+2*NumSystematics+5+1+2*NumSystematics+2
 chiCol = 1+2*NumSystematics+1
+iterCol = 1 + 2 * NumSystematics + 3
 
 alMax = 1e8
 alMin = 1e-6
@@ -40,7 +41,7 @@ set multiplot layout 4,1
 
 pl [:][:]\
 	for [ctr=NumSystematics:1:-1] \
-	fn index 0 u (column(chiCol)<chiCut*column(NDF) & column(chiCol)>chiMin*column(NDF) ? column(2*ctr): 1/0):( column(2*ctr+1)) w p lc ctr pt 7 ps ptsz,\
+	fn index 0 u ( @cutFunc ? column(2*ctr): 1/0):( column(2*ctr+1)) w p lc ctr pt 7 ps ptsz,\
 	for [ctr=NumSystematics:1:-1] \
 	fn index 1 u (column(ctr)):(column(ctr+NumSystematics)) w p lc ctr pt 1 ps ptsz*3
 	
@@ -56,7 +57,7 @@ set xlabel 'lambda'
 
 pl [:][:]\
 	for [ctr=NumSystematics:1:-1] \
-	fn index 0 u (column(chiCol)<chiCut*column(NDF) & column(chiCol)>chiMin*column(NDF) ? column(2*ctr): 1/0):( -column(2*ctr+1)) w p lc ctr pt 7 ps ptsz,\
+	fn index 0 u (@cutFunc ? column(2*ctr): 1/0):( -column(2*ctr+1)) w p lc ctr pt 7 ps ptsz,\
 	for [ctr=NumSystematics:1:-1] \
 	fn index 1 u (column(ctr)):(-column(ctr+NumSystematics)) w p lc ctr pt 1 ps ptsz*3
 	
@@ -69,18 +70,18 @@ set yrange [:] noreverse
 set ylabel 'slope'
 set xlabel 'fit #'
 pl \
-	fn index 0 u (column(chiCol)<chiCut*column(NDF) & column(chiCol)>chiMin*column(NDF)?  $1 : 1/0) w p pt 7 ps ptsz lc 1 tit 'positive',\
-	fn index 0 u (column(chiCol)<chiCut*column(NDF) & column(chiCol)>chiMin*column(NDF)? -$1 : 1/0) w p pt 7 ps ptsz lc 3 tit 'negative',\
+	fn index 0 u ( @cutFunc ?  $1 : 1/0) w p pt 7 ps ptsz lc 1 tit 'positive',\
+	fn index 0 u ( @cutFunc ? -$1 : 1/0) w p pt 7 ps ptsz lc 3 tit 'negative',\
 	fn index 1 u (column(NumSystematics*2+1)) w p pt 1 ps ptsz*3 lc 1 lw 2 tit 'injected signal, if positive',\
 	fn index 1 u (-column(NumSystematics*2+1)) w p pt 1 ps ptsz*3 lc 3 lw 2 tit 'injected signal, if negative'
 	
 	
 set logsc y 
-set ylabel 'chi squared'
+set ylabel 'chi squared/NDF'
 pl \
-	fn index 0 u (column(chiCol)) w p pt 7 ps ptsz lc 3,\
-	fn index 0 u (chiMin*column(NDF)) w l lt 1 lw 2 tit 'min',\
-	fn index 0 u (chiCut*column(NDF)) w l lt 3 lw 2 tit 'max'
+	fn index 0 u (column(iterCol) > iterMin ? column(chiCol)/column(NDF) : 1/0) w p pt 7 ps ptsz lc 3,\
+	fn index 0 u (chiMin) w l lt 1 lw 2 tit 'min',\
+	fn index 0 u (chiCut) w l lt 3 lw 2 tit 'max'
 
 unset multiplot
 unset xlabel
