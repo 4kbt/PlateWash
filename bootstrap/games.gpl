@@ -1,0 +1,39 @@
+reset
+
+fn = 'output/bootstrapYukawa.SysMerge.dat'
+#fn = 'output/bootstrapYukawa.Sysa0l0.0002slop-4e-12.dat'
+
+#set xrange [1e-3:1e3]
+
+set logsc
+
+ pl\
+	fn u 2:($14 > 20 ? $3 : 1/0) w p pt 7 ps 0.3 lc 3,\
+	fn u 2:($14 < 20 ? $3 : 1/0) w p pt 7 ps 0.3 lc 1
+
+set key noauto
+
+set multiplot layout 2,1
+
+co = 20
+
+pl\
+	fn u 2:(($30 == -1 ) &($14 > co) ?  $3: 1/0) w p pt 7 ps 0.3 lc 3,\
+	fn u 2:(($30 ==  0 ) &($14 > co) ?  $3: 1/0) w p pt 7 ps 0.3 lc 2,\
+	fn u 2:(($30 ==  1 ) &($14 > co) ?  $3: 1/0) w p pt 7 ps 0.3 lc 1,\
+	1 lt -1
+
+set yrange [] reverse
+set key below
+pl\
+	fn u 2:(($30 == -1 ) &($14 > co) ? -$3: 1/0) w p pt 7 ps 0.3 lc 3 tit 'subtracted',\
+	fn u 2:(($30 ==  0 ) &($14 > co) ? -$3: 1/0) w p pt 7 ps 0.3 lc 2 tit 'null',\
+	fn u 2:(($30 ==  1 ) &($14 > co) ? -$3: 1/0) w p pt 7 ps 0.3 lc 1 tit 'added',\
+	1 lt -1 
+unset multiplot
+
+#unset logsc x
+#unset yrange
+#pl \
+#	fn u 0:(($14 > co) ? $12: 1/0) w p pt 7 ps 0.3 lc 3
+
