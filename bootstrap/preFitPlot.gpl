@@ -1,14 +1,54 @@
+reset
 fn = system("echo $GNUPLOTME");
 outfile = fn .".eps"
 
-set term postscript enhanced solid color size 9,15
+set term postscript enhanced solid color size 15,15
 set output outfile
+
+set multiplot layout 2,2
 
 set palette
 set key noauto
 
+smallRange = 50
+bigRange = 1000
+
 set xlabel 'A position ({/Symbol m}m)'
 set ylabel 'B position ({/Symbol m}m)'
 set cblabel 'torque difference (fN-m)'
+set size square
+set cbrange [-bigRange:bigRange]
 
-pl fn u ( $1 * 1e6 ):( $2 * 1e6 ):( $3*1e15 ) pt 7 ps 0.5 palette
+pl fn index 0  u ( $1 * 1e6 ):( $2 * 1e6 ):( abs($3)<1e12 ? $3*1e15 : 1/0) pt 7 ps 0.5 palette
+
+
+set cbrange [-smallRange:smallRange]
+
+replot
+
+sq = 1./sqrt(2)
+
+set xlabel 'distance from A=B ({/Symbol m}m)'
+set ylabel 'torque difference (fN-m)'
+set cblabel 'distance along diagonal ({/Symbol m}m)'
+set cbrange [0:bigRange]
+
+pl [][]\
+   fn u ((($1*(-sq) + $2*(sq))*1e6)):($4 == 1 ? ($3*1e15): 1/0):(($1+$2)*sq*1e6) w p pt 7 ps 0.1 palette,\
+   fn u ((($1*(-sq) + $2*(sq))*1e6)):($4 == 0 ? ($3*1e15): 1/0):(($1+$2)*sq*1e6) w p pt 7 ps 0.1 palette,\
+   fn u ((($1*(-sq) + $2*(sq))*1e6)):($4 ==-1 ? ($3*1e15): 1/0):(($1+$2)*sq*1e6) w p pt 7 ps 0.1 palette
+
+set yrange [-smallRange:smallRange]
+
+replot
+
+#set yrange [*:*]
+#pl [][]\
+   fn u ((($1*(-sq) + $2*(sq))*1e6)):($4 == 1 ? ($3*1e15): 1/0) w p pt 7 ps 0.1 tit 'systematic added',\
+   fn u ((($1*(-sq) + $2*(sq))*1e6)):($4 ==-1 ? ($3*1e15): 1/0) w p pt 7 ps 0.1 tit 'systematic removed',\
+   fn u ((($1*(-sq) + $2*(sq))*1e6)):($4 == 0 ? ($3*1e15): 1/0) w p pt 7 ps 0.1 tit 'no correction'
+
+#set yrange [-smallRange:smallRange]
+
+#replot
+unset multiplot

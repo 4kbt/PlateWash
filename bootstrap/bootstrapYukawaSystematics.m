@@ -8,6 +8,9 @@ if (1 == injectIFOSystematic)
 	[ifoP ifoV] = loadBSFits( 'output/bootstrapArbFit.bootstrappedFits.dat');
 end
 
+%Define accumulators
+fittedData =[];
+
 %Bootstrap loop
 for bootStrapCounter = 1:NumberOfYukawaBootstraps
 
@@ -31,6 +34,9 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 		pMd(:,torCol) = pMd(:,torCol) + ifoSubtract * outTor;
 	end
 
+	%Output fit information
+	fittedData = [fittedData; pMd(:,aCol) pMd(:,bCol), pMd(:,torCol), ifoSubtract*ones(size(pM(:,aCol)))];
+	save( "-append", preFitPlotFile, "fittedData");
 
 	%bounds defined in FixedParameters
 	LowerBounds = [-SloUB, repmat([LamLB, -SysUB], 1, NumFitSystematics)];
@@ -85,7 +91,7 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 		end
 		
 		%Outputs
-		outputBSO( outfilename, bootstrapOut, injParameters, injSubCol, signalColString );
+		outputBSO( outfilename, bootstrapOut, injParameters, injSubCol, signalColString , fittedData );
 	catch
 		'FIT ERROR!'
 		errorMessage

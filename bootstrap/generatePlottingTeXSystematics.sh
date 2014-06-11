@@ -8,6 +8,22 @@ echo '' > $fn
 
 for names in $(ls output/bootstrapYukawa.Sys*.eps)
 do
+#Begin including triangle plot
+pname=`echo $names | sed 's/\.eps/\.plt\.png/'`
+
+echo '\begin{figure}' >> $fn
+echo '\begin{centering}' >> $fn
+	echo "\\includegraphics[height=0.5\\textheight, angle=270]{$myPathName$pname}" >> $fn
+echo '\par\end{centering}' >> $fn
+
+captionVal=`echo $names | sed "s:$myPathName::" | sed "s:output/bootstrapYukawa\.Sys::" | sed 's/\.dat\.eps//'`
+
+echo "\\caption{Triangle plot for $captionVal}" >> $fn
+
+echo  '\end{figure}' >> $fn
+echo  '\clearpage' >> $fn
+
+#Begin analysis plot
 echo '\begin{figure}' >> $fn
 echo '\begin{centering}' >> $fn
 	echo "\\includegraphics[height=0.5\\textheight, angle=270]{$myPathName$names}" >> $fn
@@ -15,8 +31,9 @@ echo '\par\end{centering}' >> $fn
 
 captionVal=`echo $names | sed "s:$myPathName::" | sed "s:output/bootstrapYukawa\.Sys::" | sed 's/\.dat\.eps//'`
 
-echo "\\caption{$captionVal}" >> $fn
+echo "\\caption{Analysis results for $captionVal}" >> $fn
 
 echo  '\end{figure}' >> $fn
 echo  '\clearpage' >> $fn
+
 done

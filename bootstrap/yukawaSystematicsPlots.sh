@@ -9,11 +9,12 @@ do
 	gnuplot -e "HOMEDIR = \"$1\"" yukawaSystematicsPlots.gpl
 done
 
-for  PLOTME in `ls output/preFitPlotData.a*.dat`
+for  PLOTME in `ls output/*.plt`
 do
 	echo $PLOTME
 	export GNUPLOTME=$PLOTME
 
-	gnuplot -e "HOMEDIR = \"$1\"" preFitPlot.gpl 
+	gnuplot -e "HOMEDIR = \"$1\"" preFitPlot.gpl
+	convert ${PLOTME}.eps -resize 3240x3240 -quality 96 ${PLOTME}.png  
 done
 
