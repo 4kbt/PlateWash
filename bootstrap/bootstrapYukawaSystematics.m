@@ -45,7 +45,7 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 	ranSlo = (rand-0.5)*10e-12/XSUnits;
 
 	%Compose ranSeed
-	ranSeed = [ ranSlo ] 
+	ranSeed = [ ranSlo ]; 
 	for ranCtr = 1:rows(ranLam)
 		ranSeed = [ranSeed ranLam(ranCtr) ranAlp(ranCtr)];
 	end
@@ -84,7 +84,7 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 		end
 		
 		%Outputs
-		outputBSO( outfilename, bootstrapOut, injParameters, injSubCol );
+		outputBSO( outfilename, bootstrapOut, injParameters, injSubCol, signalColString );
 	catch
 		'FIT ERROR!'
 		errorMessage

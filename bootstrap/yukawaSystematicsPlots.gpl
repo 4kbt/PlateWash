@@ -39,7 +39,7 @@ set multiplot layout 4,1
 
 #pl [0.009:102][alMin:alMax]\
 
-pl [:][:]\
+pl [:][alMin:]\
 	for [ctr=NumSystematics:1:-1] \
 	fn index 0 u ( @cutFunc ? column(2*ctr): 1/0):( column(2*ctr+1)) w p lc ctr pt 7 ps ptsz,\
 	for [ctr=NumSystematics:1:-1] \
@@ -55,9 +55,10 @@ set ylabel 'negative alpha'
 set xlabel 'lambda'
 #pl [0.009:102][alMin:alMax]\
 
-pl [:][:]\
+pl [:][alMin:]\
 	for [ctr=NumSystematics:1:-1] \
-	fn index 0 u (@cutFunc ? column(2*ctr): 1/0):( -column(2*ctr+1)) w p lc ctr pt 7 ps ptsz,\
+	fn index 0 u (@cutFunc ? column(2*ctr): 1/0):( -column(2*ctr+1)) w p lc ctr pt 7 ps ptsz\
+			title columnhead(1+2*ctr),\
 	for [ctr=NumSystematics:1:-1] \
 	fn index 1 u (column(ctr)):(-column(ctr+NumSystematics)) w p lc ctr pt 1 ps ptsz*3
 	

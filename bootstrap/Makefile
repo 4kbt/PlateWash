@@ -6,7 +6,7 @@ IFOOUT:=output/bootstrapArbFit.bootstrappedFits.dat
 
 IFOFIGURE := IFOBSFits
 
-FITA:=--eval 'alpha = 100;  lambda = 200e-6; injSlope =  5e-11;'
+FITA:=--eval 'alpha = 0;    lambda = 200e-6; injSlope =  0e-11;'
 FITB:=--eval 'alpha = 0;    lambda = 200e-6; injSlope = -4e-12;'
 FITC:=--eval 'alpha = -100; lambda = 200e-6; injSlope =  6e-12;'
 FITD:=--eval 'alpha = 500;  lambda = 200e-6; injSlope = -1e-11;'
@@ -15,7 +15,8 @@ FITF:=--eval 'alpha = 1;    lambda = 56e-6;  injSlope = -3e-11;'
 FITG:=--eval 'alpha = -1;   lambda = 56e-6;  injSlope = -1e-11;'
 FITH:=--eval 'alpha = 200;  lambda = 30e-6;  injSlope =  0e-11;'
 FITI:=--eval 'alpha = 500;  lambda = 200e-6; injSlope =  1e-11;'
-FITSA:=--eval 'alpha= 100;  lambda=200e-6; injSlope= 5e-11; alpha1=10   ; lambda1=1e-3; alpha2=1000; lambda2=20e-6;'
+FITJ:=--eval 'alpha = 100;  lambda = 200e-6; injSlope =  5e-11;'
+FITSA:=--eval 'alpha= 0  ;  lambda=200e-6; injSlope= 0e-11; alpha1=0    ; lambda1=1e-3; alpha2=0   ; lambda2=20e-6;'
 FITSB:=--eval 'alpha= 0;    lambda=200e-6; injSlope=-4e-12; alpha1=1e4  ; lambda1=4e-6; alpha2=1e2 ; lambda2=2e-4;'
 FITSC:=--eval 'alpha=-100;  lambda=200e-6; injSlope= 6e-12; alpha1=-1e-3; lambda1=3e-4; alpha2=10  ; lambda2=30e-6;'
 FITSD:=--eval 'alpha= 500;  lambda=200e-6; injSlope=-1e-11; alpha1=1e5  ; lambda1=5e-5; alpha2=-583; lambda2=100e-6;'
@@ -24,6 +25,7 @@ FITSF:=--eval 'alpha= -1;   lambda=56e-6 ; injSlope=-3e-11; alpha1=1e-1 ; lambda
 FITSG:=--eval 'alpha= 200;  lambda=56e-6 ; injSlope=-1e-11; alpha1=4    ; lambda1=5e-5; alpha2=-57 ; lambda2=27e-6;'
 FITSH:=--eval 'alpha= 500;  lambda=30e-6 ; injSlope= 0e-11; alpha1=-20  ; lambda1=2e-4; alpha2=-0.1; lambda2=200e-6;'
 FITSI:=--eval 'alpha= 100;  lambda=200e-6; injSlope= 1e-11; alpha1=137  ; lambda1=8e-6; alpha2=4e4 ; lambda2=310e-6;'
+FITSJ:=--eval 'alpha= 100;  lambda=200e-6; injSlope= 5e-11; alpha1=10   ; lambda1=1e-3; alpha2=1000; lambda2=20e-6;'
 
 all : yukawaFit arbFit sysTest newtonianInjection output/makeSymFigureSystematics.tex test output/$(IFOFIGURE).eps
 	$(HOMEDIR)/bin/mathify.sh extracted/
@@ -90,6 +92,8 @@ yukSysFitH: $(PREREQUISITES) $(IFOOUT)
 	$(OCT) $(FITSH) yukawaSystematicsWrapper.m
 yukSysFitI: $(PREREQUISITES) $(IFOOUT)
 	$(OCT) $(FITSI) yukawaSystematicsWrapper.m
+yukSysFitJ: $(PREREQUISITES) $(IFOOUT)
+	$(OCT) $(FITSJ) yukawaSystematicsWrapper.m
 
 arbFit : $(PREREQUISITES)
 	$(OCT) arbFitWrapper.m

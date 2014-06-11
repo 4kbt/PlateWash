@@ -5,7 +5,7 @@ function X2 = chiSquareWSystematics( pM , x, signalColumns, fitColumn)
 
 	chiSquaredSanitizeInputs(x);	
 
-	[alphas lambdas] = constructALFromX( x ) 
+	[alphas lambdas] = constructALFromX( x );
 
 	%Return to SI units
 	lambdas = 10.^lambdas; 
@@ -23,7 +23,7 @@ function X2 = chiSquareWSystematics( pM , x, signalColumns, fitColumn)
 	sx2Vec = pM(:,bErrCol);
 
 	%Dynamic allocation of signal and error columns.
-	[BMat sBMat] = allocateSignalColumns(signalColumns, ABErrOffset, x1Vec, pM)
+	[BMat sBMat] = allocateSignalColumns(signalColumns, ABErrOffset, x1Vec, pM);
 
 	%evaluate it!
 	[GBV varG] = evalYukawaSystematicAveAndVariance(x1Vec, x2Vec, sx1Vec, sx2Vec, BMat, sBMat, alphas, lambdas, slope, enableSystematics, SysNoX);

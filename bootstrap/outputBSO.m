@@ -1,4 +1,17 @@
-function outputBSO( outfn , BSO , injParameters, injSubCol)
+function outputBSO( outfn , BSO , injParameters, injSubCol, signalColString)
+
+	%Compose output string
+	for ctr = 1:columns(signalColString)
+		signalColString(ctr) = ["Lambda\t" cell2mat(signalColString(ctr))];
+	end
+
+	%Add slope name
+	signalColString(2:end+1) = signalColString;
+	signalColString(1) = "Slope";
+
+	outString = strjoin("\t" , signalColString);
+
+	
 
 	om = BSO( BSO(:,injSubCol) == -1 , :);
 	on = BSO( BSO(:,injSubCol) == 0 , :);
@@ -8,9 +21,7 @@ function outputBSO( outfn , BSO , injParameters, injSubCol)
 	fn = [outfn 'SysNull.dat'];
 	fp = [outfn 'SysPlus.dat'];
 
-	save( fm , "om", "injParameters");
-	save( fn , "on", "injParameters");
-	save( fp , "op", "injParameters");
-	
-
+	save( fm , "outString",  "om", "injParameters");
+	save( fn , "outString",  "on", "injParameters");
+	save( fp , "outString",  "op", "injParameters");
 end
