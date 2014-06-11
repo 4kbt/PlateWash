@@ -18,4 +18,5 @@ captionVal=`echo $names | sed "s:$myPathName::" | sed "s:output/bootstrapYukawa\
 echo "\\caption{$captionVal}" >> $fn
 
 echo  '\end{figure}' >> $fn
+echo  '\clearpage' >> $fn
 done
