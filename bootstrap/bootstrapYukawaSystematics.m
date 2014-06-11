@@ -15,6 +15,12 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 
 	%Bootstrapping
 	pMd = bootstrapData(pM);
+	
+	if(SysNoX == 1)
+		%Fuzz x errorbars
+		pMd(:,aCol) = pMd(:,aCol) + randn(rows(pMd),1) .* pMd(:,aErrCol);
+		pMd(:,bCol) = pMd(:,bCol) + randn(rows(pMd),1) .* pMd(:,bErrCol);
+	end
 
 	if(1 == injectIFOSystematic)
 		%Fake torque
@@ -25,11 +31,6 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 		pMd(:,torCol) = pMd(:,torCol) + ifoSubtract * outTor;
 	end
 
-	if(SysNoX == 1)
-		%Fuzz x errorbars
-		pMd(:,aCol) = pMd(:,aCol) + randn(rows(pMd),1) .* pMd(:,aErrCol);
-		pMd(:,bCol) = pMd(:,bCol) + randn(rows(pMd),1) .* pMd(:,bErrCol);
-	end
 
 	%bounds defined in FixedParameters
 	LowerBounds = [-SloUB, repmat([LamLB, -SysUB], 1, NumFitSystematics)];
