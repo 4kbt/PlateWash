@@ -1,4 +1,4 @@
 preFit
-%preFitPlot
+preFitPlot
 format long
 bootstrapYukawaSystematics
