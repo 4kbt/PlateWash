@@ -4,6 +4,7 @@ if(exist("DoNotExtractFixedParameters"))
         function printInteger() ;  end
         function printSigNumber() ; end
         function printSigError();  end
+	function printDecimal();   end
 	function fprintf(); 	   end
 end
 
