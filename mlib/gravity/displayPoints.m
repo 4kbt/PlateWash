@@ -1,4 +1,4 @@
-%Companiou function to pointMassGravity
+%Companion function to pointMassGravity
 %Displays test mass (array1) in blue, field mass (array2) in red
 function displayPoints(array1, array2)
 
