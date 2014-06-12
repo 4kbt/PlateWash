@@ -4,7 +4,7 @@
 
 for i in $@
 do
-	if [ `head -c 1 $i` != '$' ]
+	if [ "`head -c 1 $i`" != '$' ]
 	then
 		sed -i '1i \$' $i
 		echo $ >> $i
