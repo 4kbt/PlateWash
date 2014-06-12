@@ -128,3 +128,4 @@ TeXFigure : generatePlottingTeX.sh output
 clean : 
 	-rm output/*.dat
 	-rm output/*.eps
+	-rm output/*.plt
