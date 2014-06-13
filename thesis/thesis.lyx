@@ -1934,29 +1934,22 @@ The first line of defense against any non-gravitational interaction between
 \begin_inset space ~
 \end_inset
 
-MHz, blocks any residual gas interaction, and provides physical isolation
- between the attractor and pendulum.
+MHz, blocks residual gas interaction, and provides physical isolation between
+ the attractor and pendulum.
  
 \end_layout
 
 \begin_layout Itemize
 The infinite-sheet attractor must become finite; the addition of a rim to
- the circular attractor can largely cancel the 
-\begin_inset Quotes eld
-\end_inset
-
-non-infinite
-\begin_inset Quotes erd
-\end_inset
-
- gravitational signal.
+ the circular attractor can replace much of the gravitational forces that
+ would be present with an infinite sheet.
  In this iteration of the experiment, the rim is too-large, leading to a
  small residual gravitational signal that is very linear in attractor position.
  
 \end_layout
 
 \begin_layout Itemize
-The rotation of the pendulum is measured by an autocollimating optical lever;
+The rotation of the pendulum is measured by an autocollimating optical lever,
  an autocollimator.
  Typical sensitivities of our group's autocollimators can be as small as
  fractions of a nanoradian in a second in the millihertz 
@@ -1966,8 +1959,9 @@ key "arp2013reference"
 
 \end_inset
 
-, new prototype designs reach tens of picoradians in a second at higher
- frequencies 
+.
+ New prototype designs reach tens of picoradians in a second at higher frequenci
+es 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "turner2011picoradian"
@@ -1990,8 +1984,9 @@ nrad in a second at relevant frequencies.
 The pendulum is held in electrostatic feedback: the electrostatic interactions
  between the pendulum and the foil are far stronger than the torsion-fiber's
  stiffness, making feedback a necessity.
- The torque signal is extracted from the feedback loop, with continuous
- gravitational calibration.
+ The torque signal is extracted from the feedback loop.
+ The signal strength is continuously calibrated using a separate rotating
+ gravitational attractor.
 \end_layout
 
 \begin_layout Itemize
@@ -2117,7 +2112,7 @@ When the plate size,
 \end_inset
 
 .
- In our experiment, in the flat orientation, this correction spans 0.1-10%
+ In our experiment, with a parallel orientation, this correction spans 0.1-10%
  (
 \begin_inset Formula $\lambda$
 \end_inset
@@ -2424,9 +2419,9 @@ Angled plate torque
 \end_layout
 
 \begin_layout Standard
-The pendulum is, in general, not parallel to the attractor.
+In practice, the pendulum is not exactly parallel to the attractor.
  Furthermore, rotating one part of the pendulum toward the attractor can
- yield greater sensitivity.
+ increase sensitivity.
  This analysis, like the flat plate calculations, neglects edge effects.
  This approximation underestimates the expected torque by an amount that
  depends on the angle, 
@@ -2637,7 +2632,7 @@ where
 \begin_inset space ~
 \end_inset
 
-m, this effect is about 2%.
+m, this effect is about 2% for our geometry.
 \end_layout
 
 \begin_layout Section
@@ -2770,7 +2765,11 @@ filename "../extracted/inlayWidth.tex"
 
 \end_inset
 
- wide.
+
+\begin_inset space ~
+\end_inset
+
+m wide.
  The pendulum was threaded onto a thin copper tube crimped onto a 
 \begin_inset Formula $\sim9$
 \end_inset
@@ -2817,7 +2816,14 @@ prehanger
 \end_inset
 
 m diameter fiber in the magnetic field of a small ring magnet to damp the
- pendulum's swing and vibrational modes.
+ pendulum's swing and vibrational modes (see Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Magnetic-damper"
+
+\end_inset
+
+).
  Both the fiber assembly and the magnetic damper were attached, through
  a ceramic electrical isolator, to a motorized two-axis translation and
  one-axis rotary stage.
@@ -2849,6 +2855,12 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Magnetic-damper"
+
+\end_inset
+
 Magnetic damper, June 2011
 \end_layout
 
@@ -3797,7 +3809,7 @@ filename "../extracted/detectorWidthMillimeters.tex"
 \begin_inset space ~
 \end_inset
 
-mm (
+m (
 \begin_inset CommandInset include
 LatexCommand input
 filename "../extracted/autocollDynamicRangePeak2PeakmRad.tex"
