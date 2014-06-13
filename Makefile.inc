@@ -18,7 +18,7 @@ DATA   := $(shell find $(HOMEDIR)/data/         -type d)
 
 MLIB   := $(MLIB) $(GLOBAL)
 
-LYX    := lyx -batch --export "pdf" -dbg info,latex
+LYX    := lyx -batch --export "ps" -dbg info,latex
 
 .INTERACT: 
 	$(OCT) --persist

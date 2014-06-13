@@ -15,6 +15,7 @@ do
 	export GNUPLOTME=$PLOTME
 
 	gnuplot -e "HOMEDIR = \"$1\"" preFitPlot.gpl
-	convert ${PLOTME}.eps -resize 3240x3240 -quality 96 ${PLOTME}.png  
+	#convert ${PLOTME}.eps -resize 3240x3240 -quality 96 ${PLOTME}.png  
+	convert ${PLOTME}.eps -resize 3240x3240 ${PLOTME}.jpg  
 done
 
