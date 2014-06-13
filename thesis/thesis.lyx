@@ -3809,7 +3809,7 @@ filename "../extracted/detectorWidthMillimeters.tex"
 \begin_inset space ~
 \end_inset
 
-m (
+m (corresponds to 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../extracted/autocollDynamicRangePeak2PeakmRad.tex"
@@ -3986,11 +3986,23 @@ Pendulum Feedback System
 \begin_layout Standard
 For all of our science data, the pendulum's orientation with respect to
  the autocollimator was held in electrostatic feedback.
- Two round gold coated aluminum rod electrodes were placed on the opposite
- side of the pendulum from the foil.
+ Two planar electrodes were placed in close proximity (XXXRC spacing) to
+ the pendulum.
+ The electrodes were housed within grounded 'guard electrode' to minimize
+ the effects of stray fields.
  As the pendulum was electrically grounded, the application of a voltage
- to an electrode would attract the pendulum in the same way that the plates
- of a charged capacitor attract one another.
+ to an electrode attracts the pendulum in the same way that the plates of
+ a charged capacitor attract one another.
+ 
+\end_layout
+
+\begin_layout Standard
+The feedback voltage system was capable of applying voltages from -10-10
+\begin_inset space ~
+\end_inset
+
+V to either electrode, but in practice, the entire experiment ran on one
+ electrode, with average voltage of XXXRC.
  
 \end_layout
 
@@ -4052,10 +4064,11 @@ diameter stainless threaded rods with aluminum adapters on the ends to the
 
  Leybold turbo pump was connected to and suspended from the center of the
  bell jar baseplate by a hydroformed stainless steel bellows for vibration
- isolation and from a ceramic electrical isolator.
+ isolation.
+ A ceramic electrical isolator separated the turbo pump from the bell jar.
  Suspended from the pump were six lead bricks to prevent the bellows from
  compressing when the system was placed under vacuum.
- The turbo pump was backed by a small oil roughing pump.
+ The turbo pump was backed by a small rotary roughing pump.
  
 \end_layout
 
@@ -4110,7 +4123,7 @@ See photo in ~/platewash/photos
 \end_layout
 
 \begin_layout Standard
-Past experience with the jar has shown that pressures of 
+Past experience with the bell jar has shown that pressures of 
 \begin_inset Formula $3\times10^{-7}$
 \end_inset
 
@@ -4322,7 +4335,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename diagrams/pressureDiagram.png
-	width 50text%
+	width 80text%
 
 \end_inset
 
@@ -4571,8 +4584,8 @@ locking valve
  in continuous PID feedback to pressure or position sensors, this would
  have enabled fast position changes and excellent control over the attractor's
  position.
- Alas, the the pulse-width modulation was still measurable and unacceptably
- large at the attractor -- attractor motion in measurement phases opens
+ Alas, the pulse-width modulation was still measurable and unacceptably
+ large at the attractor -- attractor motion during measurement phases opens
  whole classes of systematic effects we do not wish to consider.
  The modulator could not be switched at higher frequencies, and any further
  passive low-pass filters would compromise the speed of our attractor motion.
@@ -4605,8 +4618,12 @@ Unless the attractor is to change position, then the locking valve is closed,
 \end_inset
 
 s before the locking valve opens.
- After 10 s, the locking valve closes, the modulator valve turns off, and
- the accumulator vents.
+ After 10
+\begin_inset space ~
+\end_inset
+
+s, the locking valve closes, the modulator valve turns off, and the accumulator
+ vents.
  
 \end_layout
 
@@ -4752,7 +4769,7 @@ cut
 On longer timescales, the fluctuation of atmospheric pressure is important.
  The precision regulator that feeds the gas handling system is referenced
  to atmospheric pressure.
- The attractor flexure, on the other hand, is controlled by the pressure
+ The attractor flexure, on the other hand, moves according to the pressure
  relative to vacuum.
  As the gas-handling system is nothing but a fancy pressure division device,
  the open-loop duty-cycle control of the modulation rides along the carrier
@@ -4825,8 +4842,7 @@ XXXMI recalibrate, do it better
 
 \end_inset
 
-), and computed by averaging seven measured differences between the experimental
-ist's body weight with and without each block.
+).
  The 
 \begin_inset Formula $4"\times4"\times8"$
 \end_inset
@@ -4869,7 +4885,7 @@ XXXRC verify metrology
  stepper motor.
  The frequency stability of the calibration tone was observed to be comparable
  to, or better than, the stability of the data acquisition clock.
- The sinusoidally varying gravitational torque appeared twice the rotation
+ The sinusoidally varying gravitational torque appeared at twice the rotation
  frequency of 3.0 mHz.
  The amplitude of the calibration torque was taken to be 
 \begin_inset CommandInset include
@@ -4959,7 +4975,7 @@ HEPA/Class XXXMA
 \end_inset
 
 When the apparatus was under vacuum, the blowers were turned off; the enclosure
- then provided limited wind and thermal isolation.
+ then provided limited thermal isolation and isolation from moving air.
  
 \end_layout
 
@@ -5283,7 +5299,7 @@ m, numerical aperture (
 \end_inset
 
  into vacuum (refractive index 1) is 
-\begin_inset Formula $R=\frac{1-n}{1+n}=$
+\begin_inset Formula $R=\frac{1-n}{1+n}$
 \end_inset
 
 .
@@ -5413,8 +5429,8 @@ reference "fig:Interferometer-Duration"
 \end_inset
 
 m differential displacement over a period of more than a month is excellent.
- Much of the experiment took place near a turning point, which limits our
- ability to constrain the foil motion for each individual run.
+ Much of the experiment took place near a fringe turning point, which limits
+ our ability to constrain the foil motion for each individual run.
  
 \end_layout
 
@@ -5463,7 +5479,7 @@ Interferometer signal over the duration of the experiment.
 \end_layout
 
 \begin_layout Paragraph
-A conservative approach
+Interferometer-to-displacement conversion
 \begin_inset CommandInset label
 LatexCommand label
 name "par:A-conservative-approach"
@@ -5471,6 +5487,10 @@ name "par:A-conservative-approach"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+XXXRC Jens was confused by the following paragraph
 \end_layout
 
 \begin_layout Standard
@@ -5545,8 +5565,10 @@ reference "fig:Interferometer-low-frequency-pow"
 \end_layout
 
 \begin_layout Standard
-Polarization-maintaining fiber is on-hand for an upgraded version of the
+A polarization-maintaining fiber is on-hand for an upgraded version of the
  experiment.
+ A new fiber coupler, in vacuum fiber, and perhaps even a new fiber-coupled
+ laser are required for optimum performance.
 \end_layout
 
 \begin_layout Standard
@@ -5659,7 +5681,7 @@ reference "fig:Interferometer-control-lever"
 \end_inset
 
 .
- Before pumping down, the fiber tip was translated as far from the foil.
+ Before pumping down, the fiber tip was translated far from the foil.
  After the foil and attractor were aligned, then the fiber tip was slowly
  brought toward the foil until fringes were observed.
  This must be done with care; going too far will puncture the foil with
@@ -5798,7 +5820,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Pendulum-Foil Coupling Determination
+XXXRC label overlap Pendulum-Foil Coupling Determination
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Pendulum-Foil-Coupling-Determina"
@@ -6250,6 +6272,19 @@ Attractor-Foil touching
 \end_layout
 
 \begin_layout Standard
+XXXRC cuts may not have been introduced yet -- figure out continuity.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Mean cut position
+\begin_inset Quotes erd
+\end_inset
+
+ was of particular concern.
+\end_layout
+
+\begin_layout Standard
 To avoid any systematic effect due to direct attractor-foil touching, it
  is essential to place a short-distance cutoff on attractor positions.
  This is done on a per-measurement level.
@@ -6491,8 +6526,15 @@ There remains some disagreement in the literature regarding the coefficient
 \end_inset
 
 .
- For both theoretical and experimental reasons, we prefer 16.
- For PlateWash at an operating pressure of 
+ For both theoretical and experimental reasons, we prefer 16 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "schlamminger2010indirect"
+
+\end_inset
+
+.
+ For PlateWash the final operating pressure was 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../systematics/pressure/extracted/finalPressurePa.tex"
@@ -6503,7 +6545,7 @@ filename "../systematics/pressure/extracted/finalPressurePa.tex"
 \begin_inset space ~
 \end_inset
 
-Pa, 
+Pa, implying a 
 \begin_inset Formula $Q\sim$
 \end_inset
 
@@ -6660,10 +6702,11 @@ Estimating or measuring the size of this effect is a challenge.
 \begin_layout Standard
 Experimentally, all of our group's short-range experiments have seen increased
  noise at small separations.
- This is one of the boogey-men invoked to explain it.
+ The patch effect is one of the stories invoked to explain it.
  Improved noise performance is seen from newly-coated foils immediately
  after pump-down in both PlateWash and our other short-range experiment,
- but don't have a satisfactory nor quantitative understanding of any effect.
+ but we don't have a satisfactory nor quantitative understanding of this
+ effect.
 \end_layout
 
 \begin_layout Subsubsection
@@ -6784,6 +6827,7 @@ There are several ways in which ground motion can cause an apparent pendulum
 \begin_layout Enumerate
 Rotation of the ground: This rotates the instrument relative to the pendulum
  and appears as a spurious torque.
+ In practice, this effect is much smaller than other noise sources.
 \end_layout
 
 \begin_layout Enumerate
@@ -6834,9 +6878,9 @@ Seismic
 Earthquakes worldwide can affect the balance.
  Quakes of magnitude 3+ in the immediate region (Northern California to
  Alaska) can disturb operation for minutes to hours.
- Large quakes, such as the recent Chilean and Japanese quakes, disturb Earth
- so violently that it can take a day or more before aftershocks and low-frequenc
-y modes of terrestrial vibration have damped.
+ Large quakes, such as the 2010 Chilean and 2013 Japanese quakes, disturb
+ Earth so violently that it can take a day or more before aftershocks and
+ low-frequency modes of terrestrial vibration have damped.
  
 \end_layout
 
@@ -7032,8 +7076,9 @@ Wind
 \end_layout
 
 \begin_layout Standard
-While the coupling mechanism to wind is presumably seismic, tilt, gravitational
- gradient, or pressure-related, we don't know the cause.
+While the coupling mechanism to wind is related to some combination of seismic
+ effects, tilt, gravitational gradients, or pressure, we aren't certain
+ which effect is dominant.
  What is clear from our data is a strong coupling between outside wind and
  pendulum noise.
  Stormy periods can elevate torque noise by as much as an order of magnitude
@@ -7157,6 +7202,9 @@ pendulum battery
  Each set of points is taken at a different pendulum angle.
  In the absence of a pendulum-battery-like effect, the vertices of the approxima
 te-parabolas should align vertically.
+ XXXRC Jens couldn't interpret; consider joining curves with lines, adding
+ units to legend (set below?), axis labels/tics are tiny-- explain why this
+ is evidence for a battery.
 \end_layout
 
 \end_inset
@@ -7297,7 +7345,7 @@ m away.
 \end_layout
 
 \begin_layout Subsubsection
-Electrical/Instrumental Crosstalk
+Electronic/Instrumental Crosstalk
 \end_layout
 
 \begin_layout Standard
@@ -7314,8 +7362,9 @@ every
  electrical signal associated with the operation of the experiment is unchanged.
  The data analysis system is also unchanged, making it possible to test
  for these systematics directly.
- This ability is greatest strength of the pneumatic drive system; any electrical
-ly-actuated drive cannot separate electrical crosstalk in this way.
+ This ability is the greatest strength of the pneumatic drive system; any
+ electrically-actuated drive cannot separate electrical crosstalk in this
+ way.
 \end_layout
 
 \begin_layout Standard
@@ -7346,7 +7395,11 @@ filename "../extracted/translationTorqueFit.tex"
 \begin_inset space ~
 \end_inset
 
-N-m/um.
+N-m/
+\begin_inset Formula $\mu$
+\end_inset
+
+m.
  See 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -7411,6 +7464,7 @@ The attractor and foil will, in general, have different values of electrical
  potential.
  The electrical connections between them will include a collection of Galvanic-p
 otential generating junctions.
+ XXXRC - elaborate
 \end_layout
 
 \begin_layout Subparagraph
@@ -7418,7 +7472,7 @@ Residual gas pressure
 \end_layout
 
 \begin_layout Standard
-The diffusion time out of the attractor-foil gap is 
+The diffusion time for gas molecules out of the attractor-foil gap is 
 \begin_inset Formula $\sim40$
 \end_inset
 
@@ -7500,7 +7554,11 @@ filename "../systematics/pressure/extracted/finalPressurePa.tex"
 
 \end_inset
 
- acting on a 
+
+\begin_inset space ~
+\end_inset
+
+Pa acting on a 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../extracted/AttractorDiameter.tex"
@@ -7518,14 +7576,22 @@ filename "../extracted/gasFoilDisplacement.tex"
 
 \end_inset
 
- and hence a torque of 
+
+\begin_inset space ~
+\end_inset
+
+m and hence a torque of 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../extracted/gasFoilTorque.tex"
 
 \end_inset
 
-.
+
+\begin_inset space ~
+\end_inset
+
+N-m.
 \end_layout
 
 \begin_layout Paragraph
@@ -7548,7 +7614,7 @@ key "schlamminger2010indirect,dolesi2011brownian"
 
 \end_inset
 
- or some electrical effect (XXXRC RC or eddy currents?).
+ or some electrical effect XXXRC Jens wants numbers (XXXRC RC or eddy currents?).
  
 \end_layout
 
@@ -7629,11 +7695,11 @@ Non-infinite
 As the attractor does not have the spatial extent of an infinite sheet,
  the gravitational field of the attractor has both distance and misalignment
  dependence.
- To estimate the size of this effect, two independent quadrature programs
+ To estimate the size of this effect, two independent mass-integration programs
  were written.
  When completed, it was discovered that one trivial bug separated the two
  codes from nearly exact agreement.
- See 
+ See Chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "chap:Newtonian-Simulation"
@@ -7643,7 +7709,8 @@ reference "chap:Newtonian-Simulation"
  for a description of both methods.
  As expected from flat surfaces in the near field, the torque vs.
  distance curves are predominantly linear.
- For a properly centered pendulum, the expected torque is 
+ For a properly centered pendulum, the expected torque per unit attractor
+ displacement is 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../NewtonianSimulation/SimulationOutput/jan13Attractorlin.tex"
@@ -7655,7 +7722,7 @@ filename "../NewtonianSimulation/SimulationOutput/jan13Attractorlin.tex"
 \end_inset
 
 N-m/m.
- The quadratic term is 
+ Similarly, the quadratic term is 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../NewtonianSimulation/SimulationOutput/jan13Attractorquad.tex"
@@ -7696,7 +7763,7 @@ N-m/m
 \end_inset
 
 .
- 
+ (XXXRC errors are too good)
 \end_layout
 
 \begin_layout Paragraph
@@ -7762,7 +7829,7 @@ Horizontal displacement of the pendulum is an excellent potential test for
 \end_inset
 
 m in depth.
- 
+ (XXXRC are voids seen?)
 \end_layout
 
 \begin_layout Standard
@@ -7770,7 +7837,7 @@ A random distribution of voids across the surface can, with sufficiently-many
  voids, be viewed as a reduction in the density of the material.
  This is especially true if the voids are smaller than a characteristic
  length-scale of interest.
- We see no clear signs of a distribution of voids at the 
+ We see no signs of a distribution of voids at the 
 \begin_inset Formula $>5$
 \end_inset
 
@@ -7904,6 +7971,7 @@ filename "../extracted/bellowsTorque.tex"
  Furthermore, this effect is quite linear with pressure/displacement, as
  the center of mass of the bellows displaces by perhaps 1/50th of the displaceme
 nt of the attractor and about 1/1000th of the distance to the pendulum.
+ XXXRC Jens thinks that it should be 1/100th?
 \end_layout
 
 \begin_layout Paragraph
@@ -7913,8 +7981,8 @@ Glue gaps
 \begin_layout Standard
 The dense inlays of the attractor and the dense material of the attractor
  face are attached with a thin layer of epoxy.
- It is possible that an air bubble may have become laterally very large
- when the glue layer was pressed.
+ It is possible that an air bubble may have become laterally large when
+ the glue layer was pressed.
  Assuming a 1 cm radius by 5 micron thick glue bubble in both the pendulum
  and attractor, the associated 
 \bar under
@@ -8002,6 +8070,7 @@ N-m/m
 \end_inset
 
 .
+ (XXXRC uncertainties are too good, XXXRC what about the uncompensated voids?)
 \end_layout
 
 \begin_layout Paragraph
@@ -8038,7 +8107,7 @@ dished
 \begin_inset Quotes erd
 \end_inset
 
- by the lapping process, which dominates the this number.
+ by the lapping process, which dominates this number.
  In the central region of both pendulum and attractor, flatness was better
  than 
 \begin_inset Formula $5$
@@ -8116,7 +8185,7 @@ filename "../NewtonianSimulation/SimulationOutput/scanMaxDiff.tex"
 \begin_inset space ~
 \end_inset
 
-N-m for all possible strokes.
+N-m for all possible pendulum positions (XXXRC all-possible?).
  Models that include the smoothness of the torque curve can yield a better
  limit if necessary.
  
@@ -8127,9 +8196,9 @@ Tilt/apparatus deformation
 \end_layout
 
 \begin_layout Standard
-Tilt sensitivity is a general affliction of torsion balances.
- Perhaps because of eccentricity of fine torsion fibers, all balances exhibit
- 
+Coupling to tilt is a general affliction of torsion balances.
+ Perhaps because of the non-circular cross-section of fine torsion fibers,
+ all balances exhibit 
 \begin_inset Quotes eld
 \end_inset
 
@@ -8141,7 +8210,7 @@ tilt feedthrough
  In short range interaction experiments, the tilt feedthrough is exacerbated
  by the importance of spatially varying electrostatic potentials.
  The apparatus has a two-axis tilt sensor, but it was intentionally turned
- off during data taking to minimize any electromagnetic interference.
+ off during data taking to eliminate any electromagnetic interference.
  The pendulum autocollimator is sensitive along both vertical and horizontal
  axes, and provides a continuous measurement of pendulum tilt.
 \end_layout
