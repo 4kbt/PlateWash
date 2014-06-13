@@ -8266,6 +8266,10 @@ Magnetic systematics are among the most difficult to assess in these experiments
  this realm; previous tests have only considered some of these effects.
 \end_layout
 
+\begin_layout Standard
+XXXRC Jens wants numbers for all of these.
+\end_layout
+
 \begin_layout Paragraph
 Magnetic contamination of materials
 \end_layout
@@ -8344,7 +8348,7 @@ key "weld2008new"
 
 \end_inset
 
- 
+
 \begin_inset Note Note
 status collapsed
 
@@ -8377,6 +8381,10 @@ key "varpula1984magnetic,lee2008calculation"
  signal.
  The thermal fields have low frequency components that will pass through
  the foil.
+\end_layout
+
+\begin_layout Standard
+XXXRC Deal with these somehow.
 \end_layout
 
 \begin_layout Subparagraph
@@ -8479,7 +8487,8 @@ static
  As mentioned in the section regarding foil motion, the attractor picks
  up ambient vibration.
  Audio frequency motion of the attractor or of attractor impurities can
- potentially create magnetic fields that are weakly attenuated by the foil.
+ potentially create oscillating magnetic fields that are minimally attenuated
+ by the foil.
  
 \end_layout
 
@@ -8505,7 +8514,7 @@ key "Jones2013349"
 
 \end_inset
 
-.
+ (XXXRC this reference is broken).
  Gas effects similar to proximity-enhanced gas damping may also have an
  effect.
 \end_layout
@@ -8515,11 +8524,12 @@ Spot-heating by interferometer
 \end_layout
 
 \begin_layout Standard
-The foil interferometer has approximately 1 mW of infrared optical power
+The foil interferometer has approximately 0.5 mW of infrared optical power
  incident on the foil.
  This spot heating may dissipate at different rates in an attractor correlated
  way.
- 
+ ~XXXRC % of the light is reflected, but this leaves XXXRC W to be dissipated
+ through conduction in the foil.
 \end_layout
 
 \begin_layout Paragraph
@@ -8542,6 +8552,7 @@ If the pneumatic drive system has a leak into the vacuum chamber, it would
  change the residual gas atmosphere in an attractor-correlated way.
  An upper bound on the magnitude of any pressure change may be obtained
  by running the instrument with the ion pressure gauge turned on.
+ (XXXRC provide estimate)
 \end_layout
 
 \begin_layout Subsubsection
@@ -8577,7 +8588,7 @@ key "2007PhRvL..98b1101K"
 
 \end_inset
 
-.
+ (XXXRC does this reference render right?).
  Furthermore, for the attractor-pendulum separations in this experiment,
  the Casimir force is too weak.
  As an example, the zero-temperature Casimir pressure on conducting plates
