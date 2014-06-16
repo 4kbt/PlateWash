@@ -48,7 +48,9 @@ set bmargin 5
 
 
 pl [][5.9:6.05][][2:5] \
-	'./run3147calFitChkMergeCut.dat' u ($2/86400):($2>1e8? $12*1e3: 1/0) w p pt 7 ps 0.3 lt 1         tit '2-omega (left)',\
-	'./run3147calFitChkMerge.dat'    u ($1/86400):($1>1e8? $11*1e3: 1/0) w p pt 7 ps 0.3 lt 3 ax x1y2 tit '1-omega (right)'\
+	'./run3147calFitChkMergeCut.dat' u ($2/86400):($2>1e8? $12*1e3: 1/0) w p pt 7 ps 0.3 lt 1,\
+	1/0 w p pt 7 ps 1 lt 1 tit '2-omega (left)',\
+	'./run3147calFitChkMerge.dat'    u ($1/86400):($1>1e8? $11*1e3: 1/0) w p pt 7 ps 0.3 lt 3 ax x1y2,\
+	1/0 w p pt 7 ps 1 lt 3 tit '1-omega (right)'
 
 unset multiplot

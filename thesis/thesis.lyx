@@ -8950,12 +8950,12 @@ For
 \begin_inset Formula $F=ma=m\ddot{x}\rightarrow\tilde{\tau}=I(-\omega^{2})\tilde{\theta}$
 \end_inset
 
-; at these frequencies, the pendulum is a free mass.
+; at these frequencies, the pendulum acts like a free mass.
  
 \end_layout
 
 \begin_layout Subsubsection
-Thermal Noise
+Thermal Noise (XXXRC repeats 2.5.1.1)
 \end_layout
 
 \begin_layout Standard
@@ -9027,6 +9027,10 @@ reference "fig:Approximate-torque-to-angle-tran"
 \end_inset
 
 ), we recover the angle noise spectrum of a thermally-limited torsion oscillator.
+\end_layout
+
+\begin_layout Standard
+(XXXRC Jens wants theory or experiment figure)
 \end_layout
 
 \begin_layout Subsubsection
@@ -9112,7 +9116,11 @@ reference "fig:Torque-noise,-from"
 
 \end_inset
 
-, the optimal noise is near ~25
+, the minimum noise is near 
+\begin_inset Formula $\sim25$
+\end_inset
+
+
 \begin_inset space ~
 \end_inset
 
@@ -9178,15 +9186,12 @@ name "fig:Torque-noise,-from"
 
 Experimentally-measured torque noise, from systematic test 3167.
  Attractor stationary.
- 
+ (XXXRC Jens comments that figure doesn't align with text; perhaps add thermal
+ limit, autocollimator line) 
 \end_layout
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -9216,6 +9221,16 @@ The higher the attractor frequency
  is arbitrary.
  If the noise power spectral density 
 \begin_inset Formula $S(\omega)=S_{0}$
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+(XXXMA what am I trying to say here?)
+\end_layout
+
 \end_inset
 
 , then the resulting uncertainty of 
@@ -9335,6 +9350,8 @@ A second benefit to small
 \end_inset
 
 .
+ (XXXRC Jens doesn't quite get what I'm trying to say.
+ Perhaps reorder sections?)
 \end_layout
 
 \begin_layout Subsection
@@ -9756,7 +9773,7 @@ name "sub:Lags"
 
 \end_inset
 
-
+ (XXXRC swap dead time in for lags)
 \end_layout
 
 \begin_layout Standard
@@ -9992,7 +10009,7 @@ As the pendulum is locked in feedback, there are multiple data channels
  The pendulum twist angle, the feedback signal itself, and the P, I, and
  D terms of the feedback loop are written to disk.
  The pendulum twist angle and the P (proportional) term of the loop are
- necessarily equivalent.
+ equivalent.
  In practice, the twist signal and P term were anti-aliased differently.
  The P term had an 5
 \begin_inset space ~
@@ -10031,8 +10048,9 @@ reference "Fourier Harmonics"
 \end_layout
 
 \begin_layout Standard
-By choosing the angle signal instead of the feedback signal as the science
- signal, we use the inertia of the pendulum as an analog low-pass filter.
+By choosing the angle/P-term signal instead of the feedback signal as the
+ science signal, we use the inertia of the pendulum as an analog low-pass
+ filter.
  While, in principle, both signals contain the science, the science signal
  is more-easily extracted from the angle signal.
  Furthermore, as the feedback signal is the sum of the P and the derived
@@ -10184,7 +10202,7 @@ Understanding the separation between attractor masses and test masses is
  of an accidental error in metrology affect only the stated exclusion limits,
  but not the presence nor absence of a purported ISL violation.
  This is an important contrast to non-null experiments, where an error in
- attractor/sensor separation alone 
+ attractor/sensor separation alone (XXXRC trails off)
 \end_layout
 
 \begin_layout Section
@@ -10599,7 +10617,7 @@ name "fig:Gravitational-calibration"
 
 \end_inset
 
-
+XXXRC make legend dots larger
 \begin_inset Note Note
 status open
 
@@ -10624,14 +10642,15 @@ XXXMA Reexamine near 1180.
 
 \begin_layout Standard
 The torque scale of the instrument is set gravitationally.
- Throughout the operation of the experiment the 'q-tester' (
+ Throughout the operation of the experiment the rotating calibration masses
+ (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Calibration"
 
 \end_inset
 
-) injects a torque of amplitude 
+) inject a torque of amplitude 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../extracted/qTesterTorque.tex"
@@ -10655,7 +10674,7 @@ filename "../extracted/calibCutLength.tex"
 \end_inset
 
 s chunks and fit for the sinusoidal signal.
- The signal occurs at the q-tester's 
+ The signal occurs at the calibrator's 
 \begin_inset Formula $2\omega$
 \end_inset
 
@@ -10738,13 +10757,13 @@ filename "../extracted/kappa.tex"
 \end_inset
 
 N-m/rad.
- 
+ (XXXRC Jens wants a kappa errorbar)
 \end_layout
 
 \begin_layout Standard
-The time variation of the q-tester signal may be understood as any of a)
- a small change in pendulum/foil/electrode spacing, b) slow creep of the
- q-tester geometry, c) something else.
+The time variation of the calibration signal may be understood as any of
+ a) a small change in pendulum/foil/electrode spacing, b) slow creep of
+ the q-tester geometry, c) something else.
  In case 
 \begin_inset Quotes eld
 \end_inset
@@ -10761,6 +10780,7 @@ decrease
 \emph default
  in calibration signal, which cannot account for the slight increase in
  observed signal.
+ (XXXRC - why are they creeping? Just say you don't know.)
 \end_layout
 
 \begin_layout Standard
@@ -10900,7 +10920,7 @@ With three data acquisition computers running simultaneously, relative timing
  is important.
  As designed, the three computers would resynchronize their clocks with
  an external reference every 3141 seconds.
- The computer clocks' relative drift rates are better than 10
+ The computer clocks' relative drift rates are less than 10
 \begin_inset space ~
 \end_inset
 
@@ -11071,7 +11091,18 @@ Three columns of data are fed through finite impulse response (FIR) filters
 \end_inset
 
 ).
- The filters are designed by the octave-forge function 'fir1'.
+ The filters are designed by the 
+\family typewriter
+octave-forge
+\family default
+ function 'fir1' 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "octave:2012"
+
+\end_inset
+
+.
  The function designs 'windowed filters' with linear phase response.
  Filters with linear phase response have frequency-independent phase delays
  
