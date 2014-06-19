@@ -37,6 +37,19 @@ try
 	eval(['save "results/run' runName 'pM3Filter.dat" pM sizes times']);
 	eval(['save "results/run' runName 'pM3FilterOnly.dat" pM']);
 
+
+	%Snippet parameters
+	SnippetLength = 50;
+	SnippetSamples = SnippetLength * stepPeriod / theoSampleTime;
+
+	%Compose Snippets
+	pLockS = pLock(1:SnippetLength, : );
+	psS = psData(1:SnippetSamples, : ); 
+	pwS = pwData(1:SnippetSamples, : );
+	
+	%Save Snippets
+	eval(['save "snippets/run' runName 'snippets.dat" pLockS psS pwS'];
+
 	%Save unblinded results
 	pM = pMU; 
 	eval(['save "alwaysUnblindedResults/run' runName 'pM3Filter.dat" pM sizes times']);
