@@ -40,7 +40,7 @@ try
 
 	%Snippet parameters
 	SnippetLength = 50;
-	SnippetSamples = SnippetLength * stepPeriod / theoSampleTime;
+	SnippetSamples = SnippetLength * stepPeriod / TheoSampleTime;
 
 	%Compose Snippets
 	pLockS = pLock(1:SnippetLength, : );
@@ -48,7 +48,7 @@ try
 	pwS = pwData(1:SnippetSamples, : );
 	
 	%Save Snippets
-	eval(['save "snippets/run' runName 'snippets.dat" pLockS psS pwS'];
+	eval(['save "snippets/run' runName 'snippets.dat" pLockS psS pwS']);
 
 	%Save unblinded results
 	pM = pMU; 
