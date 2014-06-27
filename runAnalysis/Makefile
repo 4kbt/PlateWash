@@ -79,6 +79,10 @@ results/run3147pM3iFilterMerge.dat : $(IDEPLIST) pLDAiFilterMerge.sh $(HOMEDIR)/
 	$(OCT) --eval "run3147FixedParameters"
 	$(HOMEDIR)/bin/mathify.sh $(HOMEDIR)/extracted/*.tex
 
+
+snippetPlot.eps : snippetPlot.gpl results/run3147pM3FilterMerge.dat
+	$(GNU) snippetPlot.gpl
+
 path : 
 	$(OCT) --verbose pathTest.m
 
