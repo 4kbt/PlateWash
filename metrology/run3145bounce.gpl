@@ -1,0 +1,17 @@
+set term postscript enhanced solid color eps
+set output 'run3145bounce.eps'
+
+load HOMEDIR.'globalConfig/columnNames.m'
+
+fn = 'run3145bounce.dat'
+
+set xlabel 'encoder position ({/Symbol m}m), arb datum'
+set ylabel 'pendulum angle (mrad), arb datum'
+
+set key noauto
+
+pl [-1000: -850]\
+	fn u 1:($2*1e3) w p pt 7 ps 0.1 tit 'bounce test',\
+	fn u 1:($3*1e3) w l lc 3 tit 'inferred foil location',\
+	fn u 1:($4*1e3) w l lc 3,\
+	HOMEDIR.'runAnalysis/results/run3147pM3FilterMerge.dat' u (column(pwPhiTopCol+ numSensors)):(column(psdCol + numSensors)*0.00625*1e3) w p pt 1 ps 1 lc 7 tit 'Operating point'  

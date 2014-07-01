@@ -16,9 +16,9 @@ eval(['ifoHeaderFile' runPrefix iforunNumber 'ifo.dat", "rt");'] ) ;
 ifoLoadData;
 
 
-pwTimeCol  = 10;
-psTimeCol  = 5 ;
-ifoTimeCol = 1 ;
+%pwTimeCol  = 10;
+%psTimeCol  = 5 ;
+%ifoTimeCol = 1 ;
 
 
 
