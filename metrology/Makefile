@@ -2,6 +2,8 @@ include ../Makefile.inc
 
 BOUNCE := run3145bounce
 
+all : $(BOUNCE).eps
+
 $(BOUNCE).dat : $(BOUNCE).m
 	$(OCT) $(BOUNCE).m 
 	
