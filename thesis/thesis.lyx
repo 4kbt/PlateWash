@@ -10225,7 +10225,17 @@ The pendulum is allowed to swing freely as the fiber support is moved toward
  The autocollimator trace, plotted as a function of support-position shows
  a clear pattern from which the point at which the pendulum touches the
  foil may be extracted.
- The results of pre-run and mid-run bounce tests are shown in Figure 
+ The results of the pre-run bounce test
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMA-show mid-run too
+\end_layout
+
+\end_inset
+
+ is shown in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Pendulum-bounce-test-results"
@@ -10242,7 +10252,14 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXXRC
+\align center
+\begin_inset Graphics
+	filename ../metrology/run3145bounce.eps
+	width 70page%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
