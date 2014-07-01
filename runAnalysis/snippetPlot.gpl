@@ -1,0 +1,48 @@
+load HOMEDIR.'globalConfig/columnNames.m'
+
+sn = 'snippets/run3147snippets.dat'
+fn = 'results/run3147pM3FilterOnly.dat'
+
+
+#Dynamically determine start time
+first=0;
+offset=0;
+func(x)=(offset=(first==0)?x:offset,first=1,x-offset)
+plot sn index 1 u (func(column(psTimeCol)))
+
+startTime = offset 
+
+set term postscript enhanced solid color eps
+set output 'snippetPlot.eps'
+
+
+set xlabel 'time (s)'
+set ylabel 'attractor position ({/Symbol m}m)'
+set key left
+
+
+psaTime = aCol - (psSquareCol - psTimeCol)
+psbTime = bCol - (psSquareCol - psTimeCol)
+
+set bars large
+
+set multiplot layout 2,1
+set xrange [0:8000]
+set key off
+pl \
+	sn index 1 u (column(psTimeCol)-startTime):(column(psSquareCol)*1e6) w lp pt 7 ps 0.2 lc 5 tit 'filtered position',\
+	'' index 0 u (column(numPWSensors+psTimeCol)-startTime):(column(numPWSensors+psSquareCol)*1e6) w p pt 7 ps 0.5 lc 3 tit 'measured step positions',\
+	fn u \
+	(column(psaTime)-startTime):(column(aCol)*1e6):(column(aErrCol)*1e6) w yerr tit 'Cut-wise A position' pt 7 ps 0.5 lc 1,\
+	fn u \
+	(column(psbTime)-startTime):(column(bCol)*1e6):(column(bErrCol)*1e6) w yerr tit 'Cut-wise B position' pt 7 ps 0.5 lc 4
+
+set xrange [0:2700]
+
+set key below
+
+replot
+
+unset multiplot
+
+
