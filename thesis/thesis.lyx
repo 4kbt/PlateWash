@@ -9766,14 +9766,14 @@ reference "Fourier Harmonics"
 \end_layout
 
 \begin_layout Subsection
-Lags
+Dead Time
 \begin_inset CommandInset label
 LatexCommand label
 name "sub:Lags"
 
 \end_inset
 
- (XXXRC swap dead time in for lags)
+
 \end_layout
 
 \begin_layout Standard
@@ -9846,7 +9846,7 @@ reference "sub:Lags-1"
 
 \end_inset
 
- for further discussion of lags).
+ for further discussion of dead time).
  As a consequence, the highest available switch frequency is <25
 \begin_inset space ~
 \end_inset
@@ -9900,8 +9900,8 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Signal to noise attenuation as a function of attractor frequency and lag
- size
+Signal to noise attenuation as a function of attractor frequency and of
+ dead time duration
 \end_layout
 
 \end_inset
@@ -9949,8 +9949,8 @@ reference "sub:Statistics"
 \end_inset
 
 ) to operate at the highest practical frequency.
- The required use of lags to eliminate systematic uncertainties places a
- soft upper bound on usable frequencies (
+ The required use of dead times to eliminate systematic uncertainties places
+ a soft upper bound on usable frequencies (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Lags"
@@ -11322,7 +11322,7 @@ lstparams "caption={findRisingEdge.m},language=Matlab"
 \end_layout
 
 \begin_layout Subsection
-Lags
+Dead Times
 \begin_inset CommandInset label
 LatexCommand label
 name "sub:Lags-1"
@@ -11420,7 +11420,7 @@ filename "../extracted/filterHighLag.tex"
 \begin_inset space ~
 \end_inset
 
-s lead and lag.
+s dead time before and after each switch.
 \end_layout
 
 \begin_layout Standard
@@ -11603,7 +11603,7 @@ name "ElectronicTorqueLag"
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Injected torques for lag determination after all filters.
+Injected torques for dead-time determination after all filters.
  (XXXRC this plot is modified from ~/pWDA/, make sure it makes sense; run3224pre
 SM3A is quite different.)
 \end_layout
@@ -11630,8 +11630,8 @@ reference "ElectronicTorqueLag"
 
 \end_inset
 
-, we conclude that it is conservative to choose the following lags: The
- 
+, we conclude that it is conservative to choose the following dead times:
+ The 
 \begin_inset Quotes eld
 \end_inset
 
@@ -11763,11 +11763,11 @@ Lock-in
 \end_layout
 
 \begin_layout Standard
-Once the lags are chosen, a window selected, and a leading edge found, locking
- in is straightforward.
+Once the dead times are chosen, a window selected, and a leading edge found,
+ locking in is straightforward.
  Beginning at a time prescribed by a leading edge, the analysis program
  walks through each data stream, multiplies the data found in each 'step
- period' (1/2 the attractor motion period) by the properly-lagged window
+ period' (1/2 the attractor motion period) by the properly-delayed window
  function, and computes the weighted average.
  The resulting average forms a single measurement.
  There are 
