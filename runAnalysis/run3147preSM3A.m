@@ -14,10 +14,7 @@ end
 
 'dynamic configuration begins'
 
-qTesterCalibrationSignal = load([HOMEDIR '/calibration/run3147calFitChkMean.dat']);
-qTesterCalibrationSignal = qTesterCalibrationSignal(1,2);
-
-torqueCal = qTesterTorque / qTesterCalibrationSignal;
+torqueCal = genTorqueCal;
 
 'calibrating attractor'
 pressEncP = getPressEncP(HOMEDIR);
