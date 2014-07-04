@@ -1,0 +1,32 @@
+reset
+
+set term postscript enhanced solid color eps
+set output 'alternativeIFOTorqueCheck.eps'
+
+fn = 'alternativeIFOTorqueCheck.dat'
+
+xmin = 3.25
+xmax = 3.35
+
+torScale = 200
+
+set key noauto
+
+set multiplot layout 2,1
+
+set xtics format "" 
+
+set ylabel 'absolute torque, blurred (pN-m)'
+
+pl [xmin:xmax][-torScale:torScale]\
+	 fn u 2:($4*1e12) w p pt 7 ps 0.5 lc 3
+
+set xtics format "%g"
+set xlabel 'attractor position (psi)'
+set ylabel 'interferometer signal, a.u.'
+pl [xmin:xmax][0:1.1]\
+	 fn u 2:($3/3.3) w p pt 7 ps 0.1
+
+
+unset multiplot
+
