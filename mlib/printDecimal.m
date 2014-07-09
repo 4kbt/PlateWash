@@ -3,39 +3,15 @@
 ## <precision> specifies the number of places after the decimal point
 
 function printDecimal(data, filename, precision)
-%	filename
-	assert(precision > 0); 
-	assert(precision - floor(precision) == 0 );
-        assert(size(data) == [1 1]);
 
-	data = sigRound(data, precision);
-
-	%useful transformation (magnitude counts from 0)
-	precision = precision - 1;
-	
-	%Determine number of decimal places; abs necessary for complex/imaginary/negative problems
-	mag = floor(log10(abs(data)));
-	ndecimals = mag - precision; 
-
-	if(ndecimals >= 0)
-		ndecimals = 0;
-	else
-		ndecimals = abs(ndecimals);
-	end
-
-
-	formatString = '%.';
-
-	%http://www.mathworks.com/help/matlab/ref/fprintf.html#inputarg_formatSpec
-	formatString = [formatString num2str(ndecimals) 'f'];
-	
-	fid  = fopen( filename, "w", "native");
-	fprintf( fid, formatString, data);
-	fclose(fid);
+	s = sprintDecimal(data, precision);
+	printString(s, filename);	
 end
 
+%These tests repeated for sprintDecimal.
+
 %!test
-%! fn = "testOutput/printDecimalTest1.txt"; testVal = 0.8
+%! fn = "testOutput/printDecimalTest1.txt"; testVal = 0.8;
 %! printDecimal(testVal,fn,1)
 %! d = load(fn);
 %! assert(testVal == d)
@@ -43,11 +19,11 @@ end
 
 %!test
 %! for roundCounter = 1:100
-%! fn = "testOutput/printDecimalTest2.txt"; testVal = randn*10
+%! fn = "testOutput/printDecimalTest2.txt"; testVal = randn*10;
 %! printDecimal(testVal,fn,1)
-%! d = load(fn)
-%! roundVal = sigRound(testVal,1)
-%! roundVal - d
+%! d = load(fn);
+%! roundVal = sigRound(testVal,1);
+%! roundVal - d;
 %! assert(roundVal - d < eps)
 %! end
 
