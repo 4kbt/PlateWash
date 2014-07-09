@@ -15,7 +15,8 @@ HOMEDIR = getenv("HOMEDIR");
 rhoTi=4507; printInteger(rhoTi, [HOMEDIR '/extracted/titaniumDensity.tex' ]);
 pendulumBodyHeight=0.0321203; printSigNumber(pendulumBodyHeight, [HOMEDIR '/extracted/pendulumBodyHeight.tex' ],4);
 pendulumBodyWidth =0.0431448; printSigNumber(pendulumBodyWidth,  [HOMEDIR '/extracted/pendulumBodyWidth.tex'  ],4); %How did I get a part in 10^6? Pg 57 of 
-pendulumBodyThickness= 0.070*0.0254; printSigNumber(pendulumBodyThickness, [HOMEDIR '/extracted/pendulumBodyThickness.tex' ], 2); %1 part in 10^2 seems coarse?
+pendulumBodyThickness= 0.070*0.0254; 
+printSI(pendulumBodyThickness, 0.001*0.0254, 1, -3, 'm', [HOMEDIR '/extracted/pendulumBodyThickness.tex' ]); %1 part in 10^2 seems coarse?
 pendulumBodyMass=rhoTi*pendulumBodyHeight*pendulumBodyWidth*pendulumBodyThickness;
 
 rhoTaP=16650; printInteger(rhoTaP, [HOMEDIR '/extracted/inlayDensity.tex' ]);
