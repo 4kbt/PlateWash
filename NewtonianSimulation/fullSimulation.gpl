@@ -21,7 +21,7 @@ fit attractor(x) Attractor u 5:13 via mattractor, sattractor
 fit nonattractor(x) nonAttractor u 5:13 via mnonattractor, snonattractor
 
 
-pendOff = system( HOMEDIR."bin/texSigToNum.sh ".HOMEDIR."extracted/pendulumBodyThickness.tex")/2.0*1e6
+pendOff = system( HOMEDIR."bin/texSigToNum.sh ".HOMEDIR."extracted/pendulumBodyThicknessNoSI.tex")/2.0*1e6
 
 set multiplot layout 2,1
 set key off

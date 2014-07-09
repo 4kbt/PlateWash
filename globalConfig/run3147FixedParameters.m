@@ -5,6 +5,7 @@ if(exist("DoNotExtractFixedParameters"))
         function printSigNumber() ; end
         function printSigError();  end
 	function printDecimal();   end
+	function printSI();   end
 	function fprintf(); 	   end
 end
 
