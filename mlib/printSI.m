@@ -1,6 +1,6 @@
-function printSI(num, err, errSigFigs, siNum, baseUnit, filename)
+function printSI(num, SigFigs, siNum, baseUnit, filename)
 
-	s = sprintSI(num, err, errSigFigs, siNum, baseUnit);
+	s = sprintSI(num, SigFigs, siNum, baseUnit);
 	printString(s, filename);
 
 end

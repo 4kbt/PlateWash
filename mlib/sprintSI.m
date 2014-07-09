@@ -1,8 +1,10 @@
-function s = sprintSI(num, err, errSigFigs, siNum, baseUnit)
+function s = sprintSI(num, sigFigs, siNum, baseUnit)
 
 	if( mod(siNum,3) ~= 0 )
 		error('SI exponent not divisible by three');
 	end
+	
+	num = keepSigFigs(num,sigFigs);
 
 	%Determine proper prefix
 	siPrefixes
@@ -15,20 +17,19 @@ function s = sprintSI(num, err, errSigFigs, siNum, baseUnit)
 	
 	%scale values to match units
 	num = num / lp;
-	err = err / lp;
+
 
 	%determine number of decimals to print
-	en = floor(log10(err)) - (errSigFigs-1);
-	decimals = max([0 -en]);
+	sn = floor(log10(num)) - (sigFigs-1);
+	decimals = max([0 -sn]);
 	
-	s = sprintf('$(%.*f \\pm %.*f)$~%s%s', decimals, num, decimals, err,
-			 pf, baseUnit);
+	s = sprintf('$%.*f$~%s%s', decimals, num, pf, baseUnit);
 end
 
-%!test assert(sprintSI( 350, 10, 1,  3, 'm') == '$(0.35 \pm 0.01)$~km');
-%!test assert(sprintSI( 350, 10, 1, -3, 'm') == '$(350000 \pm 10000)$~mm');
-%!test assert(sprintSI( 350, 1e3,1,  3, 'T') == '$(0 \pm 1)$~kT');
-%!test assert(sprintSI( 350, 1e3,2,  3, 'T') == '$(0.3 \pm 1.0)$~kT');
-%!test assert(sprintSI(6.674215e-11, 0.000092e-11, 2, -12, 
+%!test assert(sprintSI( 350, 2, 3, 'm') == '$0.35$~km');
+%!test assert(sprintSI( 351, 2, -3, 'm') == '$350000$~mm');
+%!test assert(sprintSI( 350, 1,  3, 'T') == '$0.4$~kT');
+%!test assert(sprintSI( 350, 1,  -6, 'T') == '$400000000$~$\mu$T');
+%!test assert(sprintSI(6.674215e-11, 2, -12, 
 %!		'N m$^2$ kg$^{-2}$') == 
-%!		'$(66.74215 \pm 0.00092)$~pN m$^2$ kg$^{-2}$')
+%!		'$67$~pN m$^2$ kg$^{-2}$')
