@@ -3,21 +3,7 @@
 ## <precision> specifies the number of significant digits.
 
 function printSigNumber(data, filename, precision)
-	filename;
 
-	assert(precision > 0);
-        assert(precision - floor(precision) == 0 );
-        assert(size(data) == [1 1]);
-
-	precision = precision - 1;
-
-        cl   = floor( log10( abs(data ) ) );
-
-	cnum = data/(10.^cl);
-
-	formatString = '%.*f %s %d %s';
-
-	fid  = fopen( filename, "w", "native");
-	fprintf( fid, formatString, precision, cnum, "\\times 10^{", cl, "}");
-	fclose(fid);
+	s = sprintSigNumber(data, precision);
+	printString(s,filename);
 end
