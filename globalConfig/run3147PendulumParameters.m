@@ -1,9 +1,13 @@
 fundamentalConstants
 
 if(exist("DoNotExtractPendulumParameters"))
-	function printInteger() ;  end
-	function printSigNumber() ; end
-	function printSigError();  end
+	function printInteger() ; 	end
+        function printSigNumber() ;	end
+        function printSigError();	end
+        function printDecimal();	end
+        function printSI();   		end
+        function fprintf();		end
+
 end
 
 HOMEDIR = getenv("HOMEDIR");
