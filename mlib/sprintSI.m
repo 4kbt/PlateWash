@@ -25,10 +25,10 @@ function s = sprintSI(num, err, errSigFigs, siNum, baseUnit)
 			 pf, baseUnit)
 end
 
-%!test assert(printSI( 350, 10, 1,  3, 'm') == '$(0.35 \pm 0.01)$~km');
-%!test assert(printSI( 350, 10, 1, -3, 'm') == '$(350000 \pm 10000)$~mm');
-%!test assert(printSI( 350, 1e3,1,  3, 'T') == '$(0 \pm 1)$~kT');
-%!test assert(printSI( 350, 1e3,2,  3, 'T') == '$(0.3 \pm 1.0)$~kT');
-%!test assert(printSI(6.674215e-11, 0.000092e-11, 2, -12, 
+%!test assert(sprintSI( 350, 10, 1,  3, 'm') == '$(0.35 \pm 0.01)$~km');
+%!test assert(sprintSI( 350, 10, 1, -3, 'm') == '$(350000 \pm 10000)$~mm');
+%!test assert(sprintSI( 350, 1e3,1,  3, 'T') == '$(0 \pm 1)$~kT');
+%!test assert(sprintSI( 350, 1e3,2,  3, 'T') == '$(0.3 \pm 1.0)$~kT');
+%!test assert(sprintSI(6.674215e-11, 0.000092e-11, 2, -12, 
 %!		'N m$^2$ kg$^{-2}$') == 
 %!		'$(66.74215 \pm 0.00092)$~pN m$^2$ kg$^{-2}$')
