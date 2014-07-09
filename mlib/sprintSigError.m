@@ -2,10 +2,10 @@
 ## prints data with errorbars to a string.
 ## 
 
-function sprintSigError(central, err)
+function s = sprintSigError(central, err)
 
 	prec = ceil(  log10( abs(central/err) ) );
-
+	
 	if(prec >= 0)
 		cl   = floor( log10( abs(central ) ) );
 	else
@@ -18,4 +18,7 @@ function sprintSigError(central, err)
 	formatString = '%.*f %s %.*f %s %d %s';
 
 	s = sprintf( formatString, prec, cnum, "\\pm", prec, snum, "\\times 10^{",  cl, "}");
+
 end
+
+%!test assert(sprintSigError(1,1) == '1 \pm 1 \times 10^{ 0 }')

@@ -8,7 +8,7 @@ function s = sprintSI(num, err, errSigFigs, siNum, baseUnit)
 	siPrefixes
 	%9 gets the correct offset.
 	siDex = siNum / 3 + 9;
-	pf = siPrefixes{siDex,2}
+	pf = siPrefixes{siDex,2};
 
 	%determine divisor
 	lp = 10^siNum;
@@ -22,7 +22,7 @@ function s = sprintSI(num, err, errSigFigs, siNum, baseUnit)
 	decimals = max([0 -en]);
 	
 	s = sprintf('$(%.*f \\pm %.*f)$~%s%s', decimals, num, decimals, err,
-			 pf, baseUnit)
+			 pf, baseUnit);
 end
 
 %!test assert(sprintSI( 350, 10, 1,  3, 'm') == '$(0.35 \pm 0.01)$~km');
