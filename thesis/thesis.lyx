@@ -8528,8 +8528,22 @@ The foil interferometer has approximately 0.5 mW of infrared optical power
  incident on the foil.
  This spot heating may dissipate at different rates in an attractor correlated
  way.
- ~XXXRC % of the light is reflected, but this leaves XXXRC W to be dissipated
- through conduction in the foil.
+ 95-99% of the light is reflected 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "loebich1972optical"
+
+\end_inset
+
+, but this leaves 5-25
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+W to be dissipated through conduction in the foil.
 \end_layout
 
 \begin_layout Paragraph
@@ -10632,25 +10646,6 @@ n files for the attractor computer to run.
  This spends perhaps more time than is warranted exploring shorter attractor-pos
 ition differences.
  
-\end_layout
-
-\begin_layout Standard
-Figure XXXRC.
-\end_layout
-
-\begin_layout Section
-\begin_inset Quotes eld
-\end_inset
-
-Random
-\begin_inset Quotes erd
-\end_inset
-
- attractor motion
-\end_layout
-
-\begin_layout Standard
-XXXRC
 \end_layout
 
 \begin_layout Standard
