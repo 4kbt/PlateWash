@@ -2861,7 +2861,21 @@ name "fig:Magnetic-damper"
 
 \end_inset
 
-Magnetic damper, June 2011
+Magnetic damper, June 2011.
+ The upper fiber is the 
+\begin_inset Quotes eld
+\end_inset
+
+pre-hanger
+\begin_inset Quotes erd
+\end_inset
+
+ fiber to provide isolation from tilt couplings, the lower fiber is the
+ torsion fiber.
+ The copper mass provides a mechanism for eddy-current damping of pendulum
+ swing in the presence of the magnetic field gradients from the ring magnet.
+ The alligator clip in the background connects the pendulum/phi-top assembly
+ to electrical ground.
 \end_layout
 
 \end_inset
@@ -2964,6 +2978,8 @@ status open
 Intermediate-prototype pendulum, attractor, and early feedback electrodes
  demonstrating attractor/pendulum arrangement without the shielding foil.
  May, 2009.
+ The rod electrodes have since been replaced with planar electrodes for
+ reduced swing coupling.
 \end_layout
 
 \end_inset
@@ -3703,7 +3719,15 @@ In order to enable excellent access to the foil face, but preserve uniform
  ring be very thin.
  In the case of PlateWash, with parallel fiber/foil alignment, the fiber
  is separated by only a millimeter from the foil face.
- The front clamping ring is only XXXRC thick.
+ The front clamping ring is only 
+\begin_inset Formula $\sim1.2$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+mm thick.
  This allows the foil to remain nearly flat when being tensioned, requiring
  minimum slack in the foil to permit the foil pusher to come into tension
  while permitting full access to the foil face.
@@ -7464,7 +7488,11 @@ The attractor and foil will, in general, have different values of electrical
  potential.
  The electrical connections between them will include a collection of Galvanic-p
 otential generating junctions.
- XXXRC - elaborate
+ The voltages generated at each junction are, as in a thermocouple, temperature-
+dependent and may depend upon the detailed structure of the junction, leading
+ to temperature sensitivity, temperature-gradient sensitivity, changes with
+ mechanical creep, and perhaps microphonic pickup.
+ The contact potentials drift slowly, with stability XXXRC.
 \end_layout
 
 \begin_layout Subparagraph
@@ -7969,9 +7997,9 @@ filename "../extracted/bellowsTorque.tex"
 
 .
  Furthermore, this effect is quite linear with pressure/displacement, as
- the center of mass of the bellows displaces by perhaps 1/50th of the displaceme
-nt of the attractor and about 1/1000th of the distance to the pendulum.
- XXXRC Jens thinks that it should be 1/100th?
+ the center of mass of the bellows displaces by 1/2 of the displacement
+ of the attractor and about 1/400th of the distance to the pendulum.
+ 
 \end_layout
 
 \begin_layout Paragraph
