@@ -8509,12 +8509,12 @@ If there is a temperature gradient between the foil and the attractor, attractor
  Heat transfer is enhanced over very short distances in vacuum by near-field
  electromagnetic effects, somewhat like the Casimir interaction, as in 
 \begin_inset CommandInset citation
-LatexCommand citep
-key "Jones2013349"
+LatexCommand citet
+key "jones2013thermal"
 
 \end_inset
 
- (XXXRC this reference is broken).
+.
  Gas effects similar to proximity-enhanced gas damping may also have an
  effect.
 \end_layout
