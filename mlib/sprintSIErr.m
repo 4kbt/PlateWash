@@ -1,15 +1,12 @@
 function s = sprintSIErr(num, err, errSigFigs, siNum, baseUnit)
 
-	if( mod(siNum,3) ~= 0 )
-		error('SI exponent not divisible by three');
+	pf = getSIPrefix(siNum);
+
+	%If the unit is mass, compensate for humanity.
+	if (isGrams(baseUnit))
+		siNum = siNum - 3;
 	end
-
-	%Determine proper prefix
-	siPrefixes
-	%9 gets the correct offset.
-	siDex = siNum / 3 + 9;
-	pf = siPrefixes{siDex,2};
-
+	
 	%determine divisor
 	lp = 10^siNum;
 	
@@ -32,3 +29,6 @@ end
 %!test assert(sprintSIErr(6.674215e-11, 0.000092e-11, 2, -12, 
 %!		'N m$^2$ kg$^{-2}$') == 
 %!		'$(66.74215 \pm 0.00092)$~pN m$^2$ kg$^{-2}$')
+%!test assert(sprintSIErr(4507, 10, 1, 3, 'g') == '$(4507 \pm 10)$~kg');
+%!test assert(sprintSIErr(0.015, 0.001, 1, 0, 'g') == '$(15 \pm 1)$~g');
+%!test assert(sprintSIErr(10e-9, 27e-9, 2, -6, 'g') == '$(10 \pm 27)$~$\mu$g');
