@@ -19,9 +19,12 @@ pendulumF0Width = 4e-3;
 pendulumQ=3500;
 pendulumI=2.369e-6;
 kappa=4*pi*pi*pendulumF0*pendulumF0*pendulumI; printSigNumber(kappa,[HOMEDIR 'extracted/kappa.tex'],1);
-psdWidth=1.016e-2; printDecimal(psdWidth*10.0, [HOMEDIR 'extracted/detectorWidthMillimeters.tex'], 2); %Quoted number from OSI for SC-10.
+psdWidth=10.16e-3; psdWidthErr = 0.01e-3 % Quoted number from OSI for SC-10; err uses their sigfigs. 
+printSIErr(psdWidth, psdWidthErr, 1, -3, 'm', [HOMEDIR 'extracted/detectorWidthMillimeters.tex']); 
 focalLength=400e-3;
-autocolNoise = 5e-8; printSigNumber(autocolNoise, [HOMEDIR 'extracted/autocolNoise.tex'],1);
+autocolNoise = 5e-8; 
+printSigNumber(autocolNoise, [HOMEDIR 'extracted/autocolNoise.tex'],1);
+printSI(autocolNoise,  1, -9, 'rad/$\sqrt(\text{Hz})$', [HOMEDIR 'extracted/autocolNoise.tex']);
 
 psdToRadians = psdWidth/focalLength/2.0/2.0; printDecimal(psdToRadians*2.0*1000, [HOMEDIR 'extracted/autocollDynamicRangePeak2PeakmRad.tex'], 2); %2 for detector width, 2 for single-bounce.
 
