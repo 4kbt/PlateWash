@@ -6,6 +6,6 @@ printSigNumber(CoilFieldAtCenter, 'extracted/CoilFieldAtCenter.tex', 1);
 
 coilTip = 1/3; %SWAG
 
-verticalField = CoilFieldAtCenter*cos(coilTip);   printSigNumber(verticalField,   'extracted/verticalField.tex'  ,1);
-transverseField = CoilFieldAtCenter*sin(coilTip); printSigNumber(transverseField, 'extracted/transverseField.tex',1);
-axialField = transverseField;			  printSigNumber(axialField,      'extracted/axialField.tex'     ,1);
+verticalField = CoilFieldAtCenter*cos(coilTip);   printSI(verticalField, , 1, -6, 'T', 'extracted/verticalField.tex'  );
+transverseField = CoilFieldAtCenter*sin(coilTip); printSI(transverseField, 1, -6, 'T', 'extracted/transverseField.tex');
+axialField = transverseField;			  printSI(axialField,      1, -6, 'T', 'extracted/axialField.tex'     );

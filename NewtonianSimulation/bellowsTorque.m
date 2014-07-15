@@ -41,4 +41,4 @@ for attrCtr = 1:rows(attractors);
 
 end
 
-printSigNumber( torque(3) , [HOMEDIR '/extracted/bellowsTorque.tex'], 2);
+printSI( torque(3) , 2, -15, 'N-m', [HOMEDIR '/extracted/bellowsTorque.tex']);

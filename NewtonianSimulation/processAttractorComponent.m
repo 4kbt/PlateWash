@@ -70,10 +70,10 @@ for attrCtr = 1:rows(attractors);
 	outMatrix = [t force torque linResiduals quadResiduals];
 	save ("-text" , outString, "outMatrix")
 
-	printSigError(p(1) , errs(1), [ outPath attrString 'quad.tex']);
-	printSigError(p(2) , errs(2), [ outPath attrString 'lin.tex']);
-	printSigError(p(3) , errs(3), [ outPath attrString 'const.tex']);
+	printSIErr(p(1) , errs(1), 1, -15, 'N-m/m$^2$', [ outPath attrString 'quad.tex']);
+	printSIErr(p(2) , errs(2), 1, -15, 'N-m/m'    , [ outPath attrString 'lin.tex']);
+	printSIErr(p(3) , errs(3), 1, -15, 'N-m', [ outPath attrString 'const.tex']);
 	save([outPath attrString 'QuadFit.dat'], 'fitOut');
 	save([outPath attrString 'LinFit.dat' ], 'linOut');
-	printSigNumber(maxNonLin, [outPath attrString 'maxnonlin.tex'],1);
+	printSI(maxNonLin, 2, -15, 'N-m', [outPath attrString 'maxnonlin.tex']);
 end

@@ -2,6 +2,6 @@ fundamentalConstants
 
 d = load('finalPressure.dat');
 
-printSigNumber(d, 'extracted/finalPressureTorr.tex', 2);
+printSI(d, 1, -9, 'torr', 'extracted/finalPressureTorr.tex');
 
-printSigNumber(d*OnePascalInTorr, 'extracted/finalPressurePa.tex', 2);
+printSigNumber(d*OnePascalInTorr, 1, -6,'Pa', 'extracted/finalPressurePa.tex', 2);

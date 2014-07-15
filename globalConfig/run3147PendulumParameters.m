@@ -24,7 +24,7 @@ pendulumBodyThickness= 0.070*0.0254; printSigNumber(pendulumBodyThickness , [HOM
 printSIErr(pendulumBodyThickness, 0.001*0.0254, 1, -3, 'm', [HOMEDIR '/extracted/pendulumBodyThickness.tex' ]); %1 part in 10^2 seems coarse?
 pendulumBodyMass=rhoTi*pendulumBodyHeight*pendulumBodyWidth*pendulumBodyThickness;
 
-rhoTaP=16650; printInteger(rhoTaP, [HOMEDIR '/extracted/inlayDensity.tex' ]);
+rhoTaP=16650; printSI(rhoTaP, 2, 3, 'g/m$^3$', [HOMEDIR '/extracted/inlayDensity.tex' ]);
 rhoInlay=rhoTaP-rhoTi;
 inlayHeight=pendulumBodyHeight;
 inlayThickness=0.010*0.0254 ; printSigNumber(inlayThickness, [HOMEDIR '/extracted/inlayThickness.tex' ], 2);
@@ -47,18 +47,26 @@ pendCenterToStep = j1;
 
 %%%%%% ATTRACTOR %%%%%
 %CamelCase variables from jan13Attractor.
-InfiniteRadius = 0.3;                  printSigNumber(InfiniteRadius         , [HOMEDIR '/extracted/InfiniteRadius.tex']          , 1);
+InfiniteRadius = 0.3;                  printSI(InfiniteRadius, 2, 0, 'm'	, [HOMEDIR '/extracted/InfiniteRadius.tex']);
 
-rhoAl=2700  ;			       printSigNumber(rhoAl                  , [HOMEDIR '/extracted/rhoAl.tex']                   , 2);
-rhoTaA=16650;                          printSigNumber(rhoTaA		     , [HOMEDIR '/extracted/rhoTaA.tex']		  , 2);
+rhoAl=2700  ;			       printSI(rhoAl,  2, 3, 'g/m$^3$'		, [HOMEDIR '/extracted/rhoAl.tex']);
+rhoTaA=16650;                          printSI(rhoTaA, 2, 3, 'g/m$^3$'	     	, [HOMEDIR '/extracted/rhoTaA.tex']);
 
-AttractorDiameter= 3*0.0254-1350e-6;   printSigNumber(AttractorDiameter      , [HOMEDIR '/extracted/AttractorDiameter.tex'       ], 4);
-AttractorPlateThickness= 30e-3*0.0254; printSigNumber(AttractorPlateThickness, [HOMEDIR '/extracted/AttractorPlateThickness.tex' ], 2);
-AttractorFullThickness = 12.91e-3 ;    printSigNumber(AttractorFullThickness , [HOMEDIR '/extracted/AttractorFullThickness.tex'  ], 4);
-AttractorRimHeight = 0.0254*.4129 ;    printSigNumber(AttractorRimHeight     , [HOMEDIR '/extracted/AttractorRimHeight.tex'      ], 4);
+
+%All uncertainties in this block are SWAGs as assigned; lab notebook may offer tighter constraints.
+AttractorDiameter= 3*0.0254-1350e-6; AttractorDiameterErr = 0.002*0.0254;
+printSIErr(AttractorDiameter,       AttractorDiameterErr        , 1, -3, 'm'     , [HOMEDIR '/extracted/AttractorDiameter.tex'       ]);
+AttractorPlateThickness= 30e-3*0.0254; AttractorPlateThicknessErr = 1e-3*0.0254;
+printSIErr(AttractorPlateThickness, AttractorPlateThicknessErr  , 1, -3, 'm', [HOMEDIR '/extracted/AttractorPlateThickness.tex' ]);
+AttractorFullThickness = 12.91e-3 ; AttractorFullThicknessErr = 0.002*0.0254;
+printSIErr(AttractorFullThickness , AttractorFullThicknessErr   , 1, -3, 'm', [HOMEDIR '/extracted/AttractorFullThickness.tex'  ]);
+AttractorRimHeight = 0.0254*.4129 ; AttractorRimHeightErr = 0.002*0.0254;
+printSIErr(AttractorRimHeight     , AttractorRimHeightErr       , 1, -3, 'm', [HOMEDIR '/extracted/AttractorRimHeight.tex'      ]);
 AttractorBackerThickness= AttractorFullThickness - AttractorPlateThickness - AttractorRimHeight;
-				       printSigNumber(AttractorBackerThickness,[HOMEDIR '/extracted/AttractorBackerThickness.tex'], 4);
-AttractorInnerDiameter=0.0254*1.915;   printSigNumber(AttractorInnerDiameter , [HOMEDIR '/extracted/AttractorInnerDiameter.tex'  ], 4);
+AttractorBackerThicknessErr = sqrt(AttractorFullThicknessErr^2 + AttractorPlateThicknessErr^2 + AttractorRimHeightErr^2);
+printSIErr(AttractorBackerThickness, AttractorBackerThicknessErr, 1, -3, 'm', [HOMEDIR '/extracted/AttractorBackerThickness.tex']);
+AttractorInnerDiameter=0.0254*1.915; AttractorInnerDiameterErr = 0.002*0.0254;
+printSIErr(AttractorInnerDiameter ,  AttractorInnerDiameterErr  , 1, -3, 'm', [HOMEDIR '/extracted/AttractorInnerDiameter.tex' ]);
 AttractorRimWidth= (AttractorDiameter - AttractorInnerDiameter)/2.0;
 
 
@@ -68,15 +76,20 @@ da1=AttractorPlateThickness; %# Ta attractor thickness
 dal1=AttractorBackerThickness; % Al attractor thickness
 
 %These offsets are entirely unchecked!
-attrHorizOffset = 3.5e-3;		printSigNumber(attrHorizOffset    , [HOMEDIR '/extracted/attrHorizOffset.tex'], 2);
-attrVertOffset = 0.5e-3;		printSigNumber(attrVertOffset	  , [HOMEDIR '/extracted/attrVertOffset.tex' ], 2);
+attrHorizOffset = 3.5e-3;	attrHorizOffsetErr = 0.3e-3;	
+printSIErr(attrHorizOffset    , attrHorizOffsetErr, 2, -3,'m', [HOMEDIR '/extracted/attrHorizOffset.tex']);
+attrVertOffset = 0.5e-3;	attrVertOffsetErr = 0.3e-3;
+printSIErr(attrVertOffset     , attrVertOffsetErr,  2, -3,'m', [HOMEDIR '/extracted/attrVertOffset.tex']);
 
 %%%%% Screw gaps %%%%%
 
 rhoGap = -rhoAl;
 
-gapLength = 1e-3;			printSigNumber(gapLength  , [HOMEDIR '/extracted/screwGapLength.tex'  ], 1);
-gapDiameter = 0.110*0.0254; 		printSigNumber(gapDiameter, [HOMEDIR '/extracted/screwGapDiameter.tex'], 2);
+%Errors are SWAGs
+gapLength = 1e-3;	gapLengthErr = 0.5e-3;
+printSIErr(gapLength, 	gapLengthErr, 1, -3,'m', [HOMEDIR '/extracted/screwGapLength.tex']);
+gapDiameter = 0.110*0.0254; gapDiameterErr = 0.002*0.0254;
+printSIErr(gapDiameter, 	gapDiameterErr, 1, -3,'m', [HOMEDIR '/extracted/screwGapLength.tex']);
 
 
 gapMass = pi * (gapDiameter/2.0)^2*gapLength * rhoGap;
@@ -88,8 +101,8 @@ gapRadialPosition = 72e-3/2;		 printSigNumber(gapRadialPosition  , [HOMEDIR '/ex
 %%%%% Spindles %%%%
 %See pg 82 of notebook
 
-spindleLength = 2.901*0.0254;			printSigNumber(spindleLength        , [HOMEDIR '/extracted/spindleLength.tex'   ], 2);
-spindleDiameter = 0.181*0.0254;		printSigNumber(spindleDiameter      , [HOMEDIR '/extracted/spindleDiameter.tex'   ], 2);
+spindleLength = 2.901*0.0254;		printSigNumber(spindleLength        , [HOMEDIR '/extracted/spindleLength.tex'   ], 2);
+spindleDiameter = 0.181*0.0254;		printSIErr(spindleDiameter, 0.002*0.0254, 1, -3, 'm', [HOMEDIR '/extracted/spindleDiameter.tex'   ]);
 
 spindleMass = 3.1818e-3; 
 
@@ -132,14 +145,18 @@ flexureSetBack = spindlePlateSetBack + spindlePlateThickness;
 
 %was 100e-6
 %'Pendulum gridsize is insufficient. 750e-6 and 2.5e-6 are better.'
-pendulumPMScanGridSize =2000e-6;printSigNumber(pendulumPMScanGridSize, [HOMEDIR '/extracted/pendulumPMScanGridSize.tex'],3);
-pendulumPMScanVertStep = 5e-6;	printSigNumber(pendulumPMScanVertStep, [HOMEDIR '/extracted/pendulumPMScanVertStep.tex'],2);
+pendulumPMScanGridSize =2000e-6;
+printSI(pendulumPMScanGridSize, 2, -6, 'm', [HOMEDIR '/extracted/pendulumPMScanGridSize.tex']);
+pendulumPMScanVertStep = 5e-6;	
+printSI(pendulumPMScanVertStep, 2, -6, 'm', [HOMEDIR '/extracted/pendulumPMScanVertStep.tex']);
 pendulumPMBodyDensity = rhoTi;
 pendulumPMInlayDensity =  rhoTaP;
 
 %was 200e-6
-attractorPMScanGridSize = pendulumPMScanGridSize;	printSigNumber(attractorPMScanGridSize, [HOMEDIR '/extracted/attractorPMScanGridSize.tex'],3);
-attractorPMScanVertStep = 2.5e-6;	printSigNumber(attractorPMScanVertStep, [HOMEDIR '/extracted/attractorPMScanVertStep.tex'],2);
+attractorPMScanGridSize = pendulumPMScanGridSize;
+printSI(attractorPMScanGridSize, 2, -6, 'm', [HOMEDIR '/extracted/attractorPMScanGridSize.tex']);
+attractorPMScanVertStep = 2.5e-6;
+printSI(attractorPMScanVertStep, 2, -6, 'm', [HOMEDIR '/extracted/attractorPMScanVertStep.tex']);
 attractorPMDensity = rhoTaA;
 
 
@@ -147,16 +164,21 @@ attractorPMDensity = rhoTaA;
 
 %brick mass
 brickMass = 23.88;
-brickMassErr = 0.34;			printSigError(brickMass, brickMassErr, [HOMEDIR '/extracted/brickMass.tex']);
+brickMassErr = 0.34;			
+printSIErr(brickMass, brickMassErr, 2, 3, 'g', [HOMEDIR '/extracted/brickMass.tex']);
 
 %brick dimensions
-brickHeight = 8*0.0254;			printSigNumber(brickHeight	    , [HOMEDIR '/extracted/brickHeight.tex'    ],2);
-brickWidth  = 4*0.0254;			printSigNumber(brickWidth	    , [HOMEDIR '/extracted/brickWidth.tex'     ],2);
+brickHeight = 8*0.0254;			
+printSI(brickHeight, 2, -3, 'm', [HOMEDIR '/extracted/brickHeight.tex'    ]);
+brickWidth  = 4*0.0254;
+printSI(brickWidth, 2, -3, 'm', [HOMEDIR '/extracted/brickWidth.tex'    ]);
 
 %brick positions
-brickRadius = 25*0.0254;		printSigNumber(brickRadius	    , [HOMEDIR '/extracted/brickRadius.tex'    ],2);
+brickRadius = 25*0.0254;
+printSI(brickRadius, 2, -3, 'm'	    , [HOMEDIR '/extracted/brickRadius.tex'    ]);
 % elevation to center of brick
-brickElevation = 16*0.0254;		printSigNumber(brickElevation	    , [HOMEDIR '/extracted/brickElevation.tex' ],2);
+brickElevation = 16*0.0254;
+printSI(brickElevation, 2, -3, 'm'	    , [HOMEDIR '/extracted/brickElevation.tex'    ]);
 
 
 %%%% Bellows %%%% 
@@ -167,11 +189,14 @@ bellowsPressure = 50.0/14.0;
 bellowsLength = 70e-3;
 bellowsDiameter = 25e-3;
 
-bellowsVolume = pi * (bellowsDiameter/2.0)^2 * bellowsLength; 	printSigNumber(bellowsVolume, [HOMEDIR '/extracted/bellowsVolume.tex'], 2);
+bellowsVolume = pi * (bellowsDiameter/2.0)^2 * bellowsLength; 	
+printSI(bellowsVolume * 1000^3, 2, -3, 'm$^3$', [HOMEDIR '/extracted/bellowsVolume.tex']);
 
-bellowsMass = bellowsVolume * rhoAir * bellowsPressure;		printSigNumber(bellowsMass,   [HOMEDIR '/extracted/bellowsMass.tex'  ], 2);
+bellowsMass = bellowsVolume * rhoAir * bellowsPressure;
+printSI(bellowsMass, 2, -3, 'g',  [HOMEDIR '/extracted/bellowsMass.tex'  ]);
 
-bellowsDistance = 180e-3; 					printSigNumber(bellowsDistance, [HOMEDIR '/extracted/bellowsDistance.tex'],2);
+bellowsDistance = 180e-3;
+printSI(bellowsDistance, 2, -3, 'm', [HOMEDIR '/extracted/bellowsDistance.tex']);
 bellowsHeight = 0;
 bellowsOffset = 0;
 

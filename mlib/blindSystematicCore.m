@@ -14,10 +14,10 @@ filePath = ['extracted/' strokeType];
 plotPath = ['plots/' strokeType];
 
 if(exist('bR'))
-	printSigError( lrDiff(1), lrDiff(2) , [filePath 'StrokeLRDiff.tex']);
-	printSigError( r0Diff(1), r0Diff(2) , [filePath 'StrokeR0Diff.tex']);
+	printSIErr( lrDiff(1), lrDiff(2) , 2, -15, 'N-m', [filePath 'StrokeLRDiff.tex']);
+	printSIErr( r0Diff(1), r0Diff(2) , 2, -15, 'N-m', [filePath 'StrokeR0Diff.tex']);
 end %if
-	printSigError( l0Diff(1), l0Diff(2) , [filePath 'StrokeL0Diff.tex']);
+	printSIErr( l0Diff(1), l0Diff(2) , 2, -15, 'N-m', [filePath 'StrokeL0Diff.tex']);
 
 	olHist = [blBins blH];
 if(exist('bR'))
