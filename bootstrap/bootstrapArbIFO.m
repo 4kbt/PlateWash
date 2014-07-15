@@ -3,18 +3,9 @@ pause = 0;
 
 %Ugly hack to reenable print functions
 clear -f
-arbFitx1Spacing = 10e-6;	printSigNumber(arbFitx1Spacing, 'extracted/arbFitx1Spacing.tex', 2);
-arbFitx2Spacing = 50e-6;	printSigNumber(arbFitx2Spacing, 'extracted/arbFitx2Spacing.tex', 2);
-arbFitx1Start   = pfTouch*1e-6;	printSigNumber(arbFitx1Start  , 'extracted/arbFitx1Start.tex'  , 2);
-arbFitx1Stop    = 300e-6;	printSigNumber(arbFitx1Stop   , 'extracted/arbFitx1Stop.tex'   , 2);
-arbFitx2Start	= arbFitx1Stop;	printSigNumber(arbFitx2Start  , 'extracted/arbFitx2Start.tex'  , 2);
-arbFitx2Stop    = 900e-6;	printSigNumber(arbFitx2Start  , 'extracted/arbFitx2Stop.tex'   , 2);
 
-xpos1 = arbFitx1Start:arbFitx1Spacing:arbFitx1Stop;
-xpos2 = arbFitx2Start:arbFitx2Spacing:arbFitx2Stop;
-
-xpositions = [xpos1 xpos2(2:end)];
-
+%Void script to DRY out arbFits.
+arbFitPositions
 
 % 'SQP' <--- doesn't work.
 % 'NMS'
