@@ -1852,7 +1852,7 @@ Implementation
 \end_layout
 
 \begin_layout Standard
-Before launching into the full description of the method and apparatus,
+Before launching into the full description of the apparatus and method,
  a qualitative description is appropriate.
  A more-accurate diagram of the apparatus is shown in Fig.
  
@@ -9387,7 +9387,7 @@ status open
 \end_layout
 
 \begin_layout Chapter
-Operation
+Experimental Plan
 \end_layout
 
 \begin_layout Standard
@@ -9396,7 +9396,11 @@ This chapter describes the strategies and choices we made in the operation
 \end_layout
 
 \begin_layout Section
-Frequency
+Overview
+\end_layout
+
+\begin_layout Section
+Frequency-space
 \end_layout
 
 \begin_layout Standard
@@ -9415,6 +9419,13 @@ Hz to 1
 Hz.
  This section describes the way in which important experimental frequencies
  were selected.
+ As will be shown, the most-important frequency, the frequency with which
+ the attractor changes position, is pushed by several concerns to the highest-fe
+asible frequency.
+ The limit of feasibility is set by both the limited speed with which our
+ attractor drive can operate and by the speed with which the pendulum feedback
+ control can react without adding extra noise.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -9781,14 +9792,14 @@ filename "..//extracted/switchFrequency.tex"
 \end_inset
 
 Hz, the noise is generally at the level of 
-\begin_inset Formula $2\times10^{-14}$
+\begin_inset Formula $20$
 \end_inset
 
 
 \begin_inset space ~
 \end_inset
 
-N-m/
+fN-m/
 \begin_inset Formula $\sqrt{\mbox{Hz}}$
 \end_inset
 
