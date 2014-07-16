@@ -1,7 +1,10 @@
+set term postscript solid color enhanced eps
+set output 'ifoSim.eps'
+
 nglass = 1.47
 
 NA = 0.14
-r= 5e-6
+r= 9.2e-6/2
 lam = 1330e-9
 
 T1 = 2.0*nglass/(nglass+1)
@@ -12,12 +15,18 @@ set key noauto
 
 set samples 10000
 
+#Unit conversion factor
 c = 1e-6
 
 
-set title 'Fiber output as a function of foil displacement'
-set xlabel 'fiber tip to foil separation (um)'
-set ylabel 'reflected laser power fraction'
+set title 'Intensity of interferometer light returning from foil as function of foil displacement'
+set xlabel 'fiber tip to foil separation ({/Symbol m}m)'
+set ylabel 'reflected fraction of laser power incident on foil'
 
-pl [0:50][0:] \
-	(R**2 + 2.0*R*T1*T2/(2*c*x/r*NA+1)**2 * cos(4.0*pi*c*x/lam)+T1**2*T2**2/(2.0*c*x/r*NA+1.0)**4)
+pl [0:100][0:0.2] \
+	(R**2) lw 3 tit 'light reflected from fiber tip',\
+	T1**2*T2**2/(2.0*c*x/r*NA+1.0)**4  lt -1 lw 3 tit 'reflected from foil back to fiber core',\
+	(R**2)+T1**2*T2**2/(2.0*c*x/r*NA+1.0)**4 lt 0 lw 5 tit 'sum without interference',\
+	(sqrt((R**2))+sqrt(T1**2*T2**2/(2.0*c*x/r*NA+1.0)**4))**2 lt 0 tit 'interference envelope',\
+	(sqrt((R**2))-sqrt(T1**2*T2**2/(2.0*c*x/r*NA+1.0)**4))**2 lt 0,\
+	(R**2 + 2.0*R*T1*T2/(2*c*x/r*NA+1)**2 * cos(4.0*pi*c*x/lam)+T1**2*T2**2/(2.0*c*x/r*NA+1.0)**4) lt 3 tit 'full interference'

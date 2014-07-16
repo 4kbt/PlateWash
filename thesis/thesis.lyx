@@ -5298,13 +5298,24 @@ I_{reflected}=|A_{reflected}|^{2}=A^{2}(R^{2}-2T_{1}T_{2}R\frac{1}{(\frac{2s}{d}
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-I_{reflected}=|A_{reflected}|^{2}=A^{2}\left(R^{2}-2RT_{1}T_{2}\frac{1}{(\frac{2s}{r}\tan\theta+1)^{2}}\cos(4\pi s/\lambda)+T_{1}^{2}T_{2}^{2}\frac{1}{(\frac{2s}{r}\tan\theta+1)^{4}}\right)
-\]
+\begin{equation}
+I_{reflected}=|A_{reflected}|^{2}=A^{2}\left(R^{2}-2RT_{1}T_{2}\frac{1}{(\frac{2s}{r}\tan\theta+1)^{2}}\cos(4\pi s/\lambda)+T_{1}^{2}T_{2}^{2}\frac{1}{(\frac{2s}{r}\tan\theta+1)^{4}}\right),\label{eq:IFO reflection prediction}
+\end{equation}
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+plotted in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:foil ifo theory expectation"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -5329,7 +5340,57 @@ m, numerical aperture (
 .
  Note that there is a phase flip at the foil, but not at the internal reflection
 , hence the minus sign in 
-\begin_inset Formula $A_{reflected.}$
+\begin_inset Formula $A_{reflected}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/charlie/trialEotwash/Eotwash/thesis/plots/ifoSim.eps
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:foil ifo theory expectation"
+
+\end_inset
+
+Theoretical expectation for the foil interferometer signal as a function
+ of foil displacement (Equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:IFO reflection prediction"
+
+\end_inset
+
+).
+ The irregular envelope for the fringes is due to the varying amount of
+ light that returns to the fiber core from the foil.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \end_inset
 
 
