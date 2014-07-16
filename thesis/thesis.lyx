@@ -6470,6 +6470,13 @@ There are many sources of fluctuating 'noise' that affect the PlateWash
 
 \begin_layout Subsubsection
 Fiber thermal noise
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Fiber-thermal-noise"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -6483,22 +6490,54 @@ key "saulson1990thermal,Gonz\\'alez199512,1995PhDT........16G"
 , all mechanical oscillators have intrinsic thermal noise.
  Through the fluctuation-dissipation theorem, any lossy oscillator at finite
  temperature drives itself with thermal fluctuations.
+ The intrinsic noise in a torsion balance is known to be consistent with
+ thermal noise from 
+\begin_inset Quotes eld
+\end_inset
+
+internal damping
+\begin_inset Quotes erd
+\end_inset
+
+, that is, that the spring constant has an imaginary part.
+ 
+\begin_inset Formula $I\ddot{\theta}=\kappa\theta\rightarrow I\ddot{\theta}=\kappa(1+i\frac{1}{Q})\theta$
+\end_inset
+
+ , where 
+\begin_inset Formula $\kappa$
+\end_inset
+
+ is the torsion constant of the fiber, 
+\begin_inset Formula $I$
+\end_inset
+
+ the pendulum's moment of inertia about the fiber axis, and 
+\begin_inset Formula $\theta$
+\end_inset
+
+ the pendulum twist angle.
+ This is in contrast to more-familiar external damping, where 
+\begin_inset Formula $I\ddot{\theta}=-\kappa\theta-\frac{\sqrt{\kappa I}}{Q}\dot{\theta}$
+\end_inset
+
+.
  
 \end_layout
 
 \begin_layout Standard
 A torsion balance suspended in sufficiently high vacuum is 'internally damped'.
- This is described by adding an imaginary part to the torsion fiber's spring
- constant 
-\begin_inset Formula $\kappa\rightarrow\kappa(1+i\phi)$
+ Following Saulson's classic explication, internal damping gives rise to
+ torque noise power with a 
+\begin_inset Formula $1/f$
 \end_inset
 
-, where 
-\begin_inset Formula $\phi=\frac{1}{Q}$
-\end_inset
+ spectral shape.
+ 
+\end_layout
 
- is the 'loss angle' of the fiber.
- In torque units, thermal noise is
+\begin_layout Standard
+In torque units, the expected thermal noise power is
 \begin_inset Formula 
 \[
 \tau^{2}(f)=4k_{B}T\frac{\kappa}{2\pi fQ}
@@ -9581,69 +9620,41 @@ For
 \end_layout
 
 \begin_layout Subsubsection
-Thermal Noise (XXXRC repeats 2.5.1.1)
+Thermal Noise 
 \end_layout
 
 \begin_layout Standard
-The intrinsic noise in a torsion balance is known 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "GonzÃ¡lez199512,1995PhDT........16G,saulson1990thermal"
+As described in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Fiber-thermal-noise"
 
 \end_inset
 
- to be consistent with thermal noise from 
-\begin_inset Quotes eld
-\end_inset
-
-internal damping
-\begin_inset Quotes erd
-\end_inset
-
-, that is, that the spring constant has an imaginary part.
- 
-\begin_inset Formula $I\ddot{\theta}=\kappa\theta\rightarrow I\ddot{\theta}=\kappa(1+i\frac{1}{Q})\theta$
-\end_inset
-
- , where 
-\begin_inset Formula $\kappa$
-\end_inset
-
- is the torsion constant of the fiber, 
-\begin_inset Formula $I$
-\end_inset
-
- the pendulum's moment of inertia about the fiber axis, and 
-\begin_inset Formula $\theta$
-\end_inset
-
- the pendulum twist angle.
- This is in contrast to more-familiar external damping, where 
-\begin_inset Formula $I\ddot{\theta}=-\kappa\theta-\frac{\sqrt{\kappa I}}{Q}\dot{\theta}$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-Following Saulson's classic explication, internal damping gives rise to
- torque noise power with a 
-\begin_inset Formula $1/f$
-\end_inset
-
- spectral shape.
- 
+, the torque noise power of a thermally-limited torsion balance is
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\tilde{\tau}^{2}(\omega)=4k_{B}T\frac{\kappa}{Q\omega}
+\tau^{2}(f)=4k_{B}T\frac{\kappa}{2\pi fQ}.
 \]
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+This drives any measurement toward higher frequencies for decreased noise.
+ In power spectral amplitude, the improvement only comes as 
+\begin_inset Formula $1/\sqrt{f}$
+\end_inset
+
+, implying that the benefit of increased frequency is limited.
+\end_layout
+
+\begin_layout Standard
 Convolving this noise with the torque-to-angle transfer function (see Fig
  
 \begin_inset CommandInset ref
@@ -9653,6 +9664,7 @@ reference "fig:Approximate-torque-to-angle-tran"
 \end_inset
 
 ), we recover the angle noise spectrum of a thermally-limited torsion oscillator.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -18379,6 +18391,10 @@ Exclusion plots
 Interpretation
 \end_layout
 
+\begin_layout Standard
+XXXRC -- to be filled in after unblinding.
+\end_layout
+
 \begin_layout Chapter
 Future
 \end_layout
@@ -18387,8 +18403,349 @@ Future
 Lessons learned
 \end_layout
 
+\begin_layout Standard
+Scott Schell earned his spot in the acknowledgements when he told a backcountry-
+ski class approximately this: 
+\begin_inset Quotes eld
+\end_inset
+
+I think the major difference between a professional and an amateur is whether
+ or not, at the end of the day, they ask the question, 'what have I learned
+ today'?
+\begin_inset Quotes erd
+\end_inset
+
+ If we learn from our mistakes and avoid repeating them, our expertise can
+ compound itself, exceeding anyone's innate natural talent, skill, or intuition.
+ 
+\end_layout
+
+\begin_layout Standard
+The PlateWash experiment began as an attempt to make a lightning strike
+ into new territory.
+ The design is efficient, there is no more powerful geometry for raw signal.
+ The systematic uncertainties for Newtonian gravity are easy, the rest are
+ hard.
+ With an optimistic view toward the latter, it's easy to see how we predicted
+ we'd hit 
+\begin_inset Formula $\alpha=1$
+\end_inset
+
+ at 
+\begin_inset Formula $40$
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m in ~2008, and reach 
+\begin_inset Formula $20$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m in perhaps 2010.
+ That this result arrives in 2014 with a limit at greater than 
+\begin_inset Formula $50$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m is evidence that we made a mistake, either in our estimate of our capability,
+ in our execution, or in both.
+ We made mistakes in both.
+ I do not mean to say that the construction and execution of this experiment
+ is not an acheivement, it is, but we are doomed 
+\end_layout
+
+\begin_layout Standard
+The field of avalanche safety, and professional risk management more generally,
+ shares its soul with experimental physics: the control of systematic uncertaint
+y.
+ In the case of avalanches, if you underestimate your uncertainty more than
+ a few times, you die.
+ If you overestimate your uncertainty, you never get to play in the mountains.
+ For physicists, the situation is similar; if we report a violation of Newton's
+ Inverse Square Law Of Gravitation, and it's not true, our careers are damaged,
+ if not ended.
+ If we cower in fear of uncertainty, we'll never learn anything new about
+ Nature.
+ There is real value too be had for physicists who study risk management
+ [XXXMA].
+\end_layout
+
+\begin_layout Standard
+In the modern avalanche world, communication and an understanding of human
+ interactions are prized.
+ The hazards present in avalanche-prone snow can be prominent or subtle;
+ it is the subtle ones that kill most often.
+ In most avalanche accidents, someone in the group has correctly identified
+ the hazard that will eventually harm someone and is concerned about it
+ prior to the accident [XXXMA].
+ It is more rare for a group to get in trouble if it has discussed everyone's
+ safety concerns.
+ Everyone has blind spots, sometimes exacerbated by our environments.
+ For us, as physicists, I believe it is the same.
+ For this reason, I've broken out a 
+\begin_inset Quotes eld
+\end_inset
+
+social
+\begin_inset Quotes erd
+\end_inset
+
+ subsection.
+\end_layout
+
+\begin_layout Subsection
+Technical
+\end_layout
+
+\begin_layout Subsubsection
+1 parameter, 1.5 parameters, 2 parameters
+\end_layout
+
+\begin_layout Standard
+Our research group has made its name with Equivalence Principle tests.
+ A rotating torsion balance with test masses of equal gravitational mass
+ but differing composition looks for a composition-dependent differential
+ acceleration toward a distant attractor mass.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Foil
+\end_layout
+
+\begin_layout Standard
+XXXMA
+\end_layout
+
+\begin_layout Subsubsection
+Pendulum
+\end_layout
+
+\begin_layout Standard
+XXXMA
+\end_layout
+
+\begin_layout Subsubsection
+Capacitor
+\end_layout
+
+\begin_layout Standard
+XXXMA
+\end_layout
+
+\begin_layout Subsection
+Strategic
+\end_layout
+
+\begin_layout Standard
+The most important errors we've made are ones of strategy.
+ Just as months in the lab can save you hours in the library [XXXMA Snover],
+ small strategic errors can have large consequences over time.
+\end_layout
+
+\begin_layout Subsubsection
+Error Budget
+\end_layout
+
+\begin_layout Standard
+Perhaps the most important single concept when planning an experiment is
+ the formation of a complete error budget.
+\end_layout
+
+\begin_layout Standard
+Our single biggest mistake is the lack of a complete quantitative error
+ budget.
+ This seems like a childish oversight, but it's inherent to every modern
+ short-range gravity experiment (XXXMA does Spero have one?) because it
+ is extremely difficult to do.
+ When we proposed the experiment, we submitted a reasonable error
+\end_layout
+
+\begin_layout Standard
+XXXMA
+\end_layout
+
+\begin_layout Subsubsection
+Blitzkreig vs Campaign
+\end_layout
+
+\begin_layout Standard
+While it was first imagined as a short-range equivalence principle test,
+ and again as a competing design idea to the early Eot-Wash 10-hole pendulum
+ design, PlateWash, as it exists now, was sold in 2006-7 as a chance to
+ jump ahead of the existing technology.
+\end_layout
+
+\begin_layout Standard
+Our action mirrored this philosophy.
+ The goal was to push for the single best measurement we could get, as quickly
+ as we could.
+ We put off complete solutions to systematic concerns in favor of estimates
+ and a promise to tie up loose ends when the measurement was complete.
+ When the experiment was first assembled, our first day of data easily surpassed
+ the first Eot-Wash short-range experiments; we were on our way, led by
+ the huge potential of PlateWash's efficient design.
+\end_layout
+
+\begin_layout Standard
+XXXMA
+\end_layout
+
+\begin_layout Subsubsection
+Perfection vs Iteration
+\end_layout
+
+\begin_layout Standard
+XXXMA
+\end_layout
+
+\begin_layout Subsubsection
+Complexity
+\end_layout
+
+\begin_layout Standard
+XXXMA
+\end_layout
+
+\begin_layout Subsubsection
+Blindness
+\end_layout
+
+\begin_layout Standard
+XXXMA
+\end_layout
+
+\begin_layout Subsection
+Social
+\end_layout
+
+\begin_layout Subsubsection
+Teamwork
+\end_layout
+
+\begin_layout Standard
+XXXMA
+\end_layout
+
+\begin_layout Subsubsection
+Incentives
+\end_layout
+
+\begin_layout Standard
+XXXMA
+\end_layout
+
+\begin_layout Subsubsection
+Buy-in
+\end_layout
+
+\begin_layout Standard
+XXXMA
+\end_layout
+
+\begin_layout Subsubsection
+External commitments
+\end_layout
+
+\begin_layout Standard
+XXXMA
+\end_layout
+
 \begin_layout Section
 Upgrade plans
+\end_layout
+
+\begin_layout Standard
+XXXMA
+\end_layout
+
+\begin_layout Subsection
+Hardware
+\end_layout
+
+\begin_layout Standard
+XXXMA
+\end_layout
+
+\begin_layout Subsubsection
+Contact potential
+\end_layout
+
+\begin_layout Standard
+XXXMA
+\end_layout
+
+\begin_layout Subsubsection
+Pendulum flatness
+\end_layout
+
+\begin_layout Standard
+XXXMA
+\end_layout
+
+\begin_layout Subsubsection
+Autocollimator
+\end_layout
+
+\begin_layout Standard
+XXXMA
+\end_layout
+
+\begin_layout Subsubsection
+UV LED
+\end_layout
+
+\begin_layout Standard
+XXXMA
+\end_layout
+
+\begin_layout Subsubsection
+Interferometer improvements
+\end_layout
+
+\begin_layout Standard
+XXXMA
+\end_layout
+
+\begin_layout Subsection
+Software
+\end_layout
+
+\begin_layout Standard
+XXXMA
+\end_layout
+
+\begin_layout Subsubsection
+Blindness
+\end_layout
+
+\begin_layout Standard
+XXXMA
+\end_layout
+
+\begin_layout Subsubsection
+Python?
+\end_layout
+
+\begin_layout Standard
+XXXMA
 \end_layout
 
 \begin_layout Standard
