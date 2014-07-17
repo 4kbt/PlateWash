@@ -120,7 +120,7 @@ printSIErr(foilResonance, foilResonanceErr,1, 3, 'Hz', [HOMEDIR '/extracted/foil
 
 [foilThickness foilThicknessErr foilStd] = getFoilThickness;
 
-printSigError(foilThickness, foilThicknessErr , 1, -6,'m', [HOMEDIR '/extracted/foilThickness.tex']);
+printSIErr(foilThickness, foilThicknessErr , 1, -6,'m', [HOMEDIR '/extracted/foilThickness.tex']);
 
 foilDensity = 8230; printSI(foilDensity, 2, 3, 'g/m$^3$', [HOMEDIR '/extracted/foilDensity.tex']);
 
