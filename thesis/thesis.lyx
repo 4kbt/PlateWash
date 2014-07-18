@@ -9377,10 +9377,6 @@ status open
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -10892,6 +10888,51 @@ In the future, interleaving systematics tests with science runs would be
 
 \begin_layout Chapter
 Data Analysis
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename diagrams/analysisDiagram.png
+	height 80theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Flowchart diagramming the flow of data analysis.
+ After configuration of experimental and analysis parameters, timing cuts,
+ and the hand-input of some systematic test parameters, it is automated
+ and repeatable.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+XXXRC -- insert flowchart description here.
 \end_layout
 
 \begin_layout Section
