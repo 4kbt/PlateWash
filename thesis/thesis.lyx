@@ -9540,10 +9540,6 @@ status open
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -11058,6 +11054,454 @@ Data Analysis
 \end_layout
 
 \begin_layout Section
+Flow
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename diagrams/analysisDiagram.png
+	height 80theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Flowchart-diagramming"
+
+\end_inset
+
+Flowchart diagramming the flow of data analysis.
+ After configuration of experimental and analysis parameters, timing cuts,
+ and the hand-input of some systematic test parameters, it is automated
+ and repeatable.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The flowchart shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Flowchart-diagramming"
+
+\end_inset
+
+ diagrams the flow of data through the data analysis code.
+ This section provides a chronological narrative.
+ The data analysis is functionally run twice, once using only the pendulum
+ and attractor data streams, and once using all three.
+ As detailed in (XXXRC ref), the interferometer data are only useful over
+ parts of the run, requiring model-building in order to make a torque correction
+ during times that the interferometer was unusable.
+ 
+\end_layout
+
+\begin_layout Subsection
+Source data
+\end_layout
+
+\begin_layout Standard
+The data used in the analysis come from two sources, those that we determined
+ externally and hand-entered and those sourced directly from the data acquisitio
+n systems.
+\end_layout
+
+\begin_layout Subsubsection
+External inputs
+\end_layout
+
+\begin_layout Standard
+Externally-applied systematic injections and environmental variables (temperatur
+e, magnetic field, etc.), were determined by hand (XXXRC magnets) or in separate
+ analyses (XXXRC temperature) on a run-by-run basis.
+ These measurements are added to the analyzed data (XXXRC ref) through the
+ torsion-balance computer's data file at runtime.
+ 
+\end_layout
+
+\begin_layout Standard
+In addition, all experimental parameters (alignment, dimensions, densities,
+ analysis parameters, etc.) are stored in global configuration files that
+ are read by any process that needs them.
+\end_layout
+
+\begin_layout Subsubsection
+Data files
+\end_layout
+
+\begin_layout Standard
+Each data-acquisition computer generates its own data files.
+ When the pendulum computer's data are read, externally-measured data are
+ joined to the raw output from the pendulum DAQ.
+ The timing data are then referenced to a common datum (January 1, 2009).
+ 
+\end_layout
+
+\begin_layout Subsection
+Run-by-run analysis
+\end_layout
+
+\begin_layout Standard
+This section describes the analysis done for individual 
+\begin_inset Quotes eld
+\end_inset
+
+run
+\begin_inset Quotes erd
+\end_inset
+
+ of the experiment.
+ In this document, a 
+\begin_inset Quotes eld
+\end_inset
+
+run
+\begin_inset Quotes erd
+\end_inset
+
+ refers to a length of coincident operation of two or more DAQ systems specifica
+lly delineated by a run configuration file as having something interesting
+ to say.
+ The main routine of the run-by-run analysis looks through the directory
+ of run configuration files and runs the run-by-run analysis on the data
+ loaded by each one.
+\end_layout
+
+\begin_layout Subsubsection
+Trimming
+\end_layout
+
+\begin_layout Standard
+As described in (XXXRC ref), the data from each computer do not begin simultaneo
+usly and may have offsets between their clocks.
+ We correct for these effects as best we can.
+\end_layout
+
+\begin_layout Subsubsection
+Filtering
+\end_layout
+
+\begin_layout Standard
+As described in (XXXRC ref), the data are passed through FIR filters, primarily
+ to notch out the gravitational calibration signal and to bandpass away
+ drift in the pendulum.
+ All other channels to be analyzed alongside the torque data are passed
+ through a largely-inconsequential, but equal duration, filter in order
+ to phase-match them to the torque signal.
+\end_layout
+
+\begin_layout Subsubsection
+Calibration
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset Quotes eld
+\end_inset
+
+parallel
+\begin_inset Quotes erd
+\end_inset
+
+ with the filtering step, the torque data are calibrated using the gravitational
+ calibration injection, as described in (XXXRC ref).
+ The calibration takes the form of a multiplicative constant, applied to
+ the torque data in the 
+\begin_inset Quotes eld
+\end_inset
+
+Lock-in
+\begin_inset Quotes erd
+\end_inset
+
+ step.
+\end_layout
+
+\begin_layout Subsubsection
+Lock-in
+\end_layout
+
+\begin_layout Standard
+The attractor moves in an 
+\begin_inset Formula $ABABABABABABABABABAB$
+\end_inset
+
+ fashion.
+ Before measuring the differences between state 
+\begin_inset Formula $A$
+\end_inset
+
+ and state 
+\begin_inset Formula $B$
+\end_inset
+
+, it is necessary to phase-match the analysis to the phase of the attractor
+ motion, as described in (XXXRC ref).
+ The code finds rising edges in the attractor data and uses them to find
+ the steps in the data.
+ Using these steps, the code then projects, open-loop, the temporal location
+ of all the steps in the dataset.
+ Each step is then measured, using the dead-times projected in (XXXRC ref).
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Parsing into 
+\begin_inset Quotes eld
+\end_inset
+
+cuts
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The attractor's motion is broken into 
+\begin_inset Quotes eld
+\end_inset
+
+cuts
+\begin_inset Quotes erd
+\end_inset
+
+ of ten attractor periods, after which the attractor's 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ positions may change.
+ The code parses the data into these cuts, as referenced from the starting
+ location (up to an attractor half-period, runs must begin in-phase with
+ a cut).
+ The first 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ states are dropped from the cut before the aggregate properties of the
+ cut are determined; as described in (XXXRC ref), the positions of the first
+ two switches are somewhat inconsistent with those that follow.
+ For 
+\bar under
+all
+\bar default
+ channels, 
+\begin_inset Formula $\bar{A}$
+\end_inset
+
+, 
+\begin_inset Formula $\bar{B}$
+\end_inset
+
+, 
+\begin_inset Formula $\sigma_{A}$
+\end_inset
+
+, 
+\begin_inset Formula $\sigma_{B}$
+\end_inset
+
+, max(
+\begin_inset Formula $A$
+\end_inset
+
+), min(
+\begin_inset Formula $A$
+\end_inset
+
+), max(
+\begin_inset Formula $B$
+\end_inset
+
+), min(
+\begin_inset Formula $B$
+\end_inset
+
+), 
+\begin_inset Formula $\bar{\Delta}_{AB}$
+\end_inset
+
+, and 
+\begin_inset Formula $\sigma_{\Delta_{AB}}$
+\end_inset
+
+ are measured.
+ Out-of-phase quadrature measures of these quantities are also measured,
+ but are subject to no further analysis.
+\end_layout
+
+\begin_layout Standard
+Only the output of this cutting procedure is used for analysis beyond this
+ point.
+\end_layout
+
+\begin_layout Subsubsection
+Aggregation
+\end_layout
+
+\begin_layout Standard
+All the cuts from the many runs are aggregated into a single file (one for
+ the two-DAQ analysis, and one for the three-DAQ interferometer analysis).
+ These XXXRC cuts comprise the measurement.
+\end_layout
+
+\begin_layout Subsection
+Interpretation
+\end_layout
+
+\begin_layout Standard
+Now that the data are measured, what do they say? As the foil systematic
+ is important, we proceed first to ascertain the size of any necessary correctio
+n due to foil motion.
+ When that's completed, we fit for the presence of any Yukawa signal.
+ In addition, we perform an 
+\begin_inset Quotes eld
+\end_inset
+
+arbitrary fit
+\begin_inset Quotes erd
+\end_inset
+
+, which is a model-free approach to characterizing our measured signal,
+ with less attention to systematic uncertainty.
+ Finally, as a limited cross-check on some analysis, we also compute a Yukawa
+ fit by an independent method, without attention to systematics.
+\end_layout
+
+\begin_layout Subsubsection
+Interferometer branch
+\end_layout
+
+\begin_layout Standard
+If the isolating foil moves in an attractor-correlated way, we need to know
+ how much influence it may have on the pendulum.
+ The optimal approach would have the foil interferometer running continuously
+ and in-range; it would then be possible to add a joint fit for the foil-motion-
+to-torque constant to the global fit for new physics.
+ As we only had partial coverage with a sensitive interferometer (XXXRC
+ ref), it is more complicated.
+\end_layout
+
+\begin_layout Paragraph
+Interferometer foil-motion to torque constant
+\end_layout
+
+\begin_layout Standard
+As detailed in (XXXRC ref), we displaced the attractor and measured the
+ XXXRC
+\end_layout
+
+\begin_layout Paragraph
+Attractor position to foil motion fit
+\end_layout
+
+\begin_layout Standard
+XXXRC
+\end_layout
+
+\begin_layout Paragraph
+Foil-driven torque vs foil position model/correction
+\end_layout
+
+\begin_layout Standard
+XXXRC
+\end_layout
+
+\begin_layout Subsubsection
+Yukawa fit with systematics
+\end_layout
+
+\begin_layout Standard
+As detailed in (XXXRC ref), the science signal and estimates for the magnitude
+ of systematic effects are fit jointly.
+ This bootstrapped fitting approach yields a distribution of best-fits in
+ 
+\begin_inset Formula $\alpha-\lambda$
+\end_inset
+
+ space.
+ The bootstrapped 
+\end_layout
+
+\begin_layout Subsubsection
+Confidence intervals
+\end_layout
+
+\begin_layout Standard
+There are many ways to draw two-dimensional confidence intervals from a
+ distribution of best-fit points.
+ We have not yet settled on one.
+ The Committee is strongly encouraged to make their voices known as to how
+ they'd like to see this done.
+ XXXRC.
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Quotes eld
+\end_inset
+
+Arbitrary fit
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+XXXRC
+\end_layout
+
+\begin_layout Subsubsection
+Interferometer-corrected arbitrary fit
+\end_layout
+
+\begin_layout Standard
+XXXRC
+\end_layout
+
+\begin_layout Subsubsection
+Uncorrected Yukawa fit without systematics
+\end_layout
+
+\begin_layout Standard
+XXXRC
+\end_layout
+
+\begin_layout Section
 Torque Calibration
 \end_layout
 
@@ -11230,43 +11674,11 @@ filename "../extracted/kappa.tex"
 \end_inset
 
 N-m/rad.
- (XXXRC Jens wants a kappa errorbar)
-\end_layout
-
-\begin_layout Standard
-The time variation of the calibration signal may be understood as any of
- a) a small change in pendulum/foil/electrode spacing, b) slow creep of
- the q-tester geometry, c) something else.
- In case 
-\begin_inset Quotes eld
-\end_inset
-
-b)
-\begin_inset Quotes erd
-\end_inset
-
-, the masses have crept outward radially by less than ~5% over the 3+ year
- lifetime of the experiment (of which these data comprise only 5%).
- This gives a (conservative) 16% 
-\emph on
-decrease
-\emph default
- in calibration signal, which cannot account for the slight increase in
- observed signal.
- (XXXRC - why are they creeping? Just say you don't know.)
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMA include code?
-\end_layout
-
-\end_inset
-
-
+ (XXXRC Jens wants a kappa errorbar) The time variation of the calibration
+ signal is most-probably understood as slow drifts in the pendulum/foil/electrod
+e spacing/alignment.
+ It is also possible that some of the electronics involved in the feedback
+ loop have had small gain drifts over time.
 \end_layout
 
 \begin_layout Subsection

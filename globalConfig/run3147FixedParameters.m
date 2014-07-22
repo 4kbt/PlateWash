@@ -20,7 +20,7 @@ pendulumQ=3500;
 pendulumI=2.369e-6;
 kappa=4*pi*pi*pendulumF0*pendulumF0*pendulumI; 
 printSI(kappa, 1, -9, 'N-m', [HOMEDIR 'extracted/kappa.tex']);
-psdWidth=10.16e-3; psdWidthErr = 0.01e-3 % Quoted number from OSI for SC-10; err uses their sigfigs. 
+psdWidth=10.16e-3; psdWidthErr = 0.01e-3; % Quoted number from OSI for SC-10; err uses their sigfigs. 
 printSIErr(psdWidth, psdWidthErr, 1, -3, 'm', [HOMEDIR 'extracted/detectorWidthMillimeters.tex']); 
 focalLength=400e-3;
 autocolNoise = 5e-8; 
