@@ -11511,43 +11511,11 @@ filename "../extracted/kappa.tex"
 \end_inset
 
 N-m/rad.
- (XXXRC Jens wants a kappa errorbar)
-\end_layout
-
-\begin_layout Standard
-The time variation of the calibration signal may be understood as any of
- a) a small change in pendulum/foil/electrode spacing, b) slow creep of
- the q-tester geometry, c) something else.
- In case 
-\begin_inset Quotes eld
-\end_inset
-
-b)
-\begin_inset Quotes erd
-\end_inset
-
-, the masses have crept outward radially by less than ~5% over the 3+ year
- lifetime of the experiment (of which these data comprise only 5%).
- This gives a (conservative) 16% 
-\emph on
-decrease
-\emph default
- in calibration signal, which cannot account for the slight increase in
- observed signal.
- (XXXRC - why are they creeping? Just say you don't know.)
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMA include code?
-\end_layout
-
-\end_inset
-
-
+ (XXXRC Jens wants a kappa errorbar) The time variation of the calibration
+ signal is most-probably understood as slow drifts in the pendulum/foil/electrod
+e spacing/alignment.
+ It is also possible that some of the electronics involved in the feedback
+ loop have had small gain drifts over time.
 \end_layout
 
 \begin_layout Subsection
