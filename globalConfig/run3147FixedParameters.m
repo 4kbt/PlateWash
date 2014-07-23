@@ -6,6 +6,7 @@ if(exist("DoNotExtractFixedParameters"))
         function printSigError();  end
 	function printDecimal();   end
 	function printSI();   end
+	function printSIErr();   end
 	function fprintf(); 	   end
 end
 
