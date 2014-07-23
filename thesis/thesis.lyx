@@ -2555,6 +2555,10 @@ where the second integral is over the thickness of the finite plate.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset Formula 
 \[
 \tau=h\rho_{p}C(1-e^{-t_{a}/\lambda})\int_{a}^{b}\int_{x\theta+D}^{x\theta+D+t_{p}}e^{-y/\lambda}dyxdx
@@ -2565,7 +2569,7 @@ where the second integral is over the thickness of the finite plate.
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula 
 \[
 \tau=h\rho_{p}C(1-e^{-t_{a}/\lambda})\int_{a}^{b}\lambda\left[e^{-y/\lambda}\right]_{x\theta+D}^{x\theta+D+t_{p}}xdx
@@ -2576,7 +2580,7 @@ where the second integral is over the thickness of the finite plate.
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula 
 \[
 \tau=-h\rho_{p}C(1-e^{-t_{a}/\lambda})\lambda\int_{a}^{b}\left[e^{-(x\theta+D+t_{p})/\lambda}-e^{-(x\theta+D)/\lambda}\right]xdx
@@ -2587,7 +2591,7 @@ where the second integral is over the thickness of the finite plate.
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula 
 \[
 \tau=-h\rho_{p}C(1-e^{-t_{a}/\lambda})\lambda\int_{a}^{b}\left[e^{-t_{p}/\lambda}-1\right]e^{-(x\theta+D)/\lambda}xdx
@@ -2598,7 +2602,7 @@ where the second integral is over the thickness of the finite plate.
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula 
 \[
 \tau=h\rho_{p}C(1-e^{-t_{a}/\lambda})\left(1-e^{-t_{p}/\lambda}\right)e^{-D/\lambda}\lambda\int_{a}^{b}e^{-x\theta/\lambda}xdx
@@ -2609,11 +2613,11 @@ where the second integral is over the thickness of the finite plate.
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Integrating by parts:
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula 
 \[
 \tau=h\rho_{p}C(1-e^{-t_{a}/\lambda})\left(1-e^{-t_{p}/\lambda}\right)e^{-D/\lambda}\lambda\left[-\lambda^{2}e^{-x\theta/\lambda}\frac{\theta x/\lambda+1}{\theta^{2}}\right]_{a}^{b}
@@ -2624,7 +2628,7 @@ Integrating by parts:
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula 
 \[
 \tau=-h\rho_{p}C(1-e^{-t_{a}/\lambda})\left(1-e^{-t_{p}/\lambda}\right)e^{-D/\lambda}\frac{\lambda^{3}}{\theta^{2}}\left[e^{-x\theta/\lambda}(\theta x/\lambda+1)\right]_{a}^{b}
@@ -2635,7 +2639,7 @@ Integrating by parts:
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula 
 \[
 \tau=-h\rho_{p}C(1-e^{-t_{a}/\lambda})\left(1-e^{-t_{p}/\lambda}\right)e^{-D/\lambda}\frac{\lambda^{3}}{\theta^{2}}\left[e^{-b\theta/\lambda}(\theta b/\lambda+1)-e^{-a\theta/\lambda}(\theta a/\lambda+1)\right]
@@ -2646,11 +2650,16 @@ Integrating by parts:
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset Formula 
-\[
-\tau=-h\rho_{p}C(1-e^{-t_{a}/\lambda})\left(1-e^{-t_{p}/\lambda}\right)e^{-D/\lambda}\frac{\lambda^{3}}{\theta^{2}}\left[e^{-b\theta/\lambda}(\theta b/\lambda+1)-e^{-a\theta/\lambda}(\theta a/\lambda+1)\right]
-\]
+\begin{equation}
+\tau=-h\rho_{p}C(1-e^{-t_{a}/\lambda})\left(1-e^{-t_{p}/\lambda}\right)e^{-D/\lambda}\frac{\lambda^{3}}{\theta^{2}}\left[e^{-b\theta/\lambda}(\theta b/\lambda+1)-e^{-a\theta/\lambda}(\theta a/\lambda+1)\right]\label{eq:AngledPlateTorque}
+\end{equation}
 
 \end_inset
 
@@ -2666,10 +2675,14 @@ Intuition check, what if
 \begin_inset Formula $b>0$
 \end_inset
 
-?
+, the case of a uniform plate wiggling about its center?
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset Formula 
 \[
 \tau=-h\rho_{p}C(1-e^{-t_{a}/\lambda})\left(1-e^{-t_{p}/\lambda}\right)e^{-D/\lambda}\frac{\lambda^{3}}{\theta^{2}}\left[e^{-b\theta/\lambda}(\theta b/\lambda+1)-e^{b\theta/\lambda}(-\theta b/\lambda+1)\right]
@@ -2680,11 +2693,16 @@ Intuition check, what if
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula 
 \[
 \tau=-h\rho_{p}C(1-e^{-t_{a}/\lambda})\left(1-e^{-t_{p}/\lambda}\right)e^{-D/\lambda}\frac{\lambda^{3}}{\theta^{2}}\left[e^{-b\theta/\lambda}\theta b/\lambda+e^{b\theta/\lambda}\theta b/\lambda+e^{-b\theta/\lambda}-e^{b\theta/\lambda})\right]
 \]
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -2703,34 +2721,7 @@ Intuition check, what if
 \end_layout
 
 \begin_layout Standard
-Evaluating the integral:
-\end_layout
-
-\begin_layout Standard
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-\begin_inset Formula 
-\[
-\tau=-\lambda^{2}h\rho_{p}C\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{p}/\lambda}\right)e^{-d/\lambda}\frac{1}{\theta}\left[e^{-b\theta/\lambda}\left(b+\frac{\lambda}{\theta}\right)-e^{-a\theta/\lambda}\left(a-\frac{\lambda}{\theta}\right)\right]
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-XXXRC - recheck -- it's wrong.
+XXXRC integrate 
 \end_layout
 
 \begin_layout Subsubsection
@@ -5606,10 +5597,6 @@ m.
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-XXXRC plotted in ifoSim.gpl on watson.
 \end_layout
 
 \begin_layout Standard
@@ -11116,9 +11103,16 @@ reference "fig:Flowchart-diagramming"
  This section provides a chronological narrative.
  The data analysis is functionally run twice, once using only the pendulum
  and attractor data streams, and once using all three.
- As detailed in (XXXRC ref), the interferometer data are only useful over
- parts of the run, requiring model-building in order to make a torque correction
- during times that the interferometer was unusable.
+ As detailed in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "par:A-conservative-approach"
+
+\end_inset
+
+, the interferometer data are only useful over parts of the run, requiring
+ model-building in order to make a torque correction during times that the
+ interferometer was unusable.
  
 \end_layout
 
@@ -11138,10 +11132,21 @@ External inputs
 
 \begin_layout Standard
 Externally-applied systematic injections and environmental variables (temperatur
-e, magnetic field, etc.), were determined by hand (XXXRC magnets) or in separate
- analyses (XXXRC temperature) on a run-by-run basis.
- These measurements are added to the analyzed data (XXXRC ref) through the
- torsion-balance computer's data file at runtime.
+e, magnetic field, etc.), were determined by hand (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Magnetism--systematic"
+
+\end_inset
+
+) or in separate analyses (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Temperature--systematic"
+
+\end_inset
+
+) on a run-by-run basis.
  
 \end_layout
 
@@ -11198,8 +11203,22 @@ Trimming
 \end_layout
 
 \begin_layout Standard
-As described in (XXXRC ref), the data from each computer do not begin simultaneo
-usly and may have offsets between their clocks.
+As described in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Timing"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Synchronization"
+
+\end_inset
+
+, the data from each computer do not begin simultaneously and may have offsets
+ between their clocks.
  We correct for these effects as best we can.
 \end_layout
 
@@ -11208,9 +11227,15 @@ Filtering
 \end_layout
 
 \begin_layout Standard
-As described in (XXXRC ref), the data are passed through FIR filters, primarily
- to notch out the gravitational calibration signal and to bandpass away
- drift in the pendulum.
+As described in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Filtering"
+
+\end_inset
+
+, the data are passed through FIR filters, primarily to notch out the gravitatio
+nal calibration signal and to bandpass away drift in the pendulum.
  All other channels to be analyzed alongside the torque data are passed
  through a largely-inconsequential, but equal duration, filter in order
  to phase-match them to the torque signal.
@@ -11230,7 +11255,14 @@ parallel
 \end_inset
 
  with the filtering step, the torque data are calibrated using the gravitational
- calibration injection, as described in (XXXRC ref).
+ calibration injection, as described in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Torque-Calibration"
+
+\end_inset
+
+.
  The calibration takes the form of a multiplicative constant, applied to
  the torque data in the 
 \begin_inset Quotes eld
@@ -11262,12 +11294,26 @@ The attractor moves in an
 \end_inset
 
 , it is necessary to phase-match the analysis to the phase of the attractor
- motion, as described in (XXXRC ref).
+ motion, as described in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Edge-finding"
+
+\end_inset
+
+.
  The code finds rising edges in the attractor data and uses them to find
  the steps in the data.
  Using these steps, the code then projects, open-loop, the temporal location
  of all the steps in the dataset.
- Each step is then measured, using the dead-times projected in (XXXRC ref).
+ Each step is then measured, using the dead-times projected in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Lags-1"
+
+\end_inset
+
+.
  
 \end_layout
 
@@ -11360,6 +11406,14 @@ all
 \end_inset
 
  are measured.
+ See 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Lock-in"
+
+\end_inset
+
+.
  Out-of-phase quadrature measures of these quantities are also measured,
  but are subject to no further analysis.
 \end_layout
@@ -11376,7 +11430,21 @@ Aggregation
 \begin_layout Standard
 All the cuts from the many runs are aggregated into a single file (one for
  the two-DAQ analysis, and one for the three-DAQ interferometer analysis).
- These XXXRC cuts comprise the measurement.
+ These 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/numberOfCuts.tex"
+
+\end_inset
+
+ cuts (two-DAQ, 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/numberOfIFOCuts.tex"
+
+\end_inset
+
+ three-DAQ) comprise the measurement.
 \end_layout
 
 \begin_layout Subsection
@@ -11412,8 +11480,8 @@ If the isolating foil moves in an attractor-correlated way, we need to know
  The optimal approach would have the foil interferometer running continuously
  and in-range; it would then be possible to add a joint fit for the foil-motion-
 to-torque constant to the global fit for new physics.
- As we only had partial coverage with a sensitive interferometer (XXXRC
- ref), it is more complicated.
+ As we only had partial coverage with the interferometer (XXXRC ref), it
+ is more complicated.
 \end_layout
 
 \begin_layout Paragraph
@@ -11446,8 +11514,15 @@ Yukawa fit with systematics
 \end_layout
 
 \begin_layout Standard
-As detailed in (XXXRC ref), the science signal and estimates for the magnitude
- of systematic effects are fit jointly.
+As detailed in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Model-Comparison"
+
+\end_inset
+
+, the science signal and estimates for the magnitude of systematic effects
+ are fit jointly.
  This bootstrapped fitting approach yields a distribution of best-fits in
  
 \begin_inset Formula $\alpha-\lambda$
@@ -11503,6 +11578,13 @@ XXXRC
 
 \begin_layout Section
 Torque Calibration
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Torque-Calibration"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -11758,6 +11840,13 @@ Most-importantly, as this is a null experiment, with no absolute gravitational
 
 \begin_layout Section
 Timing
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Timing"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -11897,6 +11986,13 @@ Attractor-correlated signal extraction
 
 \begin_layout Subsection
 Synchronization
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Synchronization"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -12148,6 +12244,13 @@ mHz autocollimator noise (pushes to longer length) with the need to reject
 
 \begin_layout Subsection
 Edge finding
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Edge-finding"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -12628,6 +12731,13 @@ reference "fig:Windowing"
 
 \begin_layout Subsection
 Lock-in
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Lock-in"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -15559,7 +15669,15 @@ Force law
 \begin_inset Quotes erd
 \end_inset
 
- inversion
+ inversion / 
+\begin_inset Quotes eld
+\end_inset
+
+Arbitrary Fit
+\begin_inset Quotes erd
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -18000,6 +18118,13 @@ Summary of resistor tests
 
 \begin_layout Section
 Magnetism
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Magnetism--systematic"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -18286,6 +18411,13 @@ N-m and ld
 
 \begin_layout Section
 Temperature
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Temperature--systematic"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
