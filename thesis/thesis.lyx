@@ -2531,7 +2531,170 @@ The torque on the finite plate is:
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\tau=h\int_{a}^{b}\int_{x\theta+D}^{x\theta+D+t_{p}}\rho_{p}g(y)xdydx
+\tau=h\int_{a}^{b}\int_{x\theta+D}^{x\theta+D+t_{p}}\rho_{p}g(y)xdydx,
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where the second integral is over the thickness of the finite plate.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\tau=h\rho_{p}\int_{a}^{b}\int_{x\theta+D}^{x\theta+D+t_{p}}g(y)dyxdx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\tau=h\rho_{p}C(1-e^{-t_{a}/\lambda})\int_{a}^{b}\int_{x\theta+D}^{x\theta+D+t_{p}}e^{-y/\lambda}dyxdx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\tau=h\rho_{p}C(1-e^{-t_{a}/\lambda})\int_{a}^{b}\lambda\left[e^{-y/\lambda}\right]_{x\theta+D}^{x\theta+D+t_{p}}xdx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\tau=-h\rho_{p}C(1-e^{-t_{a}/\lambda})\lambda\int_{a}^{b}\left[e^{-(x\theta+D+t_{p})/\lambda}-e^{-(x\theta+D)/\lambda}\right]xdx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\tau=-h\rho_{p}C(1-e^{-t_{a}/\lambda})\lambda\int_{a}^{b}\left[e^{-t_{p}/\lambda}-1\right]e^{-(x\theta+D)/\lambda}xdx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\tau=h\rho_{p}C(1-e^{-t_{a}/\lambda})\left(1-e^{-t_{p}/\lambda}\right)e^{-D/\lambda}\lambda\int_{a}^{b}e^{-x\theta/\lambda}xdx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Integrating by parts:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\tau=h\rho_{p}C(1-e^{-t_{a}/\lambda})\left(1-e^{-t_{p}/\lambda}\right)e^{-D/\lambda}\lambda\left[-\lambda^{2}e^{-x\theta/\lambda}\frac{\theta x/\lambda+1}{\theta^{2}}\right]_{a}^{b}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\tau=-h\rho_{p}C(1-e^{-t_{a}/\lambda})\left(1-e^{-t_{p}/\lambda}\right)e^{-D/\lambda}\frac{\lambda^{3}}{\theta^{2}}\left[e^{-x\theta/\lambda}(\theta x/\lambda+1)\right]_{a}^{b}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\tau=-h\rho_{p}C(1-e^{-t_{a}/\lambda})\left(1-e^{-t_{p}/\lambda}\right)e^{-D/\lambda}\frac{\lambda^{3}}{\theta^{2}}\left[e^{-b\theta/\lambda}(\theta b/\lambda+1)-e^{-a\theta/\lambda}(\theta a/\lambda+1)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\tau=-h\rho_{p}C(1-e^{-t_{a}/\lambda})\left(1-e^{-t_{p}/\lambda}\right)e^{-D/\lambda}\frac{\lambda^{3}}{\theta^{2}}\left[e^{-b\theta/\lambda}(\theta b/\lambda+1)-e^{-a\theta/\lambda}(\theta a/\lambda+1)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Intuition check, what if 
+\begin_inset Formula $a=-b$
+\end_inset
+
+, and 
+\begin_inset Formula $b>0$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\tau=-h\rho_{p}C(1-e^{-t_{a}/\lambda})\left(1-e^{-t_{p}/\lambda}\right)e^{-D/\lambda}\frac{\lambda^{3}}{\theta^{2}}\left[e^{-b\theta/\lambda}(\theta b/\lambda+1)-e^{b\theta/\lambda}(-\theta b/\lambda+1)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\tau=-h\rho_{p}C(1-e^{-t_{a}/\lambda})\left(1-e^{-t_{p}/\lambda}\right)e^{-D/\lambda}\frac{\lambda^{3}}{\theta^{2}}\left[e^{-b\theta/\lambda}\theta b/\lambda+e^{b\theta/\lambda}\theta b/\lambda+e^{-b\theta/\lambda}-e^{b\theta/\lambda})\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\tau=-h\rho_{p}C(1-e^{-t_{a}/\lambda})\left(1-e^{-t_{p}/\lambda}\right)e^{-D/\lambda}\frac{\lambda^{3}}{\theta^{2}}\left[\cosh(\frac{b}{\lambda}\theta)\frac{b}{\lambda}\theta-\sinh(\frac{b}{\lambda}\theta)\right]
 \]
 
 \end_inset
@@ -2558,7 +2721,7 @@ Evaluating the integral:
 \color none
 \begin_inset Formula 
 \[
-\tau=-\lambda^{2}h\rho_{p}C\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{p}/\lambda}\right)e^{-d/\lambda}\frac{1}{\theta}\left[e^{-b\theta/\lambda}\left(b+\frac{\lambda}{\theta}\right)-e^{-a\theta/\lambda}\left(a+\frac{\lambda}{\theta}\right)\right]
+\tau=-\lambda^{2}h\rho_{p}C\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{p}/\lambda}\right)e^{-d/\lambda}\frac{1}{\theta}\left[e^{-b\theta/\lambda}\left(b+\frac{\lambda}{\theta}\right)-e^{-a\theta/\lambda}\left(a-\frac{\lambda}{\theta}\right)\right]
 \]
 
 \end_inset
