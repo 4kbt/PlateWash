@@ -11455,7 +11455,7 @@ Interpretation
 Now that the data are measured, what do they say? As the foil systematic
  is important, we proceed first to ascertain the size of any necessary correctio
 n due to foil motion.
- When that's completed, we fit for the presence of any Yukawa signal.
+ We then fit for the presence of any Yukawa signal.
  In addition, we perform an 
 \begin_inset Quotes eld
 \end_inset
@@ -11480,8 +11480,14 @@ If the isolating foil moves in an attractor-correlated way, we need to know
  The optimal approach would have the foil interferometer running continuously
  and in-range; it would then be possible to add a joint fit for the foil-motion-
 to-torque constant to the global fit for new physics.
- As we only had partial coverage with the interferometer (XXXRC ref), it
- is more complicated.
+ As we only had partial coverage with the interferometer (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "par:A-conservative-approach"
+
+\end_inset
+
+), model-building is required.
 \end_layout
 
 \begin_layout Paragraph
@@ -11529,7 +11535,9 @@ reference "sec:Model-Comparison"
 \end_inset
 
  space.
- The bootstrapped 
+ The many bootstrapped fits of the attractor-driven foil motion torque correctio
+n are individually applied to these fits, allowing direct propagation of
+ the correction uncertainty into the final fit results.
 \end_layout
 
 \begin_layout Subsubsection
@@ -11557,15 +11565,11 @@ Arbitrary fit
 \end_layout
 
 \begin_layout Standard
-XXXRC
-\end_layout
-
-\begin_layout Subsubsection
-Interferometer-corrected arbitrary fit
-\end_layout
-
-\begin_layout Standard
-XXXRC
+Just as for the foil displacement as a function of attractor position, we
+ make a model-free fit for the pendulum torque as a function of attractor
+ position.
+ Furthermore, by subtracting the foil-motion torque correction from this
+ fit, we are able to compensate for the foil-motion systematic.
 \end_layout
 
 \begin_layout Subsubsection
@@ -11573,7 +11577,13 @@ Uncorrected Yukawa fit without systematics
 \end_layout
 
 \begin_layout Standard
-XXXRC
+As a cross-check on the Yukawa fitter, we additionally produce best-fit
+ results from an earlier generation of the fit programs.
+ It does not handle any systematic uncertainties, but it is 
+\bar under
+much
+\bar default
+ faster.
 \end_layout
 
 \begin_layout Section
@@ -14853,7 +14863,11 @@ If we take, as above, all our uncertainties to be distributed according
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $P_{\Delta\tau}=G(x_{A},x_{B},B_{1},\ldots B_{n},\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n})P(x,\bar{x},\sigma_{x})P(y,\bar{y},\sigma_{y})\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{B_{i}})$
+\begin_inset Formula 
+\[
+L(\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n})=\prod_{j=1}^{N}\left(e^{(G(x_{A},x_{B},B_{1},\ldots B_{n},\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n})-\Delta\tau_{j})^{2}/\sigma_{\Delta\tau_{j}}^{2}}P(x_{A},\bar{x}_{A_{j}},\sigma_{x_{A_{j}}})P(x_{B},\bar{x}_{B_{j}},\sigma_{x_{B_{j}}})\prod_{i}P(B_{i},\bar{B}_{i_{j}},\sigma_{B_{i_{j}}})\right)
+\]
+
 \end_inset
 
 
@@ -14861,6 +14875,8 @@ If we take, as above, all our uncertainties to be distributed according
 
 \begin_layout Standard
 XXXRC Log-Likelihood explanation.
+ XXXRC - above equation isn't yet correct.
+ Where are the integrals? How do they play with the log?
 \end_layout
 
 \begin_layout Paragraph
