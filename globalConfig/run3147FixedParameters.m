@@ -6,6 +6,7 @@ if(exist("DoNotExtractFixedParameters"))
         function printSigError();  end
 	function printDecimal();   end
 	function printSI();   end
+	function printSIErr();   end
 	function fprintf(); 	   end
 end
 
@@ -24,7 +25,7 @@ psdWidth=10.16e-3; psdWidthErr = 0.01e-3; % Quoted number from OSI for SC-10; er
 printSIErr(psdWidth, psdWidthErr, 1, -3, 'm', [HOMEDIR 'extracted/detectorWidthMillimeters.tex']); 
 focalLength=400e-3;
 autocolNoise = 5e-8; 
-printSI(autocolNoise,  1, -9, 'rad/$\sqrt(\text{Hz})$', [HOMEDIR 'extracted/autocolNoise.tex']);
+printSI(autocolNoise,  1, -9, 'rad/$\sqrt{\mbox{Hz}}$', [HOMEDIR 'extracted/autocolNoise.tex']);
 
 psdToRadians = psdWidth/focalLength/2.0/2.0; printDecimal(psdToRadians*2.0*1000, [HOMEDIR 'extracted/autocollDynamicRangePeak2PeakmRad.tex'], 2); %2 for detector width, 2 for single-bounce.
 
@@ -54,9 +55,9 @@ lockAve = 20;  printInteger(lockAve, [HOMEDIR 'extracted/lockAve.tex']);
 TheoSampleTime = 0.8; printSI(TheoSampleTime, 3,-3,'s',[HOMEDIR 'extracted/TheoSampleTime.tex']);
 
 thermalTorqueNoise = sqrt(4*k_B*293*kappa/pendulumQ/(2*pi/(2*stepPeriod)));  
-printSI(thermalTorqueNoise, 2, -15, 'N/$\sqrt(\text{Hz})$', [HOMEDIR 'extracted/thermalTorqueNoise.tex']);
+printSI(thermalTorqueNoise, 2, -15, 'N/$\sqrt{\mbox{Hz}}$', [HOMEDIR 'extracted/thermalTorqueNoise.tex']);
 thermalAngleNoise = sqrt(4*k_B*293*kappa/pendulumQ/(2*pi/(2*stepPeriod)))/kappa;
-printSI(thermalAngleNoise,  2, -15, 'N/$\sqrt(\text{Hz})$',  [HOMEDIR 'extracted/thermalAngleNoise.tex']);
+printSI(thermalAngleNoise,  2, -15, 'N/$\sqrt{\mbox{Hz}}$',  [HOMEDIR 'extracted/thermalAngleNoise.tex']);
 
 qTesterFreq1=3e-3;
 qTesterWidth1=0.2e-3;

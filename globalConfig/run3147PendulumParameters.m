@@ -6,6 +6,7 @@ if(exist("DoNotExtractPendulumParameters"))
         function printSigError();	end
         function printDecimal();	end
         function printSI();   		end
+        function printSIErr(); 		end
         function fprintf();		end
 
 end
@@ -17,7 +18,7 @@ HOMEDIR = getenv("HOMEDIR");
 %        'jan13Pendulum'
 
 rhoTi=4507;
-printSI( rhoTi, 2, 3 ,'g/m^3',  [HOMEDIR '/extracted/titaniumDensity.tex' ]);
+printSI( rhoTi, 2, 3 ,'g/m$^3$',  [HOMEDIR '/extracted/titaniumDensity.tex' ]);
 pendulumBodyHeight=0.0321203; printSigNumber(pendulumBodyHeight, [HOMEDIR '/extracted/pendulumBodyHeight.tex' ],4);
 pendulumBodyWidth =0.0431448; printSigNumber(pendulumBodyWidth,  [HOMEDIR '/extracted/pendulumBodyWidth.tex'  ],4); %How did I get a part in 10^6? Pg 57 of 
 pendulumBodyThickness= 0.070*0.0254; printSigNumber(pendulumBodyThickness , [HOMEDIR '/extracted/pendulumBodyThicknessNoSI.tex'],2);
