@@ -22,6 +22,8 @@ for attrCtr = 1:rows(attractors);
 
 	A = eval(attrString);
 
+	save([outPath '/' attrString 'Distribution.dat'], 'A');
+
 	if( exist("scatterMasses") )
 		attrString = attrWholeString;
 		P = scatterPMMassesYZGrid(P);
