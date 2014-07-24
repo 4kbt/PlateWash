@@ -1,0 +1,14 @@
+
+od = 'SimulationOutput/'
+
+plotRadius = 0.07
+
+spl [][-plotRadius:plotRadius][-plotRadius:plotRadius]\
+	od.'PendulumDistribution.dat'       u 2:3:4 tit 'pendulum',\
+	od.'jan13ScrewGapsDistribution.dat' u 2:3:4 tit 'screw gaps',\
+	od.'jan13AttractorDistribution.dat' u 2:3:4 tit 'Attractor',\
+	od.'jan13SpindlesDistribution.dat'  u 2:3:4 tit 'Spindles',\
+	od.'jan14FlexureDistribution.dat'   u 2:3:4 tit 'Flexure',\
+	od.'jan14MacorSpindlesDistribution.dat' u 2:3:4 tit 'Macor Spindles',\
+	od.'jan14SpindlePlateDistribution.dat' u 2:3:4 tit 'Spindle Plate'
+	

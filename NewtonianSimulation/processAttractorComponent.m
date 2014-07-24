@@ -23,6 +23,7 @@ for attrCtr = 1:rows(attractors);
 	A = eval(attrString);
 
 	save([outPath '/' attrString 'Distribution.dat'], 'A');
+	save([outPath '/' 'Pendulum' 'Distribution.dat'], 'P');
 
 	if( exist("scatterMasses") )
 		attrString = attrWholeString;
