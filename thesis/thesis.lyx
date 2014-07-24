@@ -18404,13 +18404,14 @@ Perpendicular vertical
 
 \begin_layout Subsection
 Perpendicular parallel
-\end_layout
+\begin_inset Note Note
+status open
 
 \begin_layout Section
 Attractor Bias
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 The attractor was biased to 18
 \begin_inset space ~
 \end_inset
@@ -18418,11 +18419,16 @@ The attractor was biased to 18
 V through a resistor, and the experiment was operated with a random stroke
  pattern.
  The difference in torque-difference between voltage-on and voltage-off
- states was XXXRC
+ states was XXXMA
 \begin_inset space ~
 \end_inset
 
 N-m and ld
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -18672,7 +18678,20 @@ For runs beginning with
 
 , the experiment was operated with wireless sensors reading out the resistance
  of the on-attractor thermistors.
- XXXRC
+ As the primary purpose of these sensors was to monitor the size of the
+ temperature gradient applied by the heaters, we did not apply sufficient
+ attention to the wireless-thermistor-DAQ's time synchronization to allow
+ attractor-phase-sensitive analysis.
+ The time series of the temperature measurements is still usable for spectral
+ analysis, presented in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Temperature-variation-at"
+
+\end_inset
+
+.
+ XXXRC -- is there a way to convert the resolved signal to a torque?
 \end_layout
 
 \begin_layout Standard
