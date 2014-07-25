@@ -36,7 +36,9 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 
 	%Output fit information
 	fittedData = [fittedData; pMd(:,aCol) pMd(:,bCol), pMd(:,torCol), ifoSubtract*ones(size(pM(:,aCol)))];
-	save( "-append", preFitPlotFile, "fittedData");
+
+	%preFitPlotData is re-saved to preserve the function of preFitPlot.gpl
+	save( preFitPlotFile, "preFitPlotData", "fittedData");
 
 	%bounds defined in FixedParameters
 	LowerBounds = [-SloUB, repmat([LamLB, -SysUB], 1, NumFitSystematics)];
