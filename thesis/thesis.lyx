@@ -16928,11 +16928,17 @@ Diagram
 
 \begin_layout Standard
 When all of the parts of the attractor and pendulum assemblies are plotted
- together, they appear as in Fig.
- 
+ together, they appear as in Figures 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Complete-Newtonian-Assembly"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Complete-Newtonian-Assembly-zoomout"
 
 \end_inset
 
@@ -16948,7 +16954,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/charlie/trialEotwash/Eotwash/NewtonianSimulation/plots/fullDistribution.eps
+	filename ../NewtonianSimulation/plots/fullDistribution.eps
 	width 80text%
 
 \end_inset
@@ -16981,6 +16987,61 @@ infinite
 
 \end_inset
 
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../NewtonianSimulation/plots/fullDistributionZoomOutTrim.eps
+	width 80theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Complete-Newtonian-Assembly-zoomout"
+
+\end_inset
+
+Complete Newtonian Assembly, zoomed out.
+ The large thin disk is an effectively-infinite sheet.
+ By cutting a hole in its center, and giving it 
+\begin_inset Quotes eld
+\end_inset
+
+negative
+\begin_inset Quotes erd
+\end_inset
+
+ mass, we recover the Newtonian gravitational force one should expect from
+ our finite-sized attractor sheet.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 
 \end_layout
 

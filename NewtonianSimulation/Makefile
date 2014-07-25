@@ -53,8 +53,9 @@ plots/fullSimulation.eps: $(BIN) fullSimulation.gpl $(HOMEDIR)/extracted/pendulu
 				$(SDIR)/nonAttractor.dat
 	$(GNU) fullSimulation.gpl
 
-plots/fullDistribution.eps: plots/fullSimulation.eps plotFullDistribution.gpl
+plots/fullDistribution.eps plots/fullDistributionZoomOutTrim.eps: plots/fullSimulation.eps plotFullDistribution.gpl
 	$(GNU) plotFullDistribution.gpl
+	epstool --copy --bbox plots/fullDistributionZoomOut.eps plots/fullDistributionZoomOutTrim.eps
 
 plots/offsetAttractorAssembly.eps: $(BIN) offsetAttractorAssembly.gpl $(HOMEDIR)/extracted/pendulumBodyThickness.tex\
 				$(SDIR)/jan13OffsetAttractor.dat

@@ -1,7 +1,7 @@
 reset
 
 set term postscript enhanced solid color eps
-set output 'plots/fullDistribution.eps'
+set output 'plots/fullDistributionZoomOut.eps'
 
 od = 'SimulationOutput/'
 
@@ -11,32 +11,28 @@ set view equal xyz
 
 c = 1000;
 
-set zlabel '(mm)'
-set ylabel 'transverse distance (mm)'
-set zlabel 'height (mm)'
+set ylabel '(mm)'
 
 set view 63,323
-set key below horizontal noauto
+set key  noauto
 
-set lmargin screen 0 
-set rmargin screen 1.0
-set tmargin screen 1.0 
-set bmargin screen 0.1 
 
 set pointsize 0.3
 #set pointsize 0.8
 
 bps = 1.5
 
-set xtics 50
-set ytics 50
-set ztics 50
+set xtics 300
+set ytics 300
+set ztics 300
 
 unset colorbox
 
 set cbrange [2.6e-6:3.5e-6]
 
-spl [][-plotRadius:plotRadius][-plotRadius:plotRadius]\
+set xrange [-50:] 
+
+spl \
  od.'jan14FlexureDistribution.dat'       u (c*$2):(c*$3):(c*$4) w p pt 7 lc 1 ,\
  od.'jan14FlexureDistribution.dat'       u (c*$2):(c*$3):(1/0)  w p pt 7 lc 1 ps bps tit 'Flexure',\
  od.'jan14SpindlePlateDistribution.dat'  u (c*$2):(c*$3):(c*$4) w p pt 7 lc 5 ,\
@@ -51,3 +47,25 @@ spl [][-plotRadius:plotRadius][-plotRadius:plotRadius]\
  od.'jan13ScrewGapsDistribution.dat'     u (c*$2):(c*$3):(1/0)  w p pt 7 lc 6 ps bps tit 'Screw Gaps',\
  od.'PendulumDistribution.dat'       u (c*($2 - 1e-3 - 100e-6)):(c*$3):(c*$4):($2 >  0 ? $1 : 1/0) w p pt 7 palette,\
  od.'PendulumDistribution.dat'       u (c*($2 - 1e-3 - 100e-6)):(c*$3):(c*$4):($2 <= 0 ? $1 : 1/0) w p pt 7 palette tit 'Pendulum'
+
+set output 'plots/fullDistribution.eps'
+
+set xrange [-10:*]
+set yrange [-plotRadius:plotRadius]
+set zrange [-plotRadius:plotRadius]
+
+set zlabel '(mm)'
+unset ylabel 
+
+set xtics 50
+set ytics 50
+set ztics 50
+
+set key top left horizontal noauto maxrows 3 
+
+set lmargin screen 0 
+set rmargin screen 1.0
+set tmargin screen 1.0 
+set bmargin screen 0.1 
+
+replot
