@@ -16946,7 +16946,14 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXXRC
+\align center
+\begin_inset Graphics
+	filename /home/charlie/trialEotwash/Eotwash/NewtonianSimulation/plots/fullDistribution.eps
+	width 80text%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -16959,7 +16966,17 @@ name "fig:Complete-Newtonian-Assembly"
 
 \end_inset
 
-Complete Newtonian Assembly
+Complete Newtonian Assembly.
+ The 
+\begin_inset Quotes eld
+\end_inset
+
+infinite
+\begin_inset Quotes erd
+\end_inset
+
+ sheet is cropped to make the other components visible.
+ All non-pendulum components move together when the attractor moves.
 \end_layout
 
 \end_inset

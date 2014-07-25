@@ -99,6 +99,9 @@ gapMass = pi * (gapDiameter/2.0)^2*gapLength * rhoGap;
 gapDistance = 1e-3; 			 printSigNumber(gapDistance  	   , [HOMEDIR '/extracted/screwGapDistFromPlane.tex'   ], 1);
 gapRadialPosition = 72e-3/2;		 printSigNumber(gapRadialPosition  , [HOMEDIR '/extracted/screwGapRadialPosition.tex'  ], 2);
 
+bigGapLength = AttractorFullThickness - gapDistance;
+bigGapMass   = pi * (gapDiameter/2.0)^2 * bigGapLength * rhoGap;
+
 %%%%% Spindles %%%%
 %See pg 82 of notebook
 

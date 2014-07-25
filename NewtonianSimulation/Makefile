@@ -8,7 +8,7 @@ MASSES=jan13Attractor.m jan13Pendulum.m
 
 SDIR := SimulationOutput
 
-all: plots/brickDemo.eps bellowsTorque plots/fullSimulation.eps plots/pmScanPlot.eps plots/offsetAttractorAssembly.eps $(SDIR)/scanMaxDiff.tex
+all: plots/brickDemo.eps bellowsTorque plots/fullSimulation.eps plots/pmScanPlot.eps plots/offsetAttractorAssembly.eps $(SDIR)/scanMaxDiff.tex plots/fullDistribution.eps
 
 plots/brickDemo.eps : $(MLIB) brickDemo.m brickDemo.gpl $(PARTS)
 	$(OCT) brickDemo.m
@@ -52,6 +52,9 @@ plots/fullSimulation.eps: $(BIN) fullSimulation.gpl $(HOMEDIR)/extracted/pendulu
 				$(SDIR)/fullAttractor.dat\
 				$(SDIR)/nonAttractor.dat
 	$(GNU) fullSimulation.gpl
+
+plots/fullDistribution.eps: plots/fullSimulation.eps plotFullDistribution.gpl
+	$(GNU) plotFullDistribution.gpl
 
 plots/offsetAttractorAssembly.eps: $(BIN) offsetAttractorAssembly.gpl $(HOMEDIR)/extracted/pendulumBodyThickness.tex\
 				$(SDIR)/jan13OffsetAttractor.dat

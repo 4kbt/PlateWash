@@ -1,14 +1,53 @@
+reset
+
+set term postscript enhanced solid color eps
+set output 'plots/fullDistribution.eps'
 
 od = 'SimulationOutput/'
 
-plotRadius = 0.07
+plotRadius = 70 
+
+set view equal xyz
+
+c = 1000;
+
+set zlabel '(mm)'
+set ylabel 'transverse distance (mm)'
+set zlabel 'height (mm)'
+
+set view 63,323
+set key below horizontal noauto
+
+set lmargin screen 0 
+set rmargin screen 1.0
+set tmargin screen 1.0 
+set bmargin screen 0.1 
+
+set pointsize 0.3
+#set pointsize 0.8
+
+bps = 1.5
+
+set xtics 50
+set ytics 50
+set ztics 50
+
+unset colorbox
+
+set cbrange [2.6e-6:3.5e-6]
 
 spl [][-plotRadius:plotRadius][-plotRadius:plotRadius]\
-	od.'PendulumDistribution.dat'       u 2:3:4 tit 'pendulum',\
-	od.'jan13ScrewGapsDistribution.dat' u 2:3:4 tit 'screw gaps',\
-	od.'jan13AttractorDistribution.dat' u 2:3:4 tit 'Attractor',\
-	od.'jan13SpindlesDistribution.dat'  u 2:3:4 tit 'Spindles',\
-	od.'jan14FlexureDistribution.dat'   u 2:3:4 tit 'Flexure',\
-	od.'jan14MacorSpindlesDistribution.dat' u 2:3:4 tit 'Macor Spindles',\
-	od.'jan14SpindlePlateDistribution.dat' u 2:3:4 tit 'Spindle Plate'
-	
+ od.'jan14FlexureDistribution.dat'       u (c*$2):(c*$3):(c*$4) w p pt 7 lc 1 ,\
+ od.'jan14FlexureDistribution.dat'       u (c*$2):(c*$3):(1/0)  w p pt 7 lc 1 ps bps tit 'Flexure',\
+ od.'jan14SpindlePlateDistribution.dat'  u (c*$2):(c*$3):(c*$4) w p pt 7 lc 5 ,\
+ od.'jan14SpindlePlateDistribution.dat'  u (c*$2):(c*$3):(1/0)  w p pt 7 lc 5 ps bps tit 'Spindle Plate',\
+ od.'jan14MacorSpindlesDistribution.dat' u (c*$2):(c*$3):(c*$4) w p pt 7 lc 2 ,\
+ od.'jan14MacorSpindlesDistribution.dat' u (c*$2):(c*$3):(1/0)  w p pt 7 lc 2 ps bps tit 'Macor Spindles',\
+ od.'jan13SpindlesDistribution.dat'      u (c*$2):(c*$3):(c*$4) w p pt 7 lc 4 ,\
+ od.'jan13SpindlesDistribution.dat'      u (c*$2):(c*$3):(1/0)  w p pt 7 lc 4 ps bps tit 'Spindles',\
+ od.'jan13AttractorDistribution.dat'     u (c*$2):(c*$3):(c*$4) w p pt 7 lc 3 ,\
+ od.'jan13AttractorDistribution.dat'     u (c*$2):(c*$3):(1/0)  w p pt 7 lc 3 ps bps tit 'Attractor',\
+ od.'jan13ScrewGapsDistribution.dat'     u (c*$2):(c*$3):(c*$4) w p pt 7 lc 6 ,\
+ od.'jan13ScrewGapsDistribution.dat'     u (c*$2):(c*$3):(1/0)  w p pt 7 lc 6 ps bps tit 'Screw Gaps',\
+ od.'PendulumDistribution.dat'       u (c*($2 - 1e-3 - 100e-6)):(c*$3):(c*$4):($2 >  0 ? $1 : 1/0) w p pt 7 palette,\
+ od.'PendulumDistribution.dat'       u (c*($2 - 1e-3 - 100e-6)):(c*$3):(c*$4):($2 <= 0 ? $1 : 1/0) w p pt 7 palette tit 'Pendulum'
