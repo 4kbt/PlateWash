@@ -3594,6 +3594,10 @@ Laser scan of the foil surface
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -3610,7 +3614,7 @@ name "Autocollimator Photo"
 \end_layout
 
 \begin_layout Plain Layout
-XXXRC
+XXXMA
 \end_layout
 
 \begin_layout Plain Layout
@@ -3625,16 +3629,14 @@ Autocollimator
 
 \end_layout
 
-\begin_layout Plain Layout
+\end_inset
+
 
 \end_layout
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
 \begin_inset Note Note
 status open
 
@@ -4159,8 +4161,15 @@ Pendulum Feedback System
 \begin_layout Standard
 For all of our science data, the pendulum's orientation with respect to
  the autocollimator was held in electrostatic feedback.
- Two planar electrodes were placed in close proximity (XXXRC spacing) to
- the pendulum.
+ Two planar electrodes were placed in close proximity (
+\begin_inset Formula $\sim3$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+mm) to the pendulum.
  The electrodes were housed within grounded 'guard electrode' to minimize
  the effects of stray fields.
  As the pendulum was electrically grounded, the application of a voltage
@@ -5720,17 +5729,14 @@ name "par:A-conservative-approach"
 \end_layout
 
 \begin_layout Standard
-XXXRC Jens was confused by the following paragraph
-\end_layout
-
-\begin_layout Standard
 As it is challenging to infer anything about foil motion near a fringe turning
  point, we don't.
  We only consider times when the interferometer was in the middle 71% (
 \begin_inset Formula $\sin(\pi/4)=\sqrt{2}/2=0.707$
 \end_inset
 
-) of the range of fringe contrast.
+) of the range of fringe contrast, i.e.
+ the range over which the interferometer output is approximately linear.
  Over the same range, the slope of the fringe-to-displacement sinusoid varies
  by at most 21% away from the mean (average slope 
 \begin_inset Formula $2\sqrt{2}/\pi$
@@ -5742,15 +5748,15 @@ As it is challenging to infer anything about foil motion near a fringe turning
 
  ).
  As we are only interested in an estimate (and hopefully an upper bound)
- on the foil's contribution to pendulum torque, this will be sufficient.
+ on the foil's contribution to pendulum torque, this is sufficient.
 \end_layout
 
 \begin_layout Standard
-Within this range, we use the approximation 
+Within this range, we use an approximation for the sinusoid's slope, 
 \begin_inset Formula $\frac{\pi\lambda}{8\sqrt{2}A_{0}}\sim\frac{370\mbox{ nm}}{\mbox{fringe (peak-to-peak) }}$
 \end_inset
 
- to convert measured output to displacement.
+, to convert measured output to displacement.
 \end_layout
 
 \begin_layout Subsubsection
