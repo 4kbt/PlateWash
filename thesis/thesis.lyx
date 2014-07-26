@@ -6044,6 +6044,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename ../ifo/positionVsTorque.eps
 
@@ -6056,7 +6057,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-XXXRC label overlap Pendulum-Foil Coupling Determination
+Pendulum-Foil Coupling Determination
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Pendulum-Foil-Coupling-Determina"
