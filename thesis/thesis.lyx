@@ -11497,8 +11497,15 @@ Interferometer foil-motion to torque constant
 \end_layout
 
 \begin_layout Standard
-As detailed in (XXXRC ref), we displaced the attractor and measured the
- XXXRC
+As detailed in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Pendulum-Foil-coupling"
+
+\end_inset
+
+, we displaced the attractor into contact with the foil and measured the
+ attractor-displacement to torque transfer function.
 \end_layout
 
 \begin_layout Paragraph
@@ -11506,7 +11513,18 @@ Attractor position to foil motion fit
 \end_layout
 
 \begin_layout Standard
-XXXRC
+As detailed in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Data/Fit"
+
+\end_inset
+
+, we use the data from times that the interferometer was in-range to generate
+ a piecewise-linear model of the foil displacement as a function of attractor
+ position.
+ The fit is bootstrapped, allowing insight into the uncertainty in the extracted
+ fit parameters.
 \end_layout
 
 \begin_layout Paragraph
@@ -11514,7 +11532,10 @@ Foil-driven torque vs foil position model/correction
 \end_layout
 
 \begin_layout Standard
-XXXRC
+By combining the foil-motion to torque calibration with the foil displacement
+ as a function of attractor position, we construct a foil-motion-related
+ torque correction as a function of attractor position which can be applied
+ to the entire dataset.
 \end_layout
 
 \begin_layout Subsubsection
