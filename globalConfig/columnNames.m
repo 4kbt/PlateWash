@@ -10,6 +10,7 @@ diffErrOffset = 6*numSensors;
 
 pwTimeCol  = 10;
 pwPhiTopCol = 21;
+pwFBOutCol = 23;
 torqueCol  = 16;
 torCol = torqueCol;
 torerrCol = diffErrOffset+torCol;

@@ -1,0 +1,40 @@
+set term postscript enhanced solid color eps
+set output 'run3147feedbackVoltage.eps'
+
+load HOMEDIR.'globalConfig/columnNames.m'
+
+fn = '../results/run3147pM3FilterMerge.dat'
+
+set xlabel 'time (days of 2009)'
+
+set key noauto
+
+set multiplot layout 2,1
+
+set ylabel 'applied pend. feedback torque (a.u.)'
+
+set yrange [-1:1]
+pl fn u ( column( numSensors + pwTimeCol ) / 86400 ):\
+	( \
+		(  \
+			column(     numSensors + pwFBOutCol ) + \
+			column( 2 * numSensors + pwFBOutCol ) \
+		) / 2 \
+	) w p pt 7 ps 0.5 lc 3
+
+
+set ylabel 'feedback voltage magnitude (V)'
+
+set yrange [5:8]
+
+pl fn u ( column( numSensors + pwTimeCol ) / 86400 ):\
+	( sqrt( \
+		abs( \
+			column(     numSensors + pwFBOutCol ) + \
+			column( 2 * numSensors + pwFBOutCol ) \
+		) / 2 \
+		) * 10 \
+	) w p pt 7 ps 0.5 lc 3
+
+
+unset multiplot
