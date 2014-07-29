@@ -7016,12 +7016,130 @@ V) potential between them that is fairly stable (
 \end_inset
 
 mV/month drift), and initially unpredictable in value.
+ For this experiment, fluctuations in contact potential are indistinguishable
+ from noise from a 
+\begin_inset Quotes eld
+\end_inset
+
+patch effect
+\begin_inset Quotes erd
+\end_inset
+
+, except, perhaps, through the distance-dependence of the noise.
  
 \end_layout
 
 \begin_layout Standard
-XXXRC continues...
+The influence of any contact-potential noise, either through direct fluctuation
+ or through swing coupling can be minimized by nulling the contact potential.
+ The force acting between plates of a parallel-plate capacitor with area
  
+\begin_inset Formula $A$
+\end_inset
+
+, plate separation 
+\begin_inset Formula $d$
+\end_inset
+
+, and potential difference 
+\begin_inset Formula $V_{0}$
+\end_inset
+
+ is 
+\begin_inset Formula $|F|=\epsilon_{0}A\frac{V_{0}^{2}}{d^{2}}$
+\end_inset
+
+.
+ For small variations in voltage (
+\begin_inset Formula $V_{0}\rightarrow V_{0}+\delta v)$
+\end_inset
+
+, 
+\begin_inset Formula $|F|=\epsilon_{0}\frac{A}{d^{2}}(V_{0}^{2}+2V_{0}\delta V+(\delta V)^{2})$
+\end_inset
+
+.
+ Thus, nulling 
+\begin_inset Formula $V_{0}$
+\end_inset
+
+ can minimize the effect of any voltage fluctuation.
+ Similarly, for swing, where 
+\begin_inset Formula $d\rightarrow d_{0}+\delta d$
+\end_inset
+
+, 
+\begin_inset Formula $|F|=\epsilon_{0}\frac{AV_{0}^{2}}{(d_{0}+\delta d)^{2}}$
+\end_inset
+
+, so the swing coupling is quadratically suppressed by minimizing 
+\begin_inset Formula $V_{0}$
+\end_inset
+
+.
+ We carefully designed battery-powered isolated and remotely-operable power
+ supplies to permit the nulling of 
+\begin_inset Formula $V_{0}$
+\end_inset
+
+, and demonstrated control of 
+\begin_inset Formula $V_{0}$
+\end_inset
+
+ at better than the 100 mV level.
+ 
+\end_layout
+
+\begin_layout Standard
+Furthermore, the presence of an uncompensated contact potential acts as
+ an anti-spring for the pendulum, pulling the torsion pendulum asymptotically
+ away from its zero position.
+ As the pendulum twists away from a parallel orientation with respect to
+ the foil, the 
+\begin_inset Formula $V_{0}^{2}/d^{2}$
+\end_inset
+
+ nature of the capacitive force pulls even harder.
+ Once the capacitive torque is greater than the torsion fiber restoring
+ torque, the pendulum runs away toward the foil.
+ As our sensitivity to new physics increases exponentially with smaller
+ pendulum/foil separation, we are driven to operate the pendulum at the
+ smallest distance at which we can preserve stable operation of the pendulum.
+ Compensation of the contact potential allows us to operate with lower noise
+ at closer distances.
+\end_layout
+
+\begin_layout Standard
+Unfortunately, in tracking down the 
+\begin_inset Quotes eld
+\end_inset
+
+capacitor systematic
+\begin_inset Quotes erd
+\end_inset
+
+ (see 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Capacitor-Systematic"
+
+\end_inset
+
+), the contact-potential nulling apparatus was intentionally disabled for
+ the duration of the experiment -- the pendulum and foil were directly electrica
+lly connected.
+ While we cannot measure the contact potential, past experience suggests
+ that it is 
+\begin_inset Formula $\sim0.2-1$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+V.
+ Minimizing the size of this potential is the single most effective change
+ we could make to yield improved performance.
 \end_layout
 
 \begin_layout Subsubsection
