@@ -4184,8 +4184,60 @@ The feedback voltage system was capable of applying voltages from -10-10
 \end_inset
 
 V to either electrode, but in practice, the entire experiment ran on one
- electrode, with average voltage of XXXRC.
+ electrode, with DC feedback voltage variation of less than 20% over the
+ duration of the experiment (see Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Applied-feedback-signal"
+
+\end_inset
+
+).
  
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../runAnalysis/supportingPlots/run3147feedbackVoltage.eps
+	width 70text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Applied-feedback-signal"
+
+\end_inset
+
+Applied feedback signal and feedback voltage over the duration of the experiment.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
