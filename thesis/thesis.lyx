@@ -5,6 +5,7 @@
 \textclass book
 \begin_preamble
 \definecolor{pants}{RGB}{255,127,0}
+\usepackage{grffile}
 \end_preamble
 \use_default_options false
 \maintain_unincluded_children false

@@ -1,4 +1,4 @@
-HOMEDIR := /home/charlie/trialEotwash/Eotwash/
+HOMEDIR := /home/charlie/dailyMaster/Eotwash/
 
 OCT:= octave --no-init-file \
 	--eval "global HOMEDIR = \"$(HOMEDIR)\";"\
@@ -18,7 +18,7 @@ DATA   := $(shell find $(HOMEDIR)/data/         -type d)
 
 MLIB   := $(MLIB) $(GLOBAL)
 
-LYX    := lyx -batch --export "ps" -dbg info,latex
+LYX    := lyx -batch --export "pdf2" -dbg info,latex
 
 .INTERACT: 
 	$(OCT) --persist
