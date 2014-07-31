@@ -30,7 +30,6 @@ end
 
 %TO DEBUG THIS TEST, just drop semi-colons from testVal, d, roundVal, and fractionalError.
 %!test
-%! 'stress-testing printDecimal.m'
 %! for roundCounter = 1:10000
 %! fn = "testOutput/printDecimalTest3.txt"; testVal = randn*10000;
 %! precision = floor(10*rand)+1;

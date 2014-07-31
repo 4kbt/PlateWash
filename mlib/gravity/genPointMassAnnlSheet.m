@@ -6,9 +6,9 @@ function array= genPointMassAnnlSheet(mass, iRadius, oRadius, thickness, ...
 	zgrid = ygrid;
 	nzpoints= nypoints;
 
-	density = mass/(pi*(oRadius^2-iRadius^2)*thickness)
+	density = mass/(pi*(oRadius^2-iRadius^2)*thickness);
 	
-	pointMass = density*xgrid*ygrid*zgrid
+	pointMass = density*xgrid*ygrid*zgrid;
 
 	array = [];
 
@@ -29,12 +29,8 @@ function array= genPointMassAnnlSheet(mass, iRadius, oRadius, thickness, ...
 		end
 	end
 
-	MassDiscrepancyRatio = sum(array(:,1))/mass
-
-	if( abs( MassDiscrepancyRatio - 1) > 1e-4)
-		'correcting mass ratio'
-		array(:,1) = array(:,1) / MassDiscrepancyRatio;
-
-		MassDiscrepancyRatio = sum(array(:,1))/mass
-	end 
+	%Correcting any mass discrepancy
+	MassDiscrepancyRatio = sum(array(:,1))/mass;
+	array(:,1) = array(:,1) / MassDiscrepancyRatio;
+	MassDiscrepancyRatio = sum(array(:,1))/mass;
 end
