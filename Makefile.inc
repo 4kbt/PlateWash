@@ -1,4 +1,4 @@
-HOMEDIR := /home/charlie/dailyMaster/Eotwash/
+HOMEDIR := /home/charlie/trialEotwash/Eotwash/
 
 OCT:= octave --no-init-file \
 	--eval "global HOMEDIR = \"$(HOMEDIR)\";"\
