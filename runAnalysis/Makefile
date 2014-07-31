@@ -66,7 +66,7 @@ results/run3147pM3FilterMerge.dat : $(DEPLIST) pLDAFilterMerge.sh $(HOMEDIR)/bin
 	$(OCT) --eval "run3147FixedParameters"
 	$(HOMEDIR)/bin/mathify.sh $(HOMEDIR)/extracted/*.tex
 	cat $(HOMEDIR)/extracted/calibCutLength.tex\
-	    $(HOMEDIR)/extracted/TheoSampleTime.tex\
+	    $(HOMEDIR)/extracted/TheoSampleTimeNoSI.tex\
 	    $(HOMEDIR)/extracted/numberOfCuts.tex |\
 	     sed 's/\$$/\t/' | tr -d '\n' | \
 	     awk '{print $$1*$$2*$$3}' > $(HOMEDIR)/extracted/totalAcceptedSeconds.tex

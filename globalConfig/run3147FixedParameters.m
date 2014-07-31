@@ -52,7 +52,9 @@ weight = 1;
 
 lockAve = 20;  printInteger(lockAve, [HOMEDIR 'extracted/lockAve.tex']);
 
-TheoSampleTime = 0.8; printSI(TheoSampleTime, 3,-3,'s',[HOMEDIR 'extracted/TheoSampleTime.tex']);
+TheoSampleTime = 0.8; 
+printSI(TheoSampleTime, 3,-3,'s',[HOMEDIR 'extracted/TheoSampleTime.tex']);
+printDecimal(TheoSampleTime,[HOMEDIR 'extracted/TheoSampleTimeNoSI.tex'], 1);
 
 thermalTorqueNoise = sqrt(4*k_B*293*kappa/pendulumQ/(2*pi/(2*stepPeriod)));  
 printSI(thermalTorqueNoise, 2, -15, 'N/$\sqrt{\mbox{Hz}}$', [HOMEDIR 'extracted/thermalTorqueNoise.tex']);

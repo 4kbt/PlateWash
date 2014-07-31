@@ -9414,8 +9414,8 @@ name "fig:Pendulum-bounce-test-results"
 \end_inset
 
 Pendulum bounce-test.
- The pendulum swings freely in angle as the pendulum support is translated
- slowly toward and away from the foil.
+ The pendulum swings freely in angle (vertical axis) as the pendulum support
+ is translated slowly toward and away from the foil (horizontal axis).
  The bands reflect the assigned uncertainty; the slope of the band is determined
  only by the pendulum width and the distance translated.
  
@@ -10007,11 +10007,7 @@ filename "..//extracted/switchFrequency.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-Hz, the noise is generally at the level of 
+, the noise is generally at the level of 
 \begin_inset Formula $20$
 \end_inset
 
@@ -10647,7 +10643,11 @@ name "sub:Lags"
 
 \begin_layout Standard
 A number of properties of the instrument require finite time.
- The pneumatically-driven attractor takes ~15
+ The pneumatically-driven attractor takes 
+\begin_inset Formula $\sim15$
+\end_inset
+
+
 \begin_inset space ~
 \end_inset
 
@@ -10658,7 +10658,11 @@ s to move to a new position.
 \end_inset
 
 s before the position change.
- The feedback loop requires ~20
+ The feedback loop requires 
+\begin_inset Formula $\sim20$
+\end_inset
+
+
 \begin_inset space ~
 \end_inset
 
@@ -10739,7 +10743,7 @@ mHz.
 \begin_inset Formula $\sqrt{D}$
 \end_inset
 
-, plotted in Figure
+, plotted in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "SNR vs Lags"
@@ -10859,11 +10863,7 @@ filename "../extracted/TheoSampleTime.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-s sample time, making each attractor period an integer number of samples.
+ sample time, making each attractor period an integer number of samples.
  This choice improves the performance of discrete Fourier analysis and minimizes
  beating between signal and sample frequencies.
 \end_layout
@@ -11128,7 +11128,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename diagrams/analysisDiagram.png
-	height 80theight%
+	height 90theight%
 
 \end_inset
 
@@ -11761,11 +11761,7 @@ filename "../extracted/qTesterTorque.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-N-m.
+.
  The data are broken into 
 \begin_inset CommandInset include
 LatexCommand input
@@ -11830,11 +11826,7 @@ filename "../extracted/CalibFitWErr.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-N-m/AFU (arbitrary feedback unit).
+ (arbitrary feedback unit).
  This may be converted to an approximate effective spring constant for the
  feedback loop of 
 \begin_inset CommandInset include
@@ -11844,11 +11836,7 @@ filename "../extracted/CalibFitWErrInRadians.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-N-m/rad, which should be compared with the fiber kappa of 
+, which should be compared with the fiber kappa of 
 \begin_inset CommandInset include
 LatexCommand input
 preview true
@@ -11856,11 +11844,7 @@ filename "../extracted/kappa.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-N-m/rad.
+.
  (XXXRC Jens wants a kappa errorbar) The time variation of the calibration
  signal is most-probably understood as slow drifts in the pendulum/foil/electrod
 e spacing/alignment.
@@ -12137,7 +12121,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../runAnalysis/supportingPlots/run3147filterFrequencyResponse.eps
-	width 75col%
+	width 75text%
 	BoundingBox 50bp 50bp 554bp 770bp
 
 \end_inset
@@ -12410,8 +12394,11 @@ name "sub:Lags-1"
 
 \begin_layout Standard
 With each attractor position change, it takes a finite amount of time for
- the pneumatic drive to change position (~27s, including the DAQ filter,
- see Fig.
+ the pneumatic drive to change position (
+\begin_inset Formula $\sim27$
+\end_inset
+
+s, including the DAQ filter, see Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -12486,10 +12473,6 @@ mHz cutoff frequency corresponds to a
 LatexCommand input
 filename "../extracted/filterHighLag.tex"
 
-\end_inset
-
-
-\begin_inset space ~
 \end_inset
 
 
@@ -14922,8 +14905,8 @@ reference "eq:X2 Statement"
 \end_inset
 
 .
- Nikolai Tolich was the first of anyone with whom we spoke to reach a quantitati
-ve understanding of the problem.
+ Nikolai Tolich was the first of those with whom we spoke to reach a quantitativ
+e understanding of the problem.
  
 \end_layout
 
@@ -15858,11 +15841,7 @@ filename "../bootstrap/extracted/arbFitx1Spacing.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-m long for 
+ long for 
 \begin_inset Formula $d\in[$
 \end_inset
 
@@ -15888,22 +15867,14 @@ filename "../bootstrap/extracted/arbFitx1Stop.tex"
 \begin_inset Formula $)$
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-m and 
+ and 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../bootstrap/extracted/arbFitx2Spacing.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-m long for 
+ long for 
 \begin_inset Formula $d\in[$
 \end_inset
 
@@ -15929,11 +15900,7 @@ filename "../bootstrap/extracted/arbFitx2Stop.tex"
 \begin_inset Formula $]$
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-m.
+.
  
 \end_layout
 
@@ -16007,9 +15974,12 @@ The software used to compute these results and generate this document is
  This thesis and all supporting code necessary to go from the original raw
  data to every plot and datapoint expressed in this document are housed
  within a single git repository.
- Once the build environment is configured (with 'git pull') and linked to
- the experimental data , this document can be generated simply by typing
- 'make'.
+ Once the build environment is configured (with '
+\family typewriter
+git pull
+\family default
+') and linked to the experimental data , this document can be generated
+ simply by typing 'make'.
 \end_layout
 
 \begin_layout Section
@@ -16052,13 +16022,7 @@ source code management
  Anyone working on the project has a complete copy of the project source;
  it's effectively a distributed backup.
  This project is hosted on github, in addition to several machines at CENPA.
- Git is perhaps the de-facto standard in the software industry for source
- code managment.
-\end_layout
-
-\begin_layout Standard
-It is highly recommended to physicists.
- It will change the way you work.
+ Git is a standard in the software industry for source code managment.
 \end_layout
 
 \begin_layout Subsection
@@ -16117,8 +16081,12 @@ key "octave:2012"
  The octave-forge repositories provide similar function to many of the establish
 ed MATLAB toolboxes.
  The readable source has been directly important to this project; when a
- library (fir2.m) upon which the PlateWash analysis depends changed and incorpora
-ted a bug, it only took a few hours to identify and solve the problem.
+ library (
+\family typewriter
+fir2.m
+\family default
+) upon which the PlateWash analysis depends changed and incorporated a bug,
+ it only took a few hours to identify and solve the problem.
  
 \end_layout
 
@@ -16151,10 +16119,10 @@ The benevolent computer engineers of yore have left us many gifts.
  This thesis relies heavily upon bash, awk, sed, grep, and many other tools
  of the standard UNIX command set.
  While these tools may appear cryptic or antiquated to a young physicist,
- they're very powerful.
+ they're powerful.
  All the problems smart people had in the 1970s are the same problems smart
  people have now.
- The benefit is that the smart people in the past have left us their tools.
+ The smart people in the past have given us their tools.
 \end_layout
 
 \begin_layout Standard
@@ -16175,8 +16143,7 @@ TeX, LaTeX, LyX, BibTeX, JabRef
 The finest document processing software on the planet.
  It's also some of the hardest to use.
  This document is written using LyX, a graphical interface to LaTeX.
- As most physicists are familiar with the TeX tools, no further elaboration
- is required.
+ As most physicists are familiar with TeX, no further elaboration is required.
  
 \end_layout
 
@@ -16240,7 +16207,7 @@ Daily Builds
 
 \begin_layout Standard
 For the last months of this analysis, the data analysis and thesis were
- rebuilt from scratch hourly.
+ rebuilt from scratch hourly or daily.
  This enables quick catching of integration bugs and allows collaborators
  to contribute to any part of the work at any time.
  Furthermore, frequent builds provide a clear picture of the deliverable
@@ -16259,13 +16226,6 @@ name "sec:Testing"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-This software project has insufficient testing coverage.
- This is improving, but our first results must be delivered before testing
- coverage is complete.
- Most sincere apologies.
 \end_layout
 
 \begin_layout Standard
@@ -16313,10 +16273,14 @@ integration testing
 \end_layout
 
 \begin_layout Standard
-Octave has a very handy syntax for integrating unit tests into functions.
+Octave has a straightforward syntax for integrating unit tests into functions.
  Before the PlateWash analysis begins, the entire set of homespun Octave
  libraries is tested.
+ At present, this software project has insufficient formal testing coverage.
+ This is improving, but our first results must be delivered before testing
+ coverage is complete.
  As the testing coverage grows, the integrity of the project will grow.
+ 
 \end_layout
 
 \begin_layout Chapter
@@ -16457,7 +16421,8 @@ lstparams "caption={pointMatrixGravity.m},language=Matlab"
 \end_layout
 
 \begin_layout Standard
-Where the inverse square law is evaluated by:
+Where the inverse square law is evaluated by perhaps the simplest possible
+ code:
 \end_layout
 
 \begin_layout Standard
@@ -16547,7 +16512,7 @@ Rotation
 \end_layout
 
 \begin_layout Standard
-Rotation is, as always, more complicated.
+Rotation is more complicated.
  The rotation scheme used here is to define a direction in space, as viewed
  from the origin, then specify a rotation angle about that axis.
  Each sub-component point mass of a distribution is individually rotated

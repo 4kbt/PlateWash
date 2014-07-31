@@ -20,8 +20,8 @@ m = mean(sqrt(d(:,6).^2 + d(:,7).^2));
 s =  std(sqrt(d(:,6).^2 + d(:,7).^2));
 
 
-printSigError(m             , s/sqrt(rows(d))             , '../extracted/CalibFitWErr.tex'         );
-printSigError(m*psdToRadians, s/sqrt(rows(d))*psdToRadians, '../extracted/CalibFitWErrInRadians.tex');
+printSIErr(m             , s/sqrt(rows(d))             , 1, -6, 'N-m/AFU', '../extracted/CalibFitWErr.tex'         );
+printSIErr(m*psdToRadians, s/sqrt(rows(d))*psdToRadians, 1, -9, 'N-m/rad', '../extracted/CalibFitWErrInRadians.tex');
 
 M = m*ones(rows(d),1);
 S = s*ones(rows(d),1);
