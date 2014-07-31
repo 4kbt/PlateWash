@@ -14599,11 +14599,20 @@ We proceed down the well-trodden path:
 \end_layout
 
 \begin_layout Itemize
+Let 
+\begin_inset Formula $N$
+\end_inset
+
+ be the number of measurements
+\end_layout
+
+\begin_layout Itemize
 We assume that the torque on the pendulum takes the form 
 \begin_inset Formula 
-\begin{equation}
-F(x,B_{1\dots n}|\alpha_{1\ldots n},\lambda_{1\ldots n})=\pi Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}\left(1-e^{-(t_{p}-t_{i})/\lambda_{i}}\right)\left(1-e^{-t_{a}/\lambda_{i}}\right)\left(1-e^{-t_{i}/\lambda_{i}}\right)e^{-x/\lambda_{i}}+Cx\label{eq:PrototypeFitFunction}
-\end{equation}
+\begin{eqnarray}
+F(x,B_{1\dots n}|\alpha_{1\ldots n},\lambda_{1\ldots n}) & = & \pi Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}\label{eq:PrototypeFitFunction}\\
+ &  & \times\left(1-e^{-(t_{p}-t_{i})/\lambda_{i}}\right)\left(1-e^{-t_{a}/\lambda_{i}}\right)\left(1-e^{-t_{i}/\lambda_{i}}\right)e^{-x/\lambda_{i}}+Cx\nonumber 
+\end{eqnarray}
 
 \end_inset
 
@@ -14642,7 +14651,11 @@ all
 
 \begin_layout Itemize
 To simplify notation, we subsume the finite-thickness corrections into 
-\begin_inset Formula $T(\lambda_{i})=\rho_{a}\left(1-e^{-(t_{p}-t_{i})/\lambda_{i}}\right)\left(1-e^{-t_{a}/\lambda_{i}}\right)\left(1-e^{-t_{i}/\lambda_{i}}\right)$
+\begin_inset Formula 
+\[
+T(\lambda_{i})=\rho_{a}\left(1-e^{-(t_{p}-t_{i})/\lambda_{i}}\right)\left(1-e^{-t_{a}/\lambda_{i}}\right)\left(1-e^{-t_{i}/\lambda_{i}}\right)
+\]
+
 \end_inset
 
  and constant factors int
@@ -14658,11 +14671,19 @@ To simplify notation, we subsume the finite-thickness corrections into
 \noun off
 \color none
 o 
-\begin_inset Formula $Q=\pi Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)$
+\begin_inset Formula 
+\[
+Q=\pi Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right),
+\]
+
 \end_inset
 
-, yielding 
-\begin_inset Formula $F(x,B_{1\dots n}|\alpha_{1\ldots n},\lambda_{1\ldots n})=Q\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}T(\lambda_{i})e^{-x/\lambda_{i}}+Cx$
+ yielding 
+\begin_inset Formula 
+\[
+F(x,B_{1\dots n}|\alpha_{1\ldots n},\lambda_{1\ldots n})=Q\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}T(\lambda_{i})e^{-x/\lambda_{i}}+Cx
+\]
+
 \end_inset
 
 
@@ -14740,7 +14761,7 @@ Linearity and limitations
 \begin_layout Standard
 It is traditional in this field 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "Cook2013,Kapner2005"
 
 \end_inset
@@ -14767,7 +14788,7 @@ key "Cook2013,Kapner2005"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\tilde{\sigma}_{G_{j}}^{2}=\sum_{i}\left(\sigma_{a_{i_{j}}}\left.\frac{\partial G}{\partial a_{i}}\right|_{\{a_{1},\ldots,a_{n}\}=\{a_{1_{j}},\ldots a_{n_{j}}\}}\right)^{2}\label{eq:Linearized Variance}
+\tilde{\sigma}_{G_{j}}^{2}=\sum_{i=1}^{n}\left(\sigma_{a_{i_{j}}}\left.\frac{\partial G}{\partial a_{i}}\right|_{\{a_{1},\ldots,a_{n}\}=\{a_{1_{j}},\ldots a_{n_{j}}\}}\right)^{2}\label{eq:Linearized Variance}
 \end{equation}
 
 \end_inset
@@ -14783,7 +14804,7 @@ The
  is then de-weighted by 
 \begin_inset Formula 
 \begin{equation}
-\chi^{2}=\sum_{measurements}\frac{(\Delta\tau-\bar{G})^{2}}{\sigma_{\Delta\tau}^{2}+\tilde{\sigma}_{G}^{2}}\label{eq:X2 Statement}
+\chi^{2}=\sum_{j=1}^{N}\frac{(\Delta\tau_{j}-\bar{G}_{j})^{2}}{\sigma_{\Delta\tau_{j}}^{2}+\tilde{\sigma}_{G_{j}}^{2}}\label{eq:X2 Statement}
 \end{equation}
 
 \end_inset
@@ -14836,7 +14857,7 @@ reference "eq:PrototypeDifferenceFunction"
 
 \end_inset
 
-, shown in full detail in 
+, shown in full detail in Appendix 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "chap:Yukawa-Variance-and"
@@ -14853,7 +14874,7 @@ Detwiler Trick
 
  is worth a look).
  While we succeded, this entire approach has a fatal flaw; the flaw is in
- 
+ Equation 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:Linearized Variance"
@@ -14877,7 +14898,7 @@ reference "eq:X2 Statement"
 
 \end_inset
 
-, when 
+, if 
 \begin_inset Formula $\sigma_{G}^{2}$
 \end_inset
 
@@ -14943,7 +14964,19 @@ If we take, as above, all our uncertainties to be distributed according
 \begin_layout Standard
 \begin_inset Formula 
 \[
-L(\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n})=\prod_{j=1}^{N}\left(e^{(G(x_{A},x_{B},B_{1},\ldots B_{n},\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n})-\Delta\tau_{j})^{2}/\sigma_{\Delta\tau_{j}}^{2}}P(x_{A},\bar{x}_{A_{j}},\sigma_{x_{A_{j}}})P(x_{B},\bar{x}_{B_{j}},\sigma_{x_{B_{j}}})\prod_{i}P(B_{i},\bar{B}_{i_{j}},\sigma_{B_{i_{j}}})\right)
+P(\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n})=\int\prod_{j=1}^{N}\left(e^{(G(x_{A},x_{B},B_{1},\ldots B_{n},\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n})-\Delta\tau_{j})^{2}/\sigma_{\Delta\tau_{j}}^{2}}P(x_{A},\bar{x}_{A_{j}},\sigma_{x_{A_{j}}})P(x_{B},\bar{x}_{B_{j}},\sigma_{x_{B_{j}}})\prod_{i=1}^{n}P(B_{i},\bar{B}_{i_{j}},\sigma_{B_{i_{j}}})\right)dx_{A}dx_{B}dB_{1}\ldots dB_{n},
+\]
+
+\end_inset
+
+ if you're Bayesian.
+ If you're a Frequentist, and you prefer profile likelihoods, 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+L(\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n})=\max_{x_{A_{j}},x_{B_{j}},B_{2_{j}},\ldots,B_{n_{j}}\forall j}\left(\log\left[\prod_{j=1}^{N}\left(e^{(G(x_{A_{j}},x_{B_{j}},B_{1},\ldots B_{n_{j}},\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n})-\Delta\tau_{j})^{2}/\sigma_{\Delta\tau_{j}}^{2}}P(x_{A_{j}},\bar{x}_{A_{j}},\sigma_{x_{A_{j}}})P(x_{B_{j}},\bar{x}_{B_{j}},\sigma_{x_{B_{j}}})\prod_{i=1}^{n}P(B_{i_{j}},\bar{B}_{i_{j}},\sigma_{B_{i_{j}}})\right)\right]\right)
 \]
 
 \end_inset
@@ -14952,9 +14985,68 @@ L(\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n})=\prod_{j=1}^{N}\lef
 \end_layout
 
 \begin_layout Standard
-XXXRC Log-Likelihood explanation.
- XXXRC - above equation isn't yet correct.
- Where are the integrals? How do they play with the log?
+\begin_inset Formula 
+\[
+L(\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n})=\max_{x_{A_{j}},x_{B_{j}},B_{2_{j}},\ldots,B_{n_{j}}\forall j}\left(\sum_{j=1}^{N}\left(\frac{G(x_{A_{j}},x_{B_{j}},B_{1},\ldots B_{n_{j}},\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n})-\Delta\tau_{j})^{2}}{\sigma_{\Delta\tau_{j}}^{2}}+\frac{(x_{A_{j}}-\bar{x}_{A_{j}})^{2}}{\sigma_{x_{A_{j}}}^{2}}+\frac{(x_{B_{j}}-\bar{x}_{B_{j}})^{2}}{\sigma_{x_{B_{j}}}^{2}}+\sum_{i=1}^{n}\frac{(B_{i_{i}}-\bar{B}_{i_{j}})^{2}}{\sigma_{B_{i_{j}}}^{2}}\frac{1}{\sigma_{B_{i_{j}}}\sqrt{2\pi}}\right)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Frequentist approach oversimplifies the problem by choosing the maximium
+ alone, but it makes clear the resolution to 
+\begin_inset Quotes eld
+\end_inset
+
+the flaw
+\begin_inset Quotes erd
+\end_inset
+
+; here, no value of 
+\begin_inset Formula $\lambda_{i}$
+\end_inset
+
+ can cause the likelihood to diverge.
+ 
+\begin_inset Formula $\sigma_{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ do not appear in any ratios.
+ 
+\end_layout
+
+\begin_layout Standard
+The profile-likelihood maximization is a challenging one, as it requires
+ global maximization over 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $x_{A_{j}},x_{B_{j}},B_{2_{j}},\ldots,B_{n_{j}}$
+\end_inset
+
+ for all 
+\begin_inset Formula $j$
+\end_inset
+
+, which numbers in the thousands.
+ The Bayesian approach is perhaps more tractable if evaluated numerically
+ through a Monte Carlo or Markov-Chain approach.
 \end_layout
 
 \begin_layout Paragraph
@@ -15018,8 +15110,8 @@ fuzz
  This fuzzing process, in concert with the bootstrapping of the torque data,
  should distribute the best-fit points as expected from a more-sophisticated
  approach to error analysis.
- Making this choice tables for later the considerable problem of confidence-inte
-rval determination.
+ This choice tables for later the considerable problem of confidence-interval
+ determination.
 \end_layout
 
 \begin_layout Subsubsection
