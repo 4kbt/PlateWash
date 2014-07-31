@@ -57,7 +57,7 @@ TheoSampleTime = 0.8; printSI(TheoSampleTime, 3,-3,'s',[HOMEDIR 'extracted/TheoS
 thermalTorqueNoise = sqrt(4*k_B*293*kappa/pendulumQ/(2*pi/(2*stepPeriod)));  
 printSI(thermalTorqueNoise, 2, -15, 'N/$\sqrt{\mbox{Hz}}$', [HOMEDIR 'extracted/thermalTorqueNoise.tex']);
 thermalAngleNoise = sqrt(4*k_B*293*kappa/pendulumQ/(2*pi/(2*stepPeriod)))/kappa;
-printSI(thermalAngleNoise,  2, -15, 'N/$\sqrt{\mbox{Hz}}$',  [HOMEDIR 'extracted/thermalAngleNoise.tex']);
+printSI(thermalAngleNoise,  2, -9, 'rad/$\sqrt{\mbox{Hz}}$',  [HOMEDIR 'extracted/thermalAngleNoise.tex']);
 
 qTesterFreq1=3e-3;
 qTesterWidth1=0.2e-3;

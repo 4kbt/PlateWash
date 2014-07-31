@@ -43,7 +43,7 @@ s = std(bsO)
 bestTouchFit = [touchingTorques(:, 1 ), touchingTorques(:,1) * m(1) + m(2)];
 save 'ifoTorqueBestFit.dat' bestTouchFit
 
-printSIErr( m(1), s(1), 1, -15, 'N/m',  '../extracted/translationTorqueFit.tex');
+printSIErr( m(1), s(1), 1, -15, 'N-m/m',  '../extracted/translationTorqueFit.tex');
 printSigError( m(1), s(1), '../extracted/translationTorqueFitOldStyle.tex');
 
 foilTranslationToTorque = m(1);

@@ -3461,11 +3461,7 @@ filename "../extracted/foilThickness.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-m thick BeCu alloy foil (Micro-Tek, Diamond Bar CA) over the tapered end
+ thick BeCu alloy foil (Micro-Tek, Diamond Bar CA) over the tapered end
  of a 
 \begin_inset CommandInset include
 LatexCommand input
@@ -3473,11 +3469,7 @@ filename "../extracted/foilDiameter.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-m inner-diameter Al tube like a drumhead.
+ inner-diameter Al tube like a drumhead.
  The foil was flat to better than 
 \begin_inset Formula $\sim\pm3$
 \end_inset
@@ -3741,10 +3733,6 @@ filename "../extracted/foilResonance.tex"
 \end_inset
 
 
-\begin_inset space ~
-\end_inset
-
-Hz
 \begin_inset Note Note
 status open
 
@@ -3760,14 +3748,6 @@ XXXMA: validate via something other than ifo headers
 LatexCommand input
 filename "../extracted/foilDensity.tex"
 
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-kg/m
-\begin_inset Formula $^{3}$
 \end_inset
 
  
@@ -3950,11 +3930,7 @@ filename "../extracted/detectorWidthMillimeters.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-m (corresponds to 
+ (corresponds to 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../extracted/autocollDynamicRangePeak2PeakmRad.tex"
@@ -3971,14 +3947,6 @@ mrad) dynamic range in both tip and twist.
 LatexCommand input
 filename "../extracted/autocolNoise.tex"
 
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-rad/
-\begin_inset Formula $\sqrt{\mbox{Hz}}$
 \end_inset
 
 , plotted in Figure 
@@ -4633,7 +4601,11 @@ locking valve
 \end_inset
 
 .
- Air that flows out of the permanent leak is ducted ~4
+ Air that flows out of the permanent leak is ducted 
+\begin_inset Formula $\sim4$
+\end_inset
+
+
 \begin_inset space ~
 \end_inset
 
@@ -5028,11 +5000,7 @@ filename "../extracted/brickMass.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-kg lead blocks were hung on opposite sides of the vacuum jar by nylon straps
+ lead blocks were hung on opposite sides of the vacuum jar by nylon straps
  attached to a rotating armature which operated continuously during data
  acquisition.
  The blocks were weighed with a bathroom scale (a calibration to 10% is
@@ -5058,22 +5026,14 @@ filename "../extracted/brickRadius.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-m from the center of the jar and 
+ from the center of the jar and 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../extracted/brickHeight.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-m above the center of the pendulum
+ above the center of the pendulum
 \begin_inset Note Note
 status open
 
@@ -5090,7 +5050,17 @@ XXXRC verify metrology
  The frequency stability of the calibration tone was observed to be comparable
  to, or better than, the stability of the data acquisition clock.
  The sinusoidally varying gravitational torque appeared at twice the rotation
- frequency of 3.0 mHz.
+ frequency of 3.0 mHz
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMI do we extract this?
+\end_layout
+
+\end_inset
+
+.
  The amplitude of the calibration torque was taken to be 
 \begin_inset CommandInset include
 LatexCommand input
@@ -5098,7 +5068,7 @@ filename "../extracted/qTesterTorque.tex"
 
 \end_inset
 
- N-m.
+.
  The q-tester was mounted on rails with positioning stops to expedite moving
  it out of the path of the crane-opened bell jar and ensure repeatable positioni
 ng of the q-tester with respect to the pendulum.
@@ -6037,11 +6007,7 @@ filename "../extracted/torqueBlur.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-N-m, approximately 100 times the experiment's maximal per-cut error.
+, approximately 100 times the experiment's maximal per-cut error.
  The points denoted as 'touching' have a clear signal in the interferometer
  as having been associated with foil displacement.
  The best fit of 
@@ -6055,7 +6021,17 @@ filename "../extracted/translationTorqueFit.tex"
 \begin_inset space ~
 \end_inset
 
-N-m/m is bootstrapped from all of the 'touching' points.
+N-m/m
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMA printSIErr is troubled here with rounding
+\end_layout
+
+\end_inset
+
+ is bootstrapped from all of the 'touching' points.
  
 \end_layout
 
@@ -6293,7 +6269,11 @@ reference "fig:Flexure-runout"
 \end_inset
 
 .
- The attractor was adjusted to a point ~20
+ The attractor was adjusted to a point 
+\begin_inset Formula $\sim20$
+\end_inset
+
+
 \begin_inset space ~
 \end_inset
 
@@ -6313,9 +6293,12 @@ m from the desired working position.
 \begin_inset Formula $\mu$
 \end_inset
 
-rad, a capacitance of ~3-400 pF was achieved, and the capacitance seemed
- to be at a minimum as a function of attractor-foil angle, the system was
- declared to be aligned.
+rad, a capacitance of 
+\begin_inset Formula $\sim3$
+\end_inset
+
+-400 pF was achieved, and the capacitance seemed to be at a minimum as a
+ function of attractor-foil angle, the system was declared to be aligned.
  
 \end_layout
 
@@ -6379,7 +6362,11 @@ ol, clean room wipes, and dry nitrogen.
  position.
  The cleaning procedure was repeated until no gains in capacitance were
  observed with subsequent cleanings.
- Typical maximum capacitances were ~2
+ Typical maximum capacitances were 
+\begin_inset Formula $\sim2$
+\end_inset
+
+
 \begin_inset space ~
 \end_inset
 
@@ -6557,19 +6544,14 @@ reference "fig:Attractor-Foil-touching-determin"
 \end_inset
 
 .
- The minimum-accepted attractor-pendulum separation is chosen conservatively
- at 
+ The minimum-accepted attractor-pendulum separation is conservative at 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../extracted/shortCut.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-m.
+.
 \end_layout
 
 \begin_layout Standard
@@ -6839,11 +6821,7 @@ filename "../systematics/pressure/extracted/finalPressurePa.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-Pa, implying a 
+, implying a 
 \begin_inset Formula $Q\sim$
 \end_inset
 
@@ -7012,7 +6990,7 @@ Contact potential noise
 \end_layout
 
 \begin_layout Standard
-Electrical connections generally form small galvanic batteries
+Electrical connections generally form small galvanic batteries 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "lamoreaux1997demonstration"
@@ -7192,14 +7170,6 @@ filename "../extracted/thermalAngleNoise.tex"
 LatexCommand input
 filename "../extracted/autocolNoise.tex"
 
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-rad/
-\begin_inset Formula $\sqrt{\mbox{Hz}}$
 \end_inset
 
 , as seen in Figure 
@@ -7459,14 +7429,14 @@ E/
 
 .
  This noise level converts to torque noise of <
-\begin_inset Formula $4\times10^{-16}$
+\begin_inset Formula $0.4$
 \end_inset
 
 
 \begin_inset space ~
 \end_inset
 
-N-m/
+fN-m/
 \begin_inset Formula $\sqrt{\mbox{Hz}}$
 \end_inset
 
@@ -7807,15 +7777,7 @@ filename "../extracted/translationTorqueFit.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-N-m/
-\begin_inset Formula $\mu$
-\end_inset
-
-m.
+.
  See 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -8002,44 +7964,28 @@ filename "../systematics/pressure/extracted/finalPressurePa.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-Pa acting on a 
+ acting on a 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../extracted/AttractorDiameter.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-m diameter circle yields a foil displacement of 
+ diameter circle yields a foil displacement of 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../extracted/gasFoilDisplacement.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-m and hence a torque of 
+ and hence a torque of 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../extracted/gasFoilTorque.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-N-m.
+.
 \end_layout
 
 \begin_layout Paragraph
@@ -8157,28 +8103,20 @@ reference "chap:Newtonian-Simulation"
  for a description of both methods.
  As expected from flat surfaces in the near field, the torque vs.
  distance curves are predominantly linear.
- For a properly centered pendulum, the expected torque per unit attractor
- displacement is 
+ For a centered pendulum, the expected torque per unit attractor displacement
+ is 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../NewtonianSimulation/SimulationOutput/jan13Attractorlin.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-N-m/m.
+.
  Similarly, the quadratic term is 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../NewtonianSimulation/SimulationOutput/jan13Attractorquad.tex"
 
-\end_inset
-
- N-m/m
-\begin_inset Formula $^{2}$
 \end_inset
 
 .
@@ -8191,27 +8129,16 @@ filename "../NewtonianSimulation/SimulationOutput/jan13OffsetAttractorlin.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-N-m/m and the quadratic term 
+ and the quadratic term 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../NewtonianSimulation/SimulationOutput/jan13OffsetAttractorquad.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-N-m/m
-\begin_inset Formula $^{2}$
-\end_inset
-
 .
- (XXXRC errors are too good)
+ The uncertainties quoted in this paragraph are derived from fit residuals,
+ and do not reflect systematic uncertainty.
 \end_layout
 
 \begin_layout Paragraph
@@ -8438,14 +8365,14 @@ The dense inlays of the attractor and the dense material of the attractor
 total
 \bar default
  torque, not torque-difference, is <
-\begin_inset Formula $10^{-19}$
+\begin_inset Formula $0.0001$
 \end_inset
 
 
 \begin_inset space ~
 \end_inset
 
-N-m.
+fN-m.
  With density near 1170
 \begin_inset space ~
 \end_inset
@@ -8499,23 +8426,11 @@ filename "../NewtonianSimulation/SimulationOutput/jan13ScrewGapslin.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-N-m/m and nonlinearities of 
+ and nonlinearities of 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../NewtonianSimulation/SimulationOutput/jan13ScrewGapsquad.tex"
 
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-N-m/m
-\begin_inset Formula $^{2}$
 \end_inset
 
 , where the uncertainties are extracted from fit residuals -- systematic
@@ -8541,6 +8456,10 @@ The attractor and pendulum were lapped to
 
 m (attractor) and 
 \begin_inset Formula $<25$
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 
@@ -8630,11 +8549,7 @@ filename "../NewtonianSimulation/SimulationOutput/scanMaxDiff.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-N-m for all possible pendulum positions (XXXRC all-possible?).
+ for all possible pendulum positions (XXXRC all-possible?).
  Models that include the smoothness of the torque curve can yield a better
  limit if necessary.
  
@@ -9051,7 +8966,7 @@ key "2007PhRvL..98b1101K"
 
 \end_inset
 
- (XXXRC does this reference render right?).
+.
  Furthermore, for the attractor-pendulum separations in this experiment,
  the Casimir force is too weak.
  As an example, the zero-temperature Casimir pressure on conducting plates
@@ -9070,23 +8985,11 @@ filename "../extracted/casimirClosestApproach.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-m is 
+ is 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../extracted/casimirPressure.tex"
 
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-N/m
-\begin_inset Formula $^{2}$
 \end_inset
 
 , while the gravitational pressure between two 

@@ -8,11 +8,11 @@ gasPressure = load( [HOMEDIR '/systematics/pressure/finalPressure.dat']);
 gasPressure = gasPressure * OnePascalInTorr;
 
 gasFoilDisplacement = gasPressure*(foilDiameter/2.0)^2/4/foilTension;
-printSigNumber(gasFoilDisplacement, [HOMEDIR '/extracted/gasFoilDisplacement.tex'],1);
+printSINumber(gasFoilDisplacement, 1, -12, 'm', [HOMEDIR '/extracted/gasFoilDisplacement.tex']);
 
 %import foil-motion to pendulum-torque conversion constant
 torqueConv = load('torqueConv.dat');
 torqueConv = torqueConv(1)*10^torqueConv(3);
 
 gasFoilTorque = gasFoilDisplacement*torqueConv;
-printSigNumber(gasFoilTorque, [HOMEDIR '/extracted/gasFoilTorque.tex'],1);
+printSigNumber(gasFoilTorque, 1, -15, 'N-m', [HOMEDIR '/extracted/gasFoilTorque.tex']);
