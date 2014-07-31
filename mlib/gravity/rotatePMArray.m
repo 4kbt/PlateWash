@@ -1,4 +1,5 @@
-%Rotates a point mass array by angle radians counter-clockwise (as viewed from the origin) around rotVec (from origin)
+%Rotates a point mass array by angle radians counter-clockwise 
+%(as viewed from the origin) around rotVec
 
 function rotArray = rotatePMArray(array, angle, rotVec)
 

@@ -1,4 +1,5 @@
-function array= genPointMassRect(mass, thickness, width, height, nxpoints,nypoints,nzpoints)
+function array= genPointMassRect(mass, thickness, width, height, ...
+					nxpoints,nypoints,nzpoints)
 
 	xgrid = thickness/nxpoints;
 	ygrid = width/nypoints;

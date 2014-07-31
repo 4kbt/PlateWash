@@ -2,7 +2,8 @@ function m2 = jan13Spindles
 	
 	run3147PendulumParameters
 
-	Spindle = genPointMassAnnlSheet(spindleMass, 0, spindleDiameter/2.0, spindleLength, 5	, 5);
+	Spindle = genPointMassAnnlSheet(spindleMass, 0, spindleDiameter/2.0,
+			spindleLength, 5, 5);
 
 	trans = [spindleTipDistance + spindleLength/2.0 0 spindleRadialPosition];
 

@@ -1,4 +1,5 @@
-function array= genPointMassAnnlSheet(mass, iRadius, oRadius, thickness, nxpoints, nypoints)
+function array= genPointMassAnnlSheet(mass, iRadius, oRadius, thickness, ...
+					nxpoints, nypoints)
 
 	xgrid = thickness/nxpoints;
 	ygrid = oRadius*2./nypoints;
