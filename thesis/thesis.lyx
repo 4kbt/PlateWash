@@ -1955,7 +1955,7 @@ The rotation of the pendulum is measured by an autocollimating optical lever,
  Typical sensitivities of our group's autocollimators can be as small as
  fractions of a nanoradian in a second in the millihertz 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "arp2013reference"
 
 \end_inset
@@ -1964,7 +1964,7 @@ key "arp2013reference"
  New prototype designs reach tens of picoradians in a second at higher frequenci
 es 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "turner2011picoradian"
 
 \end_inset
@@ -2828,14 +2828,6 @@ filename "../extracted/titaniumDensity.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-kg/m
-\begin_inset Formula $^{3}$
-\end_inset
-
 ) torsion pendulum had a thickness 
 \begin_inset Formula $t=$
 \end_inset
@@ -2847,11 +2839,7 @@ filename "../extracted/pendulumBodyThickness.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-m, height 
+, height 
 \begin_inset Formula $h=$
 \end_inset
 
@@ -2862,11 +2850,7 @@ filename "../extracted/pendulumBodyHeight.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-m, and width 
+, and width 
 \begin_inset Formula $w_{pend}=$
 \end_inset
 
@@ -2877,20 +2861,12 @@ filename "../extracted/pendulumBodyWidth.tex"
 
 \end_inset
 
- m.
+.
  The Ta (
 \begin_inset CommandInset include
 LatexCommand input
 filename "../extracted/inlayDensity.tex"
 
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-kg/m
-\begin_inset Formula $^{3}$
 \end_inset
 
 ) inlays were 
@@ -2900,11 +2876,7 @@ filename "../extracted/inlayThickness.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-m thick and 
+ thick and 
 \begin_inset Formula $w_{inlay}=$
 \end_inset
 
@@ -2915,11 +2887,11 @@ filename "../extracted/inlayWidth.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-m wide.
+ wide.
+ Uncertainties quoted here are conservative and do not reflect the flatness
+ of surfaces.
+ The pendulum used here was our prototype, pressed into service when a better-ch
+aracterized improved pendulum suffered a glue failure.
  The pendulum was threaded onto a thin copper tube crimped onto a 
 \begin_inset Formula $\sim9$
 \end_inset
