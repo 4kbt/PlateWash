@@ -59,8 +59,6 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 		ranSeed = [ranSeed ranLam(ranCtr) ranAlp(ranCtr)];
 	end
 
-	ranSeed
-
 	try
 		%When analyzing, make a cut on csMin
 		tic
@@ -72,7 +70,7 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 		[csMin fitInfo iter nf]
 
 		%Output fit results
-		x = unLogifyLambdas(x)
+		x = unLogifyLambdas(x);
 		bsO = [ transpose(x) csMin nf iter fitInfo ranSeed bootStrapCounter toc rows(pM) ifoSubtract];
 		injSubCol = columns(bsO);
 
