@@ -118,20 +118,32 @@ bigGapLength = AttractorFullThickness - gapDistance;
 bigGapMass   = pi * (gapDiameter/2.0)^2 * bigGapLength * rhoGap;
 
 %%%%% Spindles %%%%
-%See pg 82 of notebook
+spindleLength      = 2.901*0.0254; %Pg 82 of 'PlateWash'
+spindleLengthErr   = 0.003*0.0254;
+printSIErr(spindleLength  , spindleLengthErr  , 1, -3, 'm', [HOMEDIR '/extracted/spindleLength.tex'  ]);
 
-spindleLength = 2.901*0.0254;		printSigNumber(spindleLength        , [HOMEDIR '/extracted/spindleLength.tex'   ], 2);
-spindleDiameter = 0.181*0.0254;		printSIErr(spindleDiameter, 0.002*0.0254, 1, -3, 'm', [HOMEDIR '/extracted/spindleDiameter.tex'   ]);
+spindleDiameter    = 0.181*0.0254; %Pg 82 of 'PlateWash'
+spindleDiameterErr = 0.001*0.0254;
+printSIErr(spindleDiameter, spindleDiameterErr, 1, -3, 'm', [HOMEDIR '/extracted/spindleDiameter.tex']);
 
-spindleMass = 3.1818e-3; 
+spindleMass        = 3.1818e-3; %see pg 82 of 'platewash'
+spindleMassErr	   = 0.0099e-3; 
+printSIErr(spindleMass    , spindleMassErr    , 1,  0, 'g',  [HOMEDIR '/extracted/spindleMass.tex'   ]);
 
 spindleTipDistance = AttractorFullThickness;
 spindleRadialPosition = gapRadialPosition;
 
-%%% Macor Spindles %%%
-mspindleLength = 1.057*0.0254;		printSigNumber(mspindleLength , [HOMEDIR '/extracted/mspindleLength.tex'], 4);
-mspindleDiameter = 0.258*0.0254;		printSigNumber(mspindleDiameter,[HOMEDIR '/extracted/mspindleDiameter.tex'], 3);
-mspindleMass = 1.9722e-3;			printSigNumber(mspindleMass    ,[HOMEDIR '/extracted/mspindleMass.tex'  ] , 3);
+%%% Macor Spindles %%% See pg 82 of 'PlateWash'
+mspindleLength    = 1.057*0.0254;
+mspindleLengthErr = 0.001*0.0254;
+printSIErr(mspindleLength , mspindleLengthErr,    1, -3, 'm', [HOMEDIR '/extracted/mspindleLength.tex'  ]);
+mspindleDiameter    = 0.258*0.0254;
+mspindleDiameterErr = 0.001*0.0254;
+printSIErr(mspindleDiameter, mspindleDiameterErr, 1, -3, 'm', [HOMEDIR '/extracted/mspindleDiameter.tex']);
+mspindleMass    = 1.9722e-3;
+mspindleMassErr = 0.0066e-3;
+printSIErr(mspindleMass    , mspindleMassErr    , 1,  0, 'g', [HOMEDIR '/extracted/mspindleMass.tex'    ]);
+
 
 mspindleTipDistance = spindleLength + spindleTipDistance;
 mspindleRadialPosition = spindleRadialPosition;
