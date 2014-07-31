@@ -30,7 +30,7 @@ for resistorCtr = 1:rows(resistorRuns)
 
 	filePath = ['extracted/'];
 
-	printSigError( l0Diff(1), l0Diff(2) , [filePath 'longStrokeL0Diff' runString '.tex']);
+	printSIErr( l0Diff(1), l0Diff(2) , 1, -15, 'N-m', [filePath 'longStrokeL0Diff' runString '.tex']);
 
 	%These don't work/don't appear to be necessary (data comes out in *.tex, see Makefile)
 	%outData =[resistorRuns(resistorCtr,:) l0Diff];

@@ -17065,7 +17065,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../NewtonianSimulation/plots/fullDistributionZoomOutTrim.eps
-	width 80theight%
+	width 70theight%
 
 \end_inset
 
@@ -17180,7 +17180,15 @@ The force on a point mass toward a 140
 \begin_inset space ~
 \end_inset
 
-m radius cylindrical sheet is computed for displacements from ~0.2-2.2
+m radius cylindrical sheet is computed for displacements from 
+\begin_inset Formula $\sim0.2$
+\end_inset
+
+-
+\begin_inset Formula $2.2$
+\end_inset
+
+
 \begin_inset space ~
 \end_inset
 
@@ -17366,7 +17374,11 @@ status open
 \begin_layout Plain Layout
 Simulation output for a centered pendulum.
  Non-linearities are below the 0.1 fN-m requirement, especially over the
- ~600
+ 
+\begin_inset Formula $\sim600$
+\end_inset
+
+
 \begin_inset space ~
 \end_inset
 
@@ -17657,7 +17669,7 @@ m perpendicular to the surface.
 m, this is woefully inadequate.
  To provide an estimate of the effects of the too-large gridsize, the integratio
 n was repeated several times, with the point-mass subcomponents of the pendulum
- and attractor scattered horizontally with gaussian standard deviation of
+ and attractor scattered horizontally with Gaussian standard deviation of
  one grid spacing, with results shown in Fig.
  
 \begin_inset CommandInset ref
@@ -17710,7 +17722,7 @@ Torques due to the leading
 
 m of the attractor and pendulum, computed directly from the laser-microscope
  scans of the attractor and pendulum surfaces.
- XXXRC Alignment
+ XXXRC Alignment/Randomly-align?
 \end_layout
 
 \end_inset
@@ -18043,6 +18055,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename diagrams/CapacitorSystematic.pdf
 	width 50page%
@@ -18119,7 +18132,15 @@ reference "sec:Encoder-narrative"
 ; while the attractor encoder is left unpowered, an encoder monitoring the
  fiber position perpendicular to the foil is left powered and operating
  in order to retain datum information.
- This encoder may be radiating RF power in the ~1-25
+ This encoder may be radiating RF power in the 
+\begin_inset Formula $\sim1$
+\end_inset
+
+-
+\begin_inset Formula $25$
+\end_inset
+
+
 \begin_inset space ~
 \end_inset
 
@@ -18217,7 +18238,11 @@ reference "sec:Capacitor-Systematic"
 \begin_inset Formula $Q$
 \end_inset
 
- reaches ~1, a major systematic effect appears.
+ reaches 
+\begin_inset Formula $\sim1$
+\end_inset
+
+, a major systematic effect appears.
  This test shows, in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -18239,8 +18264,10 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename ../systematics/resistor/plots/resistorPlot.eps
+	width 70text%
 
 \end_inset
 
@@ -18289,14 +18316,10 @@ filename "../systematics/magnetic/extracted/CoilDiameter.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-m diameter ) coil with 
+ diameter ) coil with 
 \begin_inset CommandInset include
 LatexCommand input
-filename "../systematics/magnetic/extracted/CoilDiameter.tex"
+filename "../systematics/magnetic/extracted/CoilTurns.tex"
 
 \end_inset
 
@@ -18309,11 +18332,7 @@ filename "../systematics/magnetic/extracted/CoilCurrent.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-A.
+.
  
 \end_layout
 
@@ -18373,33 +18392,21 @@ filename "../systematics/magnetic/extracted/verticalField.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-T vertical, 
+ vertical, 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../systematics/magnetic/extracted/transverseField.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-T transverse, and 
+ transverse, and 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../systematics/magnetic/extracted/axialField.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-T attractor-axial in the on-apparatus configuration
+ attractor-axial in the on-apparatus configuration
 \begin_inset Note Note
 status open
 
@@ -18419,9 +18426,10 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename ../systematics/magnetic/plots/longStrokeolHist.datlongStrokeo0Hist.dat.eps
-	width 80col%
+	width 80text%
 
 \end_inset
 
@@ -18481,10 +18489,6 @@ filename "../systematics/magnetic/extracted/longStrokeL0Diff.tex"
 \end_inset
 
 
-\begin_inset space ~
-\end_inset
-
-N-m
 \end_layout
 
 \begin_layout Standard
@@ -18496,10 +18500,6 @@ filename "../systematics/magnetic/extracted/shortStrokeL0Diff.tex"
 \end_inset
 
 
-\begin_inset space ~
-\end_inset
-
-N-m
 \end_layout
 
 \begin_layout Standard
@@ -18511,10 +18511,6 @@ filename "../systematics/magnetic/extracted/shortStrokeLRDiff.tex"
 \end_inset
 
 
-\begin_inset space ~
-\end_inset
-
-N-m
 \end_layout
 
 \begin_layout Standard
@@ -18526,10 +18522,6 @@ filename "../systematics/magnetic/extracted/shortStrokeR0Diff.tex"
 \end_inset
 
 
-\begin_inset space ~
-\end_inset
-
-N-m
 \end_layout
 
 \begin_layout Subsection
@@ -18587,6 +18579,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename ../systematics/thermal/plots/longStrokeoHHist.datlongStrokeo0Hist.dat.eps
 	width 80col%
@@ -18617,10 +18610,10 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename ../systematics/magnetic/plots/shortStrokeolHist.datshortStrokeo0Hist.datshortStrokeorHist.dat.eps
-	width 80col%
-	rotateAngle 90
+	width 80text%
 
 \end_inset
 
@@ -18690,7 +18683,7 @@ XXXMA automate me!
 
 \end_inset
 
-rise in attractor spindle temperature and create an 100
+rise in attractor spindle temperature and create a 100
 \begin_inset space ~
 \end_inset
 
@@ -18715,11 +18708,7 @@ filename "../systematics/thermal/extracted/longStrokeL0Diff.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-N-m.
+.
  For short strokes, the difference in torque-difference between heat-on
  and heat-off was 
 \begin_inset CommandInset include
@@ -18728,12 +18717,24 @@ filename "../systematics/thermal/extracted/shortStrokeL0Diff.tex"
 
 \end_inset
 
+.
+ XXXRC-scaling
+\begin_inset Note Note
+status open
 
-\begin_inset space ~
+\begin_layout Plain Layout
+We believe that the science-run temperature difference between the attractor
+ and the foil and the temperature gradients across the attractor were far
+ smaller, by a factor of 
+\begin_inset Formula $\sim50-100$
 \end_inset
 
-N-m.
- 
+.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -18842,14 +18843,14 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../systematics/thermal/plots/run3217ShortRedHigh.eps
-	width 25page%
+	width 35page%
 
 \end_inset
 
 
 \begin_inset Graphics
 	filename ../systematics/thermal/plots/run3218LongRedHigh.eps
-	width 25page%
+	width 35page%
 
 \end_inset
 
@@ -18860,14 +18861,14 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../systematics/thermal/plots/run3221ShortBlueHigh.eps
-	width 25page%
+	width 35page%
 
 \end_inset
 
 
 \begin_inset Graphics
 	filename ../systematics/thermal/plots/run3222LongBlueHigh.eps
-	width 25page%
+	width 35page%
 
 \end_inset
 
@@ -18878,7 +18879,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../systematics/thermal/plots/run3206LongNoHigh.eps
-	width 25page%
+	width 35page%
 
 \end_inset
 
@@ -19242,6 +19243,10 @@ Yukawa Potential
 \end_layout
 
 \begin_layout Standard
+XXXRC two-pages
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
 filename "../bootstrap/output/makeSymFigure.tex"
@@ -19249,6 +19254,18 @@ filename "../bootstrap/output/makeSymFigure.tex"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+XXXRC - fill page
+\end_layout
+
+\begin_layout Standard
+XXXRC - explanatory text
+\end_layout
+
+\begin_layout Standard
+XXXRC - guarantee facing pages
 \end_layout
 
 \begin_layout Standard
@@ -19359,7 +19376,8 @@ m is evidence that we made a mistake, either in our estimate of our capability,
  in our execution, or in both.
  We made mistakes in both.
  I do not mean to say that the construction and execution of this experiment
- is not an acheivement, it is, but we are doomed 
+ is not an acheivement, it is, but we will repeat our mistakes if we do
+ not learn from them.
 \end_layout
 
 \begin_layout Standard
@@ -19374,8 +19392,7 @@ y.
  if not ended.
  If we cower in fear of uncertainty, we'll never learn anything new about
  Nature.
- There is real value too be had for physicists who study risk management
- [XXXMA].
+ There is value to be had for physicists who study risk management [XXXMA].
 \end_layout
 
 \begin_layout Standard
@@ -19485,7 +19502,7 @@ While it was first imagined as a short-range equivalence principle test,
 \end_layout
 
 \begin_layout Standard
-Our action mirrored this philosophy.
+Our action mirrored this blitzkreig philosophy.
  The goal was to push for the single best measurement we could get, as quickly
  as we could.
  We put off complete solutions to systematic concerns in favor of estimates
