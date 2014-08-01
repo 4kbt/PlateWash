@@ -6,6 +6,7 @@
 \begin_preamble
 \definecolor{pants}{RGB}{255,127,0}
 \usepackage{grffile}
+\usepackage{dpfloat}
 \end_preamble
 \use_default_options false
 \maintain_unincluded_children false
@@ -19436,10 +19437,6 @@ filename "../bootstrap/output/makeSymFigure.tex"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-XXXRC - guarantee facing pages
 \end_layout
 
 \begin_layout Standard
