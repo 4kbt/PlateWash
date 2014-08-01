@@ -14388,12 +14388,6 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "TriangleScatterPlot"
-
-\end_inset
-
 XXXRC
 \end_layout
 
@@ -14401,6 +14395,12 @@ XXXRC
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:TriangleScatterPlot"
+
+\end_inset
+
 Your first 'triangle plot'
 \end_layout
 
@@ -14429,7 +14429,7 @@ A clear method of visualization is important to understanding the output
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "TriangleScatterPlot"
+reference "fig:TriangleScatterPlot"
 
 \end_inset
 
@@ -14443,7 +14443,7 @@ Three dimensional plots are difficult to read, three dimensional plots with
  Furthermore, the scatter in a plot like Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "TriangleScatterPlot"
+reference "fig:TriangleScatterPlot"
 
 \end_inset
 
@@ -19436,14 +19436,6 @@ filename "../bootstrap/output/makeSymFigure.tex"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-XXXRC - fill page
-\end_layout
-
-\begin_layout Standard
-XXXRC - explanatory text
 \end_layout
 
 \begin_layout Standard
