@@ -12143,7 +12143,7 @@ s sample interval, so any timing mismatch is at most 1.6 s.
 \end_layout
 
 \begin_layout Subsection
-Filtering
+Post-acquisition filtering
 \begin_inset CommandInset label
 LatexCommand label
 name "sub:Filtering"
@@ -12197,8 +12197,39 @@ name "fig:FIR Filter Transfer Functions"
 \end_layout
 
 \begin_layout Standard
-Three columns of data are fed through finite impulse response (FIR) filters
- of length 9600 samples (
+In this field, it is traditional to subtract the gravitational calibration
+ tone, remove low frequency drifts on a per-cut basis through linear fits
+ and average away unnecessary high-frequency information (often in hardware).
+ In combination, these actions amount to the construction of a complicated
+ filter, with interesting frequency dependence; the low-frequency linear
+ fit is of particular interest, as a linear fit is 
+\bar under
+not
+\bar default
+ orthogonal to a Fourier series.
+ We trade the combination of filter-like fits for a single filter.
+ The gravitational calibration signal is removed by notch filters at 
+\begin_inset Formula $1\omega$
+\end_inset
+
+ and 
+\begin_inset Formula $2\omega$
+\end_inset
+
+, the drift is removed by a millihertz high-pass filter, and the high-frequency
+ averaging is performed by a low-pass filter.
+ For an finite-impulse-response filter (FIR) of sufficient duration, the
+ band-stopping power can be larger than 1000 (60
+\begin_inset space ~
+\end_inset
+
+dB).
+ 
+\end_layout
+
+\begin_layout Standard
+Three columns of data are fed through FIR filters of length 9600 samples
+ (
 \begin_inset Formula $10\mbox{ switches}\times256\mbox{ second attractor period}\times3\mbox{ cuts}\div0.8\mbox{ seconds/sample}$
 \end_inset
 
