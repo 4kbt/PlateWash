@@ -4398,6 +4398,16 @@ name "fig:Flexure"
 \end_inset
 
 Flexure
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMA - label components directly in photo
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -4416,6 +4426,16 @@ The attractor's flexure stage, shown in Fig.
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Flexure"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMA show flexure cross-section
+\end_layout
 
 \end_inset
 
@@ -5286,8 +5306,16 @@ reference "fig:Foil-Interferometer-Layout"
 
 \end_inset
 
-, light from a fiber-coupled laser (Q-Photonics QDFBLD-1300-10) is directed
- through a 90/10 fiber coupler (ThorLabs FC1310-70-10-APC).
+, light from a 10
+\begin_inset space ~
+\end_inset
+
+mW, 1300
+\begin_inset space ~
+\end_inset
+
+nm fiber-coupled laser (Q-Photonics QDFBLD-1300-10) is directed through
+ a 90/10 fiber coupler (ThorLabs FC1310-70-10-APC).
  The light that travels down the 90% branch is absorbed by an intensity
  monitor photodiode.
  The remaining 10% is coupled into a fiber that goes to the apparatus.
@@ -5391,6 +5419,10 @@ The signal from a Fizeau interferometer is readily understood.
 
 , vacuum-to-tip transmission 
 \begin_inset Formula $T_{2}$
+\end_inset
+
+, angular frequency 
+\begin_inset Formula $\omega$
 \end_inset
 
 , and radial (full width is 
@@ -5721,16 +5753,16 @@ name "par:A-conservative-approach"
 \end_layout
 
 \begin_layout Standard
-As it is challenging to infer anything about foil motion near a fringe turning
- point, we don't.
+As it is challenging to infer anything about an interferometer's signal
+ near a fringe minimum or maximum, we don't.
  We only consider times when the interferometer was in the middle 71% (
 \begin_inset Formula $\sin(\pi/4)=\sqrt{2}/2=0.707$
 \end_inset
 
 ) of the range of fringe contrast, i.e.
  the range over which the interferometer output is approximately linear.
- Over the same range, the slope of the fringe-to-displacement sinusoid varies
- by at most 21% away from the mean (average slope 
+ Over that range, the slope of the fringe-to-displacement sinusoid varies
+ by at most 21% from the mean (average slope 
 \begin_inset Formula $2\sqrt{2}/\pi$
 \end_inset
 
@@ -8357,8 +8389,8 @@ Glue gaps
 \begin_layout Standard
 The dense inlays of the attractor and the dense material of the attractor
  face are attached with a thin layer of epoxy.
- It is possible that an air bubble may have become laterally large when
- the glue layer was pressed.
+ It is possible that an air bubble may have become laterally wide when the
+ glue layer was pressed.
  Assuming a 1 cm radius by 5 micron thick glue bubble in both the pendulum
  and attractor, the associated 
 \bar under
@@ -9029,9 +9061,9 @@ filename "../extracted/yukawaPressureCasimirComparison.tex"
 \end_inset
 
 .
- Finally, the symmetry of the PlateWash pendulum acts to suppress the Casimir
+ Finally, the symmetry of the PlateWash pendulum acts to suppress any Casimir
  torque, as the pendulum is constructed of gold-coated conducting metals
- (with differing resistivity).
+ (albeit with differing resistivity under the surface).
  If the pendulum were oriented parallel to the attractor and the resistivities
  of the pendulum body and inlays equal (Ti: 390
 \begin_inset space ~
@@ -10052,7 +10084,7 @@ name "fig:Torque-noise,-from"
 Experimentally-measured torque noise, from systematic test 3167.
  Attractor stationary.
  (XXXRC Jens comments that figure doesn't align with text; perhaps add thermal
- limit, autocollimator line) 
+ limit, autocollimator line, add more commentary) 
 \end_layout
 
 \end_inset
@@ -10140,7 +10172,12 @@ non-Gaussian
 \begin_inset Quotes erd
 \end_inset
 
-.
+, i.e.
+ 
+\begin_inset Formula $S(\omega)$
+\end_inset
+
+ is both time and frequency-dependent.
  Events such as earthquakes, human activity, attractor/foil interactions,
  computer crashes, etc.
  all happen.
@@ -10774,7 +10811,12 @@ status open
 
 \begin_layout Plain Layout
 Signal to noise attenuation as a function of attractor frequency and of
- dead time duration
+ total dead time duration.
+ As expected, once the per-step dead time is smaller than 
+\begin_inset Formula $3/4$
+\end_inset
+
+ of the step duration (half a period), 1/2 of the SNR is available for use.
 \end_layout
 
 \end_inset
@@ -12165,7 +12207,11 @@ Three columns of data are fed through finite impulse response (FIR) filters
 \family typewriter
 octave-forge
 \family default
- function 'fir1' 
+ function '
+\family typewriter
+fir1
+\family default
+' 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "octave:2012"
@@ -12398,11 +12444,15 @@ With each attractor position change, it takes a finite amount of time for
 \begin_inset Formula $\sim27$
 \end_inset
 
+
+\begin_inset space ~
+\end_inset
+
 s, including the DAQ filter, see Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "AttractorMotionLag"
+reference "fig:AttractorMotionLag"
 
 \end_inset
 
@@ -12411,7 +12461,7 @@ reference "AttractorMotionLag"
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "TorqueFeedbackLag"
+reference "fig:TorqueFeedbackLag"
 
 \end_inset
 
@@ -12429,11 +12479,11 @@ filename "../extracted/filterSensorHigh.tex"
 \end_inset
 
 mHz.
- The pneumatic DAQ filter has a lowpass at 3
+ The pneumatic DAQ filter has a lowpass at 0.33
 \begin_inset space ~
 \end_inset
 
-s.
+Hz.
  The synchronization uncertainty among the three acquisition computers is
  at most 0.8
 \begin_inset space ~
@@ -12446,17 +12496,17 @@ s (one sample-time).
 \begin_inset space ~
 \end_inset
 
-s.
- Feedback torque DAQ filter at 5
+Hz.
+ Feedback torque DAQ filter at 0.2
 \begin_inset space ~
 \end_inset
 
-s.
- Feedback P-term anti-aliasing (for storage only) 3
+Hz.
+ The feedback P-term was anti-aliased at 0.33
 \begin_inset space ~
 \end_inset
 
-s.
+Hz (for storage only).
  The acausal torque passband FIR filter 
 \begin_inset CommandInset include
 LatexCommand input
@@ -12497,19 +12547,18 @@ status open
 \end_inset
 
 
-\begin_inset CommandInset label
-LatexCommand label
-name "AttractorMotionLag"
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:AttractorMotionLag"
+
+\end_inset
+
 Attractor motion, convolved with DAQ IIR low-pass response.
  Scatter in the lower frame is from ambient air pressure variation (affects
  both blue and red), and variation in pneumatic-drive pulse-width modulation
@@ -12546,19 +12595,18 @@ status open
 \end_inset
 
 
-\begin_inset CommandInset label
-LatexCommand label
-name "TorqueFeedbackLag"
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:TorqueFeedbackLag"
+
+\end_inset
+
 Pendulum, in PD feedback, coherently-averaged response to periodic magnetic
  torque.
  Magnet states are as-driven by the attractor control DAQ, no phase lag;
@@ -12598,7 +12646,14 @@ mHz high-pass filter.
 \end_layout
 
 \begin_layout Subsection
-End-to-End measurement
+\begin_inset Quotes eld
+\end_inset
+
+End-to-End
+\begin_inset Quotes erd
+\end_inset
+
+ test
 \end_layout
 
 \begin_layout Standard
@@ -12649,22 +12704,19 @@ status open
 \end_inset
 
 
-\begin_inset CommandInset label
-LatexCommand label
-name "ElectronicTorqueLag"
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ElectronicTorqueLag"
+
+\end_inset
+
 Injected torques for dead-time determination after all filters.
- (XXXRC this plot is modified from ~/pWDA/, make sure it makes sense; run3224pre
-SM3A is quite different.)
 \end_layout
 
 \end_inset
@@ -12685,7 +12737,7 @@ Delay times
 Using Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "ElectronicTorqueLag"
+reference "fig:ElectronicTorqueLag"
 
 \end_inset
 
@@ -12789,7 +12841,7 @@ Windowing is familiar to many as a method for reducing the magnitude of
  It is also of use, as a low-pass filter, in reducing the sensitivity of
  an averaged value to high frequency fluctuations at a modest expense in
  statistical resolving power.
- In this analysis, a Hann window is used
+ In this analysis, a Hann window is used 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Press2002NumericalRecipes"
@@ -14480,12 +14532,12 @@ The resampling scheme used in this analysis was to generate synthetic data
  statistics by considering complete sets of subsets of data, perhaps by
  dividing the initial data into subsets, fitting each subset, and drawing
  statistics from the fit outputs.
- The jackknife may more readily accepted by those uncomfortable with the
- bootstrap; in the case of this measurement, there are too few measurements
+ The jackknife may be more readily accepted by those uncomfortable with
+ the bootstrap; in the case of this measurement, there are too few measurements
  to allow meaningful statistics to be drawn from the fit outputs.
  Halving or quartering the dataset could be possible, but cutting it into
  ten pieces would result in too-little coverage in terms of varied attractor
- displacements
+ displacements.
 \end_layout
 
 \begin_layout Subsection
@@ -14822,7 +14874,7 @@ This approach is appropriate when the linearization of the function
 \end_layout
 
 \begin_layout Standard
-In the case of PlateWash, it is clear from inspection of 
+In the case of PlateWash, it is clear from inspection of Equation 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:PrototypeFitFunction"
@@ -16157,6 +16209,13 @@ In addition, Make natively handles parallel processing.
 
 \begin_layout Subsection
 GNU Octave
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:GNU-Octave"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

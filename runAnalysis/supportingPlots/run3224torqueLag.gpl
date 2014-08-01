@@ -2,7 +2,7 @@ set term postscript enhanced solid color eps
 set output 'run3224torqueLag.eps'
 
 set xlabel 'time (s) modulo 128 s step period'
-set ylabel '"attractor proxy" coil current (arb units)'
+set ylabel 'coil current (arb units)'
 
 set key noauto
 
@@ -10,11 +10,13 @@ set samples 1000
 
 set ytics nomirror
 set y2tics
-set y2label 'high-passed torque (fN-m)'
+set y2label 'torque (fN-m)'
 
 pl [0:256][][][-150:150]\
-	'run3224torqueLagAtt.dat'    u ($1):($2) w p lc 4 pt 7 ps 0.1 tit 'magnet/attractor' ,\
-	'run3224torqueLagTor.dat'    u 1:($2*1e15) w p pt 7 lt 1 ps 0.1 ax x1y2 tit 'torque',\
+	'run3224torqueLagAtt.dat'    u 1:($2)  w p lc 4 pt 7 ps 0.1,\
+	'run3224torqueLagAtt.dat'    u 1:(1/0) w p lc 4 pt 7 ps 1 tit 'magnet/attractor' ,\
+	'run3224torqueLagTor.dat'    u 1:($2*1e15) w p pt 7 lt 1 ps 0.1 ax x1y2,\
+	'run3224torqueLagTor.dat'    u 1:(1/0) w p pt 7 lt 1 ps 1 ax x1y2 tit 'torque',\
 	'run3224torqueLagTorCoh.dat' u 1:($2*1e15) w l lt 3 lw 2 ax x1y2 tit 'torque average'
 	
 

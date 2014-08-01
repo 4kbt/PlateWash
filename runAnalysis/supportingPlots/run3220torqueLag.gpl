@@ -2,7 +2,7 @@ set term postscript enhanced solid color eps
 set output 'run3220torqueLag.eps'
 
 
-set xlabel 'time (s) modulo 128 s step period'
+set xlabel 'time (s) modulo 128 s injected magnetic signal period'
 set ylabel 'high-passed angle ({/Symbol m}rad)'
 
 set key noauto
@@ -19,8 +19,8 @@ bottom = -470
 set key bottom right
 
 pl [0:128][-0.5:1.5][][bottom:top]\
-	'run3220torqueLagAtt.dat'    u ($1+10.0):(($2-27.7)/5.0*(top-bottom) + bottom) w l lc 4 lw 1 ax x1y2 tit 'magnet on' ,\
-	'run3220torqueLagAtt.dat'    u ($1+20.0):(($2-27.7)/5.0*(top-bottom) + bottom) w l lc 5 lw 1 ax x1y2 tit 'magnet off',\
+	'run3220torqueLagAtt.dat'    u ($1+10.0):(($2-27.7)/5.0*(top-bottom) + bottom) w l lc 4 lw 1 ax x1y2 tit 'external magnet turns on' ,\
+	'run3220torqueLagAtt.dat'    u ($1+20.0):(($2-27.7)/5.0*(top-bottom) + bottom) w l lc 5 lw 1 ax x1y2 tit 'external magnet turns off',\
 	'run3220torqueLagMod.dat'    u 1:($2*1e6) w p pt 7 lt 3 ps 0.1,\
 	'run3220torqueLagCoh.dat'    u 1:($2*1e6) w l lt 3 tit 'angle',\
 	'run3220torqueLagTor.dat'    u 1:($2*1e15) w p pt 7 lt 1 ps 0.1 ax x1y2,\
