@@ -2947,14 +2947,73 @@ reference "fig:Magnetic-damper"
 \end_inset
 
 ).
- Both the fiber assembly and the magnetic damper were attached, through
- a ceramic electrical isolator, to a motorized two-axis translation and
- one-axis rotary stage.
+ Both the fiber assembly (Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:fiber assembly"
+
+\end_inset
+
+) and the magnetic damper were attached, through a ceramic electrical isolator,
+ to a motorized two-axis translation and one-axis rotary stage.
  Electrical contact to the pendulum was established by way of a thin (<0.5
 \begin_inset space ~
 \end_inset
 
 mm) silver-plated copper wire clipped to the otherwise-isolated fiber support.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Pictures/small/DamperInMirrorDec142012P1310009.jpg
+	width 70text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:fiber assembly"
+
+\end_inset
+
+The entire fiber assembly is visible at right and in a reflection in a large
+ mirror at left.
+ Phosphor-bronze or beryllium-copper springs provided vertical isolation
+ of the fiber attachment point.
+ Above the three-fold-symmetric upper spring is the porcelain electrical
+ isolator separating the pendulum from the rest of the apparatus.
+ The pendulum ground wire is visible in the foreground.
+ At left is a small mirror allowing a face-on image of the fiber against
+ a scale scribed into the isolating foil.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
