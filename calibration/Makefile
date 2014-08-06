@@ -18,8 +18,9 @@ ${CALIBFILES} : run%calFitChk.dat : calibRuns.cfg run3147calibFitCheck.m
 
 CALFILES := $(shell ls run*calFitChk.dat)
 
+R3167 := run3167coherentPlot
 
-all: run3147calFitChk.eps
+all: run3147calFitChk.eps $(R3167).eps
 
 CALIBMERGEFILE := run3147calFitChkMerge.dat
 
@@ -34,6 +35,11 @@ $(CALIBMEANFILE):$(CALIBMERGEFILE) $(CALIBMEANM)
 
 run3147calFitChk.eps: run3147calFitChk.gpl $(CALIBMERGEFILE) $(CALIBMEANFILE)
 	$(GNU) run3147calFitChk.gpl
+
+
+$(R3167).eps : $(R3167).gpl $(R3167).m $(CALIBMEANFILE)
+	$(OCT) $(R3167).m
+	$(GNU) $(R3167).gpl
 
 
 clean: 
