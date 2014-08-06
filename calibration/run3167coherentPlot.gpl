@@ -1,0 +1,12 @@
+fn = 'run3167coherentPlot.dat'
+
+set term postscript enhanced solid color eps
+set output 'run3167coherentPlot.eps'
+
+set key noauto
+
+set xlabel 'time, moduluo four periods (gravitational calibrator rotation periods)'
+set ylabel 'high-passed coherently-averaged feedback torque (A.U)' 
+
+pl \
+	fn u 1:2:3 w yerr pt 7 lt 3

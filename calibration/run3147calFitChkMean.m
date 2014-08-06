@@ -15,6 +15,13 @@ freqTol = 0.00005;
 %frequency cut
 d = d( abs( d(:,12) - freq2) < freqTol , :);
 
+meanfreq = mean(d(:,12));
+stdfreq  = std( d(:,12)); 
+printSIErr( meanfreq, stdfreq/sqrt(rows(d)), 1, -3, 'Hz', '../extracted/CalibFrequency.tex');
+
+freqOut = [meanfreq stdfreq rows(d)];
+
+save 'run3147calFreq.dat' freqOut
 
 m = mean(sqrt(d(:,6).^2 + d(:,7).^2));
 s =  std(sqrt(d(:,6).^2 + d(:,7).^2));
