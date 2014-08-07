@@ -19378,10 +19378,6 @@ Interferometer fit.
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -19817,7 +19813,69 @@ Contact potential
 \end_layout
 
 \begin_layout Standard
-XXXMA
+As noted in XXXMA, XXXMA, and XXXMA, our inability to set the contact voltage
+ was the biggest single blocker for this measurement.
+ The elevated electrical potential difference between the pendulum and the
+ foil is probably responsible for the level of swing coupling we see, limits
+ the distance of closest approach between the pendulum and the foil, and
+ surely enhanced the pendulum/foil coupling that forced us to make a systematic
+ correction XXXMA.
+ In addition, the presence of a possible foil/attractor contact potential
+ may have led to the short-range attractor foil coupling that makes the
+ pendulum/foil systematic correction so daunting.
+ 
+\end_layout
+
+\begin_layout Standard
+The fix is clear.
+ We have very nice fully-isolated battery-powered contact potential setting
+ devices built and ready to go.
+ We need only reconnect them, now that we understand that our systematic
+ signal was due to the 'capacitor systematic' and not something in the contact-p
+otential system.
+\end_layout
+
+\begin_layout Subsubsection
+Pendulum Battery
+\end_layout
+
+\begin_layout Standard
+As we explained earlier (XXXMA), it is quite probable that the pendulum
+ had its own trouble with an irreducible on-board battery, formed from the
+ contact of the dissimilar metals of the pendulum body and the dense inlays.
+ As measured, this voltage may have contributed ~100
+\begin_inset space ~
+\end_inset
+
+mV to the contact potential.
+ Alternatively, it is also possible that different regions of the foil surface
+ held slightly different effective electrical potential.
+ Either way, a monolithic pendulum with a much-smaller area of closest approach,
+ limited only to the active mass, may yield substantially better noise performan
+ce.
+ If the dense/close side of the pendulum is sufficiently thick, it is also
+ possible to imagine attaching a dense protruding 
+\begin_inset Quotes eld
+\end_inset
+
+inlay
+\begin_inset Quotes erd
+\end_inset
+
+ to a lightweight pendulum body (perhaps glass or aluminum), minimizing
+ the pendulum moment of inertia but still allowing complete control over
+ the dense material/foil contact potential.
+ 
+\end_layout
+
+\begin_layout Standard
+These approaches are only possible with the simultaneous use of a foil interfero
+meter.
+ The intentional loss of symmetry inherent to these designs requires that
+ even more care be given to the foil's motion.
+ While a tuned contact potential should limit the electrostatic effects
+ of any swing, gas dynamics and other effects presently cancelled by approximate
+ symmetries may become more pronounced.
 \end_layout
 
 \begin_layout Subsubsection
@@ -19825,7 +19883,13 @@ Pendulum flatness
 \end_layout
 
 \begin_layout Standard
-XXXMA
+Our pendulum was a prototype, pressed into service when our superior pendulum
+ failed.
+ As seen in XXXMA, the pendulum could be flatter.
+ We can surely get improved metrology, decreased separation, and improved
+ active area with a flatter pendulum.
+ A refined pendulum is likely to be implemented in parallel with the pendulum-ba
+ttery reducing design mentioned above.
 \end_layout
 
 \begin_layout Subsubsection
@@ -19833,7 +19897,36 @@ Autocollimator
 \end_layout
 
 \begin_layout Standard
-XXXMA
+The autocollimator used in this iteration of the experiment was a coarse
+ workhorse.
+ The wide dynamic range, software-defined rotation, and two-dimensional
+ operation were all quite useful to making this measurement possible.
+ The noise floor of the autocollimator, however, wasn't too far away from
+ the intrisic noise of the torsion balance.
+ Improved readout would allow us to run higher-gain feedback loops, with
+ larger differential terms.
+ The stiffer loop performance would allow us to operate at shorter separations
+ and at higher attractor frequencies.
+ 
+\end_layout
+
+\begin_layout Standard
+Furthermore, the encoder systematic (XXXMA) most-likely emerged through
+ electrical crosstalk between the autocollimator leads and the encoder.
+ At present the leads that run between the photodiode and the autocollimator
+ preamplifiers are 5-10
+\begin_inset space ~
+\end_inset
+
+cm in length.
+ By relocating the preamplifier board and improving the shielding further,
+ we may be able to decrease the size of any encoder systematic.
+ While it would require considerable testing to be trustworthy, the benefits
+ of full-time encoder operation would be considerable.
+ The attractor could operate in feedback, decreasing the positioning scatter
+ by at least an order of magnitude, and there would be no need to use a
+ pressure gauge as a position readout.
+ 
 \end_layout
 
 \begin_layout Subsubsection
@@ -19841,7 +19934,21 @@ UV LED
 \end_layout
 
 \begin_layout Standard
-XXXMA
+Our understanding of exactly what physical mechanisim increases the noise
+ in the torsion pendulum at short pendulum/foil separation is minimal.
+ One possiblity is that the pendulum is being buffeted by outgassing from
+ the foil, perhaps enhanced by squeeze-film effects.
+ Another is that adsorbed materials on the foil surface may be slowly rearrangin
+g themselves, causing fluctuations of the effective electrostatic interactions
+ between pendulum and foil.
+ If either of these two are the culprit, as suggested by XXXMA, it's possible
+ that retracting the pendulum away from the foil and illuminating the active
+ surfaces with ultraviolet light might improve the noise.
+ Through photoelectric-like effects, UV light is known to significantly
+ accelerate outgassing rates and expel adsorped surface layers.
+ Trying out a UV light-emitting diode, as we've already used in our LISA
+ (XXXMA) experiment, would be straightforward, and might yield an improvement
+ in noise.
 \end_layout
 
 \begin_layout Subsubsection
@@ -19849,7 +19956,33 @@ Interferometer improvements
 \end_layout
 
 \begin_layout Standard
-XXXMA
+As described in XXXMA, the interferometer may be limited by polarization-related
+ noise.
+ If we were to switch to entirely polarization-maintaining fiber, it's possible
+ that the pickup and drift we see could be reduced.
+ 
+\end_layout
+
+\begin_layout Standard
+In addition, it would be a great help in simplifying the analysis and controllin
+g for the foil systematic if we could hold the interferometer in its sensitive
+ region of operation for the duration of the experiment.
+ That could be accomplished by physically moving the interferometer fiber
+ tip with slow-control feedback or by changing the laser temperature enough
+ to shift the laser frequency.
+ The new infrared laser is extremely resistant to temperature change, which
+ may force us to develop a mechanism of moving the fiber tip in a smooth
+ and controllable fashion.
+ The geared and levered-down servo that presently positions the fiber tip
+ is too coarse for the job.
+\end_layout
+
+\begin_layout Standard
+It has been suggested that we should replace the 90/10 coupler with a fiber
+ circulator to increase the amount of light that reaches the detector by
+ more than a factor of ten.
+ This hasn't yet been thought through completely, but it does appear to
+ be a drop-in replacement for the existing coupler.
 \end_layout
 
 \begin_layout Subsection
