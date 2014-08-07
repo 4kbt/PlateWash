@@ -5113,17 +5113,7 @@ filename "../extracted/brickHeight.tex"
 
 \end_inset
 
- above the center of the pendulum
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXRC verify metrology
-\end_layout
-
-\end_inset
-
-.
+ above the center of the pendulum.
  The rotation axis was coincident with the torsion fiber to < 5 cm precision.
  The rotation was controlled by a PIC microprocessor driving a geared-down
  stepper motor.

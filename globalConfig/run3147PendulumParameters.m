@@ -204,12 +204,14 @@ printSI(brickHeight, 2, -3, 'm', [HOMEDIR '/extracted/brickHeight.tex'    ]);
 brickWidth  = 4*0.0254;
 printSI(brickWidth, 2, -3, 'm', [HOMEDIR '/extracted/brickWidth.tex'    ]);
 
-%brick positions
-brickRadius = 25*0.0254;
-printSI(brickRadius, 2, -3, 'm'	    , [HOMEDIR '/extracted/brickRadius.tex'    ]);
+%brick positions - to center of brick
+brickRadius = 24.75*0.0254; %Rechecked 8/6/2014
+brickRadiusErr = 1*0.0254;
+printSIErr(brickRadius, brickRadiusErr, 1, -3, 'm'	   , [HOMEDIR '/extracted/brickRadius.tex'    ]);
 % elevation to center of brick
-brickElevation = 16*0.0254;
-printSI(brickElevation, 2, -3, 'm'	    , [HOMEDIR '/extracted/brickElevation.tex'    ]);
+brickElevation = 15.3*0.0254; %Rechecked 8/6/2014
+brickElevationErr = 1*0.0254;
+printSIErr(brickElevation, brickElevationErr, 1, -3, 'm'   , [HOMEDIR '/extracted/brickElevation.tex'    ]);
 
 
 %%%% Bellows %%%% 
