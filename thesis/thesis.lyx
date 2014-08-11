@@ -2507,13 +2507,13 @@ We will compute the Yukawa torque about
 \end_layout
 
 \begin_layout Standard
-The Yukawa field from the infinite planar attractor is
+The Yukawa field from an infinite planar attractor is
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \[
-g(d)=C(1-e^{-t_{a}/\lambda})e^{-d/\lambda}.
+g(d)=2\pi G\rho_{A}\alpha\lambda(1-e^{-t_{a}/\lambda})e^{-d/\lambda}.
 \]
 
 \end_inset
@@ -2655,7 +2655,7 @@ Integrating by parts:
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\tau=-h\rho_{p}C(1-e^{-t_{a}/\lambda})\left(1-e^{-t_{p}/\lambda}\right)e^{-D/\lambda}\frac{\lambda^{3}}{\theta^{2}}\left[e^{-b\theta/\lambda}(\theta b/\lambda+1)-e^{-a\theta/\lambda}(\theta a/\lambda+1)\right]\label{eq:AngledPlateTorque}
+\tau=-2\pi G\rho_{A}\alpha h\rho_{p}(1-e^{-t_{a}/\lambda})\left(1-e^{-t_{p}/\lambda}\right)e^{-D/\lambda}\frac{\lambda^{4}}{\theta^{2}}\left[e^{-b\theta/\lambda}(\theta b/\lambda+1)-e^{-a\theta/\lambda}(\theta a/\lambda+1)\right]\label{eq:AngledPlateTorque}
 \end{equation}
 
 \end_inset
@@ -19639,15 +19639,99 @@ Technical
 \end_layout
 
 \begin_layout Subsubsection
-1 parameter, 1.5 parameters, 2 parameters
+0 tunable parameters, 1 tunable parameter, 2 tunable parameters
 \end_layout
 
 \begin_layout Standard
-Our research group has made its name with Equivalence Principle tests.
+Our research group has made its name with Equivalence Principle tests (XXXMA).
  A rotating torsion balance with test masses of equal gravitational mass
  but differing composition looks for a composition-dependent differential
  acceleration toward a distant attractor mass.
+ In this experiment, the science signal appears at the rotation frequency.
+ For both earth-fixed and astronomical field masses, the measurement can
+ be distilled to two numbers -- the in-phase and out-of-phase components
+ of a torsion balance signal.
+ For these experiments, while the execution and source-mass determination
+ can be challenging, it is relatively straightforward to write down the
+ error budget.
+ For each source of systematic uncertainty, one need only determine the
+ magnitude of the external influence and its coupling to the instrument.
+ From there, the effect on the overall measurement can be estimated.
  
+\end_layout
+
+\begin_layout Standard
+From these measurements, constraints on interactions with an intrinsic lengthsca
+le, usually a Yukawa length 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, are derived.
+ The uncertainty in these constraints are affected by uncertainty in the
+ field-mass integration, but there are 
+\bar under
+no
+\bar default
+ experimental uncertainties that feed directly into distance-dependent uncertain
+ties.
+ This is a critical difference from our inverse-square law experiments.
+ 
+\end_layout
+
+\begin_layout Standard
+In our group's hole and wedge-pendulum experiments 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Cook2013,2007PhRvL..98b1101K,2007PhRvL..98m1104A,2004PhRvD..70d2004H,2001PhRvL..86.1418H"
+
+\end_inset
+
+, the situation is similar, but more complicated.
+ A mass distribution with 
+\begin_inset Formula $N$
+\end_inset
+
+-fold symmetry is suspended horizontally on a torsion balance.
+ Below it is placed a similar 
+\begin_inset Formula $N$
+\end_inset
+
+-fold-symmetric field mass.
+ The field mass is rotated smoothly, and the 
+\begin_inset Formula $N\omega$
+\end_inset
+
+ in-phase and out-of-phase torque signals on the torsion balance are measured.
+ In an important difference from the Equivalence Principle tests, the field
+ mass is then displaced relative to the pendulum and the measurement repeated.
+ In this way, these experiments can be viewed as a collection of Equivalence-Pri
+nciple-style measurements.
+ Each measurement can be used independently to constrain new interactions
+ in the 
+\begin_inset Formula $\alpha-\lambda$
+\end_inset
+
+ plane.
+ Taken together, however, it is a greater challenge to estimate the ensemble's
+ sensitivity to systematic uncertainties.
+ For each source of systematic error, a model of the systematic effect and
+ its pendulum coupling must be constructed as a function of height.
+ 
+\end_layout
+
+\begin_layout Standard
+In the PlateWash experiment, things are even more complicated.
+ For each individual cut, we have the choice of start and end positions.
+ While this extra dimension of flexibility gives us extra discriminating
+ power between specific inverse-square law violations, it also requires
+ that we have an even better model of each systematic effect.
+ With the myriad choices of start and end positions that we used in this
+ experiment, ascertaining both our sensitivity to a specific inverse square
+ law signal and our uncertainties became a real challenge.
+ The methods outlined in XXXMA now allow us to do this relatively efficiently,
+ but it can be challenging to extract a physics result by eye.
+ The two-parameter approach is much more powerful for hunting down instrumental
+ effects, but XXXMA
 \end_layout
 
 \begin_layout Subsubsection
