@@ -7818,24 +7818,18 @@ Systematics
 Systematic uncertainties are the primary challenge of this measurement.
  Ensuring that no gravitational signals are mimiced nor masked demands great
  care.
- For this section, estimates are made of a torque difference between an
- attractor-pendulum distance of closest approach (XXXRC
-\begin_inset space ~
+ This section enumerates the many ways in which the experiment could lead
+ us astray.
+ Approximate quantitative estimates are given where calculable.
+ We will return to the subject in Chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Systematic-Tests"
+
 \end_inset
 
-
-\begin_inset Formula $\mu$
-\end_inset
-
-m) and a point XXXRC
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset Formula $\mu$
-\end_inset
-
-m away.
+, where the operation of the experiment further informs our understanding
+ of systematic uncertainties.
 \end_layout
 
 \begin_layout Subsubsection
@@ -18425,6 +18419,13 @@ What is certain is that clipping the capacitors out of the system substantially
 
 \begin_layout Chapter
 Systematic Tests
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Systematic-Tests"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
