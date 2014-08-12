@@ -17,7 +17,7 @@ function o =  yukawaAngleCore( L , T , a, b , tp)
 	%save a few ops
 	ToL = T ./ L ; 
 
- 	o = L.^3 ./ T.^2 .* ( 
+ 	o = L.^4 ./ T.^2 .* ( 
 		exp( -b .* ToL ) .* ( b .* ToL + 1) 
 	      - exp( -a .* ToL ) .* ( a .* ToL + 1) 
 		) .* (1 - exp( -tp./ L ) ); 
