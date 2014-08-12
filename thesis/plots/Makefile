@@ -1,6 +1,6 @@
 include ../../Makefile.inc
 
-all : lagSNR.eps lagFrequencySNR.eps pwTransferFunction.eps ForceLaw.eps ifoSim.eps
+all : lagSNR.eps lagFrequencySNR.eps pwTransferFunction.eps ForceLaw.eps ifoSim.eps run1646contactPotential.eps
 	make $(PARALLEL) -C ISL
 
 lagSNR.eps : lagSNR.gpl
@@ -16,6 +16,9 @@ ForceLaw.eps: 248plot.gpl
 	$(GNU) 248plot.gpl
 
 ifoSim.eps: ifoSim.gpl
+	$(GNU) $<
+
+run1646contactPotential.eps: run1646contactPotential.gpl
 	$(GNU) $<
 
 clean : 

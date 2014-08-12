@@ -1,0 +1,20 @@
+set term postscript enhanced solid color eps
+set output 'run1646contactPotential.eps'
+
+set key noauto left 
+
+set title 'run1646 contact potential voltage sweeps for 8 pendulum angles'
+set xlabel 'voltage applied to foil (mV)'
+set ylabel 'feedback electrode holding torque (sqrt(V/10))'
+
+fn = 'run1646contactReordered.dat'
+
+plot \
+	fn index 3 u 2:3 w lp pt 7 tit '-1.44 mrad',\
+	'' index 2 u 2:3 w lp pt 7 tit '-1.25 mrad',\
+	'' index 1 u 2:3 w lp pt 7 tit '-0.81 mrad',\
+	'' index 0 u 2:3 w lp pt 7 tit '-0.63 mrad',\
+	'' index 4 u 2:3 w lp pt 7 tit '-0.31 mrad',\
+	'' index 5 u 2:3 w lp pt 7 tit '0 mrad',\
+	'' index 6 u 2:3 w lp pt 7 tit '0.31 mrad',\
+	'' index 7 u 2:3 w lp pt 7 tit '0.43 mrad'

@@ -5883,6 +5883,10 @@ A polarization-maintaining fiber is on-hand for an upgraded version of the
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 At higher frequencies, the instrument appears to be limited by electronic
  noise, but the sensitivity is more than sufficient for our needs, see Fig.
  
@@ -5896,14 +5900,14 @@ reference "fig:Interferometer-high-frequency"
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
-XXXRC
+XXXMA
 \end_layout
 
 \begin_layout Plain Layout
@@ -5917,6 +5921,11 @@ name "fig:Interferometer-high-frequency"
 \end_inset
 
 Interferometer high-frequency power spectrum
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -7645,8 +7654,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename plots/Run1646contactFlat.jpg
-	width 50text%
+	filename plots/run1646contactPotential.eps
+	width 70text%
 
 \end_inset
 
@@ -7665,23 +7674,39 @@ pendulum battery
 \begin_inset Quotes erd
 \end_inset
 
-, taken with an older pendulum.
+, taken with an older pendulum and foil.
  The plot displays pendulum torque as a function of an applied pendulum-foil
  voltage.
  Each set of points is taken at a different pendulum angle.
  In the absence of a pendulum-battery-like effect, the vertices of the approxima
-te-parabolas should align vertically.
- XXXRC Jens couldn't interpret; consider joining curves with lines, adding
- units to legend (set below?), axis labels/tics are tiny-- explain why this
- is evidence for a battery.
+te-parabolas should align vertically, and the curvature-free curve of holding
+ torque as a function of foil voltage (-0.31
+\begin_inset space ~
+\end_inset
+
+mrad above) should be horizontal.
+ The apparent magnitude of the 
+\begin_inset Quotes eld
+\end_inset
+
+pendulum battery
+\begin_inset Quotes erd
+\end_inset
+
+ is 
+\begin_inset Formula $\sim50$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+V.
+ 
 \end_layout
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
