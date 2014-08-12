@@ -5718,7 +5718,8 @@ reference "fig:Foil-interferometer-signal-as-fcn-of-pressure-position"
 \end_layout
 
 \begin_layout Standard
-The very first fringe (at XXXRC psi) is our best measure of fringe contrast.
+The first few fringes after the attractor hits the foil are our best measure
+ of fringe contrast.
  We can identify the turning points and sensitive regions of intensity.
  
 \end_layout
