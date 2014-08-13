@@ -2166,15 +2166,11 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXXRC -- figure!
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Pendulum/Attractor schematic
-\end_layout
+\align center
+\begin_inset Graphics
+	filename diagrams/fullAssemblyHorizontal2014Small.pdf
+	width 80text%
+	BoundingBox 0bp 0bp 722bp 355bp
 
 \end_inset
 
@@ -2182,6 +2178,31 @@ Pendulum/Attractor schematic
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Pendulum/Attractor schematic.
+ The image is a top view of a horizontal slice through the center of the
+ pendulum, foil, and attractor.
+ The separation between pendulum, foil, and attractor have been exaggerated
+ for clarity.
+ All else is to-scale.
+ The pendulum and attractor are properly dimensioned.
+ The foil-holder shown is an earlier design, but functionally equivalent
+ to the one used in the experiment.
+ The actual foil clamping ring is 
+\begin_inset Formula $\sim1.5$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+mm in thickness.
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
