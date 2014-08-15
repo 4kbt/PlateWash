@@ -81,6 +81,12 @@ fprintf('# setup ');
 
 columnNames; %script that defines all the data columns
 
+%correct time column for run 1690
+if(exist('pwrunNumber') && pwrunNumber == '1690')
+	pwTimeCol = 18;
+end
+
+
 fprintf('# filtering ');
 Nfilt = 2560*3/TheoSampleTime; printInteger(Nfilt, [HOMEDIR 'extracted/calibCutLength.tex']);
 Ncut = floor(Nfilt*1.5);

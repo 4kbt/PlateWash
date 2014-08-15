@@ -1,0 +1,20 @@
+fn = 'run1690attractorTwist.dat'
+
+set term postscript enhanced solid color eps
+set output 'run1690attractorTwist.eps'
+
+set title 'attractor angular runout test'
+set xlabel 'attractor position ({/Symbol m}m, arbitrary datum)'
+set ylabel 'attractor angle ({/Symbol m}rad, arbitrary datum)'
+
+set key noauto
+
+endpt = 1110
+
+set arrow from endpt,-0.5 to endpt, 0.5
+
+set label 'flexure hard-stop' at endpt-100,-0.7 center front
+
+pl \
+	fn u 3:($2*1e6) lt 3 pt 7 ps 0.3 
+

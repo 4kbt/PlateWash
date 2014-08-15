@@ -6422,7 +6422,14 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXXRC
+\align center
+\begin_inset Graphics
+	filename ../metrology/run1690attractorTwist.eps
+	width 70text%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -6435,7 +6442,10 @@ name "fig:Flexure-runout"
 
 \end_inset
 
-Flexure runout, as measured by the autocollimator
+Flexure runout, as measured by the autocollimator.
+ The science data were taken using positions largely (perhaps entirely)
+ within this region.
+ The hard stop at right is the physical limit of the flexure's motion.
 \end_layout
 
 \end_inset
