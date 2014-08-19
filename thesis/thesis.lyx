@@ -2574,7 +2574,7 @@ where the second integral is over the thickness of the finite plate.
 
 \begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Formula 
@@ -2698,12 +2698,12 @@ Intuition check, what if
 
 \begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Formula 
 \[
-\tau=-h\rho_{p}C(1-e^{-t_{a}/\lambda})\left(1-e^{-t_{p}/\lambda}\right)e^{-D/\lambda}\frac{\lambda^{3}}{\theta^{2}}\left[e^{-b\theta/\lambda}(\theta b/\lambda+1)-e^{b\theta/\lambda}(-\theta b/\lambda+1)\right]
+\tau=-h\rho_{p}C(1-e^{-t_{a}/\lambda})\left(1-e^{-t_{p}/\lambda}\right)e^{-D/\lambda}\frac{\lambda^{4}}{\theta^{2}}\left[e^{-b\theta/\lambda}(\theta b/\lambda+1)-e^{b\theta/\lambda}(-\theta b/\lambda+1)\right]
 \]
 
 \end_inset
@@ -2714,7 +2714,7 @@ status collapsed
 \begin_layout Plain Layout
 \begin_inset Formula 
 \[
-\tau=-h\rho_{p}C(1-e^{-t_{a}/\lambda})\left(1-e^{-t_{p}/\lambda}\right)e^{-D/\lambda}\frac{\lambda^{3}}{\theta^{2}}\left[e^{-b\theta/\lambda}\theta b/\lambda+e^{b\theta/\lambda}\theta b/\lambda+e^{-b\theta/\lambda}-e^{b\theta/\lambda})\right]
+\tau=-h\rho_{p}C(1-e^{-t_{a}/\lambda})\left(1-e^{-t_{p}/\lambda}\right)e^{-D/\lambda}\frac{\lambda^{4}}{\theta^{2}}\left[e^{-b\theta/\lambda}\theta b/\lambda+e^{b\theta/\lambda}\theta b/\lambda+e^{-b\theta/\lambda}-e^{b\theta/\lambda})\right]
 \]
 
 \end_inset
@@ -2730,7 +2730,7 @@ status collapsed
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\tau=-h\rho_{p}C(1-e^{-t_{a}/\lambda})\left(1-e^{-t_{p}/\lambda}\right)e^{-D/\lambda}\frac{\lambda^{3}}{\theta^{2}}\left[\cosh(\frac{b}{\lambda}\theta)\frac{b}{\lambda}\theta-\sinh(\frac{b}{\lambda}\theta)\right]
+\tau=-4\pi G\rho_{A}\alpha h\rho_{p}(1-e^{-t_{a}/\lambda})\left(1-e^{-t_{p}/\lambda}\right)e^{-D/\lambda}\frac{\lambda^{4}}{\theta^{2}}\left[\cosh(\frac{b}{\lambda}\theta)\frac{b}{\lambda}\theta-\sinh(\frac{b}{\lambda}\theta)\right]
 \]
 
 \end_inset
