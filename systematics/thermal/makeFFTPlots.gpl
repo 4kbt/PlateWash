@@ -1,24 +1,24 @@
-set title 'long stroke, red high'
+set title 'long stroke, leg 1 heater on'
 fn = 'run3218LongRedHigh'
 
 load 'plotFFTGuts.gpl'
 
-set title 'long stroke, blue high'
+set title 'long stroke, leg 2 heater on'
 fn = 'run3222LongBlueHigh'
 
 load 'plotFFTGuts.gpl'
 
-set title 'short stroke, red high'
+set title 'short stroke, leg 1 heater on'
 fn = 'run3217ShortRedHigh'
 
 load 'plotFFTGuts.gpl'
 
-set title 'short stroke, blue high'
+set title 'short stroke, leg 2 heater on'
 fn = 'run3221ShortBlueHigh'
 
 load 'plotFFTGuts.gpl'
 
-set title 'long stroke, none high'
+set title 'long stroke, all heaters off'
 fn = 'run3206LongNoHigh'
 
 load 'plotFFTGuts.gpl'

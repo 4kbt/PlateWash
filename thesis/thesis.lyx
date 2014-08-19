@@ -18443,9 +18443,7 @@ In addition, the presence of the foil alllows a second possible, though
 \end_layout
 
 \begin_layout Standard
-What is certain is that clipping the capacitors out of the system substantially
- eliminates this systematic.
- 
+Clipping the capacitors out of the system eliminates any hint of this systematic.
 \end_layout
 
 \begin_layout Chapter
@@ -18473,6 +18471,53 @@ reference "sec:Model-Comparison"
  within a single fit.
  These smaller analyses are more-interpretable and give insight into the
  outcome of individual systematic tests.
+ 
+\end_layout
+
+\begin_layout Standard
+For most systematic tests, we operated the experiment with square-wave short-str
+oke and long-stroke attractor positions, seen easily in the right half of
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Attractor-positions-over"
+
+\end_inset
+
+.
+ The short-stroke spanned the 
+\begin_inset Formula $\sim150$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m nearest the foil, and the long stroke spanned the 
+\begin_inset Formula $\sim550$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m farthest from the foil.
+ The analyses in this chapter are blind to gravity; torque measurements
+ are intercomparisons between two square wave measurements, suppressing
+ any common-mode gravitational information.
+ This is done by subtracting torque data measured without any externally-applied
+ influence from torque data measured with an externally-applied systematic
+ influence.
+ In the case of the magnetic field systematic, we also considered the difference
+ between data taken with applied fields of opposite sign.
 \end_layout
 
 \begin_layout Section
@@ -18532,7 +18577,7 @@ reference "sec:Capacitor-Systematic"
 \begin_inset Formula $\sim1$
 \end_inset
 
-, a major systematic effect appears.
+, a major signal  appears.
  This test shows, in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -19120,7 +19165,71 @@ reference "fig:Temperature-variation-at"
 \end_inset
 
 .
- XXXRC -- is there a way to convert the resolved signal to a torque?
+\end_layout
+
+\begin_layout Standard
+The resolved signals in the Fourier spectra are commensurate with a long-stroke
+ attractor temperature variation of 
+\begin_inset Formula $\sim30$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+K 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+10 mK/rtHz, 0.02 mHz bandwidth
+\end_layout
+
+\end_inset
+
+of the spindles at the attractor drive frequency.
+ By virtue of the greater heat capacity of the attractor and the impedance
+ of the spindles, the attractor-face temperature variation should be smaller.
+ Dimensionally, this temperature change is of no consequence; both the attractor
+/spindle expansion and the pressure change in the bellows driven by a microkelvi
+n temperature change lead to 
+\begin_inset Formula $\sim30$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+pm displacements of the attractor.
+ These displacements are far smaller than the intrinsic scatter in attractor
+ positions and the slow retreat of the attractor due to leak-back.
+\end_layout
+
+\begin_layout Standard
+If this stroke-dependent periodic variation were to lead to a systematic
+ error, we should see it in an apparent 
+\begin_inset Quotes eld
+\end_inset
+
+non-conservative
+\begin_inset Quotes erd
+\end_inset
+
+ nature to the measurements, where 
+\begin_inset Formula $\Delta\tau(a,c)\not\approx\Delta\tau(a,b)+\Delta\tau(b,c)$
+\end_inset
+
+.
+ In this analysis, we do not explicitly search for this effect, but it is
+ possible to do.
+ A much weaker signal for/defense against a non-conservative torque curve
+ is the intrisic expansion of the distribution of the bootstrapped best-fit
+ points in searches for new physics; biased sampling of short/long strokes
+ can, however, lead to too-good fit results.
 \end_layout
 
 \begin_layout Standard
@@ -19186,7 +19295,8 @@ name "fig:Temperature-variation-at"
 
 \end_inset
 
-Temperature variation at attractor frequency
+Temperature variation at attractor frequency.
+ The top two rows have a heated attractor, the bottom plot is unheated.
 \end_layout
 
 \end_inset

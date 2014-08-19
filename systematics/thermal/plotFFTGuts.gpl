@@ -4,9 +4,19 @@ set output 'plots/'.fn.'.eps'
 set xlabel 'frequency (mHz)'
 set ylabel 'temperature spectral amplitude (mK/{/Symbol @{\140\140}\326}Hz)'
 
+ybot = 0.01
+ytop = 100
+
+attrFreq = 3.90625e-3*1000
+
+set arrow from attrFreq, ybot to attrFreq, ytop nohead lt 0
+set arrow from 3.85,40 to attrFreq,10
+
+set label 'attractor frequency'  at 3.75,50
+
 set logsc y
 
-pl [3.7: 4.1][0.01:100]  \
-		fn.'.dat'  u ($1*1000):(sqrt($4)*1e3) w l tit 'baseplate',\
-		''	   u ($1*1000):(sqrt($2)*1e3) w l tit 'attractor leg 1',\
-		'' 	   u ($1*1000):(sqrt($3)*1e3) w l tit 'attractor leg 2'
+pl [3.7: 4.1][ybot:ytop]  \
+		fn.'.dat'  u ($1*1000):(sqrt($4)*1e3) w l lt 2 tit 'baseplate',\
+		''	   u ($1*1000):(sqrt($2)*1e3) w l lt 1 tit 'attractor leg 1',\
+		'' 	   u ($1*1000):(sqrt($3)*1e3) w l lt 3 tit 'attractor leg 2'
