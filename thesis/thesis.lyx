@@ -18752,6 +18752,318 @@ status open
 \end_inset
 
 .
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Coil Current (A)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Applied Field (T)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Stroke
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Torque Difference
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
++0.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../systematics/magnetic/extracted/verticalField.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Long
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../systematics/magnetic/extracted/longStrokeL0Diff.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
++0.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../systematics/magnetic/extracted/verticalField.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Short
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../systematics/magnetic/extracted/shortStrokeL0Diff.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\begin_inset CommandInset include
+LatexCommand input
+filename "../systematics/magnetic/extracted/verticalField.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Short
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../systematics/magnetic/extracted/shortStrokeR0Diff.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
++ minus -
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2\times$
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename "../systematics/magnetic/extracted/verticalField.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Short
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../systematics/magnetic/extracted/shortStrokeLRDiff.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Magnetic systematic test results.
+ The 
+\begin_inset Quotes eld
+\end_inset
+
++ minus -
+\begin_inset Quotes erd
+\end_inset
+
+ is useful as it's an independent blind difference.
+ For scale, the ambient field strength outside the jar is 
+\begin_inset Formula $50\pm10$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+T, as measured by rotating an AK8975 smartphone magnetometer 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "MagnetometerDatasheet"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -18802,7 +19114,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Long-stroke Magnetic Tests
+Short-stroke Magnetic Tests
 \end_layout
 
 \end_inset
@@ -18816,48 +19128,8 @@ Long-stroke Magnetic Tests
 \end_layout
 
 \begin_layout Standard
-Long stroke red on left: 
-\begin_inset CommandInset include
-LatexCommand input
-filename "../systematics/magnetic/extracted/longStrokeL0Diff.tex"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Short stroke red on left: 
-\begin_inset CommandInset include
-LatexCommand input
-filename "../systematics/magnetic/extracted/shortStrokeL0Diff.tex"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Short stroke left-right difference: 
-\begin_inset CommandInset include
-LatexCommand input
-filename "../systematics/magnetic/extracted/shortStrokeLRDiff.tex"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Short stroke red on right: 
-\begin_inset CommandInset include
-LatexCommand input
-filename "../systematics/magnetic/extracted/shortStrokeR0Diff.tex"
-
-\end_inset
-
-
-\end_layout
+\begin_inset Note Note
+status open
 
 \begin_layout Subsection
 Perpendicular horizontal
@@ -18869,6 +19141,14 @@ Perpendicular vertical
 
 \begin_layout Subsection
 Perpendicular parallel
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 \begin_inset Note Note
 status open
 
@@ -19115,20 +19395,21 @@ Rot-Wash
  right (but not top).
  The baseplate thermistor is screwed into the large aluminum baseplate internal
  to the apparatus.
- Spikes prior to day ~608 are from heater-verification tests.
+ Spikes prior to day ~1338 are from heater-verification tests.
  The large step (red above blue) is when the heater on leg 1 was turned
  on.
  The second step (blue above red) has the heater on leg 2 turned on, and
  the heater on leg 1 turned off.
- At the end of that sequence (~day 628), both heaters were turned off.
+ At the end of that sequence (~day 1358), both heaters were turned off.
  The sensors are hand calibrated to match each other and the exterior sensors
- prior to day 608.
+ prior to day 1338.
  Reliability of this calibration is low, but sufficient, as the important
  scaling quantities are the ratios of the heated temperature and gradient
  to those measured without heating.
- The DC discrepancy between internal and external sensors after day 630
- is not understood, but no known instrumental effect accounts for it, so
- it may correspond to a temperature rise within the PlateWash enclosure.
+ The DC discrepancy between internal and external sensors after day 1360
+ is not understood, but no known instrumental effect accounts for it.
+ It may correspond to a temperature rise within the PlateWash enclosure
+ or to a common-mode ADC drift.
 \end_layout
 
 \end_inset
