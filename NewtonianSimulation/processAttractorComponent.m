@@ -31,6 +31,11 @@ for attrCtr = 1:rows(attractors);
 		A = scatterPMMassesYZGrid(A);
 	end
 
+	if( exist("randomAttractorRotate"))
+		randomAngle = rand*2*pi;
+		A = rotatePMArray(A, randomAngle, [1 0 0]);
+	end
+
 	for ctr = 1:rows(t)
 
 		ctr
