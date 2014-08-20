@@ -8682,7 +8682,15 @@ filename "../NewtonianSimulation/SimulationOutput/scanMaxDiff.tex"
 
 \end_inset
 
- for all possible pendulum positions (XXXRC all-possible?).
+ for all possible pendulum positions and azimuthal rotations of the attractor.
+ This estimation was made using the pendulum and attractor scans (see 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Torques-from-surface"
+
+\end_inset
+
+).
  Models that include the smoothness of the torque curve can yield a better
  limit if necessary.
  
@@ -17962,6 +17970,12 @@ reference "fig:PM-Scan-Torque"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+As we do not know the rotational alignment of the attractor scan, we randomly
+ rotate the attractor scan about its symmetry axis before beginning each
+ attractor-stroke of simulations.
 \end_layout
 
 \begin_layout Standard

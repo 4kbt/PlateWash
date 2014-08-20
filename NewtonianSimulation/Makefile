@@ -34,7 +34,7 @@ simulation : $(MLIB) processRun.m $(PARTS)
 
 #This command must precede the $(SDIR)/%dat make, lest confusion result. May change with Make 3.82.
 $(SDIR)/scans/%.dat :  $(MLIB) $(PARTS) defineAttractorTranslation.m processAttractorComponent.m
-	$(OCT) --eval 'outPath = "$(@D)"; attractors = {"$(*F)"}; scatterMasses = 1; P = pendulumPMScan;' processAttractorComponent.m
+	$(OCT) --eval 'outPath = "$(@D)"; attractors = {"$(*F)"}; scatterMasses = 1; randomAttractorRotate = 1; P = pendulumPMScan;' processAttractorComponent.m
 	$(HOMEDIR)/bin/mathify.sh SimulationOutput/*.tex
 
 $(SDIR)/%.dat : $(MLIB) $(PARTS) defineAttractorTranslation.m processAttractorComponent.m
