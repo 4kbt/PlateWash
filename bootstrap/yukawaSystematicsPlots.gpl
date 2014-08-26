@@ -1,7 +1,14 @@
 set macro
 
+#Flag for plotting gravity alone, instead of all systematics.
+gravityFlag = "gravityOnly"
+
 fn = system("echo $GNUPLOTME");
 outfile = fn .".eps"
+
+if ( exists( gravityFlag) ) {
+	outfile = fn ."grav.eps"
+}
 
 load HOMEDIR.'/globalConfig/columnNames.m'
 
@@ -39,10 +46,15 @@ set multiplot layout 4,1
 
 #pl [0.009:102][alMin:alMax]\
 
+NumToPlot = NumSystematics
+if ( exists(gravityFlag) ) {
+	NumToPlot = 1
+}
+
 pl [:][alMin:]\
-	for [ctr=NumSystematics:1:-1] \
+	for [ctr=NumToPlot:1:-1] \
 	fn index 0 u ( @cutFunc ? column(2*ctr): 1/0):( column(2*ctr+1)) w p lc ctr pt 7 ps ptsz,\
-	for [ctr=NumSystematics:1:-1] \
+	for [ctr=NumToPlot:1:-1] \
 	fn index 1 u (column(ctr)):(column(ctr+NumSystematics)) w p lc ctr pt 1 ps ptsz*3
 	
 
@@ -56,14 +68,12 @@ set xlabel 'lambda'
 #pl [0.009:102][alMin:alMax]\
 
 pl [:][alMin:]\
-	for [ctr=NumSystematics:1:-1] \
+	for [ctr=NumToPlot:1:-1] \
 	fn index 0 u (@cutFunc ? column(2*ctr): 1/0):( -column(2*ctr+1)) w p lc ctr pt 7 ps ptsz\
 			title columnhead(1+2*ctr),\
-	for [ctr=NumSystematics:1:-1] \
+	for [ctr=NumToPlot:1:-1] \
 	fn index 1 u (column(ctr)):(-column(ctr+NumSystematics)) w p lc ctr pt 1 ps ptsz*3
 	
-#Titles could be implemented using columnheader?
-
 
 unset logsc x
 #unset logsc y 
