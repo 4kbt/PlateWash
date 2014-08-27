@@ -7,7 +7,7 @@ fn = system("echo $GNUPLOTME");
 outfile = fn .".eps"
 
 if ( exists( gravityFlag) ) {
-	outfile = fn ."grav.eps"
+	outfile = fn .".grav.eps"
 }
 
 load HOMEDIR.'/globalConfig/columnNames.m'
