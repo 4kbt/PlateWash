@@ -8456,8 +8456,8 @@ filename "../NewtonianSimulation/SimulationOutput/jan13Attractorquad.tex"
 
 .
  There is a left-right asymmetry of the curve due to the asymmetry of the
- pendulum, but for a displacement of the pendulum XXXRC horizontally and
- XXXRC vertically, the linear term becomes 
+ pendulum, but for a displacement of the pendulum XXXRC horizontally, the
+ linear term becomes 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../NewtonianSimulation/SimulationOutput/jan13OffsetAttractorlin.tex"
@@ -9287,7 +9287,7 @@ If the pneumatic drive system has a leak into the vacuum chamber, it would
  change the residual gas atmosphere in an attractor-correlated way.
  An upper bound on the magnitude of any pressure change may be obtained
  by running the instrument with the ion pressure gauge turned on.
- (XXXRC provide estimate)
+ (XXXRC provide estimate, or by upper bound from attractor leak)
 \end_layout
 
 \begin_layout Subsubsection
@@ -20154,6 +20154,10 @@ Force Law
 
 \end_layout
 
+\begin_layout Standard
+XXXRC
+\end_layout
+
 \begin_layout Section
 Model Constraints
 \end_layout
@@ -20163,7 +20167,7 @@ Yukawa Potential
 \end_layout
 
 \begin_layout Standard
-XXXRC two-pages
+XXXRC text
 \end_layout
 
 \begin_layout Standard
