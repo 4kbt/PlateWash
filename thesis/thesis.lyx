@@ -8141,7 +8141,195 @@ key "schlamminger2010indirect,dolesi2011brownian"
 
 \end_inset
 
- or some electrical effect XXXRC Jens wants numbers (XXXRC RC or eddy currents?).
+ or by electrical effects.
+\end_layout
+
+\begin_layout Standard
+Proximity-enhanced gas damping between a oscillating plate and a nearby
+ surface is known to produce a retarding force 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "suijlen2009squeeze,schlamminger2010indirect,dolesi2011brownian"
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+F\approx-\frac{AP}{d}\frac{\omega^{2}\tau^{2}}{1+\omega^{2}\tau^{2}},
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $P$
+\end_inset
+
+ is the pressure, 
+\begin_inset Formula $A$
+\end_inset
+
+ the region of closest proximity between the surfaces, 
+\begin_inset Formula $d$
+\end_inset
+
+ the separation between them, 
+\begin_inset Formula $\omega$
+\end_inset
+
+ the oscillator angular frequency, and 
+\begin_inset Formula $\tau$
+\end_inset
+
+ the diffusion time for gas to leave the gap.
+ This approximation buries the complexity of the problem into the estimation
+ of 
+\begin_inset Formula $\tau$
+\end_inset
+
+.
+ While the best-known approach is Monte Carlo, a rough approximation for
+ the relevant circular geometry can be found 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "dolesi2011brownian"
+
+\end_inset
+
+ using 
+\begin_inset Formula 
+\[
+\tau=\sqrt{\frac{\pi}{2}}\frac{R^{2}}{dv_{T}\log\left(1+(R/d)^{2}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where the thermal velocity 
+\begin_inset Formula $v_{T}=\sqrt{k_{B}T/m}$
+\end_inset
+
+, 
+\begin_inset Formula $R$
+\end_inset
+
+ is the attractor radius, 
+\begin_inset Formula $d$
+\end_inset
+
+ is the attractor/foil separation, and 
+\begin_inset Formula $m$
+\end_inset
+
+ is the ambient gas molecule mass.
+ 
+\end_layout
+
+\begin_layout Standard
+XXXRC gas numbers
+\end_layout
+
+\begin_layout Standard
+Perhaps the most-likely electrical effect is the varying capacitance between
+ the attractor and foil; for a fixed voltage 
+\begin_inset Formula $V_{0}$
+\end_inset
+
+ between plates of area 
+\begin_inset Formula $A$
+\end_inset
+
+ spaced by a distance 
+\begin_inset Formula $d_{0}$
+\end_inset
+
+ and a small vibrational amplitude 
+\begin_inset Formula $B$
+\end_inset
+
+ at frequency 
+\begin_inset Formula $f$
+\end_inset
+
+, the power dissipated in an electrical resistance 
+\begin_inset Formula $R$
+\end_inset
+
+ between them is proportional to 
+\begin_inset Formula $1/d^{4}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+I\approx-\frac{V_{0}\epsilon_{0}A}{d^{2}}fB\Rightarrow P=I^{2}R=\frac{V_{0}^{2}\epsilon_{0}^{2}A^{2}}{d^{4}}f^{2}B^{2}R
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If the foil has thickness 
+\begin_inset Formula $t$
+\end_inset
+
+, density 
+\begin_inset Formula $\rho$
+\end_inset
+
+, and oscillates at a resonant frequency 
+\begin_inset Formula $f_{0}$
+\end_inset
+
+ then the foil quality factor 
+\begin_inset Formula $Q$
+\end_inset
+
+ is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Q=2\pi f_{0}\times\frac{\mbox{stored energy}}{\mbox{power loss}}=2\pi f_{0}\frac{\frac{1}{2}\rho At(2\pi f_{0}B)^{2}}{\frac{V_{0}^{2}\epsilon_{0}^{2}A^{2}}{d^{4}}B^{2}f_{0}^{2}R}=4\pi^{3}f_{0}\frac{\rho td^{4}}{V_{0}^{2}\epsilon_{0}^{2}AR}\sim10^{30\pm2}\frac{d^{4}}{R}\mbox{ in SI units}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We should expect this electrical loss to become larger than the intrinsic
+ loss of the foil when the attractor is within ~10
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m of the foil.
+ This estimate makes the shaky assumption of a low-impedance voltage source
+ in the contact potential.
+ If the contact potential cannot sustain 
+\begin_inset Formula $V_{0}$
+\end_inset
+
+, the loss could be much less.
  
 \end_layout
 
@@ -8167,7 +8355,21 @@ From the interferometer, we can see that the attractor, at the end of its
  spindles, vibrates with 60 Hz and its harmonics considerably more than
  the foil alone.
  The attractor must also have its own seismically driven vibrational modes.
- XXXRC we must place a limit on this from on-line ifo traces.
+ It is possible to place limits on the appearance of both kinds of modes
+ using the foil interferometer; the raw data needed to do so were collected.
+ The software needed to analyze these data will take too long to develop
+ for inclusion in this thesis.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMA1 - do it
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
@@ -8731,9 +8933,23 @@ The apparatus may have attractor-related tilt for a number of reasons, including
  The flexure was mounted from its center in order to minimize any deformation
  of the apparatus as a whole.
  The deflection is expected to be both small and linear, limiting the impact
- on the measurement.
- We initially estimated the effect of tilt by considering only center of
- mass motion, finding ~XXXRC N-m
+ on the measurement; we do not anticipate that non-linear tilt feedthrough,
+ particularly nonlinearities that should have anything to do with attractor-foil
+ proximity, will be a major concern.
+ It is a challenge to study this effect experimentally, as the response
+ to small injected tilts will be quite linear, and the response to large
+ injected tilts may be inapplicable.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMA1 study it!
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
@@ -9435,14 +9651,22 @@ name "sub:Vertical-position"
 \begin_layout Standard
 The vertical position of the pendulum was determined using a height-gauge
  referenced from the optical bench.
- Before installing the foil, the difference in height between the top of
- the attractor and the top of the pendulum was set to be XXXRC, centering
- the pendulum vertically to within XXXRC
+ Before installing the foil, the pendulum was centered vertically on the
+ attractor, to a precision conservatively better than 250
 \begin_inset space ~
 \end_inset
 
-mm.
- See Figure 
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMA1 Rigorously find the number See Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Pendulum-vertical-positioning"
@@ -9453,14 +9677,14 @@ reference "fig:Pendulum-vertical-positioning"
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
-XXXRC
+XXXMA1
 \end_layout
 
 \begin_layout Plain Layout
@@ -9474,6 +9698,11 @@ name "fig:Pendulum-vertical-positioning"
 \end_inset
 
 Pendulum vertical positioning photos
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset

@@ -7,6 +7,7 @@ do
 	sed  -i '1,9{/^$/d}' $PLOTME 
 
 	gnuplot -e "HOMEDIR = \"$1\"" yukawaSystematicsPlots.gpl
+	gnuplot -e "HOMEDIR = \"$1\"; gravityOnly = 1" yukawaSystematicsPlots.gpl
 done
 
 for  PLOTME in `ls output/*.plt`
