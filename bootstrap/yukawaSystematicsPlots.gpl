@@ -42,6 +42,7 @@ ptsz = 0.7
 set key noauto
 set format x ""
 set ylabel 'alpha'
+set format y "10^{%T}"
 set multiplot layout 4,1
 
 #pl [0.009:102][alMin:alMax]\
@@ -62,7 +63,7 @@ unset title
 
 set yrange [:] reverse
 set key below
-set format x "% g"
+set format x "10^{%T}"
 set ylabel 'negative alpha'
 set xlabel 'lambda'
 #pl [0.009:102][alMin:alMax]\
@@ -75,6 +76,8 @@ pl [:][alMin:]\
 	fn index 1 u (column(ctr)):(-column(ctr+NumSystematics)) w p lc ctr pt 1 ps ptsz*3
 	
 
+set format x "% g"
+set format y "% g"
 unset logsc x
 #unset logsc y 
 set yrange [:] noreverse
