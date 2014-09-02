@@ -100,9 +100,10 @@ pl \
 	
 set logsc y 
 set ylabel 'chi squared/NDF'
-set format y "% g"
 pl \
-	fn index 0 u (column(iterCol) > iterMin ? column(chiCol)/column(NDF) : 1/0) w p pt 7 ps ptsz lc 3,\
+	fn index 0 u (column(chiCol)/column(NDF)) w p pt 2 ps ptsz lc -1 tit 'all data',\
+	fn index 0 u (column(iterCol) > iterMin ? column(chiCol)/column(NDF) : 1/0) w p pt 1 ps ptsz lc 1 tit 'after fit iteration cut',\
+	fn index 0 u ( @cutFunc ? column(chiCol)/column(NDF) : 1/0) w p pt 7 ps ptsz lc 3 tit 'after all cuts',\
 	fn index 0 u (chiMin) w l lt 1 lw 2 tit 'min',\
 	fn index 0 u (chiCut) w l lt 3 lw 2 tit 'max'
 
