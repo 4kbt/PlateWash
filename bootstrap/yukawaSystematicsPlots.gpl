@@ -96,11 +96,19 @@ set xlabel 'fit #'
 
 slopeCal = XSUnits / 1e-15 * 1e-3;
 
+
+#stats doesn't work with logsc
+unset logsc y
+#the multiplication transcends trouble with the columnheader strings
+stats fn index 0  u (1*$1) name "RECORDS"
+recWidth = RECORDS_records/2;
+set logsc y
+
 pl \
 	fn index 0 u ( @cutFunc ?  $1 * slopeCal : 1/0) w p pt 7 ps ptsz lc 1 tit 'positive',\
 	fn index 0 u ( @cutFunc ? -$1 * slopeCal : 1/0) w p pt 7 ps ptsz lc 3 tit 'negative',\
-	fn index 1 u (column(NumSystematics*2+1)  * slopeCal ) w p pt 1 ps ptsz*3 lc 1 lw 2 tit 'injected signal, if positive',\
-	fn index 1 u (-column(NumSystematics*2+1) * slopeCal ) w p pt 1 ps ptsz*3 lc 3 lw 2 tit 'injected signal, if negative'
+	fn index 1 u (recWidth):( column(NumSystematics*2+1)  * slopeCal ):(recWidth):(0) w xyerrorlines pt 1 ps 0 lc 1 lw 2 tit 'injected signal, if positive',\
+	fn index 1 u (recWidth):(-column(NumSystematics*2+1)  * slopeCal ):(recWidth):(0) w xyerrorlines pt 1 ps 0 lc 3 lw 2 tit 'injected signal, if negative'
 	
 	
 set logsc y 
