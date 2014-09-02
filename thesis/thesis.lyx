@@ -14977,8 +14977,15 @@ ward to bootstrap the data, fit, bootstrap again, fit, etc...
 \end_layout
 
 \begin_layout Subsection
-Goodness-of-fit, 
+Fitting, 
 \begin_inset Formula $\chi^{2}$
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Fitting"
+
 \end_inset
 
 
@@ -18246,9 +18253,11 @@ Torques due to the leading
 \begin_inset Formula $\mu$
 \end_inset
 
-m of the attractor and pendulum, computed directly from the laser-microscope
- scans of the attractor and pendulum surfaces.
- XXXRC Alignment/Randomly-align?
+m of the attractor and pendulum, computed from the laser-microscope scans
+ of the attractor and pendulum surfaces.
+ Each line of computed points corresponds to an independent sub-grid randomizati
+on of local component masses (see text) and random rotation of the attractor
+ with respect to the attractor's primary axis.
 \end_layout
 
 \end_inset
@@ -20167,13 +20176,101 @@ Yukawa Potential
 \end_layout
 
 \begin_layout Standard
-XXXRC text
+To fit for Yukawa interactions, we follow the recipe outlined in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Fitting"
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Standard
+The upper two fields in the following figures will be most familiar to those
+ versed in inverse-square law tests.
+ Along the horizontal axis is the putative range of the interaction.
+ Along the vertical axis is its strength relative to gravity.
+ Each circular point in the plot is a best-fit point from the bootstrapped
+ fit.
+ Each diagonal cross point is the location of a fit's random seed.
+ Vertical/horizontal cross points are the location of injected signals,
+ to show that we can recover Yukawa signals.
+ For perspective relative to the best results in the field, the exclusion
+ limits of Kapner and Cook 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Kapner2005,Cook2013"
+
+\end_inset
+
+ are shown.
+ 
+\end_layout
+
+\begin_layout Standard
+Next is a plot of the best fit points for the linear slope, 
+\begin_inset Formula $C$
+\end_inset
+
+ in equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:PrototypeFitFunction"
+
+\end_inset
+
+.
+ Different colors are used to show positive and negative slopes on the logarithm
+ic plot.
+\end_layout
+
+\begin_layout Standard
+Finally, we show the reduced 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+ for each fit.
+ In diagonal crosses, we show all fits.
+ As the fitter has a tendency to be trapped in local minima immediately
+ after initialization, we drop any points that converge in fewer than 15
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMI automate me!
+\end_layout
+
+\end_inset
+
+ iterations of the fit.
+ Points surviving that cut are shown in horizontal/vertical crosses.
+ Points surviving all cuts, including minimum and maximum chi-squared (horizonta
+l lines) are shown as circles.
+ That the majority of fits have reduced-
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+ much better than 1 is due to the overfitting inherent to the use of conservativ
+e systematic uncertainties.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand input
 filename "../bootstrap/output/makeSymFigure.tex"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
