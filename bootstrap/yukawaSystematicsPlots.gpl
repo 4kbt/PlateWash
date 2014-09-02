@@ -91,20 +91,23 @@ set format x "% g"
 unset logsc x
 #unset logsc y 
 set yrange [:] noreverse
-set ylabel 'slope'
+set ylabel 'slope (fN/mm)'
 set xlabel 'fit #'
+
+slopeCal = XSUnits / 1e-15 * 1e-3;
+
 pl \
-	fn index 0 u ( @cutFunc ?  $1 * XSUnits / 1e-15 : 1/0) w p pt 7 ps ptsz lc 1 tit 'positive',\
-	fn index 0 u ( @cutFunc ? -$1 * XSUnits / 1e-15: 1/0) w p pt 7 ps ptsz lc 3 tit 'negative',\
-	fn index 1 u (column(NumSystematics*2+1) * XSUnits / 1e-15) w p pt 1 ps ptsz*3 lc 1 lw 2 tit 'injected signal, if positive',\
-	fn index 1 u (-column(NumSystematics*2+1) *XSUnits / 1e-15) w p pt 1 ps ptsz*3 lc 3 lw 2 tit 'injected signal, if negative'
+	fn index 0 u ( @cutFunc ?  $1 * slopeCal : 1/0) w p pt 7 ps ptsz lc 1 tit 'positive',\
+	fn index 0 u ( @cutFunc ? -$1 * slopeCal : 1/0) w p pt 7 ps ptsz lc 3 tit 'negative',\
+	fn index 1 u (column(NumSystematics*2+1)  * slopeCal ) w p pt 1 ps ptsz*3 lc 1 lw 2 tit 'injected signal, if positive',\
+	fn index 1 u (-column(NumSystematics*2+1) * slopeCal ) w p pt 1 ps ptsz*3 lc 3 lw 2 tit 'injected signal, if negative'
 	
 	
 set logsc y 
 set ylabel 'chi squared/NDF'
 pl \
 	fn index 0 u (column(chiCol)/column(NDF)) w p pt 2 ps ptsz lc -1 tit 'all data',\
-	fn index 0 u (column(iterCol) > iterMin ? column(chiCol)/column(NDF) : 1/0) w p pt 1 ps ptsz lc 1 tit 'after fit iteration cut',\
+	fn index 0 u (column(iterCol) > iterMin ? column(chiCol)/column(NDF) : 1/0) w p pt 1 ps ptsz lc 1 tit 'after fit-iteration cut',\
 	fn index 0 u ( @cutFunc ? column(chiCol)/column(NDF) : 1/0) w p pt 7 ps ptsz lc 3 tit 'after all cuts',\
 	fn index 0 u (chiMin) w l lt 1 lw 2 tit 'min',\
 	fn index 0 u (chiCut) w l lt 3 lw 2 tit 'max'
