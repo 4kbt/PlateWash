@@ -7,5 +7,8 @@ set ylabel 'torque (fN-m)'
 
 set key noauto
 
+pendOff = system( HOMEDIR."bin/texSigToNum.sh ".HOMEDIR."extracted/pendulumBodyThicknessNoSI.tex")/2.0*1e6
+
+
 pl\
-	'SimulationOutput/scans/scanMerge.dat' u ($5*1e6):($13*1e15) w p pt 7 lt 3
+	'SimulationOutput/scans/scanMerge.dat' u ($5*1e6 - pendOff):($13*1e15) w p pt 7 lt 3
