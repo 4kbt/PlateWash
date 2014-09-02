@@ -12,6 +12,9 @@ if ( exists( gravityFlag) ) {
 
 load HOMEDIR.'/globalConfig/columnNames.m'
 
+cookFile = HOMEDIR.'/thesis/plots/ISL/cookData.dat'
+kapFile  = HOMEDIR.'/thesis/plots/ISL/kapner95limit.dat'
+
 set term postscript enhanced solid color size 9,15
 set output outfile 
 
@@ -53,8 +56,11 @@ if ( exists(gravityFlag) ) {
 }
 
 pl [:][alMin:]\
+	kapFile w l lt -1  tit 'Kapner et al.',\
+	cookFile w l lt 0 tit "Cook thesis",\
 	for [ctr=NumToPlot:1:-1] \
-	fn index 0 u ( @cutFunc ? column(2*ctr): 1/0):( column(2*ctr+1)) w p lc ctr pt 7 ps ptsz,\
+	fn index 0 u ( @cutFunc ? column(2*ctr) * XLUnits : 1/0):( column(2*ctr+1)) w p lc ctr pt 7 ps ptsz,\
+	fn index 0 u ( @cutFunc ? column(2*ctr+2*NumSystematics+5) * XLUnits : 1/0):( column(2*ctr+1+2*NumSystematics+5 )) w p lc -1 pt 1 ps 2,\
 	for [ctr=NumToPlot:1:-1] \
 	fn index 1 u (column(ctr)):(column(ctr+NumSystematics)) w p lc ctr pt 1 ps ptsz*3
 	
@@ -62,36 +68,39 @@ pl [:][alMin:]\
 unset title
 
 set yrange [:] reverse
-set key below
+set key below noauto
 set format x "10^{%T}"
 set ylabel 'negative alpha'
-set xlabel 'lambda'
+set xlabel 'lambda (m)'
 #pl [0.009:102][alMin:alMax]\
 
 pl [:][alMin:]\
+	kapFile  w l lt -1  ,\
+	cookFile w l lt 0   ,\
 	for [ctr=NumToPlot:1:-1] \
-	fn index 0 u (@cutFunc ? column(2*ctr): 1/0):( -column(2*ctr+1)) w p lc ctr pt 7 ps ptsz\
+	fn index 0 u (@cutFunc ? column(2*ctr) * XLUnits: 1/0):( -column(2*ctr+1)) w p lc ctr pt 7 ps ptsz\
 			title columnhead(1+2*ctr),\
+	fn index 0 u ( @cutFunc ? column(2*ctr+2*NumSystematics+5) * XLUnits: 1/0):( -column(2*ctr+1+2*NumSystematics+5 )) w p lc -1 pt 1 ps 2,\
 	for [ctr=NumToPlot:1:-1] \
 	fn index 1 u (column(ctr)):(-column(ctr+NumSystematics)) w p lc ctr pt 1 ps ptsz*3
 	
 
 set format x "% g"
-set format y "% g"
 unset logsc x
 #unset logsc y 
 set yrange [:] noreverse
 set ylabel 'slope'
 set xlabel 'fit #'
 pl \
-	fn index 0 u ( @cutFunc ?  $1 : 1/0) w p pt 7 ps ptsz lc 1 tit 'positive',\
-	fn index 0 u ( @cutFunc ? -$1 : 1/0) w p pt 7 ps ptsz lc 3 tit 'negative',\
-	fn index 1 u (column(NumSystematics*2+1)) w p pt 1 ps ptsz*3 lc 1 lw 2 tit 'injected signal, if positive',\
-	fn index 1 u (-column(NumSystematics*2+1)) w p pt 1 ps ptsz*3 lc 3 lw 2 tit 'injected signal, if negative'
+	fn index 0 u ( @cutFunc ?  $1 * XSUnits / 1e-15 : 1/0) w p pt 7 ps ptsz lc 1 tit 'positive',\
+	fn index 0 u ( @cutFunc ? -$1 * XSUnits / 1e-15: 1/0) w p pt 7 ps ptsz lc 3 tit 'negative',\
+	fn index 1 u (column(NumSystematics*2+1) * XSUnits / 1e-15) w p pt 1 ps ptsz*3 lc 1 lw 2 tit 'injected signal, if positive',\
+	fn index 1 u (-column(NumSystematics*2+1) *XSUnits / 1e-15) w p pt 1 ps ptsz*3 lc 3 lw 2 tit 'injected signal, if negative'
 	
 	
 set logsc y 
 set ylabel 'chi squared/NDF'
+set format y "% g"
 pl \
 	fn index 0 u (column(iterCol) > iterMin ? column(chiCol)/column(NDF) : 1/0) w p pt 7 ps ptsz lc 3,\
 	fn index 0 u (chiMin) w l lt 1 lw 2 tit 'min',\
