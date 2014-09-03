@@ -65,11 +65,15 @@ results/run3147pM3FilterMerge.dat : $(DEPLIST) pLDAFilterMerge.sh $(HOMEDIR)/bin
 	wc -l results/run3147pM3FilterMerge.dat | awk '{print $$1}' > ../extracted/numberOfCuts.tex
 	$(OCT) --eval "run3147FixedParameters"
 	$(HOMEDIR)/bin/mathify.sh $(HOMEDIR)/extracted/*.tex
-	cat $(HOMEDIR)/extracted/calibCutLength.tex\
+	cat $(HOMEDIR)/extracted/lockAve.tex\
+	    $(HOMEDIR)/runAnalysis/newline.txt\
+	    $(HOMEDIR)/extracted/stepPeriod.tex\
+	    $(HOMEDIR)/runAnalysis/newline.txt\
 	    $(HOMEDIR)/extracted/TheoSampleTimeNoSI.tex\
+	    $(HOMEDIR)/runAnalysis/newline.txt\
 	    $(HOMEDIR)/extracted/numberOfCuts.tex |\
-	     sed 's/\$$/\t/' | tr -d '\n' | \
-	     awk '{print $$1*$$2*$$3}' > $(HOMEDIR)/extracted/totalAcceptedSeconds.tex
+	     sed 's/\$$/\t/' | tr -s '\n' | tr '\n' '\t' \
+	     awk '{print $$1*$$2*$$3*$$4}' > $(HOMEDIR)/extracted/totalAcceptedSeconds.tex
 
 
 #IFO Analysis
