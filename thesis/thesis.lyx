@@ -9420,28 +9420,83 @@ key "CRC2000"
 Typical Behavior
 \end_layout
 
-\begin_layout Subsection
-Torque Trace
+\begin_layout Standard
+The first eight thousand seconds of torque and attractor data are plotted
+ in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-first-8000"
+
+\end_inset
+
+.
+ This represents about 0.1% of the total data used in this analysis.
+ They are presented without any blinding to give the reader a clear impression
+ of the data.
+ The torque peak at 6
+\begin_inset space ~
+\end_inset
+
+mHz is the gravitational calibration tone.
+ The torque spectral reponse above the pendulum's 13
+\begin_inset space ~
+\end_inset
+
+mHz resonance is under-represented in these plots, as the torque plots are
+ derived from the autocollimator and do not correct for the pendulum response
+ function (see  
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Choosing-a-science"
+
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Standard
-XXXRC
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/charlie/homeVersion/Eotwash/runAnalysis/supportingPlots/run3147typical.eps
+	width 70page%
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Subsection
-Noise Plot
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+The first 8000 seconds of science data, unblinded.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:The-first-8000"
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
-XXXRC
+\end_inset
+
+
 \end_layout
 
-\begin_layout Subsection
-Flexure motion
+\begin_layout Plain Layout
+
 \end_layout
 
-\begin_layout Standard
-XXXRC
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
@@ -11250,6 +11305,13 @@ filename "../extracted/TheoSampleTime.tex"
 
 \begin_layout Subsection
 Choosing a science signal
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Choosing-a-science"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

@@ -1,0 +1,31 @@
+set term postscript enhanced solid color eps size 6,10 
+set output 'run3147typical.eps'
+
+set xlabel 'time (d)'
+set ylabel 'torque (fN-m)'
+
+
+set key noauto
+
+set multiplot layout 4,1
+
+set title 'Pendulum Torque (as-measured from angle-error)'
+pl 'run3147typicalTorque.dat' u ($1/86400):($2*1e15) w l lt 3
+
+set title 'Attractor Position'
+set ylabel 'attractor position ({/Symbol m}m)'
+
+pl 'run3147typicalAttractor.dat' u ($1/86400):($2*1e6) w l lt -1
+
+
+set format y '10^{%T}'
+set title 'Pendulum Torque Noise (as-measured from angle-error noise)'
+set logsc
+set xlabel 'frequency (mHz)'
+set ylabel 'autocollimator-torque spectral amplitude (fN-m/rtHz)'
+pl 'run3147typicalNoise.dat' u ($1*1000):(sqrt($2)*1e15) w l lt 3
+
+set title 'Attractor Position Spectrum'
+set ylabel 'attractor position spectral amplitude ({/Symbol}m/rtHz})'
+pl 'run3147typicalNoiseAttractor.dat' u ($1*1000):(sqrt($2)*1e6) w l lt -1
+unset multiplot
