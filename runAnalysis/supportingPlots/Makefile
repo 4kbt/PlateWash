@@ -14,8 +14,9 @@ NOT47:= run3147NoiseOverTime
 AOT47:= run3147AttractorOverTime
 ALB47:= run3147attractorLeakBack
 FBV47:= run3147feedbackVoltage
+TYP47:= run3147typical
 
-all: $(FFR).eps $(FILT).eps $(WIND).eps $(LAG20).eps $(LAG24).eps $(LAG69).eps $(TOR67).eps $(NOT47).eps $(ALB47).eps $(AOT47).eps $(FBV47).eps
+all: $(FFR).eps $(FILT).eps $(WIND).eps $(LAG20).eps $(LAG24).eps $(LAG69).eps $(TOR67).eps $(NOT47).eps $(ALB47).eps $(AOT47).eps $(FBV47).eps $(TYP47).eps
 
 #Filter transfer functions
 $(FFR).eps: $(FFR).m $(FFR).gpl
@@ -64,6 +65,13 @@ $(FBV47).eps : $(FBV47).gpl $(HOMEDIR)/glib/ $(HOMEDIR)/globalConfig/
 $(ALB47).eps : $(ALB47).m $(ALB47).gpl
 	$(OCT) $(ALB47).m
 	$(GNU) $(ALB47).gpl
+
+$(TYP47)Torque.dat : $(TYP47).m
+	$(OCT) $(TYP47).m 
+
+
+$(TYP47).eps : $(TYP47)Torque.dat $(TYP47).gpl
+	$(GNU) $(TYP47).gpl
 
 clean : 
 	-rm *.eps
