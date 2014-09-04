@@ -9190,6 +9190,13 @@ Attractor velocity, in 1
 \end_inset
 
 s bins
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Attractor-velocity,-in"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -9316,9 +9323,70 @@ Pneumatic Drive Leak
 \begin_layout Standard
 If the pneumatic drive system has a leak into the vacuum chamber, it would
  change the residual gas atmosphere in an attractor-correlated way.
- An upper bound on the magnitude of any pressure change may be obtained
- by running the instrument with the ion pressure gauge turned on.
- (XXXRC provide estimate, or by upper bound from attractor leak)
+ While the ion vacuum gauge was turned off during the experiment to preserve
+ low-noise performance, we can get an indirect estimate of any potential
+ leak using the attractor-leakback data (Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Attractor-velocity,-in"
+
+\end_inset
+
+).
+ The 2.5
+\begin_inset space ~
+\end_inset
+
+cm diameter bellows leaked back at 2
+\begin_inset space ~
+\end_inset
+
+nm/s.
+ The internal pressure in the bellows was 1-2 atmospheres, so the maximum
+ pressure rise from an attractor leak into the approximately cubic-meter
+ vacuum chamber was 
+\begin_inset Formula $\sim1\times10^{-9}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Torr/s, which should be compared with the base pressure of more than 
+\begin_inset Formula $1\times10^{-7}$
+\end_inset
+
+ Torr.
+ A variation of this size is well below the 
+\begin_inset Formula $\sim10\%$
+\end_inset
+
+ resolution of our ion gauge.
+ While it is not impossible for a 1% pressure variation to couple to the
+ pendulum (
+\begin_inset Formula $10^{-9}$
+\end_inset
+
+ Torr applied to only one half of the pendulum would yield a torque of 
+\begin_inset Formula $10^{-12}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+N-m), the indirect path from bellows/gas system to the pendulum and the
+ pendulum's approximate symmetry (spoiled by the pendulum tip, of course)
+ should act to suppress this effect.
+ 
+\end_layout
+
+\begin_layout Standard
+We have no way of varying the bellows pressure without moving the attractor,
+ so experimental limits are hard to come by.
+ Displacing the pendulum farther from the foil could reduce any squeeze-film
+ related effects, but it would simultaneously change many other systematic
+ couplings, making the test inconclusive.
 \end_layout
 
 \begin_layout Subsubsection
@@ -13073,20 +13141,10 @@ Pendulum, in PD feedback, coherently-averaged response to periodic magnetic
  torque.
  Magnet states are as-driven by the attractor control DAQ, no phase lag;
  scatter driven by sample/clock beating.
- The measured data are filtered with a 2
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXRC WTF?!
+ The measured data are filtered with a 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../extracted/filterHigh3220.tex"
-
-\end_inset
-
-
-\end_layout
 
 \end_inset
 
