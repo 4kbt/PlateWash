@@ -8966,8 +8966,39 @@ One interesting systematic effect that can exhibit considerable nonlinearity
  If the double-compensating mechanism of the flexure experiences nonlinear
  stress near the (artificially-placed with mechanical stops) end of its
  travel, nonlinear stresses might be communicated to the baseplate.
- By looking at the nonlinearity of the vertical axis of the pendulum output,
- we can constrain the nonlinearity to XXXRC, yielding a torque of XXXRC.
+ We designed the flexure-holding fixture to suspend the flexure from near
+ its center, minimizing the opportunity for unexpected stresses to affect
+ the rest of the apparatus.
+\end_layout
+
+\begin_layout Standard
+There's also an opportunity for the simple change in moment/torque due to
+ the cantilevered attractor to provide a torque.
+ A simple elasticity-theory estimate of the bending of the 1.25
+\begin_inset Quotes erd
+\end_inset
+
+-thick, ~27
+\begin_inset Quotes erd
+\end_inset
+
+-diameter aluminum plate due to the placement of a kilogram mass in the
+ center of the baseplate gives a 10
+\begin_inset space ~
+\end_inset
+
+nm total displacement at the center.
+ The attractor assembly weighs less than half a kilogram and displaces by
+ less than a millimeter over the entire range of travel.
+ In any realistic scenario we've considered, the 
+\emph on
+linear
+\emph default
+ component of the pendulum's tilt-driven horizontal displacement should
+ be smaller than the nanometer-scale signal we see in the foil interferometer.
+ Any residual nonlinear variation should be much smaller.
+ Without any quantitative way to estimate the change in pendulum-foil separation
+, we must rest on these estimates.
 \end_layout
 
 \begin_layout Subsubsection
