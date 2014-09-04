@@ -5857,6 +5857,13 @@ Within this range, we use an approximation for the sinusoid's slope,
 
 \begin_layout Subsubsection
 Noise
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Interferometer-noise"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
@@ -7110,6 +7117,13 @@ Experimentally, all of our group's short-range experiments have seen increased
 
 \begin_layout Subsubsection
 Contact potential noise
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Contact-potential-noise"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -7632,6 +7646,13 @@ Wind and torque noise
 
 \begin_layout Paragraph
 Connection to contact potential
+\begin_inset CommandInset label
+LatexCommand label
+name "par:Connection-to-contact"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -7703,6 +7724,13 @@ Evidence for a
 
 pendulum battery
 \begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Evidence-for-a-pendulum-battery"
+
 \end_inset
 
 , taken with an older pendulum and foil.
@@ -20237,6 +20265,13 @@ Interferometer fit.
 
 \begin_layout Section
 Subtraction
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Subtraction-Foil"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -20841,13 +20876,34 @@ Contact potential
 \end_layout
 
 \begin_layout Standard
-As noted in XXXMA, XXXMA, and XXXMA, our inability to set the contact voltage
- was the biggest single blocker for this measurement.
+As noted in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Contact-potential-noise"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "par:Connection-to-contact"
+
+\end_inset
+
+, and elsewhere, our inability to set the contact voltage was the biggest
+ single blocker for this measurement.
  The elevated electrical potential difference between the pendulum and the
  foil is probably responsible for the level of swing coupling we see, limits
  the distance of closest approach between the pendulum and the foil, and
  surely enhanced the pendulum/foil coupling that forced us to make a systematic
- correction XXXMA.
+ correction (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Subtraction-Foil"
+
+\end_inset
+
+).
  In addition, the presence of a possible foil/attractor contact potential
  may have led to the short-range attractor foil coupling that makes the
  pendulum/foil systematic correction so daunting.
@@ -20868,9 +20924,16 @@ Pendulum Battery
 \end_layout
 
 \begin_layout Standard
-As we explained earlier (XXXMA), it is quite probable that the pendulum
- had its own trouble with an irreducible on-board battery, formed from the
- contact of the dissimilar metals of the pendulum body and the dense inlays.
+As we explained earlier (Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Evidence-for-a-pendulum-battery"
+
+\end_inset
+
+), it is quite probable that the pendulum had its own trouble with an irreducibl
+e on-board battery, formed from the contact of the dissimilar metals of
+ the pendulum body and the dense inlays.
  As measured, this voltage may have contributed ~100
 \begin_inset space ~
 \end_inset
@@ -20913,7 +20976,14 @@ Pendulum flatness
 \begin_layout Standard
 Our pendulum was a prototype, pressed into service when our superior pendulum
  failed.
- As seen in XXXMA, the pendulum could be flatter.
+ As seen in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:PendulumScans"
+
+\end_inset
+
+, a new pendulum could be made flatter with known fabrication techniques.
  We can surely get improved metrology, decreased separation, and improved
  active area with a flatter pendulum.
  A refined pendulum is likely to be implemented in parallel with the pendulum-ba
@@ -20939,8 +21009,15 @@ The autocollimator used in this iteration of the experiment was a coarse
 \end_layout
 
 \begin_layout Standard
-Furthermore, the encoder systematic (XXXMA) most-likely emerged through
- electrical crosstalk between the autocollimator leads and the encoder.
+Furthermore, the encoder systematic (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Encoder-narrative"
+
+\end_inset
+
+) most-likely emerged through electrical crosstalk between the autocollimator
+ leads and the encoder.
  At present the leads that run between the photodiode and the autocollimator
  preamplifiers are 5-10
 \begin_inset space ~
@@ -20969,14 +21046,27 @@ Our understanding of exactly what physical mechanisim increases the noise
  Another is that adsorbed materials on the foil surface may be slowly rearrangin
 g themselves, causing fluctuations of the effective electrostatic interactions
  between pendulum and foil.
- If either of these two are the culprit, as suggested by XXXMA, it's possible
- that retracting the pendulum away from the foil and illuminating the active
- surfaces with ultraviolet light might improve the noise.
+ If either of these two are the culprit, as suggested by 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "PhysRevLett.109.103001WinelandGasNoise"
+
+\end_inset
+
+, it's possible that retracting the pendulum away from the foil and illuminating
+ the active surfaces with ultraviolet light might improve the noise.
  Through photoelectric-like effects, UV light is known to significantly
  accelerate outgassing rates and expel adsorped surface layers.
  Trying out a UV light-emitting diode, as we've already used in our LISA
- (XXXMA) experiment, would be straightforward, and might yield an improvement
- in noise.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "pollack2010charge"
+
+\end_inset
+
+ experiment, would be straightforward, and might yield an improvement in
+ noise.
 \end_layout
 
 \begin_layout Subsubsection
@@ -20984,8 +21074,14 @@ Interferometer improvements
 \end_layout
 
 \begin_layout Standard
-As described in XXXMA, the interferometer may be limited by polarization-related
- noise.
+As described in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Interferometer-noise"
+
+\end_inset
+
+, the interferometer may be limited by polarization-related noise.
  If we were to switch to entirely polarization-maintaining fiber, it's possible
  that the pickup and drift we see could be reduced.
  
