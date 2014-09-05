@@ -72,7 +72,7 @@ results/run3147pM3FilterMerge.dat : $(DEPLIST) pLDAFilterMerge.sh $(HOMEDIR)/bin
 	    $(HOMEDIR)/extracted/TheoSampleTimeNoSI.tex\
 	    $(HOMEDIR)/runAnalysis/newline.txt\
 	    $(HOMEDIR)/extracted/numberOfCuts.tex |\
-	     sed 's/\$$/\t/' | tr -s '\n' | tr '\n' '\t' \
+	     sed 's/\$$/\t/' | tr -s '\n' | tr '\n' '\t' | \
 	     awk '{print $$1*$$2*$$3*$$4}' > $(HOMEDIR)/extracted/totalAcceptedSeconds.tex
 
 
