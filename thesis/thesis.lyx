@@ -5857,6 +5857,13 @@ Within this range, we use an approximation for the sinusoid's slope,
 
 \begin_layout Subsubsection
 Noise
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Interferometer-noise"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
@@ -7110,6 +7117,13 @@ Experimentally, all of our group's short-range experiments have seen increased
 
 \begin_layout Subsubsection
 Contact potential noise
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Contact-potential-noise"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -7632,6 +7646,13 @@ Wind and torque noise
 
 \begin_layout Paragraph
 Connection to contact potential
+\begin_inset CommandInset label
+LatexCommand label
+name "par:Connection-to-contact"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -7703,6 +7724,13 @@ Evidence for a
 
 pendulum battery
 \begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Evidence-for-a-pendulum-battery"
+
 \end_inset
 
 , taken with an older pendulum and foil.
@@ -8966,8 +8994,39 @@ One interesting systematic effect that can exhibit considerable nonlinearity
  If the double-compensating mechanism of the flexure experiences nonlinear
  stress near the (artificially-placed with mechanical stops) end of its
  travel, nonlinear stresses might be communicated to the baseplate.
- By looking at the nonlinearity of the vertical axis of the pendulum output,
- we can constrain the nonlinearity to XXXRC, yielding a torque of XXXRC.
+ We designed the flexure-holding fixture to suspend the flexure from near
+ its center, minimizing the opportunity for unexpected stresses to affect
+ the rest of the apparatus.
+\end_layout
+
+\begin_layout Standard
+There's also an opportunity for the simple change in moment/torque due to
+ the cantilevered attractor to provide a torque.
+ A simple elasticity-theory estimate of the bending of the 1.25
+\begin_inset Quotes erd
+\end_inset
+
+-thick, ~27
+\begin_inset Quotes erd
+\end_inset
+
+-diameter aluminum plate due to the placement of a kilogram mass in the
+ center of the baseplate gives a 10
+\begin_inset space ~
+\end_inset
+
+nm total displacement at the center.
+ The attractor assembly weighs less than half a kilogram and displaces by
+ less than a millimeter over the entire range of travel.
+ In any realistic scenario we've considered, the 
+\emph on
+linear
+\emph default
+ component of the pendulum's tilt-driven horizontal displacement should
+ be smaller than the nanometer-scale signal we see in the foil interferometer.
+ Any residual nonlinear variation should be much smaller.
+ Without any quantitative way to estimate the change in pendulum-foil separation
+, we must rest on these estimates.
 \end_layout
 
 \begin_layout Subsubsection
@@ -9159,6 +9218,13 @@ Attractor velocity, in 1
 \end_inset
 
 s bins
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Attractor-velocity,-in"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -9285,9 +9351,70 @@ Pneumatic Drive Leak
 \begin_layout Standard
 If the pneumatic drive system has a leak into the vacuum chamber, it would
  change the residual gas atmosphere in an attractor-correlated way.
- An upper bound on the magnitude of any pressure change may be obtained
- by running the instrument with the ion pressure gauge turned on.
- (XXXRC provide estimate, or by upper bound from attractor leak)
+ While the ion vacuum gauge was turned off during the experiment to preserve
+ low-noise performance, we can get an indirect estimate of any potential
+ leak using the attractor-leakback data (Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Attractor-velocity,-in"
+
+\end_inset
+
+).
+ The 2.5
+\begin_inset space ~
+\end_inset
+
+cm diameter bellows leaked back at 2
+\begin_inset space ~
+\end_inset
+
+nm/s.
+ The internal pressure in the bellows was 1-2 atmospheres, so the maximum
+ pressure rise from an attractor leak into the approximately cubic-meter
+ vacuum chamber was 
+\begin_inset Formula $\sim1\times10^{-9}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Torr/s, which should be compared with the base pressure of more than 
+\begin_inset Formula $1\times10^{-7}$
+\end_inset
+
+ Torr.
+ A variation of this size is well below the 
+\begin_inset Formula $\sim10\%$
+\end_inset
+
+ resolution of our ion gauge.
+ While it is not impossible for a 1% pressure variation to couple to the
+ pendulum (
+\begin_inset Formula $10^{-9}$
+\end_inset
+
+ Torr applied to only one half of the pendulum would yield a torque of 
+\begin_inset Formula $10^{-12}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+N-m), the indirect path from bellows/gas system to the pendulum and the
+ pendulum's approximate symmetry (spoiled by the pendulum tip, of course)
+ should act to suppress this effect.
+ 
+\end_layout
+
+\begin_layout Standard
+We have no way of varying the bellows pressure without moving the attractor,
+ so experimental limits are hard to come by.
+ Displacing the pendulum farther from the foil could reduce any squeeze-film
+ related effects, but it would simultaneously change many other systematic
+ couplings, making the test inconclusive.
 \end_layout
 
 \begin_layout Subsubsection
@@ -13042,20 +13169,10 @@ Pendulum, in PD feedback, coherently-averaged response to periodic magnetic
  torque.
  Magnet states are as-driven by the attractor control DAQ, no phase lag;
  scatter driven by sample/clock beating.
- The measured data are filtered with a 2
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXRC WTF?!
+ The measured data are filtered with a 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../extracted/filterHigh3220.tex"
-
-\end_inset
-
-
-\end_layout
 
 \end_inset
 
@@ -20157,6 +20274,13 @@ Interferometer fit.
 
 \begin_layout Section
 Subtraction
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Subtraction-Foil"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -20761,13 +20885,34 @@ Contact potential
 \end_layout
 
 \begin_layout Standard
-As noted in XXXMA, XXXMA, and XXXMA, our inability to set the contact voltage
- was the biggest single blocker for this measurement.
+As noted in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Contact-potential-noise"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "par:Connection-to-contact"
+
+\end_inset
+
+, and elsewhere, our inability to set the contact voltage was the biggest
+ single blocker for this measurement.
  The elevated electrical potential difference between the pendulum and the
  foil is probably responsible for the level of swing coupling we see, limits
  the distance of closest approach between the pendulum and the foil, and
  surely enhanced the pendulum/foil coupling that forced us to make a systematic
- correction XXXMA.
+ correction (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Subtraction-Foil"
+
+\end_inset
+
+).
  In addition, the presence of a possible foil/attractor contact potential
  may have led to the short-range attractor foil coupling that makes the
  pendulum/foil systematic correction so daunting.
@@ -20788,9 +20933,16 @@ Pendulum Battery
 \end_layout
 
 \begin_layout Standard
-As we explained earlier (XXXMA), it is quite probable that the pendulum
- had its own trouble with an irreducible on-board battery, formed from the
- contact of the dissimilar metals of the pendulum body and the dense inlays.
+As we explained earlier (Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Evidence-for-a-pendulum-battery"
+
+\end_inset
+
+), it is quite probable that the pendulum had its own trouble with an irreducibl
+e on-board battery, formed from the contact of the dissimilar metals of
+ the pendulum body and the dense inlays.
  As measured, this voltage may have contributed ~100
 \begin_inset space ~
 \end_inset
@@ -20833,7 +20985,14 @@ Pendulum flatness
 \begin_layout Standard
 Our pendulum was a prototype, pressed into service when our superior pendulum
  failed.
- As seen in XXXMA, the pendulum could be flatter.
+ As seen in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:PendulumScans"
+
+\end_inset
+
+, a new pendulum could be made flatter with known fabrication techniques.
  We can surely get improved metrology, decreased separation, and improved
  active area with a flatter pendulum.
  A refined pendulum is likely to be implemented in parallel with the pendulum-ba
@@ -20859,8 +21018,15 @@ The autocollimator used in this iteration of the experiment was a coarse
 \end_layout
 
 \begin_layout Standard
-Furthermore, the encoder systematic (XXXMA) most-likely emerged through
- electrical crosstalk between the autocollimator leads and the encoder.
+Furthermore, the encoder systematic (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Encoder-narrative"
+
+\end_inset
+
+) most-likely emerged through electrical crosstalk between the autocollimator
+ leads and the encoder.
  At present the leads that run between the photodiode and the autocollimator
  preamplifiers are 5-10
 \begin_inset space ~
@@ -20889,14 +21055,27 @@ Our understanding of exactly what physical mechanisim increases the noise
  Another is that adsorbed materials on the foil surface may be slowly rearrangin
 g themselves, causing fluctuations of the effective electrostatic interactions
  between pendulum and foil.
- If either of these two are the culprit, as suggested by XXXMA, it's possible
- that retracting the pendulum away from the foil and illuminating the active
- surfaces with ultraviolet light might improve the noise.
+ If either of these two are the culprit, as suggested by 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "PhysRevLett.109.103001WinelandGasNoise"
+
+\end_inset
+
+, it's possible that retracting the pendulum away from the foil and illuminating
+ the active surfaces with ultraviolet light might improve the noise.
  Through photoelectric-like effects, UV light is known to significantly
  accelerate outgassing rates and expel adsorped surface layers.
  Trying out a UV light-emitting diode, as we've already used in our LISA
- (XXXMA) experiment, would be straightforward, and might yield an improvement
- in noise.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "pollack2010charge"
+
+\end_inset
+
+ experiment, would be straightforward, and might yield an improvement in
+ noise.
 \end_layout
 
 \begin_layout Subsubsection
@@ -20904,8 +21083,14 @@ Interferometer improvements
 \end_layout
 
 \begin_layout Standard
-As described in XXXMA, the interferometer may be limited by polarization-related
- noise.
+As described in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Interferometer-noise"
+
+\end_inset
+
+, the interferometer may be limited by polarization-related noise.
  If we were to switch to entirely polarization-maintaining fiber, it's possible
  that the pickup and drift we see could be reduced.
  
