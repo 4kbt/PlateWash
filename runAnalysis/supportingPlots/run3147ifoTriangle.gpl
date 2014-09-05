@@ -1,0 +1,29 @@
+set term postscript enhanced solid color eps size 3,6
+set output 'run3147ifoTriangle.eps' 
+
+load HOMEDIR.'globalConfig/columnNames.m'
+
+set size square
+set key noauto below
+
+set xlabel 'attractor start position w.r.t pendulum ({/Symbol m}m)'
+set ylabel 'attractor end position w.r.t pendulum ({/Symbol m}m)'
+set cblabel 'foil position difference (nm)'
+
+set multiplot layout 2,1
+
+set arrow from pfTouch,0 to pfTouch,800 nohead lt 0 lw 2
+set arrow from shortCut*1e6,0 to shortCut*1e6,800 nohead lt -1 lw 2
+set title 'interferometer triangle-plot, full scale'
+
+pl [0:800][0:800] '../results/run3147pM3iFilterMerge.dat' u (1e6*column(aCol)):(1e6*column(bCol)):(column(ifopMCol)*1e9) palette pt 7 ps 0.5,\
+	pfTouch lt 0 lw 2 tit 'foil location',\
+	shortCut*1e6 lt -1 lw 2 tit 'foil-touching cut'
+
+cr = 3 
+
+set title 'interferometer triangle-plot, detailed scale'
+set cbrange [-cr:cr]
+replot
+
+unset multiplot

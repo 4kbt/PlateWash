@@ -104,10 +104,14 @@ filterSensorHigh = NyquistFrequency;   printInteger( 1000*filterSensorHigh,  [HO
 printInteger( 1.0./filterHigh/2, [HOMEDIR 'extracted/filterHighLag.tex']);
 
 %Fit configuration
-pfTouch =  56+17+ 12+2 ;  %swag
-touch2937 =  147 -2 + pfTouch;
+
+%pftouch, touch2937, and shortCut are defined in columnNames for portability
+%pfTouch =  56+17+ 12+2 ;  %swag
+%touch2937 =  147 -2 + pfTouch;
 %Distance cut
-shortCut = (pfTouch+10)*1e-6; printSI(shortCut, 2, -6, 'm', [HOMEDIR 'extracted/shortCut.tex']);
+%shortCut = (pfTouch+10)*1e-6;
+
+printSI(shortCut, 2, -6, 'm', [HOMEDIR 'extracted/shortCut.tex']);
 IFOTouchThreshold = 4e-9;
 
 

@@ -20041,8 +20041,14 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-Triangle Plot, two views.
- XXXRC
+\align center
+\begin_inset Graphics
+	filename ../runAnalysis/supportingPlots/run3147ifoTriangle.eps
+	width 70text%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -20055,7 +20061,10 @@ name "fig:Raw-foil-displacement"
 
 \end_inset
 
-Raw foil displacement data
+Raw foil displacement triangle plot.
+ Upper plot shows the full scale motion, while the lower plot narrows the
+ color scale to show foil motion in normal operation (attractor not in contact
+ with the foil).
 \end_layout
 
 \end_inset

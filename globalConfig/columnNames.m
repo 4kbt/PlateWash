@@ -56,4 +56,8 @@ tempGradientBCol    = tempGradientCol+2*numSensors;
 XSUnits = 1e-12;
 XLUnits = 1e-4;
 
-
+#Distance determination
+pfTouch =  56+17+ 12+2 ;  #swag
+touch2937 =  147 -2 + pfTouch;
+#Distance cut
+shortCut = (pfTouch+10)*1e-6; 
