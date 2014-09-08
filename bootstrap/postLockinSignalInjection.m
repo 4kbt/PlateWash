@@ -61,7 +61,7 @@ if( testInjection == 1)
 	injectedSignalArray = [injSlope/XSUnits];
 	logLambdas = log10(lambdasInjected/XLUnits); 
 	for injCtr = 1:columns(alphasInjected)
-		injectedSignalArray = [ injectedSignalArray logLambdas(injCtr) alphasInjected(injCtr) ];
+		injectedSignalArray = [ injectedSignalArray logLambdas(injCtr) alphasToLogAlphas(alphasInjected(injCtr), logCrossover) ]
 	end
 	
 	X2Check = chiSquareWSystematics(pM, injectedSignalArray, signalColumns, torCol)

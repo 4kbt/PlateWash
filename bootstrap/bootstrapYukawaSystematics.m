@@ -51,6 +51,7 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 	%Fit begins
 	ranLam = log10(10.^( rand(NumFitSystematics,1) *3.0-6)/XLUnits);
 	ranAlp = (-1).^(round(rand(NumFitSystematics,1))+1).*10.^(rand(NumFitSystematics,1)*11-5);
+	ranAlp = alphasToLogAlphas(ranAlp, logCrossover);
 	ranSlo = (rand-0.5)*10e-12/XSUnits;
 
 	%Compose ranSeed
@@ -70,7 +71,7 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 		[csMin fitInfo iter nf]
 
 		%Output fit results
-		x = unLogifyLambdas(x);
+		x = unLogAL(x, logCrossover);
 		bsO = [ transpose(x) csMin nf iter fitInfo ranSeed bootStrapCounter toc rows(pM) ifoSubtract];
 		injSubCol = columns(bsO);
 
