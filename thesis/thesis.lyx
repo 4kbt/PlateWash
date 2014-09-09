@@ -5608,7 +5608,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/charlie/trialEotwash/Eotwash/thesis/plots/ifoSim.eps
+	filename plots/ifoSim.eps
 	width 100col%
 
 \end_inset
@@ -9590,7 +9590,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/charlie/homeVersion/Eotwash/runAnalysis/supportingPlots/run3147typical.eps
+	filename ../runAnalysis/supportingPlots/run3147typical.eps
 	width 70page%
 
 \end_inset
@@ -13139,6 +13139,10 @@ Attractor motion, convolved with DAQ IIR low-pass response.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -13181,6 +13185,11 @@ filename "../extracted/filterHigh3220.tex"
 \end_inset
 
 mHz high-pass filter.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset

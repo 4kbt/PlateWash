@@ -14,7 +14,7 @@ do
 	echo '\begin{figure}'    >> $fn
 	echo '\begin{centering}' >> $fn
 
-	echo "\\includegraphics[height=0.4\\pageheight, angle=270]{$myPathName$names}" >> $fn
+	echo "\\includegraphics[height=0.4\\textheight, angle=270]{$myPathName$names}" >> $fn
 
 	#Cutting out individual variables from filename
 	trimmed=`echo $names | sed "s:$prefix::" | sed "s:$suffix::" | sed 's/\.//'`
@@ -27,10 +27,14 @@ do
 
 	#get and process slope
 	slope=`echo  $trimmed | sed "s/.*slop\([0-9e\.-]*\).*/\1/"`
-	slopeTeX=`echo $slope | sed 's/e/ \\\times 10^\{/'`
+	if [ "$slope" = '0' ];  then
+		slopeTeX=0 
+	else
+		slopeTeX=`echo $slope | sed 's/e/ \\\times 10^\{/' | sed 's/$/}/'`
+	fi
 
 	echo '\par\end{centering}' >> $fn
-	echo "\caption{Bootstrapped arbitrary fit with injected linear slope \$ $slopeTeX}\$ N-m/m,  Yukawa interaction with \$\\alpha=$alpha\$, \$\\lambda=$lambda\$ \$\\mu\$m }"  >> $fn
+	echo "\caption{Bootstrapped arbitrary fit with injected linear slope \$ $slopeTeX\$ N-m/m,  Yukawa interaction with \$\\alpha=$alpha\$, \$\\lambda=$lambda\$ \$\\mu\$m }"  >> $fn
 	echo  '\end{figure}' >> $fn
 	echo '' >> $fn
 done
