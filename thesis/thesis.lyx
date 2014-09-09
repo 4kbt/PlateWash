@@ -20359,7 +20359,28 @@ Force Law
 \end_layout
 
 \begin_layout Standard
-XXXRC
+\begin_inset CommandInset include
+LatexCommand input
+filename "../bootstrap/output/makeArbFigure.tex"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The bootstrapped 
+\begin_inset Quotes eld
+\end_inset
+
+arbitrary force law
+\begin_inset Quotes erd
+\end_inset
+
+ plots, computed as described in XXXRC are included here.
+ A comparison between injected simulated data and actual computation is
+ shown.
+ XXXRC clean up language, broaden text.
 \end_layout
 
 \begin_layout Section

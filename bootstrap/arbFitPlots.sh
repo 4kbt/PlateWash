@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for  PLOTME in `ls output/bootstrapArbFit*.dat`
+for  PLOTME in `ls output/bootstrapArbFit*Levenberg.dat`
 do
 	echo $PLOTME
 	export GNUPLOTME=$PLOTME
