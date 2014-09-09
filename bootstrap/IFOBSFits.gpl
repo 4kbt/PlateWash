@@ -1,6 +1,7 @@
 set term postscript enhanced solid color eps
 set output 'output/IFOBSFits.eps'
 
+set key noauto
 
 set title  'PlateWash foil interferometer signal'
 set xlabel 'attractor-pendulum separation ({/Symbol m}m)'
