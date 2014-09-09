@@ -20386,10 +20386,19 @@ arbitrary force law
 \begin_inset Quotes erd
 \end_inset
 
- plots, computed as described in XXXRC are included here.
- A comparison between injected simulated data and actual computation is
- shown.
- XXXRC clean up language, broaden text.
+ plots, computed as described in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Force-law-inversion"
+
+\end_inset
+
+ are plotted in this section.
+ These are piecewise linear fits to the data; as close to a model-free fit
+ as one can reasonably get.
+ Fits with signals injected into the data are shown alongside the injected
+ signals.
+ 
 \end_layout
 
 \begin_layout Section
