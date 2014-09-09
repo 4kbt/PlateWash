@@ -12,7 +12,7 @@ end
 fittedData =[];
 
 %Bootstrap loop
-for bootStrapCounter = 1:(3*NumberOfYukawaBootstraps)  % three covers add, null, subtract case.
+for bootStrapCounter = 1:(NumberOfYukawaBootstraps)  % three covers add, null, subtract case.
 
 	['yukawa bootstrap counter ' num2str(bootStrapCounter)]
 
