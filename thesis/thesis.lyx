@@ -11530,7 +11530,14 @@ reference "sec:Encoder-narrative"
 
 , and has the added advantage of allowing a more-complete measurement of
  the distance-dependence of any measured force.
- 
+ A representative sample of attractor data is shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:First-day-of-attractor-data"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -11546,7 +11553,49 @@ ition differences.
 \end_layout
 
 \begin_layout Standard
-Figure XXXRC.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../runAnalysis/supportingPlots/run3147randomAttractorExample.eps
+	width 70page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:First-day-of-attractor-data"
+
+\end_inset
+
+First day of attractor positions.
+ Random attractor positions sample the available parameter space in an unbiased
+ way.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
