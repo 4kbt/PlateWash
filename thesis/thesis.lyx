@@ -12047,8 +12047,15 @@ cuts
 \end_inset
 
  states are dropped from the cut before the aggregate properties of the
- cut are determined; as described in (XXXRC ref), the positions of the first
- two switches are somewhat inconsistent with those that follow.
+ cut are determined; as seen in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-first-8000"
+
+\end_inset
+
+, the positions of the first two states are inconsistent with the rest of
+ the cut and retain information from the prior cut.
  For 
 \bar under
 all
