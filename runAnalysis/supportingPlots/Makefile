@@ -16,8 +16,9 @@ ALB47:= run3147attractorLeakBack
 FBV47:= run3147feedbackVoltage
 TYP47:= run3147typical
 IFO47:= run3147ifoTriangle
+RAN47:= run3147randomAttractorExample
 
-all: $(FFR).eps $(FILT).eps $(WIND).eps $(LAG20).eps $(LAG24).eps $(LAG69).eps $(TOR67).eps $(NOT47).eps $(ALB47).eps $(AOT47).eps $(FBV47).eps $(TYP47).eps $(IFO47).eps
+all: $(FFR).eps $(FILT).eps $(WIND).eps $(LAG20).eps $(LAG24).eps $(LAG69).eps $(TOR67).eps $(NOT47).eps $(ALB47).eps $(AOT47).eps $(FBV47).eps $(TYP47).eps $(IFO47).eps $(RAN47).eps
 
 #Filter transfer functions
 $(FFR).eps: $(FFR).m $(FFR).gpl
@@ -76,6 +77,10 @@ $(TYP47).eps : $(TYP47)Torque.dat $(TYP47).gpl
 
 $(IFO47).eps : $(IFO47).gpl
 	$(GNU) $<
+
+$(RAN47).eps : $(RAN47).m $(RAN47).gpl
+	$(OCT) $<
+	$(GNU) $(RAN47).gpl
 
 clean : 
 	-rm *.eps

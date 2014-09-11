@@ -5698,10 +5698,6 @@ m.
 
 \end_layout
 
-\begin_layout Standard
-XXXRC Blah Blah blah
-\end_layout
-
 \begin_layout Subsubsection
 Calibration
 \end_layout
@@ -11534,7 +11530,14 @@ reference "sec:Encoder-narrative"
 
 , and has the added advantage of allowing a more-complete measurement of
  the distance-dependence of any measured force.
- 
+ A representative sample of attractor data is shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:First-day-of-attractor-data"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -11550,7 +11553,49 @@ ition differences.
 \end_layout
 
 \begin_layout Standard
-Figure XXXRC.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../runAnalysis/supportingPlots/run3147randomAttractorExample.eps
+	width 70page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:First-day-of-attractor-data"
+
+\end_inset
+
+First day of attractor positions.
+ Random attractor positions sample the available parameter space in an unbiased
+ way.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -12002,8 +12047,15 @@ cuts
 \end_inset
 
  states are dropped from the cut before the aggregate properties of the
- cut are determined; as described in (XXXRC ref), the positions of the first
- two switches are somewhat inconsistent with those that follow.
+ cut are determined; as seen in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-first-8000"
+
+\end_inset
+
+, the positions of the first two states are inconsistent with the rest of
+ the cut and retain information from the prior cut.
  For 
 \bar under
 all
@@ -20635,17 +20687,24 @@ y.
  if not ended.
  If we cower in fear of uncertainty, we'll never learn anything new about
  Nature.
- There is value to be had for physicists who study risk management [XXXMA].
+ There is value to be had for physicists who study risk management.
 \end_layout
 
 \begin_layout Standard
 In the modern avalanche world, communication and an understanding of human
  interactions are prized.
  The hazards present in avalanche-prone snow can be prominent or subtle;
- it is the subtle ones that kill most often.
- In most avalanche accidents, someone in the group has correctly identified
- the hazard that will eventually harm someone and is concerned about it
- prior to the accident [XXXMA].
+ it is the subtle ones that most-often kill the experienced backcountry
+ traveler.
+ In most avalanche accidents among the avalanche-aware, the clues are present,
+ and the error is one of judgement 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "mccammon2002evidence,atkins2000human"
+
+\end_inset
+
+.
  It is more rare for a group to get in trouble if it has discussed everyone's
  safety concerns.
  Everyone has blind spots, sometimes exacerbated by our environments.
@@ -20670,7 +20729,14 @@ Technical
 \end_layout
 
 \begin_layout Standard
-Our research group has made its name with Equivalence Principle tests (XXXMA).
+Our research group has made its name with Equivalence Principle tests 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "schlamminger2008test"
+
+\end_inset
+
+.
  A rotating torsion balance with test masses of equal gravitational mass
  but differing composition looks for a composition-dependent differential
  acceleration toward a distant attractor mass.
@@ -20755,8 +20821,22 @@ In the PlateWash experiment, things are even more complicated.
  With the myriad choices of start and end positions that we used in this
  experiment, ascertaining both our sensitivity to a specific inverse square
  law signal and our uncertainties became a real challenge.
- The methods outlined in XXXMA now allow us to do this relatively efficiently,
- but it can be challenging to extract a physics result by eye.
+ The methods outlined in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Model-Comparison"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Force-law-inversion"
+
+\end_inset
+
+ now allow us to do this relatively efficiently, but it can be challenging
+ to extract a physics result by eye.
  The two-parameter approach is much more powerful for hunting down instrumental
  effects, but XXXMA
 \end_layout
@@ -20808,13 +20888,46 @@ Perhaps the most important single concept when planning an experiment is
 Our single biggest mistake is the lack of a complete quantitative error
  budget.
  This seems like a childish oversight, but it's inherent to every modern
- short-range gravity experiment (XXXMA does Spero have one?) because it
- is extremely difficult to do.
- When we proposed the experiment, we submitted a reasonable error
+ short-range gravity experiment because it is extremely difficult to do.
+ When we proposed the experiment, we submitted an approximate error budget
+ for a single square-wave operation of the experiment, focused on 
+\begin_inset Formula $\alpha=1$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda\sim20-70$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m.
+ As the exclusion limits span orders of magnitude in both 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, it is difficult to build reliable models for the influence of each systematic
+ at all points in the 
+\begin_inset Formula $\alpha-\lambda$
+\end_inset
+
+ plane.
 \end_layout
 
 \begin_layout Standard
-XXXMA
+Error budgets provide the guidance necessary for keeping experiments from
+ going adrift.
+ To operate without them is to operate without a rudder, reliant upon intuition
+ alone for direction.
 \end_layout
 
 \begin_layout Subsubsection
@@ -20837,10 +20950,16 @@ Our action mirrored this blitzkreig philosophy.
  When the experiment was first assembled, our first day of data easily surpassed
  the first Eot-Wash short-range experiments; we were on our way, led by
  the huge potential of PlateWash's efficient design.
+ 
 \end_layout
 
 \begin_layout Standard
-XXXMA
+Our committment to the lightning-stab approach, where we would get a great
+ measurement on our first try led us astray; the first stabs didn't work.
+ Complete focus on delivering a respectable result, instead of iteratively
+ delivering coarse but reliable results slowed our progress.
+ In 2008-9, it became clear that the experiment wasn't viable without a
+ foil-position monitor.
 \end_layout
 
 \begin_layout Subsubsection
@@ -20856,7 +20975,18 @@ Complexity
 \end_layout
 
 \begin_layout Standard
-XXXMA
+PlateWash is a very simple experiment.
+ Its simplicity is perhaps its second-strongest feature (behind the intrinsicall
+y-null nature of the short-range field from the attractor).
+ In pursuing the random attractor motion, blind analysis, and auditable/repeatab
+le analysis software, I severely underestimated the implied complexity of
+ each.
+ Correct execution of all of them are necessary to yield a maximally-believeable
+ result, but each one has generated a year or more's worth of work.
+ Constrained complexity must be a hallmark of future short-range experiments.
+ PlateWash has led the way into new areas and generated new tools to simplify
+ each of these complex tasks, but we must be mindful of the pitfalls to
+ which it's been subject.
 \end_layout
 
 \begin_layout Subsubsection
@@ -20864,7 +20994,33 @@ Blindness
 \end_layout
 
 \begin_layout Standard
-XXXMA
+Prior to PlateWash, our group has only done one measurement effectively
+ blind, when an important experimental parameter was undocumented during
+ the duration of the experiment and subsequent analysis.
+ It was not by choice.
+ The approach taken with this work is designed to directly address the (reasonab
+le) objection that 
+\begin_inset Quotes eld
+\end_inset
+
+no experiment is ever truly blind
+\begin_inset Quotes erd
+\end_inset
+
+ -- hinting at the reality that most blind experiments unblind before making
+ their work public.
+ The repeatable analysis, open git commit log, and the (hopefully (XXXMA))
+ public unblinding of the experiment are all designed to address this concern.
+\end_layout
+
+\begin_layout Standard
+The systematic influences in all known short-range gravity experimental
+ configurations are too delicate to work with without a blind.
+ How else will you know when to stop looking for uncertainties? The next
+ giant leap in this field will come with an entirely new and simpler experimenta
+l idea; one where it is obviously free from large classes of systematic
+ uncertainty.
+ In the early days of those experiments, perhaps no blind will be requisite.
 \end_layout
 
 \begin_layout Subsection
@@ -21178,7 +21334,25 @@ Python?
 \end_layout
 
 \begin_layout Standard
-XXXMA
+Octave has been a good and reliable tool throughout this work.
+ While the Octave project continues to improve and work toward drop-in compatibi
+lity with MATLAB, much of the open-source effort has moved into the SciPy
+ packages for Python.
+ Writing future analysis code in Python will make it more readable, more
+ accessible, and permit access to mathematical libraries that are audited
+ by many more users.
+ 
+\end_layout
+
+\begin_layout Standard
+A particular sticking point is our reliance upon the excellent Gnuplot plotting
+ package.
+ Information occasionally flows out of Octave, gets plotted in or analyzed
+ a little in Gnuplot, and then is no longer accessible to the tools in Octave.
+ At least a man-month has been spent finding ways to smoothly move data
+ from one to the other and back.
+ A search for a more integrated analysis and plotting environment will be
+ worthwhile.
 \end_layout
 
 \begin_layout Standard

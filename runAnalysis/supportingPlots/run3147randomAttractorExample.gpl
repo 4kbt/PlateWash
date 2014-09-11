@@ -1,0 +1,17 @@
+set term postscript enhanced solid color eps
+set output 'run3147randomAttractorExample.eps'
+
+fn = 'run3147randomAttractorExample.dat'
+
+set key noauto
+
+set title 'attractor positions, first day of data'
+
+set xlabel 'time (d)'
+set ylabel 'pendulum-attractor distance ({/Symbol m}m)'
+
+stats fn u ($1/86400):($2*1e6)
+
+pl [STATS_min_x:STATS_min_x+1][0:]\
+	fn u ($1/86400):($2*1e6) w l lt 3
+
