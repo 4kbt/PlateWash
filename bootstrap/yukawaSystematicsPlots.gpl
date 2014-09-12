@@ -58,8 +58,6 @@ if ( exists(gravityFlag) ) {
 pl [:][alMin:]\
 	kapFile w l lt -1  tit 'Kapner et al.',\
 	cookFile w l lt 0 tit "Cook thesis",\
-	for [ctr=1:1:-1] \
-	fn index 0 u ( 1==1 ? 10**(column(2*ctr+2*NumSystematics+5)) * XLUnits : 1/0):( column(2*ctr+1 + 2*NumSystematics + 5 )) w p lc -1 pt 2 ps 1 tit 'gravity seeds',\
 	for [ctr=NumToPlot:1:-1] \
 	fn index 0 u ( @cutFunc ? column(2*ctr) * XLUnits : 1/0):( column(2*ctr+1)) w p lc ctr pt 7 ps ptsz,\
 	for [ctr=NumToPlot:1:-1] \
@@ -78,8 +76,6 @@ set xlabel 'lambda (m)'
 pl [:][alMin:]\
 	kapFile  w l lt -1  ,\
 	cookFile w l lt 0   ,\
-	for [ctr=1:1:-1] \
-	fn index 0 u ( 1==1 ? 10**(column(2*ctr+2*NumSystematics+5)) * XLUnits : 1/0):( -column(2*ctr+1 + 2*NumSystematics + 5 )) w p lc -1 pt 2 ps 1,\
 	for [ctr=NumToPlot:1:-1] \
 	fn index 0 u (@cutFunc ? column(2*ctr) * XLUnits: 1/0):( -column(2*ctr+1)) w p lc ctr pt 7 ps ptsz\
 			title columnhead(1+2*ctr),\
