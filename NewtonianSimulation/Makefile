@@ -8,7 +8,7 @@ MASSES=jan13Attractor.m jan13Pendulum.m
 
 SDIR := SimulationOutput
 
-all: plots/brickDemo.eps bellowsTorque plots/fullSimulation.eps plots/pmScanPlot.eps plots/offsetAttractorAssembly.eps $(SDIR)/scanMaxDiff.tex plots/fullDistribution.eps
+all: plots/brickDemo.eps bellowsTorque plots/fullSimulation.eps plots/pmScanPlot.eps plots/offsetAttractorAssembly.eps $(SDIR)/scanMaxDiff.tex plots/fullDistribution.eps plots/offsetAttractorSim.eps
 
 plots/brickDemo.eps : $(MLIB) brickDemo.m brickDemo.gpl $(PARTS)
 	$(OCT) brickDemo.m
@@ -32,6 +32,8 @@ simulation : $(MLIB) processRun.m $(PARTS)
 	$(GNU) 
 
 
+#These following two automatically define/build integration targets for anything requested from within parts and scans.
+
 #This command must precede the $(SDIR)/%dat make, lest confusion result. May change with Make 3.82.
 $(SDIR)/scans/%.dat :  $(MLIB) $(PARTS) defineAttractorTranslation.m processAttractorComponent.m
 	$(OCT) --eval 'outPath = "$(@D)"; attractors = {"$(*F)"}; scatterMasses = 1; randomAttractorRotate = 1; P = pendulumPMScan;' processAttractorComponent.m
@@ -52,6 +54,17 @@ plots/fullSimulation.eps: $(BIN) fullSimulation.gpl $(HOMEDIR)/extracted/pendulu
 				$(SDIR)/fullAttractor.dat\
 				$(SDIR)/nonAttractor.dat
 	$(GNU) fullSimulation.gpl
+
+
+#Apologies for doing this without a loop. I need to graduate someday.
+plots/offsetAttractorSim.eps: $(BIN) offsetAttractorSim.gpl $(HOMEDIR)/extracted/pendulumBodyThickness.tex\
+				$(SDIR)/jan13OffsetSimMinusTwo.dat\
+				$(SDIR)/jan13OffsetSimMinusOne.dat\
+				$(SDIR)/jan13OffsetSimZero.dat\
+				$(SDIR)/jan13OffsetSimPlusOne.dat\
+				$(SDIR)/jan13OffsetSimPlusTwo.dat
+	$(GNU) offsetAttractorSim.gpl
+
 
 plots/fullDistribution.eps plots/fullDistributionZoomOutTrim.eps: plots/fullSimulation.eps plotFullDistribution.gpl
 	$(GNU) plotFullDistribution.gpl

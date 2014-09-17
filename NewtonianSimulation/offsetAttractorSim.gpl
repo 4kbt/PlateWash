@@ -1,0 +1,51 @@
+set term postscript enhanced solid color eps
+set output 'plots/offsetAttractorSim.eps'
+
+set key top left
+
+set ylabel 'torque (fN-m)'
+
+SimMinusTwo   = 'SimulationOutput/jan13OffsetSimMinusTwo.dat'
+SimMinusOne   = 'SimulationOutput/jan13OffsetSimMinusOne.dat'
+SimZero       = 'SimulationOutput/jan13OffsetSimZero.dat'
+SimPlusOne    = 'SimulationOutput/jan13OffsetSimPlusOne.dat'
+SimPlusTwo    = 'SimulationOutput/jan13OffsetSimPlusTwo.dat'
+
+#simMTwo(x)      = mm2      + sm2      * x
+#simMOne(x)      = mo2      + so2      * x
+#simZero(x)      = mz       + sz      * x
+#simPOne(x)      = mp1      + sp1      * x
+#simPTwo(x)      = mp2      + sp2      * x
+
+#fit simMTwo(x)      SimMinusTwo     u 5:13 via mm2, sm2
+#fit simMOne(x)      SimMinusOne     u 5:13 via mm1, sm1
+#fit simZero(x)      SimZero         u 5:13 via mz , sz
+#fit simPOne(x)      SimPlusOne      u 5:13 via mp1, sp1
+#fit simPTwo(x)      SimPlusTwo      u 5:13 via mp2, sp2
+
+pendOff = system( HOMEDIR."bin/texSigToNum.sh ".HOMEDIR."extracted/pendulumBodyThicknessNoSI.tex")/2.0*1e6
+
+set multiplot layout 2,1
+set key off
+set format x ""
+pl [0:]\
+	SimMinusTwo     u ($5*1e6-pendOff):(($13 )*1e15) w l tit '-10 mm',\
+	SimMinusOne     u ($5*1e6-pendOff):(($13 )*1e15) w l tit '-5 mm',\
+	SimZero     	u ($5*1e6-pendOff):(($13 )*1e15) w l tit '0 mm',\
+	SimPlusOne      u ($5*1e6-pendOff):(($13 )*1e15) w l tit '+5 mm',\
+	SimPlusTwo      u ($5*1e6-pendOff):(($13 )*1e15) w l tit '+10 mm'
+
+
+set title 'non-linear residuals'
+set xlabel 'pendulum - attractor face separation ({/Symbol m}m)'
+set key below
+set format x "%g"
+
+pl [0:]\
+	SimMinusTwo 	  u ($5*1e6-pendOff):(($14)*1e15) w l tit '-10 mm',\
+	SimMinusOne 	  u ($5*1e6-pendOff):(($14)*1e15) w l tit '-5 mm',\
+	SimZero 	  u ($5*1e6-pendOff):(($14)*1e15) w l tit '0 mm',\
+	SimPlusOne 	  u ($5*1e6-pendOff):(($14)*1e15) w l tit '+5 mm',\
+	SimPlusTwo 	  u ($5*1e6-pendOff):(($14)*1e15) w l tit '+10 mm'
+
+unset multiplot
