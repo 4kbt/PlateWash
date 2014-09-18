@@ -25,7 +25,7 @@ chiCut = 2
 #chiMin  = 0.75 #e-10
 chiMin  = 0.75e-10
 
-iterMin =  15 
+iterMin =  5 
 
 cutFunc = "( (column(chiCol) < chiCut*column(NDF)) & (column(chiCol) > chiMin*column(NDF)) & (column(iterCol) > iterMin ))"
 
@@ -55,7 +55,7 @@ if ( exists(gravityFlag) ) {
 	NumToPlot = 1
 }
 
-pl [:][alMin:]\
+pl [:][alMin:alMax]\
 	kapFile w l lt -1  tit 'Kapner et al.',\
 	cookFile w l lt 0 tit "Cook thesis",\
 	for [ctr=1:1:-1] \
@@ -75,7 +75,7 @@ set ylabel 'negative alpha'
 set xlabel 'lambda (m)'
 #pl [0.009:102][alMin:alMax]\
 
-pl [:][alMin:]\
+pl [:][alMin:alMax]\
 	kapFile  w l lt -1  ,\
 	cookFile w l lt 0   ,\
 	for [ctr=1:1:-1] \

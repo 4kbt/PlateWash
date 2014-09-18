@@ -14,7 +14,7 @@ function o = unLogLA(x, crossover)
 
 	for ctr = 2:2:rows(x)
 		x(ctr) = 10.^(x(ctr));
-		x(ctr+1) = logAlphaToAlpha(x(ctr+1) , crossover); 
+		x(ctr+1) = logAlphasToAlphas(x(ctr+1) , crossover); 
 	end
 
 	o = x; 

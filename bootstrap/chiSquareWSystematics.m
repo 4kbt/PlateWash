@@ -36,6 +36,7 @@ function X2 = chiSquareWSystematics( pM , x, signalColumns, fitColumn)
 		./(pM(:,fitErrColumn).^2 +varG )
 		); %sum
 
+
 	%Script checks for X2=NaN and X2<0 and handles accordingly
 	chiSquaredErrorCheckHandle
 

@@ -71,7 +71,7 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 		[csMin fitInfo iter nf]
 
 		%Output fit results
-		x = unLogAL(x, logCrossover);
+		x = unLogLA(x, logCrossover);
 		bsO = [ transpose(x) csMin nf iter fitInfo ranSeed bootStrapCounter toc rows(pM) ifoSubtract];
 		injSubCol = columns(bsO);
 
@@ -92,7 +92,9 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 		end
 		
 		%Outputs
-		outputBSO( outfilename, bootstrapOut, injParameters, injSubCol, signalColString , fittedData );
+		if(mod( bootStrapCounter, 30 ) == 0 ) 
+			outputBSO( outfilename, bootstrapOut, injParameters, injSubCol, signalColString , fittedData );
+		end
 	catch
 		'FIT ERROR!'
 		errorMessage
