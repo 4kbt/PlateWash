@@ -1,4 +1,8 @@
 function X2 = chiSquareWSystematics( pM , x, signalColumns, fitColumn)
+
+	%Silliness for samin
+	x = x';
+
 	global HOMEDIR
 	columnNames;
 	fitErrColumn = diffErrOffset + fitColumn;

@@ -46,7 +46,8 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 	NumIterations = 400; %default 100, but good fits are getting truncated at 200
 
 	%Define fit function
-	cSFunc = @(x) chiSquareWSystematics(pMd, x, signalColumns, torCol);
+%	cSFunc = @(x) chiSquareWSystematics(pMd, x, signalColumns, torCol);
+
 
 	%Fit begins
 	ranLam = log10(10.^( rand(NumFitSystematics,1) *3.0-6)/XLUnits);
@@ -65,7 +66,17 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 		tic
 
 		%Do the fit.
-		[x, csMin, fitInfo, iter, nf]   = sqp(ranSeed, cSFunc, [], [], LowerBounds, UpperBounds,NumIterations);
+
+		[x , csMin, convergence, details] = samin("chiSquareWSystematics", {pMd, ranSeed', signalColumns, torCol}, {LowerBounds', UpperBounds', 20, 5, 0.1, 1e10, 5, 1e-10, 1e-3, 1, 2});
+
+		%0 = no convergence, 1 = good, 2 = near edge
+		fitInfo = convergence; 
+		%total number of function evaluations
+		iter = details(end,1);
+		%number of temperature reductions
+		nf = rows(details);
+
+		%[x, csMin, fitInfo, iter, nf]   = sqp(ranSeed, cSFunc, [], [], LowerBounds, UpperBounds,NumIterations);
 
 		%Display fit outcome
 		[csMin fitInfo iter nf]
@@ -73,12 +84,13 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 		%Output fit results
 		x = unLogLA(x, logCrossover);
 		bsO = [ transpose(x) csMin nf iter fitInfo ranSeed bootStrapCounter toc rows(pM) ifoSubtract];
+		%Dynamically locates subtraction column for variable number of parameters
 		injSubCol = columns(bsO);
 
 		%if fit converged, save it.
-		if(fitInfo == 101) 
+	%	if(fitInfo == 101) 
 	       		bootstrapOut = [bootstrapOut; bsO];
-		end
+	%	end
 
 		if(1 == testInjection & ~exist("fileInjection"))
 			injParameters = [lambdasInjected/XLUnits alphasInjected injSlope/XSUnits];
@@ -92,9 +104,9 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 		end
 		
 		%Outputs
-		if(mod( bootStrapCounter, 30 ) == 0 ) 
+		%if(mod( bootStrapCounter, 30 ) == 0 ) 
 			outputBSO( outfilename, bootstrapOut, injParameters, injSubCol, signalColString , fittedData );
-		end
+		%end
 	catch
 		'FIT ERROR!'
 		errorMessage

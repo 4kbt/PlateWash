@@ -38,7 +38,7 @@ chiCol = 1+2*NumSystematics+1
 iterCol = 1 + 2 * NumSystematics + 3
 
 alMax = 1e8
-alMin = 1e-6
+alMin = 1e-5
 
 
 ptsz = 0.7
@@ -55,7 +55,7 @@ if ( exists(gravityFlag) ) {
 	NumToPlot = 1
 }
 
-pl [:][alMin:alMax]\
+pl [:][alMin:]\
 	kapFile w l lt -1  tit 'Kapner et al.',\
 	cookFile w l lt 0 tit "Cook thesis",\
 	for [ctr=1:1:-1] \
@@ -75,7 +75,7 @@ set ylabel 'negative alpha'
 set xlabel 'lambda (m)'
 #pl [0.009:102][alMin:alMax]\
 
-pl [:][alMin:alMax]\
+pl [:][alMin:]\
 	kapFile  w l lt -1  ,\
 	cookFile w l lt 0   ,\
 	for [ctr=1:1:-1] \

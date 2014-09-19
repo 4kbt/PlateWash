@@ -160,10 +160,10 @@ if(SysNoX == 1)
 	fprintf('Systematics handling by bootstrap');
 end
 
-SysUB = 1e20;
+SysUB = 25;
 LamLB = log10(1e-15/XLUnits);
 LamUB = log10(10/XLUnits);
-SloUB = Inf; %1e-9/XSUnits;
+SloUB = 1e-6/XSUnits;
 
 %1e-8 gives beautiful fits, of course.
 AppliedMagneticFieldUncertainty = 1e-3; %TotalBogus!
