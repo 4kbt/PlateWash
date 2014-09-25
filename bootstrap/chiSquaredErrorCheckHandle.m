@@ -2,7 +2,7 @@
 
 if(isnan(X2))
 	warning("X2 threw a NaN");
-	X2 = Inf;
+	X2 = 1e90;
 end
 
 if(X2 < 0)

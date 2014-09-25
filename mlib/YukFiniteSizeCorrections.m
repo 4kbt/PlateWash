@@ -1,7 +1,8 @@
 function Y = YukFiniteSizeCorrections(L)
 
 	DoNotExtractPendulumParameters = 1;
-	run3147PendulumParameters;
+	PendulumParameters
+	AttractorParameters
 
 		%pendulum effects
 	Y =(

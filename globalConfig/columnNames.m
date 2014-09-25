@@ -60,4 +60,10 @@ XLUnits = 1e-4;
 pfTouch =  56+17+ 12+2 ;  #swag
 touch2937 =  147 -2 + pfTouch;
 #Distance cut
-shortCut = (pfTouch+10)*1e-6; 
+shortCut = (pfTouch+10)*1e-6;
+
+logCrossover = -4;
+
+#silliness for speed
+enableSystematics = 1;
+SysNoX = 1; 

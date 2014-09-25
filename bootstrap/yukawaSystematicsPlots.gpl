@@ -25,7 +25,7 @@ chiCut = 2
 #chiMin  = 0.75 #e-10
 chiMin  = 0.75e-10
 
-iterMin =  15 
+iterMin =  5 
 
 cutFunc = "( (column(chiCol) < chiCut*column(NDF)) & (column(chiCol) > chiMin*column(NDF)) & (column(iterCol) > iterMin ))"
 
@@ -38,7 +38,7 @@ chiCol = 1+2*NumSystematics+1
 iterCol = 1 + 2 * NumSystematics + 3
 
 alMax = 1e8
-alMin = 1e-6
+alMin = 1e-5
 
 
 ptsz = 0.7

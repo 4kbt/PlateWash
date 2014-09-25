@@ -1,4 +1,8 @@
 function X2 = chiSquareWSystematics( pM , x, signalColumns, fitColumn)
+
+	%Silliness for samin
+	x = x';
+
 	global HOMEDIR
 	columnNames;
 	fitErrColumn = diffErrOffset + fitColumn;
@@ -10,12 +14,8 @@ function X2 = chiSquareWSystematics( pM , x, signalColumns, fitColumn)
 	%Return to SI units
 	lambdas = 10.^lambdas; 
 	lambdas = lambdas * XLUnits;
-	slope = x(1) * XSUnits;
-	
-	%Load parameters
-	DoNotExtractFixedParameters = 1;
-	run3147FixedParameters;
-
+	slope = logAlphasToAlphas(x(1), logCrossover) * XSUnits;
+	alphas = logAlphasToAlphas(alphas, logCrossover);
 	
 	x1Vec = pM(:,aCol);
 	x2Vec = pM(:,bCol);
@@ -34,6 +34,7 @@ function X2 = chiSquareWSystematics( pM , x, signalColumns, fitColumn)
 	X2 = sum( (pM(:,fitColumn) - GBV ).^2  %lqr
 		./(pM(:,fitErrColumn).^2 +varG )
 		); %sum
+
 
 	%Script checks for X2=NaN and X2<0 and handles accordingly
 	chiSquaredErrorCheckHandle

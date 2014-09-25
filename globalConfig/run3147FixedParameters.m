@@ -1,13 +1,16 @@
 fprintf('# defining parameters ');
 
-if(exist("DoNotExtractFixedParameters"))
-        function printInteger() ;  end
-        function printSigNumber() ; end
-        function printSigError();  end
-	function printDecimal();   end
-	function printSI();   end
-	function printSIErr();   end
-	function fprintf(); 	   end
+try
+	if( 1 == DoNotExtractFixedParameters)
+		function printInteger() ;  end
+		function printSigNumber() ; end
+		function printSigError();  end
+		function printDecimal();   end
+		function printSI();   end
+		function printSIErr();   end
+		function fprintf(); 	   end
+	end
+catch
 end
 
 
@@ -82,8 +85,11 @@ fprintf('# setup ');
 columnNames; %script that defines all the data columns
 
 %correct time column for run 1690
-if(exist('pwrunNumber') && pwrunNumber == '1690')
-	pwTimeCol = 18;
+try
+	if(pwrunNumber == '1690')
+		pwTimeCol = 18;
+	end
+catch
 end
 
 
@@ -124,7 +130,7 @@ torqueBlur   = 1e-12;  printSI(torqueBlur, 1, -15, 'N-m', [HOMEDIR 'extracted/to
 %fprintf('# read Complete \n')
 
 %'INSUFFICENT bootstrap counts'
-NumberOfYukawaBootstraps = 1500; %was 1000
+NumberOfYukawaBootstraps = 30; %was 1000
 NumberOfArbFitBootstraps = NumberOfYukawaBootstraps; % was 300
 
 foilResonance = 1580;
@@ -151,19 +157,19 @@ injectIFOSystematic = 1;
 
 %Systematic uncertainties
 NumFitSystematics = numSystematics+1;
-enableSystematics = 1;
+%enableSystematics = 1; Done in columnNames for speed :-/
 if(enableSystematics == 0)
 	fprintf('Systematic uncertainties disabled!');
 end
-SysNoX = 1;
+%SysNoX = 1; In columnNames for speed
 if(SysNoX == 1)
 	fprintf('Systematics handling by bootstrap');
 end
 
-SysUB = 1e20;
+SysUB = 25;
 LamLB = log10(1e-15/XLUnits);
 LamUB = log10(10/XLUnits);
-SloUB = Inf; %1e-9/XSUnits;
+SloUB = log10(1e-6/XSUnits) - logCrossover;
 
 %1e-8 gives beautiful fits, of course.
 AppliedMagneticFieldUncertainty = 1e-3; %TotalBogus!

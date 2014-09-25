@@ -10,6 +10,7 @@ end
 
 %Define accumulators
 fittedData =[];
+detailAC = [];
 
 %Bootstrap loop
 for bootStrapCounter = 1:(NumberOfYukawaBootstraps)  % three covers add, null, subtract case.
@@ -46,12 +47,14 @@ for bootStrapCounter = 1:(NumberOfYukawaBootstraps)  % three covers add, null, s
 	NumIterations = 400; %default 100, but good fits are getting truncated at 200
 
 	%Define fit function
-	cSFunc = @(x) chiSquareWSystematics(pMd, x, signalColumns, torCol);
+%	cSFunc = @(x) chiSquareWSystematics(pMd, x, signalColumns, torCol);
+
 
 	%Fit begins
 	ranLam = log10(10.^( rand(NumFitSystematics,1) *3.0-6)/XLUnits);
 	ranAlp = (-1).^(round(rand(NumFitSystematics,1))+1).*10.^(rand(NumFitSystematics,1)*11-5);
-	ranSlo = (rand-0.5)*10e-12/XSUnits;
+	ranAlp = alphasToLogAlphas(ranAlp, logCrossover);
+	ranSlo = alphasToLogAlphas((rand-0.5)*10e-12/XSUnits, logCrossover);
 
 	%Compose ranSeed
 	ranSeed = [ ranSlo ]; 
@@ -59,25 +62,40 @@ for bootStrapCounter = 1:(NumberOfYukawaBootstraps)  % three covers add, null, s
 		ranSeed = [ranSeed ranLam(ranCtr) ranAlp(ranCtr)];
 	end
 
+	profile on
 	try
 		%When analyzing, make a cut on csMin
 		tic
 
 		%Do the fit.
-		[x, csMin, fitInfo, iter, nf]   = sqp(ranSeed, cSFunc, [], [], LowerBounds, UpperBounds,NumIterations);
+
+		[x , csMin, convergence, details] = samin("chiSquareWSystematics", {pMd, ranSeed', signalColumns, torCol}, {LowerBounds', UpperBounds', 20, 5, 0.1, 1e10, 5, 1e-3, 1, 1, 2});
+
+		%0 = no convergence, 1 = good, 2 = near edge
+		fitInfo = convergence; 
+		%total number of function evaluations
+		iter = details(end,1);
+		%number of temperature reductions
+		nf = rows(details);
+
+		%detailAC = [detailAC; details];	
+
+		%[x, csMin, fitInfo, iter, nf]   = sqp(ranSeed, cSFunc, [], [], LowerBounds, UpperBounds,NumIterations);
 
 		%Display fit outcome
 		[csMin fitInfo iter nf]
 
 		%Output fit results
-		x = unLogifyLambdas(x);
+		x = unLogLA(x, logCrossover);
+		x = logAlphasToAlphas(x(1), logCrossover);
 		bsO = [ transpose(x) csMin nf iter fitInfo ranSeed bootStrapCounter toc rows(pM) ifoSubtract];
+		%Dynamically locates subtraction column for variable number of parameters
 		injSubCol = columns(bsO);
 
 		%if fit converged, save it.
-		if(fitInfo == 101) 
+	%	if(fitInfo == 101) 
 	       		bootstrapOut = [bootstrapOut; bsO];
-		end
+	%	end
 
 		if(1 == testInjection & ~exist("fileInjection"))
 			injParameters = [lambdasInjected/XLUnits alphasInjected injSlope/XSUnits];
@@ -91,10 +109,16 @@ for bootStrapCounter = 1:(NumberOfYukawaBootstraps)  % three covers add, null, s
 		end
 		
 		%Outputs
-		outputBSO( outfilename, bootstrapOut, injParameters, injSubCol, signalColString , fittedData );
+		%if(mod( bootStrapCounter, 30 ) == 0 ) 
+			outputBSO( outfilename, bootstrapOut, injParameters, injSubCol, signalColString , fittedData );
+		%	save 'details2.dat' detailAC
+		%end
 	catch
 		'FIT ERROR!'
 		errorMessage
 	end
+	profile off
+	profOut = profile("info");
+	profshow(profOut)
 
 end %bsCnt
