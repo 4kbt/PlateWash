@@ -48,6 +48,7 @@ da1=AttractorPlateThickness; %# Ta attractor thickness
 dal1=AttractorBackerThickness; % Al attractor thickness
 
 %These offsets are entirely unchecked!
+attrHorizSimOffsetStep = 5e-3;
 attrHorizOffset = 3.5e-3;	attrHorizOffsetErr = 0.3e-3;	
 printSIErr(attrHorizOffset    , attrHorizOffsetErr, 2, -3,'m', [HOMEDIR '/extracted/attrHorizOffset.tex']);
 attrVertOffset = 0.5e-3;	attrVertOffsetErr = 0.3e-3;
