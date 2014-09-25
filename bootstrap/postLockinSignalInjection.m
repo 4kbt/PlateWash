@@ -58,7 +58,7 @@ if( testInjection == 1)
 
 %pause
 
-	injectedSignalArray = [injSlope/XSUnits];
+	injectedSignalArray = alphasToLogAlphas([injSlope/XSUnits], logCrossover);
 	logLambdas = log10(lambdasInjected/XLUnits); 
 	for injCtr = 1:columns(alphasInjected)
 		injectedSignalArray = [ injectedSignalArray logLambdas(injCtr) alphasToLogAlphas(alphasInjected(injCtr), logCrossover) ]

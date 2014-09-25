@@ -14,13 +14,8 @@ function X2 = chiSquareWSystematics( pM , x, signalColumns, fitColumn)
 	%Return to SI units
 	lambdas = 10.^lambdas; 
 	lambdas = lambdas * XLUnits;
-	slope = x(1) * XSUnits;
+	slope = logAlphasToAlphas(x(1), logCrossover) * XSUnits;
 	alphas = logAlphasToAlphas(alphas, logCrossover);
-	
-	%Load parameters
-	DoNotExtractFixedParameters = 1;
-	run3147FixedParameters;
-
 	
 	x1Vec = pM(:,aCol);
 	x2Vec = pM(:,bCol);

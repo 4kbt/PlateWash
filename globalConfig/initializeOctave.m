@@ -18,4 +18,4 @@ tpath = [HOMEDIR '/simulatedData/'];
 addpath(tpath);
 
 tpath = [HOMEDIR '/globalConfig/'];
-addpath(tpath);
+addpath(genpath(tpath));

@@ -62,4 +62,8 @@ touch2937 =  147 -2 + pfTouch;
 #Distance cut
 shortCut = (pfTouch+10)*1e-6;
 
-logCrossover = -4; 
+logCrossover = -4;
+
+#silliness for speed
+enableSystematics = 1;
+SysNoX = 1; 
