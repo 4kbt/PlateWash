@@ -91,7 +91,7 @@ for bootStrapCounter = 1:(NumberOfYukawaBootstraps)  % three covers add, null, s
 
 		%Output fit results
 		x = unLogLA(x, logCrossover);
-		x = logAlphasToAlphas(x(1), logCrossover);
+		x(1) = logAlphasToAlphas(x(1), logCrossover);
 		bsO = [ transpose(x) csMin nf iter fitInfo ranSeed bootStrapCounter toc rows(pM) ifoSubtract];
 		%Dynamically locates subtraction column for variable number of parameters
 		injSubCol = columns(bsO);
