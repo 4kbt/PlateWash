@@ -12,7 +12,7 @@ function T = trimPM(pM,  signalColumns, fitColumn)
         T.sx2Vec = pM(:,bErrCol);
 
         %Dynamic allocation of signal and error columns.
-        [T.BMat T.sBMat] = allocateSignalColumns(signalColumns, ABErrOffset, T.x1Vec, pM);
+        [T.BMat T.sBMat] = allocateSignalColumns(signalColumns, ABErrOffset, pM);
 
 	T.fitCol = pM(:,fitColumn);
 	T.fitErrCol = pM(:,fitErrColumn);
