@@ -7,11 +7,7 @@
 
 function vF = varFNoX(x,sx,B,sB,A,L,C, enableSystematics, Pstruct, Astruct)
 
-%	vF = 0;
-%	return
-
 	T = YukFiniteSizeCorrections(L, Pstruct, Astruct);
-	Q = YukPreFactor(Pstruct);
 
 	ALT = (A.*L.^2.*T);
 
@@ -21,7 +17,7 @@ function vF = varFNoX(x,sx,B,sB,A,L,C, enableSystematics, Pstruct, Astruct)
 	IL = 1./L.';
 
 	%compute vF
-	vF =   Q^2 * exp( 2 * ( -x * IL) ) .* (sB.^2*enableSystematics  ) * ALT.^2 ;
+	vF =   (Pstruct.YPF)^2 * exp( 2 * ( -x * IL) ) .* (sB.^2*enableSystematics  ) * ALT.^2 ;
 
 	if(isnan(vF))
 		warning('varF2 threw a NaN');

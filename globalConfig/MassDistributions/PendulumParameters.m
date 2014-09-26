@@ -65,3 +65,4 @@ momentArm=insetWidth/2+j1;	PendStruct.momentArm = momentArm;
 pendCenterToStep = j1;	PendStruct.pendCenterToStep = j1;
 
 PendStruct.G = G;
+PendStruct.YPF = YukPreFactor(PendStruct);
