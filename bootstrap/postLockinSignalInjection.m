@@ -66,7 +66,9 @@ if( testInjection == 1)
 	
 	%ensure presence of PendStruct, AttrStruct
 	run3147PendulumParameters
-	X2Check = chiSquareWSystematics(pM, injectedSignalArray, signalColumns, torCol, PendStruct, AttrStruct)
+	trimmedPM = trimPM(pM, signalColumns, torCol);
+        CNStruct = columnNamesStruct;
+	X2Check = chiSquareWSystematics(trimmedPM, injectedSignalArray, PendStruct, AttrStruct, CNStruct)
 	if(  X2Check > 2* rows(pM))
 		X2PerRows = X2Check/rows(pM)
 		error('chiSquared of the correct fit is too large!')

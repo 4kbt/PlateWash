@@ -49,10 +49,6 @@ for bootStrapCounter = 1:(NumberOfYukawaBootstraps)  % three covers add, null, s
 	UpperBounds = [ SloUB, repmat([LamUB,  SysUB], 1, NumFitSystematics)];
 	NumIterations = 400; %default 100, but good fits are getting truncated at 200
 
-	%Define fit function
-%	cSFunc = @(x) chiSquareWSystematics(pMd, x, signalColumns, torCol);
-
-
 	%Fit begins
 	ranLam = log10(10.^( rand(NumFitSystematics,1) *3.0-6)/XLUnits);
 	ranAlp = (-1).^(round(rand(NumFitSystematics,1))+1).*10.^(rand(NumFitSystematics,1)*11-5);
@@ -65,13 +61,19 @@ for bootStrapCounter = 1:(NumberOfYukawaBootstraps)  % three covers add, null, s
 		ranSeed = [ranSeed ranLam(ranCtr) ranAlp(ranCtr)];
 	end
 
+
 	%profile on
+
+	%Reduces pMd to a struct containing only those columns needed for chiSquared.
+	trimmedPM = trimPM(pMd, signalColumns, torCol);
+	CNStruct = columnNamesStruct;
+
 	try
 		%When analyzing, make a cut on csMin
 		tic
 
 		%Do the fit.
-		[x , csMin, convergence, details] = samin("chiSquareWSystematics", {pMd, ranSeed', signalColumns, torCol, PendStruct, AttrStruct}, {LowerBounds', UpperBounds', 20, 5, 0.1, 1e10, 5, 1e-3, 1, 1, 2});
+		[x , csMin, convergence, details] = samin("chiSquareWSystematics", {trimmedPM, ranSeed', PendStruct, AttrStruct, CNStruct}, {LowerBounds', UpperBounds', 20, 5, 0.1, 1e10, 5, 1e-3, 1, 1, 2});
 
 		%0 = no convergence, 1 = good, 2 = near edge
 		fitInfo = convergence; 

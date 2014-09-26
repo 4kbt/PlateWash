@@ -1,11 +1,7 @@
-function X2 = chiSquareWSystematics( pM , x, signalColumns, fitColumn, PendStruct, AttrStruct)
+function X2 = chiSquareWSystematics( pMT , x, PendStruct, AttrStruct, CNStruct)
 
 	%Silliness for samin
 	x = x';
-
-	global HOMEDIR
-	columnNames;
-	fitErrColumn = diffErrOffset + fitColumn;
 
 	chiSquaredSanitizeInputs(x);	
 
@@ -13,26 +9,21 @@ function X2 = chiSquareWSystematics( pM , x, signalColumns, fitColumn, PendStruc
 
 	%Return to SI units
 	lambdas = 10.^lambdas; 
-	lambdas = lambdas * XLUnits;
-	slope = logAlphasToAlphas(x(1), logCrossover) * XSUnits;
-	alphas = logAlphasToAlphas(alphas, logCrossover);
+	lambdas = lambdas * CNStruct.XLUnits;
+	slope = logAlphasToAlphas(x(1), CNStruct.logCrossover) * CNStruct.XSUnits;
+	alphas = logAlphasToAlphas(alphas, CNStruct.logCrossover);
 	
-	x1Vec = pM(:,aCol);
-	x2Vec = pM(:,bCol);
-	sx1Vec = pM(:,aErrCol);
-	sx2Vec = pM(:,bErrCol);
-
-	%Dynamic allocation of signal and error columns.
-	[BMat sBMat] = allocateSignalColumns(signalColumns, ABErrOffset, x1Vec, pM);
-
 	%evaluate it!
-	[GBV varG] = evalYukawaSystematicAveAndVariance(x1Vec, x2Vec, sx1Vec, sx2Vec, BMat, sBMat, alphas, lambdas, slope, enableSystematics, SysNoX, PendStruct, AttrStruct);
+	[GBV varG] = evalYukawaSystematicAveAndVariance(pMT.x1Vec, pMT.x2Vec,
+			 	pMT.sx1Vec, pMT.sx2Vec, pMT.BMat, pMT.sBMat,
+				alphas, lambdas, slope, CNStruct.enableSystematics, 
+				CNStruct.SysNoX, PendStruct, AttrStruct);
 
 	%Uncomment for diagnostic information
 %	chiSquareWSystematicsDiagnostics
 
-	X2 = sum( (pM(:,fitColumn) - GBV ).^2  %lqr
-		./(pM(:,fitErrColumn).^2 +varG )
+	X2 = sum( (pMT.fitCol - GBV ).^2  %lqr
+		./( (pMT.fitErrCol).^2 +varG )
 		); %sum
 
 
