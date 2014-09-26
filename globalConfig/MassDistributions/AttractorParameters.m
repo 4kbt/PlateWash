@@ -42,10 +42,10 @@ printSIErr(AttractorInnerDiameter ,  AttractorInnerDiameterErr  , 1, -3, 'm', [H
 AttractorRimWidth= (AttractorDiameter - AttractorInnerDiameter)/2.0;
 
 
-pa1=rhoTaA; % #Ta
-pal1=rhoAl; % #Al
-da1=AttractorPlateThickness; %# Ta attractor thickness
-dal1=AttractorBackerThickness; % Al attractor thickness
+pa1=rhoTaA; 			AttrStruct.pa1	= pa1; % #Ta
+pal1=rhoAl; 			AttrStruct.pal1 = pal1; % #Al
+da1=AttractorPlateThickness;	AttrStruct.da1	= da1; %# Ta attractor thickness
+dal1=AttractorBackerThickness; 	AttrStruct.dal1	= dal1; % Al attractor thickness
 
 %These offsets are entirely unchecked!
 attrHorizSimOffsetStep = 5e-3;

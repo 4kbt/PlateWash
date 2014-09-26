@@ -1,8 +1,8 @@
-function fbar = FBarNoX(x,sx,B,A,L,C)
+function fbar = FBarNoX(x,sx,B,A,L,C,Pstruct, Astruct)
 %	sx = sx*0;
 
-	T = YukFiniteSizeCorrections(L);
-	Q = YukPreFactor;
+	T = YukFiniteSizeCorrections(L,Pstruct,Astruct);
+	Q = YukPreFactor(Pstruct);
 
 	fbar = C*x;
 	for ctr = 1:rows(L)

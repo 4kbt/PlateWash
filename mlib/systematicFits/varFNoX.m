@@ -5,13 +5,13 @@
 %A and L are size Lx1
 % in general, N >> L. 
 
-function vF = varFNoX(x,sx,B,sB,A,L,C, enableSystematics)
+function vF = varFNoX(x,sx,B,sB,A,L,C, enableSystematics, Pstruct, Astruct)
 
 %	vF = 0;
 %	return
 
-	T = YukFiniteSizeCorrections(L);
-	Q = YukPreFactor;
+	T = YukFiniteSizeCorrections(L, Pstruct, Astruct);
+	Q = YukPreFactor(Pstruct);
 
 	ALT = (A.*L.^2.*T);
 

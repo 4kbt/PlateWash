@@ -8,6 +8,9 @@ if (1 == injectIFOSystematic)
 	[ifoP ifoV] = loadBSFits( 'output/bootstrapArbFit.bootstrappedFits.dat');
 end
 
+%Needed to ensure presence of PendStruct and AttrStruct
+run3147PendulumParameters
+
 %Define accumulators
 fittedData =[];
 detailAC = [];
@@ -62,14 +65,13 @@ for bootStrapCounter = 1:(NumberOfYukawaBootstraps)  % three covers add, null, s
 		ranSeed = [ranSeed ranLam(ranCtr) ranAlp(ranCtr)];
 	end
 
-	profile on
+	%profile on
 	try
 		%When analyzing, make a cut on csMin
 		tic
 
 		%Do the fit.
-
-		[x , csMin, convergence, details] = samin("chiSquareWSystematics", {pMd, ranSeed', signalColumns, torCol}, {LowerBounds', UpperBounds', 20, 5, 0.1, 1e10, 5, 1e-3, 1, 1, 2});
+		[x , csMin, convergence, details] = samin("chiSquareWSystematics", {pMd, ranSeed', signalColumns, torCol, PendStruct, AttrStruct}, {LowerBounds', UpperBounds', 20, 5, 0.1, 1e10, 5, 1e-3, 1, 1, 2});
 
 		%0 = no convergence, 1 = good, 2 = near edge
 		fitInfo = convergence; 
@@ -117,8 +119,8 @@ for bootStrapCounter = 1:(NumberOfYukawaBootstraps)  % three covers add, null, s
 		'FIT ERROR!'
 		errorMessage
 	end
-	profile off
-	profOut = profile("info");
-	profshow(profOut)
+	%profile off
+	%profOut = profile("info");
+	%profshow(profOut)
 
 end %bsCnt

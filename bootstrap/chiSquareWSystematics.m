@@ -1,4 +1,4 @@
-function X2 = chiSquareWSystematics( pM , x, signalColumns, fitColumn)
+function X2 = chiSquareWSystematics( pM , x, signalColumns, fitColumn, PendStruct, AttrStruct)
 
 	%Silliness for samin
 	x = x';
@@ -26,7 +26,7 @@ function X2 = chiSquareWSystematics( pM , x, signalColumns, fitColumn)
 	[BMat sBMat] = allocateSignalColumns(signalColumns, ABErrOffset, x1Vec, pM);
 
 	%evaluate it!
-	[GBV varG] = evalYukawaSystematicAveAndVariance(x1Vec, x2Vec, sx1Vec, sx2Vec, BMat, sBMat, alphas, lambdas, slope, enableSystematics, SysNoX);
+	[GBV varG] = evalYukawaSystematicAveAndVariance(x1Vec, x2Vec, sx1Vec, sx2Vec, BMat, sBMat, alphas, lambdas, slope, enableSystematics, SysNoX, PendStruct, AttrStruct);
 
 	%Uncomment for diagnostic information
 %	chiSquareWSystematicsDiagnostics

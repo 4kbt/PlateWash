@@ -53,13 +53,15 @@ inlayMass=rhoInlay*inlayHeight*inlayThickness*inlayWidth; printSigNumber(inlayMa
 
 
 
-h1=pendulumBodyHeight; % Pendulum height
-w1=pendulumBodyWidth; % Pendulum Width
-j1=pendulumBodyWidth/2.0-inlayWidth;%Distance from pendulum center to step.
-a1=inlayThickness; % inset thickness
-thickness1=pendulumBodyThickness;
-ph1=rhoTaP;  %Ta
-pl1=rhoTi; %Ti
-insetWidth=inlayWidth;
-momentArm=insetWidth/2+j1;
-pendCenterToStep = j1;
+h1=pendulumBodyHeight;	PendStruct.h1 = h1; % Pendulum height
+w1=pendulumBodyWidth;	PendStruct.w1 = w1; % Pendulum Width
+j1=pendulumBodyWidth/2.0-inlayWidth; PendStruct.j1 = j1;%Distance from pendulum center to step.
+a1=inlayThickness;	PendStruct.a1 = a1; % inset thickness
+thickness1=pendulumBodyThickness; PendStruct.thickness1 = thickness1;
+ph1=rhoTaP;		PendStruct.ph1 = ph1;  %Ta
+pl1=rhoTi; 		PendStruct.pl1 = pl1;  %Ti
+insetWidth=inlayWidth;	PendStruct.insetWidth = insetWidth; 
+momentArm=insetWidth/2+j1;	PendStruct.momentArm = momentArm;
+pendCenterToStep = j1;	PendStruct.pendCenterToStep = j1;
+
+PendStruct.G = G;

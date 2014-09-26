@@ -61,10 +61,12 @@ if( testInjection == 1)
 	injectedSignalArray = alphasToLogAlphas([injSlope/XSUnits], logCrossover);
 	logLambdas = log10(lambdasInjected/XLUnits); 
 	for injCtr = 1:columns(alphasInjected)
-		injectedSignalArray = [ injectedSignalArray logLambdas(injCtr) alphasToLogAlphas(alphasInjected(injCtr), logCrossover) ]
+		injectedSignalArray = [ injectedSignalArray logLambdas(injCtr) alphasToLogAlphas(alphasInjected(injCtr), logCrossover) ];
 	end
 	
-	X2Check = chiSquareWSystematics(pM, injectedSignalArray, signalColumns, torCol)
+	%ensure presence of PendStruct, AttrStruct
+	run3147PendulumParameters
+	X2Check = chiSquareWSystematics(pM, injectedSignalArray, signalColumns, torCol, PendStruct, AttrStruct)
 	if(  X2Check > 2* rows(pM))
 		X2PerRows = X2Check/rows(pM)
 		error('chiSquared of the correct fit is too large!')
