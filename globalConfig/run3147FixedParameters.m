@@ -169,7 +169,7 @@ end
 SysUB = 25;
 LamLB = log10(1e-15/XLUnits);
 LamUB = log10(10/XLUnits);
-SloUB = log10(1e-6/XSUnits) - logCrossover;
+SloUB = log10(1e-4/XSUnits) - logCrossover;
 
 %1e-8 gives beautiful fits, of course.
 AppliedMagneticFieldUncertainty = 1e-3; %TotalBogus!
