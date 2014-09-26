@@ -130,7 +130,7 @@ torqueBlur   = 1e-12;  printSI(torqueBlur, 1, -15, 'N-m', [HOMEDIR 'extracted/to
 %fprintf('# read Complete \n')
 
 %'INSUFFICENT bootstrap counts'
-NumberOfYukawaBootstraps = 30; %was 1000
+NumberOfYukawaBootstraps = 300; %was 1000
 NumberOfArbFitBootstraps = NumberOfYukawaBootstraps; % was 300
 
 foilResonance = 1580;
