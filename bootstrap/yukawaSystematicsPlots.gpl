@@ -6,6 +6,8 @@ gravityFlag = "gravityOnly"
 fn = system("echo $GNUPLOTME");
 outfile = fn .".eps"
 
+cn = 'output/confidenceInterval.dat'
+
 if ( exists( gravityFlag) ) {
 	outfile = fn .".grav.eps"
 }
@@ -61,7 +63,9 @@ pl [:][alMin:]\
 	for [ctr=NumToPlot:1:-1] \
 	fn index 0 u ( @cutFunc ? column(2*ctr) * XLUnits : 1/0):( column(2*ctr+1)) w p lc ctr pt 7 ps ptsz,\
 	for [ctr=NumToPlot:1:-1] \
-	fn index 1 u (column(ctr) * XLUnits):(column(ctr+NumSystematics)) w p lc ctr pt 1 ps ptsz*3
+	fn index 1 u (column(ctr) * XLUnits):(column(ctr+NumSystematics)) w p lc ctr pt 1 ps ptsz*3,\
+	cn u ($3*XLUnits):($5+2.0*$6):(($4-$3)*XLUnits):(0) w vectors nohead lt 3 lw 2 tit 'Gravity 95% inclusion',\
+	cn u ($3*XLUnits):($5-2.0*$6):(($4-$3)*XLUnits):(0) w vectors nohead lt 3 lw 2
 	
 
 unset title
@@ -80,7 +84,9 @@ pl [:][alMin:]\
 	fn index 0 u (@cutFunc ? column(2*ctr) * XLUnits: 1/0):( -column(2*ctr+1)) w p lc ctr pt 7 ps ptsz\
 			title columnhead(1+2*ctr),\
 	for [ctr=NumToPlot:1:-1] \
-	fn index 1 u (column(ctr) * XLUnits):(-column(ctr+NumSystematics)) w p lc ctr pt 1 ps ptsz*3
+	fn index 1 u (column(ctr) * XLUnits):(-column(ctr+NumSystematics)) w p lc ctr pt 1 ps ptsz*3,\
+	cn u ($3*XLUnits):(-$5+2.0*$6):(($4-$3)*XLUnits):(0) w vectors nohead lt 3 lw 2,\
+	cn u ($3*XLUnits):(-$5-2.0*$6):(($4-$3)*XLUnits):(0) w vectors nohead lt 3 lw 2
 	
 
 set format x "% g"
