@@ -7787,8 +7787,8 @@ The PlateWash apparatus is sensitive to temperature.
 
 \begin_layout Standard
 As passive isolation, the vacuum system is an excellent insulator, with
- a time constant of about a week XXXMA for the internal aluminum baseplate
- with respect to the outside world.
+ a time constant of days for the internal aluminum baseplate with respect
+ to the outside world.
  As further, rather limited, insulation, the clean-room fans are turned
  off during measurement periods, trapping a volume of air around the apparatus.
 \end_layout
@@ -7962,32 +7962,13 @@ bounce test
 \end_inset
 
 ).
- Effort has been made to keep the active surfaces very clean through the
- use of 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-class XXXMA 
-\end_layout
-
-\end_inset
-
-clean room procedures.
+ Effort has been made to keep the active surfaces dust-free through the
+ use of clean room procedures.
  We see the effects of dust in perhaps 50% of our initial cleanings of a
  surface.
- The presence of dust is inferred with the interferometer.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMI expand-me
-\end_layout
-
-\end_inset
-
-
+ The presence of dust is inferred with the interferometer; if dust is present
+ between the attractor and foil, it can cause a weak displacement of the
+ foil before the attractor touches the foil directly.
 \end_layout
 
 \begin_layout Subparagraph
