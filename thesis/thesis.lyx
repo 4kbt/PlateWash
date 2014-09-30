@@ -7026,13 +7026,9 @@ where
  the implied gas damping Q is approximately 800.
 \end_layout
 
-\begin_layout Paragraph
-Noise anti-aliasing 
-\end_layout
-
 \begin_layout Standard
-The torque noise from free gas damping is white; there is no characteristic
- timescale.
+The torque noise from free gas damping is white; there is no torsion-balance-acc
+essible characteristic timescale.
  The torque noise from proximity-enhanced damping is peaked around 
 \begin_inset Formula $\tau_{eq}$
 \end_inset
@@ -7042,16 +7038,20 @@ The torque noise from free gas damping is white; there is no characteristic
 \end_layout
 
 \begin_layout Standard
-With the PlateWash atmosphere, we expect gas damping-driven noise to be
- roughly 
-\begin_inset Formula 
-\[
-\tau^{2}(f)=XXX
-\]
-
+With the PlateWash atmosphere, inferring from our Lévy measurements at closest
+ proximity to the foil, we expect gas damping-driven noise to be roughly
+ 
+\begin_inset Formula $S_{\tau}(f)\approx$
 \end_inset
 
 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../systematics/pressure/extracted/squeezeFilmNoisePower.tex"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsubsection
