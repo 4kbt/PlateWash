@@ -1,8 +1,9 @@
-HOMEDIR := /home/charlie/trialEotwash/Eotwash/
+HOMEDIR := /home/charlie/homeVersion/Eotwash/
 
 OCT:= octave --no-init-file \
 	--eval "global HOMEDIR = \"$(HOMEDIR)\";"\
 	--eval 'initializeOctave;'\
+	--eval 'ignore_function_time_stamp("all");'\
 	-p $(HOMEDIR)/globalConfig/ \
 	-q 
 
@@ -21,7 +22,7 @@ MLIB   := $(MLIB) $(GLOBAL)
 LYX    := lyx -batch --export "pdf2" -dbg info,latex
 
 .INTERACT: 
-	$(OCT) --persist
+	$(OCT) --persist --eval 'ignore_function_time_stamp("system");'
 
 #The dash is meaningful.
 .GINTERACT:
