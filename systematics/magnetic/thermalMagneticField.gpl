@@ -7,7 +7,7 @@ sigAl = 1.0/28.2e-9
 
 #Thicknesses
 tTa = 0.0254*30e-3
-tAl = 2.6e-3
+tAl = 1.6e-3
 
 #Constants
 k_B =  1.38065050000000e-23
@@ -55,10 +55,10 @@ BFAl(f,z) = sqrt(                                      ( PropAl/(z+tTa) * freqDe
 set ylabel 'Magnetic Field Noise (T/{/Symbol @{\140\140}\326}Hz)'
 set title  'Tantalum attractor'
 
-pl [1e-7:100][1e-18:1e-6] \
-	BFTa(0   ,x) ,\
-	BFTa(0.1 ,x) ,\
-	BFTa(1   ,x) ,\
+pl [1e-7:1][1e-18:1e-8] \
+	BFTa(0   ,x) lt 3,\
+	BFTa(0.1 ,x) lt 3 ,\
+	BFTa(1   ,x) lt 3 ,\
 	BFTa(10  ,x) ,\
 	BFTa(100 ,x) ,\
 	BFTa(1e3 ,x) ,\
@@ -71,10 +71,10 @@ pl [1e-7:100][1e-18:1e-6] \
 
 set title 'Aluminum backer'
 
-pl [1e-7:1][1e-18:1e-6] \
-	BFAl(0   ,x) ,\
-	BFAl(0.1 ,x) ,\
-	BFAl(1   ,x) ,\
+pl [1e-7:1][1e-18:1e-8] \
+	BFAl(0   ,x) lt 3,\
+	BFAl(0.1 ,x) lt 3,\
+	BFAl(1   ,x) lt 3,\
 	BFAl(10  ,x) ,\
 	BFAl(100 ,x) ,\
 	BFAl(1e3 ,x) ,\
@@ -84,13 +84,13 @@ pl [1e-7:1][1e-18:1e-6] \
 	BFAl(1e7 ,x) 
 
 #pause -1 
-set key at screen 0.8,0.35 
+set key at screen 0.9,0.4 title "frequency of interest:\nall plots have\nmatching vertical order" Left
 set title 'combined Ta attractor and Al backer'
 
-pl [1e-7:1][1e-18:1e-6] \
-	BF(0   ,x) tit '"DC"',\
-	BF(0.1 ,x) tit '0.1 Hz',\
-	BF(1   ,x) tit '1 Hz',\
+pl [1e-7:1][1e-18:1e-8] \
+	BF(0   ,x) lt 3,\
+	BF(0.1 ,x) lt 3,\
+	BF(1   ,x) lt 3 tit '1 Hz and below',\
 	BF(10  ,x) tit '10 Hz',\
 	BF(100 ,x) tit '100 Hz',\
 	BF(1e3 ,x) tit '1 kHz',\

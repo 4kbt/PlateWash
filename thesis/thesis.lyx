@@ -9225,32 +9225,152 @@ key "varpula1984magnetic,lee2008calculation"
 .
  The interaction of thermally-generated fields may give rise to a false
  signal.
- The thermal fields have low frequency components that will pass through
- the foil.
+ While it is difficult to estimate the forces due to of such an effect,
+ the expected field strengths are plotted in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Expected-thermally-driven-magnet"
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Standard
-XXXRC Deal with these somehow.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../systematics/magnetic/thermalMagneticField.eps
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Subparagraph
-Attractor-to-pendulum
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Expected-thermally-driven-magnet"
+
+\end_inset
+
+Expected thermally-driven magnetic fields, computed using the formalism
+ begun by Varpula 
+\emph on
+et al.
+\emph default
+.
+ The fields are small, but reach easily through the foil.
 \end_layout
 
-\begin_layout Subparagraph
-Attractor induces fields in pendulum
+\end_inset
+
+
 \end_layout
 
-\begin_layout Subparagraph
-Attractor modulation of foil fields
+\begin_layout Plain Layout
+
 \end_layout
 
-\begin_layout Subparagraph
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The thermal fields have low frequency components that will pass through
+ the foil.
+ The skin depth 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "jackson"
+
+\end_inset
+
+ of a material is 
+\begin_inset Formula $\delta=\sqrt{2\rho/\mu\omega}$
+\end_inset
+
+, where 
+\begin_inset Formula $\mu$
+\end_inset
+
+ is the magnetic permeability, 
+\begin_inset Formula $\rho$
+\end_inset
+
+ the resistivity, and 
+\begin_inset Formula $\omega$
+\end_inset
+
+ the angular frequency of interest.
+ For Beryllium-Copper, the resistivity is a factor of 2-10 larger than pure
+ copper's 
+\begin_inset Formula $17$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+n
+\begin_inset Formula $\Omega$
+\end_inset
+
+/m 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "davis2001copper"
+
+\end_inset
+
+.
+ For frequencies below ~100
+\begin_inset space ~
+\end_inset
+
+MHz, the isolating foil is effectively transparent to RF.
+\end_layout
+
+\begin_layout Standard
+These thermal fields can produce pendulum torques in several ways: 
+\end_layout
+
+\begin_layout Itemize
+Thermal fields induce currents/fields in the opposing mass, leading to an
+ always-repulsive interaction
+\end_layout
+
+\begin_layout Itemize
+Attractor-to-pendulum: direct interaction between the thermal fields
+\end_layout
+
+\begin_layout Itemize
+Attractor modulation of foil fields: thermal fields in the foil can be modulated
+ by the non-zero permeability of the attractor
+\end_layout
+
+\begin_layout Itemize
 Attractor fields interact with pendulum contaminant
 \end_layout
 
-\begin_layout Subparagraph
+\begin_layout Itemize
 Pendulum fields interact with attractor contaminant
+\end_layout
+
+\begin_layout Standard
+While no previous work has ever considered these interactions, and we're
+ not certain how to compute their strengths with confidence, we enumerate
+ them here to spur future investigation.
 \end_layout
 
 \begin_layout Paragraph
