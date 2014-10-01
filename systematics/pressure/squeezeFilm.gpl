@@ -1,0 +1,24 @@
+set term postscript enhanced solid color
+set output 'squeezeFilm.eps'
+
+FN = 'foilQ.dat'
+IN = 'foilIntrinsicQ.dat'
+
+set logsc
+
+set format x "10^{%T}"
+set format y "10^{%T}"
+
+set key noauto below
+
+set ylabel 'Q'
+set xlabel 'Attractor-foil separation (m)'
+
+set label 'intrinsic foil Q' at 3e-5,1e4 center front
+
+set arrow from 5e-6,1e3 to 5e-6, 1e9 nohead lt -1 front
+set label 'approximate-minimum attractor-foil distance' at 4e-6,1e6 center front rotate by 90 
+
+pl [1e-6:1e-3][1e3:1e9]\
+	IN u 1:($2*0.1):($2*10) w filledcurves lt 5 ,\
+	FN w l lt 3 tit 'gas damping foil Q'

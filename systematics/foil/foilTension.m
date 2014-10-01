@@ -3,6 +3,8 @@ fundamentalConstants
 
 foilTension = foilDensity*foilThickness*pi^2*foilDiameter^2*foilResonance^2/(2.4048)^2;
 printSigNumber(foilTension, [HOMEDIR '/extracted/foilTension.tex'], 2);
+save 'foilTension.dat' foilTension
+
 
 gasPressure = load( [HOMEDIR '/systematics/pressure/finalPressure.dat']); 
 gasPressure = gasPressure * OnePascalInTorr;

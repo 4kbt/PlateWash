@@ -8238,7 +8238,96 @@ where the thermal velocity
 \end_layout
 
 \begin_layout Standard
-XXXRC gas numbers
+The quality factor, in this approximate model, is then
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Q=\frac{T_{foil}d}{AP}\frac{(1+\omega^{2}\tau^{2})}{\omega^{2}\tau^{2}}
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $T_{foil}$
+\end_inset
+
+ is the foil tension.
+ The expectation for PlateWash is plotted in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Proximity-enhanced-gas-damping"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../systematics/pressure/squeezeFilm.eps
+	width 70text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Proximity-enhanced-gas-damping"
+
+\end_inset
+
+Proximity-enhanced gas damping as a function of attractor-foil separation.
+ If the gas-damping quality factor (
+\begin_inset Formula $Q$
+\end_inset
+
+) is larger than the intrinsic 
+\begin_inset Formula $Q$
+\end_inset
+
+ of the foil (determined conservatively here from the 
+\begin_inset Formula $\sim10$
+\end_inset
+
+-
+\begin_inset Formula $20$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+s ringdown time of the foil), gas damping will be an inconsequential source
+ of systematic uncertainty.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

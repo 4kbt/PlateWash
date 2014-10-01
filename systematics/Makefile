@@ -1,6 +1,6 @@
 include ../Makefile.inc
 
-all : therm mag resist elec press foilTarg scans casimirComp
+all : foilTarg therm mag resist elec press scans casimirComp
 
 mag: 
 	$(MAKE)  $(PARALLEL) -C magnetic
@@ -14,7 +14,8 @@ resist:
 elec :
 	$(MAKE)  $(PARALLEL) -C electrical
 
-press:
+#apologies for this dependency; this can be done better.
+press: foilTarg
 	$(MAKE)  $(PARALLEL) -C pressure
 
 foilTarg: 
