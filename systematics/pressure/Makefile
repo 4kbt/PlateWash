@@ -9,7 +9,7 @@ pressureRiseFitParameters.dat : pressureRise.gpl pressureRiseExtractParameters.m
 
 extracted/finalPressurePa.tex extracted/squeezeFilmNoisePower.tex : finalPressure.m finalPressure.dat $(GLOBAL)
 	$(OCT) finalPressure.m
-	$(HOMEDIR)/bin/mathify extracted/*
+	$(HOMEDIR)/bin/mathify.sh extracted/*
 
 
 extracted/unconstrainedQ.tex : unconstrainedQ.m $(GLOBAL)
