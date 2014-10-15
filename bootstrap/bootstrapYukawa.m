@@ -20,9 +20,9 @@ for bootStrapCounter = 1:NumberOfYukawaBootstraps
 	%lambdas, alphas
 	switch fitAlgorithm
 	 case {'NMS'} 
-		cSFunc = @(x) -chiSquareVectorYukawaWSlope(d, x(1), x(2), x(3));
+		cSFunc = @(x) -chiSquareVectorYukawaWSlope(d, x(1), x(2), x(3), PendStruct, AttrStruct);
 	 case {'SQP'}
-		cSFunc = @(x) chiSquareVectorYukawaWSlope(d, x(1), x(2), x(3));
+		cSFunc = @(x) chiSquareVectorYukawaWSlope(d, x(1), x(2), x(3), PendStruct, AttrStruct);
 	 case {'Levenburg'}
 		%uses yukfit.m
 	 otherwise
