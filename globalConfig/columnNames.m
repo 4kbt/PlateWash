@@ -26,9 +26,11 @@ psSquareCol = 15;
 aCol = numSensors+numPWSensors+psSquareCol;
 aErrCol = aCol + ABErrOffset;
 aMaxCol = aCol + 7*numSensors;
+aMinCol = aCol + 8*numSensors;
 bCol = aCol+numSensors;
 bErrCol = bCol + ABErrOffset;
 bMaxCol = bCol + 8*numSensors; #yes, aMaxCol++.
+bMinCol = bCol + 9*numSensors; #yes, aMinCol++.
 
 
 ifoTimeCol  = 1;
