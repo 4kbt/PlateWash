@@ -99,7 +99,7 @@ arbFit : $(PREREQUISITES)
 	$(OCT) arbFitWrapper.m
 	$(HOMEDIR)/bin/mathify.sh extracted/
 	./arbFitPlots.sh
-	./generatePlottingTeXArbFit.sh
+	./generatePlottingTeXArbFit.sh $(HOMEDIR)
 
 arbFitTest : $(PREREQUISITES)
 	$(OCT) $(FITA) arbFitWrapper.m
@@ -112,7 +112,7 @@ arbFitTest : $(PREREQUISITES)
 	$(OCT) $(FITH) arbFitWrapper.m
 	$(OCT) $(FITI) arbFitWrapper.m
 	./arbFitPlots.sh
-	./generatePlottingTeXArbFit.sh
+	./generatePlottingTeXArbFit.sh $(HOMEDIR)
 
 
 $(IFOOUT) : $(PREREQUISITES) ifoArbWrapper.m
