@@ -1,0 +1,31 @@
+set term  postscript enhanced solid color eps
+set output 'run3147attractorPositionError.eps'
+
+fn = '../results/run3147pM3FilterMerge.dat'
+
+load HOMEDIR."glib/gnuplotColumns.gpl"
+
+set xlabel 'attractor position ({/Symbol m}m)'
+set ylabel 'attractor position uncertainty ({/Symbol m}m)'
+
+set logsc y
+
+max(a,b) = ( a > b ? a : b);
+
+ptSz = 0.5
+
+set key noauto below
+
+pl \
+	fn u (column(aCol)*1e6):(column(aErrCol)*1e6) w p pt 7 ps ptSz lc 3 tit 'std. dev. of mean',\
+	fn u (column(bCol)*1e6):(column(bErrCol)*1e6) w p pt 7 ps ptSz lc 3,\
+	fn u (column(aCol)*1e6):( max( \
+		 (column(aMaxCol)-column(aCol))*1e6,\
+		-(column(aMinCol)-column(aCol))*1e6) )\
+		 w p pt 7 ps ptSz lc 5 tit 'maximum deviation from mean',\
+	fn u (column(bCol)*1e6):( max( \
+		 (column(bMaxCol)-column(bCol))*1e6,\
+		-(column(bMinCol)-column(bCol))*1e6) )\
+		 w p pt 7 ps ptSz lc 5 
+
+
