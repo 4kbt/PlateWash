@@ -11695,7 +11695,29 @@ By choosing the angle/P-term signal instead of the feedback signal as the
 \end_layout
 
 \begin_layout Subsection
-Switches per cut XXXRC
+Switches per cut
+\end_layout
+
+\begin_layout Standard
+The number of attractor position changes per cut was chosen to be large-enough
+ to allow a sufficient understanding of the switch-to-switch variation in
+ the torque at each point.
+ We settled on 10 switches per cut in an ad-hoc fashion.
+ It is slightly more than the minimum required to have a reasonable understandin
+g of the switch-to-switch variation ( 
+\begin_inset Formula $\sim7$
+\end_inset
+
+ is perhaps the minimum one could use for that determination), and still
+ short enough to address the speed concerns laid out in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Statistics"
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Section
