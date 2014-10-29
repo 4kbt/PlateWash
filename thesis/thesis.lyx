@@ -12690,9 +12690,18 @@ filename "../extracted/kappa.tex"
 \end_inset
 
 .
- (XXXRC Jens wants a kappa errorbar) The time variation of the calibration
- signal is most-probably understood as slow drifts in the pendulum/foil/electrod
-e spacing/alignment.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+(XXXMA Jens wants a kappa errorbar)
+\end_layout
+
+\end_inset
+
+ The time variation of the calibration signal is most-probably understood
+ as slow drifts in the pendulum/foil/electrode spacing/alignment.
  It is also possible that some of the electronics involved in the feedback
  loop have had small gain drifts over time.
 \end_layout
