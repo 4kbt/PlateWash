@@ -1,34 +1,77 @@
-load 'output/bootstrapYukawa.Sysa0l0.0002slop0SysNull.dat'
-%load 'output/bootstrapYukawa.Sysa50000l0.0002slop-1e-11SysNull.dat'
+%data are two columns, lambda and alpha, binning is in the lambda direction
+%minBinNum gives the minimum bin size
+%output format is confIntervals = [lmean lstd lmin lmax amean astd]
 
-data = on;
+function confIntervals = confidenceIntervals( data, minBinNum, mode, maxLam)
 
-[sordid, sindex] = sort(data(:,2));
+	%sort on lambda
+	[sordid, sindex] = sort(data(:,1));
+	sortedData = data(sindex,:);
 
-sortedData = data(sindex,:);
+	%Lambdas and alphas
+	ls = sortedData(:,1);
+	as = sortedData(:,2);
 
-nstd = 7;
+	switch mode
+		case "FixedNumberBins"
+			%Trim to integermultiple of nstd
+			aCut = floor( rows(as) / minBinNum ); 
 
-ls = sortedData(:,2);
-as = sortedData(:,3);
+			%recutting into a bin/matrix of data
+			ar = reshape(as(1:(aCut*minBinNum)), [minBinNum aCut]);
+			lr = reshape(ls(1:(aCut*minBinNum)), [minBinNum aCut]);
 
-%Trim to integermultiple of nstd
-aCut = floor( rows(as) / nstd ); 
+			%Alpha properties per bin
+			amean = mean(ar);
+			astd  = std(ar); 
+
+			%lambda properties
+			lmean = mean(lr);
+			lstd  = std(lr);
+			lmax  = max(lr);
+			lmin  = min(lr);
+
+		case "FixedWidthBins"
+
+			histMin = 0;
+			binScaleStep = 1.1; %fractional increment in bin size at each loop iteration
+			binStep = ( maxLam - ls(1) ) / ( rows(ls) / minBinNum)/binScaleStep ; 
+
+			while( histMin < minBinNum )
+
+				%Just to be sure.
+				clear binN
+
+				binStep = binStep * binScaleStep;
+
+				bins = ls(1) : binStep : maxLam; 
+
+				[binN binI] = histc( ls , bins );
+
+				histMin = min(binN(1:(end - 1) ));
+			end
+			bins = bins';
 
 
-ar = reshape(as(1:(aCut*nstd)), [nstd aCut]);
-lr = reshape(ls(1:(aCut*nstd)), [nstd aCut]);
+			for binCtr = 1:( rows(bins) - 1 )
 
-amean = mean(ar);
-astd = std(ar); 
+				%Get contents of the bin
+				lb = ls( find ( ( ls > bins(binCtr) ) & (ls < bins(binCtr+1) ) ) );
+				ab = as( find ( ( ls > bins(binCtr) ) & (ls < bins(binCtr+1) ) ) );
 
-lmean = mean(lr);
-lstd  = std(lr);
-lmax  = max(lr);
-lmin  = min(lr);
+				lmean(binCtr) = mean(lb);
+				lstd (binCtr) = std (lb);
+				lmax (binCtr) = max (lb);
+				lmin (binCtr) = min (lb);
 
-o = [lmean' lstd' lmin' lmax' amean' astd'];
+				amean(binCtr) = mean(ab);
+				astd (binCtr) = std (ab);
+			end
 
-save 'output/confidenceInterval.dat' o
+		otherwise
+			error("Allowed modes are FixedNumberBins and FixedWidthBins");
+	endswitch
 
-
+	%format output
+	confIntervals = [lmean' lstd' lmin' lmax' amean' astd'];
+end
