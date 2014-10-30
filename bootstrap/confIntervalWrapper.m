@@ -4,11 +4,22 @@ fn = args{1,1}
 
 load(fn)
 
-%"om" is the data field output from the bootstrapped fitter.
-data = [om(:,2) om(:,3)]; 
+if( exist ("om") )
+	d = om;
+end
+if( exist ("on") )
+	d = on;
+end
+if( exist ("op") )
+	d = op;
+end
+
+data = [d(:,2) d(:,3)]; 
 
 minBinNum = 14; %Not sure how to pass configuration argument here.
 
 cI = confidenceIntervals( data, minBinNum, "TurnerSmoothing", 0);
 
-save [fn '.ci.dat'] cI
+of = [fn '.ci'];
+
+save( of , "cI");
