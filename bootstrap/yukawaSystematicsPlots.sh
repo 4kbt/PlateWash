@@ -8,6 +8,9 @@ do
 
 	gnuplot -e "HOMEDIR = \"$1\"" yukawaSystematicsPlots.gpl
 	gnuplot -e "HOMEDIR = \"$1\"; gravityOnly = 1" yukawaSystematicsPlots.gpl
+	octave --no-init-file confIntervalWrapper.m $PLOTME
+
+	exit
 done
 
 for  PLOTME in `ls output/*.plt`

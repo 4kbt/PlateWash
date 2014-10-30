@@ -82,7 +82,7 @@ function confIntervals = confidenceIntervals( data, minBinNum, mode, maxLam)
 			end
 			
 		otherwise
-			error("Allowed modes are FixedNumberBins and FixedWidthBins");
+			error("Allowed modes are FixedNumberBins, FixedWidthBins, and TurnerSmoothing");
 	endswitch
 
 	%format output
