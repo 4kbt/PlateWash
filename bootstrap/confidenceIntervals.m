@@ -67,7 +67,20 @@ function confIntervals = confidenceIntervals( data, minBinNum, mode, maxLam)
 				amean(binCtr) = mean(ab);
 				astd (binCtr) = std (ab);
 			end
+		case "TurnerSmoothing"
+			for numCtr = 1:( rows(ls) - minBinNum)
+				lb = ls( numCtr:(numCtr+minBinNum) );
+				ab = as( numCtr:(numCtr+minBinNum) );
 
+				lmean(numCtr) = mean(lb);
+				lstd (numCtr) = std (lb);
+				lmax (numCtr) = max (lb);
+				lmin (numCtr) = min (lb);
+
+				amean(numCtr) = mean(ab);
+				astd (numCtr) = std (ab);
+			end
+			
 		otherwise
 			error("Allowed modes are FixedNumberBins and FixedWidthBins");
 	endswitch
