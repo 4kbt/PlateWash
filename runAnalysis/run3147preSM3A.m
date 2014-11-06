@@ -14,13 +14,14 @@ end
 
 'dynamic configuration begins'
 
+%genTorqueCal is a no-argument function that imports the torque calibration.
 torqueCal = genTorqueCal;
 
 'calibrating attractor'
 pressEncP = getPressEncP(HOMEDIR);
 psData(:,psSquareCol) = (touch2937 - polyval(pressEncP, psData(:,psSquareCol)) )*1e-6;
 
-
+%One of at least two locations where torques can be injected. 
 if( fakeTheData == 1)
 
 	'injecting fake data!'
@@ -29,6 +30,7 @@ if( fakeTheData == 1)
 	yukawaForceLaw( 100, 100e-6, 1e-6, 3e-3, 1e-6),...
 	2e-14);
 
+	%As data have been faked, it's okay to unblind.
 	unBlind = 1;
 
 	pwData(:,torqueCol) = simTor(:,2) / torqueCal;
@@ -41,12 +43,12 @@ pwData(:, torqueCol)   = filter(fTorque , 1 ,pwData(: , torqueCol  ));
 psData(:, psSquareCol) = filter(fSensors, 1 ,psData (:, psSquareCol));
 ifoData(:,ifoDataCol)  = filter(fSensors, 1 ,ifoData(:, ifoDataCol ));
 
+%truncating FIR filter windups
 psData =  psData (Ncut:end,:);
 pwData =  pwData (Ncut:end,:);
 ifoData = ifoData(Ncut:end,:);
 
+%remove mean torque
 pwData(:,torqueCol) = pwData(:,torqueCol) - mean(pwData(:,torqueCol));
 
 'dynamic configuration ends'
-
-
