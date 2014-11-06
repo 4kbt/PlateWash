@@ -1071,16 +1071,53 @@ key "PhysRevLett.98.221601,Georgi2007275"
  Unparticle interactions could appear in tests of short range gravity 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "PhysRevLett.100.031803UnparticleTestability"
+key "PhysRevLett.100.031803UnparticleTestability,deshpande2008long"
 
 \end_inset
 
 .
- The existing body of inverse square law tests served to place the most
- stringent constraints on XXXMA.
- The tight constraints, on new theory, that stem from precision tests of
- gravity are the guaranteed payoff that come with incremental improvement
- in the laboratory.
+ The generic signature of a new unparticle interaction is an additional
+ power-law-potential fifth force; it does not alter the gravitational potential
+ to be 
+\begin_inset Formula $V_{G}\propto1/r^{1+\epsilon}$
+\end_inset
+
+, but rather 
+\begin_inset Formula $V_{G}\propto(1/r+C(R_{G}/r)^{2d_{I}-1})$
+\end_inset
+
+, where 
+\begin_inset Formula $C$
+\end_inset
+
+ is a dimensionless constant (weakly dependent on 
+\begin_inset Formula $d_{u}$
+\end_inset
+
+), 
+\begin_inset Formula $R_{G}$
+\end_inset
+
+ is a characteristic scale, and 
+\begin_inset Formula $d_{u}$
+\end_inset
+
+ is the potentially-fractional 
+\begin_inset Quotes eld
+\end_inset
+
+anomalous unparticle dimension
+\begin_inset Quotes erd
+\end_inset
+
+.
+ The existing body of inverse square law tests place tight constraints on
+ these interactions.
+ Indeed, the first publication on unparticles appeared in March 2007, and
+ these constraints, from other theorists, were in place by August.
+ The tight constraints on new theory that stem from precision tests of gravity
+ are the guaranteed payoff that come with incremental improvement in the
+ laboratory.
 \begin_inset Note Note
 status open
 
@@ -4443,10 +4480,6 @@ filename "../systematics/pressure/extracted/pressureRiseRateTorrLS.tex"
 \end_inset
 
 Torr-l/s.
-\end_layout
-
-\begin_layout Standard
-
 \end_layout
 
 \begin_layout Subsection
@@ -20841,7 +20874,7 @@ Lessons learned
 
 \begin_layout Standard
 Scott Schell earned his spot in the acknowledgements when he told a backcountry-
-ski class approximately this: 
+ski class this: 
 \begin_inset Quotes eld
 \end_inset
 
