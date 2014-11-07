@@ -1,0 +1,12 @@
+set term png
+set output 'findXXXes.png'
+
+set xlabel 'bug position (fraction of thesis)'
+set ylabel 'number of bugs'
+
+pl \
+	'histXXX.dat'   w l tit 'All XXXes',\
+	'histXXXRC.dat' w l tit 'Release-Critical',\
+	'histXXXMA.dat' w l tit 'Major',\
+	'histXXXMI.dat' w l tit 'Minor'
+
