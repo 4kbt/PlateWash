@@ -6,6 +6,9 @@ gravityFlag = "gravityOnly"
 fn = system("echo $GNUPLOTME");
 outfile = fn .".eps"
 
+cn = fn.'.ci'
+
+
 if ( exists( gravityFlag) ) {
 	outfile = fn .".grav.eps"
 }
@@ -24,6 +27,8 @@ set logsc y
 chiCut = 2 
 #chiMin  = 0.75 #e-10
 chiMin  = 0.75e-10
+
+set style fill transparent pattern 4 
 
 iterMin =  5 
 
@@ -56,6 +61,10 @@ if ( exists(gravityFlag) ) {
 }
 
 pl [:][alMin:]\
+	cn u ($3*XLUnits):($5+2.0*$6) w filledcurve y2 lt 4 lw 2,\
+	cn u ($3*XLUnits):($5-2.0*$6) w filledcurve y1 lt 4 lw 2,\
+	cn u ($4*XLUnits):($5+2.0*$6) w filledcurve y2 lt 5 lw 2,\
+	cn u ($4*XLUnits):($5-2.0*$6) w filledcurve y1 lt 5 lw 2,\
 	kapFile w l lt -1  tit 'Kapner et al.',\
 	cookFile w l lt 0 tit "Cook thesis",\
 	for [ctr=NumToPlot:1:-1] \
@@ -74,6 +83,10 @@ set xlabel 'lambda (m)'
 #pl [0.009:102][alMin:alMax]\
 
 pl [:][alMin:]\
+	cn u ($3*XLUnits):($5+2.0*$6) w filledcurve y2 lt 4 lw 2,\
+	cn u ($3*XLUnits):($5-2.0*$6) w filledcurve y1 lt 4 lw 2,\
+	cn u ($4*XLUnits):($5+2.0*$6) w filledcurve y2 lt 5 lw 2,\
+	cn u ($4*XLUnits):($5-2.0*$6) w filledcurve y1 lt 5 lw 2,\
 	kapFile  w l lt -1  ,\
 	cookFile w l lt 0   ,\
 	for [ctr=NumToPlot:1:-1] \

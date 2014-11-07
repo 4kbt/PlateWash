@@ -1071,16 +1071,53 @@ key "PhysRevLett.98.221601,Georgi2007275"
  Unparticle interactions could appear in tests of short range gravity 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "PhysRevLett.100.031803UnparticleTestability"
+key "PhysRevLett.100.031803UnparticleTestability,deshpande2008long"
 
 \end_inset
 
 .
- The existing body of inverse square law tests served to place the most
- stringent constraints on XXXMA.
- The tight constraints, on new theory, that stem from precision tests of
- gravity are the guaranteed payoff that come with incremental improvement
- in the laboratory.
+ The generic signature of a new unparticle interaction is an additional
+ power-law-potential fifth force; it does not alter the gravitational potential
+ to be 
+\begin_inset Formula $V_{G}\propto1/r^{1+\epsilon}$
+\end_inset
+
+, but rather 
+\begin_inset Formula $V_{G}\propto(1/r+C(R_{G}/r)^{2d_{I}-1})$
+\end_inset
+
+, where 
+\begin_inset Formula $C$
+\end_inset
+
+ is a dimensionless constant (weakly dependent on 
+\begin_inset Formula $d_{u}$
+\end_inset
+
+), 
+\begin_inset Formula $R_{G}$
+\end_inset
+
+ is a characteristic scale, and 
+\begin_inset Formula $d_{u}$
+\end_inset
+
+ is the potentially-fractional 
+\begin_inset Quotes eld
+\end_inset
+
+anomalous unparticle dimension
+\begin_inset Quotes erd
+\end_inset
+
+.
+ The existing body of inverse square law tests place tight constraints on
+ these interactions.
+ Indeed, the first publication on unparticles appeared in March 2007, and
+ these constraints, from other theorists, were in place by August.
+ The tight constraints on new theory that stem from precision tests of gravity
+ are the guaranteed payoff that come with incremental improvement in the
+ laboratory.
 \begin_inset Note Note
 status open
 
@@ -4443,10 +4480,6 @@ filename "../systematics/pressure/extracted/pressureRiseRateTorrLS.tex"
 \end_inset
 
 Torr-l/s.
-\end_layout
-
-\begin_layout Standard
-
 \end_layout
 
 \begin_layout Subsection
@@ -20841,7 +20874,7 @@ Lessons learned
 
 \begin_layout Standard
 Scott Schell earned his spot in the acknowledgements when he told a backcountry-
-ski class approximately this: 
+ski class this: 
 \begin_inset Quotes eld
 \end_inset
 
@@ -20851,8 +20884,8 @@ I think the major difference between a professional and an amateur is whether
 \begin_inset Quotes erd
 \end_inset
 
- If we learn from our mistakes and avoid repeating them, our expertise can
- compound itself, exceeding anyone's innate natural talent, skill, or intuition.
+ If we learn from mistakes and avoid repeating them, our expertise can compound
+ itself, exceeding anyone's innate natural talent, skill, or intuition.
  
 \end_layout
 
@@ -21069,9 +21102,9 @@ reference "sec:Force-law-inversion"
 \end_inset
 
  now allow us to do this relatively efficiently, but it can be challenging
- to extract a physics result by eye.
+ to extract or judge a physics result by eye.
  The two-parameter approach is much more powerful for hunting down instrumental
- effects, but XXXMA
+ effects, but the loss in clarity is substantial.
 \end_layout
 
 \begin_layout Subsubsection
@@ -21104,8 +21137,14 @@ Strategic
 
 \begin_layout Standard
 The most important errors we've made are ones of strategy.
- Just as months in the lab can save you hours in the library [XXXMA Snover],
- small strategic errors can have large consequences over time.
+ Just as months in the lab can save you hours in the library 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "SnoverMonths"
+
+\end_inset
+
+, small strategic errors can have large consequences over time.
 \end_layout
 
 \begin_layout Subsubsection
@@ -21188,19 +21227,15 @@ Our action mirrored this blitzkreig philosophy.
 
 \begin_layout Standard
 Our committment to the lightning-stab approach, where we would get a great
- measurement on our first try led us astray; the first stabs didn't work.
- Complete focus on delivering a respectable result, instead of iteratively
+ measurement on our first try, led us astray; the first stabs didn't work.
+ Complete focus on delivering a respectable result instead of iteratively
  delivering coarse but reliable results slowed our progress.
- In 2008-9, it became clear that the experiment wasn't viable without a
- foil-position monitor.
-\end_layout
-
-\begin_layout Subsubsection
-Perfection vs Iteration
+ Without building a foundation of complete measurements on which we could
+ stand, grow, and improve, we condemend ourselves to inefficiency.
 \end_layout
 
 \begin_layout Standard
-XXXMA
+ 
 \end_layout
 
 \begin_layout Subsubsection
@@ -21242,13 +21277,13 @@ no experiment is ever truly blind
 
  -- hinting at the reality that most blind experiments unblind before making
  their work public.
- The repeatable analysis, open git commit log, and the (hopefully (XXXMA))
- public unblinding of the experiment are all designed to address this concern.
+ The repeatable analysis, open git commit log, and the public unblinding
+ of the experiment are all designed to address this concern.
 \end_layout
 
 \begin_layout Standard
-The systematic influences in all known short-range gravity experimental
- configurations are too delicate to work with without a blind.
+The systematic influences in known short-range gravity experimental configuratio
+ns are too delicate to work with without a blind.
  How else will you know when to stop looking for uncertainties? The next
  giant leap in this field will come with an entirely new and simpler experimenta
 l idea; one where it is obviously free from large classes of systematic
@@ -21260,36 +21295,26 @@ l idea; one where it is obviously free from large classes of systematic
 Social
 \end_layout
 
-\begin_layout Subsubsection
-Teamwork
-\end_layout
-
 \begin_layout Standard
-XXXMA
-\end_layout
-
-\begin_layout Subsubsection
-Incentives
-\end_layout
-
-\begin_layout Standard
-XXXMA
-\end_layout
-
-\begin_layout Subsubsection
-Buy-in
-\end_layout
-
-\begin_layout Standard
-XXXMA
-\end_layout
-
-\begin_layout Subsubsection
-External commitments
-\end_layout
-
-\begin_layout Standard
-XXXMA
+It may have been a mistake to have insisted so strongly that we follow the
+ paths of replicable analysis and blindness.
+ Both approaches are new to our research group.
+ To depart on a headstrong approach to an analysis without gaining consensus
+ from within the team was dangerous.
+ Without buy-in from everyone involved, team members' interest in helping
+ with the details of the project dropped considerably.
+ Everyone in the project agrees that these challenging approaches have merit,
+ but substantial disagreement regarding how much those merits are worth
+ remains.
+ All of the senior members of the team are truly excellent at non-blind
+ measurements; it may have been a more-efficient use of everyone's time
+ and resources to have proceeded down that path instead, even if that path
+ is intrinsically biased toward zero.
+ From an opposite viewpoint, the efficiencies of non-blind analysis become
+ increasingly clear as a project nears completion, something to which a
+ junior researcher can be blind.
+ In either case, we failed to coalesce behind a single plan, to our considerable
+ detriment.
 \end_layout
 
 \begin_layout Section
@@ -21297,15 +21322,22 @@ Upgrade plans
 \end_layout
 
 \begin_layout Standard
-XXXMA
+With a complete parallel-plate measurement under our belts, we're in a position
+ to make important small upgrades.
+ The biggest wins to be had are in modest improvements to the hardware,
+ especially in tuning the contact potential.
+ That single change has the potential to reduce both the largest source
+ of statistical noise 
+\bar under
+and
+\bar default
+ the foil-coupling systematic.
+ That single change, alongside easy improvements to the experiment's alignment,
+ has the potential to produce a superior result within months.
 \end_layout
 
 \begin_layout Subsection
 Hardware
-\end_layout
-
-\begin_layout Standard
-XXXMA
 \end_layout
 
 \begin_layout Subsubsection
@@ -21547,11 +21579,23 @@ It has been suggested that we should replace the 90/10 coupler with a fiber
 \end_layout
 
 \begin_layout Subsection
-Software
+Software/Strategy
+\end_layout
+
+\begin_layout Subsubsection
+Position choices
 \end_layout
 
 \begin_layout Standard
-XXXMA
+Much of the difficulty in the data analysis stemmed from the use of a large
+ ensemble of attractor positions instead of two or three.
+ If we had instead chosed to operate with one or two position differences,
+ the analyses of both systematic uncertainty and potential new physics would
+ have been drastically simplified.
+ The increased immunity to position-related systematic effects may not have
+ been worth the massive cost in speed.
+ While blindness is still a challenge, it's not impossible to blind such
+ a measurement.
 \end_layout
 
 \begin_layout Subsubsection
@@ -21559,7 +21603,15 @@ Blindness
 \end_layout
 
 \begin_layout Standard
-XXXMA
+Now that we have completed an entire measurement cycle with a blind measurement,
+ we must revisit whether or not a blind has been helpful.
+ Whether we choose to go blind for a second iteration or not is perhaps
+ less important than whether we 
+\bar under
+agree
+\bar default
+ on whether we should.
+ Whichever method we choose, we need to be all in it together.
 \end_layout
 
 \begin_layout Subsubsection

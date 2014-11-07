@@ -1,7 +1,10 @@
 %Rev. H. Adding max/min support to data analysis.
 %Rev. I. Reordering location of A,B stdDev computation, writing devs to disk.
 
-	assert(sum(isnan(pwData(:,torqueCol))) == 0 )
+%require no torque NaNs
+assert(sum(isnan(pwData(:,torqueCol))) == 0 )
+
+
 fprintf('* finding edges ');
 startEdgeTimeR =  psData(findRisingEdge([psData(:,psTimeCol) psData(:,psSquareCol)]), psTimeCol); 
 startEdgeTimeF =  psData(findFallingEdge([psData(:,psTimeCol) psData(:,psSquareCol)]), psTimeCol); 
@@ -21,86 +24,9 @@ qstartEdgeTime = startEdgeTime + stepPeriod/2;
 fprintf('* edges found ');
 
 
-'Torque calibration:'
-%%%% Torque Calibration %%%%%%%
-torque = [pwData(:,pwTimeCol), pwData(:,torqueCol)];
-torqueOld = torque;
-
-if( !exist('doNotFitTwoOmega') )
-
-	'     spike removal'
-
-	%Two passes is only slightly bad. <---- REVISIT ME, TINY CHANCE OF CALIBRATION TROUBLE!
-	if(~exist('doNotRemoveSpikes') )
-		for i = 1:20
-			torque = spikeRemover(torque(:,1), torque(:,2), spikeChopWidth);
-		end
-	end
-	
-	'     fitting/removing 7th order polynomial'
-	[torqueDriftP tDS tDmu] = polyfit(torque(:,1), torque(:,2), 7);
-	torque(:,2)=torque(:,2) - polyval(torqueDriftP,torque(:,1),[],tDmu); 
-
-	'     spikes removed, calibration beginning'
-
-
-	[b,s,r,bestFreq,out]=peakFitter3(torque(:,1),torque(:,2),qTesterFreq-qTesterWidth,qTesterFreq+qTesterWidth);
-
-	if( exist('fitOneOmega'))
-		if(fitOneOmega == true)
-			'fitting One Omega'
-
-			qTesterFreq1 = bestFreq / 2.0;
-			qTesterWidth1 = 0.05*qTesterFreq1;
-			
-			[b1,s1,r1,bestFreq1,out1]=peakFitter3(torque(:,1),torque(:,2)...
-				-  b(1) * sin(2*pi*bestFreq * torque(:,1)) - ...
-				   b(2) * cos(2*pi*bestFreq * torque(:,1))...
-				,qTesterFreq1-qTesterWidth1,qTesterFreq1+qTesterWidth1);
-		end
-	end
-
-	torqueCal = qTesterTorque/sqrt(b(1)^2+b(2)^2);
-
-	'     calibration fit complete'
-
-	'     removing torque drift'
-
-	pwData(:,torqueCol) = pwData(:,torqueCol) - polyval(torqueDriftP, pwData(:,pwTimeCol),[],tDmu);
-
-	pwData(:,torqueCol) =torqueCal*( ...
-				pwData(:,torqueCol) - 
-				b(1) * sin(2*pi*bestFreq * pwData(:,pwTimeCol)) - ...
-				b(2) * cos(2*pi*bestFreq * pwData(:,pwTimeCol))  ...
-				);
-
-	if( exist('fitOneOmega'))
-		if(fitOneOmega == true)
-			pwData(:,torqueCol) = pwData(:,torqueCol) - ...
-				torqueCal*(b1(1) * sin(2*pi*bestFreq1 * pwData(:,pwTimeCol)) + ...
-					   b1(2) * cos(2*pi*bestFreq1 * pwData(:,pwTimeCol))   ...
-				) ;
-		end
-	end 
-
-	torqueOld(:,2) =detrend2( torqueOld(:,2) * torqueCal,3);
-
-%	xlabel ('frequency (Hz)');
-%	ylabel ('torque noise (N-m/rt(Hz))');
-%	t = psd(pwData(:, pwTimeCol), detrend2(pwData(:,torqueCol),3));
-%	tO = psd(torqueOld);
-%	loglog(tO(:,1), sqrt(tO(:,2)), t(:,1), sqrt(t(:,2)));
-
-	%pause
-else
-	'HARDCODING TORQUECAL!!!!! Using value imported by preSM3A'
-	%torqueCal = 2.59e-10 was FeedbackFit based
-%	torqueCal = 2.1e-9 %SWAG from run3147calFitChk
-	pwData(:,torqueCol) = torqueCal * pwData(:,torqueCol);
-
-	assert(sum(isnan(pwData(:,torqueCol))) == 0 )
-end % doNotFitTwoOmega
-
+'Torque calibration using value imported by preSM3A:'
+pwData(:,torqueCol) = torqueCal * pwData(:,torqueCol);
+assert(sum(isnan(pwData(:,torqueCol))) == 0 )
 
 
 fprintf(' * calibration complete, beginning lock-in ');
