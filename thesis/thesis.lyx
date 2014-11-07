@@ -2157,7 +2157,11 @@ While the measurement was begun before blinding, the experimental analysis
  has been performed blind.
  Early in the process of developing the analysis, the true experimental
  results were accidentally viewed twice.
- Thus, the experiment cannot be regarded as truly blind, but it points the
+ So many critical parts of the data analysis have changed since that time
+ that, at the time of unblinding, we have no idea what the outcome will
+ be.
+ While the experiment cannot be regarded as truly blind, it has brought
+ our blind-measurement experience up from nothing and directly leads the
  way to a future measurement.
  
 \end_layout
@@ -2182,14 +2186,15 @@ Flat plate force
 The form of possible inverse square law violations is not known from first
  principles.
  However, under the assumption that a new interaction can be modelled by
- a Yukawa potential 
+ a Yukawa potential (Eq.
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:YukawaPotential"
 
 \end_inset
 
-, the new force between flat plates is calculable.
+), the new force between flat plates is calculable.
  Neglecting edge effects, if one plate is infinite in spatial extent, the
  other has area 
 \begin_inset Formula $A$
@@ -2213,6 +2218,10 @@ reference "eq:YukawaPotential"
 
 , and face-to-face separation 
 \begin_inset Formula $d$
+\end_inset
+
+, the Yukawa force 
+\begin_inset Formula $F_{Y}$
 \end_inset
 
  is
@@ -2349,7 +2358,7 @@ For a pendulum of height
 \begin_inset Formula $w$
 \end_inset
 
-, and center to step distance 
+, and center-to-step distance 
 \begin_inset Formula $j$
 \end_inset
 
@@ -2405,7 +2414,7 @@ status collapsed
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\tau=\pi\alpha\rho_{a}Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right))\lambda^{2}e^{-\frac{d}{\lambda}}
+\tau=\pi\alpha\rho_{a}Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\lambda^{2}e^{-\frac{d}{\lambda}}
 \]
 
 \end_inset
@@ -2459,9 +2468,9 @@ Taking the difference between the inlay torques, with a pendulum thickness
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-\tau_{full}=\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}\left(e^{-d/\lambda}-e^{-(d+t_{p}-t_{i})/\lambda}\right)\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{i}/\lambda}\right)
-\]
+\begin{equation}
+\tau_{full}=\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}\left(e^{-d/\lambda}-e^{-(d+t_{p}-t_{i})/\lambda}\right)\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{i}/\lambda}\right)\label{eq:Full-flat-plate-yukawa torque}
+\end{equation}
 
 \end_inset
 
@@ -2469,7 +2478,8 @@ Taking the difference between the inlay torques, with a pendulum thickness
 \end_layout
 
 \begin_layout Standard
-With an attractor stroke 
+With an attractor stroke (the difference between close and far positions)
+ 
 \begin_inset Formula $s$
 \end_inset
 
@@ -2477,7 +2487,8 @@ With an attractor stroke
 \begin_inset Formula $d$
 \end_inset
 
- becomes the face-to-face distance of closest approach), 
+ becomes the pendulum-face-to-attractor-face distance of closest approach),
+ 
 \end_layout
 
 \begin_layout Standard
@@ -2561,6 +2572,17 @@ If, further,
 
 \end_layout
 
+\begin_layout Standard
+In the numerical implementation of our torque calculations, Equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Full-flat-plate-yukawa torque"
+
+\end_inset
+
+ is used as the basis for all calculations.
+\end_layout
+
 \begin_layout Subsection
 Angled plate torque
 \end_layout
@@ -2580,7 +2602,7 @@ In practice, the pendulum is not exactly parallel to the attractor.
 \end_inset
 
 .
- See 
+ See Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Estimation-of-edge"
@@ -2868,7 +2890,20 @@ status open
 \end_layout
 
 \begin_layout Standard
-XXXRC integrate 
+XXXRC integrate this correction into the analysis (It's small, but meaningful,
+ and easy to implement; the pendulum was angled by 
+\begin_inset Formula $\sim\pm10$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m for the entire measurement.) 
 \end_layout
 
 \begin_layout Subsubsection
