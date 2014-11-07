@@ -68,9 +68,6 @@ qTesterFreq1=3e-3;
 qTesterWidth1=0.2e-3;
 qTesterChunkCalibWidth1 = 0.5e-3;
 
-fitOneOmega = false;
-doNotFitTwoOmega = 1;
-
 qTesterFreq   = 3*2e-3;
 qTesterWidth  = 0.2e-3;
 qTesterTorque = 1.678e-14;
