@@ -87,30 +87,23 @@ A Sub-Millimeter Gauss' Law Test of Gravity
 \end_layout
 
 \begin_layout Author
-C.
- A.
- Hagedorn, M.
- D.
- Turner, S.
- Schlamminger, K.
- Venkateswara, J.
- H.
- Gundlach
+Charles A.
+ Hagedorn
 \end_layout
 
 \begin_layout Verse
-We tested it.
+Stub abstract: We tested it.
  It worked.
- Our number at 
+ Our sensitivity at 
 \begin_inset Formula $\alpha=1$
 \end_inset
 
  is 
-\begin_inset Formula $\lambda=30\,\mu$
+\begin_inset Formula $\lambda=70\,\mu$
 \end_inset
 
 m.
- 
+ XXXRC
 \end_layout
 
 \begin_layout Standard
@@ -194,9 +187,9 @@ The Standard Model is a triumph.
  experimental and theoretical error the known zoo of observed particles,
  resonances, and phenomena, with very few exceptions.
  The exceptions are, therefore, very important.
- The Standard Model has one major remaining prediction - the existence of
- the so-called 'Higgs boson', a lynchpin for the theory, which may have
- been discovered at the LHC in 2012 
+ The Standard Model had one major remaining prediction - the existence of
+ the 'Higgs boson', a lynchpin for the theory, which was discovered by the
+ LHC in 2012 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Aad20121,Chatrchyan201230"
@@ -228,7 +221,7 @@ key "lrr-2006-3"
 \end_inset
 
 , but does not contain any hint of quantum probability or uncertainty.
- Gravity and quantum mechanics are mathematically incompatible.
+ Our theories of gravity and quantum mechanics are mathematically incompatible.
  
 \end_layout
 
@@ -387,8 +380,8 @@ Did Newton also compute the strength at Earth's surface? Was it empirical,
 The inverse square law (ISL) for gravity has been subjected to many experimental
  and astronomical tests.
  The observed stability of elliptical orbits and the apparent validity of
- Kepler's laws gave immediate support to the theory at solar system scales.
- The first laboratory test of the ISL was done by Cavendish and Michell
+ Kepler's laws gave immediate support to the theory at solar-system scales.
+ The first laboratory test of the ISL was performed by Cavendish and Michell
  in 1798 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -396,7 +389,7 @@ key "Cavendish1798"
 
 \end_inset
 
- in support of his measurement of the density of the Earth.
+ in support of a measurement of the density of the Earth.
  See a fine review by Fischbach for the history of these experiments 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -404,7 +397,7 @@ key "1999snng.book.....F"
 
 \end_inset
 
-, and a detailed review of short range experiments by Adleberger, Heckel,
+, and a detailed review of short range experiments by Adelberger, Heckel,
  and Nelson 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -428,7 +421,7 @@ key "2007PhRvL..98t1101T,PhysRevLett.108.081101"
 
 \end_inset
 
-, University of Indiana
+, University of Indiana 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "yan2014thermal"
@@ -436,7 +429,7 @@ key "yan2014thermal"
 \end_inset
 
 , Washington University at St.
- Louis
+ Louis 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Wagoner2010"
@@ -450,6 +443,13 @@ key "2005PhRvD..72l2001S"
 
 \end_inset
 
+, Physikalish-Technische Bundesanstalt (PTB) 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "nesterov2013nanonewton"
+
+\end_inset
+
 , Apache Point Observatory 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -457,7 +457,7 @@ key "Murphy2008"
 
 \end_inset
 
-, the University of Maryland
+, the University of Maryland 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Venkateswara2010"
@@ -506,9 +506,8 @@ F_{G}\propto\frac{1}{r^{2+\epsilon}},
 \end_inset
 
 .
- This parametrization is hard to reconcile with modern theory, as there
- are no known viable theories that propose fractional dimensions at all
- scales.
+ This parametrization is hard to reconcile with modern theory, as few, if
+ any, viable theories propose fractional dimensions at all scales.
 \end_layout
 
 \begin_layout Standard
@@ -586,6 +585,31 @@ Introduce
 Theories
 \end_layout
 
+\begin_layout Standard
+Here, we present the leading theoretical motivations for testing the inverse
+ square law at short distance.
+ There are many more proposed theories which are not covered here.
+ In general, the theoretical guidance to experimentalists is clear: measurements
+ at shorter ranges and with higher sensitivity are valuable.
+ Particular emphasis is placed on shrinking the shortest range at which
+ experiments can see Newtonian gravity itself.
+ 
+\end_layout
+
+\begin_layout Standard
+As experimentalists, we take particular joy in testing theories like the
+ 'fat-graviton' theory described in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Fat-Graviton"
+
+\end_inset
+
+, which prescribes both longest and shortest distances over which we must
+ test, making it completely-falsifiable.
+ 
+\end_layout
+
 \begin_layout Subsection
 String Theory
 \end_layout
@@ -603,7 +627,7 @@ compactification
 \begin_inset Quotes erd
 \end_inset
 
-, introducing a lengthscale below which extra dimensions are relevant to
+, introducing a length-scale below which extra dimensions are relevant to
  particle interactions and above which any effects of extra dimensions are
  suppressed.
  Critically, the effects of gravity would be sensitive to the change in
@@ -670,7 +694,7 @@ m for one large extra dimension.
  Greater numbers of extra dimensions are more stringently constrained by
  collider experiments 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "PhysRevLett.108.111801"
 
 \end_inset
@@ -816,7 +840,8 @@ Cosmological Constant
 
 \begin_layout Standard
 Closely related to the dark energy problem is an older problem in physics.
- In general relativity, there is a free parameter, traditionally 
+ In general relativity, there is a free parameter, traditionally denoted
+ as 
 \begin_inset Formula $\Lambda$
 \end_inset
 
@@ -852,16 +877,19 @@ key "CosmologicalConstantProblem"
 \begin_layout Standard
 Any deviation, particularly a weakening, of gravity at short range might
  provide the clues needed to explain this major theoretical problem.
- If 
-\begin_inset Formula $C\leftrightarrow\Lambda$
-\end_inset
-
-, then the motivation for submillimeter gravitational experiments is necessarily
- stronger.
+ If the dark energy is a cosmological constant, then the motivation for
+ submillimeter gravitational experiments is even stronger.
 \end_layout
 
 \begin_layout Subsection
 Fat Graviton
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Fat-Graviton"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -872,7 +900,7 @@ key "PhysRevD.69.044014"
 
 \end_inset
 
- that the Cosmological Constant problem could be resolved if gravity were
+ that the Cosmological Constant problem might be resolved if gravity were
  to become significantly weaker at scales below 100 
 \begin_inset Formula $\mu$
 \end_inset
@@ -888,6 +916,8 @@ fat graviton
 
  modification of gravity is remarkable because he predicts that it must
  occur at scales greater than 20 microns.
+ Few theoretical predictions offer the possibility of complete falsification,
+ particularly within reasonably-accessible parts of parameter space.
  Experimental attempts to constrain the interaction 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -924,7 +954,7 @@ key "2007PhRvL..98m1104A"
 \end_layout
 
 \begin_layout Subsection
-Chameleons
+Chameleons and Screened interactions
 \end_layout
 
 \begin_layout Standard
@@ -953,7 +983,16 @@ screen
 \begin_inset Quotes erd
 \end_inset
 
- any new interaction.
+ any new interaction, this self-hiding ability gives these interactions
+ the name 
+\begin_inset Quotes eld
+\end_inset
+
+Chameleons
+\begin_inset Quotes erd
+\end_inset
+
+.
  As self-interaction is a general property of fields, the notion is very
  reasonable.
  In its simplest form as a scalar field, a chameleon interaction must be
@@ -995,45 +1034,58 @@ s the apparent strength of any chameleon interaction.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMA Uphadye calculable boundaries 
+Because of the self-interacting nature of chameleons, existing theoretical
+ methods have limited regions of parameter space over which the effects
+ of chameleons can be reliably predicted.
+ The remaining calculable region is now severely constrained, and current-genera
+tion experiments may exclude it entirely 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "PhysRevD.86.102003"
 
 \end_inset
 
-
+.
 \end_layout
 
-\begin_layout Plain Layout
-XXXMA New PRL regarding viability of chameleons 
-\end_layout
+\begin_layout Standard
+Self-interacting theories are not the only proposed interactions which exhibit
+ screening behavior.
+ Other scalars, such as 
+\begin_inset Quotes eld
+\end_inset
 
-\begin_layout Plain Layout
-XXXMI Symmetrons from Upadhye
+Symmetrons
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+Galileons
+\begin_inset Quotes erd
+\end_inset
+
+ achieve similar screening in regions of high density.
+ Symmetrons screen through the spontaneous restoration of a symmetry in
+ regions of high density; Upadhye published an extremely helpful calculation
+ of the expected torques in a torsion balance 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "PhysRevLett.110.031301"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
-XXXMA 
+.
+ Galileons are a scalar that appears in massive-gravity theories that obey
+ a certain shift symmetry; they become strongly self-interacting in regions
+ of high density.
+ For more in-depth review of these interactions, we refer to the comprehensive
+ 2013 Snowmass review 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "2013arXiv1309.5389J"
-
-\end_inset
-
- 2013 Snowmass DE/Chameleon paper.
-\end_layout
 
 \end_inset
 
@@ -1041,10 +1093,10 @@ key "2013arXiv1309.5389J"
 \end_layout
 
 \begin_layout Standard
-The PlateWash geometry is of particular use in these new classes of theories,
- as calculations which require challenging numerical models for the hole-
- and wedge-pendulum geometries can be much simpler with planar attractor
- and detector masses.
+Our experiment's parallel-plate geometry is of particular use in these screened-
+interaction classes of theories, as calculations which require challenging
+ numerical models for hole- and wedge-pendulum geometries can be much simpler
+ with planar attractor and detector masses.
 \end_layout
 
 \begin_layout Subsection
@@ -1052,9 +1104,9 @@ Unparticles
 \end_layout
 
 \begin_layout Standard
-Georgi kicked off a flurry of theoretical work by noting the possibility
+Georgi kicked off a flurry of theoretical work in 2007 by noting the possibility
  of interactions with novel dispersion relations, with a scale-invariant
- particle propagator instead of 
+ particle propagator instead of the usual 
 \begin_inset Formula $\frac{1}{k^{2}+m^{2}}$
 \end_inset
 
@@ -1141,9 +1193,9 @@ Survey of Previous Experimental Work
 \begin_layout Standard
 Tests of gravity using test bodies with known masses have now spanned about
  thirty orders of magnitude in spatial extent.
- Gravity itself has been observed consistent with an inverse square law
- over the roughly sixteen orders of magnitude from the solar system scale
- down to a few tens of micrometers.
+ Gravity itself has been observed to be consistent with an inverse square
+ law over the roughly sixteen orders of magnitude from the solar system
+ scale down to a few tens of micrometers.
  Useful reviews are more comprehensive than will be presented here 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -1301,7 +1353,7 @@ key "NewmanProgressOnExperimentalTest2011"
 \end_layout
 
 \begin_layout Standard
-Initially inspired by the suggestions of large extra dimensions, the Eot-Wash
+Initially inspired by the suggestions of large extra dimensions, the Eöt-Wash
  group at the University of Washington began its series of four horizontal
  torsion balance experiments, yielding limits at 
 \begin_inset Formula $\alpha=1$
@@ -1322,7 +1374,15 @@ key "2001PhRvL..86.1418H"
 \begin_inset Formula $\lambda=197$
 \end_inset
 
- 
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "2004PhRvD..70d2004H"
@@ -1452,7 +1512,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename plots/ISL/ISLFullRange.eps
-	width 50text%
+	width 80text%
 
 \end_inset
 
@@ -1486,7 +1546,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename plots/ISL/ISLShortRange.eps
-	width 50text%
+	width 80text%
 
 \end_inset
 
@@ -1617,11 +1677,12 @@ m.
  For every other known interaction of nature, our understanding reaches
  far below the diameter of a proton.
  That's more than 10,000,000,000 times smaller.
- At scales of a micron, gravity could be repulsive and 
+ At scales of a micron, gravity could be either attractive or repulsive
+ and 
 \begin_inset Formula $10^{10}$
 \end_inset
 
- times stronger.
+ times stronger than Newton predicts.
  We don't know.
 \end_layout
 
@@ -1775,7 +1836,7 @@ Gauss' law test of gravity.
 sional sheet of charge must, by symmetry, be perpendicular to the plane
  of the sheet.
  Furthermore, if the interaction obeys Gauss' law, the flux of field remains
- constant with increasing distance from the sheet..
+ constant with increasing distance from the sheet.
  Therefore, the strength of the interaction cannot vary with distance.
  This fact immediately suggests a simple test for whether an interaction
  follows Gauss' Law: Measure the force acting upon a test charge at two
@@ -1851,7 +1912,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename diagrams/SimpleExperimentalDiagram.pdf
-	width 50page%
+	width 70page%
 
 \end_inset
 
@@ -1901,7 +1962,7 @@ Implementation
 
 \begin_layout Standard
 Before launching into the full description of the apparatus and method,
- a qualitative description is appropriate.
+ a qualitative description and definitions of nomenclature are appropriate.
  A more-accurate diagram of the apparatus is shown in Fig.
  
 \begin_inset CommandInset ref
@@ -1924,7 +1985,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename diagrams/experimentDiagram5j.eps
-	width 50text%
+	width 70text%
 
 \end_inset
 
@@ -1958,8 +2019,30 @@ Experimental implementation schematic.
 \end_layout
 
 \begin_layout Itemize
-Throughout this thesis the moving-sheet field mass will be referred to as
- the 
+Each experiment in our Eöt-Wash laboratory has a 
+\begin_inset Quotes eld
+\end_inset
+
+-Wash
+\begin_inset Quotes erd
+\end_inset
+
+ moniker.
+ To highlight the parallel-plate nature of the design, and for humor's sake,
+ the experiment is often referred to as 
+\begin_inset Quotes eld
+\end_inset
+
+PlateWash
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Throughout this thesis the moving-sheet field mass is referred to as the
+ 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1989,7 +2072,7 @@ MHz, blocks residual gas interaction, and provides physical isolation between
 
 \begin_layout Itemize
 The infinite-sheet attractor must become finite; the addition of a rim to
- the circular attractor can replace much of the gravitational forces that
+ the circular attractor can replace many of the gravitational forces that
  would be present with an infinite sheet.
  In this iteration of the experiment, the rim is too-large, leading to a
  small residual gravitational signal that is very linear in attractor position.
@@ -2025,7 +2108,7 @@ key "turner2011picoradian"
 \begin_inset space ~
 \end_inset
 
-nrad in a second at relevant frequencies.
+nrad in a second in the relevant frequency range.
 \end_layout
 
 \begin_layout Itemize
