@@ -972,9 +972,10 @@ key "feldman2006new,PhysRevD.77.095006"
 
 \end_inset
 
- in 2006, and 2008 respectively, explored the notion that the addition of
- a self-interacting term to the Lagrangian can hide it from long range experimen
-tal searches.
+ in 2006, and 2008 respectively, opened a new direction of inquiry.
+ They showed that the addition of a self-interacting term to the Lagrangian
+ governing an otherwise long-range force can hide it from long range experimenta
+l searches.
  Self interactions act to 
 \begin_inset Quotes eld
 \end_inset
@@ -1017,20 +1018,22 @@ XXXMA
 \end_inset
 
 becomes the relevant length scale at which the new interaction may emerge
- from camoflage.
- 
+ from camouflage.
+ The possibility of self-interaction-based screening opens up considerable
+ theoretical freedom for new theories of dark energy and dark matter in
+ the face of existing experimental constraints.
 \end_layout
 
 \begin_layout Standard
-In addition to their physical motiviation, chameleon interactions are ready-made
- to evade traditional inverse square law tests.
+Chameleon interactions are ready-made to evade traditional inverse square
+ law tests.
  All precision tests of short-range gravity at gravitational strength to
  date, including our experiment, place a metal foil between the source and
  detector masses to suppress non-gravitational interactions.
  Because of the self-screening within materials the foil significantly diminishe
 s the apparent strength of any chameleon interaction.
  When searching for chameleons, isolating shields must be made as thin and
- of as low a density material as possible, or dispensed with entirely.
+ of as low density a material as possible, or dispensed with entirely.
 \end_layout
 
 \begin_layout Standard
@@ -1078,25 +1081,28 @@ key "PhysRevLett.110.031301"
 \end_inset
 
 .
- Galileons are a scalar that appears in massive-gravity theories that obey
+ Galileons are scalars that appear in massive-gravity theories that obey
  a certain shift symmetry; they become strongly self-interacting in regions
  of high density.
- For more in-depth review of these interactions, we refer to the comprehensive
- 2013 Snowmass review 
+ For in-depth review of these interactions, we refer to these reviews 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "2013arXiv1309.5389J"
+key "2013arXiv1309.5389J,khoury2013chameleon"
 
 \end_inset
 
-
+.
+ Fortunately for experimentalists, the general predictions of these theories
+ are the same: an apparent anomalous force at short range.
+ 
 \end_layout
 
 \begin_layout Standard
 Our experiment's parallel-plate geometry is of particular use in these screened-
 interaction classes of theories, as calculations which require challenging
- numerical models for hole- and wedge-pendulum geometries can be much simpler
- with planar attractor and detector masses.
+ numerical models for hole- and wedge-pendulum geometries can be more straightfo
+rward with planar attractor and detector masses, particularly in an infinite-she
+et approximation.
 \end_layout
 
 \begin_layout Subsection
@@ -1264,8 +1270,8 @@ key "Murphy2008,MurphyLLRReview"
 \end_inset
 
 .
- The lunar results are, up to any theoretical uncertainties in the complicated
- astronomical modeling code, the most precise tests of gravity.
+ The lunar results are the most precise tests of gravity, limited by uncertainti
+es in the astronomical modeling code for solar-system dynamics.
  The experimental data are consistent with the inverse square law at better
  than the 
 \begin_inset Formula $10^{-10}$
@@ -1565,10 +1571,6 @@ Laboratory Tests of Gravity
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 At distances shorter than 
@@ -1632,7 +1634,11 @@ vation of unexpected physics, beyond the scope of this thesis.
 
 \begin_layout Standard
 Gravitational tests for micron-scale extra dimensions with astrophysical
- sources have been proposed by Simonetti et al.
+ sources have been proposed by Simonetti 
+\emph on
+et al.
+
+\emph default
  
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -1672,7 +1678,7 @@ ent, perhaps this will suffice: Pick up a caliper and dial it to
 \end_inset
 
 m.
- If no caliper is handy, pluck a hair from your head.
+ If no caliper is handy, pluck a hair from your head and consider its width.
  We know almost nothing about gravity on that scale.
  For every other known interaction of nature, our understanding reaches
  far below the diameter of a proton.
@@ -2172,6 +2178,12 @@ In order to facilitate the unblinding of this complex analysis, and to guarantee
  is entirely automated.
  A collection of free software, the git repository, and the experimental
  data are all that are required to re-generate this result.
+ The majority of the numerical quantities stated in this document are automatica
+lly either extracted from the configuration files used to initialize the
+ data analysis or are products of the analysis itself.
+ These quantities are either stated in accordance with standard protocol
+ for significant digits or with their associated uncertainties.
+ 
 \end_layout
 
 \begin_layout Section
