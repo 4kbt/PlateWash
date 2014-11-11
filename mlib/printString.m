@@ -14,5 +14,5 @@ end
 %! fn = 'testOutput/printStringTest1.txt';
 %! s = 'This is only a test';
 %! printString(s,fn);
-%! t = fileread(fn);
-%! assert(s == t);
+%! t = fileread(fn); %reads in strings as column vectors now? 11/10/2014
+%! assert(s == transpose(t));
