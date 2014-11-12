@@ -5504,7 +5504,17 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Interferometer optical assembly
+Interferometer optical assembly: All fibers have APC ends, operating at
+ 1300
+\begin_inset space ~
+\end_inset
+
+nm.
+ The yellow signal line travels >3
+\begin_inset space ~
+\end_inset
+
+m to the apparatus, accounting for the majority of the seismic pickup.
 \end_layout
 
 \end_inset
