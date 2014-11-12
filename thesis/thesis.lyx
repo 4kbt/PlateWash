@@ -1874,8 +1874,7 @@ In idealized form, our experiment compares the gravitational field strength
  at two distances from an infinite sheet of mass.
  Finite sheet masses are suspended on opposite arms of a torsion pendulum.
  The sheet masses are aligned parallel to their moment arms, but displaced
- in opposite directions perpendicular to the arms (see Fig.
- 
+ in opposite directions perpendicular to the arms (see Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "Simple Parallel plate cartoon"
@@ -1969,8 +1968,7 @@ Implementation
 \begin_layout Standard
 Before launching into the full description of the apparatus and method,
  a qualitative description and definitions of nomenclature are appropriate.
- A more-accurate diagram of the apparatus is shown in Fig.
- 
+ A more-accurate diagram of the apparatus is shown in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Experimental-implementation-sche"
@@ -3735,8 +3733,7 @@ filename "../extracted/foilDiameter.tex"
 \begin_inset Formula $\mu$
 \end_inset
 
-m over its width (see Fig.
- 
+m over its width (see Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "FoilFlatness"
@@ -4683,8 +4680,7 @@ XXXMA - label components directly in photo
 \end_layout
 
 \begin_layout Standard
-The attractor's flexure stage, shown in Fig.
- 
+The attractor's flexure stage, shown in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Flexure"
@@ -4723,8 +4719,7 @@ stiction
 status open
 
 \begin_layout Plain Layout
-See Fig.
- XXXMA, autocollimator on attractor.
+See Figure XXXMA, autocollimator on attractor.
 \end_layout
 
 \end_inset
@@ -4820,8 +4815,7 @@ Pneumatic Drive System
 \end_layout
 
 \begin_layout Standard
-A diagram of the pneumatic drive system is shown in Fig.
- 
+A diagram of the pneumatic drive system is shown in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Pneumatic-Drive-System"
@@ -5142,8 +5136,7 @@ random
 \begin_layout Standard
 The pressure gauge is an Omega PX409-100A10V absolute pressure gauge.
  In order to use it as a position encoder, we had to verify its linearity
- and stability against the Micro-E encoder, shown in Fig.
- 
+ and stability against the Micro-E encoder, shown in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Pressure-gauge-and-encoder"
@@ -5240,8 +5233,7 @@ On longer timescales, the fluctuation of atmospheric pressure is important.
  As the gas-handling system is nothing but a fancy pressure division device,
  the open-loop duty-cycle control of the modulation rides along the carrier
  of atmospheric pressure.
- This effect can be seen in Fig.
- 
+ This effect can be seen in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Attractor-positions-over"
@@ -5560,8 +5552,7 @@ key "rugar1988force,rugar1989improved"
  target surface.
  In this case, the reference surface is the end of an optical fiber, and
  the reflecting target surface is the PlateWash isolating foil.
- As shown in Fig.
- 
+ As shown in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Foil-Interferometer-Layout"
@@ -5601,8 +5592,7 @@ m), less light re-enters the fiber core after reflecting from the foil.
 \begin_inset Formula $\sim XXXRC\pm XXXRC$
 \end_inset
 
- from the foil (can get it from the crash plot), as seen in Fig.
- 
+ from the foil (can get it from the crash plot), as seen in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Image-of-the-interferometer-tip"
@@ -5914,8 +5904,7 @@ Determining fringe contrast can be done by displacing the foil.
  translation stage.
  If valves are manipulated to permit a slow retreat of the attractor (or
  using the very slow leak of the isolation valve), a fringe pattern may
- be obtained, as in Fig.
- 
+ be obtained, as in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Foil-interferometer-signal-as-fcn-of-pressure-position"
@@ -6079,8 +6068,7 @@ key "ThorlabsPolarizationControl,ulrich1980bending,ross1984rotation"
 on of the noise.
  Securing the fiber, where possible, to immovable objects with tape yielded
  a substantial improvement in sub-Hz noise.
- Noise from within the science run is plotted in Fig.
- 
+ Noise from within the science run is plotted in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Interferometer-low-frequency-pow"
@@ -6103,7 +6091,7 @@ status open
 
 \begin_layout Plain Layout
 At higher frequencies, the instrument appears to be limited by electronic
- noise, but the sensitivity is more than sufficient for our needs, see Fig.
+ noise, but the sensitivity is more than sufficient for our needs, see Figure
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -12930,8 +12918,7 @@ The largest possible systematic signals (tilt and direct magnetic coupling
 \end_inset
 
  calibration signal was far more consistent in fractional amplitude (see
- Fig.
- 
+ Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Gravitational-calibration"
@@ -13468,8 +13455,7 @@ With each attractor position change, it takes a finite amount of time for
 \begin_inset space ~
 \end_inset
 
-s, including the DAQ filter, see Fig.
- 
+s, including the DAQ filter, see Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:AttractorMotionLag"
@@ -13477,7 +13463,7 @@ reference "fig:AttractorMotionLag"
 \end_inset
 
 ).
- In addition, the pendulum feedback has a finite response time (See Fig.
+ In addition, the pendulum feedback has a finite response time (See Figure
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -15413,8 +15399,7 @@ A clear method of visualization is important to understanding the output
 \end_inset
 
 , we can plot every measurement in the experiment in a single plot, as in
- Fig.
- 
+ Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:TriangleScatterPlot"
@@ -17890,8 +17875,7 @@ lstparams "caption={mlib/gravity/displayPoints.m},language=Matlab"
 \end_layout
 
 \begin_layout Standard
-With these plots, an image like Fig.
- 
+With these plots, an image like Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:DisplayPoints"
@@ -18603,8 +18587,7 @@ filename "../extracted/attrVertOffset.tex"
 
  with respect to the pendulum.
  (XXXRC verify numbers) The torques due to the complete off-center attractory
- assembly are shown in Fig.
- 
+ assembly are shown in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:OffsetPendulumTorque"
@@ -18847,8 +18830,7 @@ m, this is woefully inadequate.
  To provide an estimate of the effects of the too-large gridsize, the integratio
 n was repeated several times, with the point-mass subcomponents of the pendulum
  and attractor scattered horizontally with Gaussian standard deviation of
- one grid spacing, with results shown in Fig.
- 
+ one grid spacing, with results shown in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:PM-Scan-Torque"
