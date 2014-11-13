@@ -3419,7 +3419,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../systematics/microscopeScans/pendulumScan1.eps
-	width 50page%
+	width 70page%
 
 \end_inset
 
@@ -4111,19 +4111,6 @@ m in widths larger than 4 inches.
  of the attractor.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMA Figure.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Subsection
 Autocollimator
 \end_layout
@@ -4149,22 +4136,16 @@ reference "Autocollimator Diagram"
 \end_inset
 
 .
- Light from a 780
+ Light from a near-infrared (
+\begin_inset Formula $\sim780$
+\end_inset
+
+
 \begin_inset space ~
 \end_inset
 
-nm 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMA
-\end_layout
-
-\end_inset
-
- laser diode was directed through a pinhole, collimated, and directed at
- the pendulum.
+nm) laser diode was directed through a pinhole, collimated, and directed
+ at the pendulum.
  Light reflected from the pendulum passed back through the collimating lens
  and was focused, via a mirror, onto a position sensitive photodiode.
  The detector (UDT SC-10D
@@ -4213,7 +4194,15 @@ reference "Autocollimator noise"
 .
  The four photodiode signal currents were measured by transimpedance pre-amplifi
 ers adjacent to the photodiode in vacuum.
- 
+ We refer to the sensor as a 'pseudo-autocollimator', as the traditional
+ beamsplitter of a true autocollimator was replaced by a pair of 45-degree
+ mirrors placed astride the objective lens optical axis.
+ This arrangement preserves 2-4 times as much light intensity at the price
+ of introducing a weak sensitivity to translation of the pendulum mirror
+ along the optical axis; it remains unclear whether this was an advantageous
+ trade.
+ The added translation sensitivity was not burdensome, as excellent entire-instr
+ument performance was easy to reach at large pendulum-foil separations.
 \end_layout
 
 \begin_layout Standard
@@ -4310,7 +4299,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Pictures/small/HighQuarterViewOfPendulumIFOFoilDecember222011.jpg
+	filename Pictures/small/HighQuarterViewOfPendulumIFOFoilDecember222011Labelled.jpg
 	width 70text%
 
 \end_inset
@@ -4638,7 +4627,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Pictures/small/FlexureLeftSideDecember212011.jpg
+	filename Pictures/small/FlexureLeftSideDecember212011CropLabel.jpg
 	width 70page%
 
 \end_inset
@@ -4656,17 +4645,10 @@ name "fig:Flexure"
 
 \end_inset
 
-Flexure
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMA - label components directly in photo
-\end_layout
-
-\end_inset
-
-
+Flexure-based attractor translation stage: Single moving part has no static
+ friction and linear response.
+ Pneumatically driven to constrain all possible sources of electrical systematic
+ effects.
 \end_layout
 
 \end_inset
@@ -4784,7 +4766,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename diagrams/pressureDiagram.png
-	width 80text%
+	width 100text%
 
 \end_inset
 
