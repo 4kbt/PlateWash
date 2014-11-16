@@ -20,62 +20,11 @@ end
 
 fscanf(ifoHeaderFile,'%c',6);
 
-ifoStartDateTime = fscanf(ifoHeaderFile, '%g/%g/%g%g:%g:%g\n');
+ifoStartDateTime = fscanf(ifoHeaderFile, '%g/%g/%g%g:%g:%g\n')
 
+ifoStartDateTime(3) -= 2000;
 
-if(ifoStartDateTime(3)!=2009 & ifoStartDateTime(3)!=2010 & ifoStartDateTime(3) != 2011 & ifoStartDateTime(3) != 2012)
-	error("Not 2009, 2010, 2011, or 2012!");
-end
-
-switch ifoStartDateTime(1)
-	case {1}
-		ifoStartSec = 0;
-	case {2}
-		ifoStartSec = 86400 * (31);
-	case {3}
-		ifoStartSec = 86400 * (31+28);
-	case {4}
-		ifoStartSec = 86400 * (31+28+31);
-	case {5}
-		ifoStartSec = 86400 * (31+28+31+30);
-	case {6}
-		ifoStartSec = 86400 * (31+28+31+30+31);
-	case {7}
-		ifoStartSec = 86400 * (31+28+31+30+31+30);
-	case {8}
-		ifoStartSec = 86400 * (31+28+31+30+31+30+31);
-	case {9}
-		ifoStartSec = 86400 * (31+28+31+30+31+30+31+31);
-	case {10}
-		ifoStartSec = 86400 * (31+28+31+30+31+30+31+31+30);
-	case {11}
-		ifoStartSec = 86400 * (31+28+31+30+31+30+31+31+30+31);
-	case {12}
-		ifoStartSec = 86400 * (31+28+31+30+31+30+31+31+30+31+30);
-	otherwise
-		error("Not a month!");
-endswitch
-
-if(ifoStartDateTime(3) == 2010)
-	ifoStartSec = ifoStartSec + 86400*365;
-end
-if(ifoStartDateTime(3) == 2011)
-	ifoStartSec = ifoStartSec + 86400*365*2;
-end
-%Added 1-3-2012 CAH
-if(ifoStartDateTime(3) == 2012)
-        ifoStartSec = ifoStartSec + 86400*365*3;
-        %Leap Year
-        if ( ifoStartDateTime(1) > 2 )
-                 ifoStartSec = ifoStartSec + 86400;
-        end
-end
-
-
-
-
-timeConversion =  [3600 60 1];
-ifoStartSec    += (86400*ifoStartDateTime(2) + timeConversion * ifoStartDateTime(4:6));
+ifoStartSec = dateTimeToSecs(ifoStartDateTime(1:3), ifoStartDateTime(4:6));
 
 for i = 1:25
 	skip  = fgets(ifoHeaderFile);

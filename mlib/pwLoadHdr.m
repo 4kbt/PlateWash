@@ -26,4 +26,17 @@ fscanf(pwHeaderFile, ['%c' 'file']);
 
 fscanf(pwHeaderFile,'%c');
 
+%Go back and read it all into a cell array
+frewind(pwHeaderFile);
+headerCell = textscan( pwHeaderFile, '%s','delimiter','\n');
+
+%If file has an ending timestamp, parse it
+if( headerCell{1,1}{end-3,1} == 'finishing date') 
+	endDate = sscanf( headerCell{1,1}{end-2,1} , '%g/%g/%g\n');
+	endTime = sscanf( headerCell{1,1}{end  ,1} , '%g:%g:%g\n');
+
+	pwHdrEndSec = dateTimeToSecs(endDate, endTime);
+end
+
+
 fclose(pwHeaderFile);
