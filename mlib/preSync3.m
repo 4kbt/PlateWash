@@ -26,10 +26,19 @@ if(FAKING_THE_PLATEWASH_CLOCK == 1)
 %	pwData( pwData(:, pwTimeCol) > 8e6, pwTimeCol) = 0 ; 
 end
 
-
+%why the -1? 11/15/2014
 pwEndSec  = pwData(rows( pwData) - 1,  pwTimeCol);
 psEndSec  = psData(rows( psData),  psTimeCol);
 ifoEndSec = ifoData(rows(ifoData), ifoTimeCol);
+
+%Preserve run-timing info
+if( exist( "pwHdrEndSec" ))
+	pwTimeInfo = [pwStartSec pwEndSec pwHdrEndSec];
+end
+if( exist( "psHdrEndSec" ))
+	psTimeInfo = [psStartSec psEndSec psHdrEndSec];
+end
+
 
 if( pwEndSec < pwStartSec)
 	PLATEWASH_CLOCK_ROLLED_____MIGHT_BE_A_TIMING_ERROR = 1

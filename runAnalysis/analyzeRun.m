@@ -16,6 +16,16 @@ try
 	%Import data file. NameCtr is inherited from a --eval statement at the command line.  See relevant Makefile (/goldStandard/runAnalysis/)
 	eval(['run' num2str(nameCtr) 'sync3' ifoLoadFlag]);
 
+	%export timing info
+	if( exist( "pwTimeInfo" );)
+		timeOut = [pwRunNum pwTimeInfo];
+		save 'pwTimeInfo.dat' -append timeOut;
+	end
+	if( exist( "psTimeInfo" );)
+		timeOut = [psRunNum psTimeInfo];
+		save 'psTimeInfo.dat' -append timeOut;
+	end
+
 	%Check for NaNs in the torque column
 	assert(sum(isnan(pwData(:,torqueCol))) == 0 )
 
