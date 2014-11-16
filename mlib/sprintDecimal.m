@@ -31,4 +31,4 @@ function s = sprintDecimal(data, precision)
 end
 
 %Testing is in printDecimal.
-%!test test printDecimal 
+% %!test test printDecimal 

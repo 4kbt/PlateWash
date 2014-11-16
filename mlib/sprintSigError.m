@@ -15,10 +15,11 @@ function s = sprintSigError(central, err)
 	cnum = central/(10^cl);
 	snum = err    /(10^cl);
 
-	formatString = '%.*f %s %.*f %s %d %s';
+	%double-percent to work around LaTeX \input whitespace behaviour
+	formatString = '%.*f %s %.*f %s %d %s%%';
 
 	s = sprintf( formatString, prec, cnum, "\\pm", prec, snum, "\\times 10^{",  cl, "}");
 
 end
 
-%!test assert(sprintSigError(1,1) == '1 \pm 1 \times 10^{ 0 }')
+%!test assert(sprintSigError(1,1) == '1 \pm 1 \times 10^{ 0 }%')

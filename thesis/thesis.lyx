@@ -1874,8 +1874,7 @@ In idealized form, our experiment compares the gravitational field strength
  at two distances from an infinite sheet of mass.
  Finite sheet masses are suspended on opposite arms of a torsion pendulum.
  The sheet masses are aligned parallel to their moment arms, but displaced
- in opposite directions perpendicular to the arms (see Fig.
- 
+ in opposite directions perpendicular to the arms (see Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "Simple Parallel plate cartoon"
@@ -1969,8 +1968,7 @@ Implementation
 \begin_layout Standard
 Before launching into the full description of the apparatus and method,
  a qualitative description and definitions of nomenclature are appropriate.
- A more-accurate diagram of the apparatus is shown in Fig.
- 
+ A more-accurate diagram of the apparatus is shown in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Experimental-implementation-sche"
@@ -3170,7 +3168,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename Pictures/small/DamperInMirrorDec142012P1310009.jpg
-	width 70text%
+	width 90text%
 
 \end_inset
 
@@ -3187,8 +3185,8 @@ name "fig:fiber assembly"
 
 \end_inset
 
-The entire fiber assembly is visible at right and in a reflection in a large
- mirror at left.
+A view through the vacuum window: The entire fiber assembly is visible at
+ right and in a reflection in a large mirror at left.
  Phosphor-bronze or beryllium-copper springs provided vertical isolation
  of the fiber attachment point.
  Above the three-fold-symmetric upper spring is the porcelain electrical
@@ -3277,7 +3275,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename Pictures/small/PhitopAndAutocollimatorJanuary212011.jpg
-	width 50page%
+	width 70page%
 	rotateAngle 270
 
 \end_inset
@@ -3291,7 +3289,7 @@ status open
 \begin_layout Plain Layout
 Fiber positioning assembly, January 2011 (prior to foil-motor installation):
  two axis translation, axial rotation through externally-controlled motors.
- Axial translation by manual release of passive flexure/clamp.
+ Axial/vertical translation by manual release of passive flexure/clamp.
  Foil-covered autocollimator visible at right.
 \end_layout
 
@@ -3342,7 +3340,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename Pictures/small/NicerAttractorAndPlatinumPendulumWithoutFoilMay062009.jpg
-	width 50page%
+	width 70page%
 	rotateAngle 270
 
 \end_inset
@@ -3421,7 +3419,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../systematics/microscopeScans/pendulumScan1.eps
-	width 50page%
+	width 70page%
 
 \end_inset
 
@@ -3432,7 +3430,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../systematics/microscopeScans/pendulumScan2.eps
-	width 50page%
+	width 70page%
 
 \end_inset
 
@@ -3450,7 +3448,7 @@ name "fig:PendulumScans"
 \end_inset
 
 Laser scans of the pendulum surfaces.
- The tantalum inlay is visible as the height-step at right
+ The tantalum inlays are visible as the height-step at right.
 \end_layout
 
 \end_inset
@@ -3552,7 +3550,7 @@ filename "../extracted/mspindleLength.tex"
 
 \end_inset
 
- in length,
+ in length, 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../extracted/mspindleDiameter.tex"
@@ -3579,7 +3577,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../systematics/microscopeScans/attractorScan.eps
-	width 50page%
+	width 70page%
 
 \end_inset
 
@@ -3616,7 +3614,7 @@ Laser scan of the attractor surface -- installed orientation does not correspond
 
 \begin_layout Standard
 Both large faces of the pendulum and the front face of the attractor were
- hand polished to a mirror finish with silicon-carbide and 3M lapping paper
+ hand-polished to a mirror finish with silicon-carbide and 3M lapping paper
  (aluminum oxide, possibly diamond).
  The individual components of the pendulum were etched before assembly in
  hydrochloric acid to remove any ferromagnetic impurities.
@@ -3661,7 +3659,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename Pictures/small/RearViewMotorsSpindlesAttractorFoilDecember212011.jpg
-	width 50page%
+	width 60page%
 
 \end_inset
 
@@ -3735,8 +3733,7 @@ filename "../extracted/foilDiameter.tex"
 \begin_inset Formula $\mu$
 \end_inset
 
-m over its width (see Fig.
- 
+m over its width (see Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "FoilFlatness"
@@ -3752,7 +3749,7 @@ reference "FoilFlatness"
 \begin_inset space ~
 \end_inset
 
-nm) layer of Au over a Ti adhesion layer by e-beam evaporation 
+nm) layer of Au over a Ti adhesion layer by e-beam evaporation
 \begin_inset Note Note
 status open
 
@@ -3782,7 +3779,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../systematics/microscopeScans/screenScan.eps
-	width 50page%
+	width 70page%
 
 \end_inset
 
@@ -4039,8 +4036,8 @@ The design of the mechanism for stretching foils is important.
  More recently, it has become clear that the foil surface must be easy to
  access and clean.
  In the past, our group has constructed foils by clamping beryllium-copper
- foils between strong aluminum rings while everything was submerged in liquid
- nitrogen.
+ foils between strong aluminum rings while the entire assembly was submerged
+ in liquid nitrogen.
  Upon warming to room temperature, the differential expansion of the aluminum
  rings brought the foil to high uniform tension.
 \end_layout
@@ -4048,7 +4045,7 @@ The design of the mechanism for stretching foils is important.
 \begin_layout Standard
 The PlateWash foil stretcher is designed to provide good access to the front
  face of the foil and excellent flatness.
- It is constructed much like one would make a bongo drum; a clamping ring
+ It is constructed much as one would make a bongo drum; a clamping ring
  holds the foil at its perimeter, and a rounded-edge inner 
 \begin_inset Quotes eld
 \end_inset
@@ -4067,7 +4064,7 @@ pusher
  of last contact.
  Furthermore, after turning, sanding, and polishing on the lathe, the pusher
  should be gently lapped, just for a moment, on a granite inspection plate
- to make the final height determination of the point of last contact.
+ to make the final planarization of the point of last contact.
  
 \end_layout
 
@@ -4095,8 +4092,8 @@ mm thick.
 \end_layout
 
 \begin_layout Standard
-The dimensions of everything in this instrument are partially-set by the
- availability of thin foils.
+The dimensions of the entire instrument are partially-set by the availability
+ of thin foils.
  We were unable to find strong metal foils of thickness 
 \begin_inset Formula $<12$
 \end_inset
@@ -4110,21 +4107,8 @@ The dimensions of everything in this instrument are partially-set by the
 \end_inset
 
 m in widths larger than 4 inches.
- This constrains the inner-bore for the foil stretcher, and hence the size
+ This constrains the inner bore of the foil stretcher, and hence the size
  of the attractor.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMA Figure.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection
@@ -4152,24 +4136,18 @@ reference "Autocollimator Diagram"
 \end_inset
 
 .
- Light from a 780
+ Light from a near-infrared (
+\begin_inset Formula $\sim780$
+\end_inset
+
+
 \begin_inset space ~
 \end_inset
 
-nm 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMA
-\end_layout
-
-\end_inset
-
- laser diode was directed through a pinhole, collimated, and directed at
- the pendulum.
+nm) laser diode was directed through a pinhole, collimated, and directed
+ at the pendulum.
  Light reflected from the pendulum passed back through the collimating lens
- and was focused, via a beamsplitter, onto a position sensitive photodiode.
+ and was focused, via a mirror, onto a position sensitive photodiode.
  The detector (UDT SC-10D
 \begin_inset Note Note
 status collapsed
@@ -4216,7 +4194,15 @@ reference "Autocollimator noise"
 .
  The four photodiode signal currents were measured by transimpedance pre-amplifi
 ers adjacent to the photodiode in vacuum.
- 
+ We refer to the sensor as a 'pseudo-autocollimator', as the traditional
+ beamsplitter of a true autocollimator was replaced by a pair of 45-degree
+ mirrors placed astride the objective lens optical axis.
+ This arrangement preserves 2-4 times as much light intensity at the price
+ of introducing a weak sensitivity to translation of the pendulum mirror
+ along the optical axis; it remains unclear whether this was an advantageous
+ trade.
+ The added translation sensitivity was not burdensome, as excellent entire-instr
+ument performance was easy to reach at large pendulum-foil separations.
 \end_layout
 
 \begin_layout Standard
@@ -4231,7 +4217,7 @@ Diff/Sum
 
  -- for each axis the difference between the left and right (up and down)
  channels was computed and divided by their sum.
- This standard procedure cancels the autocollimator's sensitivity to light
+ This standard procedure minimizes the autocollimator's sensitivity to light
  intensity variations.
  Doing the computations in software allowed more-precise levelling of the
  twist axis signal than can be readily achieved in hardware, as any synthetic
@@ -4255,8 +4241,8 @@ kHz.
  the laser on, and 25 samples with the laser off.
  By taking the difference, we suppress the influence of any photodiode dark
  current.
- By averaging the locked-in signal, any interference at frequencies incommensura
-te with the lock-in frequency is suppressed.
+ By averaging the locked-in signal, interference at frequencies incommensurate
+ with the lock-in frequency is suppressed.
 \end_layout
 
 \begin_layout Standard
@@ -4269,7 +4255,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../autocollimator/run3077free.eps
-	width 50text%
+	width 70text%
 
 \end_inset
 
@@ -4313,8 +4299,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Pictures/small/HighQuarterViewOfPendulumIFOFoilDecember222011.jpg
-	width 50text%
+	filename Pictures/small/HighQuarterViewOfPendulumIFOFoilDecember222011Labelled.jpg
+	width 70text%
 
 \end_inset
 
@@ -4332,7 +4318,11 @@ name "fig:pendulum-foil-ifo closeup quarter"
 \end_inset
 
 Left to right: Interferometer fiber, interferometer holder, feedback electrodes,
- pendulum, isolating foil, mu-metal shielding, foil adjustment leaf spring.
+ pendulum, isolating foil, 
+\begin_inset Formula $\mbox{\mu}$
+\end_inset
+
+-metal shielding, foil adjustment leaf spring.
 \end_layout
 
 \end_inset
@@ -4365,7 +4355,7 @@ For all of our science data, the pendulum's orientation with respect to
 \end_inset
 
 mm) to the pendulum.
- The electrodes were housed within grounded 'guard electrode' to minimize
+ The electrodes were housed within grounded 'guard electrodes' to control
  the effects of stray fields.
  As the pendulum was electrically grounded, the application of a voltage
  to an electrode attracts the pendulum in the same way that the plates of
@@ -4401,7 +4391,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../runAnalysis/supportingPlots/run3147feedbackVoltage.eps
-	width 70text%
+	width 90text%
 
 \end_inset
 
@@ -4453,12 +4443,16 @@ The electric signals needed to operate the experiment were conducted through
 
 \begin_layout Standard
 The pendulum support, autocollimator, foil, attractor stage, and feedback
- electrodes were all firmly clamped to a single 5 cm 
+ electrodes were all firmly clamped to a single 3-4
+\begin_inset space ~
+\end_inset
+
+cm 
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-XXXMA 
+XXXMI 
 \end_layout
 
 \end_inset
@@ -4473,13 +4467,13 @@ thick aluminum optical bench.
 status open
 
 \begin_layout Plain Layout
-XXXMA 
+XXXMI 
 \end_layout
 
 \end_inset
 
-diameter stainless threaded rods with aluminum adapters on the ends to the
- stainless steel baseplate of the bell jar.
+diameter stainless threaded rods, with aluminum adapters on the ends, to
+ the stainless steel baseplate of the bell jar.
  The jar itself sat atop three aluminum legs with adjustable levelling feet.
  The entire apparatus was installed upon a U-shaped solid masonry block
  table that was mortared to the cement floor of the laboratory.
@@ -4494,10 +4488,11 @@ diameter stainless threaded rods with aluminum adapters on the ends to the
  Leybold turbo pump was connected to and suspended from the center of the
  bell jar baseplate by a hydroformed stainless steel bellows for vibration
  isolation.
- A ceramic electrical isolator separated the turbo pump from the bell jar.
+ A ceramic electrical isolator separated the turbo pump electrical ground
+ from the bell jar.
  Suspended from the pump were six lead bricks to prevent the bellows from
  compressing when the system was placed under vacuum.
- The turbo pump was backed by a small rotary roughing pump.
+ The turbo pump was backed by a small rotary oil roughing pump.
  
 \end_layout
 
@@ -4528,7 +4523,7 @@ tion.
 To eliminate the possibility of electrostatic charging of any part of the
  apparatus, the ion vacuum gauge was left off from pumpdown until the entire
  measurement was complete.
- After systematic checks were complete, the ion gauge was turned on, and
+ After systematic checks were finished, the ion gauge was turned on, and
  the pressure was observed to be 
 \begin_inset Formula $2.2\times10^{-7}$
 \end_inset
@@ -4632,8 +4627,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Pictures/small/FlexureLeftSideDecember212011.jpg
-	width 50page%
+	filename Pictures/small/FlexureLeftSideDecember212011CropLabel.jpg
+	width 70page%
 
 \end_inset
 
@@ -4650,17 +4645,10 @@ name "fig:Flexure"
 
 \end_inset
 
-Flexure
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMA - label components directly in photo
-\end_layout
-
-\end_inset
-
-
+Flexure-based attractor translation stage: Single moving part has no static
+ friction and linear response.
+ Pneumatically driven to constrain all possible sources of electrical systematic
+ effects.
 \end_layout
 
 \end_inset
@@ -4674,8 +4662,7 @@ XXXMA - label components directly in photo
 \end_layout
 
 \begin_layout Standard
-The attractor's flexure stage, shown in Fig.
- 
+The attractor's flexure stage, shown in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Flexure"
@@ -4714,8 +4701,7 @@ stiction
 status open
 
 \begin_layout Plain Layout
-See Fig.
- XXXMA, autocollimator on attractor.
+See Figure XXXMA, autocollimator on attractor.
 \end_layout
 
 \end_inset
@@ -4745,14 +4731,14 @@ The motion control system has one non-standard property for a precision
  translation stage: it is pneumatically actuated.
  In aggregate, getting this system to work well required many months of
  effort.
- It was worth every day (see 
+ It was worth every day (see Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Encoder-narrative"
 
 \end_inset
 
- for motivation).
+ for further motivation).
  A pneumatic actuation system is, by definition, not electrical.
  While the attractor flexure system was designed to accommodate standard
  micrometer actuators, if needed, the actuator is a phosphor-bronze bellows.
@@ -4773,14 +4759,14 @@ all
 \begin_layout Standard
 \begin_inset Float figure
 wide false
-sideways false
+sideways true
 status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename diagrams/pressureDiagram.png
-	width 80text%
+	width 100text%
 
 \end_inset
 
@@ -4811,8 +4797,7 @@ Pneumatic Drive System
 \end_layout
 
 \begin_layout Standard
-A diagram of the pneumatic drive system is shown in Fig.
- 
+A diagram of the pneumatic drive system is shown in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Pneumatic-Drive-System"
@@ -4825,7 +4810,11 @@ reference "fig:Pneumatic-Drive-System"
  The line pressure fluctuates on timescales from hours to days as the system's
  accumulators fill and drain and as loads on the system change.
  The coarse-regulated air is fed into an Omega PRG101-120 precision regulator,
- tuned to ~50
+ tuned to 
+\begin_inset Formula $\sim50$
+\end_inset
+
+
 \begin_inset space ~
 \end_inset
 
@@ -4856,16 +4845,20 @@ XXXMI verify on PlateSlave config file
 \end_inset
 
  carrier.
- Several modulation valves were tried -- by far the best solution has been
- automotive fuel injectors; they are very fast, low-leaking (in both directions)
-, durable, and inexpensive.
- The modulated air is sent into an accumulator, a ~0.5
+ Several modulation valves were tried.
+ By far the best solution has been automotive fuel injectors; they are very
+ fast, low-leaking (in both directions), durable, and inexpensive.
+ The modulated air is sent into an accumulator, a 
+\begin_inset Formula $\sim0.5$
+\end_inset
+
+
 \begin_inset space ~
 \end_inset
 
 L lecture bottle.
  The bottle is connected to a permanent leak and to a pair of in-series
- fuel injectors, the 
+ fuel injectors that together form the 
 \begin_inset Quotes eld
 \end_inset
 
@@ -4960,7 +4953,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename Pictures/small/PneumaticGasHandlingSystemJanuary152014.jpg
-	width 50page%
+	width 70page%
 	rotateAngle 270
 
 \end_inset
@@ -5014,9 +5007,9 @@ gauge valve
 tion is still measured continuously by the gauge.
  If there are no leaks and the absolute temperature (K) does not change,
  then the attractor can be held fixed in any position.
- As an additional capability, it will be seen that it can be useful for
- foil-interferometer calibration to have a controlled and very slow leak
- in the attractor drive system; the manual valves make this possible.
+ As an additional capability, it was useful for foil-interferometer calibration
+ to have a controlled and very slow leak in the attractor drive system;
+ the manual valves make this possible.
 \end_layout
 
 \begin_layout Standard
@@ -5125,8 +5118,7 @@ random
 \begin_layout Standard
 The pressure gauge is an Omega PX409-100A10V absolute pressure gauge.
  In order to use it as a position encoder, we had to verify its linearity
- and stability against the Micro-E encoder, shown in Fig.
- 
+ and stability against the Micro-E encoder, shown in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Pressure-gauge-and-encoder"
@@ -5134,8 +5126,8 @@ reference "fig:Pressure-gauge-and-encoder"
 \end_inset
 
 .
- The result is remarkable, as it requires excellent linearity from the flexure,
- bellows, encoder, and pressure gauge.
+ The result is remarkable, as it requires excellent linearity from each
+ of the flexure, bellows, encoder, and pressure gauge.
  
 \end_layout
 
@@ -5149,7 +5141,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../calibration/pressure/run2937pressEncPlot.eps
-	width 50page%
+	width 70page%
 
 \end_inset
 
@@ -5223,8 +5215,7 @@ On longer timescales, the fluctuation of atmospheric pressure is important.
  As the gas-handling system is nothing but a fancy pressure division device,
  the open-loop duty-cycle control of the modulation rides along the carrier
  of atmospheric pressure.
- This effect can be seen in Fig.
- 
+ This effect can be seen in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Attractor-positions-over"
@@ -5234,7 +5225,8 @@ reference "fig:Attractor-positions-over"
 , where runs at constant duty cycle fluctuate slightly in absolute position.
  This effect limited how close we could reliably operate the attractor to
  the foil over long periods of time with a simple control strategy; if the
- attractor hits the foil, at least an hour of data are lost (see 
+ attractor hits the foil, at least an hour of data are lost (see Section
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Statistics"
@@ -5359,7 +5351,7 @@ status open
 
 \begin_layout Plain Layout
 Torque between pendulum and lead-quadrupole calibration bricks, as computed
- by the newtonian simulation package (
+ by the newtonian simulation package (Chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "chap:Newtonian-Simulation"
@@ -5396,7 +5388,8 @@ clean room
 
  to control dust.
  Any dust between the pendulum and the foil or the foil and the attractor
- could have prevented bringing them into close proximity.
+ could have prevented bringing them into close proximity or, worse, introduce
+ a systematic effect.
  Air from the outer lab was passed through filtered blowers and forced down
  from the ceiling of the room, keeping it at slightly positive pressure
  and flushing airborne dust out of the room through an opening along the
@@ -5437,7 +5430,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename diagrams/Interferometer.pdf
-	width 50page%
+	width 70page%
 	BoundingBox 0bp 0bp 794bp 560bp
 
 \end_inset
@@ -5482,7 +5475,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename Pictures/small/InterferometerOpticalLayoutJanuary152014.jpg
-	width 50page%
+	width 70page%
 
 \end_inset
 
@@ -5493,7 +5486,17 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Interferometer optical assembly
+Interferometer optical assembly: All fibers have APC ends, operating at
+ 1300
+\begin_inset space ~
+\end_inset
+
+nm.
+ The yellow signal line travels >3
+\begin_inset space ~
+\end_inset
+
+m to the apparatus, accounting for the majority of the seismic pickup.
 \end_layout
 
 \end_inset
@@ -5530,7 +5533,7 @@ key "Fizeau1862"
 
 .
  Inspired by the designs and sensitivities of early atomic force microscope
- (AFM) readout systems
+ (AFM) readout systems 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "rugar1988force,rugar1989improved"
@@ -5541,8 +5544,7 @@ key "rugar1988force,rugar1989improved"
  target surface.
  In this case, the reference surface is the end of an optical fiber, and
  the reflecting target surface is the PlateWash isolating foil.
- As shown in Fig.
- 
+ As shown in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Foil-Interferometer-Layout"
@@ -5582,8 +5584,7 @@ m), less light re-enters the fiber core after reflecting from the foil.
 \begin_inset Formula $\sim XXXRC\pm XXXRC$
 \end_inset
 
- from the foil (can get it from the crash plot), as seen in Fig.
- 
+ from the foil (can get it from the crash plot), as seen in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Image-of-the-interferometer-tip"
@@ -5831,7 +5832,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename Pictures/small/InterferometerTipDecember222011.jpg
-	width 50page%
+	width 70page%
 
 \end_inset
 
@@ -5895,8 +5896,7 @@ Determining fringe contrast can be done by displacing the foil.
  translation stage.
  If valves are manipulated to permit a slow retreat of the attractor (or
  using the very slow leak of the isolation valve), a fringe pattern may
- be obtained, as in Fig.
- 
+ be obtained, as in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Foil-interferometer-signal-as-fcn-of-pressure-position"
@@ -6060,8 +6060,7 @@ key "ThorlabsPolarizationControl,ulrich1980bending,ross1984rotation"
 on of the noise.
  Securing the fiber, where possible, to immovable objects with tape yielded
  a substantial improvement in sub-Hz noise.
- Noise from within the science run is plotted in Fig.
- 
+ Noise from within the science run is plotted in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Interferometer-low-frequency-pow"
@@ -6075,7 +6074,7 @@ reference "fig:Interferometer-low-frequency-pow"
 A polarization-maintaining fiber is on-hand for an upgraded version of the
  experiment.
  A new fiber coupler, in vacuum fiber, and perhaps even a new fiber-coupled
- laser are required for optimum performance.
+ laser are required for optimum polarization-maintaining performance.
 \end_layout
 
 \begin_layout Standard
@@ -6084,7 +6083,7 @@ status open
 
 \begin_layout Plain Layout
 At higher frequencies, the instrument appears to be limited by electronic
- noise, but the sensitivity is more than sufficient for our needs, see Fig.
+ noise, but the sensitivity is more than sufficient for our needs, see Figure
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -6179,7 +6178,7 @@ Translation stage
 \end_layout
 
 \begin_layout Standard
-With the introduction of the foil-positioning motors (see 
+With the introduction of the foil-positioning motors (see Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Isolating-Foil"
@@ -6189,7 +6188,11 @@ reference "sub:Isolating-Foil"
 ), it was necessary to allow control of the interferometer tip position
  from outside the vacuum vessel.
  The interferometer tip was connected to a long flexure lever with a linear
- reduction ratio of ~10:1, shown in Figure 
+ reduction ratio of 
+\begin_inset Formula $\sim10$
+\end_inset
+
+:1, shown in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Interferometer-control-lever"
@@ -6217,7 +6220,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename Pictures/small/InterferometerControlLeverDecember222011.jpg
-	width 50text%
+	width 70text%
 	rotateAngle 270
 
 \end_inset
@@ -6266,19 +6269,10 @@ name "sub:Pendulum-Foil-coupling"
 \begin_layout Standard
 The critical foil-motion to pendulum-torque coupling was measured by using
  those science data where the attractor pressed against the foil.
- As we know from past experience 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-See XXXMA
-\end_layout
-
-\end_inset
-
-with the interferometer that attractor motion is directly translated into
- foil motion once the attractor has made full contact with the foil, we
- can use the attractor position as a proxy for foil motion.
+ As we know from past experience with the interferometer that attractor
+ motion is directly translated into foil motion once the attractor has made
+ full contact with the foil, we can use the attractor position as a proxy
+ for foil motion.
  In Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -6306,10 +6300,6 @@ filename "../extracted/translationTorqueFit.tex"
 \end_inset
 
 
-\begin_inset space ~
-\end_inset
-
-N-m/m
 \begin_inset Note Note
 status open
 
@@ -6333,6 +6323,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../ifo/positionVsTorque.eps
+	width 100text%
 
 \end_inset
 
@@ -6372,12 +6363,12 @@ Three+ computers
 \end_layout
 
 \begin_layout Standard
-Great care was exercised in the design of the data acquisition system.
+Great caution was exercised in the design of the data acquisition system.
  In order to prevent any correlation of attractor-related information with
  the pendulum readout, the attractor control was placed on an entirely separate
  computer.
  The computers shared only one ground, starred out from the main grounding
- block (see 
+ block (see Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Grounding"
@@ -6409,8 +6400,11 @@ s afterward.
  This became a major experimental concern, as we had no built-in synchronization
  signal, relying on hand-synchronization and attractor-foil interaction
  for synchronization.
- A future iteration of this experiment must have an external clock sending
- optical pulses to all three DAQ systems.
+ A future iteration of this experiment 
+\bar under
+must
+\bar default
+ have an external clock sending optical pulses to all three DAQ systems.
 \end_layout
 
 \begin_layout Standard
@@ -6419,8 +6413,8 @@ The torsion balance computer used a NI-6259 PCI DAQ card, sampling 32 analog
  Careful attention was paid to the signal grounds.
  When not used in fully-differential mode, the card allows the use of two
  analog-input grounds.
- One was referenced to the photodiode readout, and the second to the grounding
- block.
+ One ground was referenced to the photodiode readout, and the second to
+ the grounding block.
  The attractor and interferometer DAQ systems used NI-6211 USB DAQ cards.
 \end_layout
 
@@ -6522,7 +6516,7 @@ contact potential pails
 In addition to a defined grounding arrangement, paring down the number of
  sensors to the minimum set required greatly simplified the traceability
  of system grounds.
- All of this paid off, as seen in 
+ All of this paid off, as seen in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Electrical-Crosstalk"
@@ -6548,8 +6542,7 @@ XXXRC! The experiment was initially aligned using the autocollimator.
  that the light returned to near the center of the sensor.
  The up-down and left-right angles were recorded.
  The attractor was then translated through its full range of motion, and
- the position on the autocollimator recorded, see Fig.
- 
+ the position on the autocollimator recorded, see Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Flexure-runout"
@@ -6586,7 +6579,8 @@ rad, a capacitance of
 \end_inset
 
 -400 pF was achieved, and the capacitance seemed to be at a minimum as a
- function of attractor-foil angle, the system was declared to be aligned.
+ function of attractor-foil angle, the system was declared to be coarsely
+ aligned.
  
 \end_layout
 
@@ -6600,7 +6594,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../metrology/run1690attractorTwist.eps
-	width 70text%
+	width 100text%
 
 \end_inset
 
@@ -6862,7 +6856,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../ifo/ifoVsClosestApproach.eps
-	width 50text%
+	width 100text%
 
 \end_inset
 
@@ -12916,8 +12910,7 @@ The largest possible systematic signals (tilt and direct magnetic coupling
 \end_inset
 
  calibration signal was far more consistent in fractional amplitude (see
- Fig.
- 
+ Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Gravitational-calibration"
@@ -13454,8 +13447,7 @@ With each attractor position change, it takes a finite amount of time for
 \begin_inset space ~
 \end_inset
 
-s, including the DAQ filter, see Fig.
- 
+s, including the DAQ filter, see Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:AttractorMotionLag"
@@ -13463,7 +13455,7 @@ reference "fig:AttractorMotionLag"
 \end_inset
 
 ).
- In addition, the pendulum feedback has a finite response time (See Fig.
+ In addition, the pendulum feedback has a finite response time (See Figure
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -15399,8 +15391,7 @@ A clear method of visualization is important to understanding the output
 \end_inset
 
 , we can plot every measurement in the experiment in a single plot, as in
- Fig.
- 
+ Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:TriangleScatterPlot"
@@ -17876,8 +17867,7 @@ lstparams "caption={mlib/gravity/displayPoints.m},language=Matlab"
 \end_layout
 
 \begin_layout Standard
-With these plots, an image like Fig.
- 
+With these plots, an image like Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:DisplayPoints"
@@ -18589,8 +18579,7 @@ filename "../extracted/attrVertOffset.tex"
 
  with respect to the pendulum.
  (XXXRC verify numbers) The torques due to the complete off-center attractory
- assembly are shown in Fig.
- 
+ assembly are shown in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:OffsetPendulumTorque"
@@ -18833,8 +18822,7 @@ m, this is woefully inadequate.
  To provide an estimate of the effects of the too-large gridsize, the integratio
 n was repeated several times, with the point-mass subcomponents of the pendulum
  and attractor scattered horizontally with Gaussian standard deviation of
- one grid spacing, with results shown in Fig.
- 
+ one grid spacing, with results shown in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:PM-Scan-Torque"
