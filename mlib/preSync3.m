@@ -33,10 +33,10 @@ ifoEndSec = ifoData(rows(ifoData), ifoTimeCol);
 
 %Preserve run-timing info
 if( exist( "pwHdrEndSec" ))
-	pwTimeInfo = [pwStartSec pwEndSec pwHdrEndSec];
+	pwTimeInfo = [pwStartSec pwEndSec pwHdrEndSec rows(pwData)];
 end
 if( exist( "psHdrEndSec" ))
-	psTimeInfo = [psStartSec psEndSec psHdrEndSec];
+	psTimeInfo = [psStartSec psEndSec psHdrEndSec rows(psData)];
 end
 
 

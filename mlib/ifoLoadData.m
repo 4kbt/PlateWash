@@ -20,7 +20,7 @@ end
 
 fscanf(ifoHeaderFile,'%c',6);
 
-ifoStartDateTime = fscanf(ifoHeaderFile, '%g/%g/%g%g:%g:%g\n')
+ifoStartDateTime = fscanf(ifoHeaderFile, '%g/%g/%g%g:%g:%g\n');
 
 ifoStartDateTime(3) -= 2000;
 

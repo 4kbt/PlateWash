@@ -4,7 +4,7 @@ pause = 0;
 more off; 
 
 clear -x nameCtr pause HOMEDIR LoadIFO
-try
+%try
 
 	run3147FixedParameters
 
@@ -17,11 +17,11 @@ try
 	eval(['run' num2str(nameCtr) 'sync3' ifoLoadFlag]);
 
 	%export timing info
-	if( exist( "pwTimeInfo" );)
+	if( exist( "pwTimeInfo" ))
 		timeOut = [pwRunNum pwTimeInfo];
 		save 'pwTimeInfo.dat' -append timeOut;
 	end
-	if( exist( "psTimeInfo" );)
+	if( exist( "psTimeInfo" ))
 		timeOut = [psRunNum psTimeInfo];
 		save 'psTimeInfo.dat' -append timeOut;
 	end
@@ -66,9 +66,9 @@ try
 	eval(['save "alwaysUnblindedResults/run' runName 'pM3FilterOnly.dat" pM']);
 	clear pM;
 
-catch
-	nameCtr
-	errorMessage
-	lasterror
-	error
-end
+%catch
+%	nameCtr
+%	errorMessage
+%	lasterror
+%	error
+%end
