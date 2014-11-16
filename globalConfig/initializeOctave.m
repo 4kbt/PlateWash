@@ -8,6 +8,8 @@ setenv("HOMEDIR", HOMEDIR);
 
 warning off Octave:possible-matlab-short-circuit-operator
 
+graphics_toolkit("gnuplot");
+
 tpath = [HOMEDIR '/mlib/'];
 addpath(genpath(tpath));
 
