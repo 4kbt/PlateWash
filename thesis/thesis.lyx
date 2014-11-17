@@ -12949,6 +12949,77 @@ name "sec:Timing"
 \end_layout
 
 \begin_layout Standard
+Timing is the most important weakness to this particular measurement.
+\end_layout
+
+\begin_layout Standard
+In a major effort to guarantee that 
+\bar under
+no
+\bar default
+ electronic systematic coupling could occur between the attractor drive
+ system and the pendulum and interferometer readout systems, the computers
+ were electrically isolated.
+ They share a common transformer-isolated power source, and a common electrical
+ ground through a starred grounding arrangement (see XXXMA), but no other
+ connections.
+ Of particular concern was the isolation of the analog-to-digital converting
+ boards on each data-acquisition system; no shared signals were allowed
+ between them.
+ This arrangement appears to have worked very well (see XXXMA-electrical
+ systematics).
+ The crux of this system is understanding the synchrony of the three systems'
+ timing.
+\end_layout
+
+\begin_layout Standard
+In retrospect, it is clear that an investment of the 
+\begin_inset Formula $\sim$
+\end_inset
+
+week of work required to implement and debug a functional optically-isolated
+ time distribution system would have paid great dividends.
+ Instead, we chose to rely upon the often-reliable NTP time synchronization
+ service supported by every major computer operating system.
+ As designed, the three computers would resynchronize their clocks with
+ an external reference (either time.nist.gov, or a common local time server
+ referenced to time.nist.gov) every 3141 seconds.
+ The computer clocks' relative drift rates are less than 10
+\begin_inset space ~
+\end_inset
+
+s/day, so continuous resynchronization would yield overall synchronization
+ at better than the 1
+\begin_inset space ~
+\end_inset
+
+s level at all times.
+ Had this worked correctly, there would be no important timing concerns.
+ In practice, the Windows Time service on at least one computer intermittently
+ failed, forcing us to pay much closer attention to timing issues.
+\end_layout
+
+\begin_layout Standard
+Accounting of available clocks, clock rolls
+\end_layout
+
+\begin_layout Standard
+Sample rates
+\end_layout
+
+\begin_layout Standard
+Drift rates
+\end_layout
+
+\begin_layout Standard
+Synchrony
+\end_layout
+
+\begin_layout Standard
+Final time determination
+\end_layout
+
+\begin_layout Standard
 XXXRC TO COLLABORATORS: 
 \begin_inset Note Note
 status open
@@ -12991,18 +13062,6 @@ s run.
 \begin_layout Standard
 With three data acquisition computers running simultaneously, relative timing
  is important.
- As designed, the three computers would resynchronize their clocks with
- an external reference every 3141 seconds.
- The computer clocks' relative drift rates are less than 10
-\begin_inset space ~
-\end_inset
-
-s/day, so continuous resynchronization would yield overall synchronization
- at better than the 1
-\begin_inset space ~
-\end_inset
-
-s level at all times.
  
 \end_layout
 
