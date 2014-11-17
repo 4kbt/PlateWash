@@ -183,10 +183,6 @@ key "GSWNobelPrize"
 The Standard Model is a triumph.
  It is a complex theory, with 18 or more parameters (particle masses, coupling
  constants, and mixing parameters) which are tuned to fit observation.
- After tuning, the Model has predictive power, correctly recovering within
- experimental and theoretical error the known zoo of observed particles,
- resonances, and phenomena, with very few exceptions.
- The exceptions are, therefore, very important.
  The Standard Model had one major remaining prediction - the existence of
  the 'Higgs boson', a lynchpin for the theory, which was discovered by the
  LHC in 2012 
@@ -197,6 +193,11 @@ key "Aad20121,Chatrchyan201230"
 \end_inset
 
 .
+ After tuning, the Model has predictive power, correctly recovering within
+ experimental and theoretical error the known zoo of observed particles,
+ resonances, and phenomena, with very few exceptions.
+ The exceptions are, therefore, very important.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -264,7 +265,8 @@ Dark Energy
 \end_inset
 
 , an energy density associated with empty space that has negative pressure.
- The energy density of vacuum, as described by the Standard Model, is 
+ The energy density of vacuum has these features, but , as described by
+ the Standard Model, is 
 \begin_inset Formula $10^{120}$
 \end_inset
 
@@ -636,7 +638,7 @@ compactification
  three spatial dimensions at longer scales.
  This motivates the comparatively low strength of gravity in the three-dimension
 al macroscopic world.
- String theories predict that gravity is significantly more attractive at
+ This scenario predicts that gravity is significantly more attractive at
  scales shorter than the compactification scale.
  
 \end_layout
@@ -1270,8 +1272,8 @@ key "Murphy2008,MurphyLLRReview"
 \end_inset
 
 .
- The lunar results are the most precise tests of gravity, limited by uncertainti
-es in the astronomical modeling code for solar-system dynamics.
+ The lunar results are the most precise tests of gravity at any scale, limited
+ by uncertainties in the astronomical modeling code for solar-system dynamics.
  The experimental data are consistent with the inverse square law at better
  than the 
 \begin_inset Formula $10^{-10}$
@@ -1284,7 +1286,15 @@ key "adelberger2003tests"
 
 \end_inset
 
-.
+ over lengthscales comparable to the lunar orbital radius of 
+\begin_inset Formula $\sim4\times10^{8}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+m.
 \end_layout
 
 \begin_layout Standard
@@ -1594,7 +1604,16 @@ key "PhysRevLett.107.171101"
  theory could possibly be due to new physics.
  So far, no clear deviations have been observed, so the measurement uncertaintie
 s are traditionally converted into exclusion limits for gravity.
- Other experiments at these scales include neutrons 
+ A new variation on the Casimir technique will use ultracold Strontium spectrosc
+opy to test theoretical predictions of the Van der Waals interaction 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "NISTPMG2013"
+
+\end_inset
+
+.
+ Other experiments at these scales include ultra-cold neutrons 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1609,16 +1628,8 @@ key "PhysRevD.77.034020,antoniadis2011short"
 
 \end_inset
 
-.
- A new variation on the Casimir technique will use ultracold Strontium spectrosc
-opy to test theoretical predictions of the Van der Waals interaction 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "NISTPMG2013"
-
-\end_inset
-
-.
+; while these experiments are less sensitive to gravity, they are completely
+ insensitive to any confounding electromagnetic Casimir background.
  A very different experiment attempts to place limits on new interactions
  by searching for on-shell bosons from the sun 
 \begin_inset CommandInset citation
