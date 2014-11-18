@@ -19,11 +19,11 @@ clear -x nameCtr pause HOMEDIR LoadIFO
 	%export timing info
 	if( exist( "pwTimeInfo" ))
 		timeOut = [pwRunNum pwTimeInfo];
-		save 'pwTimeInfo.dat' -append timeOut;
+		save 'results/pwTimeInfo.dat' -append timeOut;
 	end
 	if( exist( "psTimeInfo" ))
 		timeOut = [psRunNum psTimeInfo];
-		save 'psTimeInfo.dat' -append timeOut;
+		save 'results/psTimeInfo.dat' -append timeOut;
 	end
 
 	%Check for NaNs in the torque column
