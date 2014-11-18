@@ -8981,7 +8981,7 @@ filename "../NewtonianSimulation/SimulationOutput/nonAttractorlin.tex"
 
 \end_inset
 
- Nm/m.
+.
  The spindles contribute the dominant nonlinear term, which is, in aggregate,
  
 \begin_inset CommandInset include
@@ -8990,16 +8990,7 @@ filename "../NewtonianSimulation/SimulationOutput/nonAttractorquad.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-N-m/m
-\begin_inset Formula $^{2}$
-\end_inset
-
 .
- 
 \end_layout
 
 \begin_layout Paragraph
@@ -9087,7 +9078,7 @@ The dense inlays of the attractor and the dense material of the attractor
 \bar under
 total
 \bar default
- torque, not torque-difference, is <
+ torque between them, not torque-difference, is <
 \begin_inset Formula $0.0001$
 \end_inset
 
@@ -9112,6 +9103,16 @@ key "EccobondDatasheet"
 \end_inset
 
 , it's simply not dense-enough to matter.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMA- Consider bubble in attractor against inlay
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
