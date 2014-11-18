@@ -6030,7 +6030,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../ifo/ifoAR.eps
-	width 50page%
+	width 70page%
 
 \end_inset
 
@@ -6048,6 +6048,13 @@ name "fig:Interferometer-Duration"
 \end_inset
 
 Interferometer signal over the duration of the experiment.
+ The instrument drifted by less than a fringe over that time.
+ The periods of substantial scatter (near days 85 and 105) are from times
+ when the attractor was brought into contact with the foil.
+ Only those data from the vertical-middle 71% of the available fringe dynamic
+ range were used to build a quantitative understanding of foil motion.
+ The environmental data are plotted to demonstrate the instrument's apparent
+ temperature and air pressure insensitivity.
 \end_layout
 
 \end_inset

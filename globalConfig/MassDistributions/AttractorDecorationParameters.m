@@ -143,8 +143,9 @@ bellowsPressure = 50.0/14.0;
 bellowsLength = 70e-3;
 bellowsDiameter = 25e-3;
 
-bellowsVolume = pi * (bellowsDiameter/2.0)^2 * bellowsLength; 	
-printSI(bellowsVolume * 1000^3, 2, -3, 'm$^3$', [HOMEDIR '/extracted/bellowsVolume.tex']);
+bellowsVolume = pi * (bellowsDiameter/2.0)^2 * bellowsLength;
+%1000^2 instead of 1000^3, as the millimeter conversion does one of them.
+printSI(bellowsVolume * 1000^2, 2, -3, 'm$^3$', [HOMEDIR '/extracted/bellowsVolume.tex']);
 
 bellowsMass = bellowsVolume * rhoAir * bellowsPressure;
 printSI(bellowsMass, 2, -3, 'g',  [HOMEDIR '/extracted/bellowsMass.tex'  ]);
