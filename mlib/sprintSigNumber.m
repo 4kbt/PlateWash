@@ -15,7 +15,7 @@ function s = sprintSigNumber(data, precision)
 	cnum = data/(10.^cl);
 
 	%Double-percent to work around LaTeX \input whitespace behaviour
-	formatString = '%.*f %s %d %s%%';
+	formatString = '$%.*f %s %d %s$%%';
 
 	s =sprintf( formatString, precision, cnum, "\\times 10^{", cl, "}");
 end

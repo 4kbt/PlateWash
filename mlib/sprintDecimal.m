@@ -25,7 +25,7 @@ function s = sprintDecimal(data, precision)
 	formatString = '%.';
 
 	%http://www.mathworks.com/help/matlab/ref/fprintf.html#inputarg_formatSpec
-	formatString = [formatString num2str(ndecimals) 'f'];
+	formatString = ['$' formatString num2str(ndecimals) 'f$%%'];
 	
 	s = sprintf( formatString, data);
 end

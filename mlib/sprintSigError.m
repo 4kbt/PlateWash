@@ -16,7 +16,7 @@ function s = sprintSigError(central, err)
 	snum = err    /(10^cl);
 
 	%double-percent to work around LaTeX \input whitespace behaviour
-	formatString = '%.*f %s %.*f %s %d %s%%';
+	formatString = '$%.*f %s %.*f %s %d %s$%%';
 
 	s = sprintf( formatString, prec, cnum, "\\pm", prec, snum, "\\times 10^{",  cl, "}");
 

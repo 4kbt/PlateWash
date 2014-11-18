@@ -2,7 +2,7 @@
 ## prints data using save --ascii into the specified file. Filename is a string.
 
 function s = sprintInteger(data)
-	formatString = '%d';
+	formatString = '$%d$%%';
 
 	s = sprintf( formatString, data);
 end
