@@ -8564,6 +8564,7 @@ status open
 \begin_inset Graphics
 	filename ../systematics/pressure/squeezeFilm.eps
 	width 70text%
+	rotateAngle 270
 
 \end_inset
 
