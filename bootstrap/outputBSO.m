@@ -9,7 +9,7 @@ function outputBSO( outfn , BSO , injParameters, injSubCol, signalColString, fit
 	signalColString(2:end+1) = signalColString;
 	signalColString(1) = "Slope";
 
-	outString = strjoin("\t" , signalColString);
+	outString = strjoin(signalColString, "\t");
 
 	
 
