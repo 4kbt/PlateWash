@@ -19,7 +19,9 @@ DATA   := $(shell find $(HOMEDIR)/data/         -type d)
 
 MLIB   := $(MLIB) $(GLOBAL)
 
-LYX    := lyx -batch --export "pdf2" -dbg info,latex
+LYXINTERACT := lyx --export "pdf2" -dbg info,latex -userdir $(HOMEDIR)/.lyx
+
+LYX	:= $(LYXINTERACT) -batch
 
 .INTERACT: 
 	$(OCT) --persist --eval 'ignore_function_time_stamp("system");'
