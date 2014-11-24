@@ -1,4 +1,4 @@
-HOMEDIR := /home/charlie/homeVersion/Eotwash/
+HOMEDIR := /home/charlie/jessieMaster/Eotwash/
 
 OCT:= octave --no-init-file \
 	--eval "global HOMEDIR = \"$(HOMEDIR)\";"\
@@ -19,9 +19,11 @@ DATA   := $(shell find $(HOMEDIR)/data/         -type d)
 
 MLIB   := $(MLIB) $(GLOBAL)
 
-LYXINTERACT := lyx --export "pdf2" -dbg info,latex -userdir $(HOMEDIR)/.lyx
+LYXINTERACT := lyx -userdir $(HOMEDIR)/.lyx
+.LYXINTERACT:
+	$(LYXINTERACT)
 
-LYX	:= $(LYXINTERACT) -batch
+LYX	:= $(LYXINTERACT) -batch --export "pdf2" -dbg info,latex
 
 .INTERACT: 
 	$(OCT) --persist --eval 'ignore_function_time_stamp("system");'
