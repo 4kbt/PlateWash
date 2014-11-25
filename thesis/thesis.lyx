@@ -12882,9 +12882,23 @@ Confidence intervals
 \begin_layout Standard
 There are many ways to draw two-dimensional confidence intervals from a
  distribution of best-fit points.
- We have not yet settled on one-- yes we have.
- Gets its own section later.
- XXXRC.
+ We extract confidence intervals using an algorithm very similar in behavior
+ to the 
+\begin_inset Quotes eld
+\end_inset
+
+pick a lambda, fit for alpha
+\begin_inset Quotes erd
+\end_inset
+
+ method that's common in the field, as seen in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Confidence-Interval-Algorithm"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsubsection
@@ -17202,6 +17216,164 @@ Let
 \[
 \sigma_{F_{x}}^{2}=Q^{2}\sum_{i}\alpha_{i}^{2}\lambda_{i}^{4}T(\lambda_{i})^{2}\sigma_{B_{i}}^{2}e^{-2\bar{x}/\lambda_{i}}
 \]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Confidence Interval Algorithm
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Confidence-Interval-Algorithm"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+There is no unique method for drawing two-dimensional confidence intervals.
+ The method we selected was chosen for its clarity after exploring more
+ sophisticated methods (kernel density estimators among them).
+ The most important lesson from our investigation of differing methods is
+ the notion that, 
+\emph on
+a priori
+\emph default
+, the Yukawa 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ have nothing to do with one another.
+ Any attempt to constrain them jointly inherently builds in a prior assumption
+ about their relationship.
+ The long-standing tradition in this field is the 
+\begin_inset Quotes eld
+\end_inset
+
+pick a lambda and fit for alpha
+\begin_inset Quotes erd
+\end_inset
+
+ approach, which sidesteps any presupposition of covariance.
+ What we do here is in that spirit.
+\end_layout
+
+\begin_layout Standard
+The outcome of the bootstrapped Yukawa fits is a distribution of best-fit
+ points in the 
+\begin_inset Formula $\alpha-\lambda$
+\end_inset
+
+ plane.
+ Working from small 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ to large 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, we compute the mean 
+\begin_inset Formula $m_{\alpha}$
+\end_inset
+
+ and standard deviation 
+\begin_inset Formula $\sigma_{\alpha}$
+\end_inset
+
+ of the 
+\begin_inset Formula $\alpha$
+\end_inset
+
+s of the subset 
+\begin_inset Formula $S$
+\end_inset
+
+ composed of the first 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/NBinConfInterval.tex"
+
+\end_inset
+
+ best-fit points.
+ We then plot four points, 
+\begin_inset Formula $(\lambda_{min},m_{\alpha}\pm2\sigma_{\alpha})$
+\end_inset
+
+ and 
+\begin_inset Formula $(\lambda_{max},m_{\alpha}\pm2\sigma_{\alpha})$
+\end_inset
+
+, where 
+\begin_inset Formula $\lambda_{min}$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda_{max}$
+\end_inset
+
+ are the smallest and largest 
+\begin_inset Formula $\lambda$
+\end_inset
+
+s of points in the subset.
+ We then remove the point corresponding to 
+\begin_inset Formula $\lambda_{min}$
+\end_inset
+
+ from 
+\begin_inset Formula $S$
+\end_inset
+
+, add the next point with 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ larger than 
+\begin_inset Formula $\lambda_{max}$
+\end_inset
+
+ to 
+\begin_inset Formula $S$
+\end_inset
+
+, and repeat the procedure.
+ 
+\end_layout
+
+\begin_layout Standard
+The two envelopes defined by the four lines that emerge define the 95% confidenc
+e intervals for our best fits.
+ Regions that are excluded by both envelopes are certainly excluded at 95%
+ confidence.
+ Regions that are included by both are included at 95% confidence.
+ Regions excluded by only one envelope are indeterminate; we've roughly
+ quantified the uncertainty on our confidence interval.
+ The volume of the indeterminate region can be made arbitrarily small by
+ computing greater numbers of best-fit points.
+ In regions where 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is a strong function of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, convergence is necessarily slow.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMA Figure
+\end_layout
 
 \end_inset
 
