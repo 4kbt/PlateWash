@@ -13269,7 +13269,67 @@ s level at all times.
 \end_layout
 
 \begin_layout Standard
-Accounting of available clocks, clock rolls
+There are more than ten clocks that are of potential relevance to this analysis.
+ The remote NTP server, the user-space clocks on each of the three DAQ systems,
+ the system clocks on each of the three DAQ systems, and the hardware clocks
+ on each of the DAQ cards.
+ The torsion-balance and attractor computers are of greatest importance,
+ and share a codebase.
+ 
+\end_layout
+
+\begin_layout Standard
+The user-space clocks are, in principle, resynchronized with the NTP clock
+ regularly.
+ The user-space clock values are written into the run header files at the
+ beginning of each recorded run.
+ The programs then make a call to the timeGetTime() function in the Windows
+ API, and reference all time measurements to this datum.
+ This function returns the number of milliseconds elapsed since the current
+ session of Windows began.
+ Critically, the returned value is from a system clock, and not the user-space
+ clock.
+ No changes due to NTP-related synchronizations (or lack thereof) are evident
+ in the data.
+ Therefore, the runs that began with synchronized clocks share a common
+ datum.
+ At the ends of runs which terminated normally, the user-space clock (which
+ is altered by NTP) is again written into the header file.
+ This allows a cross-check on the duration of the run by cross-comparing
+ the user-space and system-clock durations.
+ 
+\end_layout
+
+\begin_layout Standard
+Each DAQ computer has both a system clock and a hardware clock in the DAQ
+ card.
+ The data-taking cadence is defined by the DAQ card.
+ For both the pendulum-computer's internal NI-6259 and the external USB
+ NI-6211s used on the attractor and interferometer computers, the manufacturer
+ guarantees the clock stability to 50 ppm, or 4 s/day.
+ In Figure XXXRC, we show that it is possible to use the NTP timing data
+ to demonstrate the tick-rate stability of the system clocks and then use
+ the stability of the system clocks to demonstrate the stability of the
+ DAQ hardware clocks.
+\end_layout
+
+\begin_layout Standard
+Once we have characterized the clocks' stability, we can begin to synchronize
+ the data streams.
+ Complicating matters is the fact that the attractor computer's sample rate
+ differed by 
+\begin_inset Formula $10^{-4}$
+\end_inset
+
+ from the other two computers.
+ 
+\end_layout
+
+\begin_layout Standard
+Must index steps to attractor rate; there is no other way.
+ Therefore, must determine the attractor rate on the pendulum clock.
+ From there on in, it's easy.
+ Can use the attractor-magnetic-torque data to confirm the rate difference?
 \end_layout
 
 \begin_layout Standard
