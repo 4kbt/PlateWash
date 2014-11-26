@@ -16615,11 +16615,11 @@ Compute
 
 \begin_layout Itemize
 Compute 
-\begin_inset Formula $\sigma_{F_{x}}^{2}=\int_{-\infty}^{\infty}F(x,B_{1\ldots n},\alpha_{1\ldots n},\lambda_{1\ldots n})^{2}\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}-\bar{F}^{2}$
+\begin_inset Formula $\sigma_{F_{x_{A}}}^{2}=\int_{-\infty}^{\infty}F(x,B_{1\ldots n},\alpha_{1\ldots n},\lambda_{1\ldots n})^{2}\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}-\bar{F}^{2}$
 \end_inset
 
  and 
-\begin_inset Formula $\sigma_{F_{y}}^{2}$
+\begin_inset Formula $\sigma_{F_{x_{B}}}^{2}$
 \end_inset
 
 
@@ -16627,7 +16627,7 @@ Compute
 
 \begin_layout Itemize
 Compute 
-\begin_inset Formula $\tilde{\sigma}_{G}^{2}=\sigma_{F_{x}}^{2}+\sigma_{F_{y}}^{2}$
+\begin_inset Formula $\tilde{\sigma}_{G}^{2}=\sigma_{F_{x_{A}}}^{2}+\sigma_{F_{x_{B}}}^{2}$
 \end_inset
 
 
@@ -16827,7 +16827,7 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\sigma_{G}^{2}=\sigma_{F_{x}}^{2}+\sigma_{F_{y}}^{2}$
+\begin_inset Formula $\sigma_{G}^{2}=\sigma_{F_{x_{A}}}^{2}+\sigma_{F_{x_{B}}}^{2}$
 \end_inset
 
 
@@ -22444,7 +22444,7 @@ Compute
 
 \begin_layout Enumerate
 Compute 
-\begin_inset Formula $\bar{G}=\bar{F}_{x}-\bar{F}_{y}$
+\begin_inset Formula $\bar{G}=\bar{F}_{x_{A}}-\bar{F}_{x_{B}}$
 \end_inset
 
 
@@ -22452,11 +22452,11 @@ Compute
 
 \begin_layout Enumerate
 Compute 
-\begin_inset Formula $\sigma_{F_{x}}^{2}=\int_{-\infty}^{\infty}F(x,B_{1\ldots n},\alpha_{1\ldots n},\lambda_{1\ldots n})^{2}P(x,\bar{x},\sigma_{x})dxP(y,\bar{y},\sigma_{y})dy\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}-\bar{F}^{2}$
+\begin_inset Formula $\sigma_{F_{x_{A}}}^{2}=\int_{-\infty}^{\infty}F(x,B_{1\ldots n},\alpha_{1\ldots n},\lambda_{1\ldots n})^{2}P(x,\bar{x},\sigma_{x})dxP(y,\bar{y},\sigma_{y})dy\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}-\bar{F}^{2}$
 \end_inset
 
  and 
-\begin_inset Formula $\sigma_{F_{y}}^{2}$
+\begin_inset Formula $\sigma_{F_{x_{B}}}^{2}$
 \end_inset
 
 
@@ -22464,7 +22464,7 @@ Compute
 
 \begin_layout Enumerate
 Compute 
-\begin_inset Formula $\sigma_{G}^{2}=\sigma_{F_{x}}^{2}+\sigma_{F_{y}}^{2}$
+\begin_inset Formula $\sigma_{G}^{2}=\sigma_{F_{x_{A}}}^{2}+\sigma_{F_{x_{B}}}^{2}$
 \end_inset
 
 
@@ -22889,7 +22889,7 @@ This is just a restatement of Jason's trick, so
 \uwave off
 \noun off
 \color none
-\begin_inset Formula $\bar{F}=\int_{-\infty}^{\infty}F(x,y,B_{1\ldots n},\alpha_{1\ldots n},\lambda_{1\ldots n})P(x,\bar{x},\sigma_{x})dx\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}$
+\begin_inset Formula $\bar{F}=\int_{-\infty}^{\infty}F(x,B_{1\ldots n},\alpha_{1\ldots n},\lambda_{1\ldots n})P(x,\bar{x},\sigma_{x})dx\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}$
 \end_inset
 
 
@@ -23000,7 +23000,7 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\sigma_{G}^{2}=\sigma_{F_{x}}^{2}+\sigma_{F_{y}}^{2}$
+\begin_inset Formula $\sigma_{G}^{2}=\sigma_{F_{x_{A}}}^{2}+\sigma_{F_{x_{B}}}^{2}$
 \end_inset
 
 
