@@ -11835,6 +11835,13 @@ reference "SNR vs Lags"
 \end_inset
 
 .
+ 
+\end_layout
+
+\begin_layout Standard
+XXXRC -- Krishna wants to see some kind of plot showing stability against
+ dead-time variation.
+ Can I use the magnetic injection? Where did that go?
 \end_layout
 
 \begin_layout Standard
@@ -20859,6 +20866,16 @@ filename "../systematics/electrical/extracted/longStrokeL0Diff3167.tex"
 N-m.
 \end_layout
 
+\begin_layout Section
+Dead-time sensitivity
+\end_layout
+
+\begin_layout Standard
+XXXRC - Krishna would like to see a square-waved blinded sensitivity to
+ dead time.
+ 
+\end_layout
+
 \begin_layout Chapter
 Foil Systematic
 \end_layout
@@ -21018,6 +21035,9 @@ Interferometer fit.
  Each line is a different bootstrapped fit.
  This fits are used individually for subtraction in the bootstrapped global
  Yukawa fits.
+ XXXRC - What about chopping out another 20 microns in short-cut in order
+ to completely dump the innner systematic.
+ Feels good,right?
 \end_layout
 
 \end_inset
