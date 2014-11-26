@@ -2234,6 +2234,13 @@ filename "../extracted/translationTorqueFit.tex"
 
 \begin_layout Section
 Expected Signal
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Expected-Signal"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -2489,11 +2496,11 @@ The torque due to a single attractor sheet of density
 \end_inset
 
 , and a pendulum inlay thickness 
-\begin_inset Formula $t_{i}$
+\begin_inset Formula $t_{I}$
 \end_inset
 
 , is 
-\begin_inset Formula $\tau_{one}=\rho_{a}\tau\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{i}/\lambda}\right)$
+\begin_inset Formula $\tau_{one}=\rho_{a}\tau\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{I}/\lambda}\right)$
 \end_inset
 
 
@@ -2502,7 +2509,7 @@ The torque due to a single attractor sheet of density
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\tau_{one}(x)=\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}e^{-\frac{d}{\lambda}}\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{i}/\lambda}\right)
+\tau_{one}(x)=\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}e^{-\frac{d}{\lambda}}\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{I}/\lambda}\right)
 \]
 
 \end_inset
@@ -2517,7 +2524,7 @@ Taking the difference between the inlay torques, with a pendulum thickness
 \end_inset
 
 , 
-\begin_inset Formula $\tau_{full}=\tau_{one}(x)-\tau_{one}(x+t_{p}-t_{i})$
+\begin_inset Formula $\tau_{full}=\tau_{one}(x)-\tau_{one}(x+t_{p}-t_{I})$
 \end_inset
 
 
@@ -2526,7 +2533,7 @@ Taking the difference between the inlay torques, with a pendulum thickness
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\tau_{full}=\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}\left(e^{-d/\lambda}-e^{-(d+t_{p}-t_{i})/\lambda}\right)\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{i}/\lambda}\right)\label{eq:Full-flat-plate-yukawa torque}
+\tau_{full}=\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}\left(e^{-d/\lambda}-e^{-(d+t_{p}-t_{I})/\lambda}\right)\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{I}/\lambda}\right)\label{eq:Full-flat-plate-yukawa torque}
 \end{equation}
 
 \end_inset
@@ -2553,7 +2560,7 @@ With an attractor stroke (the difference between close and far positions)
 status open
 
 \begin_layout Plain Layout
-\begin_inset Formula $\Delta N_{full}=\pi\alpha Gh(\frac{w^{2}}{4}-j^{2})(\rho_{h}-\rho_{l})\rho_{a}\lambda^{2}(e^{-x/\lambda}-e^{-(x+t_{p}-t_{i})/\lambda}-e^{-(x+s)/\lambda}+e^{-(x+s+t_{p}-t_{i})/\lambda})(1-e^{-t_{a}/\lambda})(1-e^{-t_{i}/\lambda})$
+\begin_inset Formula $\Delta N_{full}=\pi\alpha Gh(\frac{w^{2}}{4}-j^{2})(\rho_{h}-\rho_{l})\rho_{a}\lambda^{2}(e^{-x/\lambda}-e^{-(x+t_{p}-t_{I})/\lambda}-e^{-(x+s)/\lambda}+e^{-(x+s+t_{p}-t_{I})/\lambda})(1-e^{-t_{a}/\lambda})(1-e^{-t_{I}/\lambda})$
 \end_inset
 
 
@@ -2567,7 +2574,7 @@ status open
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\Delta\tau_{full}=\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}e^{-d/\lambda}\left(1-e^{-(t_{p}-t_{i})/\lambda}-e^{-s/\lambda}\left(1-e^{-(t_{p}-t_{i})/\lambda}\right)\right)\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{i}/\lambda}\right)
+\Delta\tau_{full}=\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}e^{-d/\lambda}\left(1-e^{-(t_{p}-t_{I})/\lambda}-e^{-s/\lambda}\left(1-e^{-(t_{p}-t_{I})/\lambda}\right)\right)\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{I}/\lambda}\right)
 \]
 
 \end_inset
@@ -2577,7 +2584,7 @@ status open
 
 \begin_layout Standard
 If 
-\begin_inset Formula $\lambda\ll t_{p},t_{i},t_{a}$
+\begin_inset Formula $\lambda\ll t_{p},t_{I},t_{a}$
 \end_inset
 
 
@@ -16056,11 +16063,18 @@ Let
 \end_layout
 
 \begin_layout Itemize
-We assume that the torque on the pendulum takes the form 
+Following the torque calculations from Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Expected-Signal"
+
+\end_inset
+
+, we assume that the torque on the pendulum takes the form 
 \begin_inset Formula 
 \begin{eqnarray}
 F(x,B_{1\dots n}|\alpha_{1\ldots n},\lambda_{1\ldots n}) & = & \pi Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}\label{eq:PrototypeFitFunction}\\
- &  & \times\left(1-e^{-(t_{p}-t_{i})/\lambda_{i}}\right)\left(1-e^{-t_{a}/\lambda_{i}}\right)\left(1-e^{-t_{i}/\lambda_{i}}\right)e^{-x/\lambda_{i}}+Cx\nonumber 
+ &  & \times\left(1-e^{-(t_{p}-t_{I})/\lambda_{i}}\right)\left(1-e^{-t_{a}/\lambda_{i}}\right)\left(1-e^{-t_{I}/\lambda_{i}}\right)e^{-x/\lambda_{i}}+Cx\nonumber 
 \end{eqnarray}
 
 \end_inset
@@ -16102,7 +16116,7 @@ all
 To simplify notation, we subsume the finite-thickness corrections into 
 \begin_inset Formula 
 \[
-T(\lambda_{i})=\rho_{a}\left(1-e^{-(t_{p}-t_{i})/\lambda_{i}}\right)\left(1-e^{-t_{a}/\lambda_{i}}\right)\left(1-e^{-t_{i}/\lambda_{i}}\right)
+T(\lambda_{i})=\rho_{a}\left(1-e^{-(t_{p}-t_{I})/\lambda_{i}}\right)\left(1-e^{-t_{a}/\lambda_{i}}\right)\left(1-e^{-t_{I}/\lambda_{i}}\right)
 \]
 
 \end_inset
@@ -22374,7 +22388,7 @@ Define a fitting function,
 \end_inset
 
 
-\begin_inset Formula $F(x,B_{1\dots n}|\alpha_{1\ldots n},\lambda_{1\ldots n})=\pi Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}\left(1-e^{-(t_{p}-t_{i})/\lambda_{i}}\right)\left(1-e^{-t_{a}/\lambda_{i}}\right)\left(1-e^{-t_{i}/\lambda_{i}}\right)e^{-x/\lambda_{i}}+Cx$
+\begin_inset Formula $F(x,B_{1\dots n}|\alpha_{1\ldots n},\lambda_{1\ldots n})=\pi Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}\left(1-e^{-(t_{p}-t_{I})/\lambda_{i}}\right)\left(1-e^{-t_{a}/\lambda_{i}}\right)\left(1-e^{-t_{I}/\lambda_{i}}\right)e^{-x/\lambda_{i}}+Cx$
 \end_inset
 
 .
@@ -22382,7 +22396,7 @@ Define a fitting function,
 
 \begin_layout Enumerate
 Let the thickness corrections be 
-\begin_inset Formula $T(\lambda)=\rho_{a}\left(1-e^{-(t_{p}-t_{i})/\lambda_{i}}\right)\left(1-e^{-t_{a}/\lambda_{i}}\right)\left(1-e^{-t_{i}/\lambda_{i}}\right)$
+\begin_inset Formula $T(\lambda)=\rho_{a}\left(1-e^{-(t_{p}-t_{I})/\lambda_{i}}\right)\left(1-e^{-t_{a}/\lambda_{i}}\right)\left(1-e^{-t_{I}/\lambda_{i}}\right)$
 \end_inset
 
 
