@@ -2234,6 +2234,13 @@ filename "../extracted/translationTorqueFit.tex"
 
 \begin_layout Section
 Expected Signal
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Expected-Signal"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -2489,11 +2496,11 @@ The torque due to a single attractor sheet of density
 \end_inset
 
 , and a pendulum inlay thickness 
-\begin_inset Formula $t_{i}$
+\begin_inset Formula $t_{I}$
 \end_inset
 
 , is 
-\begin_inset Formula $\tau_{one}=\rho_{a}\tau\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{i}/\lambda}\right)$
+\begin_inset Formula $\tau_{one}=\rho_{a}\tau\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{I}/\lambda}\right)$
 \end_inset
 
 
@@ -2502,7 +2509,7 @@ The torque due to a single attractor sheet of density
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\tau_{one}(x)=\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}e^{-\frac{d}{\lambda}}\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{i}/\lambda}\right)
+\tau_{one}(x)=\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}e^{-\frac{d}{\lambda}}\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{I}/\lambda}\right)
 \]
 
 \end_inset
@@ -2517,7 +2524,7 @@ Taking the difference between the inlay torques, with a pendulum thickness
 \end_inset
 
 , 
-\begin_inset Formula $\tau_{full}=\tau_{one}(x)-\tau_{one}(x+t_{p}-t_{i})$
+\begin_inset Formula $\tau_{full}=\tau_{one}(x)-\tau_{one}(x+t_{p}-t_{I})$
 \end_inset
 
 
@@ -2526,7 +2533,7 @@ Taking the difference between the inlay torques, with a pendulum thickness
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\tau_{full}=\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}\left(e^{-d/\lambda}-e^{-(d+t_{p}-t_{i})/\lambda}\right)\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{i}/\lambda}\right)\label{eq:Full-flat-plate-yukawa torque}
+\tau_{full}=\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}\left(e^{-d/\lambda}-e^{-(d+t_{p}-t_{I})/\lambda}\right)\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{I}/\lambda}\right)\label{eq:Full-flat-plate-yukawa torque}
 \end{equation}
 
 \end_inset
@@ -2553,7 +2560,7 @@ With an attractor stroke (the difference between close and far positions)
 status open
 
 \begin_layout Plain Layout
-\begin_inset Formula $\Delta N_{full}=\pi\alpha Gh(\frac{w^{2}}{4}-j^{2})(\rho_{h}-\rho_{l})\rho_{a}\lambda^{2}(e^{-x/\lambda}-e^{-(x+t_{p}-t_{i})/\lambda}-e^{-(x+s)/\lambda}+e^{-(x+s+t_{p}-t_{i})/\lambda})(1-e^{-t_{a}/\lambda})(1-e^{-t_{i}/\lambda})$
+\begin_inset Formula $\Delta N_{full}=\pi\alpha Gh(\frac{w^{2}}{4}-j^{2})(\rho_{h}-\rho_{l})\rho_{a}\lambda^{2}(e^{-x/\lambda}-e^{-(x+t_{p}-t_{I})/\lambda}-e^{-(x+s)/\lambda}+e^{-(x+s+t_{p}-t_{I})/\lambda})(1-e^{-t_{a}/\lambda})(1-e^{-t_{I}/\lambda})$
 \end_inset
 
 
@@ -2567,7 +2574,7 @@ status open
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\Delta\tau_{full}=\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}e^{-d/\lambda}\left(1-e^{-(t_{p}-t_{i})/\lambda}-e^{-s/\lambda}\left(1-e^{-(t_{p}-t_{i})/\lambda}\right)\right)\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{i}/\lambda}\right)
+\Delta\tau_{full}=\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}e^{-d/\lambda}\left(1-e^{-(t_{p}-t_{I})/\lambda}-e^{-s/\lambda}\left(1-e^{-(t_{p}-t_{I})/\lambda}\right)\right)\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{I}/\lambda}\right)
 \]
 
 \end_inset
@@ -2577,7 +2584,7 @@ status open
 
 \begin_layout Standard
 If 
-\begin_inset Formula $\lambda\ll t_{p},t_{i},t_{a}$
+\begin_inset Formula $\lambda\ll t_{p},t_{I},t_{a}$
 \end_inset
 
 
@@ -11835,6 +11842,13 @@ reference "SNR vs Lags"
 \end_inset
 
 .
+ 
+\end_layout
+
+\begin_layout Standard
+XXXRC -- Krishna wants to see some kind of plot showing stability against
+ dead-time variation.
+ Can I use the magnetic injection? Where did that go?
 \end_layout
 
 \begin_layout Standard
@@ -12882,9 +12896,23 @@ Confidence intervals
 \begin_layout Standard
 There are many ways to draw two-dimensional confidence intervals from a
  distribution of best-fit points.
- We have not yet settled on one-- yes we have.
- Gets its own section later.
- XXXRC.
+ We extract confidence intervals using an algorithm very similar in behavior
+ to the 
+\begin_inset Quotes eld
+\end_inset
+
+pick a lambda, fit for alpha
+\begin_inset Quotes erd
+\end_inset
+
+ method that's common in the field, as seen in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Confidence-Interval-Algorithm"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsubsection
@@ -13255,7 +13283,67 @@ s level at all times.
 \end_layout
 
 \begin_layout Standard
-Accounting of available clocks, clock rolls
+There are more than ten clocks that are of potential relevance to this analysis.
+ The remote NTP server, the user-space clocks on each of the three DAQ systems,
+ the system clocks on each of the three DAQ systems, and the hardware clocks
+ on each of the DAQ cards.
+ The torsion-balance and attractor computers are of greatest importance,
+ and share a codebase.
+ 
+\end_layout
+
+\begin_layout Standard
+The user-space clocks are, in principle, resynchronized with the NTP clock
+ regularly.
+ The user-space clock values are written into the run header files at the
+ beginning of each recorded run.
+ The programs then make a call to the timeGetTime() function in the Windows
+ API, and reference all time measurements to this datum.
+ This function returns the number of milliseconds elapsed since the current
+ session of Windows began.
+ Critically, the returned value is from a system clock, and not the user-space
+ clock.
+ No changes due to NTP-related synchronizations (or lack thereof) are evident
+ in the data.
+ Therefore, the runs that began with synchronized clocks share a common
+ datum.
+ At the ends of runs which terminated normally, the user-space clock (which
+ is altered by NTP) is again written into the header file.
+ This allows a cross-check on the duration of the run by cross-comparing
+ the user-space and system-clock durations.
+ 
+\end_layout
+
+\begin_layout Standard
+Each DAQ computer has both a system clock and a hardware clock in the DAQ
+ card.
+ The data-taking cadence is defined by the DAQ card.
+ For both the pendulum-computer's internal NI-6259 and the external USB
+ NI-6211s used on the attractor and interferometer computers, the manufacturer
+ guarantees the clock stability to 50 ppm, or 4 s/day.
+ In Figure XXXRC, we show that it is possible to use the NTP timing data
+ to demonstrate the tick-rate stability of the system clocks and then use
+ the stability of the system clocks to demonstrate the stability of the
+ DAQ hardware clocks.
+\end_layout
+
+\begin_layout Standard
+Once we have characterized the clocks' stability, we can begin to synchronize
+ the data streams.
+ Complicating matters is the fact that the attractor computer's sample rate
+ differed by 
+\begin_inset Formula $10^{-4}$
+\end_inset
+
+ from the other two computers.
+ 
+\end_layout
+
+\begin_layout Standard
+Must index steps to attractor rate; there is no other way.
+ Therefore, must determine the attractor rate on the pendulum clock.
+ From there on in, it's easy.
+ Can use the attractor-magnetic-torque data to confirm the rate difference?
 \end_layout
 
 \begin_layout Standard
@@ -15975,11 +16063,18 @@ Let
 \end_layout
 
 \begin_layout Itemize
-We assume that the torque on the pendulum takes the form 
+Following the torque calculations from Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Expected-Signal"
+
+\end_inset
+
+, we assume that the torque on the pendulum takes the form 
 \begin_inset Formula 
 \begin{eqnarray}
 F(x,B_{1\dots n}|\alpha_{1\ldots n},\lambda_{1\ldots n}) & = & \pi Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}\label{eq:PrototypeFitFunction}\\
- &  & \times\left(1-e^{-(t_{p}-t_{i})/\lambda_{i}}\right)\left(1-e^{-t_{a}/\lambda_{i}}\right)\left(1-e^{-t_{i}/\lambda_{i}}\right)e^{-x/\lambda_{i}}+Cx\nonumber 
+ &  & \times\left(1-e^{-(t_{p}-t_{I})/\lambda_{i}}\right)\left(1-e^{-t_{a}/\lambda_{i}}\right)\left(1-e^{-t_{I}/\lambda_{i}}\right)e^{-x/\lambda_{i}}+Cx\nonumber 
 \end{eqnarray}
 
 \end_inset
@@ -16021,7 +16116,7 @@ all
 To simplify notation, we subsume the finite-thickness corrections into 
 \begin_inset Formula 
 \[
-T(\lambda_{i})=\rho_{a}\left(1-e^{-(t_{p}-t_{i})/\lambda_{i}}\right)\left(1-e^{-t_{a}/\lambda_{i}}\right)\left(1-e^{-t_{i}/\lambda_{i}}\right)
+T(\lambda_{i})=\rho_{a}\left(1-e^{-(t_{p}-t_{I})/\lambda_{i}}\right)\left(1-e^{-t_{a}/\lambda_{i}}\right)\left(1-e^{-t_{I}/\lambda_{i}}\right)
 \]
 
 \end_inset
@@ -16520,11 +16615,11 @@ Compute
 
 \begin_layout Itemize
 Compute 
-\begin_inset Formula $\sigma_{F_{x}}^{2}=\int_{-\infty}^{\infty}F(x,B_{1\ldots n},\alpha_{1\ldots n},\lambda_{1\ldots n})^{2}\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}-\bar{F}^{2}$
+\begin_inset Formula $\sigma_{F_{x_{A}}}^{2}=\int_{-\infty}^{\infty}F(x,B_{1\ldots n},\alpha_{1\ldots n},\lambda_{1\ldots n})^{2}\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}-\bar{F}^{2}$
 \end_inset
 
  and 
-\begin_inset Formula $\sigma_{F_{y}}^{2}$
+\begin_inset Formula $\sigma_{F_{x_{B}}}^{2}$
 \end_inset
 
 
@@ -16532,7 +16627,7 @@ Compute
 
 \begin_layout Itemize
 Compute 
-\begin_inset Formula $\tilde{\sigma}_{G}^{2}=\sigma_{F_{x}}^{2}+\sigma_{F_{y}}^{2}$
+\begin_inset Formula $\tilde{\sigma}_{G}^{2}=\sigma_{F_{x_{A}}}^{2}+\sigma_{F_{x_{B}}}^{2}$
 \end_inset
 
 
@@ -16732,7 +16827,7 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\sigma_{G}^{2}=\sigma_{F_{x}}^{2}+\sigma_{F_{y}}^{2}$
+\begin_inset Formula $\sigma_{G}^{2}=\sigma_{F_{x_{A}}}^{2}+\sigma_{F_{x_{B}}}^{2}$
 \end_inset
 
 
@@ -17202,6 +17297,164 @@ Let
 \[
 \sigma_{F_{x}}^{2}=Q^{2}\sum_{i}\alpha_{i}^{2}\lambda_{i}^{4}T(\lambda_{i})^{2}\sigma_{B_{i}}^{2}e^{-2\bar{x}/\lambda_{i}}
 \]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Confidence Interval Algorithm
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Confidence-Interval-Algorithm"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+There is no unique method for drawing two-dimensional confidence intervals.
+ The method we selected was chosen for its clarity after exploring more
+ sophisticated methods (kernel density estimators among them).
+ The most important lesson from our investigation of differing methods is
+ the notion that, 
+\emph on
+a priori
+\emph default
+, the Yukawa 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ have nothing to do with one another.
+ Any attempt to constrain them jointly inherently builds in a prior assumption
+ about their relationship.
+ The long-standing tradition in this field is the 
+\begin_inset Quotes eld
+\end_inset
+
+pick a lambda and fit for alpha
+\begin_inset Quotes erd
+\end_inset
+
+ approach, which sidesteps any presupposition of covariance.
+ What we do here is in that spirit.
+\end_layout
+
+\begin_layout Standard
+The outcome of the bootstrapped Yukawa fits is a distribution of best-fit
+ points in the 
+\begin_inset Formula $\alpha-\lambda$
+\end_inset
+
+ plane.
+ Working from small 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ to large 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, we compute the mean 
+\begin_inset Formula $m_{\alpha}$
+\end_inset
+
+ and standard deviation 
+\begin_inset Formula $\sigma_{\alpha}$
+\end_inset
+
+ of the 
+\begin_inset Formula $\alpha$
+\end_inset
+
+s of the subset 
+\begin_inset Formula $S$
+\end_inset
+
+ composed of the first 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/NBinConfInterval.tex"
+
+\end_inset
+
+ best-fit points.
+ We then plot four points, 
+\begin_inset Formula $(\lambda_{min},m_{\alpha}\pm2\sigma_{\alpha})$
+\end_inset
+
+ and 
+\begin_inset Formula $(\lambda_{max},m_{\alpha}\pm2\sigma_{\alpha})$
+\end_inset
+
+, where 
+\begin_inset Formula $\lambda_{min}$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda_{max}$
+\end_inset
+
+ are the smallest and largest 
+\begin_inset Formula $\lambda$
+\end_inset
+
+s of points in the subset.
+ We then remove the point corresponding to 
+\begin_inset Formula $\lambda_{min}$
+\end_inset
+
+ from 
+\begin_inset Formula $S$
+\end_inset
+
+, add the next point with 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ larger than 
+\begin_inset Formula $\lambda_{max}$
+\end_inset
+
+ to 
+\begin_inset Formula $S$
+\end_inset
+
+, and repeat the procedure.
+ 
+\end_layout
+
+\begin_layout Standard
+The two envelopes defined by the four lines that emerge define the 95% confidenc
+e intervals for our best fits.
+ Regions that are excluded by both envelopes are certainly excluded at 95%
+ confidence.
+ Regions that are included by both are included at 95% confidence.
+ Regions excluded by only one envelope are indeterminate; we've roughly
+ quantified the uncertainty on our confidence interval.
+ The volume of the indeterminate region can be made arbitrarily small by
+ computing greater numbers of best-fit points.
+ In regions where 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is a strong function of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, convergence is necessarily slow.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMA Figure
+\end_layout
 
 \end_inset
 
@@ -20859,6 +21112,16 @@ filename "../systematics/electrical/extracted/longStrokeL0Diff3167.tex"
 N-m.
 \end_layout
 
+\begin_layout Section
+Dead-time sensitivity
+\end_layout
+
+\begin_layout Standard
+XXXRC - Krishna would like to see a square-waved blinded sensitivity to
+ dead time.
+ 
+\end_layout
+
 \begin_layout Chapter
 Foil Systematic
 \end_layout
@@ -21018,6 +21281,9 @@ Interferometer fit.
  Each line is a different bootstrapped fit.
  This fits are used individually for subtraction in the bootstrapped global
  Yukawa fits.
+ XXXRC - What about chopping out another 20 microns in short-cut in order
+ to completely dump the innner systematic.
+ Feels good,right?
 \end_layout
 
 \end_inset
@@ -22122,7 +22388,7 @@ Define a fitting function,
 \end_inset
 
 
-\begin_inset Formula $F(x,B_{1\dots n}|\alpha_{1\ldots n},\lambda_{1\ldots n})=\pi Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}\left(1-e^{-(t_{p}-t_{i})/\lambda_{i}}\right)\left(1-e^{-t_{a}/\lambda_{i}}\right)\left(1-e^{-t_{i}/\lambda_{i}}\right)e^{-x/\lambda_{i}}+Cx$
+\begin_inset Formula $F(x,B_{1\dots n}|\alpha_{1\ldots n},\lambda_{1\ldots n})=\pi Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}\left(1-e^{-(t_{p}-t_{I})/\lambda_{i}}\right)\left(1-e^{-t_{a}/\lambda_{i}}\right)\left(1-e^{-t_{I}/\lambda_{i}}\right)e^{-x/\lambda_{i}}+Cx$
 \end_inset
 
 .
@@ -22130,7 +22396,7 @@ Define a fitting function,
 
 \begin_layout Enumerate
 Let the thickness corrections be 
-\begin_inset Formula $T(\lambda)=\rho_{a}\left(1-e^{-(t_{p}-t_{i})/\lambda_{i}}\right)\left(1-e^{-t_{a}/\lambda_{i}}\right)\left(1-e^{-t_{i}/\lambda_{i}}\right)$
+\begin_inset Formula $T(\lambda)=\rho_{a}\left(1-e^{-(t_{p}-t_{I})/\lambda_{i}}\right)\left(1-e^{-t_{a}/\lambda_{i}}\right)\left(1-e^{-t_{I}/\lambda_{i}}\right)$
 \end_inset
 
 
@@ -22178,7 +22444,7 @@ Compute
 
 \begin_layout Enumerate
 Compute 
-\begin_inset Formula $\bar{G}=\bar{F}_{x}-\bar{F}_{y}$
+\begin_inset Formula $\bar{G}=\bar{F}_{x_{A}}-\bar{F}_{x_{B}}$
 \end_inset
 
 
@@ -22186,11 +22452,11 @@ Compute
 
 \begin_layout Enumerate
 Compute 
-\begin_inset Formula $\sigma_{F_{x}}^{2}=\int_{-\infty}^{\infty}F(x,B_{1\ldots n},\alpha_{1\ldots n},\lambda_{1\ldots n})^{2}P(x,\bar{x},\sigma_{x})dxP(y,\bar{y},\sigma_{y})dy\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}-\bar{F}^{2}$
+\begin_inset Formula $\sigma_{F_{x_{A}}}^{2}=\int_{-\infty}^{\infty}F(x,B_{1\ldots n},\alpha_{1\ldots n},\lambda_{1\ldots n})^{2}P(x,\bar{x},\sigma_{x})dxP(y,\bar{y},\sigma_{y})dy\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}-\bar{F}^{2}$
 \end_inset
 
  and 
-\begin_inset Formula $\sigma_{F_{y}}^{2}$
+\begin_inset Formula $\sigma_{F_{x_{B}}}^{2}$
 \end_inset
 
 
@@ -22198,7 +22464,7 @@ Compute
 
 \begin_layout Enumerate
 Compute 
-\begin_inset Formula $\sigma_{G}^{2}=\sigma_{F_{x}}^{2}+\sigma_{F_{y}}^{2}$
+\begin_inset Formula $\sigma_{G}^{2}=\sigma_{F_{x_{A}}}^{2}+\sigma_{F_{x_{B}}}^{2}$
 \end_inset
 
 
@@ -22623,7 +22889,7 @@ This is just a restatement of Jason's trick, so
 \uwave off
 \noun off
 \color none
-\begin_inset Formula $\bar{F}=\int_{-\infty}^{\infty}F(x,y,B_{1\ldots n},\alpha_{1\ldots n},\lambda_{1\ldots n})P(x,\bar{x},\sigma_{x})dx\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}$
+\begin_inset Formula $\bar{F}=\int_{-\infty}^{\infty}F(x,B_{1\ldots n},\alpha_{1\ldots n},\lambda_{1\ldots n})P(x,\bar{x},\sigma_{x})dx\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}$
 \end_inset
 
 
@@ -22734,7 +23000,7 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\sigma_{G}^{2}=\sigma_{F_{x}}^{2}+\sigma_{F_{y}}^{2}$
+\begin_inset Formula $\sigma_{G}^{2}=\sigma_{F_{x_{A}}}^{2}+\sigma_{F_{x_{B}}}^{2}$
 \end_inset
 
 
