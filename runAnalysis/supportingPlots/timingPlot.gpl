@@ -1,0 +1,9 @@
+pwt = '../results/pwTimeInfo.dat'
+pst = '../results/psTimeInfo.dat'
+
+set xlabel 'run duration (s)'
+set ylabel 'NTP-calibrated user-clock minus system-clock'
+
+pl \
+	pwt u ($3-$2):($4-$3) w p pt 7 ps 2 lc 5 tit 'Torsion Balance',\
+	pst u ($3-$2):($4-$3) w p pt 7 ps 2 lc 3 tit 'Attractor Computer'
