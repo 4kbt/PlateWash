@@ -23,7 +23,7 @@ function X2 = chiSquareWSystematics( pMT , x, PendStruct, AttrStruct, CNStruct)
 %	chiSquareWSystematicsDiagnostics
 
 	X2 = sum( (pMT.fitCol - GBV ).^2  %lqr
-		./( (pMT.fitErrCol).^2 +varG )
+		./( (pMT.fitErrCol).^2 ) %+varG )
 		); %sum
 
 

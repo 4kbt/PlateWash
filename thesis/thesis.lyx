@@ -224,17 +224,18 @@ key "lrr-2006-3"
 , but does not contain any hint of quantum probability or uncertainty.
  Our theories of gravity and quantum mechanics are mathematically incompatible.
  
-\end_layout
+\begin_inset Note Note
+status open
 
-\begin_layout Itemize
+\begin_layout Plain Layout
 Neutrino mass, oscillation: The Standard Model admits only massless left-handed
  neutrinos, yet they are observed to have a small but very significant,
  mass.
  Furthermore, the mass and flavor eigenstates of the neutrino are not the
  same.
- This could be accommodated by adding the neutrino mixing angles to the
- list of tuning parameters, but it was not anticipated by anything within
- the 
+ These effects were easily accommodated by adding the neutrino mixing angles
+ to the list of tuning parameters, but it was not anticipated by anything
+ within prior 
 \begin_inset Quotes eld
 \end_inset
 
@@ -252,6 +253,11 @@ key "2012PDG"
 .
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Itemize
 The Cosmological Constant Problem/Dark Energy: Astronomical observations
  suggest that the universe is expanding, and doing so at a rate which is
@@ -265,8 +271,8 @@ Dark Energy
 \end_inset
 
 , an energy density associated with empty space that has negative pressure.
- The energy density of vacuum has these features, but , as described by
- the Standard Model, is 
+ The energy density of vacuum has these features, but, as described by the
+ Standard Model, is 
 \begin_inset Formula $10^{120}$
 \end_inset
 
@@ -288,6 +294,33 @@ Dark Matter: Beginning with the study of galactic rotation curves, a compelling
 \begin_inset CommandInset citation
 LatexCommand citep
 key "2012PDG,SilkDarkMatterTheory"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+There are perpetual hints of new physics waiting to be discovered.
+ As an important example, the best measurement of the anomalous magnetic
+ moment of the muon disagrees with the best theoretical calculations at
+ the 
+\begin_inset Formula $3\sigma$
+\end_inset
+
+ level 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "bennett2006final"
+
+\end_inset
+
+.
+ An improved experiment is under construction at Fermilab to address this
+ concern by the end of the decade
+\begin_inset CommandInset citation
+LatexCommand citep
+key "DOEGMinus2Review"
 
 \end_inset
 
@@ -2109,7 +2142,7 @@ The infinite-sheet attractor must become finite; the addition of a rim to
 The rotation of the pendulum is measured by an autocollimating optical lever,
  an autocollimator.
  Typical sensitivities of our group's autocollimators can be as small as
- fractions of a nanoradian in a second in the millihertz 
+ fractions of a nanoradian in a second in the millihertz range 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "arp2013reference"
@@ -2148,7 +2181,17 @@ The pendulum is held in electrostatic feedback: the electrostatic interactions
 
 \begin_layout Itemize
 The attractor is moved toward and away from the pendulum in a square-wave
- pattern to avoid any velocity-dependent systematic effects.
+ pattern.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Dead time
+\begin_inset Quotes erd
+\end_inset
+
+ is declared during each transition between positions to avoid motion-dependent
+ systematic effects.
  Groups of ten changes in position are lumped into a 
 \begin_inset Quotes eld
 \end_inset
@@ -2196,7 +2239,7 @@ While the measurement was begun before blinding, the experimental analysis
 In order to facilitate the unblinding of this complex analysis, and to guarantee
  reproducibility, the entire analysis and the creation of this document
  are entirely automated.
- A collection of free software, the git repository, and the experimental
+ A collection of free software, the source-code repository, and the experimental
  data are all that are required to re-generate this result.
  The majority of the numerical quantities stated in this document are automatica
 lly either extracted from the configuration files used to initialize the
@@ -2706,7 +2749,8 @@ We will compute the Yukawa torque about
 \end_inset
 
 .
- Let their face-to-face separation (real or projected) at 
+ Let their face-to-face separation (real or projected along the finite plate's
+ plane) at 
 \begin_inset Formula $x=0$
 \end_inset
 
@@ -3202,8 +3246,22 @@ filename "../extracted/inlayWidth.tex"
 \end_inset
 
  wide.
- Uncertainties quoted here are conservative and do not reflect the flatness
- of surfaces.
+ Uncertainties quoted here are conservative estimates for dimensions; the
+ surfaces themselves are much flatter, as seen in Figures 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:PendulumScans"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:AttractorScan"
+
+\end_inset
+
+.
  The pendulum used here was our prototype, pressed into service when a better-ch
 aracterized improved pendulum suffered a glue failure.
  The pendulum was threaded onto a thin copper tube crimped onto a 
@@ -3736,7 +3794,7 @@ Both large faces of the pendulum and the front face of the attractor were
  (aluminum oxide, possibly diamond).
  The individual components of the pendulum were etched before assembly in
  hydrochloric acid to remove any ferromagnetic impurities.
- After ultrasonic cleaning and a final rinse in de-ionized water, 31
+ After ultrasonic cleaning and a final rinse in de-ionized water, 30
 \begin_inset space ~
 \end_inset
 
@@ -4267,7 +4325,8 @@ reference "Autocollimator Diagram"
 nm) laser diode was directed through a pinhole, collimated, and directed
  at the pendulum.
  Light reflected from the pendulum passed back through the collimating lens
- and was focused, via a mirror, onto a position sensitive photodiode.
+ and was focused, via a mirror, onto a two-dimensional position-sensitive
+ photodiode.
  The detector (UDT SC-10D
 \begin_inset Note Note
 status collapsed
@@ -4532,7 +4591,8 @@ Applied feedback signal and feedback voltage over the duration of the experiment
 status open
 
 \begin_layout Plain Layout
-XXXMA: resolve strange points in upper frame
+XXXMA: resolve strange points in upper frame, XXXRC Eric thinks one frame
+ will do.
 \end_layout
 
 \end_inset
@@ -5186,8 +5246,8 @@ Attractor position change procedure
 \end_layout
 
 \begin_layout Standard
-Unless the attractor is to change position, then the locking valve is closed,
- and the modulator valve is off.
+When an attractor position change is not underway, the locking valve is
+ closed, and the modulator valve is off.
  When the attractor-control computer is asked to change the attractor position,
  the modulator valve begins modulating with the desired pulse-width for
  10
@@ -5382,8 +5442,8 @@ name "sec:Calibration"
 
 \end_inset
 
-The torque scale of the apparatus was set gravitationally by rotating a
- quadrupole mass distribution from a bearing above the apparatus.
+The torque scale of the apparatus was determined gravitationally by rotating
+ a quadrupole mass distribution from a bearing above the apparatus.
  By way of the quadrupole coupling, the 
 \begin_inset Quotes eld
 \end_inset
@@ -5499,7 +5559,7 @@ reference "chap:Newtonian-Simulation"
 
 ).
  Note the slight phase shift with respect to zero; because of the inlays,
- the pendulum quadrupole's axis is not parallel to the pendulum face.
+ the pendulum's mass-quadrupole axis is not parallel to the pendulum face.
 \end_layout
 
 \end_inset
@@ -6111,7 +6171,18 @@ Interferometer signal over the duration of the experiment.
  Only those data from the vertical-middle 71% of the available fringe dynamic
  range were used to build a quantitative understanding of foil motion.
  The environmental data are plotted to demonstrate the instrument's apparent
- temperature and air pressure insensitivity.
+ lack of correlation with temperature and air pressure variation.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMA: clarify scales to highlight fringe contrast, add lines for accepted
+ band 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -7067,7 +7138,7 @@ There are many sources of fluctuating 'noise' that affect the PlateWash
 \end_layout
 
 \begin_layout Subsubsection
-Fiber thermal noise
+Intrinsic fiber damping
 \begin_inset CommandInset label
 LatexCommand label
 name "sub:Fiber-thermal-noise"
@@ -7663,7 +7734,7 @@ Environment
 A number of environmental factors can give rise to extra noise in the balance.
  Careful design and construction helps to limit these effects.
  Many of them are transient in nature, and may be avoided by focusing data
- acquisition into quite parts of the day, week, and year.
+ acquisition into quiet parts of the day, week, and year.
  
 \end_layout
 
@@ -7933,8 +8004,8 @@ Wind
 
 \begin_layout Standard
 While the coupling mechanism to wind is related to some combination of seismic
- effects, tilt, gravitational gradients, or pressure, we aren't certain
- which effect is dominant.
+ effects, tilt, changing gravitational gradients, or pressure, we aren't
+ certain which effect is dominant.
  What is clear from our data is a strong coupling between outside wind and
  pendulum noise.
  Stormy periods can elevate torque noise by as much as an order of magnitude
@@ -8093,7 +8164,7 @@ pendulum battery
 \begin_inset space ~
 \end_inset
 
-V.
+mV.
  
 \end_layout
 
@@ -8234,12 +8305,12 @@ fN-m are of importance to this measurement.
 \end_layout
 
 \begin_layout Subsubsection
-Electronic/Instrumental Crosstalk
+Electronic Crosstalk
 \end_layout
 
 \begin_layout Standard
 Any effect that is not directly related to attractor motion, but is aware
- of attractor position, lands in this catchall category.
+ of attractor position, lands in this catch-all category.
  In general, these systematics are very important in many experiments.
  In this case, the experiment includes an isolation valve on the air pressure
  line to the attractor bellows.
@@ -8336,7 +8407,8 @@ dependent and may depend upon the detailed structure of the junction, leading
 \begin_layout Standard
 To be safe from the effects attractor-correlated contact potential variation,
  the pendulum/foil contact potential cannot change by more than 1-10 nV
- in an attractor-correlated way.
+ (XXXRC - Eric is rightfully concerned here; verify estimate) in an attractor-co
+rrelated way.
  This voltage is hard to measure in any way but with a torsion balance,
  as the effective output impedance of any contact-potential generating phenomeno
 n will be large (cannot drive much current), and the input impedance of
@@ -8661,6 +8733,8 @@ Proximity-enhanced gas damping as a function of attractor-foil separation.
 
 s ringdown time of the foil), gas damping will be an inconsequential source
  of systematic uncertainty.
+ XXXRC - Eric points out that a 10% variation in amplitude might be significant
+ without quantifying the amplitude itself.
 \end_layout
 
 \end_inset
