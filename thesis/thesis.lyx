@@ -2789,7 +2789,7 @@ where the second integral is over the thickness of the finite plate.
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Formula 
@@ -2926,7 +2926,7 @@ As an intuition check, we show the case where
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Formula 
@@ -2960,6 +2960,56 @@ status open
 \[
 \tau=-4\pi G\rho_{A}\alpha h\rho_{p}(1-e^{-t_{a}/\lambda})\left(1-e^{-t_{p}/\lambda}\right)e^{-D/\lambda}\frac{\lambda^{4}}{\theta^{2}}\left[\cosh(\frac{b}{\lambda}\theta)\frac{b}{\lambda}\theta-\sinh(\frac{b}{\lambda}\theta)\right]
 \]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+For the symmetric-inlay case, where 
+\begin_inset Formula $0<a<b$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\tau=-2\pi G\rho_{A}\alpha h\rho_{p}(1-e^{-t_{a}/\lambda})\left(1-e^{-t_{I}/\lambda}\right)\frac{\lambda^{4}}{\theta^{2}}\left(e^{-D/\lambda}\left[e^{-b\theta/\lambda}(\theta b/\lambda+1)-e^{-a\theta/\lambda}(\theta a/\lambda+1)\right]-e^{-(D+t_{p}-t_{I})/\lambda}\left[e^{b\theta/\lambda}(-\theta b/\lambda+1)-e^{a\theta/\lambda}(-\theta a/\lambda+1)\right]\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\tau=-2\pi G\rho_{A}\alpha h\rho_{p}(1-e^{-t_{a}/\lambda})\left(1-e^{-t_{I}/\lambda}\right)\frac{\lambda^{4}}{\theta^{2}}e^{-D/\lambda}\left(\left[e^{-b\theta/\lambda}(\theta b/\lambda+1)-e^{-a\theta/\lambda}(\theta a/\lambda+1)\right]-e^{-(t_{p}-t_{I})/\lambda}\left[e^{b\theta/\lambda}(-\theta b/\lambda+1)-e^{a\theta/\lambda}(-\theta a/\lambda+1)\right]\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\tau_{one}(x)=\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}e^{-\frac{d}{\lambda}}\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{I}/\lambda}\right)
+\]
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
