@@ -31,13 +31,6 @@ pwEndSec  = pwData(rows( pwData) - 1,  pwTimeCol);
 psEndSec  = psData(rows( psData),  psTimeCol);
 ifoEndSec = ifoData(rows(ifoData), ifoTimeCol);
 
-%Preserve run-timing info
-if( exist( "pwHdrEndSec" ))
-	pwTimeInfo = [pwStartSec pwEndSec pwHdrEndSec rows(pwData)];
-end
-if( exist( "psHdrEndSec" ))
-	psTimeInfo = [psStartSec psEndSec psHdrEndSec rows(psData)];
-end
 
 
 if( pwEndSec < pwStartSec)
@@ -55,6 +48,14 @@ if( psEndSec < psStartSec)
 
 	psData( psClockFlipIndex:end, psTimeCol) = psData(psClockFlipIndex:end,psTimeCol) + 2^32/1000.0;
 	psEndSec  = psData(rows( psData),  psTimeCol);
+end
+
+%Preserve run-timing info
+if( exist( "pwHdrEndSec" ))
+	pwTimeInfo = [pwStartSec pwEndSec pwHdrEndSec rows(pwData)];
+end
+if( exist( "psHdrEndSec" ))
+	psTimeInfo = [psStartSec psEndSec psHdrEndSec rows(psData)];
 end
 
 if(~exist('FAKING_THE_INTERFEROMETER_ENTIRELY'))
