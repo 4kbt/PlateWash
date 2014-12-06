@@ -69,3 +69,8 @@ if( FAKING_THE_INTERFEROMETER_ENTIRELY == 1)
 	ifoStartSec = pwStartSec;
 	ifoEndSec   = pwEndSec;
 end
+
+psRawTimeDiff = diff(psData(:,psTimeCol));
+pwRawTimeDiff = diff(pwData(:,pwTimeCol));
+ifoRawTimeDiff = diff(ifoData(:,ifoTimeCol));
+
