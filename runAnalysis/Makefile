@@ -67,7 +67,11 @@ results/timeAllTemp.dat: $(TIMEDEPLIST)
 
 results/psTimeDiffMerge.dat : results/timeAllTemp.dat
 	cat results/run*psTimeDiff.dat > $@
+
+results/pwTimeDiffMerge.dat : results/timeAllTemp.dat
+	cat results/run*pwTimeDiff.dat > $@
 	sed -i -e '/^\#/d' -e '/^$$/d' $@
+	
 	
 
 #PW analysis
