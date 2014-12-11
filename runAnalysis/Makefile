@@ -62,7 +62,9 @@ ilistRuns :
 
 #end parallelization section. 
 
-results/timeAllTemp.dat: $(TIMEDEPLIST)
+results/timeAllTemp.dat results/unCorrectedpwTimeInfo.dat results/unCorrectedpsTimeInfo.dat: $(TIMEDEPLIST)
+	sed -i -e '/^\#/d' -e '/^$$/d' results/unCorrectedpwTimeInfo.dat 
+	sed -i -e '/^\#/d' -e '/^$$/d' results/unCorrectedpsTimeInfo.dat
 	touch results/timeAllTemp.dat
 
 results/psTimeDiffMerge.dat : results/timeAllTemp.dat
@@ -71,8 +73,9 @@ results/psTimeDiffMerge.dat : results/timeAllTemp.dat
 results/pwTimeDiffMerge.dat : results/timeAllTemp.dat
 	cat results/run*pwTimeDiff.dat > $@
 	sed -i -e '/^\#/d' -e '/^$$/d' $@
-	
-	
+
+results/absoluteClockRates.dat results/absoluteSampleRates.dat : absoluteTiming.m results/pwTimeDiffMerge.dat results/psTimeDiffMerge.dat
+	$(OCT) absoluteTiming.m
 
 #PW analysis
 results/run3147pM3FilterMerge.dat : $(DEPLIST) pLDAFilterMerge.sh $(HOMEDIR)/bin/makeMake.sh $(HOMEDIR)/extracted/*.tex

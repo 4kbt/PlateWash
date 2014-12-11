@@ -1,22 +1,26 @@
+set term postscript enhanced solid color
+set output 'timingPlot.eps'
+
 pwt = '../results/pwTimeInfo.dat'
 pst = '../results/psTimeInfo.dat'
 
 set multiplot layout 2,1
 
-set xlabel 'run duration (s)'
-set ylabel 'NTP-calibrated user-clock minus system-clock'
+set xlabel 'run duration (d)'
+set ylabel 'NTP minus system-clock (s)'
+set key below 
 
 pl \
-	pwt u ($3-$2):($4-$3) w p pt 7 ps 2 lc 5 tit 'Torsion Balance',\
-	pst u ($3-$2):($4-$3) w p pt 7 ps 2 lc 3 tit 'Attractor Computer'
+	pwt u (($3-$2)/86400):($4-$3) w p pt 7 ps 2 lc 3 tit 'Torsion Balance',\
+	pst u (($3-$2)/86400):($4-$3) w p pt 4 ps 2 lc 3 tit 'Attractor Computer'
 
-set ylabel 'tick-rate difference from 0.8s/day in seconds/day'
+set ylabel 'DAQ rate difference from 0.8s (s/d)'
 
 pl  \
-	pwt u ($3-$2):(($3-$2)/$5*86400/0.8-86400) w p pt 7 ps 2 lc 3 tit 'Pendulum Sample Rate',\
-	pwt u ($3-$2):(($4-$2)/$5*86400/0.8-86400) w p pt 7 ps 2 lc 5 tit 'Pendulum Sample Rate, NTP',\
-	pst u ($3-$2):(($3-$2)/$5*86400/0.8-86400) w p pt 1 ps 2 lc 3 tit 'Attractor Sample Rate',\
-	pst u ($3-$2):(($4-$2)/$5*86400/0.8-86400) w p pt 1 ps 2 lc 5 tit 'Attractor Sample Rate, NTP'
+	pwt u (($3-$2)/86400):(($4-$2)/$5*86400/0.8-86400) w p pt 7 ps 2 lc 5 tit 'Pendulum Sample Rate, NTP',\
+	pwt u (($3-$2)/86400):(($3-$2)/$5*86400/0.8-86400) w p pt 7 ps 2 lc 3 tit 'Pendulum Sample Rate',\
+	pst u (($3-$2)/86400):(($4-$2)/$5*86400/0.8-86400) w p pt 4 ps 2 lc 5 tit 'Attractor Sample Rate, NTP',\
+	pst u (($3-$2)/86400):(($3-$2)/$5*86400/0.8-86400) w p pt 4 ps 2 lc 3 tit 'Attractor Sample Rate'
 
 
 unset multiplot
