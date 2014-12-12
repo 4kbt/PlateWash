@@ -14,11 +14,9 @@ catch
 end
 
 
-%From run3077free.m
-fprintf('FREQUENCY IS NOT PROPERLY DEFINED. CHECK run3077free.m for provenance!!!! Post-fit best fit is 13.2 mHz');
 fundamentalConstants
 
-pendulumF0=0.0128; 
+pendulumF0=0.0128; %some provenance in run3077 
 pendulumF0Width = 4e-3;
 pendulumQ=3500;
 pendulumI=2.369e-6;
