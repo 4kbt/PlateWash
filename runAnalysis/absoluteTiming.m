@@ -40,8 +40,8 @@ pwFitErr  = std (pwP);
 printSIErr( psFitMean(1) , psFitErr(1) , 1, 0, 's', [ HOMEDIR 'extracted/psWindowsClockRateError.tex'] );
 printSIErr( pwFitMean(1) , pwFitErr(1) , 1, 0, 's', [ HOMEDIR 'extracted/pwWindowsClockRateError.tex'] );
 
-save( 'results/psWindowsClockRateError.dat', 'psFitMean');
-save( 'results/pwWindowsClockRateError.dat', 'pwFitMean' );
+save( '-ascii', 'results/psWindowsClockRateError.dat', 'psFitMean');
+save( '-ascii', 'results/pwWindowsClockRateError.dat', 'pwFitMean' );
 
 
 %Plot clock-rate fit
