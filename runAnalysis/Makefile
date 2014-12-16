@@ -4,7 +4,9 @@ all: results/run3147pM3FilterMerge.dat results/run3147pM3iFilterMerge.dat
 	$(MAKE) $(PARALLEL) -C supportingPlots
 
 
+TIMETARGETS := results/pwWindowsClockRateError.dat results/psWindowsClockRateError.dat results/pwSampleTimeWRTWindows.dat results/psSampleTimeWRTWindows.dat
 ANALYSISDEPS := analyzeRun.m timingCheck.m ../calibration/ $(MLIB) $(RUNS) $(DATA) $(GLOBAL)
+TIMESHIFTEDANALYSISDEPS := $(ANALYSISDEPS) $(TIMETARGETS)
 
 #This section exists to parallelize the run analysis directly. Its job is to analyze all of the 
 
@@ -20,7 +22,7 @@ TIMEDEPFILE := timeDepList.txt
 #Throwaway variables to make external shell commands prior to parsing the subMake.inc file
 throwaway1 := $(shell $(HOMEDIR)/bin/genTargets.sh $(RUNSTOBEANALYZED) $(RUNLIST) )
 #No dollar-sign on analysisdeps for a reason, see script
-throwaway2 := $(shell $(HOMEDIR)/bin/makeMake.sh $(RUNLIST) $(SUBMAKE) $(DEPFILE) $(SUFFIX) analyzeRun.m ANALYSISDEPS results/run)
+throwaway2 := $(shell $(HOMEDIR)/bin/makeMake.sh $(RUNLIST) $(SUBMAKE) $(DEPFILE) $(SUFFIX) analyzeRun.m TIMESHIFTEDANALYSISDEPS results/run)
 throwaway3 := $(shell $(HOMEDIR)/bin/makeMake.sh $(RUNLIST) $(TIMESUBMAKE) $(TIMEDEPFILE) Time.dat timingCheck.m ANALYSISDEPS results/run)
 
 #include all the actual targets
@@ -75,13 +77,12 @@ results/pwTimeDiffMerge.dat : results/timeAllTemp.dat
 	cat results/run*pwTimeDiff.dat > $@
 	sed -i -e '/^\#/d' -e '/^$$/d' $@
 
-TIMETARGETS := results/pwWindowsClockRateError.dat results/psWindowsClockRateError.dat results/pwSampleTimeWRTWindows.dat results/psSampleTimeWRTWindows.dat
 
 $(TIMETARGETS) : absoluteTiming.m results/pwTimeDiffMerge.dat results/psTimeDiffMerge.dat
 	$(OCT) absoluteTiming.m
 
 #PW analysis
-results/run3147pM3FilterMerge.dat : $(DEPLIST) pLDAFilterMerge.sh $(HOMEDIR)/bin/makeMake.sh $(HOMEDIR)/extracted/*.tex $(TIMETARGETS)
+results/run3147pM3FilterMerge.dat : $(DEPLIST) pLDAFilterMerge.sh $(HOMEDIR)/bin/makeMake.sh $(HOMEDIR)/extracted/*.tex
 	./pLDAFilterMerge.sh
 	wc -l results/run3147pM3FilterMerge.dat | awk '{print $$1}' > ../extracted/numberOfCuts.tex
 	$(OCT) --eval "run3147FixedParameters"

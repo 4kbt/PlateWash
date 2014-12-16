@@ -64,8 +64,8 @@ pwSampleErr  = std (pwS);
 printSIErr( psSampleMean, psSampleErr, 1, 0, 's', [ HOMEDIR 'extracted/actualPSSampleTime.tex'] );
 printSIErr( pwSampleMean, pwSampleErr, 1, 0, 's', [ HOMEDIR 'extracted/actualPWSampleTime.tex'] );
 
-save( 'results/psSampleTimeWRTWindows.dat', 'psSampleMean');
-save( 'results/pwSampleTimeWRTWindows.dat', 'pwSampleMean');
+save( '-ascii', 'results/psSampleTimeWRTWindows.dat', 'psSampleMean');
+save( '-ascii', 'results/pwSampleTimeWRTWindows.dat', 'pwSampleMean');
 
 
 %%% Histogramming samples wrt windows clock. 
