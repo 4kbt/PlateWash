@@ -15,8 +15,10 @@ psLoadBin;
 eval(['ifoHeaderFile' runPrefix iforunNumber 'ifo.dat", "rt");'] ) ;
 ifoLoadData;
 
+%Clock corrections
 pwData(:,pwTimeCol) = pwData(:,pwTimeCol) + pwStartSec;
 psData(:,psTimeCol) = psData(:,psTimeCol) + psStartSec;
+
 
 FAKING_THE_PLATEWASH_CLOCK = 0  
 
@@ -31,8 +33,7 @@ pwEndSec  = pwData(rows( pwData) - 1,  pwTimeCol);
 psEndSec  = psData(rows( psData),  psTimeCol);
 ifoEndSec = ifoData(rows(ifoData), ifoTimeCol);
 
-
-
+%PW clock roll correction
 if( pwEndSec < pwStartSec)
 	PLATEWASH_CLOCK_ROLLED_____MIGHT_BE_A_TIMING_ERROR = 1
 	pause
@@ -42,6 +43,7 @@ if( pwEndSec < pwStartSec)
 	pwEndSec  = pwData(rows( pwData),  pwTimeCol);
 end
 
+%PS clock roll correction
 if( psEndSec < psStartSec)
 	PLATESLAVE_CLOCK_ROLLED = 1
 	psClockFlipIndex = find(  psData(:,psTimeCol) < psStartSec) (1);
@@ -49,6 +51,16 @@ if( psEndSec < psStartSec)
 	psData( psClockFlipIndex:end, psTimeCol) = psData(psClockFlipIndex:end,psTimeCol) + 2^32/1000.0;
 	psEndSec  = psData(rows( psData),  psTimeCol);
 end
+
+%Absolute clock rate corrections
+if(exist('applyClockCorrections'))
+        %Correct clocks
+        pwWinClockErr = load('results/pwWindowsClockRateError.dat');
+        pwData(:,pwTimeCol) = pwData(:,pwTimeCol) + (pwData(:,pwTimeCol) - pwData(1,pwTimeCol))*pwWinClockErr(1);
+        psWinClockErr = load('results/psWindowsClockRateError.dat');
+        psData(:,psTimeCol) = psData(:,psTimeCol) + (psData(:,psTimeCol) - psData(1,psTimeCol))*psWinClockErr(1);
+end
+
 
 %Preserve run-timing info
 if( exist( "pwHdrEndSec" ))
