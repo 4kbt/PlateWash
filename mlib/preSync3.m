@@ -28,8 +28,10 @@ if(FAKING_THE_PLATEWASH_CLOCK == 1)
 %	pwData( pwData(:, pwTimeCol) > 8e6, pwTimeCol) = 0 ; 
 end
 
-%why the -1? 11/15/2014
-pwEndSec  = pwData(rows( pwData) - 1,  pwTimeCol);
+%there's something strange with the last entries in at least some pwData's
+%cause unknown, but it must be handled.
+pwData = pwData(1:(end-1), :); 
+pwEndSec  = pwData(rows( pwData),  pwTimeCol);
 psEndSec  = psData(rows( psData),  psTimeCol);
 ifoEndSec = ifoData(rows(ifoData), ifoTimeCol);
 
