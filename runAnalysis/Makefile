@@ -50,7 +50,7 @@ ISUFFIX  := iFilter.dat
 #Throwaway variables to make external shell commands prior to parsing the subMake.inc file
 ithrowaway1 := $(shell $(HOMEDIR)/bin/genTargets.sh $(IRUNSTOBEANALYZED) $(IRUNLIST) )
 #No dollar-sign on analysisdeps for a reason, see script
-ithrowaway2 := $(shell $(HOMEDIR)/bin/makeMake.sh $(IRUNLIST) $(ISUBMAKE) $(IDEPFILE) $(ISUFFIX) ianalyzeRun.m ANALYSISDEPS results/run)
+ithrowaway2 := $(shell $(HOMEDIR)/bin/makeMake.sh $(IRUNLIST) $(ISUBMAKE) $(IDEPFILE) $(ISUFFIX) ianalyzeRun.m TIMESHIFTEDANALYSISDEPS results/run)
 
 #include all the actual targets
 include $(ISUBMAKE) 
