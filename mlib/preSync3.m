@@ -42,7 +42,6 @@ if( pwEndSec < pwStartSec)
 	pwClockFlipIndex = find(  pwData(:,pwTimeCol) < pwStartSec) (1);
 
 	pwData( pwClockFlipIndex:end, pwTimeCol) = pwData(pwClockFlipIndex:end,pwTimeCol) + 2^32/1000.0;
-	pwEndSec  = pwData(rows( pwData),  pwTimeCol);
 end
 
 %PS clock roll correction
@@ -51,7 +50,6 @@ if( psEndSec < psStartSec)
 	psClockFlipIndex = find(  psData(:,psTimeCol) < psStartSec) (1);
 
 	psData( psClockFlipIndex:end, psTimeCol) = psData(psClockFlipIndex:end,psTimeCol) + 2^32/1000.0;
-	psEndSec  = psData(rows( psData),  psTimeCol);
 end
 
 %Absolute clock rate corrections
@@ -63,6 +61,9 @@ if(exist('applyClockCorrections'))
         psData(:,psTimeCol) = psData(:,psTimeCol) + (psData(:,psTimeCol) - psData(1,psTimeCol))*psWinClockErr(1);
 end
 
+%Recheck EndSec variables.
+pwEndSec  = pwData(rows( pwData),  pwTimeCol);
+psEndSec  = psData(rows( psData),  psTimeCol);
 
 %Preserve run-timing info
 if( exist( "pwHdrEndSec" ))

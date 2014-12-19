@@ -3,16 +3,20 @@ set output 'timingPlot.eps'
 
 pwt = '../results/pwTimeInfo.dat'
 pst = '../results/psTimeInfo.dat'
+pwu = '../results/unCorrectedpwTimeInfo.dat'
+psu = '../results/unCorrectedpsTimeInfo.dat'
 
 set multiplot layout 2,1
 
 set xlabel 'run duration (d)'
 set ylabel 'NTP minus system-clock (s)'
-set key below 
+set key below Left 
 
 pl \
-	pwt u (($3-$2)/86400):($4-$3) w p pt 7 ps 2 lc 3 tit 'Torsion Balance',\
-	pst u (($3-$2)/86400):($4-$3) w p pt 4 ps 2 lc 3 tit 'Attractor Computer'
+	pwt u (($3-$2)/86400):($4-$3) w p pt 7 ps 2 lc 3 tit 'Torsion Balance Computer',\
+	pwu u (($3-$2)/86400):($4-$3) w p pt 6 ps 2 lc 5 tit 'Torsion Balance Computer - uncorrected',\
+	pst u (($3-$2)/86400):($4-$3) w p pt 5 ps 2 lc 3 tit 'Attractor Computer',\
+	psu u (($3-$2)/86400):($4-$3) w p pt 4 ps 2 lc 5 tit 'Attractor Computer - uncorrected'
 
 set ylabel 'DAQ rate difference from 0.8s (s/d)'
 

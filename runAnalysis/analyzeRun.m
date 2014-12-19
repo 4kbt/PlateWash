@@ -13,14 +13,9 @@ clear -x nameCtr pause HOMEDIR LoadIFO
 		ifoLoadFlag =  'i'
 	end
 
+	applyClockCorrections = 1;
 	%Import data file. NameCtr is inherited from a --eval statement at the command line.  See relevant Makefile (/goldStandard/runAnalysis/)
 	eval(['run' num2str(nameCtr) 'sync3' ifoLoadFlag]);
-
-	%Correct clocks
-	pwWinClockErr = load('results/pwWindowsClockRateError.dat');
-	pwData(:,pwTimeCol) = pwData(:,pwTimeCol) - (pwData(:,pwTimeCol) - pwData(1,pwTimeCol))*pwWinClockErr(1);
-	psWinClockErr = load('results/psWindowsClockRateError.dat');
-	psData(:,psTimeCol) = psData(:,psTimeCol) - (psData(:,psTimeCol) - psData(1,psTimeCol))*psWinClockErr(1);
 
 	%export timing info
 	if( exist( "pwTimeInfo" ))
