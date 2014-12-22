@@ -13466,7 +13466,9 @@ Once we have characterized the clocks' stability, we can begin to synchronize
 
  from the other two computers.
  Fortunately, the attractor drive was timed by the attractor computer's
- clock, and not the DAQ clock, so no additional clock shifts were necessary.
+ clock, and not the DAQ clock, so no additional clock shifts were necessary,
+ as the lock-in algorithm uses computer-clock time, not sample number.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -13539,29 +13541,6 @@ In practice, it was observed that the resynchronization system would fail
 \end_layout
 
 \begin_layout Standard
-Further complicating the synchronization effort is the fact that for the
- torsion-balance and attractor computers, the data-acquisition system sample
- rate is controlled by the data-acquisition card's clock, and not the computer
- clock.
- Furthermore, the attractor and torsion-balance DAQ system sample rates
- are different at the 
-\begin_inset Formula $\sim0.1\%$
-\end_inset
-
- level
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMI bound me
-\end_layout
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
 3157, 3149, 
 \end_layout
 
@@ -13601,10 +13580,6 @@ filename "../extracted/numberOfCuts.tex"
 \end_inset
 
  'cuts' for further analysis.
-\end_layout
-
-\begin_layout Subsection
-Attractor-correlated signal extraction
 \end_layout
 
 \begin_layout Subsection
@@ -14104,7 +14079,7 @@ Attractor motion, convolved with DAQ IIR low-pass response.
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Float figure
