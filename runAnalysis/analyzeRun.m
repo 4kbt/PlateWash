@@ -13,6 +13,7 @@ clear -x nameCtr pause HOMEDIR LoadIFO
 		ifoLoadFlag =  'i'
 	end
 
+	applyClockCorrections = 1;
 	%Import data file. NameCtr is inherited from a --eval statement at the command line.  See relevant Makefile (/goldStandard/runAnalysis/)
 	eval(['run' num2str(nameCtr) 'sync3' ifoLoadFlag]);
 

@@ -23,7 +23,9 @@ more off;
 		save 'results/unCorrectedpsTimeInfo.dat' -append timeOut;
 	end
 
+	placeholder = 'see pwTimeDiff and psTimeDiff';
 
-	save( ['results/run' pwrunNumber 'pwTimeDiff.dat'], "pwRawTimeDiff");
-	save( ['results/run' psrunNumber 'psTimeDiff.dat'], "psRawTimeDiff");
+	save( ['results/run' pwrunNumber 'pwTimeDiff.dat'  ], "pwRawTimeDiff");
+	save( ['results/run' psrunNumber 'psTimeDiff.dat'  ], "psRawTimeDiff");
 	save( ['results/run' iforunNumber 'ifoTimeDiff.dat'], "ifoRawTimeDiff");
+	save( ['results/run' num2str(nameCtr) 'Time.dat'   ], "placeholder"); 

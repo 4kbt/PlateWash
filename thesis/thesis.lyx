@@ -13408,9 +13408,9 @@ s level at all times.
 
 \begin_layout Standard
 There are more than ten clocks that are of potential relevance to this analysis.
- The remote NTP server, the user-space clocks on each of the three DAQ systems,
- the system clocks on each of the three DAQ systems, and the hardware clocks
- on each of the DAQ cards.
+ The remote NIST-referenced Network Time Protocol (NTP) server, the user-space
+ clocks on each of the three DAQ systems, the system clocks on each of the
+ three DAQ systems, and the hardware clocks on each of the DAQ cards.
  The torsion-balance and attractor computers are of greatest importance,
  and share a codebase.
  
@@ -13445,29 +13445,78 @@ Each DAQ computer has both a system clock and a hardware clock in the DAQ
  For both the pendulum-computer's internal NI-6259 and the external USB
  NI-6211s used on the attractor and interferometer computers, the manufacturer
  guarantees the clock stability to 50 ppm, or 4 s/day.
- In Figure XXXRC, we show that it is possible to use the NTP timing data
- to demonstrate the tick-rate stability of the system clocks and then use
- the stability of the system clocks to demonstrate the stability of the
- DAQ hardware clocks.
+ In Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Clock-rates,-corrected"
+
+\end_inset
+
+, we use the NTP timing data to characterize the tick-rate stability of
+ the system clocks and then use the stability of the system clocks to characteri
+ze the stability of the DAQ hardware clocks.
+ Furthermore, we use the NIST-synchronized NTP data to correct both the
+ pendulum and interferometer computer's Windows clock tickrates to guarantee
+ that they tick at equal rates.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/charlie/trialEotwash/Eotwash/runAnalysis/supportingPlots/timingPlot.eps
+	width 60page%
+	rotateAngle 270
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Clock-rates,-corrected"
+
+\end_inset
+
+Clock rates, corrected clock rates (upper panel) and demonstrating the long-term
+ stability of DAQ sample rates (lower panel)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 Once we have characterized the clocks' stability, we can begin to synchronize
  the data streams.
- Complicating matters is the fact that the attractor computer's sample rate
- differed by 
+ Of note is the fact that the attractor computer's DAQ sample rate differed
+ by 
 \begin_inset Formula $10^{-4}$
 \end_inset
 
  from the other two computers.
- 
-\end_layout
-
-\begin_layout Standard
-Must index steps to attractor rate; there is no other way.
- Therefore, must determine the attractor rate on the pendulum clock.
- From there on in, it's easy.
- Can use the attractor-magnetic-torque data to confirm the rate difference?
+ Fortunately, the attractor drive was timed by the attractor computer's
+ clock, and not the DAQ clock, so no additional clock shifts were necessary.
 \end_layout
 
 \begin_layout Standard

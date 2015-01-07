@@ -40,8 +40,8 @@ pwFitErr  = std (pwP);
 printSIErr( psFitMean(1) , psFitErr(1) , 1, 0, 's', [ HOMEDIR 'extracted/psWindowsClockRateError.tex'] );
 printSIErr( pwFitMean(1) , pwFitErr(1) , 1, 0, 's', [ HOMEDIR 'extracted/pwWindowsClockRateError.tex'] );
 
-save( 'results/psWindowsClockRateError.dat', 'psFitMean');
-save( 'results/pwWindowsClockRateError.dat', 'pwFitMean' );
+save( '-ascii', 'results/psWindowsClockRateError.dat', 'psFitMean');
+save( '-ascii', 'results/pwWindowsClockRateError.dat', 'pwFitMean' );
 
 
 %Plot clock-rate fit
@@ -64,8 +64,8 @@ pwSampleErr  = std (pwS);
 printSIErr( psSampleMean, psSampleErr, 1, 0, 's', [ HOMEDIR 'extracted/actualPSSampleTime.tex'] );
 printSIErr( pwSampleMean, pwSampleErr, 1, 0, 's', [ HOMEDIR 'extracted/actualPWSampleTime.tex'] );
 
-save( 'results/psSampleTimeWRTWindows.dat', 'psSampleMean');
-save( 'results/pwSampleTimeWRTWindows.dat', 'pwSampleMean');
+save( '-ascii', 'results/psSampleTimeWRTWindows.dat', 'psSampleMean');
+save( '-ascii', 'results/pwSampleTimeWRTWindows.dat', 'pwSampleMean');
 
 
 %%% Histogramming samples wrt windows clock. 
