@@ -13457,8 +13457,8 @@ Clock rates, corrected clock rates (upper panel) and demonstrating the long-term
 \end_layout
 
 \begin_layout Standard
-Once we have characterized the clocks' stability, we can begin to synchronize
- the data streams.
+Once we have characterized the clocks' stability, we can synchronize the
+ clock rates.
  Of note is the fact that the attractor computer's DAQ sample rate differed
  by 
 \begin_inset Formula $10^{-4}$
@@ -13472,7 +13472,11 @@ Once we have characterized the clocks' stability, we can begin to synchronize
 \end_layout
 
 \begin_layout Standard
-Sample rates
+With the clock rates matched, we must then align the datums of each clock
+ at the start of each run.
+ The clocks were manually observed to be synchronous in almost every run,
+ Run XXX is a notable exception, where the timing issues were first noted.
+ To be maximally conservative, we 
 \end_layout
 
 \begin_layout Standard
@@ -13480,11 +13484,16 @@ Drift rates
 \end_layout
 
 \begin_layout Standard
-Synchrony
-\end_layout
+With all of these effects in hand, we believe that we have absolutely-synchroniz
+ed the attractor and torsion-balance computer clocks to within XXXRC
+\begin_inset space ~
+\end_inset
 
-\begin_layout Standard
-Final time determination
+s at all times throughout the data set.
+ The installation of a simple time-distribution system will completely remove
+ this source of uncertainty in the future, making sub-second synchronization
+ straightforward.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -14079,7 +14088,7 @@ Attractor motion, convolved with DAQ IIR low-pass response.
 
 \begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Float figure
