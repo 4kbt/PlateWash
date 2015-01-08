@@ -1,0 +1,58 @@
+set term postscript enhanced solid color eps size 6,6
+set output 'triangleExample.eps'
+
+fn = 'triangleExample.dat'
+set key noauto
+
+bigRange = 2 
+strokeRange = 800
+
+set multiplot layout 3,2
+
+set xlabel 'position ({/Symbol m}m)'
+set ylabel 'torque (fN-m)'
+set title  'simulated absolute Yukawa torque'
+
+pl fn u ($1 * 1e6) : ($3*1e15) w p pt 7 ps 0.5 lt 3
+
+set xlabel 'position ({/Symbol m}m)'
+set ylabel 'torque (fN-m)'
+set title  'simulated absolute linear torque'
+
+pl fn u ($1 * 1e6) : ($5*1e15) w p pt 7 ps 0.5 lt 3
+
+set palette
+
+
+
+set title 'Yukawa "Triangle Plot"'
+set xlabel 'A position ({/Symbol m}m)'
+set ylabel 'B position ({/Symbol m}m)'
+set cblabel 'torque difference (fN-m)'
+set size square
+set cbrange [-bigRange:bigRange]
+
+pl fn u ( $1 * 1e6 ):( $2 * 1e6 ):( ($3-$4) *1e15 ) pt 7 ps 0.5 palette
+
+set title 'Linear "Triangle Plot"'
+pl fn u ( $1 * 1e6 ):( $2 * 1e6 ):( ($5-$6) *1e15 ) pt 7 ps 0.5 palette
+
+sq = 1./sqrt(2)
+
+set title 'Projection along A=B'
+
+set xtics 250
+
+set xlabel 'distance from A=B ({/Symbol m}m)'
+set ylabel 'torque difference (fN-m)'
+set cblabel 'distance along diagonal ({/Symbol m}m)'
+set cbrange [0:strokeRange]
+unset xrange
+unset yrange
+pl [][]\
+   fn u ((($1*(-sq) + $2*(sq))*1e6)):(($3-$4)*1e15):(($1+$2)*sq*1e6) w p pt 7 ps 0.5 palette
+
+pl [][]\
+   fn u ((($1*(-sq) + $2*(sq))*1e6)):(($5-$6)*1e15):(($1+$2)*sq*1e6) w p pt 7 ps 0.5 palette
+
+unset multiplot

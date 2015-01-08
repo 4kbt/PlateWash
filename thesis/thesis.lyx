@@ -14505,7 +14505,14 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXXRC
+\align center
+\begin_inset Graphics
+	filename plots/triangleExample.eps
+	width 80page%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -14541,7 +14548,7 @@ A clear method of visualization is important to understanding the output
 \begin_inset Formula $\Delta\tau(\mbox{start},\mbox{end})$
 \end_inset
 
-, we can plot every measurement in the experiment in a single plot, as in
+, we can plot every torque-difference measurement in a single plot, as in
  Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -14554,98 +14561,90 @@ reference "fig:TriangleScatterPlot"
 \end_layout
 
 \begin_layout Standard
-Three dimensional plots are difficult to read, three dimensional plots with
- errorbars are worse.
- Furthermore, the scatter in a plot like Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:TriangleScatterPlot"
-
+We refer to these plots as 
+\begin_inset Quotes eld
 \end_inset
 
- is dominated by the noisiest points.
- As shown in (plot of noise vs.
- time), the noise in PlateWash varies by orders of magnitude with environmental
- conditions; we're interested mostly in the points with least scatter.
- 
-\end_layout
-
-\begin_layout Standard
-In order to present the result in a meaningful and two-dimensional way,
- the 'triangle plot' was developed.
- In order to improve the statistics by a factor of two, we make the assumption
- that 
-\begin_inset Formula $\Delta\tau(a,b)=\Delta\tau(b,a)$
+triangle plots
+\begin_inset Quotes erd
 \end_inset
 
-, and fold the points over the 
-\begin_inset Formula $a=b$
+ because, if all is well, the plot will be reflection anti-symmetric about
+ the ascending diagonal (
+\begin_inset Quotes eld
 \end_inset
 
- axis.
- In order to plot points with uncertainties, measurements are plotted as
- circles in the 
-\begin_inset Formula $a,b$
+
+\begin_inset Formula $y=x$
 \end_inset
 
- plane.
- The magnitude of 
-\begin_inset Formula $\Delta\tau$
+
+\begin_inset Quotes erd
 \end_inset
 
- is represented by the radius of the circle.
- To provide an errorbar, the region from 
-\begin_inset Formula $\Delta\tau+\sigma_{\tau}$
-\end_inset
-
- to 
-\begin_inset Formula $\Delta\tau-\sigma_{\tau}$
-\end_inset
-
- is plotted in grey.
- If 
-\begin_inset Formula $\Delta\tau-\sigma_{\tau}$
-\end_inset
-
- or 
-\begin_inset Formula $|\Delta\tau+\sigma_{\tau}|$
-\end_inset
-
- are greater than zero (
-\emph on
-i.e.
-
-\emph default
- a point is off-zero with 1-
-\begin_inset Formula $\sigma$
-\end_inset
-
- significance), the remainder of the circle is filled in with color.
- To represent the sign of the datapoint, yellow is negative, and blue is
- positive XXXRC (check sign).
- Any force of nature should satisfy 
-\begin_inset Formula $\Delta\tau(a,a)=0$
+), as 
+\begin_inset Formula $\Delta\tau(x,y)=-\Delta\tau(y,x)$
 \end_inset
 
  for all 
-\begin_inset Formula $a$
+\begin_inset Formula $y$
+\end_inset
+
+ and 
+\begin_inset Formula $x$
+\end_inset
+
+, with the corrolary that 
+\begin_inset Formula $\Delta\tau(x,x)=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $x$
 \end_inset
 
 .
- Any conservative force should be associative: 
+ Furthermore, any conservative interaction will be associative: 
 \begin_inset Formula $\Delta\tau(a,c)=\Delta\tau(a,b)+\Delta\tau(b,c)$
 \end_inset
 
 .
+ Lines parallel to 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $y=x$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ are lines of constant distance-difference.
+ Vertical lines share constant 
+\begin_inset Formula $A$
+\end_inset
+
+ position, and horizontal lines share constant 
+\begin_inset Formula $B$
+\end_inset
+
+ position.
  
 \end_layout
 
 \begin_layout Standard
-This method has limitations.
- Large signals, or large uncertainties produce large circles, which can
- hide smaller, more significant, points.
- For sparsely sampled data, however, it can be very helpful.
- 
+In the lowest panel, we plot the projection of the scatter plot along the
+ diagonal, which allows an alternate and useful view.
+\end_layout
+
+\begin_layout Standard
+In this work, these will be presented only as scatter plots, but if the
+ out-of-page scatter of the points is relatively uniform, it is possible
+ to bin the points locally and plot circular errorbars to add more clarity
+ to the plots.
+ As the PlateWash data have considerable variation in variance over time,
+ it is extremely challenging to plot.
 \end_layout
 
 \begin_layout Section

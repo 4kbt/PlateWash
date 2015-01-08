@@ -1,6 +1,8 @@
 include ../../Makefile.inc
 
-all : lagSNR.eps lagFrequencySNR.eps pwTransferFunction.eps ForceLaw.eps ifoSim.eps run1646contactPotential.eps
+TRI := triangleExample
+
+all : lagSNR.eps lagFrequencySNR.eps pwTransferFunction.eps ForceLaw.eps ifoSim.eps run1646contactPotential.eps $(TRI).eps
 	make $(PARALLEL) -C ISL
 
 lagSNR.eps : lagSNR.gpl
@@ -20,6 +22,10 @@ ifoSim.eps: ifoSim.gpl
 
 run1646contactPotential.eps: run1646contactPotential.gpl
 	$(GNU) $<
+
+$(TRI).eps : $(TRI).m $(TRI).gpl
+	$(OCT) $(TRI).m
+	$(GNU) $(TRI).gpl
 
 clean : 
 	make -C ISL clean
