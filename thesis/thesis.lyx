@@ -12680,8 +12680,6 @@ reference "sub:Lags-1"
 \end_inset
 
 .
- XXXRC - should this open-loop approach be taken, in light of the sample-rate
- differences?
 \end_layout
 
 \begin_layout Subsubsection
@@ -13474,91 +13472,47 @@ Once we have characterized the clocks' stability, we can synchronize the
 \begin_layout Standard
 With the clock rates matched, we must then align the datums of each clock
  at the start of each run.
- The clocks were manually observed to be synchronous in almost every run,
- Run XXXRC is a notable exception, where the timing issues were first noted.
- To be maximally conservative, we 
-\end_layout
-
-\begin_layout Standard
-Drift rates
-\end_layout
-
-\begin_layout Standard
-With all of these effects in hand, we believe that we have absolutely-synchroniz
-ed the attractor and torsion-balance computer clocks to within XXXRC
+ The clocks were manually observed to be synchronous with sub-second precision
+ in almost every run.
+ In a few cases, they were observed to be asynchronous with as much as a
+ 20
 \begin_inset space ~
 \end_inset
 
-s at all times throughout the data set.
+s offset.
+ To be conservative, we assume that no run is synchronized to better than
+ 20
+\begin_inset space ~
+\end_inset
+
+s; a brutal but acceptable step, as the attractor-motion period is 256
+\begin_inset space ~
+\end_inset
+
+s.
  The installation of a simple time-distribution system will completely remove
  this source of uncertainty in the future, making sub-second synchronization
- straightforward.
+ straightforward in the future.
  
 \end_layout
 
 \begin_layout Standard
-XXXRC TO COLLABORATORS: 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-This section is not yet really begun.
- This is potentially a huge issue.
- I think the only correct response is to lock in to each individual switch
- of the attractor.
- My analysis does not yet do that.
- It presumes that the clock rates and sample rates match.
- 
-\end_layout
-
-\begin_layout Plain Layout
-Look at 3169lags.
- On long runs, the difference between sample rate and attractor rate matters.
-\end_layout
-
-\begin_layout Plain Layout
-No easy answer here? May have to continuously resync to edges? Tricky.
- No synchronous timing signal makes it harder.
- have to believe the clocks?
-\end_layout
-
-\begin_layout Plain Layout
-Square wave in 3169 is locked to the clock, not to samples.
- Drift is ~60 degrees in phase through the whole 300,000
-\begin_inset space ~
+A minor concern was the occasional 
+\begin_inset Quotes eld
 \end_inset
 
-s run.
-\end_layout
-
+clock roll
+\begin_inset Quotes erd
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-With three data acquisition computers running simultaneously, relative timing
- is important.
- 
-\end_layout
-
-\begin_layout Standard
-In practice, it was observed that the resynchronization system would fail
- intermittently, making a hand accounting of known clock changes necessary.
- In the two runs where the attractor touches the foil, we have synchronous
- signals in all three computers, allowing some cross-checking of the accounting.
-\end_layout
-
-\begin_layout Standard
-3157, 3149, 
-\end_layout
-
-\begin_layout Standard
-Clock rolls
-\end_layout
-
-\begin_layout Standard
-Run-distribution plot?
+.
+ The timekeeping on the attractor and pendulum DAQ systems was referenced
+ to the Windows clock, which reports time as a 32-bit integer number of
+ milliseconds.
+ If the DAQ program runs for more than 49 days without restarting, the 32-bit
+ integer will overflow.
+ These clock rolls are easy to detect and correct, so the analysis software
+ automatically detects and corrects the few occasions on which they occur.
 \end_layout
 
 \begin_layout Section
@@ -13606,16 +13560,12 @@ name "sub:Synchronization"
 Data are imported from three separate sources (torsion balance, attractor
  control, interferometer), and trimmed in length to present only data with
  complete temporal overlap between relevant sources.
- If needed (runs XXXRC), any timing offsets between the clocks are incorporated
- before trimming.
  All three sources sample with a fixed 0.8
 \begin_inset space ~
 \end_inset
 
-s sample interval, so any timing mismatch is at most 1.6 s.
- When interferometer data are unavailable, the interferometer's data structures
- are created and filled with zeros, except the timing information, which
- is copied from the torsion balance data.
+s sample interval, so any added timing mismatch is at most 1.6 s.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -13996,8 +13946,11 @@ Hz.
 \end_inset
 
 s (one sample-time).
- In the case of clock drifts, which affect runs XXXRC, it can be as large
- as XXXRC.
+ To account for clock drifts and offsets, we add XXXRC
+\begin_inset space ~
+\end_inset
+
+s.
  The autocollimator (and on-line feedback) DAQ filter corner was 1
 \begin_inset space ~
 \end_inset
