@@ -184,7 +184,7 @@ The Standard Model is a triumph.
  It is a complex theory, with 18 or more parameters (particle masses, coupling
  constants, and mixing parameters) which are tuned to fit observation.
  The Standard Model had one major remaining prediction - the existence of
- the 'Higgs boson', a lynchpin for the theory, which was discovered by the
+ the `Higgs boson', a lynchpin for the theory, which was discovered by the
  LHC in 2012 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -633,7 +633,7 @@ Here, we present the leading theoretical motivations for testing the inverse
 
 \begin_layout Standard
 As experimentalists, we take particular joy in testing theories like the
- 'fat-graviton' theory described in Section 
+ `fat-graviton' theory described in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Fat-Graviton"
@@ -4323,7 +4323,7 @@ reference "Autocollimator noise"
 .
  The four photodiode signal currents were measured by transimpedance pre-amplifi
 ers adjacent to the photodiode in vacuum.
- We refer to the sensor as a 'pseudo-autocollimator', as the traditional
+ We refer to the sensor as a `pseudo-autocollimator', as the traditional
  beamsplitter of a true autocollimator was replaced by a pair of 45-degree
  mirrors placed astride the objective lens optical axis.
  This arrangement preserves 2-4 times as much light intensity at the price
@@ -4483,7 +4483,7 @@ For all of our science data, the pendulum's orientation with respect to
 \end_inset
 
 mm) to the pendulum.
- The electrodes were housed within grounded 'guard electrodes' to control
+ The electrodes were housed within grounded `guard electrodes' to control
  the effects of stray fields.
  As the pendulum was electrically grounded, the application of a voltage
  to an electrode attracts the pendulum in the same way that the plates of
@@ -6458,7 +6458,7 @@ filename "../extracted/torqueBlur.tex"
 \end_inset
 
 , approximately 100 times the experiment's maximal per-cut error.
- The points denoted as 'touching' have a clear signal in the interferometer
+ The points denoted as `touching' have a clear signal in the interferometer
  as having been associated with foil displacement.
  The best fit of 
 \begin_inset CommandInset include
@@ -6467,7 +6467,7 @@ filename "../extracted/translationTorqueFit.tex"
 
 \end_inset
 
- is bootstrapped from all of the 'touching' points.
+ is bootstrapped from all of the `touching' points.
  
 \end_layout
 
@@ -7076,7 +7076,7 @@ name "sub:Statistical-Uncertainty"
 \end_layout
 
 \begin_layout Standard
-There are many sources of fluctuating 'noise' that affect the PlateWash
+There are many sources of fluctuating `noise' that affect the PlateWash
  torsion balance.
  This section is intended to give a general overview of the many sources
  of fluctuating torques that are of concern to the measurement.
@@ -7146,7 +7146,7 @@ internal damping
 \end_layout
 
 \begin_layout Standard
-A torsion balance suspended in sufficiently high vacuum is 'internally damped'.
+A torsion balance suspended in sufficiently high vacuum is `internally damped'.
  Following Saulson's classic explication, internal damping gives rise to
  torque noise power with a 
 \begin_inset Formula $1/f$
@@ -7204,7 +7204,7 @@ key "schlamminger2010indirect,cavalleri2009increased,dolesi2011brownian"
  Microscopically, there is only one form of gas damping - collisions between
  gas particles and an oscillator allow momentum and energy exchange.
  Experimentally, when the particle mean free path is larger than the dimensions
- of the chamber, gas damping appears in two forms: 'free' damping and 'proximity
+ of the chamber, gas damping appears in two forms: `free' damping and `proximity
 -enhanced' damping.
  Free gas damping is independent of an oscillator's location in a vacuum
  chamber, and depends only upon properties of the gas and the dimensions
@@ -7701,9 +7701,9 @@ Rotation of the ground: This rotates the instrument relative to the pendulum
 \end_layout
 
 \begin_layout Enumerate
-'Tilt feedthrough': Asymmetry in the fiber cross-section converts the tilt
+`Tilt feedthrough': Asymmetry in the fiber cross-section converts the tilt
  of the fiber support into a pendulum twist.
- This is suppressed, but not eliminated, by the fiber 'prehanger'
+ This is suppressed, but not eliminated, by the fiber `prehanger'
 \end_layout
 
 \begin_layout Enumerate
@@ -7787,7 +7787,7 @@ Earthquake!
 
 \end_inset
 
-PlateWash also sees less-palpable seismic effects, such as the 'microseismic
+PlateWash also sees less-palpable seismic effects, such as the `microseismic
  peak' 
 \begin_inset Note Note
 status open
@@ -11322,7 +11322,7 @@ reference "sub:Filtering"
 \end_inset
 
  that for any large transient, measurements for at least 
-\begin_inset Formula $10t_{m}=2560\mbox{\,\ s}=0.7\mbox{\,\ hr}$
+\begin_inset Formula $30t_{m}=7680\mbox{\, s}=2.1\mbox{\, hr}$
 \end_inset
 
  must be discarded.
@@ -13007,7 +13007,7 @@ pick a lambda, fit for alpha
 \begin_inset Quotes erd
 \end_inset
 
- method that's common in the field, as seen in Section 
+ method that is common in the field, as seen in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Confidence-Interval-Algorithm"
@@ -13379,8 +13379,15 @@ In retrospect, it is clear that an investment of the
 
 week of work required to implement and debug a functional optically-isolated
  time distribution system would have paid great dividends.
- Instead, we chose to rely upon the often-reliable NTP time synchronization
- service supported by every major computer operating system.
+ Instead, we chose to rely upon the gold-standard NTP time synchronization
+ protocol 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "NTP"
+
+\end_inset
+
+ supported (we thought) by every major computer operating system.
  As designed, the three computers would resynchronize their clocks with
  an external reference (either time.nist.gov, or a common local time server
  referenced to time.nist.gov) every 3141 seconds.
@@ -13397,15 +13404,43 @@ s level at all times.
  Had this worked correctly, there would be no important timing concerns.
  In practice, the Windows Time service on at least one computer intermittently
  failed, forcing us to pay much closer attention to timing issues.
+ With retrospective research we note that Microsoft states 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "WindowsTimeKnowledgebase"
+
+\end_inset
+
+: 
+\begin_inset Quotes eld
+\end_inset
+
+Windows XP and later versions of the Windows operating system implement
+ NTP.
+ We do not guarantee and we do not support the accuracy of the W32Time service
+ between nodes on a network.
+ 
+\begin_inset Formula $\ldots$
+\end_inset
+
+ The W32Time service cannot reliably maintain sync time to the range of
+ one to two seconds.
+ Such tolerances are outside the design specification of the W32Time service.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Caveat emptor.
 \end_layout
 
 \begin_layout Standard
-There are more than ten clocks that are of potential relevance to this analysis.
+There are at least ten clocks that are relevant to this analysis.
  The remote NIST-referenced Network Time Protocol (NTP) server, the user-space
  clocks on each of the three DAQ systems, the system clocks on each of the
  three DAQ systems, and the hardware clocks on each of the DAQ cards.
  The torsion-balance and attractor computers are of greatest importance,
- and share a codebase.
+ and share a common software codebase.
  
 \end_layout
 
@@ -13418,8 +13453,8 @@ The user-space clocks are, in principle, resynchronized with the NTP clock
  API, and reference all time measurements to this datum.
  This function returns the number of milliseconds elapsed since the current
  session of Windows began.
- Critically, the returned value is from a system clock, and not the user-space
- clock.
+ Critically, the returned value is from a user-immutable system clock, and
+ not the user-space clock.
  No changes due to NTP-related synchronizations (or lack thereof) are evident
  in the data.
  Therefore, the runs that began with synchronized clocks share a common
@@ -13428,7 +13463,6 @@ The user-space clocks are, in principle, resynchronized with the NTP clock
  is altered by NTP) is again written into the header file.
  This allows a cross-check on the duration of the run by cross-comparing
  the user-space and system-clock durations.
- 
 \end_layout
 
 \begin_layout Standard
@@ -13520,17 +13554,27 @@ With the clock rates matched, we must then align the datums of each clock
  The clocks were manually observed to be synchronous with sub-second precision
  in almost every run.
  In a few cases, they were observed to be asynchronous with as much as a
- 20
+ 25
 \begin_inset space ~
 \end_inset
 
 s offset.
  To be conservative, we assume that no run is synchronized to better than
- 20
+ 25
 \begin_inset space ~
 \end_inset
 
-s; a brutal but acceptable step, as the attractor-motion period is 256
+s.
+ Dropping 50
+\begin_inset space ~
+\end_inset
+
+s per step, or 100
+\begin_inset space ~
+\end_inset
+
+s per period, is a brutal but acceptable step, as the attractor-motion period
+ is 256
 \begin_inset space ~
 \end_inset
 
@@ -13587,7 +13631,7 @@ filename "../extracted/numberOfCuts.tex"
 
 \end_inset
 
- 'cuts' for further analysis.
+ `cuts' for further analysis.
 \end_layout
 
 \begin_layout Subsection
@@ -13609,7 +13653,15 @@ Data are imported from three separate sources (torsion balance, attractor
 \begin_inset space ~
 \end_inset
 
-s sample interval, so any added timing mismatch is at most 1.6 s.
+s sample interval, so any extra timing mismatch (beyond that discussed in
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Timing"
+
+\end_inset
+
+ is at most 1.6 s.
  
 \end_layout
 
@@ -13635,7 +13687,6 @@ status open
 \begin_inset Graphics
 	filename ../runAnalysis/supportingPlots/run3147filterFrequencyResponse.eps
 	width 75text%
-	BoundingBox 50bp 50bp 554bp 770bp
 
 \end_inset
 
@@ -13701,7 +13752,7 @@ dB).
 \begin_layout Standard
 Three columns of data are fed through FIR filters of length 9600 samples
  (
-\begin_inset Formula $10\mbox{ switches}\times256\mbox{ second attractor period}\times3\mbox{ cuts}\div0.8\mbox{ seconds/sample}$
+\begin_inset Formula $10\mbox{ switches }\times256\mbox{ second attractor period }\times3\mbox{ cuts }\div0.8\mbox{ seconds/sample}$
 \end_inset
 
 ).
@@ -13709,19 +13760,19 @@ Three columns of data are fed through FIR filters of length 9600 samples
 \family typewriter
 octave-forge
 \family default
- function '
+ function `
 \family typewriter
 fir1
 \family default
 ' 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "octave:2012"
 
 \end_inset
 
 .
- The function designs 'windowed filters' with linear phase response.
+ The function designs `windowed filters' with linear phase response.
  Filters with linear phase response have frequency-independent phase delays
  
 \begin_inset CommandInset citation
@@ -13865,13 +13916,10 @@ status open
 
 \end_inset
 
- The 3-cut length of the FIR filter was chosen by balancing the need for
- effective suppression of the rising 100
-\begin_inset space ~
-\end_inset
-
-mHz autocollimator noise (pushes to longer length) with the need to reject
- the effects of spikes/kicks (earthquakes and attractor-foil contact).
+ The 3-cut length of the FIR filter was chosen by balancing the need to
+ sufficiently attenuate and frequency-select the injected calibration signal
+ (pushes to longer-duration filters) with the need to reject the effects
+ of spikes/kicks (earthquakes and attractor-foil contact).
  A spike, with amplitude orders of magnitude larger than the calibration
  tone, contaminates the entire FIR filter length with ringing.
  With a 3-cut filter, a single spike makes more than two hours data unusable;
@@ -13895,6 +13943,7 @@ While many regions of temporal overlap between the three different data
  sources begin with the beginning of a cut, not all do.
  Therefore, it is necessary to examine the piecewise square-wave motion
  of the attractor to determine the phase of the attractor's steps.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -13962,7 +14011,7 @@ reference "fig:AttractorMotionLag"
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:TorqueFeedbackLag"
+reference "fig:ElectronicTorqueLag"
 
 \end_inset
 
@@ -13980,18 +14029,22 @@ filename "../extracted/filterSensorHigh.tex"
 \end_inset
 
 mHz.
- The pneumatic DAQ filter has a lowpass at 0.33
+ The pneumatic DAQ filter has a lowpass at 333
 \begin_inset space ~
 \end_inset
 
-Hz.
+mHz.
  The synchronization uncertainty among the three acquisition computers is
  at most 0.8
 \begin_inset space ~
 \end_inset
 
 s (one sample-time).
- To account for clock drifts and offsets, we add XXXRC
+ To account for clock drifts and offsets, we add 
+\begin_inset Formula $\pm25$
+\end_inset
+
+
 \begin_inset space ~
 \end_inset
 
@@ -14001,16 +14054,16 @@ s.
 \end_inset
 
 Hz.
- Feedback torque DAQ filter at 0.2
+ The pendulum feedback control loop had an internal low-pass filter at 200
 \begin_inset space ~
 \end_inset
 
-Hz.
- The feedback P-term was anti-aliased at 0.33
+mHz.
+ The feedback proportional-term was anti-aliased at 333
 \begin_inset space ~
 \end_inset
 
-Hz (for storage only).
+mHz (for storage only).
  The acausal torque passband FIR filter 
 \begin_inset CommandInset include
 LatexCommand input
@@ -14189,7 +14242,14 @@ reference "sub:Attractor-position-control"
  By combining the gauge with the coil and an amplifier, it is possible to
  make an exact and magnified simulation of a gravitational signal that is
  linear in attractor position.
- 
+ See Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ElectronicTorqueLag"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -14341,9 +14401,9 @@ name "fig:Windowing"
 \begin_layout Standard
 Windowing is familiar to many as a method for reducing the magnitude of
  spectral leakage in Fourier transforms.
- It is also of use, as a low-pass filter, in reducing the sensitivity of
- an averaged value to high frequency fluctuations at a modest expense in
- statistical resolving power.
+ It is also useful as a low-pass filter, reducing the sensitivity of an
+ averaged value to high frequency fluctuations at a modest expense in statistica
+l resolving power.
  In this analysis, a Hann window is used 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -14362,7 +14422,7 @@ of
 \bar default
  a particular window.
  Several windowing schemes were explored, without significant improvement.
- The final weighting of data used for our analysis is shown in Fig 
+ The final weighting of data used for our analysis is shown in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Windowing"
@@ -14387,7 +14447,7 @@ name "sub:Lock-in"
 Once the dead times are chosen, a window selected, and a leading edge found,
  locking in is straightforward.
  Beginning at a time prescribed by a leading edge, the analysis program
- walks through each data stream, multiplies the data found in each 'step
+ walks through each data stream, multiplies the data found in each `step
  period' (1/2 the attractor motion period) by the properly-delayed window
  function, and computes the weighted average.
  The resulting average forms a single measurement.
@@ -14399,10 +14459,14 @@ filename "../extracted/lockAve.tex"
 \end_inset
 
  measurements per cut.
- This is done by the octave function 'squareLockM.m'
+ This is done by the octave function `squareLockM.m'
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Box Boxed
 position "t"
 hor_pos "c"
@@ -14422,7 +14486,12 @@ status open
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "../mlib/squareLockM.m"
-lstparams "breakatwhitespace=true,breaklines=true,caption={findRisingEdge.m},emptylines=0,language=Matlab,linerange={1-17,19-23,71-104}"
+lstparams "breakatwhitespace=true,breaklines=true,emptylines=0,language=Matlab,linerange={1-17,19-23,71-104},caption={squareLockM.m}"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -14435,10 +14504,10 @@ lstparams "breakatwhitespace=true,breaklines=true,caption={findRisingEdge.m},emp
 \end_layout
 
 \begin_layout Standard
-The first measurement, and every other subsequent measurement, is regarded
- as an 'A' measurement.
- The second measurement, and every other subsequent measurement (the complement
- of the As), is regarded as a 'B' measurement.
+The first measurement, and every-other subsequent measurement, is regarded
+ as an `A' measurement.
+ The second measurement, and every-other subsequent measurement (the complement
+ of the As), is regarded as a `B' measurement.
  Because the pneumatic drive takes about one attractor period to come into
  equilibrium (if coming from a different A/B position pair in the previous
  cut), the first A and B measurements are dropped from quantitative analysis.
@@ -14453,7 +14522,7 @@ nts are stored for each cut.
 \end_layout
 
 \begin_layout Standard
-The 'lock-in' is made by taking the difference between the average of the
+The `lock-in' is made by taking the difference between the average of the
  As and the average of the Bs.
  
 \end_layout
@@ -14523,7 +14592,13 @@ name "fig:TriangleScatterPlot"
 
 \end_inset
 
-Your first 'triangle plot'
+Your first `triangle plots', for both Yukawa-like and linear torques.
+ The upper frames show the simulated torque-as-a-function of distance curves.
+ The middle frames show the `triangle plots' themselves; note the difference
+ between them in the upper right corners.
+ The bottom frames show a projection of the torque-difference data along
+ the diagonals of the triangle plots; this is a helpful view that may make
+ the difference between the plots more clear.
 \end_layout
 
 \end_inset
@@ -14567,8 +14642,8 @@ triangle plots
 \begin_inset Quotes erd
 \end_inset
 
- because, if all is well, the plot will be reflection anti-symmetric about
- the ascending diagonal (
+ because, if all is well experimentally, the plot will be reflection anti-symmet
+ric about the ascending diagonal (
 \begin_inset Quotes eld
 \end_inset
 
@@ -14618,7 +14693,7 @@ triangle plots
 \begin_inset Quotes erd
 \end_inset
 
- are lines of constant distance-difference.
+ are lines of constant position-difference.
  Vertical lines share constant 
 \begin_inset Formula $A$
 \end_inset
@@ -14651,12 +14726,12 @@ Bootstrap
 
 \begin_layout Standard
 The analysis presented here makes extensive use of a statistical method
- called 'the bootstrap' or 'bootstrapping'.
+ called `the bootstrap' or `bootstrapping'.
  Its primary merit in this context is that it allows straightforward and
  reasonably robust estimation of confidence intervals.
  Its support rests upon the premise that the best estimator for the distribution
  from which a data set is drawn is the data set itself.
- The idea is to 'resample' the data to create synthetic data sets which
+ The idea is to `resample' the data to create synthetic data sets which
  may be passed through any analysis routine developed for the original data
  set.
  With repetition, this process generates distributions of important output
@@ -14672,7 +14747,7 @@ The resampling scheme used in this analysis was to generate synthetic data
  sets of the same size as the original set by randomly selecting measurements
  (there are always duplicate picks, except in the special case where the
  original data are recovered, out of order) from the initial data set.
- There is a related class of methods called 'the jackknife' that generate
+ There is a related class of methods called `the jackknife' that generate
  statistics by considering complete sets of subsets of data, perhaps by
  dividing the initial data into subsets, fitting each subset, and drawing
  statistics from the fit outputs.
@@ -14689,8 +14764,8 @@ Implementation
 \end_layout
 
 \begin_layout Standard
-In all instances where the bootstrap was used, this Octave function was
- called:
+In all instances where the bootstrap was used, this simple Octave function
+ was called:
 \end_layout
 
 \begin_layout Standard
@@ -14743,8 +14818,8 @@ name "sec:Model-Comparison"
 \begin_layout Standard
 The bootstrap makes comparison with any proposed model straightforward.
  No matter how exotic the fitting function and how sensitive it may be to
- individual datapoints or non-Gaussianity in the initial data, it is straightfor
-ward to bootstrap the data, fit, bootstrap again, fit, etc...
+ individual datapoints or non-Gaussianity in the experimental data, it is
+ straightforward to bootstrap the data, fit, bootstrap again, fit, etc...
  The distribution of fit outcomes can always be studied, and qualitative
  understanding is immediate.
  Settling on an algorithm for generating confidence intervals is, however,
@@ -14798,7 +14873,7 @@ Fitting approach -- first half
 \end_layout
 
 \begin_layout Standard
-We proceed down the well-trodden path:
+We proceed down a path well-trodden by past experiments.
 \end_layout
 
 \begin_layout Itemize
@@ -14838,8 +14913,8 @@ where
 \begin_inset Formula $B_{i}$
 \end_inset
 
- correspond to externally-modified systematic parameters, each with associated
- 
+ correspond to externally-modified systematic parameters, each with individual
+ associated 
 \begin_inset Formula $\alpha_{i}$
 \end_inset
 
@@ -14856,7 +14931,7 @@ where
 \bar under
 all
 \bar default
- signal that is linear in the attractor stroke.
+ torques that are linear in the attractor stroke.
 \end_layout
 
 \begin_layout Itemize
@@ -15279,7 +15354,7 @@ Without a rigorous way to use
 \begin_inset Formula $B_{i}$
 \end_inset
 
-, as it's appropriate there, but we'll resort to Monte Carlo to determine
+, as it is appropriate there, but we resort to Monte Carlo to determine
  the effect of 
 \begin_inset Formula $\sigma_{x}$
 \end_inset
@@ -16434,12 +16509,12 @@ The software used to compute these results and generate this document is
  This thesis and all supporting code necessary to go from the original raw
  data to every plot and datapoint expressed in this document are housed
  within a single git repository.
- Once the build environment is configured (with '
+ Once the build environment is configured (with `
 \family typewriter
 git pull
 \family default
 ') and linked to the experimental data , this document can be generated
- simply by typing 'make'.
+ simply by typing `make'.
 \end_layout
 
 \begin_layout Section
@@ -16597,7 +16672,7 @@ Bash is the scripting language for a standard UNIX shell (and the name of
  the shell itself).
  Awk is designed for handling tabular arrays of data of all kinds.
  It is fast and flexible.
- Sed, the 'string editor', is a tool designed for rapidly traversing text
+ Sed, the `string editor', is a tool designed for rapidly traversing text
  files and operating on them; think of it as find-and-replace on steroids.
  
 \end_layout
@@ -16712,7 +16787,7 @@ Testing is perhaps best explained by example.
  People usually try a few inputs until they're approximately satisfied that
  the results behave as expected.
  What if that were programatic? If, before you made serious use of a library,
- you could hit 'test', and the software could run a predefined set of such
+ you could hit `test', and the software could run a predefined set of such
  tests.
  It is 
 \emph on
@@ -20323,7 +20398,7 @@ ski class this:
 \end_inset
 
 I think the major difference between a professional and an amateur is whether
- or not, at the end of the day, they ask the question, 'what have I learned
+ or not, at the end of the day, they ask the question, `what have I learned
  today'?
 \begin_inset Quotes erd
 \end_inset
@@ -20835,7 +20910,7 @@ The fix is clear.
  We have very nice fully-isolated battery-powered contact potential setting
  devices built and ready to go.
  We need only reconnect them, now that we understand that our systematic
- signal was due to the 'capacitor systematic' and not something in the contact-p
+ signal was due to the `capacitor systematic' and not something in the contact-p
 otential system.
 \end_layout
 

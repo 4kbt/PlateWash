@@ -44,8 +44,10 @@ testInjection = 1;
 %HOMEDIR = '~/goldStandard/'
 
 %units are seconds 
-dTime = 55;   printInteger(dTime, [HOMEDIR 'extracted/dTime.tex']);
-pTime = 15;   printInteger(pTime, [HOMEDIR 'extracted/pTime.tex']);
+%35+5+25
+dTime = 65;   printInteger(dTime, [HOMEDIR 'extracted/dTime.tex']);
+%25+10
+pTime = 35;   printInteger(pTime, [HOMEDIR 'extracted/pTime.tex']);
 stepPeriod = 128; printInteger(stepPeriod, [HOMEDIR 'extracted/stepPeriod.tex']);
 printSI(1/(stepPeriod*2), 4, -3, 'Hz',  [HOMEDIR 'extracted/switchFrequency.tex']);
 
