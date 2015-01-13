@@ -6617,12 +6617,9 @@ Ground
  The plate was connected by a heavy-gauge braided cable to a metallic connection
  with a nearby 100-ton cyclotron magnet yoke.
  From this grounding plate, we implemented a starred 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-(XXXMA cite grounding reference)
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand citep
+key "NoiseReductionElectronicSystems"
 
 \end_inset
 
@@ -10771,10 +10768,7 @@ Experimental Plan
 \begin_layout Standard
 This chapter describes the strategies and choices we made in the operation
  of the instrument, from operating frequency to day-to-day operation.
-\end_layout
-
-\begin_layout Section
-Overview
+ XXXMA; clarify
 \end_layout
 
 \begin_layout Section
@@ -10797,9 +10791,8 @@ Hz to 1
 Hz.
  This section describes the way in which important experimental frequencies
  were selected.
- As will be shown, the most-important frequency, the frequency with which
- the attractor changes position, is pushed by several concerns to the highest-fe
-asible frequency.
+ The most-important frequency, the frequency with which the attractor changes
+ position, is pushed by several concerns to the highest-feasible frequency.
  The limit of feasibility is set by both the limited speed with which our
  attractor drive can operate and by the speed with which the pendulum feedback
  control can react without adding extra noise.
@@ -10811,7 +10804,7 @@ Spectral Character of Noise
 \end_layout
 
 \begin_layout Standard
-A torsion balance is an excellent harmonic oscillator.
+Our torsion balance is an excellent harmonic oscillator.
  For quality torsion fibers operated at amplitudes much smaller than a radian,
  the anharmonic terms are negligible
 \begin_inset Foot
@@ -10925,12 +10918,12 @@ status open
 \end_inset
 
 .
- The torque to angle transfer function of a torsion oscillator with resonant
- angular frequency 
+ The torque-to-angle transfer function of an internally-damped torsion oscillato
+r with resonant angular frequency 
 \begin_inset Formula $\omega_{0}$
 \end_inset
 
- , torsion spring constant 
+, torsion spring constant 
 \begin_inset Formula $\kappa$
 \end_inset
 
@@ -10942,7 +10935,14 @@ status open
 \begin_inset Formula $Q$
 \end_inset
 
- is
+ is 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "SchlammingerWallet"
+
+\end_inset
+
+
 \begin_inset Formula 
 \[
 T(\omega)=\left|\frac{\theta(\omega)}{\tau(\omega)}\right|=\frac{1/\kappa}{\sqrt{(1-\omega^{2}/\omega_{0}^{2})^{2}+1/Q^{2}}};\Rightarrow\mbox{If }\omega\gg\omega_{0},\,\left|\frac{\theta(\omega)}{\tau(\omega)}\right|\rightarrow\frac{1}{I\omega^{2}}
@@ -11005,7 +11005,7 @@ For
 \begin_inset Formula $F=ma=m\ddot{x}\rightarrow\tilde{\tau}=I(-\omega^{2})\tilde{\theta}$
 \end_inset
 
-; at these frequencies, the pendulum acts like a free mass.
+ ; at these frequencies, the pendulum acts like a free mass.
  
 \end_layout
 
@@ -11083,7 +11083,7 @@ reference "Autocollimator noise"
  Our minimum resolvable torque signal at any given frequency is 
 \begin_inset Formula 
 \[
-\delta\tau(\omega)=\frac{\delta\theta}{T(\omega)}=\kappa\sqrt{(1-\omega^{2}/\omega_{0}^{2})^{2}+1/Q^{2}}\delta\theta\approx\kappa\left|1-\omega^{2}/\omega_{0}^{2}\right|\delta\theta
+\delta\tau(\omega)=\frac{\delta\theta}{T(\omega)}=\kappa\sqrt{\left(1-\frac{\omega^{2}}{\omega_{0}^{2}}\right)^{2}+\frac{1}{Q^{2}}}\delta\theta\approx\kappa\left|1-\frac{\omega^{2}}{\omega_{0}^{2}}\right|\delta\theta
 \]
 
 \end_inset
@@ -11152,13 +11152,21 @@ reference "fig:Torque-noise,-from"
 \begin_inset space ~
 \end_inset
 
-mHz, or a 40
+mHz, equivalent to a 40
 \begin_inset space ~
 \end_inset
 
 s period.
- As will be seen below, neither the feedback loop nor the attractor drive
- permit usable operation at such a high frequency.
+ As will be seen below, the 
+\begin_inset Formula $\sim20$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+s response times of the pendulum feedback loop and the attractor drive prohibit
+ useful operation at such a high frequency.
  Near the attractor frequency of 
 \begin_inset CommandInset include
 LatexCommand input
@@ -11166,7 +11174,7 @@ filename "..//extracted/switchFrequency.tex"
 
 \end_inset
 
-, the noise is generally at the level of 
+, the torque noise is generally at or below 
 \begin_inset Formula $20$
 \end_inset
 
@@ -11178,7 +11186,7 @@ fN-m/
 \begin_inset Formula $\sqrt{\mbox{Hz}}$
 \end_inset
 
- or better during quiet periods.
+ during quiet periods.
 \end_layout
 
 \begin_layout Standard
@@ -11210,10 +11218,11 @@ name "fig:Torque-noise,-from"
 
 Experimentally-measured torque noise, from systematic test 3167.
  Attractor stationary.
+ Data in blue cover the entire time-series shown, while data in red are
+ taken from the quiet period early in the morning of day 1227.
  (XXXRC Jens comments that figure doesn't align with text; perhaps add thermal
  limit, autocollimator line, add more commentary, show filtered and unfiltered,
- perhaps more panels.
- Comment on red vs blue difference.) 
+ perhaps more panels.) 
 \end_layout
 
 \end_inset
@@ -11249,26 +11258,16 @@ The higher the attractor frequency
 \begin_inset Formula $S(\omega)=S_{0}$
 \end_inset
 
-
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-(XXXMA what am I trying to say here?)
-\end_layout
-
-\end_inset
-
 , then the resulting uncertainty of 
 \begin_inset Formula $N$
 \end_inset
 
  measurements each of duration 
-\begin_inset Formula $t=1/f$
+\begin_inset Formula $t_{m}=1/f$
 \end_inset
 
  is 
-\begin_inset Formula $\sigma_{all}=\sqrt{S_{0}/Nt}$
+\begin_inset Formula $\sigma_{all}=\sqrt{\frac{S_{0}}{Nt_{m}}}$
 \end_inset
 
 .
@@ -11277,11 +11276,11 @@ status collapsed
 \end_inset
 
 , then 
-\begin_inset Formula $\sigma_{all}=\sqrt{S_{0}/T}$
+\begin_inset Formula $\sigma_{all}=\sqrt{\frac{S_{0}}{T}}$
 \end_inset
 
 , independent of 
-\begin_inset Formula $t$
+\begin_inset Formula $t_{m}$
 \end_inset
 
  and 
@@ -11307,23 +11306,14 @@ non-Gaussian
 \end_inset
 
  is both time and frequency-dependent.
- Events such as earthquakes, human activity, attractor/foil interactions,
- computer crashes, etc.
- happen.
+ Sudden/prominent events including earthquakes, human activity, attractor/foil
+ interactions, and computer crashes happen.
  They are often short in duration, but overwhelming in amplitude.
  Measurements taken at these times are unusable.
  They are rare-enough that most experiments never incorporate them into
  their noise budget.
- LIGO, the gravitational wave interferometer, is a rare exception; some
- LIGO scientists devote much of their time to 
-\begin_inset Quotes eld
-\end_inset
-
-glitch
-\begin_inset Quotes erd
-\end_inset
-
--hunting.
+ This is the case for PlateWash as well, where such transients happened
+ at most a few times in a day.
  In PlateWash, it will be shown in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -11332,50 +11322,40 @@ reference "sub:Filtering"
 \end_inset
 
  that for any large transient, measurements for at least 
-\begin_inset Formula $10t=2560\mbox{\,\ s}=0.7\mbox{\,\ hr}$
+\begin_inset Formula $10t_{m}=2560\mbox{\,\ s}=0.7\mbox{\,\ hr}$
 \end_inset
 
  must be discarded.
  If 
-\begin_inset Formula $t$
+\begin_inset Formula $t_{m}$
 \end_inset
 
  were smaller, the experiment's fractional dead-time would be smaller.
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMI glitch/day?
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
 A second benefit to small 
-\begin_inset Formula $t$
+\begin_inset Formula $t_{m}$
 \end_inset
 
  is the increased number of independent measurements.
- This experiment relies upon Monte Carlo-like measurement schemes (random
- attractor locations) to understand systematic uncertainties and better
- constrain possible violations of the ISL.
+ This experiment relies upon Monte Carlo-like measurements (random attractor
+ locations) to understand systematic uncertainties and better constrain
+ possible violations of the inverse-square law.
  Faster individual measurements allow faster exploration of parameter space
  (exploring a 
 \begin_inset Formula $6\times6$
 \end_inset
 
  grid of measurements requires a day with the current choice of 
-\begin_inset Formula $t$
+\begin_inset Formula $t_{m}$
 \end_inset
 
 ).
  Measurements that are twice as fast allow twice as many questions to be
  answered.
- At equal noise levels, there is no penalty for this approach.
+ When noise is frequency-independent, there is no penalty for this approach.
  
 \end_layout
 
@@ -11400,9 +11380,9 @@ name "sub:Harmonics"
 \end_layout
 
 \begin_layout Standard
-In order to avoid any velocity-dependent systematic uncertainties, the attractor
- must move in a square wave, with measurements taken only when the instrument
- is at rest.
+In order to avoid any attractor-velocity-dependent systematic uncertainty,
+ the attractor must move in a square wave, with measurements taken only
+ when the attractor is at rest.
  The Fourier coefficients of a square wave are 
 \begin_inset Formula $A_{n}=4/\pi n$
 \end_inset
@@ -11426,7 +11406,7 @@ key "ArfkenForPhysics"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard
@@ -11771,7 +11751,7 @@ name "Fourier Harmonics"
 
 \begin_layout Standard
 For measurements with equal uncertainty 
-\begin_inset Formula $\sigma$
+\begin_inset Formula $\sigma_{h}$
 \end_inset
 
  of each harmonic, the uncertainty in a combined measurement of the first
@@ -11780,7 +11760,7 @@ For measurements with equal uncertainty
 \end_inset
 
  harmonics is 
-\begin_inset Formula $\sigma_{combined}=\sigma/\sqrt{\sum_{j=1}^{m}A_{m}^{2}}$
+\begin_inset Formula $\sigma_{combined}=\sigma_{h}/\sqrt{\sum_{j=1}^{m}A_{m}^{2}}$
 \end_inset
 
 .
@@ -11792,7 +11772,7 @@ reference "Fourier Harmonics"
 \end_inset
 
 , the signal to noise ratio (SNR) is computed for 
-\begin_inset Formula $\sigma=1$
+\begin_inset Formula $\sigma_{h}=1$
 \end_inset
 
 .
@@ -11811,9 +11791,10 @@ name "sub:Lags"
 \end_layout
 
 \begin_layout Standard
-A number of properties of the instrument require finite time.
+Several experimental procedures in the regular operation of the experiment
+ require considerable time.
  The pneumatically-driven attractor takes 
-\begin_inset Formula $\sim15$
+\begin_inset Formula $20$
 \end_inset
 
 
@@ -11821,7 +11802,7 @@ A number of properties of the instrument require finite time.
 \end_inset
 
 s to move to a new position.
- Furthermore, the attractor control system begins tapping the modulator
+ Furthermore, the attractor control system begins actuating the modulator
  valve 10
 \begin_inset space ~
 \end_inset
@@ -11848,8 +11829,12 @@ filename "../extracted/TheoSampleTime.tex"
 \end_inset
 
 s anti-aliasing filters.
- Synchronization errors between the three data acquisition computers require
- XXXRC
+ Conservative synchronization uncertainties between the three data acquisition
+ computers require 
+\begin_inset Formula $\pm25$
+\end_inset
+
+
 \begin_inset space ~
 \end_inset
 
@@ -11889,7 +11874,7 @@ reference "sub:Lags-1"
 \begin_inset space ~
 \end_inset
 
-mHz.
+mHz XXXRC-compute-me.
  At that frequency, the accepted measurements would have zero duty cycle.
  The duty cycle available for measurement is 
 \begin_inset Formula $D=(1-2Lf)$
@@ -11945,7 +11930,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Signal to noise attenuation as a function of attractor frequency (horizontal
+Signal-to-noise attenuation as a function of attractor frequency (horizontal
  axis) and of total dead time duration (individual curves).
  As expected, once the per-step dead time is smaller than 75% of the step
  duration, half of the SNR is available for use.
@@ -12010,9 +11995,9 @@ reference "sub:Lags"
 
 \begin_layout Standard
 The operating frequency was chosen well in advance of the science run reported
- here, before the instrument was fully understood.
+ here, before the instrument was fully commissioned.
  We selected a frequency that we expected would give low noise and was sufficien
-tly slow to allow transients associated with attractor motion to damp.
+tly slow to allow transients associated with attractor motion to dissipate.
  We selected 3.90625
 \begin_inset space ~
 \end_inset
@@ -12043,6 +12028,33 @@ filename "../extracted/TheoSampleTime.tex"
 \end_layout
 
 \begin_layout Subsection
+Switches per cut
+\end_layout
+
+\begin_layout Standard
+The number of attractor position changes per cut was chosen to be large-enough
+ to allow a sufficient understanding of the switch-to-switch variation in
+ the torque at each point.
+ We settled on 10 switches per cut in an ad-hoc fashion.
+ It is slightly more than the minimum required to have a reasonable understandin
+g of the switch-to-switch variation ( 
+\begin_inset Formula $\sim7$
+\end_inset
+
+ samples is perhaps the minimum one should use for the a reliable estimate
+ of a variance), and still short enough to address the speed concerns laid
+ out in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Statistics"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Section
 Choosing a science signal
 \begin_inset CommandInset label
 LatexCommand label
@@ -12054,22 +12066,23 @@ name "sub:Choosing-a-science"
 \end_layout
 
 \begin_layout Standard
-As the pendulum is locked in feedback, there are multiple data channels
- that may be used to extract a science measurement.
- The pendulum twist angle, the feedback signal itself, and the P, I, and
- D terms of the feedback loop are written to disk.
- The pendulum twist angle and the P (proportional) term of the loop are
- equivalent.
- In practice, the twist signal and P term were anti-aliased differently
- before being written to disk.
- The P term had a 5
+As the pendulum is locked in feedback, there are multiple junctures in the
+ feedback loop where a science signal can be extracted.
+ The pendulum twist angle, the feedback signal itself, and the proportional,
+ integral, and differential terms of the feedback loop are written to disk.
+ The pendulum twist angle and the proportional term of the loop are equivalent.
+ In practice, the twist signal and proportional term were anti-aliased different
+ly before being written to disk.
+ The proportional term had a 5
 \begin_inset space ~
 \end_inset
 
 s filter applied, making it the signal of choice for a twist measurement.
- The loop was operated with zero I-term, so the I channel contains no signal.
- The D (derivative) term response is frequency-dependent, growing roughly
- linearly with 
+ The loop was operated with zero integral-term to prevent improper wind-up
+ in the challenging near-foil environment, so the integral channel contains
+ no signal.
+ The derivative term response is frequency-dependent, growing roughly linearly
+ with 
 \begin_inset Formula $\omega$
 \end_inset
 
@@ -12078,15 +12091,16 @@ s filter applied, making it the signal of choice for a twist measurement.
 
 \begin_layout Standard
 So, there are two reasonable science channels: the feedback signal applied
- to the pendulum, and the P term.
- The feedback signal has units of torque, the P term has units of angle.
+ to the pendulum, and the proportional term.
+ The feedback signal has units of torque, the proportional term has units
+ of angle.
  Even though the pendulum is held fixed, the torque-angle transfer function
- remains important.
+ matters.
  At frequencies below the resonance of the pendulum, the two channels are
  proportional.
  At frequencies above resonance, the frequency-independent angle noise of
- the autocollimator appears, in the feedback signal, as torque noise that
- rises like frequency squared.
+ the autocollimator appears in the applied feedback signal, as torque noise
+ that rises like frequency squared.
  As shown in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -12107,39 +12121,17 @@ reference "Fourier Harmonics"
 \end_layout
 
 \begin_layout Standard
-By choosing the angle/P-term signal instead of the feedback signal as the
- science signal, we use the inertia of the pendulum as an analog low-pass
- filter.
- While, in principle, both signals contain the same science, the science
- signal is more-easily extracted from the angle signal.
- Furthermore, as the feedback signal is the sum of the P and the derived
- D terms, there is less opportunity for an error to enter into the science
- signal if the measured angle is used alone.
-\end_layout
-
-\begin_layout Subsection
-Switches per cut
-\end_layout
-
-\begin_layout Standard
-The number of attractor position changes per cut was chosen to be large-enough
- to allow a sufficient understanding of the switch-to-switch variation in
- the torque at each point.
- We settled on 10 switches per cut in an ad-hoc fashion.
- It is slightly more than the minimum required to have a reasonable understandin
-g of the switch-to-switch variation ( 
-\begin_inset Formula $\sim7$
-\end_inset
-
- is perhaps the minimum one could use for that determination), and still
- short enough to address the speed concerns laid out in Section 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sub:Statistics"
-
-\end_inset
-
-.
+By choosing the angle/proportional-term signal instead of the feedback signal
+ as the science signal, we use the inertia of the pendulum as an analog
+ low-pass filter.
+ While, in principle, both signals contain the same information, the science
+ signal is more-readily extracted from the angle signal.
+ Furthermore, as the feedback signal is the sum of the proportional and
+ the derived differential terms, there would be somewhat greater opportunity
+ for a software error to introduce unwanted error if it were used.
+ Finally, it must be noted that the freedom to select among signal sources
+ is only possible with a continuous gravitational torque calibration signal
+ operating at a nearby frequency.
  
 \end_layout
 
@@ -12155,16 +12147,17 @@ Random
 \end_layout
 
 \begin_layout Standard
-A major departure from past parallel-plate-style gravitational experiments
- 
+One of this experiment's important departures from past parallel-plate-style
+ gravitational experiments 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "2003Natur.421..922L,2007PhRvL..98t1101T"
 
 \end_inset
 
- is the use of random attractor locations This approach trades away some
- signal-to-noise in return for improved characterization of systematic effects.
+ is the use of random attractor locations.
+ This approach trades away some signal-to-noise in return for improved character
+ization of systematic effects.
  Instead of focusing exclusively upon a small set of start and end locations
  for the attractor, we considered a large distribution of them.
  This method has the potential to expose important systematic curiosities,
@@ -12177,8 +12170,8 @@ reference "sec:Encoder-narrative"
 
 , and has the added advantage of allowing a more-complete measurement of
  the distance-dependence of any measured force.
- The drawbacks of this approach, primarily complexity, are discussed in
- Sections 
+ The drawbacks of this approach, primarily additional complexity, are discussed
+ in Sections 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:0-tunable-parameters,"
@@ -12205,10 +12198,10 @@ reference "fig:First-day-of-attractor-data"
 \end_layout
 
 \begin_layout Standard
-The random locations were generated by random number generator into configuratio
-n files for the attractor computer to run.
- This enables systematic tests that repeat the attractor positions used
- in science runs.
+The random locations were generated by random number generator and written
+ into configuration files for the attractor computer to run.
+ This extra step allows systematic tests that repeat the attractor positions
+ used in science runs.
  The distribution of random attractor locations used was the simplest, and
  perhaps least efficient, uniform distributions of start and end positions.
  This spends perhaps more time than is warranted exploring shorter attractor-pos
@@ -12317,7 +12310,7 @@ XXXMA draw vertical line/regions to denote systematic tests
 \end_layout
 
 \begin_layout Standard
-The attractor position was modulated through both 
+The attractor position was varied through both 
 \begin_inset Quotes eld
 \end_inset
 
@@ -12326,7 +12319,7 @@ random
 \end_inset
 
  and square-wave patterns.
- About half of the science data were taken using various random patterns.
+ About half of the science data were taken using random patterns.
  
 \end_layout
 
@@ -12369,7 +12362,7 @@ long
 \end_inset
 
  square wave measurements to allow more-straightforward intercomparison.
- 
+ XXXRC -- which weren't? 
 \end_layout
 
 \begin_layout Section
@@ -12405,6 +12398,13 @@ Data Analysis
 
 \begin_layout Section
 Flow
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Flow"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -12437,7 +12437,24 @@ name "fig:Flowchart-diagramming"
 Flowchart diagramming the flow of data analysis.
  After configuration of experimental and analysis parameters, timing cuts,
  and the hand-input of some systematic test parameters, it is automated
- and repeatable.
+ and replicable.
+ XXXRC - fix 
+\begin_inset Quotes eld
+\end_inset
+
+not-yet implemented
+\begin_inset Quotes erd
+\end_inset
+
+-
+\begin_inset Quotes erd
+\end_inset
+
+uncorrected yukawa fit
+\begin_inset Quotes erd
+\end_inset
+
+!
 \end_layout
 
 \end_inset
@@ -12480,6 +12497,19 @@ reference "par:A-conservative-approach"
  
 \end_layout
 
+\begin_layout Standard
+This section, Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Flow"
+
+\end_inset
+
+, should be read as an executive summary for the details in the chapter,
+ with the flowchart as a companion.
+ 
+\end_layout
+
 \begin_layout Subsection
 Source data
 \end_layout
@@ -12517,7 +12547,7 @@ reference "sec:Temperature--systematic"
 \begin_layout Standard
 In addition, all experimental parameters (alignment, dimensions, densities,
  analysis parameters, etc.) are stored in global configuration files that
- are read by any process that needs them.
+ are read by any analysis program that requires them.
 \end_layout
 
 \begin_layout Subsubsection
@@ -12558,8 +12588,7 @@ run
 lly delineated by a run configuration file as having something interesting
  to say.
  The main routine of the run-by-run analysis looks through the directory
- of run configuration files and executes the run-by-run analysis on the
- data loaded by each one.
+ of run configuration files and analyzes the data loaded by each one.
 \end_layout
 
 \begin_layout Subsubsection
@@ -12583,7 +12612,8 @@ reference "sub:Synchronization"
 
 , the data from each computer do not begin simultaneously and may have offsets
  between their clocks.
- We correct for these effects as best we can.
+ We correct the differences in the clock rates and conservatively absorb
+ the differences in clock datums into the assigned experimental dead times.
 \end_layout
 
 \begin_layout Subsubsection
@@ -12612,7 +12642,18 @@ XXXMA can this be guaranteed inconsequential with a unity filter?
 \end_inset
 
 , but equal duration, filter in order to phase-match them to the torque
- signal.
+ signal.Uncorrected Yukawa fit without systematics
+\end_layout
+
+\begin_layout Standard
+As a cross-check on the Yukawa fitter, we additionally produce best-fit
+ results from an earlier generation of the fit programs.
+ It does not handle any systematic uncertainties, but it is 
+\bar under
+much
+\bar default
+ faster.
+ XXXMA Should this be dropped?
 \end_layout
 
 \begin_layout Subsubsection
@@ -12672,7 +12713,8 @@ reference "sub:Edge-finding"
  the initial steps in the data.
  Using these steps, the code then projects, open-loop, the temporal location
  of all the steps in the dataset.
- Each step is then measured, using the dead-times projected in Section 
+ The value of each signal channel is then measured during each step, using
+ the dead-times projected in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Lags-1"
@@ -12740,7 +12782,14 @@ reference "fig:The-first-8000"
 
 , the positions of the first two states are inconsistent with the rest of
  the cut and retain information from the prior cut.
- For 
+ As detailed in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Lock-in"
+
+\end_inset
+
+, 
 \bar under
 all
 \bar default
@@ -12785,21 +12834,12 @@ all
 \end_inset
 
  are measured.
- See 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sub:Lock-in"
-
-\end_inset
-
-.
- Out-of-phase quadrature measures of these quantities are also measured,
- but are subject to no further analysis.
+ Out-of-phase quadrature measures of these quantities are also recorded,
+ but are subjected to no further analysis.
 \end_layout
 
 \begin_layout Standard
-Only the output of this cutting procedure is used for analysis beyond this
- point.
+Only these cut-wise data are used for analysis beyond this point.
 \end_layout
 
 \begin_layout Subsubsection
@@ -12808,7 +12848,8 @@ Aggregation
 
 \begin_layout Standard
 All the cuts from the many runs are aggregated into a single file (one for
- the two-DAQ analysis, and one for the three-DAQ interferometer analysis).
+ the pendulum/attractor two-DAQ analysis, and one for the three-DAQ interferomet
+er analysis).
  These 
 \begin_inset CommandInset include
 LatexCommand input
@@ -12824,17 +12865,6 @@ filename "../extracted/numberOfIFOCuts.tex"
 \end_inset
 
  three-DAQ) comprise the measurement.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMA decimal input needs added comments, section 5.4 too.
- Does that break anything else?
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection
@@ -12843,8 +12873,8 @@ Interpretation
 
 \begin_layout Standard
 Now that the data are measured, what do they say? As the foil systematic
- is important, we proceed first to ascertain the size of any necessary correctio
-n due to foil motion.
+ is important, we first to ascertain the size of any necessary correction
+ due to foil motion.
  We then fit for the presence of any Yukawa signal.
  In addition, we perform an 
 \begin_inset Quotes eld
@@ -12930,10 +12960,10 @@ Foil-driven torque vs foil position model/correction
 \end_layout
 
 \begin_layout Standard
-By combining the foil-motion to torque calibration with the foil displacement
- as a function of attractor position, we construct a foil-motion-related
- torque correction as a function of attractor position which can be applied
- to the entire dataset.
+By combining the foil-motion-to-torque calibration with the modeled foil
+ displacement as a function of attractor position, we construct a foil-motion-re
+lated torque correction as a function of attractor position, with known
+ uncertainties, which can be applied to the entire dataset.
 \end_layout
 
 \begin_layout Subsubsection
@@ -13003,15 +13033,19 @@ Just as for the foil displacement as a function of attractor position, we
  make a model-free fit for the pendulum torque as a function of attractor
  position.
  Furthermore, by subtracting the foil-motion torque correction from this
- fit, we are able to compensate for the foil-motion systematic.
+ fit, we are able to compensate for any foil-motion systematic.
  This is perhaps the most intuitive and general output of the experiment.
 \end_layout
+
+\begin_layout Subsubsection
+\begin_inset Note Note
+status open
 
 \begin_layout Subsubsection
 Uncorrected Yukawa fit without systematics
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 As a cross-check on the Yukawa fitter, we additionally produce best-fit
  results from an earlier generation of the fit programs.
  It does not handle any systematic uncertainties, but it is 
@@ -13019,12 +13053,7 @@ As a cross-check on the Yukawa fitter, we additionally produce best-fit
 much
 \bar default
  faster.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMA Should this be dropped?
+ XXXMA Should this be dropped?
 \end_layout
 
 \end_inset
@@ -13193,7 +13222,11 @@ filename "../extracted/CalibFitWErrInRadians.tex"
 
 \end_inset
 
-, which should be compared with the fiber kappa of 
+, which should be compared with the fiber 
+\begin_inset Formula $\kappa$
+\end_inset
+
+ of 
 \begin_inset CommandInset include
 LatexCommand input
 preview true
@@ -13255,7 +13288,7 @@ The largest possible systematic signals (tilt and direct magnetic coupling
 \end_inset
 
  gravitational signal frequency.
- While a clear 1-
+ While a resolved 1-
 \begin_inset Formula $\omega$
 \end_inset
 
@@ -13316,13 +13349,25 @@ no
  system and the pendulum and interferometer readout systems, the computers
  were electrically isolated.
  They share a common transformer-isolated power source, and a common electrical
- ground through a starred grounding arrangement (see XXXMA), but no other
- connections.
+ ground through a starred grounding arrangement (Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Grounding"
+
+\end_inset
+
+), but no other connections.
  Of particular concern was the isolation of the analog-to-digital converting
  boards on each data-acquisition system; no shared signals were allowed
  between them.
- This arrangement appears to have worked very well (see XXXMA-electrical
- systematics).
+ This arrangement appears to have worked very well (see Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Electrical-Crosstalk"
+
+\end_inset
+
+).
  The crux of this system is understanding the synchrony of the three systems'
  timing.
 \end_layout
