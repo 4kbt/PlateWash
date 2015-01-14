@@ -15248,21 +15248,27 @@ If we take, as above, all our uncertainties to be distributed according
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-P(\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n})=\int\prod_{j=1}^{N}\left(e^{(G(x_{A},x_{B},B_{1},\ldots B_{n},\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n})-\Delta\tau_{j})^{2}/\sigma_{\Delta\tau_{j}}^{2}}P(x_{A},\bar{x}_{A_{j}},\sigma_{x_{A_{j}}})P(x_{B},\bar{x}_{B_{j}},\sigma_{x_{B_{j}}})\prod_{i=1}^{n}P(B_{i},\bar{B}_{i_{j}},\sigma_{B_{i_{j}}})\right)dx_{A}dx_{B}dB_{1}\ldots dB_{n},
-\]
+\begin{eqnarray*}
+P(\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n}) & = & \int\prod_{j=1}^{N}\left(e^{(G(x_{A},x_{B},B_{1},\ldots B_{n},\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n})-\Delta\tau_{j})^{2}/\sigma_{\Delta\tau_{j}}^{2}}P(x_{A},\bar{x}_{A_{j}},\sigma_{x_{A_{j}}})P(x_{B},\bar{x}_{B_{j}},\sigma_{x_{B_{j}}})\right.\\
+ &  & \left.\times\prod_{i=1}^{n}P(B_{i},\bar{B}_{i_{j}},\sigma_{B_{i_{j}}})\right)dx_{A}dx_{B}dB_{1}\ldots dB_{n},
+\end{eqnarray*}
 
 \end_inset
 
- if you're Bayesian.
+
+\end_layout
+
+\begin_layout Standard
+if you're Bayesian.
  If you're a Frequentist, and you prefer profile likelihoods, 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-L(\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n})=\max_{x_{A_{j}},x_{B_{j}},B_{2_{j}},\ldots,B_{n_{j}}\forall j}\left(\log\left[\prod_{j=1}^{N}\left(e^{(G(x_{A_{j}},x_{B_{j}},B_{1},\ldots B_{n_{j}},\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n})-\Delta\tau_{j})^{2}/\sigma_{\Delta\tau_{j}}^{2}}P(x_{A_{j}},\bar{x}_{A_{j}},\sigma_{x_{A_{j}}})P(x_{B_{j}},\bar{x}_{B_{j}},\sigma_{x_{B_{j}}})\prod_{i=1}^{n}P(B_{i_{j}},\bar{B}_{i_{j}},\sigma_{B_{i_{j}}})\right)\right]\right)
-\]
+\begin{eqnarray*}
+L(\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n}) & = & \max_{x_{A_{j}},x_{B_{j}},B_{2_{j}},\ldots,B_{n_{j}}\forall j}\left(\log\left[\prod_{j=1}^{N}\left(e^{(G(x_{A_{j}},x_{B_{j}},B_{1},\ldots B_{n_{j}},\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n})-\Delta\tau_{j})^{2}/\sigma_{\Delta\tau_{j}}^{2}}\right.\right.\right.\\
+ &  & \left.\left.\left.\times P(x_{A_{j}},\bar{x}_{A_{j}},\sigma_{x_{A_{j}}})P(x_{B_{j}},\bar{x}_{B_{j}},\sigma_{x_{B_{j}}})\prod_{i=1}^{n}P(B_{i_{j}},\bar{B}_{i_{j}},\sigma_{B_{i_{j}}})\right)\right]\right)
+\end{eqnarray*}
 
 \end_inset
 
@@ -15271,9 +15277,10 @@ L(\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n})=\max_{x_{A_{j}},x_{
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-L(\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n})=\max_{x_{A_{j}},x_{B_{j}},B_{2_{j}},\ldots,B_{n_{j}}\forall j}\left(\sum_{j=1}^{N}\left(\frac{G(x_{A_{j}},x_{B_{j}},B_{1},\ldots B_{n_{j}},\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n})-\Delta\tau_{j})^{2}}{\sigma_{\Delta\tau_{j}}^{2}}+\frac{(x_{A_{j}}-\bar{x}_{A_{j}})^{2}}{\sigma_{x_{A_{j}}}^{2}}+\frac{(x_{B_{j}}-\bar{x}_{B_{j}})^{2}}{\sigma_{x_{B_{j}}}^{2}}+\sum_{i=1}^{n}\frac{(B_{i_{i}}-\bar{B}_{i_{j}})^{2}}{\sigma_{B_{i_{j}}}^{2}}\frac{1}{\sigma_{B_{i_{j}}}\sqrt{2\pi}}\right)\right)
-\]
+\begin{eqnarray*}
+L(\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n}) & = & \max_{x_{A_{j}},x_{B_{j}},B_{2_{j}},\ldots,B_{n_{j}}\forall j}\left(\sum_{j=1}^{N}\left(\frac{G(x_{A_{j}},x_{B_{j}},B_{1},\ldots B_{n_{j}},\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n})-\Delta\tau_{j})^{2}}{\sigma_{\Delta\tau_{j}}^{2}}\right.\right.\\
+ &  & \left.\left.+\frac{(x_{A_{j}}-\bar{x}_{A_{j}})^{2}}{\sigma_{x_{A_{j}}}^{2}}+\frac{(x_{B_{j}}-\bar{x}_{B_{j}})^{2}}{\sigma_{x_{B_{j}}}^{2}}+\sum_{i=1}^{n}\frac{(B_{i_{i}}-\bar{B}_{i_{j}})^{2}}{\sigma_{B_{i_{j}}}^{2}}\frac{1}{\sigma_{B_{i_{j}}}\sqrt{2\pi}}\right)\right)
+\end{eqnarray*}
 
 \end_inset
 
@@ -15395,8 +15402,14 @@ fuzz
  This fuzzing process, in concert with the bootstrapping of the torque data,
  should distribute the best-fit points as expected from a more-sophisticated
  approach to error analysis.
- This choice tables for later the considerable problem of confidence-interval
- determination.
+ This choice tables until Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Confidence-Interval-Algorithm"
+
+\end_inset
+
+ the important problem of confidence-interval determination.
 \end_layout
 
 \begin_layout Subsubsection
@@ -15404,7 +15417,8 @@ Fitting approach -- second half
 \end_layout
 
 \begin_layout Standard
-The fitting plan continues (see Appendix 
+With our treatise on non-linearity complete, the fitting plan continues
+ (see Appendix 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "chap:Yukawa-Variance-and"
@@ -15424,7 +15438,14 @@ Compute
 \begin_inset Formula $\bar{F}=\int_{-\infty}^{\infty}F(x,B_{1\ldots n},\alpha_{1\ldots n},\lambda_{1\ldots n})P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}$
 \end_inset
 
+ (see Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:fbar"
 
+\end_inset
+
+)
 \end_layout
 
 \begin_layout Itemize
@@ -15444,7 +15465,14 @@ Compute
 \begin_inset Formula $\sigma_{F_{x_{B}}}^{2}$
 \end_inset
 
+ (see Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:varG"
 
+\end_inset
+
+)
 \end_layout
 
 \begin_layout Itemize
@@ -15489,7 +15517,11 @@ Minimize
 \end_inset
 
 .
- 
+ The minimization was done via simulated annealing.
+ Downhill simplex, Levenburg-Marquardt, and sequential quadratic programming
+ methods all were susceptible to being trapped in local minima.
+ Simulated annealing is computationally-intensive, but has proven more robust
+ in recovering injected test signals.
 \end_layout
 
 \begin_layout Itemize
@@ -15510,12 +15542,18 @@ To extract understanding of any systematic uncertainties, study the distribution
 \begin_inset Formula $\bar{F}$
 \end_inset
 
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:fbar"
+
+\end_inset
+
 
 \end_layout
 
 \begin_layout Standard
-The integrals needed for this and subsequent subsubsections are worked out
- in 
+The integrals needed for these subsubsections are worked out in 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Integrals"
@@ -15643,6 +15681,13 @@ status collapsed
 
 \begin_layout Subsubsection
 \begin_inset Formula $\sigma_{G}^{2}$
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:varG"
+
 \end_inset
 
 
@@ -15836,7 +15881,7 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-This works great, but speed, stability, and simplicity urges us farther.
+This works, but speed, stability, and simplicity urge us farther.
 \end_layout
 
 \begin_layout Standard
@@ -16154,8 +16199,8 @@ a priori
 \end_inset
 
  have nothing to do with one another.
- Any attempt to constrain them jointly inherently builds in a prior assumption
- about their relationship.
+ Any attempt to constrain them jointly makes a prior assumption about their
+ relationship.
  The long-standing tradition in this field is the 
 \begin_inset Quotes eld
 \end_inset
@@ -16320,7 +16365,7 @@ In addition to extracting model parameters from the data, we can reconstruct
 \begin_inset Formula $\tau(d)$
 \end_inset
 
-, where the attractor measures a 
+, where the experiment measures a 
 \begin_inset Formula $\Delta\tau=\tau(d_{1})-\tau(d_{2})$
 \end_inset
 
@@ -16478,8 +16523,8 @@ PlateWash is not a blind experiment.
  In this first iteration of PlateWash, our understanding of the instrument's
  metrology was in continuous refinement, which frustrated any attempt to
  inject a fake signal into the data as they were acquired.
- (Furthermore, the physical separation between pendulum and attractor DAQ
- systems would make doing so extremely difficult).
+ (Furthermore, the intentional physical separation between pendulum and
+ attractor DAQ systems would make injecting a fake signal extremely difficult).
 \end_layout
 
 \begin_layout Standard
