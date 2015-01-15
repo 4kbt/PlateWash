@@ -12541,7 +12541,8 @@ Data files
 Each data-acquisition computer generates its own data files.
  When the pendulum computer's data are read, externally-measured data are
  joined to the raw output from the pendulum DAQ.
- The timing data are then referenced to a common datum (January 1, 2009).
+ The timing data are then referenced to a common datum (00:00:00 January
+ 1, 2009 PST).
  
 \end_layout
 
@@ -12614,29 +12615,8 @@ reference "sub:Filtering"
 , the data are passed through FIR filters, primarily to notch out the gravitatio
 nal calibration signal and to bandpass away drift in the pendulum.
  All other channels to be analyzed alongside the torque data are passed
- through a largely-inconsequential
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMA can this be guaranteed inconsequential with a unity filter?
-\end_layout
-
-\end_inset
-
-, but equal duration, filter in order to phase-match them to the torque
- signal.Uncorrected Yukawa fit without systematics
-\end_layout
-
-\begin_layout Standard
-As a cross-check on the Yukawa fitter, we additionally produce best-fit
- results from an earlier generation of the fit programs.
- It does not handle any systematic uncertainties, but it is 
-\bar under
-much
-\bar default
- faster.
- XXXMA Should this be dropped?
+ through an inconsequential (low-pass at the Nyquist frequency), but equal
+ duration, filter in order to phase-match them to the torque signal.
 \end_layout
 
 \begin_layout Subsubsection
@@ -12765,7 +12745,7 @@ reference "fig:The-first-8000"
 
 , the positions of the first two states are inconsistent with the rest of
  the cut and retain information from the prior cut.
- As detailed in 
+ As detailed in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Lock-in"
@@ -12856,8 +12836,8 @@ Interpretation
 
 \begin_layout Standard
 Now that the data are measured, what do they say? As the foil systematic
- is important, we first to ascertain the size of any necessary correction
- due to foil motion.
+ is important, we first ascertain the size of any necessary correction due
+ to foil motion.
  We then fit for the presence of any Yukawa signal.
  In addition, we perform an 
 \begin_inset Quotes eld
@@ -12869,18 +12849,6 @@ arbitrary fit
 
 , which is a model-free approach to characterizing our measured signal,
  with less attention to systematic uncertainty.
- Finally, as a limited cross-check on some analysis, we also compute a Yukawa
- fit by an independent method, without attention to systematics.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMA No longer plotted? Should I drop this sentence?
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsubsection
@@ -12890,7 +12858,7 @@ Interferometer branch
 \begin_layout Standard
 If the isolating foil moves in an attractor-correlated way, we need to know
  how much influence it may have on the pendulum.
- The optimal approach would have the foil interferometer running continuously
+ The optimal approach would have the foil interferometer operating continuously
  and in-range; it would then be possible to add a joint fit for the foil-motion-
 to-torque constant to the global fit for new physics.
  As we only had partial coverage with the interferometer (Section 
@@ -12931,7 +12899,7 @@ reference "sec:Data/Fit"
 
 \end_inset
 
-, we use the data from times that the interferometer was in-range to generate
+, we use the data from times when the interferometer was in-range to generate
  a piecewise-linear model of the foil displacement as a function of attractor
  position.
  The fit is bootstrapped to quantify the uncertainty in the extracted fit
@@ -12945,7 +12913,7 @@ Foil-driven torque vs foil position model/correction
 \begin_layout Standard
 By combining the foil-motion-to-torque calibration with the modeled foil
  displacement as a function of attractor position, we construct a foil-motion-re
-lated torque correction as a function of attractor position, with known
+lated torque correction as a function of attractor position, with bootstrapped
  uncertainties, which can be applied to the entire dataset.
 \end_layout
 
@@ -12990,7 +12958,8 @@ pick a lambda, fit for alpha
 \begin_inset Quotes erd
 \end_inset
 
- method that is common in the field, as seen in Section 
+ method that is traditional for inverse-square law tests, as seen in Section
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Confidence-Interval-Algorithm"
@@ -13013,35 +12982,11 @@ Arbitrary fit
 
 \begin_layout Standard
 Just as for the foil displacement as a function of attractor position, we
- make a model-free fit for the pendulum torque as a function of attractor
- position.
+ make a model-free piecewise-linear fit for the pendulum torque as a function
+ of attractor position.
  Furthermore, by subtracting the foil-motion torque correction from this
  fit, we are able to compensate for any foil-motion systematic.
  This is perhaps the most intuitive and general output of the experiment.
-\end_layout
-
-\begin_layout Subsubsection
-\begin_inset Note Note
-status open
-
-\begin_layout Subsubsection
-Uncorrected Yukawa fit without systematics
-\end_layout
-
-\begin_layout Plain Layout
-As a cross-check on the Yukawa fitter, we additionally produce best-fit
- results from an earlier generation of the fit programs.
- It does not handle any systematic uncertainties, but it is 
-\bar under
-much
-\bar default
- faster.
- XXXMA Should this be dropped?
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Section
@@ -13085,16 +13030,6 @@ name "fig:Gravitational-calibration"
 \end_inset
 
 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMA Reexamine near 1180.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
@@ -13109,15 +13044,15 @@ XXXMA Reexamine near 1180.
 
 \begin_layout Standard
 The torque scale of the instrument is set gravitationally.
- Throughout the operation of the experiment the rotating calibration masses
- (Section 
+ Throughout the operation of the experiment the revolving gravitational
+ calibration masses (Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Calibration"
 
 \end_inset
 
-) inject a torque of amplitude 
+) inject a pendulum torque of amplitude 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../extracted/qTesterTorque.tex"
@@ -13239,11 +13174,6 @@ Calibration Systematics
 \end_layout
 
 \begin_layout Standard
-It is possible that the calibration torque has a non-gravitational component.
- We do not expect that such an effect is of great concern for this measurement.
-\end_layout
-
-\begin_layout Standard
 As originally-designed, the calibration system had a magnetic-relay 
 \begin_inset Quotes eld
 \end_inset
@@ -13254,9 +13184,9 @@ cycle-mark
 
 , which would allow us to constrain the phase of the rotating attractor's
  motion.
- Both because the cycle mark had reliability trouble and because the rotating
+ Both because the cycle-mark had reliability trouble and because the rotating
  magnet and associated electrical signals could inject a false signal of
- its own, the cycle mark system was disabled, and the rotating magnet removed.
+ its own, the cycle-mark system was disabled, and the rotating magnet removed.
 \end_layout
 
 \begin_layout Standard
@@ -13289,11 +13219,11 @@ reference "fig:Gravitational-calibration"
 \end_inset
 
 ).
- While a 2-
+ While an unintended 2-
 \begin_inset Formula $\omega$
 \end_inset
 
- signal is a possibility, perhaps through modulation of the background magnetic
+ signal is possible, perhaps through modulation of the background magnetic
  field, the acoustic environment (an acoustic modulation was seen in acousticall
 y-driven studies of the foil interferometer), or the thermal environment,
  any of these effects should be small.
@@ -13320,7 +13250,7 @@ name "sec:Timing"
 \end_layout
 
 \begin_layout Standard
-Timing is the most important weakness to this particular measurement.
+Timing is an important weakness to this particular measurement.
 \end_layout
 
 \begin_layout Standard
@@ -13351,8 +13281,8 @@ reference "sub:Electrical-Crosstalk"
 \end_inset
 
 ).
- The crux of this system is understanding the synchrony of the three systems'
- timing.
+ The crux of this arrangement is understanding the synchrony of the three
+ systems' timing.
 \end_layout
 
 \begin_layout Standard
@@ -13362,8 +13292,8 @@ In retrospect, it is clear that an investment of the
 
 week of work required to implement and debug a functional optically-isolated
  time distribution system would have paid great dividends.
- Instead, we chose to rely upon the gold-standard NTP time synchronization
- protocol 
+ Instead, we chose to rely upon the gold-standard Network Time Protocol
+ (NTP) time synchronization protocol 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "NTP"
@@ -13418,10 +13348,10 @@ Caveat emptor.
 \end_layout
 
 \begin_layout Standard
-There are at least ten clocks that are relevant to this analysis.
- The remote NIST-referenced Network Time Protocol (NTP) server, the user-space
- clocks on each of the three DAQ systems, the system clocks on each of the
- three DAQ systems, and the hardware clocks on each of the DAQ cards.
+There are at least ten clocks relevant to this analysis: the remote NIST-referen
+ced Network Time Protocol (NTP) server, the user-space clocks on each of
+ the three DAQ systems, the system clocks on each of the three DAQ systems,
+ and the hardware clocks on each of the DAQ cards.
  The torsion-balance and attractor computers are of greatest importance,
  and share a common software codebase.
  
@@ -13440,7 +13370,7 @@ The user-space clocks are, in principle, resynchronized with the NTP clock
  not the user-space clock.
  No changes due to NTP-related synchronizations (or lack thereof) are evident
  in the data.
- Therefore, the runs that began with synchronized clocks share a common
+ Therefore, all runs that began with synchronized clocks share a common
  datum.
  At the ends of runs which terminated normally, the user-space clock (which
  is altered by NTP) is again written into the header file.
@@ -13498,7 +13428,7 @@ name "fig:Clock-rates,-corrected"
 
 \end_inset
 
-Clock rates, corrected clock rates (upper panel) and demonstrating the long-term
+Clock rates: corrected clock rates (upper panel) and demonstrating the long-term
  stability of DAQ sample rates (lower panel)
 \end_layout
 
