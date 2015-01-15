@@ -11322,7 +11322,7 @@ reference "sub:Filtering"
 \end_inset
 
  that for any large transient, measurements for at least 
-\begin_inset Formula $30t_{m}=7680\mbox{\, s}=2.1\mbox{\, hr}$
+\begin_inset Formula $30t_{m}=7680\mbox{\,\ s}=2.1\mbox{\,\ hr}$
 \end_inset
 
  must be discarded.
@@ -12438,23 +12438,6 @@ Flowchart diagramming the flow of data analysis.
  After configuration of experimental and analysis parameters, timing cuts,
  and the hand-input of some systematic test parameters, it is automated
  and replicable.
- XXXRC - fix 
-\begin_inset Quotes eld
-\end_inset
-
-not-yet implemented
-\begin_inset Quotes erd
-\end_inset
-
--
-\begin_inset Quotes erd
-\end_inset
-
-uncorrected yukawa fit
-\begin_inset Quotes erd
-\end_inset
-
-!
 \end_layout
 
 \end_inset
