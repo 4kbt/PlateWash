@@ -4855,16 +4855,6 @@ not
  a Micro-E 3000V encoder system with a claimed interpolated resolution of
  20 nm.
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMA Make sure that the systematic effect is explained somewhere.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -5193,6 +5183,13 @@ locking valve
 
 \begin_layout Subsubsection
 Attractor position change procedure
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Attractor-position-change"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5205,12 +5202,32 @@ When an attractor position change is not underway, the locking valve is
 \end_inset
 
 s before the locking valve opens.
- After 10
+ The 10
 \begin_inset space ~
 \end_inset
 
-s, the locking valve closes, the modulator valve turns off, and the accumulator
- vents.
+s delay isn't quite sufficient to fully pressurize the pneumatic lines;
+ when the locking valve opens, the attractor systematically jumps about
+ 50
+\begin_inset Formula $\mu$
+\end_inset
+
+m away from the foil before moving smoothly to its next position.
+ This effect is easily visible in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:First-day-of-attractor-data"
+
+\end_inset
+
+.
+ The locking valve is held open for 10
+\begin_inset space ~
+\end_inset
+
+s to allow the system to come into equilibrium.
+ To complete the position change, the locking valve closes, the modulator
+ valve turns off, and the accumulator vents.
  
 \end_layout
 
@@ -11001,11 +11018,16 @@ For
 \end_inset
 
 , the pendulum response is independent of the torsion spring.
- This is the equivalent of 
+ This is the torque equivalent of 
 \begin_inset Formula $F=ma=m\ddot{x}\rightarrow\tilde{\tau}=I(-\omega^{2})\tilde{\theta}$
 \end_inset
 
  ; at these frequencies, the pendulum acts like a free mass.
+ When 
+\begin_inset Formula $\omega\ll\omega_{0}$
+\end_inset
+
+, the pendulum response is frequency independent.
  
 \end_layout
 
@@ -11045,7 +11067,7 @@ This drives any measurement toward higher frequencies for decreased noise.
 \end_layout
 
 \begin_layout Standard
-Convolving this noise with the torque-to-angle transfer function (see Figure
+Convolving this noise with the torque-to-angle transfer function (Figure
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -11112,17 +11134,7 @@ reference "sub:Statistical-Uncertainty"
  In our frequency range of interest, it appears as relatively frequency-independ
 ent noise.
  Some of this noise is time-dependent, correlated with wind, human activity,
- and worldwide seismic activity.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
- (XXXMI needs expansion (how to do it?))
-\end_layout
-
-\end_inset
-
-
+ and both local and worldwide seismic activity.
 \end_layout
 
 \begin_layout Subsubsection
@@ -11137,7 +11149,7 @@ name "sub:Experimentally-determined-noise"
 \end_layout
 
 \begin_layout Standard
-As can be seen in Figure 
+As shown in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Torque-noise,-from"
@@ -11314,7 +11326,7 @@ non-Gaussian
  their noise budget.
  This is the case for PlateWash as well, where such transients happened
  at most a few times in a day.
- In PlateWash, it will be shown in Section 
+ For PlateWash, it will be shown in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Filtering"
@@ -11343,8 +11355,8 @@ A second benefit to small
  This experiment relies upon Monte Carlo-like measurements (random attractor
  locations) to understand systematic uncertainties and better constrain
  possible violations of the inverse-square law.
- Faster individual measurements allow faster exploration of parameter space
- (exploring a 
+ Frequent individual measurements allow faster exploration of parameter
+ space (exploring a 
 \begin_inset Formula $6\times6$
 \end_inset
 
@@ -11353,8 +11365,12 @@ A second benefit to small
 \end_inset
 
 ).
- Measurements that are twice as fast allow twice as many questions to be
- answered.
+ Measurements that are twice as frequent allow twice as many questions to
+ be answered, albeit with precision degraded by a factor of 
+\begin_inset Formula $\sqrt{2}$
+\end_inset
+
+.
  When noise is frequency-independent, there is no penalty for this approach.
  
 \end_layout
@@ -11511,7 +11527,7 @@ Harmonic (
 \begin_inset Text
 
 \begin_layout Plain Layout
-15..
+15
 \end_layout
 
 \end_inset
@@ -11623,7 +11639,7 @@ Fourier coefficient
 \begin_inset Text
 
 \begin_layout Plain Layout
-Combined SNR ( 1 to 
+Combined signal-to-noise ratio ( 1 to 
 \begin_inset Formula $m$
 \end_inset
 
@@ -11725,7 +11741,8 @@ Combined SNR ( 1 to
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Square wave Fourier coefficients and aggregate SNR up to 
+Square wave Fourier coefficients and combined signal to noise ratio up to
+ 
 \begin_inset Formula $n=17$
 \end_inset
 
@@ -11771,12 +11788,21 @@ reference "Fourier Harmonics"
 
 \end_inset
 
-, the signal to noise ratio (SNR) is computed for 
+, the signal to noise ratio is computed for 
 \begin_inset Formula $\sigma_{h}=1$
 \end_inset
 
 .
  The first harmonic is the only one that matters.
+\end_layout
+
+\begin_layout Standard
+It is important that amplitude of the first harmonic of a unity-amplitude
+ square wave is greater than one.
+ Without resolving the square shape of the signal through its harmonics,
+ we reap the increased sensitivity one expects from an attractor motion
+ that spends far more time at maximum amplitude.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -11791,55 +11817,7 @@ name "sub:Lags"
 \end_layout
 
 \begin_layout Standard
-Several experimental procedures in the regular operation of the experiment
- require considerable time.
- The pneumatically-driven attractor takes 
-\begin_inset Formula $20$
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-s to move to a new position.
- Furthermore, the attractor control system begins actuating the modulator
- valve 10
-\begin_inset space ~
-\end_inset
-
-s before the position change.
- The feedback loop requires 
-\begin_inset Formula $\sim20$
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-s to settle.
- The data acquisition system samples every 
-\begin_inset CommandInset include
-LatexCommand input
-filename "../extracted/TheoSampleTime.tex"
-
-\end_inset
-
- and has 3-5
-\begin_inset space ~
-\end_inset
-
-s anti-aliasing filters.
- Conservative synchronization uncertainties between the three data acquisition
- computers require 
-\begin_inset Formula $\pm25$
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-s of padding.
- For these reasons, the first 
+The first 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../extracted/dTime.tex"
@@ -11869,12 +11847,15 @@ reference "sub:Lags-1"
 
 \end_inset
 
- for further discussion of dead time).
- As a consequence, the highest available switch frequency is <25
-\begin_inset space ~
+ for detail).
+ As a consequence, the highest available switch frequency is <
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/deadTimeLimitFreq.tex"
+
 \end_inset
 
-mHz XXXRC-compute-me.
+.
  At that frequency, the accepted measurements would have zero duty cycle.
  The duty cycle available for measurement is 
 \begin_inset Formula $D=(1-2Lf)$
@@ -11905,9 +11886,14 @@ reference "SNR vs Lags"
 \end_layout
 
 \begin_layout Standard
-XXXRC -- Krishna wants to see some kind of plot showing stability against
- dead-time variation.
- Can I use the magnetic injection? Where did that go?
+The combination of the large conservative dead-times with the 10
+\begin_inset space ~
+\end_inset
+
+s low-pass torque filter should render the measurement insensitive to small
+ variations in the specific amounts of time to be dropped.
+ The blind analysis makes it impossible for us to fine-tune for any desired
+ result.
 \end_layout
 
 \begin_layout Standard
@@ -12041,8 +12027,8 @@ g of the switch-to-switch variation (
 \begin_inset Formula $\sim7$
 \end_inset
 
- samples is perhaps the minimum one should use for the a reliable estimate
- of a variance), and still short enough to address the speed concerns laid
+ samples is perhaps the minimum one should use for a reliable estimate of
+ a variance), and still short enough to address the speed concerns laid
  out in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -12067,7 +12053,7 @@ name "sub:Choosing-a-science"
 
 \begin_layout Standard
 As the pendulum is locked in feedback, there are multiple junctures in the
- feedback loop where a science signal can be extracted.
+ feedback loop where a science signal could be extracted.
  The pendulum twist angle, the feedback signal itself, and the proportional,
  integral, and differential terms of the feedback loop are written to disk.
  The pendulum twist angle and the proportional term of the loop are equivalent.
@@ -12077,7 +12063,8 @@ ly before being written to disk.
 \begin_inset space ~
 \end_inset
 
-s filter applied, making it the signal of choice for a twist measurement.
+s filter applied (a factor of 3 below the Nyquist frequency), making it
+ the signal of choice for a reliable angle measurement.
  The loop was operated with zero integral-term to prevent improper wind-up
  in the challenging near-foil environment, so the integral channel contains
  no signal.
@@ -12094,7 +12081,7 @@ So, there are two reasonable science channels: the feedback signal applied
  to the pendulum, and the proportional term.
  The feedback signal has units of torque, the proportional term has units
  of angle.
- Even though the pendulum is held fixed, the torque-angle transfer function
+ Even though the pendulum is held fixed, the torque-to-angle transfer function
  matters.
  At frequencies below the resonance of the pendulum, the two channels are
  proportional.
@@ -12127,11 +12114,11 @@ By choosing the angle/proportional-term signal instead of the feedback signal
  While, in principle, both signals contain the same information, the science
  signal is more-readily extracted from the angle signal.
  Furthermore, as the feedback signal is the sum of the proportional and
- the derived differential terms, there would be somewhat greater opportunity
- for a software error to introduce unwanted error if it were used.
- Finally, it must be noted that the freedom to select among signal sources
- is only possible with a continuous gravitational torque calibration signal
- operating at a nearby frequency.
+ derived differential terms, if the science were extracted from the feedback
+ signal there would be greater opportunity for software or digitization
+ errors to introduce excess noise.
+ Finally, we note that selecting among signal sources is straightforward
+ with a continuous torque calibration signal operating at a nearby frequency.
  
 \end_layout
 
@@ -12199,13 +12186,13 @@ reference "fig:First-day-of-attractor-data"
 
 \begin_layout Standard
 The random locations were generated by random number generator and written
- into configuration files for the attractor computer to run.
+ into configuration files for the attractor computer to execute.
  This extra step allows systematic tests that repeat the attractor positions
  used in science runs.
  The distribution of random attractor locations used was the simplest, and
  perhaps least efficient, uniform distributions of start and end positions.
- This spends perhaps more time than is warranted exploring shorter attractor-pos
-ition differences.
+ This spends perhaps more time than is most-efficient exploring shorter
+ attractor-position differences.
  
 \end_layout
 
@@ -12239,14 +12226,19 @@ name "fig:First-day-of-attractor-data"
 First day of attractor positions.
  Random attractor positions sample the available parameter space in an unbiased
  way.
+ The short-duration upward-going spikes are an artifact of the pneumatic
+ system discussed in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Attractor-position-change"
+
+\end_inset
+
+.
 \end_layout
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -12291,7 +12283,8 @@ Attractor positions over the duration of the experiment.
 status open
 
 \begin_layout Plain Layout
-XXXMA draw vertical line/regions to denote systematic tests
+XXXMA draw vertical line/regions to denote systematic tests.
+ Yellow/blue?
 \end_layout
 
 \end_inset
@@ -12320,7 +12313,14 @@ random
 
  and square-wave patterns.
  About half of the science data were taken using random patterns.
- 
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Attractor-positions-over"
+
+\end_inset
+
+ shows all attractor positions used in this thesis.
 \end_layout
 
 \begin_layout Standard
@@ -12345,7 +12345,7 @@ random
  runs to a focused square-wave approach late in the science run in an effort
  to improve/decrease the shortest range at which we could reach gravitational
  strength.
- Essentially all of the systematic tests were done with 
+ All of the systematic tests were done with 
 \begin_inset Quotes eld
 \end_inset
 
@@ -12362,7 +12362,6 @@ long
 \end_inset
 
  square wave measurements to allow more-straightforward intercomparison.
- XXXRC -- which weren't? 
 \end_layout
 
 \begin_layout Section
@@ -12383,11 +12382,11 @@ ht-heating can be extracted.
 \begin_layout Standard
 In the future, interleaving systematics tests with science runs would be
  more satisfactory.
- With the exception of thermal tests, which have long time constants, it's
+ With the exception of thermal tests, which have long time-constants, it's
  possible to do a science measurement, magnetic tests, interferometer on/off
  tests, and electrical bias tests programatically with each attractor setting,
  merging them into a single super-block of measurements that comprise a
- self-contained ISL test for one attractor position pair.
+ self-contained ISL test for one attractor-position pair.
  The ability to make incremental/aggregated ISL tests may be worth the added
  programming complexity.
 \end_layout
@@ -13920,8 +13919,18 @@ reference "fig:AttractorMotionLag"
 \end_inset
 
 ).
- In addition, the pendulum feedback has a finite response time (See Figure
- 
+ Furthermore, the attractor control system begins to actuate the modulator
+ valve 10
+\begin_inset space ~
+\end_inset
+
+s before the position change.
+ In addition, the pendulum feedback has a finite response time of about
+ 20
+\begin_inset space ~
+\end_inset
+
+s (See Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:ElectronicTorqueLag"
@@ -13976,7 +13985,7 @@ mHz.
 \begin_inset space ~
 \end_inset
 
-mHz (for storage only).
+mHz (for recorded data only).
  The acausal torque passband FIR filter 
 \begin_inset CommandInset include
 LatexCommand input
