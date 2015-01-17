@@ -12466,7 +12466,7 @@ reference "fig:Flowchart-diagramming"
  The data analysis that precedes new-physics fits is functionally run twice,
  once using only the pendulum and attractor data streams, and once including
  the interferometer.
- As detailed in 
+ As detailed in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "par:A-conservative-approach"
@@ -12487,8 +12487,15 @@ reference "sec:Flow"
 
 \end_inset
 
-, should be read as an executive summary for the details in the chapter,
- with the flowchart as a companion.
+, is an executive summary for the details in the remainder of the chapter,
+ with the flowchart in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Flowchart-diagramming"
+
+\end_inset
+
+ as a companion.
  
 \end_layout
 
@@ -13631,43 +13638,43 @@ name "fig:FIR Filter Transfer Functions"
 \end_layout
 
 \begin_layout Standard
-In this field, it is traditional to subtract the gravitational calibration
- tone, remove low frequency drifts on a per-cut basis through linear fits
- and average away unnecessary high-frequency information (often in hardware).
+In this field, it is traditional to fit for and subtract the gravitational
+ calibration tone, remove low frequency drifts on a per-cut basis through
+ linear fits and average away unnecessary high-frequency information (often
+ in hardware).
  In combination, these actions amount to the construction of a complicated
- filter, with interesting frequency dependence; the low-frequency linear
- fit is of particular interest, as a linear fit is 
+ filter, with interesting frequency dependence and phase behavior.
+ The low-frequency linear fit is of particular interest, as a linear fit
+ is 
 \bar under
 not
 \bar default
  orthogonal to a Fourier series.
- We trade the combination of filter-like fits for a single filter.
- The gravitational calibration signal is removed by notch filters at 
-\begin_inset Formula $1\omega$
-\end_inset
-
- and 
-\begin_inset Formula $2\omega$
-\end_inset
-
-, the drift is removed by a millihertz high-pass filter, and the high-frequency
- averaging is performed by a low-pass filter.
- For an finite-impulse-response filter (FIR) of sufficient duration, the
- band-stopping power can be larger than 1000 (60
-\begin_inset space ~
-\end_inset
-
-dB).
+ We trade the complex combination of filter-like fits for a single non-trivial
+ filter.
  
 \end_layout
 
 \begin_layout Standard
-Three columns of data are fed through FIR filters of length 9600 samples
- (
-\begin_inset Formula $10\mbox{ switches }\times256\mbox{ second attractor period }\times3\mbox{ cuts }\div0.8\mbox{ seconds/sample}$
+Data are fed through FIR filters of length 9600 samples (10 samples 
+\begin_inset Formula $\times$
 \end_inset
 
-).
+ 256-second attractor period 
+\begin_inset Formula $\times$
+\end_inset
+
+ 3 cuts 
+\begin_inset Formula $\div$
+\end_inset
+
+ 0.8 s per sample).
+ For a finite-impulse-response filter (FIR) of this duration, the band-stopping
+ power can be larger than 1000 (60
+\begin_inset space ~
+\end_inset
+
+dB).
  The filters are designed by the 
 \family typewriter
 octave-forge
@@ -13694,7 +13701,7 @@ key "Oppenheim:1999:DSP:294797,OrfandisSignalProcessing"
 \end_inset
 
 .
-  The torsion balance feedback signal is sent through a filter with passband
+  The torsion balance science signal is sent through a filter with passband
  from 
 \begin_inset CommandInset include
 LatexCommand input
@@ -13726,7 +13733,7 @@ mHz with notch filters at the calibration tone's
 \end_inset
 
 mHz).
- Other sensors to be analyzed in sync with the attractor are fed through
+ All other sensors to be analyzed in-sync with the attractor are fed through
  a low-pass filter with a corner frequency at 
 \begin_inset CommandInset include
 LatexCommand input
@@ -13738,10 +13745,9 @@ filename "../extracted/filterSensorHigh.tex"
 \begin_inset space ~
 \end_inset
 
-mHz.
- This frequency is chosen to be comparable to the DAQ software filters.
- The sensor filtering is done to guarantee that all locked-in sensors share
- timebase/phase with the filtered torque signal.
+mHz, coincident with the Nyquist frequency.
+ This almost-inconsequential filter is applied to guarantee that all locked-in
+ sensors share timebase/phase with the filtered torque signal.
  The first 
 \begin_inset Formula $1.5\times(\mbox{filter length})$
 \end_inset
@@ -13839,6 +13845,19 @@ status open
  forgiving.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMA; plot to show that cuts align with attractor cut-blocks
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Edge finding
 \begin_inset CommandInset label
@@ -13851,43 +13870,16 @@ name "sub:Edge-finding"
 \end_layout
 
 \begin_layout Standard
-While many regions of temporal overlap between the three different data
- sources begin with the beginning of a cut, not all do.
- Therefore, it is necessary to examine the piecewise square-wave motion
- of the attractor to determine the phase of the attractor's steps.
+We must synchronize the data analysis cuts with the attractor motion.
+ The first step in synchronizing is to find the square-wave edges.
+ This is done by passing a simple edge-detection algorithm along the filtered
+ data, looking for the first time the attractor's position passes through
+ the mean position of the data set.
+ Once this edge is found, the edge is projected backward in time, modulo
+ the attractor step frequency, to find the first step.
+ While crude, it is simple, and has proven reliable in synchronizing the
+ analysis cuts with the data.
  
-\end_layout
-
-\begin_layout Standard
-\begin_inset Box Boxed
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status collapsed
-
-\begin_layout Plain Layout
-
-\size small
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "../mlib/findRisingEdge.m"
-lstparams "caption={findRisingEdge.m},language=Matlab"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection
@@ -13957,11 +13949,11 @@ mHz.
 
 mHz.
  The synchronization uncertainty among the three acquisition computers is
- at most 0.8
+ at most 1.6
 \begin_inset space ~
 \end_inset
 
-s (one sample-time).
+s (two sample-times).
  To account for clock drifts and offsets, we add 
 \begin_inset Formula $\pm25$
 \end_inset
@@ -14123,7 +14115,7 @@ mHz high-pass filter.
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 \begin_inset Quotes eld
 \end_inset
 
@@ -14214,7 +14206,7 @@ Injected torques for dead-time determination after all filters.
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Delay times
 \end_layout
 
