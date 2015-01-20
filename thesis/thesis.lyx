@@ -14133,7 +14133,8 @@ The general problem of filter combination is simple in frequency-space,
 \end_layout
 
 \begin_layout Standard
-Serendipity provides a solution to the problem.
+The experiment itself provides a solution to the problem of determining
+ the settling-time of the overall torque feedback system.
  The pendulum has a magnetic moment (see 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -14218,8 +14219,8 @@ reference "fig:ElectronicTorqueLag"
 
 \end_inset
 
-, we conclude that it is conservative to choose the following dead times:
- The 
+ and the timing-offset concerns enumerated above, we conclude that it is
+ conservative to choose the following dead times: The 
 \begin_inset Quotes eld
 \end_inset
 
@@ -14315,9 +14316,9 @@ name "fig:Windowing"
 \begin_layout Standard
 Windowing is familiar to many as a method for reducing the magnitude of
  spectral leakage in Fourier transforms.
- It is also useful as a low-pass filter, reducing the sensitivity of an
- averaged value to high frequency fluctuations at a modest expense in statistica
-l resolving power.
+ It is also useful in the time-domain as a low-pass filter, reducing the
+ sensitivity of an averaged value to high frequency fluctuations at a modest
+ expense in statistical resolving power.
  In this analysis, a Hann window is used 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -14373,12 +14374,16 @@ filename "../extracted/lockAve.tex"
 \end_inset
 
  measurements per cut.
- This is done by the octave function `squareLockM.m'
+ 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Note Note
 status open
+
+\begin_layout Plain Layout
+This is done by the octave function `squareLockM.m'
+\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Box Boxed
@@ -14511,8 +14516,12 @@ Your first `triangle plots', for both Yukawa-like and linear torques.
  The middle frames show the `triangle plots' themselves; note the difference
  between them in the upper right corners.
  The bottom frames show a projection of the torque-difference data along
- the diagonals of the triangle plots; this is a helpful view that may make
- the difference between the plots more clear.
+ the diagonals (
+\begin_inset Formula $A=B$
+\end_inset
+
+) of the triangle plots; this is a helpful view that may make the difference
+ between the plots more clear.
 \end_layout
 
 \end_inset
@@ -14535,8 +14544,8 @@ A clear method of visualization is important to understanding the output
 \begin_inset Formula $\Delta\tau(\mbox{start},\mbox{end})$
 \end_inset
 
-, we can plot every torque-difference measurement in a single plot, as in
- Figure 
+, we can plot every torque-difference measurement in a single plot, shown
+ in the middle panels of 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:TriangleScatterPlot"
@@ -14643,8 +14652,8 @@ The analysis presented here makes extensive use of a statistical method
  called `the bootstrap' or `bootstrapping'.
  Its primary merit in this context is that it allows straightforward and
  reasonably robust estimation of confidence intervals.
- Its support rests upon the premise that the best estimator for the distribution
- from which a data set is drawn is the data set itself.
+ Bootstrapping relies upon the premise that the best estimator for the unknown
+ distribution from which a data set is drawn is the data set itself.
  The idea is to `resample' the data to create synthetic data sets which
  may be passed through any analysis routine developed for the original data
  set.
@@ -14764,7 +14773,7 @@ A weakness of bootstrapped analysis is its reliance upon computational power
  intervals by modelling each systematic and injecting the expected amount
  of noise into the data to be fitted.
  If little is known about the systematic effect, however, this approach
- is a challenge.
+ is challenging.
  
 \end_layout
 
@@ -15243,7 +15252,23 @@ The profile-likelihood maximization is a challenging one, as it requires
 \noun off
 \color none
 
-\begin_inset Formula $x_{A_{j}},x_{B_{j}},B_{2_{j}},\ldots,B_{n_{j}}$
+\begin_inset Formula $x_{A_{j}}$
+\end_inset
+
+, 
+\begin_inset Formula $x_{B_{j}}$
+\end_inset
+
+, 
+\begin_inset Formula $B_{2_{j}}$
+\end_inset
+
+, 
+\begin_inset Formula $\ldots$
+\end_inset
+
+ , 
+\begin_inset Formula $B_{n_{j}}$
 \end_inset
 
  for all 
@@ -15252,7 +15277,7 @@ The profile-likelihood maximization is a challenging one, as it requires
 
 , which numbers in the thousands.
  The Bayesian approach is perhaps more tractable if evaluated numerically
- through a Monte Carlo or Markov-Chain approach.
+ through a Monte Carlo or Markov-chain approach.
 \end_layout
 
 \begin_layout Paragraph
@@ -15467,7 +15492,8 @@ name "sub:fbar"
 \end_layout
 
 \begin_layout Standard
-The integrals needed for these subsubsections are worked out in 
+The integrals needed for these subsubsections are worked out in Appendix
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Integrals"
@@ -16124,7 +16150,7 @@ pick a lambda and fit for alpha
 \end_inset
 
  approach, which sidesteps any presupposition of covariance.
- What we do here is in that spirit.
+ What we do is in that spirit.
 \end_layout
 
 \begin_layout Standard
@@ -16230,16 +16256,14 @@ e intervals for our best fits.
 \end_inset
 
 , convergence is necessarily slow.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMA Figure
-\end_layout
+ The final confidence-interval plots can be found in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Yukawa-Potential-Constraints"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Section
@@ -16416,7 +16440,7 @@ no experiment is truly blind,
 \end_inset
 
  in reference to the current reality that experimenters unblind their results
- prior to peer review and submission for publication.
+ privately prior to public dissemination of the result.
  This is true, but it hides the power of the blind -- forcing complete and
  equal attention to each 
 \emph on
@@ -16427,34 +16451,129 @@ known
 \end_layout
 
 \begin_layout Standard
-PlateWash is not a blind experiment.
+PlateWash is not an entirely blind experiment.
  It is a precursor to a blind experiment.
  More than half of the science data were taken without a blind, largely
  because we had not discovered a way to monitor the health of the experiment
  without access to data which included the central values of each measurement.
- In the latter half of science data-taking, it became clear that watching
- the errorbars on each cut was sufficient to ensure data quality.
+ During that time, it became clear that monitoring the distribution of the
+ errorbars of each cut was sufficient to ensure nothing was going wrong
+ within the instrument.
+ Once that determination was made, we blinded ourselves to the central values
+ of all torque measurements.
+ All of the systematic investigations were performed blind.
  In this first iteration of PlateWash, our understanding of the instrument's
- metrology was in continuous refinement, which frustrated any attempt to
- inject a fake signal into the data as they were acquired.
- (Furthermore, the intentional physical separation between pendulum and
- attractor DAQ systems would make injecting a fake signal extremely difficult).
+ metrology was in continuous refinement, which blocked any attempt to inject
+ a fake signal into the data as they were acquired.
+ Furthermore, the intentional physical separation between pendulum and attractor
+ DAQ systems would make injecting a fake signal extremely difficult.
 \end_layout
 
 \begin_layout Standard
-The analysis proceeded as if it were blind, to demonstrate the suitability
- of the analysis toolchain for a future blind analysis.
+The data analysis was performed blind.
+ Critically, the foil-systematic coupling and cuts were not determined until
+ many months after the data had been acquired.
+ Even if the experiment had been tuned during the commissioning of the instrumen
+t, our blind systematic tests and subsequent analysis have the power to
+ expose several classes of tuning.
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMA (need actual procedure followed here).
 \end_layout
+
+\begin_layout Subsection
+Blinding procedure
+\end_layout
+
+\begin_layout Standard
+During the analysis, we blinded ourselves to the central values of all measureme
+nts by avoiding looking at the torque data directly.
+ This is, of course, a challenge when operating a torsion balance, as the
+ best measure of proper function of is the character of the torque data.
+ Furthermore, important steps, such as calibration, must necessarily operate
+ upon unblinded data.
+ Therefore, we used a combination of data-analysis design and an honor code
+ to minimize any chance of seeing the experimental results before the analysis
+ was finalized.
+ 
+\end_layout
+
+\begin_layout Standard
+To make it difficult to accidentally see any analyzed data, immediately
+ following the lock-in step (Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Lock-in"
 
 \end_inset
 
+), the central values of all torque-related data in each cut were set to
+ zero.
+ All testing of post lock-in data analysis was done by injecting synthetic
+ signals and noise into those central values.
+ This allowed us to ensure that the data-analysis system worked correctly
+ without accidentally viewing blinded data.
+ Unblinding the experiment is as simple as disabling this blinding mechanism.
+\end_layout
 
+\begin_layout Standard
+For the approximate systematic tests detailed in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Systematic-Tests"
+
+\end_inset
+
+, we separately saved the unblinded results of the lock-in procedure.
+ These measurements were then compared only as blind-differences, where
+ measurements with an external parameter changed were subtracted from measuremen
+ts with the external parameter nulled.
+ This procedure allows us to determine the experimental susceptibility to
+ external parameters without having any access to the central values of
+ either measurement.
+\end_layout
+
+\begin_layout Subsection
+Blinding failures
+\end_layout
+
+\begin_layout Standard
+All systems fail, and this fairly fragile blinding system was no exception.
+ Early in the blind analysis, we viewed the unblinded outcome of the lock-in
+ twice.
+ The more-important occasion was during the development of the blinding/unblindi
+ng code.
+ A bug in the blinding code led to one of us (Charlie) seeing a Yukawa fit
+ that resolved a signal at minimal 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, 
+\begin_inset Formula $|\alpha|\sim10^{3\pm2}$
+\end_inset
+
+, and with indeterminant sign.
+ This pre-dated our determination of systematic cuts, particularly that
+ for the foil; the indeterminacy of the sign of the observed signal is particula
+rly important.
+ We don't know whether our later determinations added to or subtracted from
+ this signal.
+ 
+\end_layout
+
+\begin_layout Standard
+This type of failure of the blind is a weakness to software-blinds in null
+ measurements.
+ Often, the best estimate of an instrument's proper operation is its output.
+ In a software-blinded null measurement, the experimenter is forced to perpetual
+ly dance around any accidental observation of the result.
+ A reliable hardware-implemented blind, such as a clock skew or a hard-coded
+ unknown offset is much more resistant to innocent mistakes.
+ 
+\end_layout
+
+\begin_layout Standard
+We look forward to using what we've learned on one more iteration of this
+ experiment, as at least the known pitfalls of this blinding procedure can
+ be avoided.
 \end_layout
 
 \begin_layout Chapter
@@ -20203,6 +20322,13 @@ Model Constraints
 
 \begin_layout Subsection
 Yukawa Potential
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Yukawa-Potential-Constraints"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
