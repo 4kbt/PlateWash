@@ -48,7 +48,7 @@ testInjection = 1;
 dTime = 65;   printInteger(dTime, [HOMEDIR 'extracted/dTime.tex']);
 %25+10
 pTime = 35;   printInteger(pTime, [HOMEDIR 'extracted/pTime.tex']);
-deadTimeLimitFreq = 1/(2*(dTime+pTime);
+deadTimeLimitFreq = 1 / ( 2 * ( dTime + pTime ) );
 	      printSI(deadTimeLimitFreq, 2, -3, 'Hz', ...
 		    [HOMEDIR 'extracted/deadTimeLimitFreq.tex'] );
 stepPeriod = 128; printInteger(stepPeriod, [HOMEDIR 'extracted/stepPeriod.tex']);
