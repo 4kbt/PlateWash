@@ -18,7 +18,7 @@ end
 fprintf('FREQUENCY IS NOT PROPERLY DEFINED. CHECK run3077free.m for provenance!!!! Post-fit best fit is 13.2 mHz');
 fundamentalConstants
 
-pendulumF0=0.0128; 
+pendulumF0=0.0128; %some provenance in run3077 
 pendulumF0Width = 4e-3;
 pendulumQ=3500;
 pendulumI=2.369e-6;
@@ -46,8 +46,13 @@ testInjection = 1;
 %HOMEDIR = '~/goldStandard/'
 
 %units are seconds 
-dTime = 55;   printInteger(dTime, [HOMEDIR 'extracted/dTime.tex']);
-pTime = 15;   printInteger(pTime, [HOMEDIR 'extracted/pTime.tex']);
+%35+5+25
+dTime = 65;   printInteger(dTime, [HOMEDIR 'extracted/dTime.tex']);
+%25+10
+pTime = 35;   printInteger(pTime, [HOMEDIR 'extracted/pTime.tex']);
+deadTimeLimitFreq = 1 / ( 2 * ( dTime + pTime ) );
+	      printSI(deadTimeLimitFreq, 2, -3, 'Hz', ...
+		    [HOMEDIR 'extracted/deadTimeLimitFreq.tex'] );
 stepPeriod = 128; printInteger(stepPeriod, [HOMEDIR 'extracted/stepPeriod.tex']);
 printSI(1/(stepPeriod*2), 4, -3, 'Hz',  [HOMEDIR 'extracted/switchFrequency.tex']);
 
@@ -127,7 +132,7 @@ torqueBlur   = 1e-12;  printSI(torqueBlur, 1, -15, 'N-m', [HOMEDIR 'extracted/to
 %fprintf('# read Complete \n')
 
 %'INSUFFICENT bootstrap counts'
-NumberOfYukawaBootstraps = 300; %was 1000
+NumberOfYukawaBootstraps = 30; %was 1000
 NumberOfArbFitBootstraps = NumberOfYukawaBootstraps; % was 300
 
 foilResonance = 1580;
@@ -172,3 +177,7 @@ SloUB = log10(1e-4/XSUnits) - logCrossover;
 AppliedMagneticFieldUncertainty = 1e-3; %TotalBogus!
 heaterTemperatureUncertainty = 0.020; %TotalBogus!
 heaterTempGradientUncertainty = 0.001; %TotalBogus!
+
+NBinConfInterval = 14; %bin width for confidence interval determination
+printInteger( NBinConfInterval, [HOMEDIR 'extracted/NBinConfInterval.tex']);
+

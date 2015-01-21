@@ -15,8 +15,10 @@ psLoadBin;
 eval(['ifoHeaderFile' runPrefix iforunNumber 'ifo.dat", "rt");'] ) ;
 ifoLoadData;
 
+%Clock corrections
 pwData(:,pwTimeCol) = pwData(:,pwTimeCol) + pwStartSec;
 psData(:,psTimeCol) = psData(:,psTimeCol) + psStartSec;
+
 
 FAKING_THE_PLATEWASH_CLOCK = 0  
 
@@ -26,10 +28,42 @@ if(FAKING_THE_PLATEWASH_CLOCK == 1)
 %	pwData( pwData(:, pwTimeCol) > 8e6, pwTimeCol) = 0 ; 
 end
 
-%why the -1? 11/15/2014
-pwEndSec  = pwData(rows( pwData) - 1,  pwTimeCol);
+%there's something strange with the last entries in at least some pwData's
+%cause unknown, but it must be handled.
+pwData = pwData(1:(end-1), :); 
+pwEndSec  = pwData(rows( pwData),  pwTimeCol);
 psEndSec  = psData(rows( psData),  psTimeCol);
 ifoEndSec = ifoData(rows(ifoData), ifoTimeCol);
+
+%PW clock roll correction
+if( pwEndSec < pwStartSec)
+	PLATEWASH_CLOCK_ROLLED_____MIGHT_BE_A_TIMING_ERROR = 1
+	pause
+	pwClockFlipIndex = find(  pwData(:,pwTimeCol) < pwStartSec) (1);
+
+	pwData( pwClockFlipIndex:end, pwTimeCol) = pwData(pwClockFlipIndex:end,pwTimeCol) + 2^32/1000.0;
+end
+
+%PS clock roll correction
+if( psEndSec < psStartSec)
+	PLATESLAVE_CLOCK_ROLLED = 1
+	psClockFlipIndex = find(  psData(:,psTimeCol) < psStartSec) (1);
+
+	psData( psClockFlipIndex:end, psTimeCol) = psData(psClockFlipIndex:end,psTimeCol) + 2^32/1000.0;
+end
+
+%Absolute clock rate corrections
+if(exist('applyClockCorrections'))
+        %Correct clocks
+        pwWinClockErr = load('results/pwWindowsClockRateError.dat');
+        pwData(:,pwTimeCol) = pwData(:,pwTimeCol) + (pwData(:,pwTimeCol) - pwData(1,pwTimeCol))*pwWinClockErr(1);
+        psWinClockErr = load('results/psWindowsClockRateError.dat');
+        psData(:,psTimeCol) = psData(:,psTimeCol) + (psData(:,psTimeCol) - psData(1,psTimeCol))*psWinClockErr(1);
+end
+
+%Recheck EndSec variables.
+pwEndSec  = pwData(rows( pwData),  pwTimeCol);
+psEndSec  = psData(rows( psData),  psTimeCol);
 
 %Preserve run-timing info
 if( exist( "pwHdrEndSec" ))
@@ -37,24 +71,6 @@ if( exist( "pwHdrEndSec" ))
 end
 if( exist( "psHdrEndSec" ))
 	psTimeInfo = [psStartSec psEndSec psHdrEndSec rows(psData)];
-end
-
-
-if( pwEndSec < pwStartSec)
-	PLATEWASH_CLOCK_ROLLED_____MIGHT_BE_A_TIMING_ERROR = 1
-	pause
-	pwClockFlipIndex = find(  pwData(:,pwTimeCol) < pwStartSec) (1);
-
-	pwData( pwClockFlipIndex:end, pwTimeCol) = pwData(pwClockFlipIndex:end,pwTimeCol) + 2^32/1000.0;
-	pwEndSec  = pwData(rows( pwData),  pwTimeCol);
-end
-
-if( psEndSec < psStartSec)
-	PLATESLAVE_CLOCK_ROLLED = 1
-	psClockFlipIndex = find(  psData(:,psTimeCol) < psStartSec) (1);
-
-	psData( psClockFlipIndex:end, psTimeCol) = psData(psClockFlipIndex:end,psTimeCol) + 2^32/1000.0;
-	psEndSec  = psData(rows( psData),  psTimeCol);
 end
 
 if(~exist('FAKING_THE_INTERFEROMETER_ENTIRELY'))
@@ -68,3 +84,8 @@ if( FAKING_THE_INTERFEROMETER_ENTIRELY == 1)
 	ifoStartSec = pwStartSec;
 	ifoEndSec   = pwEndSec;
 end
+
+psRawTimeDiff = diff(psData(:,psTimeCol));
+pwRawTimeDiff = diff(pwData(:,pwTimeCol));
+ifoRawTimeDiff = diff(ifoData(:,ifoTimeCol));
+

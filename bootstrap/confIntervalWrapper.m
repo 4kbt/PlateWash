@@ -1,8 +1,11 @@
+%Arguments are imported from the command line
 args = argv();
 
 fn = args{1,1}
 
 load(fn)
+
+run3147FixedParameters
 
 if( exist ("om") )
 	d = om;
@@ -16,7 +19,7 @@ end
 
 data = [d(:,2) d(:,3)]; 
 
-minBinNum = 14; %Not sure how to pass configuration argument here.
+minBinNum = NBinConfInterval; %From FixedParameters
 
 cI = confidenceIntervals( data, minBinNum, "TurnerSmoothing", 0);
 

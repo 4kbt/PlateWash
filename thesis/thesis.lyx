@@ -184,7 +184,7 @@ The Standard Model is a triumph.
  It is a complex theory, with 18 or more parameters (particle masses, coupling
  constants, and mixing parameters) which are tuned to fit observation.
  The Standard Model had one major remaining prediction - the existence of
- the 'Higgs boson', a lynchpin for the theory, which was discovered by the
+ the `Higgs boson', a lynchpin for the theory, which was discovered by the
  LHC in 2012 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -224,17 +224,18 @@ key "lrr-2006-3"
 , but does not contain any hint of quantum probability or uncertainty.
  Our theories of gravity and quantum mechanics are mathematically incompatible.
  
-\end_layout
+\begin_inset Note Note
+status open
 
-\begin_layout Itemize
+\begin_layout Plain Layout
 Neutrino mass, oscillation: The Standard Model admits only massless left-handed
  neutrinos, yet they are observed to have a small but very significant,
  mass.
  Furthermore, the mass and flavor eigenstates of the neutrino are not the
  same.
- This could be accommodated by adding the neutrino mixing angles to the
- list of tuning parameters, but it was not anticipated by anything within
- the 
+ These effects were easily accommodated by adding the neutrino mixing angles
+ to the list of tuning parameters, but it was not anticipated by anything
+ within prior 
 \begin_inset Quotes eld
 \end_inset
 
@@ -252,6 +253,11 @@ key "2012PDG"
 .
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Itemize
 The Cosmological Constant Problem/Dark Energy: Astronomical observations
  suggest that the universe is expanding, and doing so at a rate which is
@@ -265,8 +271,8 @@ Dark Energy
 \end_inset
 
 , an energy density associated with empty space that has negative pressure.
- The energy density of vacuum has these features, but , as described by
- the Standard Model, is 
+ The energy density of vacuum has these features, but, as described by the
+ Standard Model, is 
 \begin_inset Formula $10^{120}$
 \end_inset
 
@@ -288,6 +294,33 @@ Dark Matter: Beginning with the study of galactic rotation curves, a compelling
 \begin_inset CommandInset citation
 LatexCommand citep
 key "2012PDG,SilkDarkMatterTheory"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+There are perpetual hints of new physics waiting to be discovered.
+ As an important example, the best measurement of the anomalous magnetic
+ moment of the muon disagrees with the best theoretical calculations at
+ the 
+\begin_inset Formula $3\sigma$
+\end_inset
+
+ level 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "bennett2006final"
+
+\end_inset
+
+.
+ An improved experiment is under construction at Fermilab to address this
+ concern by the end of the decade
+\begin_inset CommandInset citation
+LatexCommand citep
+key "DOEGMinus2Review"
 
 \end_inset
 
@@ -600,7 +633,7 @@ Here, we present the leading theoretical motivations for testing the inverse
 
 \begin_layout Standard
 As experimentalists, we take particular joy in testing theories like the
- 'fat-graviton' theory described in Section 
+ `fat-graviton' theory described in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Fat-Graviton"
@@ -2109,7 +2142,7 @@ The infinite-sheet attractor must become finite; the addition of a rim to
 The rotation of the pendulum is measured by an autocollimating optical lever,
  an autocollimator.
  Typical sensitivities of our group's autocollimators can be as small as
- fractions of a nanoradian in a second in the millihertz 
+ fractions of a nanoradian in a second in the millihertz range 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "arp2013reference"
@@ -2148,7 +2181,17 @@ The pendulum is held in electrostatic feedback: the electrostatic interactions
 
 \begin_layout Itemize
 The attractor is moved toward and away from the pendulum in a square-wave
- pattern to avoid any velocity-dependent systematic effects.
+ pattern.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Dead time
+\begin_inset Quotes erd
+\end_inset
+
+ is declared during each transition between positions to avoid motion-dependent
+ systematic effects.
  Groups of ten changes in position are lumped into a 
 \begin_inset Quotes eld
 \end_inset
@@ -2196,7 +2239,7 @@ While the measurement was begun before blinding, the experimental analysis
 In order to facilitate the unblinding of this complex analysis, and to guarantee
  reproducibility, the entire analysis and the creation of this document
  are entirely automated.
- A collection of free software, the git repository, and the experimental
+ A collection of free software, the source-code repository, and the experimental
  data are all that are required to re-generate this result.
  The majority of the numerical quantities stated in this document are automatica
 lly either extracted from the configuration files used to initialize the
@@ -2234,6 +2277,13 @@ filename "../extracted/translationTorqueFit.tex"
 
 \begin_layout Section
 Expected Signal
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Expected-Signal"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -2489,11 +2539,11 @@ The torque due to a single attractor sheet of density
 \end_inset
 
 , and a pendulum inlay thickness 
-\begin_inset Formula $t_{i}$
+\begin_inset Formula $t_{I}$
 \end_inset
 
 , is 
-\begin_inset Formula $\tau_{one}=\rho_{a}\tau\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{i}/\lambda}\right)$
+\begin_inset Formula $\tau_{one}=\rho_{a}\tau\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{I}/\lambda}\right)$
 \end_inset
 
 
@@ -2502,7 +2552,7 @@ The torque due to a single attractor sheet of density
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\tau_{one}(x)=\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}e^{-\frac{d}{\lambda}}\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{i}/\lambda}\right)
+\tau_{one}(x)=\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}e^{-\frac{d}{\lambda}}\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{I}/\lambda}\right)
 \]
 
 \end_inset
@@ -2517,7 +2567,7 @@ Taking the difference between the inlay torques, with a pendulum thickness
 \end_inset
 
 , 
-\begin_inset Formula $\tau_{full}=\tau_{one}(x)-\tau_{one}(x+t_{p}-t_{i})$
+\begin_inset Formula $\tau_{full}=\tau_{one}(x)-\tau_{one}(x+t_{p}-t_{I})$
 \end_inset
 
 
@@ -2526,7 +2576,7 @@ Taking the difference between the inlay torques, with a pendulum thickness
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\tau_{full}=\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}\left(e^{-d/\lambda}-e^{-(d+t_{p}-t_{i})/\lambda}\right)\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{i}/\lambda}\right)\label{eq:Full-flat-plate-yukawa torque}
+\tau_{full}=\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}\left(e^{-d/\lambda}-e^{-(d+t_{p}-t_{I})/\lambda}\right)\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{I}/\lambda}\right)\label{eq:Full-flat-plate-yukawa torque}
 \end{equation}
 
 \end_inset
@@ -2553,7 +2603,7 @@ With an attractor stroke (the difference between close and far positions)
 status open
 
 \begin_layout Plain Layout
-\begin_inset Formula $\Delta N_{full}=\pi\alpha Gh(\frac{w^{2}}{4}-j^{2})(\rho_{h}-\rho_{l})\rho_{a}\lambda^{2}(e^{-x/\lambda}-e^{-(x+t_{p}-t_{i})/\lambda}-e^{-(x+s)/\lambda}+e^{-(x+s+t_{p}-t_{i})/\lambda})(1-e^{-t_{a}/\lambda})(1-e^{-t_{i}/\lambda})$
+\begin_inset Formula $\Delta N_{full}=\pi\alpha Gh(\frac{w^{2}}{4}-j^{2})(\rho_{h}-\rho_{l})\rho_{a}\lambda^{2}(e^{-x/\lambda}-e^{-(x+t_{p}-t_{I})/\lambda}-e^{-(x+s)/\lambda}+e^{-(x+s+t_{p}-t_{I})/\lambda})(1-e^{-t_{a}/\lambda})(1-e^{-t_{I}/\lambda})$
 \end_inset
 
 
@@ -2567,7 +2617,7 @@ status open
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\Delta\tau_{full}=\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}e^{-d/\lambda}\left(1-e^{-(t_{p}-t_{i})/\lambda}-e^{-s/\lambda}\left(1-e^{-(t_{p}-t_{i})/\lambda}\right)\right)\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{i}/\lambda}\right)
+\Delta\tau_{full}=\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}e^{-d/\lambda}\left(1-e^{-(t_{p}-t_{I})/\lambda}-e^{-s/\lambda}\left(1-e^{-(t_{p}-t_{I})/\lambda}\right)\right)\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{I}/\lambda}\right)
 \]
 
 \end_inset
@@ -2577,7 +2627,7 @@ status open
 
 \begin_layout Standard
 If 
-\begin_inset Formula $\lambda\ll t_{p},t_{i},t_{a}$
+\begin_inset Formula $\lambda\ll t_{p},t_{I},t_{a}$
 \end_inset
 
 
@@ -2699,7 +2749,8 @@ We will compute the Yukawa torque about
 \end_inset
 
 .
- Let their face-to-face separation (real or projected) at 
+ Let their face-to-face separation (real or projected along the finite plate's
+ plane) at 
 \begin_inset Formula $x=0$
 \end_inset
 
@@ -3145,8 +3196,22 @@ filename "../extracted/inlayWidth.tex"
 \end_inset
 
  wide.
- Uncertainties quoted here are conservative and do not reflect the flatness
- of surfaces.
+ Uncertainties quoted here are conservative estimates for dimensions; the
+ surfaces themselves are much flatter, as seen in Figures 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:PendulumScans"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:AttractorScan"
+
+\end_inset
+
+.
  The pendulum used here was our prototype, pressed into service when a better-ch
 aracterized improved pendulum suffered a glue failure.
  The pendulum was threaded onto a thin copper tube crimped onto a 
@@ -3679,7 +3744,7 @@ Both large faces of the pendulum and the front face of the attractor were
  (aluminum oxide, possibly diamond).
  The individual components of the pendulum were etched before assembly in
  hydrochloric acid to remove any ferromagnetic impurities.
- After ultrasonic cleaning and a final rinse in de-ionized water, 31
+ After ultrasonic cleaning and a final rinse in de-ionized water, 30
 \begin_inset space ~
 \end_inset
 
@@ -4210,7 +4275,8 @@ reference "Autocollimator Diagram"
 nm) laser diode was directed through a pinhole, collimated, and directed
  at the pendulum.
  Light reflected from the pendulum passed back through the collimating lens
- and was focused, via a mirror, onto a position sensitive photodiode.
+ and was focused, via a mirror, onto a two-dimensional position-sensitive
+ photodiode.
  The detector (UDT SC-10D
 \begin_inset Note Note
 status collapsed
@@ -4257,7 +4323,7 @@ reference "Autocollimator noise"
 .
  The four photodiode signal currents were measured by transimpedance pre-amplifi
 ers adjacent to the photodiode in vacuum.
- We refer to the sensor as a 'pseudo-autocollimator', as the traditional
+ We refer to the sensor as a `pseudo-autocollimator', as the traditional
  beamsplitter of a true autocollimator was replaced by a pair of 45-degree
  mirrors placed astride the objective lens optical axis.
  This arrangement preserves 2-4 times as much light intensity at the price
@@ -4417,7 +4483,7 @@ For all of our science data, the pendulum's orientation with respect to
 \end_inset
 
 mm) to the pendulum.
- The electrodes were housed within grounded 'guard electrodes' to control
+ The electrodes were housed within grounded `guard electrodes' to control
  the effects of stray fields.
  As the pendulum was electrically grounded, the application of a voltage
  to an electrode attracts the pendulum in the same way that the plates of
@@ -4475,7 +4541,8 @@ Applied feedback signal and feedback voltage over the duration of the experiment
 status open
 
 \begin_layout Plain Layout
-XXXMA: resolve strange points in upper frame
+XXXMA: resolve strange points in upper frame, XXXRC Eric thinks one frame
+ will do.
 \end_layout
 
 \end_inset
@@ -4788,16 +4855,6 @@ not
  a Micro-E 3000V encoder system with a claimed interpolated resolution of
  20 nm.
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMA Make sure that the systematic effect is explained somewhere.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -5126,11 +5183,18 @@ locking valve
 
 \begin_layout Subsubsection
 Attractor position change procedure
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Attractor-position-change"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Unless the attractor is to change position, then the locking valve is closed,
- and the modulator valve is off.
+When an attractor position change is not underway, the locking valve is
+ closed, and the modulator valve is off.
  When the attractor-control computer is asked to change the attractor position,
  the modulator valve begins modulating with the desired pulse-width for
  10
@@ -5138,12 +5202,32 @@ Unless the attractor is to change position, then the locking valve is closed,
 \end_inset
 
 s before the locking valve opens.
- After 10
+ The 10
 \begin_inset space ~
 \end_inset
 
-s, the locking valve closes, the modulator valve turns off, and the accumulator
- vents.
+s delay isn't quite sufficient to fully pressurize the pneumatic lines;
+ when the locking valve opens, the attractor systematically jumps about
+ 50
+\begin_inset Formula $\mu$
+\end_inset
+
+m away from the foil before moving smoothly to its next position.
+ This effect is easily visible in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:First-day-of-attractor-data"
+
+\end_inset
+
+.
+ The locking valve is held open for 10
+\begin_inset space ~
+\end_inset
+
+s to allow the system to come into equilibrium.
+ To complete the position change, the locking valve closes, the modulator
+ valve turns off, and the accumulator vents.
  
 \end_layout
 
@@ -5325,8 +5409,8 @@ name "sec:Calibration"
 
 \end_inset
 
-The torque scale of the apparatus was set gravitationally by rotating a
- quadrupole mass distribution from a bearing above the apparatus.
+The torque scale of the apparatus was determined gravitationally by rotating
+ a quadrupole mass distribution from a bearing above the apparatus.
  By way of the quadrupole coupling, the 
 \begin_inset Quotes eld
 \end_inset
@@ -5442,7 +5526,7 @@ reference "chap:Newtonian-Simulation"
 
 ).
  Note the slight phase shift with respect to zero; because of the inlays,
- the pendulum quadrupole's axis is not parallel to the pendulum face.
+ the pendulum's mass-quadrupole axis is not parallel to the pendulum face.
 \end_layout
 
 \end_inset
@@ -6054,7 +6138,18 @@ Interferometer signal over the duration of the experiment.
  Only those data from the vertical-middle 71% of the available fringe dynamic
  range were used to build a quantitative understanding of foil motion.
  The environmental data are plotted to demonstrate the instrument's apparent
- temperature and air pressure insensitivity.
+ lack of correlation with temperature and air pressure variation.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMA: clarify scales to highlight fringe contrast, add lines for accepted
+ band 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -6380,7 +6475,7 @@ filename "../extracted/torqueBlur.tex"
 \end_inset
 
 , approximately 100 times the experiment's maximal per-cut error.
- The points denoted as 'touching' have a clear signal in the interferometer
+ The points denoted as `touching' have a clear signal in the interferometer
  as having been associated with foil displacement.
  The best fit of 
 \begin_inset CommandInset include
@@ -6389,7 +6484,7 @@ filename "../extracted/translationTorqueFit.tex"
 
 \end_inset
 
- is bootstrapped from all of the 'touching' points.
+ is bootstrapped from all of the `touching' points.
  
 \end_layout
 
@@ -6539,12 +6634,9 @@ Ground
  The plate was connected by a heavy-gauge braided cable to a metallic connection
  with a nearby 100-ton cyclotron magnet yoke.
  From this grounding plate, we implemented a starred 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-(XXXMA cite grounding reference)
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand citep
+key "NoiseReductionElectronicSystems"
 
 \end_inset
 
@@ -7001,7 +7093,7 @@ name "sub:Statistical-Uncertainty"
 \end_layout
 
 \begin_layout Standard
-There are many sources of fluctuating 'noise' that affect the PlateWash
+There are many sources of fluctuating `noise' that affect the PlateWash
  torsion balance.
  This section is intended to give a general overview of the many sources
  of fluctuating torques that are of concern to the measurement.
@@ -7010,7 +7102,7 @@ There are many sources of fluctuating 'noise' that affect the PlateWash
 \end_layout
 
 \begin_layout Subsubsection
-Fiber thermal noise
+Intrinsic fiber damping
 \begin_inset CommandInset label
 LatexCommand label
 name "sub:Fiber-thermal-noise"
@@ -7071,7 +7163,7 @@ internal damping
 \end_layout
 
 \begin_layout Standard
-A torsion balance suspended in sufficiently high vacuum is 'internally damped'.
+A torsion balance suspended in sufficiently high vacuum is `internally damped'.
  Following Saulson's classic explication, internal damping gives rise to
  torque noise power with a 
 \begin_inset Formula $1/f$
@@ -7129,7 +7221,7 @@ key "schlamminger2010indirect,cavalleri2009increased,dolesi2011brownian"
  Microscopically, there is only one form of gas damping - collisions between
  gas particles and an oscillator allow momentum and energy exchange.
  Experimentally, when the particle mean free path is larger than the dimensions
- of the chamber, gas damping appears in two forms: 'free' damping and 'proximity
+ of the chamber, gas damping appears in two forms: `free' damping and `proximity
 -enhanced' damping.
  Free gas damping is independent of an oscillator's location in a vacuum
  chamber, and depends only upon properties of the gas and the dimensions
@@ -7606,7 +7698,7 @@ Environment
 A number of environmental factors can give rise to extra noise in the balance.
  Careful design and construction helps to limit these effects.
  Many of them are transient in nature, and may be avoided by focusing data
- acquisition into quite parts of the day, week, and year.
+ acquisition into quiet parts of the day, week, and year.
  
 \end_layout
 
@@ -7626,9 +7718,9 @@ Rotation of the ground: This rotates the instrument relative to the pendulum
 \end_layout
 
 \begin_layout Enumerate
-'Tilt feedthrough': Asymmetry in the fiber cross-section converts the tilt
+`Tilt feedthrough': Asymmetry in the fiber cross-section converts the tilt
  of the fiber support into a pendulum twist.
- This is suppressed, but not eliminated, by the fiber 'prehanger'
+ This is suppressed, but not eliminated, by the fiber `prehanger'
 \end_layout
 
 \begin_layout Enumerate
@@ -7712,7 +7804,7 @@ Earthquake!
 
 \end_inset
 
-PlateWash also sees less-palpable seismic effects, such as the 'microseismic
+PlateWash also sees less-palpable seismic effects, such as the `microseismic
  peak' 
 \begin_inset Note Note
 status open
@@ -7876,8 +7968,8 @@ Wind
 
 \begin_layout Standard
 While the coupling mechanism to wind is related to some combination of seismic
- effects, tilt, gravitational gradients, or pressure, we aren't certain
- which effect is dominant.
+ effects, tilt, changing gravitational gradients, or pressure, we aren't
+ certain which effect is dominant.
  What is clear from our data is a strong coupling between outside wind and
  pendulum noise.
  Stormy periods can elevate torque noise by as much as an order of magnitude
@@ -8036,7 +8128,7 @@ pendulum battery
 \begin_inset space ~
 \end_inset
 
-V.
+mV.
  
 \end_layout
 
@@ -8177,12 +8269,12 @@ fN-m are of importance to this measurement.
 \end_layout
 
 \begin_layout Subsubsection
-Electronic/Instrumental Crosstalk
+Electronic Crosstalk
 \end_layout
 
 \begin_layout Standard
 Any effect that is not directly related to attractor motion, but is aware
- of attractor position, lands in this catchall category.
+ of attractor position, lands in this catch-all category.
  In general, these systematics are very important in many experiments.
  In this case, the experiment includes an isolation valve on the air pressure
  line to the attractor bellows.
@@ -8279,7 +8371,8 @@ dependent and may depend upon the detailed structure of the junction, leading
 \begin_layout Standard
 To be safe from the effects attractor-correlated contact potential variation,
  the pendulum/foil contact potential cannot change by more than 1-10 nV
- in an attractor-correlated way.
+ (XXXRC - Eric is rightfully concerned here; verify estimate) in an attractor-co
+rrelated way.
  This voltage is hard to measure in any way but with a torsion balance,
  as the effective output impedance of any contact-potential generating phenomeno
 n will be large (cannot drive much current), and the input impedance of
@@ -8604,6 +8697,8 @@ Proximity-enhanced gas damping as a function of attractor-foil separation.
 
 s ringdown time of the foil), gas damping will be an inconsequential source
  of systematic uncertainty.
+ XXXRC - Eric points out that a 10% variation in amplitude might be significant
+ without quantifying the amplitude itself.
 \end_layout
 
 \end_inset
@@ -10690,10 +10785,7 @@ Experimental Plan
 \begin_layout Standard
 This chapter describes the strategies and choices we made in the operation
  of the instrument, from operating frequency to day-to-day operation.
-\end_layout
-
-\begin_layout Section
-Overview
+ XXXMA; clarify
 \end_layout
 
 \begin_layout Section
@@ -10716,9 +10808,8 @@ Hz to 1
 Hz.
  This section describes the way in which important experimental frequencies
  were selected.
- As will be shown, the most-important frequency, the frequency with which
- the attractor changes position, is pushed by several concerns to the highest-fe
-asible frequency.
+ The most-important frequency, the frequency with which the attractor changes
+ position, is pushed by several concerns to the highest-feasible frequency.
  The limit of feasibility is set by both the limited speed with which our
  attractor drive can operate and by the speed with which the pendulum feedback
  control can react without adding extra noise.
@@ -10730,7 +10821,7 @@ Spectral Character of Noise
 \end_layout
 
 \begin_layout Standard
-A torsion balance is an excellent harmonic oscillator.
+Our torsion balance is an excellent harmonic oscillator.
  For quality torsion fibers operated at amplitudes much smaller than a radian,
  the anharmonic terms are negligible
 \begin_inset Foot
@@ -10844,12 +10935,12 @@ status open
 \end_inset
 
 .
- The torque to angle transfer function of a torsion oscillator with resonant
- angular frequency 
+ The torque-to-angle transfer function of an internally-damped torsion oscillato
+r with resonant angular frequency 
 \begin_inset Formula $\omega_{0}$
 \end_inset
 
- , torsion spring constant 
+, torsion spring constant 
 \begin_inset Formula $\kappa$
 \end_inset
 
@@ -10861,7 +10952,14 @@ status open
 \begin_inset Formula $Q$
 \end_inset
 
- is
+ is 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "SchlammingerWallet"
+
+\end_inset
+
+
 \begin_inset Formula 
 \[
 T(\omega)=\left|\frac{\theta(\omega)}{\tau(\omega)}\right|=\frac{1/\kappa}{\sqrt{(1-\omega^{2}/\omega_{0}^{2})^{2}+1/Q^{2}}};\Rightarrow\mbox{If }\omega\gg\omega_{0},\,\left|\frac{\theta(\omega)}{\tau(\omega)}\right|\rightarrow\frac{1}{I\omega^{2}}
@@ -10920,11 +11018,16 @@ For
 \end_inset
 
 , the pendulum response is independent of the torsion spring.
- This is the equivalent of 
+ This is the torque equivalent of 
 \begin_inset Formula $F=ma=m\ddot{x}\rightarrow\tilde{\tau}=I(-\omega^{2})\tilde{\theta}$
 \end_inset
 
-; at these frequencies, the pendulum acts like a free mass.
+ ; at these frequencies, the pendulum acts like a free mass.
+ When 
+\begin_inset Formula $\omega\ll\omega_{0}$
+\end_inset
+
+, the pendulum response is frequency independent.
  
 \end_layout
 
@@ -10964,7 +11067,7 @@ This drives any measurement toward higher frequencies for decreased noise.
 \end_layout
 
 \begin_layout Standard
-Convolving this noise with the torque-to-angle transfer function (see Figure
+Convolving this noise with the torque-to-angle transfer function (Figure
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -11002,7 +11105,7 @@ reference "Autocollimator noise"
  Our minimum resolvable torque signal at any given frequency is 
 \begin_inset Formula 
 \[
-\delta\tau(\omega)=\frac{\delta\theta}{T(\omega)}=\kappa\sqrt{(1-\omega^{2}/\omega_{0}^{2})^{2}+1/Q^{2}}\delta\theta\approx\kappa\left|1-\omega^{2}/\omega_{0}^{2}\right|\delta\theta
+\delta\tau(\omega)=\frac{\delta\theta}{T(\omega)}=\kappa\sqrt{\left(1-\frac{\omega^{2}}{\omega_{0}^{2}}\right)^{2}+\frac{1}{Q^{2}}}\delta\theta\approx\kappa\left|1-\frac{\omega^{2}}{\omega_{0}^{2}}\right|\delta\theta
 \]
 
 \end_inset
@@ -11031,17 +11134,7 @@ reference "sub:Statistical-Uncertainty"
  In our frequency range of interest, it appears as relatively frequency-independ
 ent noise.
  Some of this noise is time-dependent, correlated with wind, human activity,
- and worldwide seismic activity.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
- (XXXMI needs expansion (how to do it?))
-\end_layout
-
-\end_inset
-
-
+ and both local and worldwide seismic activity.
 \end_layout
 
 \begin_layout Subsubsection
@@ -11056,7 +11149,7 @@ name "sub:Experimentally-determined-noise"
 \end_layout
 
 \begin_layout Standard
-As can be seen in Figure 
+As shown in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Torque-noise,-from"
@@ -11071,13 +11164,21 @@ reference "fig:Torque-noise,-from"
 \begin_inset space ~
 \end_inset
 
-mHz, or a 40
+mHz, equivalent to a 40
 \begin_inset space ~
 \end_inset
 
 s period.
- As will be seen below, neither the feedback loop nor the attractor drive
- permit usable operation at such a high frequency.
+ As will be seen below, the 
+\begin_inset Formula $\sim20$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+s response times of the pendulum feedback loop and the attractor drive prohibit
+ useful operation at such a high frequency.
  Near the attractor frequency of 
 \begin_inset CommandInset include
 LatexCommand input
@@ -11085,7 +11186,7 @@ filename "..//extracted/switchFrequency.tex"
 
 \end_inset
 
-, the noise is generally at the level of 
+, the torque noise is generally at or below 
 \begin_inset Formula $20$
 \end_inset
 
@@ -11097,7 +11198,7 @@ fN-m/
 \begin_inset Formula $\sqrt{\mbox{Hz}}$
 \end_inset
 
- or better during quiet periods.
+ during quiet periods.
 \end_layout
 
 \begin_layout Standard
@@ -11129,10 +11230,11 @@ name "fig:Torque-noise,-from"
 
 Experimentally-measured torque noise, from systematic test 3167.
  Attractor stationary.
+ Data in blue cover the entire time-series shown, while data in red are
+ taken from the quiet period early in the morning of day 1227.
  (XXXRC Jens comments that figure doesn't align with text; perhaps add thermal
  limit, autocollimator line, add more commentary, show filtered and unfiltered,
- perhaps more panels.
- Comment on red vs blue difference.) 
+ perhaps more panels.) 
 \end_layout
 
 \end_inset
@@ -11168,26 +11270,16 @@ The higher the attractor frequency
 \begin_inset Formula $S(\omega)=S_{0}$
 \end_inset
 
-
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-(XXXMA what am I trying to say here?)
-\end_layout
-
-\end_inset
-
 , then the resulting uncertainty of 
 \begin_inset Formula $N$
 \end_inset
 
  measurements each of duration 
-\begin_inset Formula $t=1/f$
+\begin_inset Formula $t_{m}=1/f$
 \end_inset
 
  is 
-\begin_inset Formula $\sigma_{all}=\sqrt{S_{0}/Nt}$
+\begin_inset Formula $\sigma_{all}=\sqrt{\frac{S_{0}}{Nt_{m}}}$
 \end_inset
 
 .
@@ -11196,11 +11288,11 @@ status collapsed
 \end_inset
 
 , then 
-\begin_inset Formula $\sigma_{all}=\sqrt{S_{0}/T}$
+\begin_inset Formula $\sigma_{all}=\sqrt{\frac{S_{0}}{T}}$
 \end_inset
 
 , independent of 
-\begin_inset Formula $t$
+\begin_inset Formula $t_{m}$
 \end_inset
 
  and 
@@ -11226,24 +11318,15 @@ non-Gaussian
 \end_inset
 
  is both time and frequency-dependent.
- Events such as earthquakes, human activity, attractor/foil interactions,
- computer crashes, etc.
- happen.
+ Sudden/prominent events including earthquakes, human activity, attractor/foil
+ interactions, and computer crashes happen.
  They are often short in duration, but overwhelming in amplitude.
  Measurements taken at these times are unusable.
  They are rare-enough that most experiments never incorporate them into
  their noise budget.
- LIGO, the gravitational wave interferometer, is a rare exception; some
- LIGO scientists devote much of their time to 
-\begin_inset Quotes eld
-\end_inset
-
-glitch
-\begin_inset Quotes erd
-\end_inset
-
--hunting.
- In PlateWash, it will be shown in Section 
+ This is the case for PlateWash as well, where such transients happened
+ at most a few times in a day.
+ For PlateWash, it will be shown in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Filtering"
@@ -11251,50 +11334,44 @@ reference "sub:Filtering"
 \end_inset
 
  that for any large transient, measurements for at least 
-\begin_inset Formula $10t=2560\mbox{\,\ s}=0.7\mbox{\,\ hr}$
+\begin_inset Formula $30t_{m}=7680\mbox{\,\ s}=2.1\mbox{\,\ hr}$
 \end_inset
 
  must be discarded.
  If 
-\begin_inset Formula $t$
+\begin_inset Formula $t_{m}$
 \end_inset
 
  were smaller, the experiment's fractional dead-time would be smaller.
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMI glitch/day?
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
 A second benefit to small 
-\begin_inset Formula $t$
+\begin_inset Formula $t_{m}$
 \end_inset
 
  is the increased number of independent measurements.
- This experiment relies upon Monte Carlo-like measurement schemes (random
- attractor locations) to understand systematic uncertainties and better
- constrain possible violations of the ISL.
- Faster individual measurements allow faster exploration of parameter space
- (exploring a 
+ This experiment relies upon Monte Carlo-like measurements (random attractor
+ locations) to understand systematic uncertainties and better constrain
+ possible violations of the inverse-square law.
+ Frequent individual measurements allow faster exploration of parameter
+ space (exploring a 
 \begin_inset Formula $6\times6$
 \end_inset
 
  grid of measurements requires a day with the current choice of 
-\begin_inset Formula $t$
+\begin_inset Formula $t_{m}$
 \end_inset
 
 ).
- Measurements that are twice as fast allow twice as many questions to be
- answered.
- At equal noise levels, there is no penalty for this approach.
+ Measurements that are twice as frequent allow twice as many questions to
+ be answered, albeit with precision degraded by a factor of 
+\begin_inset Formula $\sqrt{2}$
+\end_inset
+
+.
+ When noise is frequency-independent, there is no penalty for this approach.
  
 \end_layout
 
@@ -11319,9 +11396,9 @@ name "sub:Harmonics"
 \end_layout
 
 \begin_layout Standard
-In order to avoid any velocity-dependent systematic uncertainties, the attractor
- must move in a square wave, with measurements taken only when the instrument
- is at rest.
+In order to avoid any attractor-velocity-dependent systematic uncertainty,
+ the attractor must move in a square wave, with measurements taken only
+ when the attractor is at rest.
  The Fourier coefficients of a square wave are 
 \begin_inset Formula $A_{n}=4/\pi n$
 \end_inset
@@ -11345,7 +11422,7 @@ key "ArfkenForPhysics"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard
@@ -11450,7 +11527,7 @@ Harmonic (
 \begin_inset Text
 
 \begin_layout Plain Layout
-15..
+15
 \end_layout
 
 \end_inset
@@ -11562,7 +11639,7 @@ Fourier coefficient
 \begin_inset Text
 
 \begin_layout Plain Layout
-Combined SNR ( 1 to 
+Combined signal-to-noise ratio ( 1 to 
 \begin_inset Formula $m$
 \end_inset
 
@@ -11664,7 +11741,8 @@ Combined SNR ( 1 to
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Square wave Fourier coefficients and aggregate SNR up to 
+Square wave Fourier coefficients and combined signal to noise ratio up to
+ 
 \begin_inset Formula $n=17$
 \end_inset
 
@@ -11690,7 +11768,7 @@ name "Fourier Harmonics"
 
 \begin_layout Standard
 For measurements with equal uncertainty 
-\begin_inset Formula $\sigma$
+\begin_inset Formula $\sigma_{h}$
 \end_inset
 
  of each harmonic, the uncertainty in a combined measurement of the first
@@ -11699,7 +11777,7 @@ For measurements with equal uncertainty
 \end_inset
 
  harmonics is 
-\begin_inset Formula $\sigma_{combined}=\sigma/\sqrt{\sum_{j=1}^{m}A_{m}^{2}}$
+\begin_inset Formula $\sigma_{combined}=\sigma_{h}/\sqrt{\sum_{j=1}^{m}A_{m}^{2}}$
 \end_inset
 
 .
@@ -11710,12 +11788,21 @@ reference "Fourier Harmonics"
 
 \end_inset
 
-, the signal to noise ratio (SNR) is computed for 
-\begin_inset Formula $\sigma=1$
+, the signal to noise ratio is computed for 
+\begin_inset Formula $\sigma_{h}=1$
 \end_inset
 
 .
  The first harmonic is the only one that matters.
+\end_layout
+
+\begin_layout Standard
+It is important that amplitude of the first harmonic of a unity-amplitude
+ square wave is greater than one.
+ Without resolving the square shape of the signal through its harmonics,
+ we reap the increased sensitivity one expects from an attractor motion
+ that spends far more time at maximum amplitude.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -11730,50 +11817,7 @@ name "sub:Lags"
 \end_layout
 
 \begin_layout Standard
-A number of properties of the instrument require finite time.
- The pneumatically-driven attractor takes 
-\begin_inset Formula $\sim15$
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-s to move to a new position.
- Furthermore, the attractor control system begins tapping the modulator
- valve 10
-\begin_inset space ~
-\end_inset
-
-s before the position change.
- The feedback loop requires 
-\begin_inset Formula $\sim20$
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-s to settle.
- The data acquisition system samples every 
-\begin_inset CommandInset include
-LatexCommand input
-filename "../extracted/TheoSampleTime.tex"
-
-\end_inset
-
- and has 3-5
-\begin_inset space ~
-\end_inset
-
-s anti-aliasing filters.
- Synchronization errors between the three data acquisition computers require
- XXXRC
-\begin_inset space ~
-\end_inset
-
-s of padding.
- For these reasons, the first 
+The first 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../extracted/dTime.tex"
@@ -11803,12 +11847,15 @@ reference "sub:Lags-1"
 
 \end_inset
 
- for further discussion of dead time).
- As a consequence, the highest available switch frequency is <25
-\begin_inset space ~
+ for detail).
+ As a consequence, the highest available switch frequency is <
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/deadTimeLimitFreq.tex"
+
 \end_inset
 
-mHz.
+.
  At that frequency, the accepted measurements would have zero duty cycle.
  The duty cycle available for measurement is 
 \begin_inset Formula $D=(1-2Lf)$
@@ -11835,6 +11882,18 @@ reference "SNR vs Lags"
 \end_inset
 
 .
+ 
+\end_layout
+
+\begin_layout Standard
+The combination of the large conservative dead-times with the 10
+\begin_inset space ~
+\end_inset
+
+s low-pass torque filter should render the measurement insensitive to small
+ variations in the specific amounts of time to be dropped.
+ The blind analysis makes it impossible for us to fine-tune for any desired
+ result.
 \end_layout
 
 \begin_layout Standard
@@ -11857,7 +11916,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Signal to noise attenuation as a function of attractor frequency (horizontal
+Signal-to-noise attenuation as a function of attractor frequency (horizontal
  axis) and of total dead time duration (individual curves).
  As expected, once the per-step dead time is smaller than 75% of the step
  duration, half of the SNR is available for use.
@@ -11922,9 +11981,9 @@ reference "sub:Lags"
 
 \begin_layout Standard
 The operating frequency was chosen well in advance of the science run reported
- here, before the instrument was fully understood.
+ here, before the instrument was fully commissioned.
  We selected a frequency that we expected would give low noise and was sufficien
-tly slow to allow transients associated with attractor motion to damp.
+tly slow to allow transients associated with attractor motion to dissipate.
  We selected 3.90625
 \begin_inset space ~
 \end_inset
@@ -11955,6 +12014,33 @@ filename "../extracted/TheoSampleTime.tex"
 \end_layout
 
 \begin_layout Subsection
+Switches per cut
+\end_layout
+
+\begin_layout Standard
+The number of attractor position changes per cut was chosen to be large-enough
+ to allow a sufficient understanding of the switch-to-switch variation in
+ the torque at each point.
+ We settled on 10 switches per cut in an ad-hoc fashion.
+ It is slightly more than the minimum required to have a reasonable understandin
+g of the switch-to-switch variation ( 
+\begin_inset Formula $\sim7$
+\end_inset
+
+ samples is perhaps the minimum one should use for a reliable estimate of
+ a variance), and still short enough to address the speed concerns laid
+ out in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Statistics"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Section
 Choosing a science signal
 \begin_inset CommandInset label
 LatexCommand label
@@ -11966,22 +12052,24 @@ name "sub:Choosing-a-science"
 \end_layout
 
 \begin_layout Standard
-As the pendulum is locked in feedback, there are multiple data channels
- that may be used to extract a science measurement.
- The pendulum twist angle, the feedback signal itself, and the P, I, and
- D terms of the feedback loop are written to disk.
- The pendulum twist angle and the P (proportional) term of the loop are
- equivalent.
- In practice, the twist signal and P term were anti-aliased differently
- before being written to disk.
- The P term had a 5
+As the pendulum is locked in feedback, there are multiple junctures in the
+ feedback loop where a science signal could be extracted.
+ The pendulum twist angle, the feedback signal itself, and the proportional,
+ integral, and differential terms of the feedback loop are written to disk.
+ The pendulum twist angle and the proportional term of the loop are equivalent.
+ In practice, the twist signal and proportional term were anti-aliased different
+ly before being written to disk.
+ The proportional term had a 5
 \begin_inset space ~
 \end_inset
 
-s filter applied, making it the signal of choice for a twist measurement.
- The loop was operated with zero I-term, so the I channel contains no signal.
- The D (derivative) term response is frequency-dependent, growing roughly
- linearly with 
+s filter applied (a factor of 3 below the Nyquist frequency), making it
+ the signal of choice for a reliable angle measurement.
+ The loop was operated with zero integral-term to prevent improper wind-up
+ in the challenging near-foil environment, so the integral channel contains
+ no signal.
+ The derivative term response is frequency-dependent, growing roughly linearly
+ with 
 \begin_inset Formula $\omega$
 \end_inset
 
@@ -11990,15 +12078,16 @@ s filter applied, making it the signal of choice for a twist measurement.
 
 \begin_layout Standard
 So, there are two reasonable science channels: the feedback signal applied
- to the pendulum, and the P term.
- The feedback signal has units of torque, the P term has units of angle.
- Even though the pendulum is held fixed, the torque-angle transfer function
- remains important.
+ to the pendulum, and the proportional term.
+ The feedback signal has units of torque, the proportional term has units
+ of angle.
+ Even though the pendulum is held fixed, the torque-to-angle transfer function
+ matters.
  At frequencies below the resonance of the pendulum, the two channels are
  proportional.
  At frequencies above resonance, the frequency-independent angle noise of
- the autocollimator appears, in the feedback signal, as torque noise that
- rises like frequency squared.
+ the autocollimator appears in the applied feedback signal, as torque noise
+ that rises like frequency squared.
  As shown in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -12019,39 +12108,17 @@ reference "Fourier Harmonics"
 \end_layout
 
 \begin_layout Standard
-By choosing the angle/P-term signal instead of the feedback signal as the
- science signal, we use the inertia of the pendulum as an analog low-pass
- filter.
- While, in principle, both signals contain the same science, the science
- signal is more-easily extracted from the angle signal.
- Furthermore, as the feedback signal is the sum of the P and the derived
- D terms, there is less opportunity for an error to enter into the science
- signal if the measured angle is used alone.
-\end_layout
-
-\begin_layout Subsection
-Switches per cut
-\end_layout
-
-\begin_layout Standard
-The number of attractor position changes per cut was chosen to be large-enough
- to allow a sufficient understanding of the switch-to-switch variation in
- the torque at each point.
- We settled on 10 switches per cut in an ad-hoc fashion.
- It is slightly more than the minimum required to have a reasonable understandin
-g of the switch-to-switch variation ( 
-\begin_inset Formula $\sim7$
-\end_inset
-
- is perhaps the minimum one could use for that determination), and still
- short enough to address the speed concerns laid out in Section 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sub:Statistics"
-
-\end_inset
-
-.
+By choosing the angle/proportional-term signal instead of the feedback signal
+ as the science signal, we use the inertia of the pendulum as an analog
+ low-pass filter.
+ While, in principle, both signals contain the same information, the science
+ signal is more-readily extracted from the angle signal.
+ Furthermore, as the feedback signal is the sum of the proportional and
+ derived differential terms, if the science were extracted from the feedback
+ signal there would be greater opportunity for software or digitization
+ errors to introduce excess noise.
+ Finally, we note that selecting among signal sources is straightforward
+ with a continuous torque calibration signal operating at a nearby frequency.
  
 \end_layout
 
@@ -12067,16 +12134,17 @@ Random
 \end_layout
 
 \begin_layout Standard
-A major departure from past parallel-plate-style gravitational experiments
- 
+One of this experiment's important departures from past parallel-plate-style
+ gravitational experiments 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "2003Natur.421..922L,2007PhRvL..98t1101T"
 
 \end_inset
 
- is the use of random attractor locations This approach trades away some
- signal-to-noise in return for improved characterization of systematic effects.
+ is the use of random attractor locations.
+ This approach trades away some signal-to-noise in return for improved character
+ization of systematic effects.
  Instead of focusing exclusively upon a small set of start and end locations
  for the attractor, we considered a large distribution of them.
  This method has the potential to expose important systematic curiosities,
@@ -12089,8 +12157,8 @@ reference "sec:Encoder-narrative"
 
 , and has the added advantage of allowing a more-complete measurement of
  the distance-dependence of any measured force.
- The drawbacks of this approach, primarily complexity, are discussed in
- Sections 
+ The drawbacks of this approach, primarily additional complexity, are discussed
+ in Sections 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:0-tunable-parameters,"
@@ -12117,14 +12185,14 @@ reference "fig:First-day-of-attractor-data"
 \end_layout
 
 \begin_layout Standard
-The random locations were generated by random number generator into configuratio
-n files for the attractor computer to run.
- This enables systematic tests that repeat the attractor positions used
- in science runs.
+The random locations were generated by random number generator and written
+ into configuration files for the attractor computer to execute.
+ This extra step allows systematic tests that repeat the attractor positions
+ used in science runs.
  The distribution of random attractor locations used was the simplest, and
  perhaps least efficient, uniform distributions of start and end positions.
- This spends perhaps more time than is warranted exploring shorter attractor-pos
-ition differences.
+ This spends perhaps more time than is most-efficient exploring shorter
+ attractor-position differences.
  
 \end_layout
 
@@ -12158,14 +12226,19 @@ name "fig:First-day-of-attractor-data"
 First day of attractor positions.
  Random attractor positions sample the available parameter space in an unbiased
  way.
+ The short-duration upward-going spikes are an artifact of the pneumatic
+ system discussed in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Attractor-position-change"
+
+\end_inset
+
+.
 \end_layout
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -12210,7 +12283,8 @@ Attractor positions over the duration of the experiment.
 status open
 
 \begin_layout Plain Layout
-XXXMA draw vertical line/regions to denote systematic tests
+XXXMA draw vertical line/regions to denote systematic tests.
+ Yellow/blue?
 \end_layout
 
 \end_inset
@@ -12229,7 +12303,7 @@ XXXMA draw vertical line/regions to denote systematic tests
 \end_layout
 
 \begin_layout Standard
-The attractor position was modulated through both 
+The attractor position was varied through both 
 \begin_inset Quotes eld
 \end_inset
 
@@ -12238,8 +12312,15 @@ random
 \end_inset
 
  and square-wave patterns.
- About half of the science data were taken using various random patterns.
- 
+ About half of the science data were taken using random patterns.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Attractor-positions-over"
+
+\end_inset
+
+ shows all attractor positions used in this thesis.
 \end_layout
 
 \begin_layout Standard
@@ -12264,7 +12345,7 @@ random
  runs to a focused square-wave approach late in the science run in an effort
  to improve/decrease the shortest range at which we could reach gravitational
  strength.
- Essentially all of the systematic tests were done with 
+ All of the systematic tests were done with 
 \begin_inset Quotes eld
 \end_inset
 
@@ -12281,7 +12362,6 @@ long
 \end_inset
 
  square wave measurements to allow more-straightforward intercomparison.
- 
 \end_layout
 
 \begin_layout Section
@@ -12302,11 +12382,11 @@ ht-heating can be extracted.
 \begin_layout Standard
 In the future, interleaving systematics tests with science runs would be
  more satisfactory.
- With the exception of thermal tests, which have long time constants, it's
+ With the exception of thermal tests, which have long time-constants, it's
  possible to do a science measurement, magnetic tests, interferometer on/off
  tests, and electrical bias tests programatically with each attractor setting,
  merging them into a single super-block of measurements that comprise a
- self-contained ISL test for one attractor position pair.
+ self-contained ISL test for one attractor-position pair.
  The ability to make incremental/aggregated ISL tests may be worth the added
  programming complexity.
 \end_layout
@@ -12317,6 +12397,13 @@ Data Analysis
 
 \begin_layout Section
 Flow
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Flow"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -12349,7 +12436,7 @@ name "fig:Flowchart-diagramming"
 Flowchart diagramming the flow of data analysis.
  After configuration of experimental and analysis parameters, timing cuts,
  and the hand-input of some systematic test parameters, it is automated
- and repeatable.
+ and replicable.
 \end_layout
 
 \end_inset
@@ -12379,7 +12466,7 @@ reference "fig:Flowchart-diagramming"
  The data analysis that precedes new-physics fits is functionally run twice,
  once using only the pendulum and attractor data streams, and once including
  the interferometer.
- As detailed in 
+ As detailed in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "par:A-conservative-approach"
@@ -12389,6 +12476,26 @@ reference "par:A-conservative-approach"
 , the interferometer data are only useful over parts of the run, requiring
  model-building in order to make a torque correction during times that the
  interferometer was unusable.
+ 
+\end_layout
+
+\begin_layout Standard
+This section, Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Flow"
+
+\end_inset
+
+, is an executive summary for the details in the remainder of the chapter,
+ with the flowchart in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Flowchart-diagramming"
+
+\end_inset
+
+ as a companion.
  
 \end_layout
 
@@ -12429,7 +12536,7 @@ reference "sec:Temperature--systematic"
 \begin_layout Standard
 In addition, all experimental parameters (alignment, dimensions, densities,
  analysis parameters, etc.) are stored in global configuration files that
- are read by any process that needs them.
+ are read by any analysis program that requires them.
 \end_layout
 
 \begin_layout Subsubsection
@@ -12440,7 +12547,8 @@ Data files
 Each data-acquisition computer generates its own data files.
  When the pendulum computer's data are read, externally-measured data are
  joined to the raw output from the pendulum DAQ.
- The timing data are then referenced to a common datum (January 1, 2009).
+ The timing data are then referenced to a common datum (00:00:00 January
+ 1, 2009 PST).
  
 \end_layout
 
@@ -12470,8 +12578,7 @@ run
 lly delineated by a run configuration file as having something interesting
  to say.
  The main routine of the run-by-run analysis looks through the directory
- of run configuration files and executes the run-by-run analysis on the
- data loaded by each one.
+ of run configuration files and analyzes the data loaded by each one.
 \end_layout
 
 \begin_layout Subsubsection
@@ -12495,7 +12602,8 @@ reference "sub:Synchronization"
 
 , the data from each computer do not begin simultaneously and may have offsets
  between their clocks.
- We correct for these effects as best we can.
+ We correct the differences in the clock rates and conservatively absorb
+ the differences in clock datums into the assigned experimental dead times.
 \end_layout
 
 \begin_layout Subsubsection
@@ -12513,18 +12621,8 @@ reference "sub:Filtering"
 , the data are passed through FIR filters, primarily to notch out the gravitatio
 nal calibration signal and to bandpass away drift in the pendulum.
  All other channels to be analyzed alongside the torque data are passed
- through a largely-inconsequential
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMA can this be guaranteed inconsequential with a unity filter?
-\end_layout
-
-\end_inset
-
-, but equal duration, filter in order to phase-match them to the torque
- signal.
+ through an inconsequential (low-pass at the Nyquist frequency), but equal
+ duration, filter in order to phase-match them to the torque signal.
 \end_layout
 
 \begin_layout Subsubsection
@@ -12584,7 +12682,8 @@ reference "sub:Edge-finding"
  the initial steps in the data.
  Using these steps, the code then projects, open-loop, the temporal location
  of all the steps in the dataset.
- Each step is then measured, using the dead-times projected in Section 
+ The value of each signal channel is then measured during each step, using
+ the dead-times projected in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Lags-1"
@@ -12592,8 +12691,6 @@ reference "sub:Lags-1"
 \end_inset
 
 .
- XXXRC - should this open-loop approach be taken, in light of the sample-rate
- differences?
 \end_layout
 
 \begin_layout Subsubsection
@@ -12654,7 +12751,14 @@ reference "fig:The-first-8000"
 
 , the positions of the first two states are inconsistent with the rest of
  the cut and retain information from the prior cut.
- For 
+ As detailed in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Lock-in"
+
+\end_inset
+
+, 
 \bar under
 all
 \bar default
@@ -12699,21 +12803,12 @@ all
 \end_inset
 
  are measured.
- See 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sub:Lock-in"
-
-\end_inset
-
-.
- Out-of-phase quadrature measures of these quantities are also measured,
- but are subject to no further analysis.
+ Out-of-phase quadrature measures of these quantities are also recorded,
+ but are subjected to no further analysis.
 \end_layout
 
 \begin_layout Standard
-Only the output of this cutting procedure is used for analysis beyond this
- point.
+Only these cut-wise data are used for analysis beyond this point.
 \end_layout
 
 \begin_layout Subsubsection
@@ -12722,7 +12817,8 @@ Aggregation
 
 \begin_layout Standard
 All the cuts from the many runs are aggregated into a single file (one for
- the two-DAQ analysis, and one for the three-DAQ interferometer analysis).
+ the pendulum/attractor two-DAQ analysis, and one for the three-DAQ interferomet
+er analysis).
  These 
 \begin_inset CommandInset include
 LatexCommand input
@@ -12738,17 +12834,6 @@ filename "../extracted/numberOfIFOCuts.tex"
 \end_inset
 
  three-DAQ) comprise the measurement.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMA decimal input needs added comments, section 5.4 too.
- Does that break anything else?
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection
@@ -12757,8 +12842,8 @@ Interpretation
 
 \begin_layout Standard
 Now that the data are measured, what do they say? As the foil systematic
- is important, we proceed first to ascertain the size of any necessary correctio
-n due to foil motion.
+ is important, we first ascertain the size of any necessary correction due
+ to foil motion.
  We then fit for the presence of any Yukawa signal.
  In addition, we perform an 
 \begin_inset Quotes eld
@@ -12770,18 +12855,6 @@ arbitrary fit
 
 , which is a model-free approach to characterizing our measured signal,
  with less attention to systematic uncertainty.
- Finally, as a limited cross-check on some analysis, we also compute a Yukawa
- fit by an independent method, without attention to systematics.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMA No longer plotted? Should I drop this sentence?
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsubsection
@@ -12791,7 +12864,7 @@ Interferometer branch
 \begin_layout Standard
 If the isolating foil moves in an attractor-correlated way, we need to know
  how much influence it may have on the pendulum.
- The optimal approach would have the foil interferometer running continuously
+ The optimal approach would have the foil interferometer operating continuously
  and in-range; it would then be possible to add a joint fit for the foil-motion-
 to-torque constant to the global fit for new physics.
  As we only had partial coverage with the interferometer (Section 
@@ -12832,7 +12905,7 @@ reference "sec:Data/Fit"
 
 \end_inset
 
-, we use the data from times that the interferometer was in-range to generate
+, we use the data from times when the interferometer was in-range to generate
  a piecewise-linear model of the foil displacement as a function of attractor
  position.
  The fit is bootstrapped to quantify the uncertainty in the extracted fit
@@ -12844,10 +12917,10 @@ Foil-driven torque vs foil position model/correction
 \end_layout
 
 \begin_layout Standard
-By combining the foil-motion to torque calibration with the foil displacement
- as a function of attractor position, we construct a foil-motion-related
- torque correction as a function of attractor position which can be applied
- to the entire dataset.
+By combining the foil-motion-to-torque calibration with the modeled foil
+ displacement as a function of attractor position, we construct a foil-motion-re
+lated torque correction as a function of attractor position, with bootstrapped
+ uncertainties, which can be applied to the entire dataset.
 \end_layout
 
 \begin_layout Subsubsection
@@ -12882,9 +12955,24 @@ Confidence intervals
 \begin_layout Standard
 There are many ways to draw two-dimensional confidence intervals from a
  distribution of best-fit points.
- We have not yet settled on one-- yes we have.
- Gets its own section later.
- XXXRC.
+ We extract confidence intervals using an algorithm very similar in behavior
+ to the 
+\begin_inset Quotes eld
+\end_inset
+
+pick a lambda, fit for alpha
+\begin_inset Quotes erd
+\end_inset
+
+ method that is traditional for inverse-square law tests, as seen in Section
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Confidence-Interval-Algorithm"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsubsection
@@ -12900,36 +12988,11 @@ Arbitrary fit
 
 \begin_layout Standard
 Just as for the foil displacement as a function of attractor position, we
- make a model-free fit for the pendulum torque as a function of attractor
- position.
+ make a model-free piecewise-linear fit for the pendulum torque as a function
+ of attractor position.
  Furthermore, by subtracting the foil-motion torque correction from this
- fit, we are able to compensate for the foil-motion systematic.
+ fit, we are able to compensate for any foil-motion systematic.
  This is perhaps the most intuitive and general output of the experiment.
-\end_layout
-
-\begin_layout Subsubsection
-Uncorrected Yukawa fit without systematics
-\end_layout
-
-\begin_layout Standard
-As a cross-check on the Yukawa fitter, we additionally produce best-fit
- results from an earlier generation of the fit programs.
- It does not handle any systematic uncertainties, but it is 
-\bar under
-much
-\bar default
- faster.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMA Should this be dropped?
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Section
@@ -12973,16 +13036,6 @@ name "fig:Gravitational-calibration"
 \end_inset
 
 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMA Reexamine near 1180.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
@@ -12997,15 +13050,15 @@ XXXMA Reexamine near 1180.
 
 \begin_layout Standard
 The torque scale of the instrument is set gravitationally.
- Throughout the operation of the experiment the rotating calibration masses
- (Section 
+ Throughout the operation of the experiment the revolving gravitational
+ calibration masses (Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Calibration"
 
 \end_inset
 
-) inject a torque of amplitude 
+) inject a pendulum torque of amplitude 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../extracted/qTesterTorque.tex"
@@ -13093,7 +13146,11 @@ filename "../extracted/CalibFitWErrInRadians.tex"
 
 \end_inset
 
-, which should be compared with the fiber kappa of 
+, which should be compared with the fiber 
+\begin_inset Formula $\kappa$
+\end_inset
+
+ of 
 \begin_inset CommandInset include
 LatexCommand input
 preview true
@@ -13123,11 +13180,6 @@ Calibration Systematics
 \end_layout
 
 \begin_layout Standard
-It is possible that the calibration torque has a non-gravitational component.
- We do not expect that such an effect is of great concern for this measurement.
-\end_layout
-
-\begin_layout Standard
 As originally-designed, the calibration system had a magnetic-relay 
 \begin_inset Quotes eld
 \end_inset
@@ -13138,9 +13190,9 @@ cycle-mark
 
 , which would allow us to constrain the phase of the rotating attractor's
  motion.
- Both because the cycle mark had reliability trouble and because the rotating
+ Both because the cycle-mark had reliability trouble and because the rotating
  magnet and associated electrical signals could inject a false signal of
- its own, the cycle mark system was disabled, and the rotating magnet removed.
+ its own, the cycle-mark system was disabled, and the rotating magnet removed.
 \end_layout
 
 \begin_layout Standard
@@ -13155,7 +13207,7 @@ The largest possible systematic signals (tilt and direct magnetic coupling
 \end_inset
 
  gravitational signal frequency.
- While a clear 1-
+ While a resolved 1-
 \begin_inset Formula $\omega$
 \end_inset
 
@@ -13173,11 +13225,11 @@ reference "fig:Gravitational-calibration"
 \end_inset
 
 ).
- While a 2-
+ While an unintended 2-
 \begin_inset Formula $\omega$
 \end_inset
 
- signal is a possibility, perhaps through modulation of the background magnetic
+ signal is possible, perhaps through modulation of the background magnetic
  field, the acoustic environment (an acoustic modulation was seen in acousticall
 y-driven studies of the foil interferometer), or the thermal environment,
  any of these effects should be small.
@@ -13204,7 +13256,7 @@ name "sec:Timing"
 \end_layout
 
 \begin_layout Standard
-Timing is the most important weakness to this particular measurement.
+Timing is an important weakness to this particular measurement.
 \end_layout
 
 \begin_layout Standard
@@ -13216,15 +13268,27 @@ no
  system and the pendulum and interferometer readout systems, the computers
  were electrically isolated.
  They share a common transformer-isolated power source, and a common electrical
- ground through a starred grounding arrangement (see XXXMA), but no other
- connections.
+ ground through a starred grounding arrangement (Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Grounding"
+
+\end_inset
+
+), but no other connections.
  Of particular concern was the isolation of the analog-to-digital converting
  boards on each data-acquisition system; no shared signals were allowed
  between them.
- This arrangement appears to have worked very well (see XXXMA-electrical
- systematics).
- The crux of this system is understanding the synchrony of the three systems'
- timing.
+ This arrangement appears to have worked very well (see Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Electrical-Crosstalk"
+
+\end_inset
+
+).
+ The crux of this arrangement is understanding the synchrony of the three
+ systems' timing.
 \end_layout
 
 \begin_layout Standard
@@ -13234,8 +13298,15 @@ In retrospect, it is clear that an investment of the
 
 week of work required to implement and debug a functional optically-isolated
  time distribution system would have paid great dividends.
- Instead, we chose to rely upon the often-reliable NTP time synchronization
- service supported by every major computer operating system.
+ Instead, we chose to rely upon the gold-standard Network Time Protocol
+ (NTP) time synchronization protocol 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "NTP"
+
+\end_inset
+
+ supported (we thought) by every major computer operating system.
  As designed, the three computers would resynchronize their clocks with
  an external reference (either time.nist.gov, or a common local time server
  referenced to time.nist.gov) every 3141 seconds.
@@ -13252,114 +13323,204 @@ s level at all times.
  Had this worked correctly, there would be no important timing concerns.
  In practice, the Windows Time service on at least one computer intermittently
  failed, forcing us to pay much closer attention to timing issues.
+ With retrospective research we note that Microsoft states 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "WindowsTimeKnowledgebase"
+
+\end_inset
+
+: 
+\begin_inset Quotes eld
+\end_inset
+
+Windows XP and later versions of the Windows operating system implement
+ NTP.
+ We do not guarantee and we do not support the accuracy of the W32Time service
+ between nodes on a network.
+ 
+\begin_inset Formula $\ldots$
+\end_inset
+
+ The W32Time service cannot reliably maintain sync time to the range of
+ one to two seconds.
+ Such tolerances are outside the design specification of the W32Time service.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Caveat emptor.
 \end_layout
 
 \begin_layout Standard
-Accounting of available clocks, clock rolls
-\end_layout
-
-\begin_layout Standard
-Sample rates
-\end_layout
-
-\begin_layout Standard
-Drift rates
-\end_layout
-
-\begin_layout Standard
-Synchrony
-\end_layout
-
-\begin_layout Standard
-Final time determination
-\end_layout
-
-\begin_layout Standard
-XXXRC TO COLLABORATORS: 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-This section is not yet really begun.
- This is potentially a huge issue.
- I think the only correct response is to lock in to each individual switch
- of the attractor.
- My analysis does not yet do that.
- It presumes that the clock rates and sample rates match.
+There are at least ten clocks relevant to this analysis: the remote NIST-referen
+ced Network Time Protocol (NTP) server, the user-space clocks on each of
+ the three DAQ systems, the system clocks on each of the three DAQ systems,
+ and the hardware clocks on each of the DAQ cards.
+ The torsion-balance and attractor computers are of greatest importance,
+ and share a common software codebase.
  
 \end_layout
 
+\begin_layout Standard
+The user-space clocks are, in principle, resynchronized with the NTP clock
+ regularly.
+ The user-space clock values are written into the run header files at the
+ beginning of each recorded run.
+ The programs then make a call to the timeGetTime() function in the Windows
+ API, and reference all time measurements to this datum.
+ This function returns the number of milliseconds elapsed since the current
+ session of Windows began.
+ Critically, the returned value is from a user-immutable system clock, and
+ not the user-space clock.
+ No changes due to NTP-related synchronizations (or lack thereof) are evident
+ in the data.
+ Therefore, all runs that began with synchronized clocks share a common
+ datum.
+ At the ends of runs which terminated normally, the user-space clock (which
+ is altered by NTP) is again written into the header file.
+ This allows a cross-check on the duration of the run by cross-comparing
+ the user-space and system-clock durations.
+\end_layout
+
+\begin_layout Standard
+Each DAQ computer has both a system clock and a hardware clock in the DAQ
+ card.
+ The data-taking cadence is defined by the DAQ card.
+ For both the pendulum-computer's internal NI-6259 and the external USB
+ NI-6211s used on the attractor and interferometer computers, the manufacturer
+ guarantees the clock stability to 50 ppm, or 4 s/day.
+ In Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Clock-rates,-corrected"
+
+\end_inset
+
+, we use the NTP timing data to characterize the tick-rate stability of
+ the system clocks and then use the stability of the system clocks to characteri
+ze the stability of the DAQ hardware clocks.
+ Furthermore, we use the NIST-synchronized NTP data to correct both the
+ pendulum and interferometer computer's Windows clock tickrates to guarantee
+ that they tick at equal rates.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
 \begin_layout Plain Layout
-Look at 3169lags.
- On long runs, the difference between sample rate and attractor rate matters.
+\align center
+\begin_inset Graphics
+	filename /home/charlie/trialEotwash/Eotwash/runAnalysis/supportingPlots/timingPlot.eps
+	width 60page%
+	rotateAngle 270
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
-No easy answer here? May have to continuously resync to edges? Tricky.
- No synchronous timing signal makes it harder.
- have to believe the clocks?
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Clock-rates,-corrected"
+
+\end_inset
+
+Clock rates: corrected clock rates (upper panel) and demonstrating the long-term
+ stability of DAQ sample rates (lower panel)
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
-Square wave in 3169 is locked to the clock, not to samples.
- Drift is ~60 degrees in phase through the whole 300,000
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Once we have characterized the clocks' stability, we can synchronize the
+ clock rates.
+ Of note is the fact that the attractor computer's DAQ sample rate differed
+ by 
+\begin_inset Formula $10^{-4}$
+\end_inset
+
+ from the other two computers.
+ Fortunately, the attractor drive was timed by the attractor computer's
+ clock, and not the DAQ clock, so no additional clock shifts were necessary,
+ as the lock-in algorithm uses computer-clock time, not sample number.
+ 
+\end_layout
+
+\begin_layout Standard
+With the clock rates matched, we must then align the datums of each clock
+ at the start of each run.
+ The clocks were manually observed to be synchronous with sub-second precision
+ in almost every run.
+ In a few cases, they were observed to be asynchronous with as much as a
+ 25
 \begin_inset space ~
 \end_inset
 
-s run.
-\end_layout
-
+s offset.
+ To be conservative, we assume that no run is synchronized to better than
+ 25
+\begin_inset space ~
 \end_inset
 
+s.
+ Dropping 50
+\begin_inset space ~
+\end_inset
 
-\end_layout
+s per step, or 100
+\begin_inset space ~
+\end_inset
 
-\begin_layout Standard
-With three data acquisition computers running simultaneously, relative timing
- is important.
+s per period, is a brutal but acceptable step, as the attractor-motion period
+ is 256
+\begin_inset space ~
+\end_inset
+
+s.
+ The installation of a simple time-distribution system will completely remove
+ this source of uncertainty in the future, making sub-second synchronization
+ straightforward in the future.
  
 \end_layout
 
 \begin_layout Standard
-In practice, it was observed that the resynchronization system would fail
- intermittently, making a hand accounting of known clock changes necessary.
- In the two runs where the attractor touches the foil, we have synchronous
- signals in all three computers, allowing some cross-checking of the accounting.
-\end_layout
-
-\begin_layout Standard
-Further complicating the synchronization effort is the fact that for the
- torsion-balance and attractor computers, the data-acquisition system sample
- rate is controlled by the data-acquisition card's clock, and not the computer
- clock.
- Furthermore, the attractor and torsion-balance DAQ system sample rates
- are different at the 
-\begin_inset Formula $\sim0.1\%$
+A minor concern was the occasional 
+\begin_inset Quotes eld
 \end_inset
 
- level
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMI bound me
-\end_layout
-
+clock roll
+\begin_inset Quotes erd
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-3157, 3149, 
-\end_layout
-
-\begin_layout Standard
-Clock rolls
-\end_layout
-
-\begin_layout Standard
-Run-distribution plot?
+ The timekeeping on the attractor and pendulum DAQ systems was referenced
+ to the Windows clock, which reports time as a 32-bit integer number of
+ milliseconds.
+ If the DAQ program runs for more than 49 days without restarting, the 32-bit
+ integer will overflow.
+ These clock rolls are easy to detect and correct, so the analysis software
+ automatically detects and corrects the few occasions on which they occur.
 \end_layout
 
 \begin_layout Section
@@ -13389,11 +13550,7 @@ filename "../extracted/numberOfCuts.tex"
 
 \end_inset
 
- 'cuts' for further analysis.
-\end_layout
-
-\begin_layout Subsection
-Attractor-correlated signal extraction
+ `cuts' for further analysis.
 \end_layout
 
 \begin_layout Subsection
@@ -13411,16 +13568,20 @@ name "sub:Synchronization"
 Data are imported from three separate sources (torsion balance, attractor
  control, interferometer), and trimmed in length to present only data with
  complete temporal overlap between relevant sources.
- If needed (runs XXXRC), any timing offsets between the clocks are incorporated
- before trimming.
  All three sources sample with a fixed 0.8
 \begin_inset space ~
 \end_inset
 
-s sample interval, so any timing mismatch is at most 1.6 s.
- When interferometer data are unavailable, the interferometer's data structures
- are created and filled with zeros, except the timing information, which
- is copied from the torsion balance data.
+s sample interval, so any extra timing mismatch (beyond that discussed in
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Timing"
+
+\end_inset
+
+ is at most 1.6 s.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -13445,7 +13606,6 @@ status open
 \begin_inset Graphics
 	filename ../runAnalysis/supportingPlots/run3147filterFrequencyResponse.eps
 	width 75text%
-	BoundingBox 50bp 50bp 554bp 770bp
 
 \end_inset
 
@@ -13478,60 +13638,60 @@ name "fig:FIR Filter Transfer Functions"
 \end_layout
 
 \begin_layout Standard
-In this field, it is traditional to subtract the gravitational calibration
- tone, remove low frequency drifts on a per-cut basis through linear fits
- and average away unnecessary high-frequency information (often in hardware).
+In this field, it is traditional to fit for and subtract the gravitational
+ calibration tone, remove low frequency drifts on a per-cut basis through
+ linear fits and average away unnecessary high-frequency information (often
+ in hardware).
  In combination, these actions amount to the construction of a complicated
- filter, with interesting frequency dependence; the low-frequency linear
- fit is of particular interest, as a linear fit is 
+ filter, with interesting frequency dependence and phase behavior.
+ The low-frequency linear fit is of particular interest, as a linear fit
+ is 
 \bar under
 not
 \bar default
  orthogonal to a Fourier series.
- We trade the combination of filter-like fits for a single filter.
- The gravitational calibration signal is removed by notch filters at 
-\begin_inset Formula $1\omega$
-\end_inset
-
- and 
-\begin_inset Formula $2\omega$
-\end_inset
-
-, the drift is removed by a millihertz high-pass filter, and the high-frequency
- averaging is performed by a low-pass filter.
- For an finite-impulse-response filter (FIR) of sufficient duration, the
- band-stopping power can be larger than 1000 (60
-\begin_inset space ~
-\end_inset
-
-dB).
+ We trade the complex combination of filter-like fits for a single non-trivial
+ filter.
  
 \end_layout
 
 \begin_layout Standard
-Three columns of data are fed through FIR filters of length 9600 samples
- (
-\begin_inset Formula $10\mbox{ switches}\times256\mbox{ second attractor period}\times3\mbox{ cuts}\div0.8\mbox{ seconds/sample}$
+Data are fed through FIR filters of length 9600 samples (10 samples 
+\begin_inset Formula $\times$
 \end_inset
 
-).
+ 256-second attractor period 
+\begin_inset Formula $\times$
+\end_inset
+
+ 3 cuts 
+\begin_inset Formula $\div$
+\end_inset
+
+ 0.8 s per sample).
+ For a finite-impulse-response filter (FIR) of this duration, the band-stopping
+ power can be larger than 1000 (60
+\begin_inset space ~
+\end_inset
+
+dB).
  The filters are designed by the 
 \family typewriter
 octave-forge
 \family default
- function '
+ function `
 \family typewriter
 fir1
 \family default
 ' 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "octave:2012"
 
 \end_inset
 
 .
- The function designs 'windowed filters' with linear phase response.
+ The function designs `windowed filters' with linear phase response.
  Filters with linear phase response have frequency-independent phase delays
  
 \begin_inset CommandInset citation
@@ -13541,7 +13701,7 @@ key "Oppenheim:1999:DSP:294797,OrfandisSignalProcessing"
 \end_inset
 
 .
-  The torsion balance feedback signal is sent through a filter with passband
+  The torsion balance science signal is sent through a filter with passband
  from 
 \begin_inset CommandInset include
 LatexCommand input
@@ -13573,7 +13733,7 @@ mHz with notch filters at the calibration tone's
 \end_inset
 
 mHz).
- Other sensors to be analyzed in sync with the attractor are fed through
+ All other sensors to be analyzed in-sync with the attractor are fed through
  a low-pass filter with a corner frequency at 
 \begin_inset CommandInset include
 LatexCommand input
@@ -13585,10 +13745,9 @@ filename "../extracted/filterSensorHigh.tex"
 \begin_inset space ~
 \end_inset
 
-mHz.
- This frequency is chosen to be comparable to the DAQ software filters.
- The sensor filtering is done to guarantee that all locked-in sensors share
- timebase/phase with the filtered torque signal.
+mHz, coincident with the Nyquist frequency.
+ This almost-inconsequential filter is applied to guarantee that all locked-in
+ sensors share timebase/phase with the filtered torque signal.
  The first 
 \begin_inset Formula $1.5\times(\mbox{filter length})$
 \end_inset
@@ -13675,18 +13834,28 @@ status open
 
 \end_inset
 
- The 3-cut length of the FIR filter was chosen by balancing the need for
- effective suppression of the rising 100
-\begin_inset space ~
-\end_inset
-
-mHz autocollimator noise (pushes to longer length) with the need to reject
- the effects of spikes/kicks (earthquakes and attractor-foil contact).
+ The 3-cut length of the FIR filter was chosen by balancing the need to
+ sufficiently attenuate and frequency-select the injected calibration signal
+ (pushes to longer-duration filters) with the need to reject the effects
+ of spikes/kicks (earthquakes and attractor-foil contact).
  A spike, with amplitude orders of magnitude larger than the calibration
  tone, contaminates the entire FIR filter length with ringing.
  With a 3-cut filter, a single spike makes more than two hours data unusable;
  a longer filter (5-cut is the next symmetric choice) would be even less
  forgiving.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMA; plot to show that cuts align with attractor cut-blocks
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -13701,42 +13870,16 @@ name "sub:Edge-finding"
 \end_layout
 
 \begin_layout Standard
-While many regions of temporal overlap between the three different data
- sources begin with the beginning of a cut, not all do.
- Therefore, it is necessary to examine the piecewise square-wave motion
- of the attractor to determine the phase of the attractor's steps.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Box Boxed
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status collapsed
-
-\begin_layout Plain Layout
-
-\size small
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "../mlib/findRisingEdge.m"
-lstparams "caption={findRisingEdge.m},language=Matlab"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
+We must synchronize the data analysis cuts with the attractor motion.
+ The first step in synchronizing is to find the square-wave edges.
+ This is done by passing a simple edge-detection algorithm along the filtered
+ data, looking for the first time the attractor's position passes through
+ the mean position of the data set.
+ Once this edge is found, the edge is projected backward in time, modulo
+ the attractor step frequency, to find the first step.
+ While crude, it is simple, and has proven reliable in synchronizing the
+ analysis cuts with the data.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -13768,11 +13911,21 @@ reference "fig:AttractorMotionLag"
 \end_inset
 
 ).
- In addition, the pendulum feedback has a finite response time (See Figure
- 
+ Furthermore, the attractor control system begins to actuate the modulator
+ valve 10
+\begin_inset space ~
+\end_inset
+
+s before the position change.
+ In addition, the pendulum feedback has a finite response time of about
+ 20
+\begin_inset space ~
+\end_inset
+
+s (See Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:TorqueFeedbackLag"
+reference "fig:ElectronicTorqueLag"
 
 \end_inset
 
@@ -13790,34 +13943,41 @@ filename "../extracted/filterSensorHigh.tex"
 \end_inset
 
 mHz.
- The pneumatic DAQ filter has a lowpass at 0.33
+ The pneumatic DAQ filter has a lowpass at 333
 \begin_inset space ~
 \end_inset
 
-Hz.
+mHz.
  The synchronization uncertainty among the three acquisition computers is
- at most 0.8
+ at most 1.6
 \begin_inset space ~
 \end_inset
 
-s (one sample-time).
- In the case of clock drifts, which affect runs XXXRC, it can be as large
- as XXXRC.
+s (two sample-times).
+ To account for clock drifts and offsets, we add 
+\begin_inset Formula $\pm25$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+s.
  The autocollimator (and on-line feedback) DAQ filter corner was 1
 \begin_inset space ~
 \end_inset
 
 Hz.
- Feedback torque DAQ filter at 0.2
+ The pendulum feedback control loop had an internal low-pass filter at 200
 \begin_inset space ~
 \end_inset
 
-Hz.
- The feedback P-term was anti-aliased at 0.33
+mHz.
+ The feedback proportional-term was anti-aliased at 333
 \begin_inset space ~
 \end_inset
 
-Hz (for storage only).
+mHz (for recorded data only).
  The acausal torque passband FIR filter 
 \begin_inset CommandInset include
 LatexCommand input
@@ -13955,7 +14115,7 @@ mHz high-pass filter.
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 \begin_inset Quotes eld
 \end_inset
 
@@ -13973,7 +14133,8 @@ The general problem of filter combination is simple in frequency-space,
 \end_layout
 
 \begin_layout Standard
-Serendipity provides a solution to the problem.
+The experiment itself provides a solution to the problem of determining
+ the settling-time of the overall torque feedback system.
  The pendulum has a magnetic moment (see 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -13996,7 +14157,14 @@ reference "sub:Attractor-position-control"
  By combining the gauge with the coil and an amplifier, it is possible to
  make an exact and magnified simulation of a gravitational signal that is
  linear in attractor position.
- 
+ See Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ElectronicTorqueLag"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -14039,7 +14207,7 @@ Injected torques for dead-time determination after all filters.
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Delay times
 \end_layout
 
@@ -14051,8 +14219,8 @@ reference "fig:ElectronicTorqueLag"
 
 \end_inset
 
-, we conclude that it is conservative to choose the following dead times:
- The 
+ and the timing-offset concerns enumerated above, we conclude that it is
+ conservative to choose the following dead times: The 
 \begin_inset Quotes eld
 \end_inset
 
@@ -14148,9 +14316,9 @@ name "fig:Windowing"
 \begin_layout Standard
 Windowing is familiar to many as a method for reducing the magnitude of
  spectral leakage in Fourier transforms.
- It is also of use, as a low-pass filter, in reducing the sensitivity of
- an averaged value to high frequency fluctuations at a modest expense in
- statistical resolving power.
+ It is also useful in the time-domain as a low-pass filter, reducing the
+ sensitivity of an averaged value to high frequency fluctuations at a modest
+ expense in statistical resolving power.
  In this analysis, a Hann window is used 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -14169,7 +14337,7 @@ of
 \bar default
  a particular window.
  Several windowing schemes were explored, without significant improvement.
- The final weighting of data used for our analysis is shown in Fig 
+ The final weighting of data used for our analysis is shown in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Windowing"
@@ -14194,7 +14362,7 @@ name "sub:Lock-in"
 Once the dead times are chosen, a window selected, and a leading edge found,
  locking in is straightforward.
  Beginning at a time prescribed by a leading edge, the analysis program
- walks through each data stream, multiplies the data found in each 'step
+ walks through each data stream, multiplies the data found in each `step
  period' (1/2 the attractor motion period) by the properly-delayed window
  function, and computes the weighted average.
  The resulting average forms a single measurement.
@@ -14206,10 +14374,18 @@ filename "../extracted/lockAve.tex"
 \end_inset
 
  measurements per cut.
- This is done by the octave function 'squareLockM.m'
+ 
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+This is done by the octave function `squareLockM.m'
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Box Boxed
 position "t"
 hor_pos "c"
@@ -14229,7 +14405,12 @@ status open
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "../mlib/squareLockM.m"
-lstparams "breakatwhitespace=true,breaklines=true,caption={findRisingEdge.m},emptylines=0,language=Matlab,linerange={1-17,19-23,71-104}"
+lstparams "breakatwhitespace=true,breaklines=true,emptylines=0,language=Matlab,linerange={1-17,19-23,71-104},caption={squareLockM.m}"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -14242,10 +14423,10 @@ lstparams "breakatwhitespace=true,breaklines=true,caption={findRisingEdge.m},emp
 \end_layout
 
 \begin_layout Standard
-The first measurement, and every other subsequent measurement, is regarded
- as an 'A' measurement.
- The second measurement, and every other subsequent measurement (the complement
- of the As), is regarded as a 'B' measurement.
+The first measurement, and every-other subsequent measurement, is regarded
+ as an `A' measurement.
+ The second measurement, and every-other subsequent measurement (the complement
+ of the As), is regarded as a `B' measurement.
  Because the pneumatic drive takes about one attractor period to come into
  equilibrium (if coming from a different A/B position pair in the previous
  cut), the first A and B measurements are dropped from quantitative analysis.
@@ -14260,7 +14441,7 @@ nts are stored for each cut.
 \end_layout
 
 \begin_layout Standard
-The 'lock-in' is made by taking the difference between the average of the
+The `lock-in' is made by taking the difference between the average of the
  As and the average of the Bs.
  
 \end_layout
@@ -14269,84 +14450,8 @@ The 'lock-in' is made by taking the difference between the average of the
 \begin_inset Note Note
 status collapsed
 
-\begin_layout Section
-For Collaborators
-\end_layout
-
-\begin_layout Plain Layout
-I see that there are a few ways to do the signal extraction with PlateWash.
-\end_layout
-
-\begin_layout Enumerate
-Pass the torque data through the filter mentioned in 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sub:Filtering"
-
-\end_inset
-
- (which notches out the Q-tester and bandpasses out the autocollimator noise),
- use a flat-topped window on each step, then lock in.
- 
-\end_layout
-
-\begin_layout Enumerate
-Option 1, but with a Hann window (this is my current solution, is more conservat
-ive), but may give away 
-\begin_inset Formula $\sim\sqrt{2}$
-\end_inset
-
- in signal.
-\end_layout
-
-\begin_layout Enumerate
-Fit out the Q-tester (which is delicate on long/spiked data sets), lock
- in with a low-passing window, tolerate detrending as a high-pass.
-\end_layout
-
 \begin_layout Subsection
 Questions:
-\end_layout
-
-\begin_layout Itemize
-Is it kosher to simply square-lock the FIR-filtered data (option 1 above)?
- 
-\end_layout
-
-\begin_layout Itemize
-I could shorten the FIR filter to a shorter length (perhaps 2560
-\begin_inset space ~
-\end_inset
-
-s instead of the current 7680
-\begin_inset space ~
-\end_inset
-
-s), at a loss of spectral specificity, especially for the 1mHz high-pass.
- 
-\end_layout
-
-\begin_layout Itemize
-Which lags do you think I should use?
-\end_layout
-
-\begin_layout Itemize
-Is it necessary to analyze the data two independent ways in order to guarantee
- that there's not a bug?
-\end_layout
-
-\begin_layout Itemize
-In an environment where lags are important, is there any use to a quadrature
- signal? I do all the same computations for a signal 90 degrees out of phase,
- but I don't use it, as it's unclear if it's useful.
- 
-\end_layout
-
-\begin_layout Itemize
-In a perfect world, I'd do careful analysis of the dependence of output
- on each lag, filter frequency, window parameter, fitting algorithm, etc..
- How important is it to do so? Are you comfortable with a conservative choice
- of lag?
 \end_layout
 
 \begin_layout Itemize
@@ -14361,1287 +14466,6 @@ source code used for the analysis, as much as possible as inline text instead
  A lot of dirty laundry lies in an experiment's source code; I want to air
  it out.
  Do you have any thoughts on how I can do it, but keep things readable?
-\end_layout
-
-\begin_layout Itemize
-Issues:
-\end_layout
-
-\begin_layout Itemize
-Does algorithm reject everything that's bad.
-\end_layout
-
-\begin_layout Itemize
-Does algorithm keep everything that's good?
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Section
-XXY: If Re-implementing this section, confront XXYs.
- Signal Extraction
-\end_layout
-
-\begin_layout Plain Layout
-The attractor's position was modulated in a square wave with a period of
- 256
-\begin_inset space ~
-\end_inset
-
-s, an integer number of 0.8
-\begin_inset space ~
-\end_inset
-
-s data acquisition samples.
- At every position change, after an XXY
-\begin_inset space ~
-\end_inset
-
-s delay to allow the attractor and pendulum feedback systems to come into
- equilibrium, the pendulum torque was measured for XXY
-\begin_inset space ~
-\end_inset
-
-s.
- The absolute torque measurements were converted into torque differences
- by subtracting the mean (XXY windowing!) of the torque measurements when
- the pendulum-attractor distance was small from the mean of the torque measureme
-nts when the distance was large that immediately preceded and succeeded
- it XXY.
-  XXY lockAve, windowing length.
-\end_layout
-
-\begin_layout Subsection
-Synchronization
-\end_layout
-
-\begin_layout Plain Layout
-Data are imported from three separate sources (torsion balance, attractor
- control, interferometer), and trimmed in length to present only data with
- complete temporal overlap.
- If needed (runs XXY), any timing offsets between the three clocks are incorpora
-ted before trimming.
- In instances where interferometer data are unavailable, the interferometer's
- data structures are created and filled with zeros, except the timing informatio
-n, which is copied from the torsion balance data.
-\end_layout
-
-\begin_layout Subsection
-Filtering
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename ../runAnalysis/supportingPlots/run3147filterFrequencyResponse.eps
-	width 75col%
-	BoundingBox 50bp 50bp 554bp 770bp
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Transfer functions of software low-pass filters.
- XXY data before/after, show data that contains signal, show that science
- is unfiltered.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Three columns of data are fed through FIR filters of length 9600 samples
- (
-\begin_inset Formula $10\mbox{ switches}\times256\mbox{ second attractor period}\times3\mbox{ cuts}\div0.8\mbox{ seconds/sample}$
-\end_inset
-
-).
- The filters are designed by the octave-forge function 'fir1'.
- The torsion balance feedback signal is sent through a filter whose parameters
- are described in fir1 syntax as [0.001,0.0045,0.005,0.009,0.010,0.05].
- This corresponds to a bandpass filter from 
-\begin_inset Formula $\sim1-25$
-\end_inset
-
- mHz with notch filters at 3 and 6 mHz to remove the calibration tone.
- The attractor and interferometer signals are fed through a filter described
- as an 
-\begin_inset Quotes eld
-\end_inset
-
-0.1
-\begin_inset Quotes erd
-\end_inset
-
- lowpass filter.
- [XXY get frequencies right] This is primarily done to guarantee that the
- attractor and interferometer signals share timebase/phase with the signal
- from the pendulum.
- To finish the filtering step, the first 14400 samples (1.5 
-\begin_inset Formula $\times$
-\end_inset
-
- 9600) are clipped from the beginning of all data to remove the filter-initializ
-ing effects.
- XXY What order to put this section in WRT calibration?
-\end_layout
-
-\begin_layout Subsection
-Edge Finding
-\end_layout
-
-\begin_layout Plain Layout
-To ensure that the phases of each run are correct with respect to the attractor
- 256 s carrier frequency, an adaptive edge finding method detects rising
- and falling edges of attractor motion.
- In the many runs which featured XXY
-\end_layout
-
-\begin_layout Subsection
-Torque Calibration
-\end_layout
-
-\begin_layout Plain Layout
-While the torque scale is ultimately hardcoded with the value set in 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Calibration"
-
-\end_inset
-
-, the analysis routine is capable of calibrating each data set independently.
- The analysis routine is designed to fit and subtract both the 1-
-\begin_inset Formula $\omega$
-\end_inset
-
- and 2-
-\begin_inset Formula $\omega$
-\end_inset
-
- signals from the attractor.
- The fitting algorithm implements a binary search in frequency for the maximum
- fit amplitude present in the data.
- At present, there is no cycle-mark on the calibration attractor, so no
- attempt is made to match the phase of the fit with an external phase reference.
-\end_layout
-
-\begin_layout Plain Layout
-To remove transients before fitting, torque data are passed through a 'spikeRemo
-ver', applied to the data's time derivative.
- As the calibration signal is continuous, transient signals are interpreted
- as spurious.
- Any 100 s region of data centered on a suspected spike is excised completely.
- Spike detection uses a an aggressive version of Chauvenet's criterion XXY
- (ref).
- XXY (Peirce's criteron may actually be better for this?) The implementation
- loops 20 iterations of the spike removing code to ensure that spikes of
- multiple scales (or spikes sufficiently numerous to pull the initial standard
- deviation) are rejected.
- 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Note Comment
-status collapsed
-
-\begin_layout Plain Layout
-XXXMI spike-removal plots
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
-Implementation
-\end_layout
-
-\begin_layout Plain Layout
-Spike-removing code, edited for inconsequential diagnostic code/comments.
-\end_layout
-
-\begin_layout LyX-Code
-\begin_inset listings
-lstparams "basicstyle={\scriptsize},breaklines=true,language=Octave,tabsize=2"
-inline false
-status collapsed
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-function out = spikeRemover(time, data, chopWidth)
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	d = diff(data,1 );
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	% see chuckData for a similar implementation without delays
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	% assumes data are regularly sampled
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	numPoints = rows(d);
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	stdDev = std(d);
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	dmean = mean(d);
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	crit = sqrt(2) * stdDev .* erfinv( 1- 1 / numPoints);
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	crit( crit == 0.0 ) = 1.0;
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	repHigh = repmat(dmean+crit, numPoints, 1);
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	repLow  = repmat(dmean-crit , numPoints, 1);
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	% Single | does the right thing for matrices.
- Matlab has no ||.
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	pitch = ( ( d > repHigh) | ( d < repLow) );
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-       
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	%Loop to cut chopWidth in time around each detected spike.
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	pdata = zeros(rows(d), 1);
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	for i = 1:length(pitch)
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-		if (pitch(i) != 0)
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-			low = i - chopWidth;
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-			if low < 1
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-				low = 1;
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-			end
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-			high = i + chopWidth;
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-			if high > ( rows(data) - 1) % minus one added 1/3/2010
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-				high = rows(data) - 1;
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-			end
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-			for j =  low : high
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-				pdata(j) = 1;
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-			end
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-		end
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	end
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	pdata = -1*(pdata-1);
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	data = data(1:rows(data) - 1);
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	time = time(1:rows(time) - 1);
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	data = data( logical(pdata) );
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	time = time( logical(pdata) );
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	out = [time data];
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-end
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Peak fitting code, lightly edited for inconsequential code:
-\end_layout
-
-\begin_layout LyX-Code
-\begin_inset listings
-lstparams "basicstyle={\scriptsize},breaklines=true,language=Octave,tabsize=2"
-inline false
-status collapsed
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-function  [beta, sigma, r, bestFreq, out, ERR, COV]= peakFitter3(t, data,
- fLow, fHigh)
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	%Hunt for peak
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	minsigma = 1e99;
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	maxIndex = 0;
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	bestFreq = 10000;
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	binWidth=1/(t(2)-t(1)) / length(t); % gets the bin width approximately
- right in order to set ntries
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	nTries=( fHigh - fLow) / binWidth * 4; 
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	%%% Find the center peak of the sinc window response %%%%
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	for i = 1:nTries
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-		guessFreq = fLow + ( i - 1 ) * ( fHigh - fLow) / nTries;
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-		[beta, sigma, r] = ols2( data, genSineSeed( t, guessFreq ) );
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-		out(i,1) = guessFreq;
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-		out(i,2) = sigma;
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-		if(sigma<minsigma)
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-			minsigma = sigma;
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-			maxIndex = i;
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-			bestFreq = guessFreq;
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-		end
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	end
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	%%% Bisection - bisect inward to find the true peak %%%
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	bisect = zeros(3,2); 
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	bisect(1,1) = out( maxIndex - 1 , 1 );
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	bisect(1,2) = out( maxIndex - 1 , 2 );
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	bisect(3,1) = out( maxIndex + 1 , 1 );
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	bisect(3,2) = out( maxIndex + 1 , 2 );
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	% 5 is a magic number that seems to work all the time.
- The right magic number is < 10 and should be a mathematical constant.
-  
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	for i=1:5	 %pick the center of the interval
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-		bisect(2,1) = ( bisect(3,1) - bisect(1,1) ) / 2 + bisect(1,1); 
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-		%fit at the center
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-		[beta, sigma, r] = ols2( data , genSineSeed(t,bisect(2,1)) );
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-		bisect(2,2) = sigma;
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-		%interpolate a parabola to the data
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-		seedMatrix = [bisect(:,1).^2  bisect(:,1) ones(3,1)];
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-		%Look, ma! I learned something in all that math 'scoolin.
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-		pb = inv( seedMatrix ) * bisect(:,2);
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-		%find the location of the parabola's vertex
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-		bestFreq = - pb(2) / 2 / pb(1);
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-    
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-		if(abs(bestFreq-bisect(2,1))>(bisect(3,1)-bisect(1,1)))
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-			error("Traversed out of bisection interval.");
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-		end
-\end_layout
-
-\begin_layout LyX-Code
-
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-		if(bestFreq <= bisect(2,1))
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-			bisect(3,:) = bisect(2,:);
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-		else
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-    		bisect(1,:) = bisect(2,:);
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-		end
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	end
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	[beta,sigma, r, ERR, COV] = ols2( data , genSineSeed(t,bestFreq) ); 
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-end
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout LyX-Code
-
-\end_layout
-
-\begin_layout Plain Layout
-The function ols2 (an ordinary linear least-squares routine) differs from
- the Octave-Forge 2.1.73 implementation of ols.m by the inclusion of 
-\end_layout
-
-\begin_layout LyX-Code
-COV = inv(Z); 
-\end_layout
-
-\begin_layout Plain Layout
-and
-\end_layout
-
-\begin_layout LyX-Code
-COV = pinv(X); 
-\end_layout
-
-\begin_layout Plain Layout
-in the appropriate places in order to make the computation
-\end_layout
-
-\begin_layout LyX-Code
-ERR = sqrt(diag(COV)*SIGMA); 
-\end_layout
-
-\begin_layout Plain Layout
-possible.
- 
-\end_layout
-
-\begin_layout Subsection
-Attractor-correlated torque measurement
-\end_layout
-
-\begin_layout Plain Layout
-The attractor moves every 128 s.
- After XXY s, the attractor is nearly stationary until its next movement.
- The science signal is the difference in torque on the pendulum between
- stationary steps.
- For narrowed bandwidth, we alternate 10 times between two states.
- This set of 20 (becomes 18 - see 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sub:Aggregation/Differencing"
-
-\end_inset
-
-) measurements ('bins' below XXY word choice) comprises a 'cut'.
- 
-\end_layout
-
-\begin_layout Subsubsection
-Padding
-\end_layout
-
-\begin_layout Plain Layout
-In order to prevent the contamination of each bin by transient effects from
- attractor motion and by small XXY (size?) synchronization errors between
- the three data acquisition computers, the analysis does not accept measurements
- until XXY s after each position change and ceases to accept them XXYs before
- each position change (XXY do I do this in seconds or samples? Does it matter?
- Does it beat?)
-\end_layout
-
-\begin_layout Plain Layout
-XXY Need plots to justify choices.
-\end_layout
-
-\begin_layout Subsubsection
-Weighting/windowing
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Note Comment
-status collapsed
-
-\begin_layout Plain Layout
-XXXMI Weighting seems important, even if I choose not to use it here.
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Preventing the aliasing of high frequency noise into low frequency measurements
- is of particular importance to the PlateWash measurement.
- As the torsion balance operates in feedback, autocollimator noise, (white
- in angle), rises like 
-\begin_inset Formula $f^{2}$
-\end_inset
-
- in torque.
- As an simple anti-aliasing measure, the data within each accepted bin are
- multiplied by a parabolic (Welch) window function before averaging.
- To preserve normalization, the weights are independently accumulated, and
- the ratio of accumulated weighted data to accumulated weight is the reported
- average for each bin.
-\end_layout
-
-\begin_layout Plain Layout
-XXY Plot of transfer function with and without owing.
-\end_layout
-
-\begin_layout Subsubsection
-Implementation
-\end_layout
-
-\begin_layout Plain Layout
-The code below is trimmed from the original implementation (alternate weighting
- schema and supporting variables were the primary redaction), and may not
- execute properly.
- XXY (clean it up?)
-\end_layout
-
-\begin_layout LyX-Code
-\begin_inset listings
-lstparams "basicstyle={\scriptsize},breaklines=true,language=Octave,tabsize=2"
-inline false
-status collapsed
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-function [out squareWave outTime] = squareLockM(timeCol, data, stepPeriod,
- risingEdgeTime, startDelay, endPad, weighting)
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	outTime   = [];
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	pTime	 = endPad;
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	dTime	 = startDelay;
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	weightLength  = stepPeriod-pTime-dTime;
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	squareWave    = zeros(length(data),1);
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	outputCounter = 1;
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	avecounter    = 0;
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	aveVecProto   = zeros(1,columns(data));
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	aveVec        = aveVecProto;
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	sampleTime    = data(2,timeCol) - data(1,timeCol);
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	stepTime      = mod( (data(:,timeCol) - risingEdgeTime) , stepPeriod);
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	acceptValues  = ( stepTime > dTime & stepTime < (stepPeriod - pTime) );
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	if( weighting == 1 )
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-		weight2 = 1.
- / 2 * (1 - cos( 2*pi / (weightLength) * (stepTime-dTime) ) );
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	end
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	for i = 1:length(data)
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-		if(acceptValues(i))
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-			flag = 1;
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-			aveVec      = aveVec + data(i,:) * weight2(i);
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-			avecounter += weight2(i);
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-			if(weighting != 0 )
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-				squareWave(i) = weight2(i);
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-			else
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-				squareWave(i) = 1;
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-			end
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-		endif
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-		%Average and reset
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-		if( !acceptValues(i) && flag==1 )
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-			flag=0;
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-			out(outputCounter, :) = aveVec ./ avecounter;
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-			outTime = [ outTime ; data(i,timeCol)];
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-			aveVec     = aveVecProto;
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-			avecounter = 0;
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-			outputCounter++;
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-		end
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-	end
-\end_layout
-
-\begin_layout LyX-Code
-\paragraph_spacing single
-
-end %function
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Aggregation/Differencing
-\begin_inset CommandInset label
-LatexCommand label
-name "sub:Aggregation/Differencing"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-After the 
-\end_layout
-
-\begin_layout Paragraph
-Bandwidth
-\end_layout
-
-\begin_layout Plain Layout
-Anti-aliasing on a single bin is insufficient to reach a narrow-enough bandwidth
- to escape the high frequency noise, m 
 \end_layout
 
 \end_inset
@@ -15667,7 +14491,14 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXXRC
+\align center
+\begin_inset Graphics
+	filename plots/triangleExample.eps
+	width 80page%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -15680,7 +14511,17 @@ name "fig:TriangleScatterPlot"
 
 \end_inset
 
-Your first 'triangle plot'
+Your first `triangle plots', for both Yukawa-like and linear torques.
+ The upper frames show the simulated torque-as-a-function of distance curves.
+ The middle frames show the `triangle plots' themselves; note the difference
+ between them in the upper right corners.
+ The bottom frames show a projection of the torque-difference data along
+ the diagonals (
+\begin_inset Formula $A=B$
+\end_inset
+
+) of the triangle plots; this is a helpful view that may make the difference
+ between the plots more clear.
 \end_layout
 
 \end_inset
@@ -15703,8 +14544,8 @@ A clear method of visualization is important to understanding the output
 \begin_inset Formula $\Delta\tau(\mbox{start},\mbox{end})$
 \end_inset
 
-, we can plot every measurement in the experiment in a single plot, as in
- Figure 
+, we can plot every torque-difference measurement in a single plot, shown
+ in the middle panels of 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:TriangleScatterPlot"
@@ -15716,98 +14557,90 @@ reference "fig:TriangleScatterPlot"
 \end_layout
 
 \begin_layout Standard
-Three dimensional plots are difficult to read, three dimensional plots with
- errorbars are worse.
- Furthermore, the scatter in a plot like Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:TriangleScatterPlot"
-
+We refer to these plots as 
+\begin_inset Quotes eld
 \end_inset
 
- is dominated by the noisiest points.
- As shown in (plot of noise vs.
- time), the noise in PlateWash varies by orders of magnitude with environmental
- conditions; we're interested mostly in the points with least scatter.
- 
-\end_layout
-
-\begin_layout Standard
-In order to present the result in a meaningful and two-dimensional way,
- the 'triangle plot' was developed.
- In order to improve the statistics by a factor of two, we make the assumption
- that 
-\begin_inset Formula $\Delta\tau(a,b)=\Delta\tau(b,a)$
+triangle plots
+\begin_inset Quotes erd
 \end_inset
 
-, and fold the points over the 
-\begin_inset Formula $a=b$
+ because, if all is well experimentally, the plot will be reflection anti-symmet
+ric about the ascending diagonal (
+\begin_inset Quotes eld
 \end_inset
 
- axis.
- In order to plot points with uncertainties, measurements are plotted as
- circles in the 
-\begin_inset Formula $a,b$
+
+\begin_inset Formula $y=x$
 \end_inset
 
- plane.
- The magnitude of 
-\begin_inset Formula $\Delta\tau$
+
+\begin_inset Quotes erd
 \end_inset
 
- is represented by the radius of the circle.
- To provide an errorbar, the region from 
-\begin_inset Formula $\Delta\tau+\sigma_{\tau}$
-\end_inset
-
- to 
-\begin_inset Formula $\Delta\tau-\sigma_{\tau}$
-\end_inset
-
- is plotted in grey.
- If 
-\begin_inset Formula $\Delta\tau-\sigma_{\tau}$
-\end_inset
-
- or 
-\begin_inset Formula $|\Delta\tau+\sigma_{\tau}|$
-\end_inset
-
- are greater than zero (
-\emph on
-i.e.
-
-\emph default
- a point is off-zero with 1-
-\begin_inset Formula $\sigma$
-\end_inset
-
- significance), the remainder of the circle is filled in with color.
- To represent the sign of the datapoint, yellow is negative, and blue is
- positive XXXRC (check sign).
- Any force of nature should satisfy 
-\begin_inset Formula $\Delta\tau(a,a)=0$
+), as 
+\begin_inset Formula $\Delta\tau(x,y)=-\Delta\tau(y,x)$
 \end_inset
 
  for all 
-\begin_inset Formula $a$
+\begin_inset Formula $y$
+\end_inset
+
+ and 
+\begin_inset Formula $x$
+\end_inset
+
+, with the corrolary that 
+\begin_inset Formula $\Delta\tau(x,x)=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $x$
 \end_inset
 
 .
- Any conservative force should be associative: 
+ Furthermore, any conservative interaction will be associative: 
 \begin_inset Formula $\Delta\tau(a,c)=\Delta\tau(a,b)+\Delta\tau(b,c)$
 \end_inset
 
 .
+ Lines parallel to 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $y=x$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ are lines of constant position-difference.
+ Vertical lines share constant 
+\begin_inset Formula $A$
+\end_inset
+
+ position, and horizontal lines share constant 
+\begin_inset Formula $B$
+\end_inset
+
+ position.
  
 \end_layout
 
 \begin_layout Standard
-This method has limitations.
- Large signals, or large uncertainties produce large circles, which can
- hide smaller, more significant, points.
- For sparsely sampled data, however, it can be very helpful.
- 
+In the lowest panel, we plot the projection of the scatter plot along the
+ diagonal, which allows an alternate and useful view.
+\end_layout
+
+\begin_layout Standard
+In this work, these will be presented only as scatter plots, but if the
+ out-of-page scatter of the points is relatively uniform, it is possible
+ to bin the points locally and plot circular errorbars to add more clarity
+ to the plots.
+ As the PlateWash data have considerable variation in variance over time,
+ it is extremely challenging to plot.
 \end_layout
 
 \begin_layout Section
@@ -15816,12 +14649,12 @@ Bootstrap
 
 \begin_layout Standard
 The analysis presented here makes extensive use of a statistical method
- called 'the bootstrap' or 'bootstrapping'.
+ called `the bootstrap' or `bootstrapping'.
  Its primary merit in this context is that it allows straightforward and
  reasonably robust estimation of confidence intervals.
- Its support rests upon the premise that the best estimator for the distribution
- from which a data set is drawn is the data set itself.
- The idea is to 'resample' the data to create synthetic data sets which
+ Bootstrapping relies upon the premise that the best estimator for the unknown
+ distribution from which a data set is drawn is the data set itself.
+ The idea is to `resample' the data to create synthetic data sets which
  may be passed through any analysis routine developed for the original data
  set.
  With repetition, this process generates distributions of important output
@@ -15837,7 +14670,7 @@ The resampling scheme used in this analysis was to generate synthetic data
  sets of the same size as the original set by randomly selecting measurements
  (there are always duplicate picks, except in the special case where the
  original data are recovered, out of order) from the initial data set.
- There is a related class of methods called 'the jackknife' that generate
+ There is a related class of methods called `the jackknife' that generate
  statistics by considering complete sets of subsets of data, perhaps by
  dividing the initial data into subsets, fitting each subset, and drawing
  statistics from the fit outputs.
@@ -15854,8 +14687,8 @@ Implementation
 \end_layout
 
 \begin_layout Standard
-In all instances where the bootstrap was used, this Octave function was
- called:
+In all instances where the bootstrap was used, this simple Octave function
+ was called:
 \end_layout
 
 \begin_layout Standard
@@ -15908,8 +14741,8 @@ name "sec:Model-Comparison"
 \begin_layout Standard
 The bootstrap makes comparison with any proposed model straightforward.
  No matter how exotic the fitting function and how sensitive it may be to
- individual datapoints or non-Gaussianity in the initial data, it is straightfor
-ward to bootstrap the data, fit, bootstrap again, fit, etc...
+ individual datapoints or non-Gaussianity in the experimental data, it is
+ straightforward to bootstrap the data, fit, bootstrap again, fit, etc...
  The distribution of fit outcomes can always be studied, and qualitative
  understanding is immediate.
  Settling on an algorithm for generating confidence intervals is, however,
@@ -15940,7 +14773,7 @@ A weakness of bootstrapped analysis is its reliance upon computational power
  intervals by modelling each systematic and injecting the expected amount
  of noise into the data to be fitted.
  If little is known about the systematic effect, however, this approach
- is a challenge.
+ is challenging.
  
 \end_layout
 
@@ -15963,7 +14796,7 @@ Fitting approach -- first half
 \end_layout
 
 \begin_layout Standard
-We proceed down the well-trodden path:
+We proceed down a path well-trodden by past experiments.
 \end_layout
 
 \begin_layout Itemize
@@ -15975,11 +14808,18 @@ Let
 \end_layout
 
 \begin_layout Itemize
-We assume that the torque on the pendulum takes the form 
+Following the torque calculations from Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Expected-Signal"
+
+\end_inset
+
+, we assume that the torque on the pendulum takes the form 
 \begin_inset Formula 
 \begin{eqnarray}
 F(x,B_{1\dots n}|\alpha_{1\ldots n},\lambda_{1\ldots n}) & = & \pi Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}\label{eq:PrototypeFitFunction}\\
- &  & \times\left(1-e^{-(t_{p}-t_{i})/\lambda_{i}}\right)\left(1-e^{-t_{a}/\lambda_{i}}\right)\left(1-e^{-t_{i}/\lambda_{i}}\right)e^{-x/\lambda_{i}}+Cx\nonumber 
+ &  & \times\left(1-e^{-(t_{p}-t_{I})/\lambda_{i}}\right)\left(1-e^{-t_{a}/\lambda_{i}}\right)\left(1-e^{-t_{I}/\lambda_{i}}\right)e^{-x/\lambda_{i}}+Cx\nonumber 
 \end{eqnarray}
 
 \end_inset
@@ -15996,8 +14836,8 @@ where
 \begin_inset Formula $B_{i}$
 \end_inset
 
- correspond to externally-modified systematic parameters, each with associated
- 
+ correspond to externally-modified systematic parameters, each with individual
+ associated 
 \begin_inset Formula $\alpha_{i}$
 \end_inset
 
@@ -16014,14 +14854,14 @@ where
 \bar under
 all
 \bar default
- signal that is linear in the attractor stroke.
+ torques that are linear in the attractor stroke.
 \end_layout
 
 \begin_layout Itemize
 To simplify notation, we subsume the finite-thickness corrections into 
 \begin_inset Formula 
 \[
-T(\lambda_{i})=\rho_{a}\left(1-e^{-(t_{p}-t_{i})/\lambda_{i}}\right)\left(1-e^{-t_{a}/\lambda_{i}}\right)\left(1-e^{-t_{i}/\lambda_{i}}\right)
+T(\lambda_{i})=\rho_{a}\left(1-e^{-(t_{p}-t_{I})/\lambda_{i}}\right)\left(1-e^{-t_{a}/\lambda_{i}}\right)\left(1-e^{-t_{I}/\lambda_{i}}\right)
 \]
 
 \end_inset
@@ -16331,21 +15171,27 @@ If we take, as above, all our uncertainties to be distributed according
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-P(\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n})=\int\prod_{j=1}^{N}\left(e^{(G(x_{A},x_{B},B_{1},\ldots B_{n},\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n})-\Delta\tau_{j})^{2}/\sigma_{\Delta\tau_{j}}^{2}}P(x_{A},\bar{x}_{A_{j}},\sigma_{x_{A_{j}}})P(x_{B},\bar{x}_{B_{j}},\sigma_{x_{B_{j}}})\prod_{i=1}^{n}P(B_{i},\bar{B}_{i_{j}},\sigma_{B_{i_{j}}})\right)dx_{A}dx_{B}dB_{1}\ldots dB_{n},
-\]
+\begin{eqnarray*}
+P(\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n}) & = & \int\prod_{j=1}^{N}\left(e^{(G(x_{A},x_{B},B_{1},\ldots B_{n},\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n})-\Delta\tau_{j})^{2}/\sigma_{\Delta\tau_{j}}^{2}}P(x_{A},\bar{x}_{A_{j}},\sigma_{x_{A_{j}}})P(x_{B},\bar{x}_{B_{j}},\sigma_{x_{B_{j}}})\right.\\
+ &  & \left.\times\prod_{i=1}^{n}P(B_{i},\bar{B}_{i_{j}},\sigma_{B_{i_{j}}})\right)dx_{A}dx_{B}dB_{1}\ldots dB_{n},
+\end{eqnarray*}
 
 \end_inset
 
- if you're Bayesian.
+
+\end_layout
+
+\begin_layout Standard
+if you're Bayesian.
  If you're a Frequentist, and you prefer profile likelihoods, 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-L(\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n})=\max_{x_{A_{j}},x_{B_{j}},B_{2_{j}},\ldots,B_{n_{j}}\forall j}\left(\log\left[\prod_{j=1}^{N}\left(e^{(G(x_{A_{j}},x_{B_{j}},B_{1},\ldots B_{n_{j}},\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n})-\Delta\tau_{j})^{2}/\sigma_{\Delta\tau_{j}}^{2}}P(x_{A_{j}},\bar{x}_{A_{j}},\sigma_{x_{A_{j}}})P(x_{B_{j}},\bar{x}_{B_{j}},\sigma_{x_{B_{j}}})\prod_{i=1}^{n}P(B_{i_{j}},\bar{B}_{i_{j}},\sigma_{B_{i_{j}}})\right)\right]\right)
-\]
+\begin{eqnarray*}
+L(\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n}) & = & \max_{x_{A_{j}},x_{B_{j}},B_{2_{j}},\ldots,B_{n_{j}}\forall j}\left(\log\left[\prod_{j=1}^{N}\left(e^{(G(x_{A_{j}},x_{B_{j}},B_{1},\ldots B_{n_{j}},\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n})-\Delta\tau_{j})^{2}/\sigma_{\Delta\tau_{j}}^{2}}\right.\right.\right.\\
+ &  & \left.\left.\left.\times P(x_{A_{j}},\bar{x}_{A_{j}},\sigma_{x_{A_{j}}})P(x_{B_{j}},\bar{x}_{B_{j}},\sigma_{x_{B_{j}}})\prod_{i=1}^{n}P(B_{i_{j}},\bar{B}_{i_{j}},\sigma_{B_{i_{j}}})\right)\right]\right)
+\end{eqnarray*}
 
 \end_inset
 
@@ -16354,9 +15200,10 @@ L(\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n})=\max_{x_{A_{j}},x_{
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-L(\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n})=\max_{x_{A_{j}},x_{B_{j}},B_{2_{j}},\ldots,B_{n_{j}}\forall j}\left(\sum_{j=1}^{N}\left(\frac{G(x_{A_{j}},x_{B_{j}},B_{1},\ldots B_{n_{j}},\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n})-\Delta\tau_{j})^{2}}{\sigma_{\Delta\tau_{j}}^{2}}+\frac{(x_{A_{j}}-\bar{x}_{A_{j}})^{2}}{\sigma_{x_{A_{j}}}^{2}}+\frac{(x_{B_{j}}-\bar{x}_{B_{j}})^{2}}{\sigma_{x_{B_{j}}}^{2}}+\sum_{i=1}^{n}\frac{(B_{i_{i}}-\bar{B}_{i_{j}})^{2}}{\sigma_{B_{i_{j}}}^{2}}\frac{1}{\sigma_{B_{i_{j}}}\sqrt{2\pi}}\right)\right)
-\]
+\begin{eqnarray*}
+L(\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n}) & = & \max_{x_{A_{j}},x_{B_{j}},B_{2_{j}},\ldots,B_{n_{j}}\forall j}\left(\sum_{j=1}^{N}\left(\frac{G(x_{A_{j}},x_{B_{j}},B_{1},\ldots B_{n_{j}},\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n})-\Delta\tau_{j})^{2}}{\sigma_{\Delta\tau_{j}}^{2}}\right.\right.\\
+ &  & \left.\left.+\frac{(x_{A_{j}}-\bar{x}_{A_{j}})^{2}}{\sigma_{x_{A_{j}}}^{2}}+\frac{(x_{B_{j}}-\bar{x}_{B_{j}})^{2}}{\sigma_{x_{B_{j}}}^{2}}+\sum_{i=1}^{n}\frac{(B_{i_{i}}-\bar{B}_{i_{j}})^{2}}{\sigma_{B_{i_{j}}}^{2}}\frac{1}{\sigma_{B_{i_{j}}}\sqrt{2\pi}}\right)\right)
+\end{eqnarray*}
 
 \end_inset
 
@@ -16405,7 +15252,23 @@ The profile-likelihood maximization is a challenging one, as it requires
 \noun off
 \color none
 
-\begin_inset Formula $x_{A_{j}},x_{B_{j}},B_{2_{j}},\ldots,B_{n_{j}}$
+\begin_inset Formula $x_{A_{j}}$
+\end_inset
+
+, 
+\begin_inset Formula $x_{B_{j}}$
+\end_inset
+
+, 
+\begin_inset Formula $B_{2_{j}}$
+\end_inset
+
+, 
+\begin_inset Formula $\ldots$
+\end_inset
+
+ , 
+\begin_inset Formula $B_{n_{j}}$
 \end_inset
 
  for all 
@@ -16414,7 +15277,7 @@ The profile-likelihood maximization is a challenging one, as it requires
 
 , which numbers in the thousands.
  The Bayesian approach is perhaps more tractable if evaluated numerically
- through a Monte Carlo or Markov-Chain approach.
+ through a Monte Carlo or Markov-chain approach.
 \end_layout
 
 \begin_layout Paragraph
@@ -16437,7 +15300,7 @@ Without a rigorous way to use
 \begin_inset Formula $B_{i}$
 \end_inset
 
-, as it's appropriate there, but we'll resort to Monte Carlo to determine
+, as it is appropriate there, but we resort to Monte Carlo to determine
  the effect of 
 \begin_inset Formula $\sigma_{x}$
 \end_inset
@@ -16478,8 +15341,14 @@ fuzz
  This fuzzing process, in concert with the bootstrapping of the torque data,
  should distribute the best-fit points as expected from a more-sophisticated
  approach to error analysis.
- This choice tables for later the considerable problem of confidence-interval
- determination.
+ This choice tables until Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Confidence-Interval-Algorithm"
+
+\end_inset
+
+ the important problem of confidence-interval determination.
 \end_layout
 
 \begin_layout Subsubsection
@@ -16487,7 +15356,8 @@ Fitting approach -- second half
 \end_layout
 
 \begin_layout Standard
-The fitting plan continues (see Appendix 
+With our treatise on non-linearity complete, the fitting plan continues
+ (see Appendix 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "chap:Yukawa-Variance-and"
@@ -16507,7 +15377,14 @@ Compute
 \begin_inset Formula $\bar{F}=\int_{-\infty}^{\infty}F(x,B_{1\ldots n},\alpha_{1\ldots n},\lambda_{1\ldots n})P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}$
 \end_inset
 
+ (see Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:fbar"
 
+\end_inset
+
+)
 \end_layout
 
 \begin_layout Itemize
@@ -16520,19 +15397,26 @@ Compute
 
 \begin_layout Itemize
 Compute 
-\begin_inset Formula $\sigma_{F_{x}}^{2}=\int_{-\infty}^{\infty}F(x,B_{1\ldots n},\alpha_{1\ldots n},\lambda_{1\ldots n})^{2}\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}-\bar{F}^{2}$
+\begin_inset Formula $\sigma_{F_{x_{A}}}^{2}=\int_{-\infty}^{\infty}F(x,B_{1\ldots n},\alpha_{1\ldots n},\lambda_{1\ldots n})^{2}\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}-\bar{F}^{2}$
 \end_inset
 
  and 
-\begin_inset Formula $\sigma_{F_{y}}^{2}$
+\begin_inset Formula $\sigma_{F_{x_{B}}}^{2}$
 \end_inset
 
+ (see Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:varG"
 
+\end_inset
+
+)
 \end_layout
 
 \begin_layout Itemize
 Compute 
-\begin_inset Formula $\tilde{\sigma}_{G}^{2}=\sigma_{F_{x}}^{2}+\sigma_{F_{y}}^{2}$
+\begin_inset Formula $\tilde{\sigma}_{G}^{2}=\sigma_{F_{x_{A}}}^{2}+\sigma_{F_{x_{B}}}^{2}$
 \end_inset
 
 
@@ -16572,7 +15456,11 @@ Minimize
 \end_inset
 
 .
- 
+ The minimization was done via simulated annealing.
+ Downhill simplex, Levenburg-Marquardt, and sequential quadratic programming
+ methods all were susceptible to being trapped in local minima.
+ Simulated annealing is computationally-intensive, but has proven more robust
+ in recovering injected test signals.
 \end_layout
 
 \begin_layout Itemize
@@ -16593,12 +15481,19 @@ To extract understanding of any systematic uncertainties, study the distribution
 \begin_inset Formula $\bar{F}$
 \end_inset
 
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:fbar"
+
+\end_inset
+
 
 \end_layout
 
 \begin_layout Standard
-The integrals needed for this and subsequent subsubsections are worked out
- in 
+The integrals needed for these subsubsections are worked out in Appendix
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Integrals"
@@ -16729,10 +15624,17 @@ status collapsed
 \end_inset
 
 
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:varG"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\sigma_{G}^{2}=\sigma_{F_{x}}^{2}+\sigma_{F_{y}}^{2}$
+\begin_inset Formula $\sigma_{G}^{2}=\sigma_{F_{x_{A}}}^{2}+\sigma_{F_{x_{B}}}^{2}$
 \end_inset
 
 
@@ -16919,7 +15821,7 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-This works great, but speed, stability, and simplicity urges us farther.
+This works, but speed, stability, and simplicity urge us farther.
 \end_layout
 
 \begin_layout Standard
@@ -17209,6 +16111,162 @@ Let
 \end_layout
 
 \begin_layout Section
+Confidence Interval Algorithm
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Confidence-Interval-Algorithm"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+There is no unique method for drawing two-dimensional confidence intervals.
+ The method we selected was chosen for its clarity after exploring more
+ sophisticated methods (kernel density estimators among them).
+ The most important lesson from our investigation of differing methods is
+ the notion that, 
+\emph on
+a priori
+\emph default
+, the Yukawa 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ have nothing to do with one another.
+ Any attempt to constrain them jointly makes a prior assumption about their
+ relationship.
+ The long-standing tradition in this field is the 
+\begin_inset Quotes eld
+\end_inset
+
+pick a lambda and fit for alpha
+\begin_inset Quotes erd
+\end_inset
+
+ approach, which sidesteps any presupposition of covariance.
+ What we do is in that spirit.
+\end_layout
+
+\begin_layout Standard
+The outcome of the bootstrapped Yukawa fits is a distribution of best-fit
+ points in the 
+\begin_inset Formula $\alpha-\lambda$
+\end_inset
+
+ plane.
+ Working from small 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ to large 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, we compute the mean 
+\begin_inset Formula $m_{\alpha}$
+\end_inset
+
+ and standard deviation 
+\begin_inset Formula $\sigma_{\alpha}$
+\end_inset
+
+ of the 
+\begin_inset Formula $\alpha$
+\end_inset
+
+s of the subset 
+\begin_inset Formula $S$
+\end_inset
+
+ composed of the first 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/NBinConfInterval.tex"
+
+\end_inset
+
+ best-fit points.
+ We then plot four points, 
+\begin_inset Formula $(\lambda_{min},m_{\alpha}\pm2\sigma_{\alpha})$
+\end_inset
+
+ and 
+\begin_inset Formula $(\lambda_{max},m_{\alpha}\pm2\sigma_{\alpha})$
+\end_inset
+
+, where 
+\begin_inset Formula $\lambda_{min}$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda_{max}$
+\end_inset
+
+ are the smallest and largest 
+\begin_inset Formula $\lambda$
+\end_inset
+
+s of points in the subset.
+ We then remove the point corresponding to 
+\begin_inset Formula $\lambda_{min}$
+\end_inset
+
+ from 
+\begin_inset Formula $S$
+\end_inset
+
+, add the next point with 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ larger than 
+\begin_inset Formula $\lambda_{max}$
+\end_inset
+
+ to 
+\begin_inset Formula $S$
+\end_inset
+
+, and repeat the procedure.
+ 
+\end_layout
+
+\begin_layout Standard
+The two envelopes defined by the four lines that emerge define the 95% confidenc
+e intervals for our best fits.
+ Regions that are excluded by both envelopes are certainly excluded at 95%
+ confidence.
+ Regions that are included by both are included at 95% confidence.
+ Regions excluded by only one envelope are indeterminate; we've roughly
+ quantified the uncertainty on our confidence interval.
+ The volume of the indeterminate region can be made arbitrarily small by
+ computing greater numbers of best-fit points.
+ In regions where 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is a strong function of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, convergence is necessarily slow.
+ The final confidence-interval plots can be found in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Yukawa-Potential-Constraints"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:Force-law-inversion"
@@ -17245,7 +16303,7 @@ In addition to extracting model parameters from the data, we can reconstruct
 \begin_inset Formula $\tau(d)$
 \end_inset
 
-, where the attractor measures a 
+, where the experiment measures a 
 \begin_inset Formula $\Delta\tau=\tau(d_{1})-\tau(d_{2})$
 \end_inset
 
@@ -17382,7 +16440,7 @@ no experiment is truly blind,
 \end_inset
 
  in reference to the current reality that experimenters unblind their results
- prior to peer review and submission for publication.
+ privately prior to public dissemination of the result.
  This is true, but it hides the power of the blind -- forcing complete and
  equal attention to each 
 \emph on
@@ -17393,34 +16451,129 @@ known
 \end_layout
 
 \begin_layout Standard
-PlateWash is not a blind experiment.
+PlateWash is not an entirely blind experiment.
  It is a precursor to a blind experiment.
  More than half of the science data were taken without a blind, largely
  because we had not discovered a way to monitor the health of the experiment
  without access to data which included the central values of each measurement.
- In the latter half of science data-taking, it became clear that watching
- the errorbars on each cut was sufficient to ensure data quality.
+ During that time, it became clear that monitoring the distribution of the
+ errorbars of each cut was sufficient to ensure nothing was going wrong
+ within the instrument.
+ Once that determination was made, we blinded ourselves to the central values
+ of all torque measurements.
+ All of the systematic investigations were performed blind.
  In this first iteration of PlateWash, our understanding of the instrument's
- metrology was in continuous refinement, which frustrated any attempt to
- inject a fake signal into the data as they were acquired.
- (Furthermore, the physical separation between pendulum and attractor DAQ
- systems would make doing so extremely difficult).
+ metrology was in continuous refinement, which blocked any attempt to inject
+ a fake signal into the data as they were acquired.
+ Furthermore, the intentional physical separation between pendulum and attractor
+ DAQ systems would make injecting a fake signal extremely difficult.
 \end_layout
 
 \begin_layout Standard
-The analysis proceeded as if it were blind, to demonstrate the suitability
- of the analysis toolchain for a future blind analysis.
+The data analysis was performed blind.
+ Critically, the foil-systematic coupling and cuts were not determined until
+ many months after the data had been acquired.
+ Even if the experiment had been tuned during the commissioning of the instrumen
+t, our blind systematic tests and subsequent analysis have the power to
+ expose several classes of tuning.
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMA (need actual procedure followed here).
 \end_layout
+
+\begin_layout Subsection
+Blinding procedure
+\end_layout
+
+\begin_layout Standard
+During the analysis, we blinded ourselves to the central values of all measureme
+nts by avoiding looking at the torque data directly.
+ This is, of course, a challenge when operating a torsion balance, as the
+ best measure of proper function of is the character of the torque data.
+ Furthermore, important steps, such as calibration, must necessarily operate
+ upon unblinded data.
+ Therefore, we used a combination of data-analysis design and an honor code
+ to minimize any chance of seeing the experimental results before the analysis
+ was finalized.
+ 
+\end_layout
+
+\begin_layout Standard
+To make it difficult to accidentally see any analyzed data, immediately
+ following the lock-in step (Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Lock-in"
 
 \end_inset
 
+), the central values of all torque-related data in each cut were set to
+ zero.
+ All testing of post lock-in data analysis was done by injecting synthetic
+ signals and noise into those central values.
+ This allowed us to ensure that the data-analysis system worked correctly
+ without accidentally viewing blinded data.
+ Unblinding the experiment is as simple as disabling this blinding mechanism.
+\end_layout
 
+\begin_layout Standard
+For the approximate systematic tests detailed in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Systematic-Tests"
+
+\end_inset
+
+, we separately saved the unblinded results of the lock-in procedure.
+ These measurements were then compared only as blind-differences, where
+ measurements with an external parameter changed were subtracted from measuremen
+ts with the external parameter nulled.
+ This procedure allows us to determine the experimental susceptibility to
+ external parameters without having any access to the central values of
+ either measurement.
+\end_layout
+
+\begin_layout Subsection
+Blinding failures
+\end_layout
+
+\begin_layout Standard
+All systems fail, and this fairly fragile blinding system was no exception.
+ Early in the blind analysis, we viewed the unblinded outcome of the lock-in
+ twice.
+ The more-important occasion was during the development of the blinding/unblindi
+ng code.
+ A bug in the blinding code led to one of us (Charlie) seeing a Yukawa fit
+ that resolved a signal at minimal 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, 
+\begin_inset Formula $|\alpha|\sim10^{3\pm2}$
+\end_inset
+
+, and with indeterminant sign.
+ This pre-dated our determination of systematic cuts, particularly that
+ for the foil; the indeterminacy of the sign of the observed signal is particula
+rly important.
+ We don't know whether our later determinations added to or subtracted from
+ this signal.
+ 
+\end_layout
+
+\begin_layout Standard
+This type of failure of the blind is a weakness to software-blinds in null
+ measurements.
+ Often, the best estimate of an instrument's proper operation is its output.
+ In a software-blinded null measurement, the experimenter is forced to perpetual
+ly dance around any accidental observation of the result.
+ A reliable hardware-implemented blind, such as a clock skew or a hard-coded
+ unknown offset is much more resistant to innocent mistakes.
+ 
+\end_layout
+
+\begin_layout Standard
+We look forward to using what we've learned on one more iteration of this
+ experiment, as at least the known pitfalls of this blinding procedure can
+ be avoided.
 \end_layout
 
 \begin_layout Chapter
@@ -17434,12 +16587,12 @@ The software used to compute these results and generate this document is
  This thesis and all supporting code necessary to go from the original raw
  data to every plot and datapoint expressed in this document are housed
  within a single git repository.
- Once the build environment is configured (with '
+ Once the build environment is configured (with `
 \family typewriter
 git pull
 \family default
 ') and linked to the experimental data , this document can be generated
- simply by typing 'make'.
+ simply by typing `make'.
 \end_layout
 
 \begin_layout Section
@@ -17597,7 +16750,7 @@ Bash is the scripting language for a standard UNIX shell (and the name of
  the shell itself).
  Awk is designed for handling tabular arrays of data of all kinds.
  It is fast and flexible.
- Sed, the 'string editor', is a tool designed for rapidly traversing text
+ Sed, the `string editor', is a tool designed for rapidly traversing text
  files and operating on them; think of it as find-and-replace on steroids.
  
 \end_layout
@@ -17712,7 +16865,7 @@ Testing is perhaps best explained by example.
  People usually try a few inputs until they're approximately satisfied that
  the results behave as expected.
  What if that were programatic? If, before you made serious use of a library,
- you could hit 'test', and the software could run a predefined set of such
+ you could hit `test', and the software could run a predefined set of such
  tests.
  It is 
 \emph on
@@ -20859,6 +20012,16 @@ filename "../systematics/electrical/extracted/longStrokeL0Diff3167.tex"
 N-m.
 \end_layout
 
+\begin_layout Section
+Dead-time sensitivity
+\end_layout
+
+\begin_layout Standard
+XXXRC - Krishna would like to see a square-waved blinded sensitivity to
+ dead time.
+ 
+\end_layout
+
 \begin_layout Chapter
 Foil Systematic
 \end_layout
@@ -21018,6 +20181,9 @@ Interferometer fit.
  Each line is a different bootstrapped fit.
  This fits are used individually for subtraction in the bootstrapped global
  Yukawa fits.
+ XXXRC - What about chopping out another 20 microns in short-cut in order
+ to completely dump the innner systematic.
+ Feels good,right?
 \end_layout
 
 \end_inset
@@ -21156,6 +20322,13 @@ Model Constraints
 
 \begin_layout Subsection
 Yukawa Potential
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Yukawa-Potential-Constraints"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -21310,7 +20483,7 @@ ski class this:
 \end_inset
 
 I think the major difference between a professional and an amateur is whether
- or not, at the end of the day, they ask the question, 'what have I learned
+ or not, at the end of the day, they ask the question, `what have I learned
  today'?
 \begin_inset Quotes erd
 \end_inset
@@ -21822,7 +20995,7 @@ The fix is clear.
  We have very nice fully-isolated battery-powered contact potential setting
  devices built and ready to go.
  We need only reconnect them, now that we understand that our systematic
- signal was due to the 'capacitor systematic' and not something in the contact-p
+ signal was due to the `capacitor systematic' and not something in the contact-p
 otential system.
 \end_layout
 
@@ -22122,7 +21295,7 @@ Define a fitting function,
 \end_inset
 
 
-\begin_inset Formula $F(x,B_{1\dots n}|\alpha_{1\ldots n},\lambda_{1\ldots n})=\pi Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}\left(1-e^{-(t_{p}-t_{i})/\lambda_{i}}\right)\left(1-e^{-t_{a}/\lambda_{i}}\right)\left(1-e^{-t_{i}/\lambda_{i}}\right)e^{-x/\lambda_{i}}+Cx$
+\begin_inset Formula $F(x,B_{1\dots n}|\alpha_{1\ldots n},\lambda_{1\ldots n})=\pi Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}\left(1-e^{-(t_{p}-t_{I})/\lambda_{i}}\right)\left(1-e^{-t_{a}/\lambda_{i}}\right)\left(1-e^{-t_{I}/\lambda_{i}}\right)e^{-x/\lambda_{i}}+Cx$
 \end_inset
 
 .
@@ -22130,7 +21303,7 @@ Define a fitting function,
 
 \begin_layout Enumerate
 Let the thickness corrections be 
-\begin_inset Formula $T(\lambda)=\rho_{a}\left(1-e^{-(t_{p}-t_{i})/\lambda_{i}}\right)\left(1-e^{-t_{a}/\lambda_{i}}\right)\left(1-e^{-t_{i}/\lambda_{i}}\right)$
+\begin_inset Formula $T(\lambda)=\rho_{a}\left(1-e^{-(t_{p}-t_{I})/\lambda_{i}}\right)\left(1-e^{-t_{a}/\lambda_{i}}\right)\left(1-e^{-t_{I}/\lambda_{i}}\right)$
 \end_inset
 
 
@@ -22178,7 +21351,7 @@ Compute
 
 \begin_layout Enumerate
 Compute 
-\begin_inset Formula $\bar{G}=\bar{F}_{x}-\bar{F}_{y}$
+\begin_inset Formula $\bar{G}=\bar{F}_{x_{A}}-\bar{F}_{x_{B}}$
 \end_inset
 
 
@@ -22186,11 +21359,11 @@ Compute
 
 \begin_layout Enumerate
 Compute 
-\begin_inset Formula $\sigma_{F_{x}}^{2}=\int_{-\infty}^{\infty}F(x,B_{1\ldots n},\alpha_{1\ldots n},\lambda_{1\ldots n})^{2}P(x,\bar{x},\sigma_{x})dxP(y,\bar{y},\sigma_{y})dy\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}-\bar{F}^{2}$
+\begin_inset Formula $\sigma_{F_{x_{A}}}^{2}=\int_{-\infty}^{\infty}F(x,B_{1\ldots n},\alpha_{1\ldots n},\lambda_{1\ldots n})^{2}P(x,\bar{x},\sigma_{x})dxP(y,\bar{y},\sigma_{y})dy\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}-\bar{F}^{2}$
 \end_inset
 
  and 
-\begin_inset Formula $\sigma_{F_{y}}^{2}$
+\begin_inset Formula $\sigma_{F_{x_{B}}}^{2}$
 \end_inset
 
 
@@ -22198,7 +21371,7 @@ Compute
 
 \begin_layout Enumerate
 Compute 
-\begin_inset Formula $\sigma_{G}^{2}=\sigma_{F_{x}}^{2}+\sigma_{F_{y}}^{2}$
+\begin_inset Formula $\sigma_{G}^{2}=\sigma_{F_{x_{A}}}^{2}+\sigma_{F_{x_{B}}}^{2}$
 \end_inset
 
 
@@ -22623,7 +21796,7 @@ This is just a restatement of Jason's trick, so
 \uwave off
 \noun off
 \color none
-\begin_inset Formula $\bar{F}=\int_{-\infty}^{\infty}F(x,y,B_{1\ldots n},\alpha_{1\ldots n},\lambda_{1\ldots n})P(x,\bar{x},\sigma_{x})dx\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}$
+\begin_inset Formula $\bar{F}=\int_{-\infty}^{\infty}F(x,B_{1\ldots n},\alpha_{1\ldots n},\lambda_{1\ldots n})P(x,\bar{x},\sigma_{x})dx\prod_{i}P(B_{i},\bar{B}_{i},\sigma_{i})dB_{i}$
 \end_inset
 
 
@@ -22734,7 +21907,7 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\sigma_{G}^{2}=\sigma_{F_{x}}^{2}+\sigma_{F_{y}}^{2}$
+\begin_inset Formula $\sigma_{G}^{2}=\sigma_{F_{x_{A}}}^{2}+\sigma_{F_{x_{B}}}^{2}$
 \end_inset
 
 

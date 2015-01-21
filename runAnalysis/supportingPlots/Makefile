@@ -18,6 +18,7 @@ TYP47:= run3147typical
 IFO47:= run3147ifoTriangle
 RAN47:= run3147randomAttractorExample
 ERR47:= run3147attractorPositionError
+TIMIN:= timingPlot
 
 all: $(FFR).eps $(FILT).eps $(WIND).eps $(LAG20).eps $(LAG24).eps $(LAG69).eps $(TOR67).eps $(NOT47).eps $(ALB47).eps $(AOT47).eps $(FBV47).eps $(TYP47).eps $(IFO47).eps $(RAN47).eps
 
@@ -84,6 +85,9 @@ $(RAN47).eps : $(RAN47).m $(RAN47).gpl
 	$(GNU) $(RAN47).gpl
 
 $(ERR47).eps : $(ERR47).gpl
+	$(GNU) $<
+
+$(TIMIN).eps : $(TIMIN).gpl
 	$(GNU) $<
 
 clean : 
