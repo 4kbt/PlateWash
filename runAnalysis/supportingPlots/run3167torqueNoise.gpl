@@ -8,7 +8,7 @@ set xlabel 'time (d)'
 set ylabel 'torque (fN-m)'
 
 set key noauto
-pl\
+pl [1225.75:]\
 	'run3167timeData.dat'   u ($1/86400):($2*1e15) w l lt 3,\
 	'run3167timeDataLN.dat' u ($1/86400):($2*1e15) w l lt 1
 
@@ -17,10 +17,21 @@ set xlabel 'frequency (Hz)'
 set ylabel 'torque spectral amp. (fN-m/{/Symbol @{\140\140}\326}Hz)'
 
 
+set label 'filtered-out calibration signals' at 0.0045,550 center front
+set arrow from 3e-3,400 to 3e-3,90 head filled
+set arrow from 6e-3,400 to 6e-3,90 head filled
+
+
+set label 'signal frequency' at 3.90625e-3,0.2 center front
+set arrow from 3.90625e-3,0.26 to 3.90625e-3,4 head filled
+
+
 set logsc 
 
-pl [1e-3:0.1]\
+pl [1e-3:0.1][0.1:900]\
 	'run3167fft.dat' u 1:(sqrt($2)*1e15) w l lt 3,\
-	'run3167fftLN.dat' u 1:(sqrt($2)*1e15) w l lt 1
+	'run3167fftLN.dat' u 1:(sqrt($2)*1e15) w l lt 1,\
+	'run3167ThermalLimit.dat'        u 1:( ($2) * 1e15 ) w l lt -1 tit 'Torsion Fiber Thermal Limit',\
+	'run3167AutocollimatorLimit.dat' u 1:( ($2) * 1e15 ) w l lt  0 tit 'Autocollimator Limit'
 
 unset multiplot

@@ -10779,13 +10779,15 @@ status open
 \end_layout
 
 \begin_layout Chapter
-Experimental Plan
+Strategic choices and operation
 \end_layout
 
 \begin_layout Standard
-This chapter describes the strategies and choices we made in the operation
- of the instrument, from operating frequency to day-to-day operation.
- XXXMA; clarify
+This chapter describes important strategies and choices we made in the operation
+ of the instrument: selecting the signal frequency, selecting the pendulum-angle
+ signal as our science signal, random attractor locations, and the overall
+ distribution of attractor locations.
+ 
 \end_layout
 
 \begin_layout Section
@@ -11079,10 +11081,6 @@ reference "fig:Approximate-torque-to-angle-tran"
  
 \end_layout
 
-\begin_layout Standard
-(XXXRC Jens wants theory or experiment figure)
-\end_layout
-
 \begin_layout Subsubsection
 Readout Noise
 \end_layout
@@ -11229,12 +11227,19 @@ name "fig:Torque-noise,-from"
 \end_inset
 
 Experimentally-measured torque noise, from systematic test 3167.
- Attractor stationary.
+ Attractor held stationary.
  Data in blue cover the entire time-series shown, while data in red are
  taken from the quiet period early in the morning of day 1227.
- (XXXRC Jens comments that figure doesn't align with text; perhaps add thermal
- limit, autocollimator line, add more commentary, show filtered and unfiltered,
- perhaps more panels.) 
+ The power spectrum prominently shows the effects of the calibration-signal
+ notch filters discussed in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Filtering"
+
+\end_inset
+
+.
+ Our lowest noise reliably occurs for several hours early each morning.
 \end_layout
 
 \end_inset
@@ -12279,17 +12284,6 @@ name "fig:Attractor-positions-over"
 \end_inset
 
 Attractor positions over the duration of the experiment.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMA draw vertical line/regions to denote systematic tests.
- Yellow/blue?
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
@@ -12369,8 +12363,8 @@ Campaign description
 \end_layout
 
 \begin_layout Standard
-The measurements began with science data, comprising runs 3146/7 to 3167.
- Systematics tests followed; bellows valve-off in 3168--3172; resistor tests
+The measurements began with science data, comprising runs 3146/7 to 3166.
+ Systematics tests followed; bellows valve-off in 3167--3172; resistor tests
  3174--3183; magnetic tests from 3184--3205; heating/thermistor tests from
  3206--3222; magnetic signal injection 3223--3225; attractor electrical
  bias 3234.
@@ -13159,16 +13153,6 @@ filename "../extracted/kappa.tex"
 \end_inset
 
 .
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-(XXXMA Jens wants a kappa errorbar)
-\end_layout
-
-\end_inset
-
  The time variation of the calibration signal is most-probably understood
  as slow drifts in the pendulum/foil/electrode spacing/alignment.
  It is also possible that some of the electronics involved in the feedback
