@@ -6,7 +6,7 @@ load HOMEDIR."glib/gnuplotColumns.gpl"
 
 fn = '../results/run3147pM3FilterMerge.dat'
 
-set xlabel 'time (d)'
+set xlabel 'time since January 1, 2009 (days)'
 set ylabel 'pendulum-attractor separation ({/Symbol m}m)'
 set key below
 
@@ -14,7 +14,7 @@ set key noauto
 set title 'attractor position over time'
 
 SciSysSplit = 1225.8
-set arrow from SciSysSplit,0 to SciSysSplit,800 nohead lt 0
+set arrow from SciSysSplit,0 to SciSysSplit,800 nohead lt 0 lw 3
 
 set label 'Science Data'     at (SciSysSplit - 5 ),400 rotate by 90 center front
 set label 'Systematic Tests' at (SciSysSplit + 3 ),400 rotate by 90 center front

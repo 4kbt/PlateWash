@@ -22,7 +22,7 @@ set arrow from 3e-3,400 to 3e-3,90 head filled
 set arrow from 6e-3,400 to 6e-3,90 head filled
 
 
-set label 'signal frequency' at 3.90625e-3,0.2 center front
+set label 'science frequency' at 3.90625e-3,0.2 center front
 set arrow from 3.90625e-3,0.26 to 3.90625e-3,4 head filled
 
 

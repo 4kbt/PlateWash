@@ -11175,8 +11175,8 @@ s period.
 \begin_inset space ~
 \end_inset
 
-s response times of the pendulum feedback loop and the attractor drive prohibit
- useful operation at such a high frequency.
+s response times of both the pendulum feedback loop and the attractor drive
+ prohibit useful operation at such a high frequency.
  Near the attractor frequency of 
 \begin_inset CommandInset include
 LatexCommand input
@@ -11327,11 +11327,8 @@ non-Gaussian
  interactions, and computer crashes happen.
  They are often short in duration, but overwhelming in amplitude.
  Measurements taken at these times are unusable.
- They are rare-enough that most experiments never incorporate them into
- their noise budget.
- This is the case for PlateWash as well, where such transients happened
- at most a few times in a day.
- For PlateWash, it will be shown in Section 
+ In this experiment, such transients happened at most a few times in a day.
+ It will be shown in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Filtering"
@@ -11357,9 +11354,9 @@ A second benefit to small
 \end_inset
 
  is the increased number of independent measurements.
- This experiment relies upon Monte Carlo-like measurements (random attractor
- locations) to understand systematic uncertainties and better constrain
- possible violations of the inverse-square law.
+ This experiment relies upon Monte-Carlo-like measurements (random attractor
+ locations) to constrain both systematic uncertainties and possible violations
+ of the inverse-square law.
  Frequent individual measurements allow faster exploration of parameter
  space (exploring a 
 \begin_inset Formula $6\times6$
@@ -11805,8 +11802,8 @@ reference "Fourier Harmonics"
 It is important that amplitude of the first harmonic of a unity-amplitude
  square wave is greater than one.
  Without resolving the square shape of the signal through its harmonics,
- we reap the increased sensitivity one expects from an attractor motion
- that spends far more time at maximum amplitude.
+ we reap the increased sensitivity one expects from an attractor path that
+ spends far more time at maximum amplitude.
  
 \end_layout
 
@@ -11844,8 +11841,8 @@ filename "../extracted/pTime.tex"
 \begin_inset space ~
 \end_inset
 
-s preceding a position change are excluded to reject any position-change
- related effects (see Section 
+s preceding a position change are excluded to conservatively reject any
+ position-change related effects (see Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Lags-1"
@@ -11897,8 +11894,8 @@ The combination of the large conservative dead-times with the 10
 
 s low-pass torque filter should render the measurement insensitive to small
  variations in the specific amounts of time to be dropped.
- The blind analysis makes it impossible for us to fine-tune for any desired
- result.
+ The blind analysis makes it impossible for us to fine-tune any choice of
+ dead-time for a desired result.
 \end_layout
 
 \begin_layout Standard
@@ -12023,9 +12020,9 @@ Switches per cut
 \end_layout
 
 \begin_layout Standard
-The number of attractor position changes per cut was chosen to be large-enough
- to allow a sufficient understanding of the switch-to-switch variation in
- the torque at each point.
+The number of attractor position changes per `cut', a group of identical
+ measurements, was chosen to be large-enough to allow a sufficient understanding
+ of the switch-to-switch variation in the torque at each point.
  We settled on 10 switches per cut in an ad-hoc fashion.
  It is slightly more than the minimum required to have a reasonable understandin
 g of the switch-to-switch variation ( 
@@ -12033,8 +12030,8 @@ g of the switch-to-switch variation (
 \end_inset
 
  samples is perhaps the minimum one should use for a reliable estimate of
- a variance), and still short enough to address the speed concerns laid
- out in Section 
+ a variance), and still short enough to address the speed concerns described
+ in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Statistics"
@@ -12073,7 +12070,7 @@ s filter applied (a factor of 3 below the Nyquist frequency), making it
  The loop was operated with zero integral-term to prevent improper wind-up
  in the challenging near-foil environment, so the integral channel contains
  no signal.
- The derivative term response is frequency-dependent, growing roughly linearly
+ The derivative-term response is frequency-dependent, growing roughly linearly
  with 
 \begin_inset Formula $\omega$
 \end_inset
@@ -12266,7 +12263,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../runAnalysis/supportingPlots/run3147AttractorOverTime.eps
-	width 50page%
+	width 70page%
 
 \end_inset
 
@@ -12283,7 +12280,8 @@ name "fig:Attractor-positions-over"
 
 \end_inset
 
-Attractor positions over the duration of the experiment.
+Attractor positions used in this analysis.
+ 
 \end_layout
 
 \end_inset
@@ -12306,7 +12304,7 @@ random
 \end_inset
 
  and square-wave patterns.
- About half of the science data were taken using random patterns.
+ More than half of the science data were taken using random patterns.
  Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -12314,7 +12312,7 @@ reference "fig:Attractor-positions-over"
 
 \end_inset
 
- shows all attractor positions used in this thesis.
+ shows all attractor positions used in this analysis.
 \end_layout
 
 \begin_layout Standard
@@ -12355,7 +12353,7 @@ long
 \begin_inset Quotes erd
 \end_inset
 
- square wave measurements to allow more-straightforward intercomparison.
+ square-wave measurements to allow more-straightforward intercomparison.
 \end_layout
 
 \begin_layout Section
@@ -12448,7 +12446,23 @@ Flowchart diagramming the flow of data analysis.
 \end_layout
 
 \begin_layout Standard
-The flowchart shown in Figure 
+This section, Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Flow"
+
+\end_inset
+
+, is an executive summary for the details in the remainder of the chapter,
+ with the flowchart in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Flowchart-diagramming"
+
+\end_inset
+
+ as a companion.
+ Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Flowchart-diagramming"
@@ -12470,26 +12484,6 @@ reference "par:A-conservative-approach"
 , the interferometer data are only useful over parts of the run, requiring
  model-building in order to make a torque correction during times that the
  interferometer was unusable.
- 
-\end_layout
-
-\begin_layout Standard
-This section, Section 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Flow"
-
-\end_inset
-
-, is an executive summary for the details in the remainder of the chapter,
- with the flowchart in Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Flowchart-diagramming"
-
-\end_inset
-
- as a companion.
  
 \end_layout
 
@@ -12530,7 +12524,7 @@ reference "sec:Temperature--systematic"
 \begin_layout Standard
 In addition, all experimental parameters (alignment, dimensions, densities,
  analysis parameters, etc.) are stored in global configuration files that
- are read by any analysis program that requires them.
+ are read by each analysis program that requires them.
 \end_layout
 
 \begin_layout Subsubsection
@@ -12560,7 +12554,7 @@ run
 \end_inset
 
  of the experiment.
- In this document, a 
+ A 
 \begin_inset Quotes eld
 \end_inset
 
@@ -12569,7 +12563,7 @@ run
 \end_inset
 
  refers to a length of coincident operation of two or more DAQ systems specifica
-lly delineated by a run configuration file as having something interesting
+lly delineated by a run-configuration file as having something interesting
  to say.
  The main routine of the run-by-run analysis looks through the directory
  of run configuration files and analyzes the data loaded by each one.
@@ -12605,18 +12599,19 @@ Filtering
 \end_layout
 
 \begin_layout Standard
-As described in 
+As described in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Filtering"
 
 \end_inset
 
-, the data are passed through FIR filters, primarily to notch out the gravitatio
-nal calibration signal and to bandpass away drift in the pendulum.
+, the torque data are passed through FIR filters, primarily to notch out
+ the gravitational calibration signal and to bandpass away drift in the
+ pendulum.
  All other channels to be analyzed alongside the torque data are passed
  through an inconsequential (low-pass at the Nyquist frequency), but equal
- duration, filter in order to phase-match them to the torque signal.
+ duration, filter to guarantee phase-matching with the torque signal.
 \end_layout
 
 \begin_layout Subsubsection
@@ -12736,15 +12731,16 @@ cuts
 \end_inset
 
  states are dropped from the cut before the aggregate properties of the
- cut are determined; as seen in Figure 
+ cut are determined.
+ As seen in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:The-first-8000"
 
 \end_inset
 
-, the positions of the first two states are inconsistent with the rest of
- the cut and retain information from the prior cut.
+, the positions of the first two states are often inconsistent with the
+ rest of the cut and retain position information from the prior cut.
  As detailed in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -12847,8 +12843,8 @@ arbitrary fit
 \begin_inset Quotes erd
 \end_inset
 
-, which is a model-free approach to characterizing our measured signal,
- with less attention to systematic uncertainty.
+, a model-free approach to characterizing our measured signal, with less
+ attention to systematic uncertainty.
 \end_layout
 
 \begin_layout Subsubsection
@@ -12858,7 +12854,7 @@ Interferometer branch
 \begin_layout Standard
 If the isolating foil moves in an attractor-correlated way, we need to know
  how much influence it may have on the pendulum.
- The optimal approach would have the foil interferometer operating continuously
+ An optimal approach would have the foil interferometer operating continuously
  and in-range; it would then be possible to add a joint fit for the foil-motion-
 to-torque constant to the global fit for new physics.
  As we only had partial coverage with the interferometer (Section 
@@ -12888,7 +12884,7 @@ reference "sub:Pendulum-Foil-coupling"
 \end_layout
 
 \begin_layout Paragraph
-Attractor position to foil motion fit
+Attractor-position to foil-motion fit
 \end_layout
 
 \begin_layout Standard
@@ -12937,7 +12933,7 @@ reference "sec:Model-Comparison"
 \end_inset
 
  space.
- The many bootstrapped fits of the attractor-driven foil motion torque correctio
+ The many bootstrapped fits of the attractor-driven foil-motion torque correctio
 n are individually applied to these fits, allowing direct propagation of
  the correction uncertainty into the final fit results.
 \end_layout
@@ -12986,7 +12982,8 @@ Just as for the foil displacement as a function of attractor position, we
  of attractor position.
  Furthermore, by subtracting the foil-motion torque correction from this
  fit, we are able to compensate for any foil-motion systematic.
- This is perhaps the most intuitive and general output of the experiment.
+ This is perhaps the most intuitive and general result generated by the
+ experiment.
 \end_layout
 
 \begin_layout Section
@@ -13072,11 +13069,12 @@ filename "../extracted/calibCutLength.tex"
 \end_inset
 
 s chunks and fit for a sinusoidal signal.
- The signal occurs at the calibrator's 
+ The signal occurs at twice the quadrupolar gravitational calibrator's rotationa
+l frequency (
 \begin_inset Formula $2\omega$
 \end_inset
 
- frequency; a fit is also incorporated for the 
+); a fit is also incorporated for the 
 \begin_inset Formula $1\omega$
 \end_inset
 
@@ -13214,9 +13212,10 @@ reference "fig:Gravitational-calibration"
 \end_inset
 
  signal is possible, perhaps through modulation of the background magnetic
- field, the acoustic environment (an acoustic modulation was seen in acousticall
-y-driven studies of the foil interferometer), or the thermal environment,
- any of these effects should be small.
+ field, the acoustic environment (an acoustic modulation from the gravitational
+ calibration system was seen during intential driven-loudspeaker studies
+ of the foil interferometer), or the thermal environment, any of these effects
+ should be small.
 \end_layout
 
 \begin_layout Standard
@@ -13314,7 +13313,12 @@ key "WindowsTimeKnowledgebase"
 
 \end_inset
 
-: 
+:
+\end_layout
+
+\begin_layout Quote
+
+\emph on
 \begin_inset Quotes eld
 \end_inset
 
@@ -13333,7 +13337,9 @@ Windows XP and later versions of the Windows operating system implement
 \end_inset
 
  
-\emph on
+\end_layout
+
+\begin_layout Standard
 Caveat emptor.
 \end_layout
 
@@ -13372,9 +13378,9 @@ The user-space clocks are, in principle, resynchronized with the NTP clock
 Each DAQ computer has both a system clock and a hardware clock in the DAQ
  card.
  The data-taking cadence is defined by the DAQ card.
- For both the pendulum-computer's internal NI-6259 and the external USB
- NI-6211s used on the attractor and interferometer computers, the manufacturer
- guarantees the clock stability to 50 ppm, or 4 s/day.
+ For both the pendulum-computer's internal NI-6259 and the two external
+ USB NI-6211's used on the attractor and interferometer computers, the manufactu
+rer guarantees the clock stability to 50 ppm, or 4 s/day.
  In Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -13557,7 +13563,7 @@ Data are imported from three separate sources (torsion balance, attractor
 \end_inset
 
 s sample interval, so any extra timing mismatch (beyond that discussed in
- 
+ Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Timing"
@@ -13780,6 +13786,9 @@ status open
 \begin_layout Plain Layout
 Torque data before and after filtering.
  Attractor included to show relevant frequencies.
+ The attractor-drive system was operational for these data, but the isolating
+ `apparatus valve' was closed, preventing any attractor motion or gravitational
+ signal.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Measured Effect of FIR Filters"
@@ -13875,6 +13884,18 @@ name "sub:Lags-1"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+In this section, we determine the times during the experiment during which
+ we believe the torque signal might be contaminated with information associated
+ with the act of changing attractor position.
+ During these times, which we deem to be `dead', no data are used for scientific
+ analysis.
+\end_layout
+
+\begin_layout Subsubsection
+Important durations/times
 \end_layout
 
 \begin_layout Standard
@@ -14179,6 +14200,10 @@ name "fig:ElectronicTorqueLag"
 \end_inset
 
 Injected torques for dead-time determination after all filters.
+ The apparently-solid pink line is the injected coil current.
+ The scattered red dots are an entire torque dataset plotted with horizontal-axi
+s modulo the injected square-wave period.
+ The blue curve is the binned average of the experimentally-measured points.
 \end_layout
 
 \end_inset
@@ -14418,7 +14443,7 @@ The first measurement, and every-other subsequent measurement, is regarded
 \end_layout
 
 \begin_layout Standard
-The average of the A state measurements and the average of the B state measureme
+The average of the A-state measurements and the average of the B-state measureme
 nts are stored for each cut.
  In addition, the standard deviation, maximum, and minimum of each set of
  As and Bs are stored.
@@ -14427,7 +14452,10 @@ nts are stored for each cut.
 \begin_layout Standard
 The `lock-in' is made by taking the difference between the average of the
  As and the average of the Bs.
- 
+ The difference's mean, standard deviation, maximum, and minimum are all
+ recorded.
+ For the torque channel, these torque differences, in concert with the A
+ and B positions, comprise the science measurement.
 \end_layout
 
 \begin_layout Standard
@@ -14495,7 +14523,7 @@ name "fig:TriangleScatterPlot"
 
 \end_inset
 
-Your first `triangle plots', for both Yukawa-like and linear torques.
+`Triangle plots', for both Yukawa-like and linear torques.
  The upper frames show the simulated torque-as-a-function of distance curves.
  The middle frames show the `triangle plots' themselves; note the difference
  between them in the upper right corners.
@@ -14529,7 +14557,7 @@ A clear method of visualization is important to understanding the output
 \end_inset
 
 , we can plot every torque-difference measurement in a single plot, shown
- in the middle panels of 
+ in the middle panels of Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:TriangleScatterPlot"
@@ -14642,7 +14670,7 @@ The analysis presented here makes extensive use of a statistical method
  may be passed through any analysis routine developed for the original data
  set.
  With repetition, this process generates distributions of important output
- quantities (best-fit points in 
+ quantities (best-fit points in the Yukawa 
 \begin_inset Formula $\alpha-\lambda$
 \end_inset
 
@@ -14652,15 +14680,16 @@ The analysis presented here makes extensive use of a statistical method
 \begin_layout Standard
 The resampling scheme used in this analysis was to generate synthetic data
  sets of the same size as the original set by randomly selecting measurements
- (there are always duplicate picks, except in the special case where the
- original data are recovered, out of order) from the initial data set.
+ (there are always duplicate picks, except in the vanishingly rare case
+ where the original data are recovered, out of order) from the initial data
+ set.
  There is a related class of methods called `the jackknife' that generate
  statistics by considering complete sets of subsets of data, perhaps by
  dividing the initial data into subsets, fitting each subset, and drawing
  statistics from the fit outputs.
  The jackknife may be more readily accepted by those uncomfortable with
  the bootstrap; in the case of this measurement, there are too few measurements
- to allow meaningful statistics to be drawn from the fit outputs.
+ to allow meaningful statistics to be drawn from jackknifed fit outputs.
  Halving or quartering the dataset could be possible, but cutting it into
  ten pieces would result in too-little coverage in terms of varied attractor
  displacements.
@@ -14724,9 +14753,9 @@ name "sec:Model-Comparison"
 
 \begin_layout Standard
 The bootstrap makes comparison with any proposed model straightforward.
- No matter how exotic the fitting function and how sensitive it may be to
- individual datapoints or non-Gaussianity in the experimental data, it is
- straightforward to bootstrap the data, fit, bootstrap again, fit, etc...
+ No matter how exotic the fitting function and how sensitive it might be
+ to individual datapoints or non-Gaussianity in the experimental data, it
+ is straightforward to bootstrap the data, fit, bootstrap again, fit, etc...
  The distribution of fit outcomes can always be studied, and qualitative
  understanding is immediate.
  Settling on an algorithm for generating confidence intervals is, however,
@@ -14755,16 +14784,20 @@ A weakness of bootstrapped analysis is its reliance upon computational power
  that fitting parameter spaces are well-explored.
  It is possible to include systematic effects into bootstrapped confidence
  intervals by modelling each systematic and injecting the expected amount
- of noise into the data to be fitted.
+ of random uncertainty into the data to be fitted.
  If little is known about the systematic effect, however, this approach
  is challenging.
  
 \end_layout
 
 \begin_layout Standard
-It is more-reliable to attempt to include poorly-known systematics into
- the fit, fitting over all the data, including the systematic tests.
- This is done here by ascribing a new fictitious force to each systematic,
+It is more-reliable to include poorly-known systematics into the fit, fitting
+ over 
+\bar under
+all
+\bar default
+ the data, including both the science runs and the systematic tests.
+ We do this by ascribing a new fictitious force to each systematic effect,
  parametrized conservatively as a Yukawa torque, with its own strength and
  lengthscale.
  Furthermore, if we're able to compute 
@@ -15041,7 +15074,7 @@ reference "eq:PrototypeFitFunction"
 \end_inset
 
  is a recipe for trouble.
- With the aid and inspiration of Jason Detwiler, we computed the full non-linear
+ With aid and inspiration from Jason Detwiler, we computed the full non-linear
  variance of 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -15118,8 +15151,8 @@ reference "eq:X2 Statement"
 \end_inset
 
 .
- Nikolai Tolich was the first of those with whom we spoke to reach a quantitativ
-e understanding of the problem.
+ Nikolai Tolich was the first of those with whom we conferred to reach a
+ quantitative understanding of the problem.
  
 \end_layout
 
@@ -15222,7 +15255,7 @@ the flaw
 \end_layout
 
 \begin_layout Standard
-The profile-likelihood maximization is a challenging one, as it requires
+The profile-likelihood maximization would be a challenging one, as it requires
  global maximization over 
 \family roman
 \series medium
@@ -15260,7 +15293,7 @@ The profile-likelihood maximization is a challenging one, as it requires
 \end_inset
 
 , which numbers in the thousands.
- The Bayesian approach is perhaps more tractable if evaluated numerically
+ The Bayesian approach would be perhaps more tractable if evaluated numerically
  through a Monte Carlo or Markov-chain approach.
 \end_layout
 
@@ -15278,7 +15311,11 @@ Without a rigorous way to use
 \end_inset
 
  in a way that bakes in uncertainties of dependent variables, we cannot
- use it to pull out meaningful confidence intervals.
+ use 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+ to pull out meaningful confidence intervals.
  So, we return to the simple land of Monte Carlo tricks.
  We'll keep the linearized variance approach for the 
 \begin_inset Formula $B_{i}$
@@ -15452,12 +15489,12 @@ To extract science, consider the distribution of the
 \begin_inset Formula $(\alpha_{1},\lambda_{1})$
 \end_inset
 
- best-fit values over many bootstrapped/fuzzed fits.
+ best-fit values over many bootstrapped-and-fuzzed fits.
  
 \end_layout
 
 \begin_layout Itemize
-To extract understanding of any systematic uncertainties, study the distribution
+To extract understanding of systematic uncertainties, study the distribution
  of all remaining fitted variables.
 \end_layout
 
@@ -16499,7 +16536,7 @@ reference "sub:Lock-in"
 \end_layout
 
 \begin_layout Standard
-For the approximate systematic tests detailed in 
+For the approximate systematic tests detailed in Chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "chap:Systematic-Tests"
@@ -16526,20 +16563,28 @@ All systems fail, and this fairly fragile blinding system was no exception.
  The more-important occasion was during the development of the blinding/unblindi
 ng code.
  A bug in the blinding code led to one of us (Charlie) seeing a Yukawa fit
- that resolved a signal at minimal 
-\begin_inset Formula $\lambda$
+ that resolved a signal with 
+\begin_inset Formula $\lambda<20$
 \end_inset
 
-, 
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m, 
 \begin_inset Formula $|\alpha|\sim10^{3\pm2}$
 \end_inset
 
 , and with indeterminant sign.
- This pre-dated our determination of systematic cuts, particularly that
- for the foil; the indeterminacy of the sign of the observed signal is particula
-rly important.
- We don't know whether our later determinations added to or subtracted from
- this signal.
+ This pre-dated our determination of systematic cuts, particularly those
+ related to the foil; the indeterminacy of the sign of the observed signal
+ is particularly important.
+ We don't know whether our later determinations added to, subtracted from,
+ or eliminated this signal.
  
 \end_layout
 
@@ -16549,13 +16594,14 @@ This type of failure of the blind is a weakness to software-blinds in null
  Often, the best estimate of an instrument's proper operation is its output.
  In a software-blinded null measurement, the experimenter is forced to perpetual
 ly dance around any accidental observation of the result.
- A reliable hardware-implemented blind, such as a clock skew or a hard-coded
- unknown offset is much more resistant to innocent mistakes.
+ A reliable hardware-implemented blind, such as a clock skew, a hard-coded
+ unknown offset, or an unknown stable experimental parameter is much more
+ resistant to innocent mistakes.
  
 \end_layout
 
 \begin_layout Standard
-We look forward to using what we've learned on one more iteration of this
+We look forward to using what we've learned on the next iteration of this
  experiment, as at least the known pitfalls of this blinding procedure can
  be avoided.
 \end_layout
@@ -16565,9 +16611,9 @@ Software
 \end_layout
 
 \begin_layout Standard
-The software used to compute these results and generate this document is
- all freely available under the GNU Public License (GPL) or more-permissive
- licenses.
+The software used to compute these results and programatically generate
+ this document is all freely available under the GNU Public License (GPL)
+ or more-permissive licenses.
  This thesis and all supporting code necessary to go from the original raw
  data to every plot and datapoint expressed in this document are housed
  within a single git repository.
@@ -16575,8 +16621,8 @@ The software used to compute these results and generate this document is
 \family typewriter
 git pull
 \family default
-') and linked to the experimental data , this document can be generated
- simply by typing `make'.
+') and linked to the experimental data, this document can be generated simply
+ by typing `make'.
 \end_layout
 
 \begin_layout Section
@@ -16584,8 +16630,8 @@ Software stack
 \end_layout
 
 \begin_layout Standard
-The software used in this analysis may be unfamiliar to some readers, so
- it is partially detailed here.
+The software used in this analysis may be unfamiliar to some physicists,
+ so it is partially detailed here.
  There are many tutorials available across the web to sate any depth of
  interest.
 \end_layout
@@ -16602,7 +16648,7 @@ key "Git_1.8.4"
 
 \end_inset
 
- is a 
+ is an industry-standard 
 \begin_inset Quotes eld
 \end_inset
 
@@ -16611,15 +16657,15 @@ source code management
 \end_inset
 
  utility designed to provide fast and easy tracking of changes.
- The entire development process is tracked, so changes can followed and
+ The entire development process is tracked, so changes can be followed and
  selectively reverted at any time.
- Furthermore, code can be maintained seamless in multiple branches, preventing
- speculative work from stepping on main-line production work.
+ Furthermore, code can be maintained seamlessly in multiple branches, preventing
+ speculative exploration from stepping on main-line production work.
  Git was designed from the start to be distributed.
  Anyone working on the project has a complete copy of the project source;
  it's effectively a distributed backup.
  This project is hosted on github, in addition to several machines at CENPA.
- Git is a standard in the software industry for source code managment.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -16650,7 +16696,9 @@ directed acyclic graph
  properly built before being used.
  Without a defined and programatic way to go from raw data to final results,
  there's no way for anyone, including the original experimenters, to vet
- the process used to generate the final result.
+ the process used to generate a final result.
+ Make resolves this concern, making it possible to perform the entire analysis
+ with a single auditable command.
 \end_layout
 
 \begin_layout Standard
@@ -16660,108 +16708,7 @@ In addition, Make natively handles parallel processing.
  
 \end_layout
 
-\begin_layout Subsection
-GNU Octave
-\begin_inset CommandInset label
-LatexCommand label
-name "sub:GNU-Octave"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Octave 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "octave:2012"
-
-\end_inset
-
- is an open source clone of MATLAB.
- It implements the entire basic MATLAB command set, is comparably fast in
- many applications, and is free to anyone.
- The octave-forge repositories provide similar function to many of the establish
-ed MATLAB toolboxes.
- The readable source has been directly important to this project; when a
- library (
-\family typewriter
-fir2.m
-\family default
-) upon which the PlateWash analysis depends changed and incorporated a bug,
- it only took a few hours to identify and solve the problem.
- 
-\end_layout
-
-\begin_layout Subsection
-Gnuplot
-\end_layout
-
-\begin_layout Standard
-Gnuplot 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Gnuplot_4.6"
-
-\end_inset
-
- is a powerful plotting package.
- Almost every plot in this thesis was dynamically generated by Gnuplot.
- In addition to Gnuplot's plotting capabilities, it provides limited but
- convenient Levenburg-Marquardt fitting routines.
- For some non-critical fits, Gnuplot was used.
- 
-\end_layout
-
-\begin_layout Subsection
-Assorted GNU/Unix tools
-\end_layout
-
-\begin_layout Standard
-The benevolent computer engineers of yore have left us many gifts.
- This thesis relies heavily upon bash, awk, sed, grep, and many other tools
- of the standard UNIX command set.
- While these tools may appear cryptic or antiquated to a young physicist,
- they're powerful.
- All the problems smart people had in the 1970s are the same problems smart
- people have now.
- The smart people in the past have given us their tools.
-\end_layout
-
-\begin_layout Standard
-Bash is the scripting language for a standard UNIX shell (and the name of
- the shell itself).
- Awk is designed for handling tabular arrays of data of all kinds.
- It is fast and flexible.
- Sed, the `string editor', is a tool designed for rapidly traversing text
- files and operating on them; think of it as find-and-replace on steroids.
- 
-\end_layout
-
-\begin_layout Subsection
-TeX, LaTeX, LyX, BibTeX, JabRef
-\end_layout
-
-\begin_layout Standard
-The finest document processing software on the planet.
- It's also some of the hardest to use.
- This document is written using LyX, a graphical interface to LaTeX.
- As most physicists are familiar with TeX, no further elaboration is required.
- 
-\end_layout
-
-\begin_layout Standard
-PlateWash-specific: Most numbers in this text are automatically generated
- from data after processing in Octave.
- Numbers intended for publication are saved, after accounting for significant
- digits, into text files.
- After a shell script wraps them in TeX's desired $ symbols, the file is
- included as a child document into the LyX/LaTeX document.
- Voilà, data analysis flows directly into text!
-\end_layout
-
-\begin_layout Subsection
+\begin_layout Subsubsection
 Sample
 \end_layout
 
@@ -16805,13 +16752,130 @@ lstparams "breakatwhitespace=true,breaklines=true,caption={Makefile},emptylines=
  
 \end_layout
 
+\begin_layout Subsection
+GNU Octave
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:GNU-Octave"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Octave 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "octave:2012"
+
+\end_inset
+
+ is an open source clone of the commercial general-purpose scientific computing
+ environment MATLAB.
+ It implements the entire basic MATLAB command set, is comparably fast in
+ many applications, and is free to anyone.
+ The octave-forge repositories provide similar function to many of the establish
+ed MATLAB toolboxes.
+ The readable source has been directly important to this project; when a
+ library (
+\family typewriter
+fir2.m
+\family default
+) upon which the PlateWash analysis depends changed and incorporated a bug,
+ it only took a few hours to identify and solve the problem.
+ 
+\end_layout
+
+\begin_layout Subsection
+Gnuplot
+\end_layout
+
+\begin_layout Standard
+Gnuplot 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Gnuplot_4.6"
+
+\end_inset
+
+ is a powerful plotting package.
+ Almost every plot in this thesis was dynamically generated by Gnuplot.
+ In addition to Gnuplot's plotting capabilities, it provides limited but
+ convenient Levenburg-Marquardt fitting routines.
+ For some non-critical fits, Gnuplot was used.
+ 
+\end_layout
+
+\begin_layout Subsection
+Assorted GNU/Unix tools
+\end_layout
+
+\begin_layout Standard
+The benevolent computer engineers of yore have left us many gifts.
+ This thesis relies heavily upon 
+\family typewriter
+bash
+\family default
+, 
+\family typewriter
+awk
+\family default
+, 
+\family typewriter
+sed
+\family default
+, 
+\family typewriter
+grep
+\family default
+, and many other tools of the standard UNIX command set.
+ While these tools may appear cryptic or antiquated to a young physicist,
+ they're powerful.
+ All the problems smart people had in the 1970s are the same problems smart
+ people have now.
+ The smart people in the past have given us their tools.
+\end_layout
+
+\begin_layout Standard
+Bash is the scripting language for a standard UNIX shell (and the name of
+ the shell itself).
+ Awk is designed for handling tabular arrays of data of all kinds.
+ It is fast and flexible.
+ Sed, the `string editor', is a tool designed for rapidly traversing text
+ files and operating on them; think of it as find-and-replace on steroids.
+ 
+\end_layout
+
+\begin_layout Subsection
+TeX, LaTeX, LyX, BibTeX, JabRef
+\end_layout
+
+\begin_layout Standard
+TeX is the finest document-processing software on the planet.
+ It's also hard to use.
+ This document is written using LyX, a graphical interface to LaTeX.
+ The bibliography is handled using BibTeX and JabRef.
+ 
+\end_layout
+
+\begin_layout Standard
+Most numbers in this text are automatically generated from data after processing
+ in Octave.
+ Numbers intended for publication are saved, after accounting for significant
+ digits and the peculiarities of the SI unit system, into text files.
+ After a script wraps them in TeX's desired $ symbols, the file is included
+ as a child document into the LyX/LaTeX document.
+ Voilà, data analysis flows directly into text! 
+\end_layout
+
 \begin_layout Section
 Daily Builds
 \end_layout
 
 \begin_layout Standard
-For the last months of this analysis, the data analysis and thesis were
- rebuilt from scratch hourly or daily.
+For the last year of this analysis, the data analysis and thesis were rebuilt
+ from scratch hourly or daily.
  This enables quick catching of integration bugs and allows collaborators
  to contribute to any part of the work at any time.
  Furthermore, frequent builds provide a clear picture of the deliverable
@@ -16850,8 +16914,7 @@ Testing is perhaps best explained by example.
  the results behave as expected.
  What if that were programatic? If, before you made serious use of a library,
  you could hit `test', and the software could run a predefined set of such
- tests.
- It is 
+ tests? It is 
 \emph on
 much
 \emph default
@@ -16879,12 +16942,61 @@ integration testing
 \begin_layout Standard
 Octave has a straightforward syntax for integrating unit tests into functions.
  Before the PlateWash analysis begins, the entire set of homespun Octave
- libraries is tested.
+ libraries is automatically tested.
  At present, this software project has insufficient formal testing coverage.
  This is improving, but our first results must be delivered before testing
  coverage is complete.
- As the testing coverage grows, the integrity of the project will grow.
+ As the testing coverage grows, the integrity of the project, too, will
+ grow.
  
+\end_layout
+
+\begin_layout Standard
+The code used in our Newtonian gravitational calculations (Chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Newtonian-Simulation"
+
+\end_inset
+
+) has good testing coverage.
+ That library's code is an excellent place to glimpse the possibilities
+ unit-testing makes available to the discerning physicist.
+\end_layout
+
+\begin_layout Section
+Advantages
+\end_layout
+
+\begin_layout Standard
+The advantages of having a dynamic ability to alter the data analysis at
+ any point in the entire project and be certain that correctly-processed
+ numbers, analysis, and plots will appear in the final text cannot be understate
+d.
+ This makes collaboration with others straightforward, as there's no fear
+ that large portions of an analysis will have to be 
+\begin_inset Quotes eld
+\end_inset
+
+re-done
+\begin_inset Quotes erd
+\end_inset
+
+ in response to changes early in the analysis process; it gets automatically
+ 
+\begin_inset Quotes eld
+\end_inset
+
+re-done
+\begin_inset Quotes erd
+\end_inset
+
+ every night.
+ In addition, this ability is critical to unblinding a sophisticated analysis;
+ complex processes proven to work on simulated data can be applied directly
+ to real data when the time comes.
+ Finally, and of greatest importance, the entire process is replicable;
+ anyone studying this experimental result can know exactly what was done.
 \end_layout
 
 \begin_layout Chapter

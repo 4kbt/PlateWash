@@ -1,7 +1,7 @@
 set term postscript enhanced solid color eps
 set output 'run3224torqueLag.eps'
 
-set xlabel 'time (s) modulo 128 s step period'
+set xlabel 'time (s) modulo 256 s signal period'
 set ylabel 'coil current (arb units)'
 
 set key noauto

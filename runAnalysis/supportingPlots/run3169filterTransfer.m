@@ -18,7 +18,8 @@ run3147preSM3A
 PF = psd(pwData(:,pwTimeCol), pwData(:,torqueCol)); 
 
 
-pos = polyval(pressEncP, psData(:,psSquareCol) ); 
+%pos = polyval(pressEncP, psData(:,psSquareCol) ); 
+pos = psData(:,psSquareCol) * 1e6;
 
 A = psd( psData(:,psTimeCol) , pos - mean( pos ));
 
