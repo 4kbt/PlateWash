@@ -10254,11 +10254,11 @@ Metrology
 Understanding the separation between attractor and test masses is essential
  to any inverse square law test.
  However, because of the nearly-null parallel-plate geometry, the implications
- of an accidental error in metrology affect only the stated exclusion limits,
- but not the presence nor absence of a purported ISL violation.
+ of a sufficiently-small error in metrology affect only the stated exclusion
+ limits, but not the presence nor absence of a purported ISL violation.
  This is an important contrast to non-null experiments, where an error in
- attractor/sensor separation alone can lead to a faked or masked signal
- for new physics.
+ attractor/sensor separation alone can lead to a Newtonian-gravitationally
+ faked or masked signal for new physics.
 \end_layout
 
 \begin_layout Standard
