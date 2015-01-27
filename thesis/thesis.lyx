@@ -13802,16 +13802,9 @@ filename "../extracted/numberOfCuts.tex"
 
 \end_inset
 
- cuts, the effect of cut-to-cut correlation is limited.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-(XXXMA cut-correlation estimation).
-\end_layout
-
-\end_inset
-
+ cuts, the effect of cut-to-cut correlation is extremely small in aggregate.
+ In addition, as attractor motion was either random or uniform, it should
+ not introduce any systematic uncertainty.
  The 3-cut length of the FIR filter was chosen by balancing the need to
  sufficiently attenuate and frequency-select the injected calibration signal
  (pushes to longer-duration filters) with the need to reject the effects
