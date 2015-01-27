@@ -9087,23 +9087,8 @@ filename "../NewtonianSimulation/SimulationOutput/nonAttractorquad.tex"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Paragraph
-\begin_inset Note Note
-status open
-
-\begin_layout Paragraph
-Caterpillaring of the bellows
-\end_layout
-
-\begin_layout Plain Layout
-XXXMA The bellows might deform sideways slightly?
-\end_layout
-
-\end_inset
-
-
+ It is possible that the bellows could deflect sideways when it expands
+ axially; we do not expect the nonlinearity of this effect to be observable.
 \end_layout
 
 \begin_layout Paragraph
