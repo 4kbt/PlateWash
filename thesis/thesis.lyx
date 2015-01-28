@@ -9087,23 +9087,8 @@ filename "../NewtonianSimulation/SimulationOutput/nonAttractorquad.tex"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Paragraph
-\begin_inset Note Note
-status open
-
-\begin_layout Paragraph
-Caterpillaring of the bellows
-\end_layout
-
-\begin_layout Plain Layout
-XXXMA The bellows might deform sideways slightly?
-\end_layout
-
-\end_inset
-
-
+ It is possible that the bellows could deflect sideways when it expands
+ axially; we do not expect the nonlinearity of this effect to be observable.
 \end_layout
 
 \begin_layout Paragraph
@@ -13821,16 +13806,9 @@ filename "../extracted/numberOfCuts.tex"
 
 \end_inset
 
- cuts, the effect of cut-to-cut correlation is limited.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-(XXXMA cut-correlation estimation).
-\end_layout
-
-\end_inset
-
+ cuts, the effect of cut-to-cut correlation is extremely small in aggregate.
+ In addition, as attractor motion was either random or uniform, it should
+ not introduce any systematic uncertainty.
  The 3-cut length of the FIR filter was chosen by balancing the need to
  sufficiently attenuate and frequency-select the injected calibration signal
  (pushes to longer-duration filters) with the need to reject the effects
@@ -17183,6 +17161,10 @@ Movement
 
 \begin_layout Standard
 It is convenient to programatically translate and rotate mass distributions.
+ These functions allow the arbitrary assembly of simple components into
+ more complicated ones.
+ Furthermore, when patterning rotation- or translation-symmetric bodies,
+ copies of the repeated element are trivially made and positioned.
 \end_layout
 
 \begin_layout Subsection
@@ -18044,7 +18026,7 @@ Matt Turner's independent calculation
 Prior to the development of this Newtonian modelling package, Matt Turner
  developed an independent package for computing the PlateWash torques using
  a semi-analytic numerical approach.
- These results were found to be in agreement with this simulation package
+ His results were found to be in agreement with this simulation package
  for all pendulum/attractor combinations attempted.
  
 \end_layout
@@ -18497,7 +18479,7 @@ We spent a lot of time trying to figure out how to generate a satisfactory
 \end_layout
 
 \begin_layout Standard
-Fiber fizeau interferometers are common in the atomic-force-microscope world
+Fiber Fizeau interferometers are common in the atomic-force-microscope world
  
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -20596,7 +20578,7 @@ I think the major difference between a professional and an amateur is whether
 \begin_layout Standard
 The PlateWash experiment began as an attempt to make a lightning strike
  into new territory.
- The design is efficient, there is no more powerful geometry for raw signal.
+ The design is efficient; there is no more powerful geometry for raw signal.
  The systematic uncertainties for Newtonian gravity are easy, the rest are
  hard.
  With an optimistic view toward the latter, it's easy to see how we predicted
@@ -20625,7 +20607,7 @@ m in ~2008, and reach
 \end_inset
 
 m in perhaps 2010.
- That this result arrives in 2014 with a limit at greater than 
+ That this result arrives in 2015 with a limit at greater than 
 \begin_inset Formula $50$
 \end_inset
 
