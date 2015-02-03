@@ -1,8 +1,8 @@
 %converts dates/times as column vectors to the number of seconds elapsed since Jan 1, 2009, 0:00:00.
 function secs = dateTimeToSecs( mdyy, hms)
 
-	if(mdyy(3)!=9 & mdyy(3)!=10 & mdyy(3)!= 11 & mdyy(3) != 12)
-		error("Not 2009 or 2010 or 2011 or 2012!");
+	if(mdyy(3) < 9 | mdyy(3) > 15 ) 
+		error("Not a year 2009-2015!");
 	end
 
 	switch mdyy(1)
@@ -34,21 +34,17 @@ function secs = dateTimeToSecs( mdyy, hms)
 			error("Not a month!");
 	endswitch
 
-	if(mdyy(3) == 10)
-		secs = secs + 86400*365;
+	%Years
+	secs = secs + ( mdyy(3) - 9 ) * 86400 * 365; 
+
+	%2013 and beyond leap-year correction
+	if ( mdyy(3) > 12 )
+		secs = secs + 86400;	
 	end
 
-	if(mdyy(3) == 11)
-		secs = secs + 86400*365*2;
-	end
-
-	%Added 1-3-2012 CAH
-	if(mdyy(3) == 12)
-		secs = secs + 86400*365*3;
-		%Leap Year
-		if ( mdyy(1) > 2 )
-			 secs = secs + 86400;
-		end
+	%2012 leap year correction
+	if ( mdyy(3) == 12 & mdyy(1) > 2)
+		secs = secs + 86400;
 	end
 
 	timeConversion=[3600 60 1];
