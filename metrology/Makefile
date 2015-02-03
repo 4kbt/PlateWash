@@ -3,7 +3,10 @@ include ../Makefile.inc
 BOUNCE := run3145bounce
 TWIST  := run1690attractorTwist
 
-all : $(BOUNCE).eps $(TWIST).eps
+FRINGES := run3305fringes
+CRASH   := run3305capSweep
+
+all : $(BOUNCE).eps $(TWIST).eps $(FRINGES).eps $(CRASH).eps
 
 $(BOUNCE).dat : $(BOUNCE).m
 	$(OCT) $(BOUNCE).m 
@@ -17,3 +20,11 @@ $(TWIST).dat : $(TWIST).m
 
 $(TWIST).eps : $(TWIST).gpl $(TWIST).dat
 	$(GNU) $<
+
+$(FRINGES).eps: fringes33052nd.dat $(FRINGES).m $(FRINGES).gpl
+	$(OCT) $(FRINGES).m
+	$(GNU) $(FRINGES).gpl
+
+$(CRASH).eps : $(CRASH).m $(CRASH).gpl
+	$(OCT) $(CRASH).m
+	$(GNU) $(CRASH).gpl

@@ -22,6 +22,8 @@ psdCol = 15;
 
 ABErrOffset = numSensors*15;
 psTimeCol   = 5 ;
+psCapCol    = 6 ;
+psEncCol    = 13;
 psSquareCol = 15;
 aCol = numSensors+numPWSensors+psSquareCol;
 aErrCol = aCol + ABErrOffset;
