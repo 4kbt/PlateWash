@@ -6699,377 +6699,7 @@ reference "sub:Electrical-Crosstalk"
 \end_layout
 
 \begin_layout Section
-Metrology
-\end_layout
-
-\begin_layout Subsection
-Initial Alignment
-\end_layout
-
-\begin_layout Standard
-XXXRC! The experiment was initially aligned using the autocollimator.
- The attractor was fixed in place against two registry blocks and firmly
- clamped.
- The autocollimator was then centered on the attractor and aligned such
- that the light returned to near the center of the sensor.
- The up-down and left-right angles were recorded.
- The attractor was then translated through its full range of motion, and
- the position on the autocollimator recorded, see Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Flexure-runout"
-
-\end_inset
-
-.
- The attractor was adjusted to a point 
-\begin_inset Formula $\sim20$
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset Formula $\mu$
-\end_inset
-
-m from the desired working position.
- The foil and attractor were cleaned with dry nitrogen and with clean room
- wipes/isopropanol.
- The foil was then placed in front of the attractor and iteratively aligned
- to the attractor using a combination of the autocollimator readout and
- a measurement of the attractor-foil capacitance.
- Gross alignment was done by hand.
- Fine adjustment was done using the Belleville washers on the foil mount.
- When optical alignment reached XXXRC 
-\begin_inset Formula $\mu$
-\end_inset
-
-rad, a capacitance of 
-\begin_inset Formula $\sim3$
-\end_inset
-
--400 pF was achieved, and the capacitance seemed to be at a minimum as a
- function of attractor-foil angle, the system was declared to be coarsely
- aligned.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename ../metrology/run1690attractorTwist.eps
-	width 100text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Flexure-runout"
-
-\end_inset
-
-Flexure runout, as measured by the autocollimator.
- The science data were taken using positions largely (perhaps entirely)
- within this region.
- The hard stop at right is the physical limit of the flexure's motion.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Cleaning
-\end_layout
-
-\begin_layout Standard
-Once the attractor and foil were aligned, it was essential to remove any
- debris/dust in the gap between them.
- To characterize the amount of dust in the gap, and to verify alignment,
- the attractor-foil capacitance was measured as a function of attractor
- position, including positions where the attractor touched the foil.
- Touching was, at this step, determined by noting the position where the
- capacitance reading became unreliable.
- The maximum capacitance recorded without signs of touching gave a proxy
- for the minimum attractor-foil separation.
- 
-\end_layout
-
-\begin_layout Standard
-The attractor assembly was removed and the attractor face cleaned with isopropan
-ol, clean room wipes, and dry nitrogen.
- The same was done with the attractor side of the foil.
- Both attractor and foil were visually inspected for dust.
- The attractor assembly was replaced against the registry blocks and re-clamped.
- The attractor-foil capacitance was measured as a function of attractor
- position.
- The cleaning procedure was repeated until no gains in capacitance were
- observed with subsequent cleanings.
- Typical maximum capacitances were 
-\begin_inset Formula $\sim2$
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-nF; because of the ambient atmosphere, this measurement should not be used
- to determine the distance of minimum approach.
-\end_layout
-
-\begin_layout Subsection
-Online Alignment
-\end_layout
-
-\begin_layout Standard
-The critical distances between and relative orientations of the pendulum,
- foil, and attractor were determined with the bell jar closed, under vacuum,
- and after bake-out.
- A number of methods were explored, but the method of choice was as follows:
- The freely twisting pendulum was allowed to tap the foil as the attractor
- was pressed into the foil by the flexure stage.
- As the attractor displaced the foil, the angular amplitude of the tapping
- signal necessarily decreased to zero.
- The point where this occurred was used as a reference to determine the
- absolute distance between the pendulum and the attractor 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-(XXXMI we should repeat at another phitop position?)
-\end_layout
-
-\end_inset
-
-.
- The pendulum horizontal and vertical angles, as measured by the autocollimator,
- at this point were taken to be the angles at which the pendulum was parallel
- to the attractor.
- 
-\end_layout
-
-\begin_layout Standard
-The pendulum-foil capacitance was measured as a function of pendulum position
- towards and away from the foil, as measured by the phitop encoder.
- 
-\end_layout
-
-\begin_layout Standard
-XXXRC Plots
-\end_layout
-
-\begin_layout Standard
-The pendulum foil distance was measured optically using a digital camera.
- 
-\end_layout
-
-\begin_layout Standard
-The attractor-foil capacitance was measured as a function of attractor position.
-\end_layout
-
-\begin_layout Standard
-The interferometer signal was measured as a function of attractor position.
- 
-\end_layout
-
-\begin_layout Standard
-The bounce test was repeated holding the pendulum close to the foil and
- moving the attractor.
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename Pictures/small/Pre3147SideViewMarch132012092956.jpg
-	width 50text%
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename Pictures/small/Post3164SideViewMay092012064354.jpg
-	width 50text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename Pictures/small/Pre3147BackSideViewMarch132012093012.jpg
-	width 50text%
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename Pictures/small/Post3164BackSideViewMay092012064412.jpg
-	width 50text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename Pictures/small/Pre3147FiberPositionMarch132012093038.jpg
-	width 50text%
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename Pictures/small/Post3164FiberPositionMay092012064424.jpg
-	width 50text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Alignment photos before (left) and after (right) science run.
- The upper photos look directly through the window, the middle photos are
- the mirror-image of the side opposite the window, and the lower photos
- are the reflected image of the fiber position against the foil's alignment
- marks.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Attractor-Foil touching
-\end_layout
-
-\begin_layout Standard
-To avoid any systematic effect due to direct attractor-foil touching, it
- is essential to place a short-distance cutoff on attractor positions.
- This is done on a per-measurement level, rather than per-cut (See Section
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sub:Implementation"
-
-\end_inset
-
- for a brief definition of a 
-\begin_inset Quotes eld
-\end_inset
-
-cut
-\begin_inset Quotes erd
-\end_inset
-
- or Section 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sub:Parsing-into-cuts"
-
-\end_inset
-
- for full detail).
- In contrast to all other analysis, the mean cut position is not used; instead,
- as each cut is an aggregate of individual measurements, the minimum position
- of individual measurements within a cut, as seen in Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Attractor-Foil-touching-determin"
-
-\end_inset
-
-.
- The minimum-accepted attractor-pendulum separation is conservative at 
-\begin_inset CommandInset include
-LatexCommand input
-filename "../extracted/shortCut.tex"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename ../ifo/ifoVsClosestApproach.eps
-	width 100text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Attractor-Foil-touching-determin"
-
-\end_inset
-
-Attractor-Foil touching determination
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Uncertainty Budget
+Enumeration of Uncertainties
 \end_layout
 
 \begin_layout Standard
@@ -7772,50 +7402,10 @@ Earthquakes worldwide can affect the balance.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-XXXMA
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Earthquake!
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
 PlateWash also sees less-palpable seismic effects, such as the `microseismic
- peak' 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMA
-\end_layout
-
-\end_inset
-
- and the effects of nearby humanity (traffic and laboratory noise).
+ peak', an ever-present seismic signature of ocean waves striking the continenta
+l coastline, and the effects of nearby humanity (traffic and laboratory
+ noise).
  
 \end_layout
 
@@ -7974,42 +7564,6 @@ While the coupling mechanism to wind is related to some combination of seismic
  pendulum noise.
  Stormy periods can elevate torque noise by as much as an order of magnitude
  in comparison with still periods.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-XXXMA
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Wind and torque noise
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Paragraph
@@ -8178,63 +7732,6 @@ analog conversion noise can couple to the pendulum.
  These effects were assessed by comparing the pendulum noise with and without
  the feedback electrodes grounded.
  No excess noise was seen.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-XXXMA
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Free pendulum noise with and without grounded feedback electrodes
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
-Noise model
-\end_layout
-
-\begin_layout Plain Layout
-XXXMA
-\end_layout
-
-\begin_layout Subsubsection
-Comparison with experiment
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection
@@ -10265,7 +9762,298 @@ reference "sub:Isolating-Foil"
 \end_layout
 
 \begin_layout Section
+Metrology
+\end_layout
+
+\begin_layout Subsection
+Initial Alignment
+\end_layout
+
+\begin_layout Standard
+The experiment was initially aligned using the autocollimator.
+ The attractor was fixed in place against two registry blocks and firmly
+ clamped.
+ The autocollimator was then centered on the attractor and aligned such
+ that the light returned to near the center of the sensor.
+ The up-down and left-right angles were recorded.
+ The attractor was then translated through its full range of motion, and
+ the position on the autocollimator recorded, see Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Flexure-runout"
+
+\end_inset
+
+.
+ The attractor was adjusted to a point 
+\begin_inset Formula $\sim20$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m from the desired working position.
+ The foil and attractor were cleaned with dry nitrogen and with clean room
+ wipes/isopropanol.
+ The foil was then placed in front of the attractor and iteratively aligned
+ to the attractor using a combination of the autocollimator readout and
+ a measurement of the attractor-foil capacitance.
+ Gross alignment was done by hand.
+ Fine adjustment was done using the Belleville washers on the foil mount.
+ When optical alignment reached XXXRC 
+\begin_inset Formula $\mu$
+\end_inset
+
+rad, a capacitance of 
+\begin_inset Formula $\sim3$
+\end_inset
+
+-400 pF was achieved, and the capacitance seemed to be at a minimum as a
+ function of attractor-foil angle, the system was declared to be coarsely
+ aligned.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../metrology/run1690attractorTwist.eps
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Flexure-runout"
+
+\end_inset
+
+Flexure runout, as measured by the autocollimator.
+ The science data were taken using positions largely (perhaps entirely)
+ within this region.
+ The hard stop at right is the physical limit of the flexure's motion.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Cleaning
+\end_layout
+
+\begin_layout Standard
+Once the attractor and foil were aligned, it was essential to remove any
+ debris/dust in the gap between them.
+ To characterize the amount of dust in the gap, and to verify alignment,
+ the attractor-foil capacitance was measured as a function of attractor
+ position, including positions where the attractor touched the foil.
+ Touching was, at this step, determined by noting the position where the
+ capacitance reading became unreliable.
+ The maximum capacitance recorded without signs of touching gave a proxy
+ for the minimum attractor-foil separation.
+ 
+\end_layout
+
+\begin_layout Standard
+The attractor assembly was removed and the attractor face cleaned with isopropan
+ol, clean room wipes, and dry nitrogen.
+ The same was done with the attractor side of the foil.
+ Both attractor and foil were visually inspected for dust.
+ The attractor assembly was replaced against the registry blocks and re-clamped.
+ The attractor-foil capacitance was measured as a function of attractor
+ position.
+ The cleaning procedure was repeated until no gains in capacitance were
+ observed with subsequent cleanings.
+ Typical maximum capacitances were 
+\begin_inset Formula $\sim2$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+nF; because of the ambient atmosphere, this measurement should not be used
+ to determine the distance of minimum approach.
+\end_layout
+
+\begin_layout Subsection
+Online Alignment
+\end_layout
+
+\begin_layout Standard
+The critical distances between and relative orientations of the pendulum,
+ foil, and attractor were determined with the bell jar closed, under vacuum,
+ and after bake-out.
+ A number of methods were explored, but the method of choice was as follows:
+ The freely twisting pendulum was allowed to tap the foil as the attractor
+ was pressed into the foil by the flexure stage.
+ As the attractor displaced the foil, the angular amplitude of the tapping
+ signal necessarily decreased to zero.
+ The point where this occurred was used as a reference to determine the
+ absolute distance between the pendulum and the attractor 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+(XXXMI we should repeat at another phitop position?)
+\end_layout
+
+\end_inset
+
+.
+ The pendulum horizontal and vertical angles, as measured by the autocollimator,
+ at this point were taken to be the angles at which the pendulum was parallel
+ to the attractor.
+ 
+\end_layout
+
+\begin_layout Standard
+The pendulum-foil capacitance was measured as a function of pendulum position
+ towards and away from the foil, as measured by the phitop encoder.
+ 
+\end_layout
+
+\begin_layout Standard
+XXXRC Plots
+\end_layout
+
+\begin_layout Standard
+The pendulum foil distance was measured optically using a digital camera.
+ 
+\end_layout
+
+\begin_layout Standard
+The attractor-foil capacitance was measured as a function of attractor position.
+\end_layout
+
+\begin_layout Standard
+The interferometer signal was measured as a function of attractor position.
+ 
+\end_layout
+
+\begin_layout Standard
+The bounce test was repeated holding the pendulum close to the foil and
+ moving the attractor.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Pictures/small/Pre3147SideViewMarch132012092956.jpg
+	width 50text%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Pictures/small/Post3164SideViewMay092012064354.jpg
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Pictures/small/Pre3147BackSideViewMarch132012093012.jpg
+	width 50text%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Pictures/small/Post3164BackSideViewMay092012064412.jpg
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Pictures/small/Pre3147FiberPositionMarch132012093038.jpg
+	width 50text%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Pictures/small/Post3164FiberPositionMay092012064424.jpg
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Alignment photos before (left) and after (right) science run.
+ The upper photos look directly through the window, the middle photos are
+ the mirror-image of the side opposite the window, and the lower photos
+ are the reflected image of the fiber position against the foil's alignment
+ marks.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Attractor-side
+\end_layout
+
+\begin_layout Standard
+This section is devoted to assessing the parallelism and absolute separation
+ of the attractor and foil.
+ As the positions of the pendulum and foil are determined by rigid metal
+ fixations and kinematic mounting, their relative separation is more-easily
+ determined than that of the pendulum and foil.
+\end_layout
+
+\begin_layout Subsection
+Parallelism
 \end_layout
 
 \begin_layout Standard
@@ -10345,6 +10133,12 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Fringe-locations-taken"
+
+\end_inset
+
 Fringe locations taken from the upper panel of Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -10380,15 +10174,189 @@ ent of the two surfaces.
 \end_layout
 
 \begin_layout Standard
-XXXRC
+There are several experimental options we could use to assess the parallelism
+ of the attractor and foil.
+ When aligning the apparatus, we tipped the apparatus, placing the pendulum
+ onto the foil, pressed the attractor into the back of the foil, and used
+ the autocollimator-measured angular displacement of the pendulum as a proxy
+ for parallelism.
+ That got us close; the fine alignment was performed capacitively, tipping
+ the foil slightly until a maximal capacitance could be measured without
+ electrically shorting the attractor and foil together.
+ With that complete, we performed the science experiment.
+ 
+\end_layout
+
+\begin_layout Standard
+Concerns regarding the difficulty of calculating fringing fields led us
+ to view the capacitance measurement with skepticism.
+ So, in January 2015, the untouched apparatus was brought back to life.
+ The attractor and interferometer computers were turned on, and the interferomet
+er laser and SRS SR720 capacitance meter were reinstalled.
+ Unlike normal science operation, where the encoder can inject systematic
+ interference, it was possible to connect and turn on the attractor optical
+ encoder.
+ The attractor bellows was pressurized to push the attractor into the foil
+ by tens of microns, and allowed to leak slowly back over several hours,
+ producing a smooth slow displacement over time.
+ The results are shown in Figures 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:IFO-Cap-Crash-Plot"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Fringe-locations-taken"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+From Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Fringe-locations-taken"
+
+\end_inset
+
+, we conclude that the overall non-parallelism of the attractor and foil
+ is about 
+\begin_inset Formula $20$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m over the 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/AttractorDiameter.tex"
+
+\end_inset
+
+ diameter attractor.
+ It is conservative to add the 
+\begin_inset Formula $20$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m spacing directly into our computed attractor-pendulum separation.
 \end_layout
 
 \begin_layout Subsection
-Capacitor measurements
+Attractor-Foil touching
 \end_layout
 
-\begin_layout Subsection
-Touching
+\begin_layout Standard
+In addition to the attractor-foil parallelism, we must know the absolute
+ distance between the attractor and foil.
+ This is determined through observing the attractor-displacement position
+ where the attractor and foil touch.
+ This is essential both for metrology and to provide a sharp cutoff against
+ any foil-motion related systematic effects.
+\end_layout
+
+\begin_layout Standard
+The determination of the touching point is done using the science data on
+ a per-measurement level, rather than per-cut (See Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Implementation"
+
+\end_inset
+
+ for a brief definition of a 
+\begin_inset Quotes eld
+\end_inset
+
+cut
+\begin_inset Quotes erd
+\end_inset
+
+ or Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Parsing-into-cuts"
+
+\end_inset
+
+ for full detail).
+ In contrast to all other analysis, the mean cut position is not used; instead,
+ as each cut is an aggregate of individual measurements, the minimum position
+ of individual measurements within a cut, as seen in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Attractor-Foil-touching-determin"
+
+\end_inset
+
+.
+ The minimum-accepted attractor-pendulum separation is conservative at 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/shortCut.tex"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../ifo/ifoVsClosestApproach.eps
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Attractor-Foil-touching-determin"
+
+\end_inset
+
+Attractor-Foil touching determination
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
