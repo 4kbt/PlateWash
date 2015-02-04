@@ -10269,6 +10269,117 @@ Attractor-side
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../metrology/run3305capSweep.eps
+	width 70text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:IFO-Cap-Crash-Plot"
+
+\end_inset
+
+Raw data used to infer the attractor-foil relative angle.
+ Each plot is a function of attractor displacement as measured by the optical
+ encoder, with a common arbitrary zero.
+ The upper panel shows the interferometer signal, with prominent touching
+ signal at displacements greater than ~708
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu m$
+\end_inset
+
+.
+ The middle panel shows the capacitance signal, which becomes unreliable
+ in the same location.
+ The bottom panel shows the pressure in the flexure bellows; the slope should
+ increase when the attractor makes contact with the foil.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../metrology/run3305fringes.eps
+	width 70text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fringe locations taken from the upper panel of Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:IFO-Cap-Crash-Plot"
+
+\end_inset
+
+.
+ The upper panel shows the locations of maxima and minima.
+ The lower panel shows the displacement per fringe.
+ It should approach 
+\begin_inset Formula $\approx\lambda/2$
+\end_inset
+
+ as the attractor makes full contact with the foil.
+ The range of displacements where the displacement-per-fringe value is significa
+ntly different from 
+\begin_inset Formula $\lambda/2$
+\end_inset
+
+ should correspond to incomplete attractor-foil contact, and hence the misalignm
+ent of the two surfaces.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 XXXRC
 \end_layout
 
