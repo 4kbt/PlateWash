@@ -9909,9 +9909,40 @@ Online Alignment
 The critical distances between and relative orientations of the pendulum,
  foil, and attractor were determined with the bell jar closed, under vacuum,
  and after bake-out.
- A number of methods were explored, but the method of choice was as follows:
- The freely twisting pendulum was allowed to tap the foil as the attractor
- was pressed into the foil by the flexure stage.
+ Once the system's atmosphere was evacuated, both the pendulum's and foil's
+ motion were essentially unaffected by gas-related effects.
+ The foil-alignment motors (see Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Isolating-Foil"
+
+\end_inset
+
+) were then adjusted to maximize the highest measurable capacitance-before-short
+ing between the attractor and foil.
+ The pendulum's tip angle relative to the foil (about a horizontal axis
+ parallel to the plane of the foil) was minimized by imaging through the
+ bell-jar window.
+ Finally, the pendulum-foil distance was determined both by imaging and
+ by the `bounce test' detailed in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Bounce-test"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+A number of other methods were explored, but the method of choice was as
+ follows: The freely twisting pendulum was allowed to tap the foil as the
+ attractor was pressed into the foil by the flexure stage.
  As the attractor displaced the foil, the angular amplitude of the tapping
  signal necessarily decreased to zero.
  The point where this occurred was used as a reference to determine the
@@ -9926,39 +9957,20 @@ status open
 \end_inset
 
 .
- The pendulum horizontal and vertical angles, as measured by the autocollimator,
- at this point were taken to be the angles at which the pendulum was parallel
- to the attractor.
+ (XXXRC - do we have these data?)The pendulum horizontal and vertical angles,
+ as measured by the autocollimator, at this point were taken to be the angles
+ at which the pendulum was parallel to the attractor.
  
 \end_layout
 
-\begin_layout Standard
-The pendulum-foil capacitance was measured as a function of pendulum position
- towards and away from the foil, as measured by the phitop encoder.
- 
-\end_layout
-
-\begin_layout Standard
-XXXRC Plots
-\end_layout
-
-\begin_layout Standard
-The pendulum foil distance was measured optically using a digital camera.
- 
-\end_layout
-
-\begin_layout Standard
-The attractor-foil capacitance was measured as a function of attractor position.
-\end_layout
-
-\begin_layout Standard
-The interferometer signal was measured as a function of attractor position.
- 
-\end_layout
-
-\begin_layout Standard
+\begin_layout Plain Layout
 The bounce test was repeated holding the pendulum close to the foil and
  moving the attractor.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -10259,6 +10271,15 @@ filename "../extracted/AttractorDiameter.tex"
 \end_inset
 
 m spacing directly into our computed attractor-pendulum separation.
+ As seen in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Flexure-runout"
+
+\end_inset
+
+, the variation in attractor angle throughout its range of travel is far
+ smaller than the otherwise-fixed misalignment.
 \end_layout
 
 \begin_layout Subsection
@@ -10359,18 +10380,14 @@ Attractor-Foil touching determination
 
 \end_layout
 
-\begin_layout Standard
-run1690attractorTwist.eps.
-\end_layout
-
 \begin_layout Section
 Pendulum-side
 \end_layout
 
 \begin_layout Standard
 The most-challenging metrology was on the pendulum side of the foil.
- The pendulum was hand-lapped, making its corners challenging to image and
- understand.
+ The pendulum was hand-lapped, rounding its edges and making its corners
+ challenging to image.
  The attractor's location was fixed, so the pendulum's horizontal (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -10596,8 +10613,27 @@ name "sub:Pendulum-Foil-separation"
 
 \end_layout
 
+\begin_layout Standard
+We assess the pendulum-foil separation in two different ways.
+ The most quantitative is the `bounce test', but it is potentially confounded
+ by both pendulum tip (misalignment with the foil about a horizontal axis
+ parallel to the foil face) and by dust between the pendulum and foil.
+ The most reliable, but less sensitive, approach uses direct imaging of
+ the pendulum-foil distance.
+ These two methods were found to be in reasonable agreement with capacitance
+ measurements, but do not require any detailed modelling nor consideration
+ of fringing fields.
+\end_layout
+
 \begin_layout Subsubsection
 Bounce test
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Bounce-test"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
