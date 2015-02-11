@@ -6201,8 +6201,13 @@ As it is challenging to infer anything about an interferometer's signal
 \end_layout
 
 \begin_layout Standard
-Within this range, we use an approximation for the sinusoid's slope, 
-\begin_inset Formula $\frac{\pi\lambda}{8\sqrt{2}A_{0}}\sim\frac{370\mbox{ nm}}{\mbox{fringe (peak-to-peak) }}$
+Within this range, we use an approximation for the sinusoid's slope, if
+ 
+\begin_inset Formula $A_{0}$
+\end_inset
+
+ is half of the peak-to-peak fringe amplitude, 
+\begin_inset Formula $\frac{\lambda}{8\sqrt{2}A_{0}}\sim\frac{230\mbox{ nm}}{\mbox{fringe (peak-to-peak) }}$
 \end_inset
 
 , to convert measured output to displacement.

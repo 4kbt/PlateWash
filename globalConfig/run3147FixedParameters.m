@@ -149,8 +149,8 @@ foilDiameter = 77e-3; printSI(foilDiameter, 2, -3, 'm', [HOMEDIR '/extracted/foi
 IFOFringeTop = 3.28;
 IFOFringeBot = 1.639;
 
-IFODistPerFringe = 370e-9;
-IFODistCal = IFODistPerFringe/(3.28-1.639);
+IFODistPerFringe = 230e-9;
+IFODistCal = IFODistPerFringe/(IFOFringeTop-IFOFringeBot);
 injectIFOSystematic = 1;
 
 
