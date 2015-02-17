@@ -4,6 +4,7 @@ OCT := $(OCT) --eval "addpath([HOMEDIR \"/runAnalysis/\"]);"
 OCT := $(OCT) --eval "addpath([HOMEDIR \"/calibration/pressure/\"]);"
 
 FFR := run3147filterFrequencyResponse
+TIM47:= run3147filterTimeDomain
 FILT := run3169filterTransfer
 WIND := run3147windowTransferFunctions
 LAG20:= run3220torqueLag
@@ -26,6 +27,10 @@ all: $(FFR).eps $(FILT).eps $(WIND).eps $(LAG20).eps $(LAG24).eps $(LAG69).eps $
 $(FFR).eps: $(FFR).m $(FFR).gpl
 	$(OCT) $(FFR).m
 	$(GNU) $(FFR).gpl
+
+$(TIM47).eps: $(FFR).m $(TIM47).gpl
+	$(OCT) $(FFR).m
+	$(GNU) $(TIM47).gpl
 
 #Filters applied to real data
 $(FILT).eps : $(FILT).m $(FILT).gpl

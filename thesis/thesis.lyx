@@ -13737,6 +13737,65 @@ name "fig:FIR Filter Transfer Functions"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../runAnalysis/supportingPlots/run3147filterTimeDomain.eps
+	width 70text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Time-domain-structure-of-filter"
+
+\end_inset
+
+Time-domain structure of torque low-pass filter coefficients.
+ The prominent 
+\begin_inset Quotes eld
+\end_inset
+
+sinc
+\begin_inset Quotes erd
+\end_inset
+
+ structure is the low-pass filter.
+ The calibration-line filters and high-pass filters are more subtle and
+ act at periods of 
+\begin_inset Formula $\sim200$
+\end_inset
+
+ samples and below.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 In this field, it is traditional to fit for and subtract the gravitational
  calibration tone, remove low frequency drifts on a per-cut basis through
  linear fits and average away unnecessary high-frequency information (often
@@ -13857,6 +13916,13 @@ itialization effects.
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:FIR Filter Transfer Functions"
+
+\end_inset
+
+ and the torque filter's coefficients are plotted in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Time-domain-structure-of-filter"
 
 \end_inset
 

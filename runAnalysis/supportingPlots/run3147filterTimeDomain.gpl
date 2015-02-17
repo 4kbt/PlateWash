@@ -1,0 +1,36 @@
+fprefix = 'run3147filterTimeDomain'
+
+set term postscript enhanced solid color eps
+set output fprefix.'.eps'
+
+fn = fprefix.'.dat'
+
+set key noauto
+
+set multiplot layout 4,1
+
+set ylabel 'FIR filter value'
+set xlabel 'time (sample number)'
+
+set ytics 0.05
+
+pl \
+	fn u (      ( $0 - 9600/2.0 ) ):1 w l lt 3 
+
+pl [-30:30] \
+	fn u (      ( $0 - 9600/2.0 ) ):1 w p lt 3 pt 7 
+
+set logsc xy
+set key bottom left 
+set bmargin at screen 0.1
+
+set ytics autofreq
+set format y '10^{%T}'
+
+pl [:5000]\
+	fn u (      ( $0 - 9600/2.0 ) ):( $1) w lp lt 3 pt 2 ps 0.5 tit 'positive time, positive value',\
+	fn u ( -1 * ( $0 - 9600/2.0 ) ):( $1) w lp lt 3 pt 1 ps 0.5 tit 'negative time, positive value',\
+	fn u (      ( $0 - 9600/2.0 ) ):(-$1) w lp lt 5 pt 2 ps 0.5 tit 'positive time, negative value',\
+	fn u ( -1 * ( $0 - 9600/2.0 ) ):(-$1) w lp lt 5 pt 1 ps 0.5 tit 'negative time, negative value'
+
+unset multiplot
