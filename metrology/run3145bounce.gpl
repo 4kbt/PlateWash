@@ -5,8 +5,8 @@ load HOMEDIR.'globalConfig/columnNames.m'
 
 fn = 'run3145bounce.dat'
 
-set xlabel 'encoder position ({/Symbol m}m), arb datum'
-set ylabel 'pendulum angle (mrad), arb datum'
+set xlabel 'encoder position ({/Symbol m}m), arb zero'
+set ylabel 'pendulum angle (mrad), arb zero'
 
 set key noauto
 

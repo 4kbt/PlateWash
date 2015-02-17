@@ -1882,9 +1882,9 @@ Gauss' law test of gravity.
 \begin_inset Quotes erd
 \end_inset
 
- For any force in three spatial dimensions, the field from an infinite two-dimen
-sional sheet of charge must, by symmetry, be perpendicular to the plane
- of the sheet.
+ For any force in three spatial dimensions, the field from an infinite uniform
+ two-dimensional sheet of charge must, by symmetry, be perpendicular to
+ the plane of the sheet.
  Furthermore, if the interaction obeys Gauss' law, the flux of field remains
  constant with increasing distance from the sheet.
  Therefore, the strength of the interaction cannot vary with distance.
@@ -1946,8 +1946,9 @@ infinite sheet
 \begin_inset Quotes erd
 \end_inset
 
- approximation is valid and that gravity (and any new interaction) is the
- only messenger between the sheet and the pendulum.
+ approximation is valid, that the mechanism moving the sheet adds negligible
+ gravitational interaction, and that gravity (and any new interaction) is
+ the only messenger between the sheet and the pendulum.
  
 \end_layout
 
@@ -2261,7 +2262,7 @@ Throughout, we use torque units of fN-m, as the signals we seek are at that
 \end_inset
 
 fN-m.
- This leads to the rare odd automated statement of a torque like 
+ This leads to the rare automated statement of a torque like 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../extracted/translationTorqueFit.tex"
@@ -2270,9 +2271,20 @@ filename "../extracted/translationTorqueFit.tex"
 
 , where the point is that the signal is large and resolved, not that the
  uncertainty should be taken seriously beyond the leading two digits.
- There are limits to how much we should ask a computer to adapt to human
- tradition in approximate statements without risking reliable performance
- in definite ones.
+ These few oddities occur only where approximate statements are appropriate.
+ Our software libraries properly handle such quantities correctly in scientific
+ notation, but would lose the reader's visceral connection to the natural
+ scale of 
+\begin_inset Formula $1$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+fN.
+ Handling these corner-cases correctly would add significant complexity,
+ and thus opportunity for error, to our software.
 \end_layout
 
 \begin_layout Section
@@ -3050,7 +3062,7 @@ parallel-plate
 
  approximation underestimates the strength of the interaction between the
  pendulum inlay and the attractor.
- An estimate of the correction, 
+ An estimate of the fractional correction, 
 \begin_inset Formula $f_{c}$
 \end_inset
 
@@ -3743,7 +3755,17 @@ Both large faces of the pendulum and the front face of the attractor were
  hand-polished to a mirror finish with silicon-carbide and 3M lapping paper
  (aluminum oxide, possibly diamond).
  The individual components of the pendulum were etched before assembly in
- hydrochloric acid to remove any ferromagnetic impurities.
+ hydrochloric acid
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMA - concentration?
+\end_layout
+
+\end_inset
+
+ to remove any ferromagnetic impurities.
  After ultrasonic cleaning and a final rinse in de-ionized water, 30
 \begin_inset space ~
 \end_inset
@@ -4492,11 +4514,19 @@ mm) to the pendulum.
 \end_layout
 
 \begin_layout Standard
-The feedback voltage system was capable of applying voltages from -10-10
+The feedback voltage system was capable of applying voltages from 
+\begin_inset Formula $-10$
+\end_inset
+
+ to 
+\begin_inset Formula $+10$
+\end_inset
+
+
 \begin_inset space ~
 \end_inset
 
-V to either electrode, but in practice, the entire experiment ran on one
+V on either electrode, but in practice, the entire experiment ran on one
  electrode, with DC feedback voltage variation of less than 20% over the
  duration of the experiment (see Figure 
 \begin_inset CommandInset ref
@@ -4506,7 +4536,19 @@ reference "fig:Applied-feedback-signal"
 \end_inset
 
 ).
- 
+ Running on one electrode, by imposing a small 
+\begin_inset Quotes eld
+\end_inset
+
+pre-torque
+\begin_inset Quotes erd
+\end_inset
+
+ from the torsion fiber, has the advantage of avoiding feedback nonlinearities
+ introduced by any offset voltages or contact potential differences that
+ might be present between the two electrodes.
+ From a practical standpoint, however, having two electrodes makes recovery
+ from extreme transients (earthquakes, attractor-foil collisions) more expedient.
 \end_layout
 
 \begin_layout Standard
@@ -4870,7 +4912,8 @@ reference "sec:Encoder-narrative"
 \end_inset
 
  for further motivation) .
- A pneumatic actuation system is, by definition, not electrical.
+ The pneumatic actuation system has zero electrical components within the
+ vacuum envelope.
  While the attractor flexure system was designed to accommodate standard
  micrometer actuators, if needed, the actuator is a phosphor-bronze bellows.
  The bellows is fed by a thin copper tube connected to a pressure-regulation
@@ -4883,8 +4926,11 @@ reference "sec:Encoder-narrative"
 \bar under
 all
 \bar default
- attractor-correlated systematic effects that could be present throughout
- the data acquisition, sensing, and control systems.
+ attractor-correlated systematic effects that could be introduced by the
+ data acquisition, sensing, and control systems.
+ This valve isolates systematic uncertainties to only those directly correlated
+ with the physical motion of the attractor or with changes in gas pressure
+ downstream of the isolating valve.
 \end_layout
 
 \begin_layout Standard
@@ -7041,8 +7087,14 @@ essible characteristic timescale.
 
 \begin_layout Standard
 With the PlateWash atmosphere, inferring from our Lévy measurements at closest
- proximity to the foil, we expect gas damping-driven noise to be roughly
- 
+ proximity to the foil 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "schlamminger2010indirect"
+
+\end_inset
+
+, we expect gas damping-driven noise to be roughly 
 \begin_inset Formula $S_{\tau}(f)\approx$
 \end_inset
 
@@ -7745,8 +7797,8 @@ Systematics
 
 \begin_layout Standard
 Systematic uncertainties are the primary challenge of this measurement.
- Ensuring that no gravitational signals are mimiced nor masked demands great
- care.
+ Ensuring that no gravitational signals are mimicked nor masked demands
+ great care.
  This section enumerates the many ways in which the experiment could lead
  us astray.
  Approximate quantitative estimates are given where calculable.
@@ -8949,8 +9001,8 @@ mm) travel, the flexure's internal travel limit was located not far from
 \end_layout
 
 \begin_layout Standard
-There's also an opportunity for the simple change in moment/torque due to
- the cantilevered attractor to provide a torque.
+The changing effective length of the cantilevered attractor assembly will
+ also deform the experiment's baseplate.
  A simple elasticity-theory estimate of the bending of the 1.25
 \begin_inset Quotes erd
 \end_inset
@@ -9229,7 +9281,11 @@ key "davis2001copper"
 \end_inset
 
 .
- For frequencies below ~100
+ For frequencies below 
+\begin_inset Formula $\sim100$
+\end_inset
+
+
 \begin_inset space ~
 \end_inset
 
@@ -11240,8 +11296,8 @@ reference "sub:Statistical-Uncertainty"
 , the noise in the apparatus increases as the pendulum approaches the foil.
  In our frequency range of interest, it appears as relatively frequency-independ
 ent noise.
- Some of this noise is time-dependent, correlated with wind, human activity,
- and both local and worldwide seismic activity.
+ The level of this noise is time-dependent, correlated with wind, human
+ activity, and both local and worldwide seismic activity.
 \end_layout
 
 \begin_layout Subsubsection
@@ -12700,7 +12756,7 @@ reference "sub:Synchronization"
 , the data from each computer do not begin simultaneously and may have offsets
  between their clocks.
  We correct the differences in the clock rates and conservatively absorb
- the differences in clock datums into the assigned experimental dead times.
+ the differences in clock zeroes into the assigned experimental dead times.
 \end_layout
 
 \begin_layout Subsubsection
@@ -13567,7 +13623,7 @@ Once we have characterized the clocks' stability, we can synchronize the
 \end_layout
 
 \begin_layout Standard
-With the clock rates matched, we must then align the datums of each clock
+With the clock rates matched, we must then align the zeroes of each clock
  at the start of each run.
  The clocks were manually observed to be synchronous with sub-second precision
  in almost every run.
@@ -14207,11 +14263,7 @@ Attractor motion, convolved with DAQ IIR low-pass response.
  Scatter in the lower frame is from ambient air pressure variation (affects
  both blue and red), and variation in pneumatic-drive pulse-width modulation
  phase (red only).
- Duty cycle was a 15%
-\begin_inset Formula $\pm$
-\end_inset
-
-15% square wave.
+ 
 \end_layout
 
 \end_inset
