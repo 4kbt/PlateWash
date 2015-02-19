@@ -8,10 +8,11 @@ numIFOSensors = 25;
 numSensors = numPWSensors+numPSSensors+numIFOSensors;
 diffErrOffset = 6*numSensors;
 
-pwTimeCol  = 10;
+pwTimeCol   = 10;
 pwPhiTopCol = 21;
-pwFBOutCol = 23;
-torqueCol  = 16;
+pwFBOutCol  = 23;
+pwPsiCol    = 24;
+torqueCol   = 16;
 torCol = torqueCol;
 torerrCol = diffErrOffset+torCol;
 torqueACol = torqueCol + numSensors;

@@ -10862,6 +10862,62 @@ XXXRC
 Tip angle
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../metrology/run3310plateau.eps
+	width 70text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The 
+\begin_inset Quotes eld
+\end_inset
+
+Plateau Test
+\begin_inset Quotes erd
+\end_inset
+
+ to determine the relative angle, about a horizontal axis parallel to the
+ foil, between pendulum and foil.
+ The apparatus is tipped to a significant angle (at least tens of milliradians)
+ and the pendulum displaced toward and away from the foil.
+ The angle at which the pendulum sits parallel to the foil then becomes
+ apparent when measured by the autocollimator.
+ We claim a difference of about 0.25
+\begin_inset space ~
+\end_inset
+
+mrad between the science position and the maximally-parallel position.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Twist angle
 \end_layout
