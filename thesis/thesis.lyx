@@ -9866,7 +9866,11 @@ m from the desired working position.
  a measurement of the attractor-foil capacitance.
  Gross alignment was done by hand.
  Fine adjustment was done using the Belleville washers on the foil mount.
- When optical alignment reached XXXRC 
+ When optical alignment reached 
+\begin_inset Formula $\sim100$
+\end_inset
+
+ 
 \begin_inset Formula $\mu$
 \end_inset
 
@@ -9983,7 +9987,22 @@ reference "sub:Isolating-Foil"
 ing between the attractor and foil.
  The pendulum's tip angle relative to the foil (about a horizontal axis
  parallel to the plane of the foil) was minimized by imaging through the
- bell-jar window.
+ bell-jar window and the 
+\begin_inset Quotes eld
+\end_inset
+
+plateau test
+\begin_inset Quotes erd
+\end_inset
+
+, as described in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Pendulum-angle"
+
+\end_inset
+
+.
  Finally, the pendulum-foil distance was determined both by imaging and
  by the `bounce test' detailed in Section 
 \begin_inset CommandInset ref
@@ -10018,9 +10037,9 @@ status open
 \end_inset
 
 .
- (XXXRC - do we have these data?)The pendulum horizontal and vertical angles,
- as measured by the autocollimator, at this point were taken to be the angles
- at which the pendulum was parallel to the attractor.
+ The pendulum horizontal and vertical angles, as measured by the autocollimator,
+ at this point were taken to be the angles at which the pendulum was parallel
+ to the attractor.
  
 \end_layout
 
@@ -10609,58 +10628,9 @@ The vertical position of the pendulum was determined using a height-gauge
 \end_inset
 
 m.
+ The pendulum's suspension system was fixed by a flexure-based clamp that
+ went untouched throughout the entire science campaign.
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMA1 Rigorously find the number See Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Pendulum-vertical-positioning"
-
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-XXXMA1
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Pendulum-vertical-positioning"
-
-\end_inset
-
-Pendulum vertical positioning photos
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection
@@ -10713,7 +10683,7 @@ XXXMA-show mid-run too
 
 \end_inset
 
- is shown in Figure 
+ are shown in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Pendulum-bounce-test-results"
@@ -10773,8 +10743,8 @@ Photos
 \end_layout
 
 \begin_layout Standard
-PlateWash is unique among our group's ISL experiments in that we have visual
- access to the pendulum at all times through a glass vacuum viewport.
+PlateWash is notable among inverse-square-law experiments in that we have
+ visual access to the pendulum at all times through a glass vacuum viewport.
  With the addition a mirror, we are able to see both (left and right) sides
  of the pendulum and photograph them.
  Using the known thickness of the pendulum, we can compare photos when the
@@ -10846,20 +10816,92 @@ name "sec:Pendulum-angle"
 \begin_layout Standard
 The alignment angle of the pendulum with respect to the attractor is important
  to the sensitivity of the instrument, in both vertical tip and in twist.
-\end_layout
+ Here, we define 
+\begin_inset Quotes eld
+\end_inset
 
-\begin_layout Standard
-When aligning the instrument, the entire instrument is tilted until the
- pendulum rests firmly on the attractor.
- The angle, as measured by the autocollimator is recorded.
-\end_layout
+tip
+\begin_inset Quotes erd
+\end_inset
 
-\begin_layout Standard
-XXXRC
+ to be the angle made between the pendulum and the foil about a horizontal
+ axis parallel to the foil.
+ We define 
+\begin_inset Quotes eld
+\end_inset
+
+twist
+\begin_inset Quotes erd
+\end_inset
+
+ to be the angle made between the pendulum and the foil about a vertical
+ axis parallel to the foil.
 \end_layout
 
 \begin_layout Subsection
 Tip angle
+\end_layout
+
+\begin_layout Standard
+We expect the pendulum tip angle to be a stable quantity, determined primarily
+ by the initial alignment.
+ Over the duration of science data acquisition, the observed change in pendulum
+ tip was less than 
+\begin_inset Formula $100$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+rad (Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-Plateau-Test"
+
+\end_inset
+
+, light blue).
+ We measured the absolute tip angle in two ways: the 
+\begin_inset Quotes eld
+\end_inset
+
+plateau test
+\begin_inset Quotes erd
+\end_inset
+
+ and directly using photographs.
+\end_layout
+
+\begin_layout Subsubsection
+Plateau Test
+\end_layout
+
+\begin_layout Standard
+The 
+\begin_inset Quotes eld
+\end_inset
+
+Plateau Test
+\begin_inset Quotes erd
+\end_inset
+
+ is a very quantitative method for determining the angle where the pendulum's
+ surface closest to the foil is parallel to the foil, but is susceptible
+ to systematic error due to pendulum curvature and dust.
+ The entire apparatus is tipped to a significant angle (at least tens of
+ milliradians) about the horizontal axis perpendicular to the attractor
+ symmetry axis.
+ Then, the pendulum displaced toward and away from the foil while the autocollim
+ator reading (both up-down and left-right) is recorded.
+ The angle at which the pendulum sits parallel to the foil becomes appears
+ as a plateau in the plot of measured angle as a function of pendulum-support
+ displacement.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -10883,7 +10925,13 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-The 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:The-Plateau-Test"
+
+\end_inset
+
+ The 
 \begin_inset Quotes eld
 \end_inset
 
@@ -10893,15 +10941,13 @@ Plateau Test
 
  to determine the relative angle, about a horizontal axis parallel to the
  foil, between pendulum and foil.
- The apparatus is tipped to a significant angle (at least tens of milliradians)
- and the pendulum displaced toward and away from the foil.
- The angle at which the pendulum sits parallel to the foil then becomes
- apparent when measured by the autocollimator.
  We claim a difference of about 0.25
 \begin_inset space ~
 \end_inset
 
 mrad between the science position and the maximally-parallel position.
+ The dispersion at either end of the plateau comes from hysteresis; the
+ pendulum peels away from the foil very slowly when leaving the plateau.
 \end_layout
 
 \end_inset
@@ -10909,13 +10955,13 @@ mrad between the science position and the maximally-parallel position.
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsubsection
+Photos
 \end_layout
 
 \begin_layout Subsection
