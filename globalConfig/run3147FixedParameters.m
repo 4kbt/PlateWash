@@ -179,3 +179,10 @@ heaterTempGradientUncertainty = 0.001; %TotalBogus!
 NBinConfInterval = 14; %bin width for confidence interval determination
 printInteger( NBinConfInterval, [HOMEDIR 'extracted/NBinConfInterval.tex']);
 
+%Metrology:
+
+%bounce-test
+bounceTestUncertainty =  5e-6;
+bounceTouchPosition   = -892e-6;
+bounceAngleOffset     = 0.00058;
+
