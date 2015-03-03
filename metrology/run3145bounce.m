@@ -5,7 +5,7 @@ run3145syncSingle
 catch
 end
 
-run3147FixedParameters
+run3147MetrologyParameters
 run3147PendulumParameters
 
 phitop=pwData(:,pwPhiTopCol)*1e-6;
