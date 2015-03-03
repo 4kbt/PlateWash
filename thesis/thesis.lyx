@@ -11397,6 +11397,12 @@ Laser Scan
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/pendulumFlatness.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -11741,6 +11747,12 @@ Laser Scan
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/attractorFlatness.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -11973,6 +11985,12 @@ Laser Scan
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/foilFlatness.tex"
+
+\end_inset
+
 
 \end_layout
 

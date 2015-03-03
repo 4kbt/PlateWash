@@ -12,8 +12,9 @@ all : $(BOUNCE).eps $(TWIST).eps $(FRINGES).eps $(CRASH).eps $(PLATEAU).eps
 $(BOUNCE).dat : $(BOUNCE).m
 	$(OCT) $(BOUNCE).m 
 	
-run3145bounceAngleCull.dat : pendulumPositionAngle.m
+run3145bounceAngleCull.dat : pendulumPositionAngle.m eyeballQuantities.m
 	$(OCT) pendulumPositionAngle.m
+	$(OCT) eyeballQuantities.m
 
 $(BOUNCE).eps : $(BOUNCE).gpl $(BOUNCE).dat $(HOMEDIR)/runAnalysis/results/run3147pM3FilterMerge.dat run3145bounceAngleCull.dat
 	$(GNU) $(BOUNCE).gpl
