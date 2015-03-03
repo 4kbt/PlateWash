@@ -11167,6 +11167,12 @@ Bounce Test
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/offsetAngle.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -11447,6 +11453,12 @@ Bounce Test
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/pfRawDist.tex"
+
+\end_inset
+
 
 \end_layout
 
