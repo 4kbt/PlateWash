@@ -11285,6 +11285,12 @@ Plateau Test
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/plateauAngle.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -11635,6 +11641,12 @@ Interferometer
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/attractorTip.tex"
+
+\end_inset
+
 
 \end_layout
 
