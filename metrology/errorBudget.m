@@ -14,4 +14,9 @@ errorTable = ...
 	  bouncePosM
 	];
 
+totalOffset = sum(errorTable(:,1)); 
+totalStat   = sqrt( sum( errorTable( : , 2 ) .^2 ) );
+totalSys    = sqrt( sum( errorTable( : , 2 ) .^2 ) );
+
+
 
