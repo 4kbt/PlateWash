@@ -45,3 +45,9 @@ FoilFlatnessSysU  = 2e-6 ;
 FoilFlatnessU     = sqrt(FoilFlatnessSysU^2 + FoilFlatnessSysU^2);
 FoilFlatnessM = ...
 	[ FoilFlatness FoilFlatnessStatU FoilFlatnessSysU FoilFlatnessU ];
+
+[FoilThickAve FoilThickStatU FoilThickDev] = getFoilThickness;
+FoilThickSysU     = 1e-6 ; 
+FoilThickU	  = sqrt( FoilThickStatU^2 + FoilThickSysU^2 );
+
+FoilThickM = [ FoilThickAve FoilThickStatU FoilThickSysU FoilThickU ];

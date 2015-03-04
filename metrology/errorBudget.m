@@ -17,6 +17,7 @@ formattedErrorOutput( PendulumFlatnessM * scaleFactor, 1 ,  'extracted/pendFlat'
 formattedErrorOutput( bouncePosM	* scaleFactor, 1 ,  'extracted/bouncePos' );
 formattedErrorOutput( attractorM 	* scaleFactor, 1 ,  'extracted/attractor' );
 formattedErrorOutput( AttractorFlatnessM* scaleFactor, 1 ,  'extracted/attrFlat'  );
+formattedErrorOutput( FoilThickM 	* scaleFactor, 1 ,  'extracted/foilThick' );
 formattedErrorOutput( FoilFlatnessM 	* scaleFactor, 1 ,  'extracted/foilFlat'  );
 
 errorTable = ...
@@ -27,6 +28,7 @@ errorTable = ...
 	  bouncePosM
 	  attractorM
 	  AttractorFlatnessM
+	  FoilThickM
 	  FoilFlatnessM
 	];
 
@@ -35,6 +37,6 @@ totalStat   = sqrt( sum( errorTable( : , 2 ) .^2 ) );
 totalSys    = sqrt( sum( errorTable( : , 3 ) .^2 ) );
 totalErr    = sqrt( totalStat^2 + totalSys^2 );
 
-totalM = [totalOffset totalStat totalSys totalErr];
+totalM = [ totalOffset totalStat totalSys totalErr ];
 
 formattedErrorOutput( totalM	 	* scaleFactor, 1 ,  'extracted/total'  );

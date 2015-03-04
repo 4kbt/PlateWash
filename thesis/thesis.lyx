@@ -11062,7 +11062,11 @@ Value
 \begin_inset Text
 
 \begin_layout Plain Layout
-Contribution
+Contribution (
+\begin_inset Formula $\mu$
+\end_inset
+
+m)
 \end_layout
 
 \end_inset
@@ -11071,7 +11075,11 @@ Contribution
 \begin_inset Text
 
 \begin_layout Plain Layout
-Statistical Uncertainty
+Statistical Uncertainty (
+\begin_inset Formula $\mu$
+\end_inset
+
+m)
 \end_layout
 
 \end_inset
@@ -11080,7 +11088,11 @@ Statistical Uncertainty
 \begin_inset Text
 
 \begin_layout Plain Layout
-Systematic Uncertainty
+Systematic Uncertainty (
+\begin_inset Formula $\mu$
+\end_inset
+
+m)
 \end_layout
 
 \end_inset
@@ -12058,6 +12070,12 @@ filename "../extracted/foilThickness.tex"
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/foilThickCentral.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -12067,6 +12085,12 @@ filename "../extracted/foilThickness.tex"
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/foilThickStatistical.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -12076,6 +12100,12 @@ filename "../extracted/foilThickness.tex"
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/foilThickSystematic.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -12305,7 +12335,7 @@ filename "../metrology/extracted/totalSystematic.tex"
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
+Uncertainty table for the minimum effective attractor-pendulum separation
 \end_layout
 
 \end_inset
