@@ -11182,6 +11182,12 @@ filename "../metrology/extracted/offsetAngle.tex"
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/bounceAngCentral.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -11191,6 +11197,12 @@ filename "../metrology/extracted/offsetAngle.tex"
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/bounceAngStatistical.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -11200,6 +11212,12 @@ filename "../metrology/extracted/offsetAngle.tex"
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/bounceAngSystematic.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -11300,6 +11318,12 @@ filename "../metrology/extracted/plateauAngle.tex"
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/plateauCentral.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -11309,6 +11333,12 @@ filename "../metrology/extracted/plateauAngle.tex"
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/plateauStatistical.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -11318,6 +11348,12 @@ filename "../metrology/extracted/plateauAngle.tex"
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/plateauSystematic.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -11418,6 +11454,12 @@ filename "../metrology/extracted/pendulumFlatness.tex"
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/pendFlatCentral.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -11427,6 +11469,12 @@ filename "../metrology/extracted/pendulumFlatness.tex"
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/pendFlatStatistical.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -11436,6 +11484,12 @@ filename "../metrology/extracted/pendulumFlatness.tex"
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/pendFlatSystematic.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -11480,6 +11534,12 @@ filename "../metrology/extracted/pfRawDist.tex"
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/bouncePosCentral.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -11489,6 +11549,12 @@ filename "../metrology/extracted/pfRawDist.tex"
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/bouncePosStatistical.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -11498,6 +11564,12 @@ filename "../metrology/extracted/pfRawDist.tex"
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/bouncePosSystematic.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -11656,6 +11728,12 @@ filename "../metrology/extracted/attractorTip.tex"
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/attractorCentral.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -11665,6 +11743,12 @@ filename "../metrology/extracted/attractorTip.tex"
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/attractorStatistical.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -11674,6 +11758,12 @@ filename "../metrology/extracted/attractorTip.tex"
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/attractorSystematic.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -11774,6 +11864,12 @@ filename "../metrology/extracted/attractorFlatness.tex"
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/attrFlatCentral.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -11783,6 +11879,12 @@ filename "../metrology/extracted/attractorFlatness.tex"
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/attrFlatStatistical.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -11792,6 +11894,12 @@ filename "../metrology/extracted/attractorFlatness.tex"
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/attrFlatSystematic.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -12012,6 +12120,12 @@ filename "../metrology/extracted/foilFlatness.tex"
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/foilFlatCentral.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -12021,6 +12135,12 @@ filename "../metrology/extracted/foilFlatness.tex"
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/foilFlatStatistical.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -12030,6 +12150,12 @@ filename "../metrology/extracted/foilFlatness.tex"
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/foilFlatSystematic.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -12126,6 +12252,12 @@ Total
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/totalCentral.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -12135,6 +12267,12 @@ Total
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/totalStatistical.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -12144,6 +12282,12 @@ Total
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/totalSystematic.tex"
+
+\end_inset
+
 
 \end_layout
 
