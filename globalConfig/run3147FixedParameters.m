@@ -72,6 +72,7 @@ qTesterWidth1=0.2e-3;
 qTesterChunkCalibWidth1 = 0.5e-3;
 
 qTesterFreq   = 3*2e-3;
+printSI(qTesterFreq, 2, -3, 'Hz', [HOMEDIR 'extracted/qTesterFreq.tex']);
 qTesterWidth  = 0.2e-3;
 qTesterTorque = 1.678e-14;
 printSI(qTesterTorque, 2, -15, 'N-m', [HOMEDIR 'extracted/qTesterTorque.tex']);

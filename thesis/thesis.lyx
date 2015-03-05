@@ -4878,18 +4878,16 @@ stiction
 \begin_inset Quotes erd
 \end_inset
 
- of non-flexure transation stages, and has minimal angular runout.
+ of non-flexure transation stages, and has minimal angular runout (Figure
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-See Figure XXXMA, autocollimator on attractor.
-\end_layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Flexure-runout"
 
 \end_inset
 
- When science data were 
+).
+  When science data were 
 \bar under
 not
 \bar default
@@ -5086,38 +5084,6 @@ RC
  circuit element, further low-passing the pressure fluctuations from the
  pulse-width modulation.
  
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-XXXMI square-wave motion of the attractor
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -5516,18 +5482,14 @@ filename "../extracted/brickHeight.tex"
  stepper motor.
  The frequency stability of the calibration tone was observed to be comparable
  to, or better than, the stability of the data acquisition clock.
- The sinusoidally varying gravitational torque appeared at twice the rotation
- frequency of 3.0 mHz
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMI do we extract this?
-\end_layout
+ The sinusoidally varying gravitational torque appeared at 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/qTesterFreq.tex"
 
 \end_inset
 
-.
+, twice the calibrator's rotation frequency.
  The amplitude of the calibration torque was taken to be 
 \begin_inset CommandInset include
 LatexCommand input
@@ -22258,11 +22220,49 @@ reference "sec:Force-law-inversion"
 \end_layout
 
 \begin_layout Subsubsection
-Foil
+Size
 \end_layout
 
 \begin_layout Standard
-XXXMA
+We don't yet know with confidence what the optimal spatial size of active
+ elements in an inverse square law experiment might be.
+ The smaller the active elements, the more-easily they can be aligned.
+ Larger sizes yield larger lever arms for torsion balances and more-uniform
+ gravitational fields.
+ The very direct geometry of the Huazhong apparatus 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "2007PhRvL..98t1101T"
+
+\end_inset
+
+ addresses the former concern, providing both easy alignment and a long
+ lever arm at the possible expense of larger Newtonian gravity backgrounds.
+ The scaling laws for proximity-enhanced noise with distance/area are strongly
+ dependent upon the underlying phenomena (patch fields, gas molecule rearrangeme
+nt, etc), which are, at best, partially understood.
+ 
+\end_layout
+
+\begin_layout Standard
+We will continue to experiment with size in an effort to improve our signal
+ to noise ratio.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Foil-displacement
+\end_layout
+
+\begin_layout Standard
+We spent about a year trying to find ways to avoid the need to measure the
+ foil's position before taking on the problem directly with the foil interferome
+ter.
+ In our opinion, for any attractor-displacing short-distance gravity experiment,
+ a measure of the isolating foil's displacement is essential.
+ Without such a measurement, substantial systematic-uncertainty questions
+ will linger.
+ 
 \end_layout
 
 \begin_layout Subsubsection
@@ -22724,8 +22724,10 @@ g for the foil systematic if we could hold the interferometer in its sensitive
 It has been suggested that we should replace the 90/10 coupler with a fiber
  circulator to increase the amount of light that reaches the detector by
  more than a factor of ten.
- This hasn't yet been thought through completely, but it does appear to
- be a drop-in replacement for the existing coupler.
+ Early experiments by Krishna Venkateswara suggest that a circulator will
+ be a drop-in replacement for the existing coupler and will yield increased
+ sensitivity.
+ 
 \end_layout
 
 \begin_layout Subsection
