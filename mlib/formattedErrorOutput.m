@@ -3,9 +3,9 @@
 %prefix is the string prepended to each filename
 function formattedErrorOutput( values , precision, prefix )
 
-	printDecimal( values(1) , [ prefix 'Central.tex'       ] , precision );
-	printDecimal( values(2) , [ prefix 'Statistical.tex'   ] , precision );
-	printDecimal( values(3) , [ prefix 'Systematic.tex'    ] , precision );
-	printDecimal( values(4) , [ prefix 'AggregateError.tex'] , precision );
+	printDecimal( values(1) , precision , [ prefix 'Central.tex'       ] );
+	printDecimal( values(2) , precision , [ prefix 'Statistical.tex'   ] );
+	printDecimal( values(3) , precision , [ prefix 'Systematic.tex'    ] );
+	printDecimal( values(4) , precision , [ prefix 'AggregateError.tex'] );
 
 endfunction
