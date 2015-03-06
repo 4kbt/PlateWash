@@ -9760,19 +9760,19 @@ Understanding the separation between attractor and test masses is essential
  to any inverse square law test.
  However, because of the nearly-null parallel-plate geometry, the implications
  of a sufficiently-small error in metrology affect only the stated exclusion
- limits, but not the presence nor absence of a purported ISL violation.
+ limits, but not the presence nor absence of an ISL violation.
  This is an important contrast to non-null experiments, where an error in
  attractor/sensor separation alone can lead to a Newtonian-gravitationally
  faked or masked signal for new physics.
 \end_layout
 
 \begin_layout Standard
-For PlateWash, the metrology is relatively straightforward.
+For PlateWash, metrology is relatively straightforward.
  We must ascertain the extent to which the pendulum and attractor are parallel
  and obtain an estimate of their relative separation.
  As in most inverse-square law tests, this is confounded by the isolating
  foil stretched between them.
- As the foil is quite flat (see 
+ As the foil is quite flat (see Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Isolating-Foil"
@@ -9894,12 +9894,12 @@ Cleaning
 \end_layout
 
 \begin_layout Standard
-Once the attractor and foil were aligned, it was essential to remove any
- debris/dust in the gap between them.
+Once the attractor and foil were aligned, it was essential to guarantee
+ the absence of debris/dust in the gap between them.
  To characterize the amount of dust in the gap, and to verify alignment,
  the attractor-foil capacitance was measured as a function of attractor
  position, including positions where the attractor touched the foil.
- Touching was, at this step, determined by noting the position where the
+ Touching was, at this time, determined by noting the position where the
  capacitance reading became unreliable.
  The maximum capacitance recorded without signs of touching gave a proxy
  for the minimum attractor-foil separation.
@@ -9924,8 +9924,8 @@ ol, clean room wipes, and dry nitrogen.
 \begin_inset space ~
 \end_inset
 
-nF; because of the ambient atmosphere, this measurement should not be used
- to determine the distance of minimum approach.
+nF; because these measurements were carried out at atmospheric pressure,
+ they should not be used to determine the distance of minimum approach.
 \end_layout
 
 \begin_layout Subsection
@@ -10099,9 +10099,9 @@ Attractor-side
 \end_layout
 
 \begin_layout Standard
-This section is devoted to assessing the parallelism and absolute separation
- of the attractor and foil.
- As the positions of the pendulum and foil are determined by rigid metal
+This section assesses the parallelism and absolute separation of the attractor
+ and foil.
+ As the positions of the attractor and foil are determined by rigid metal
  fixations and kinematic mounting, their relative separation is more-easily
  determined than that of the pendulum and foil.
 \end_layout
@@ -10228,8 +10228,7 @@ ent of the two surfaces.
 \end_layout
 
 \begin_layout Standard
-There are several experimental options we could use to assess the parallelism
- of the attractor and foil.
+We used several methods to assess the parallelism of the attractor and foil.
  When aligning the apparatus, we tipped the apparatus, placing the pendulum
  onto the foil, pressed the attractor into the back of the foil, and used
  the autocollimator-measured angular displacement of the pendulum as a proxy
@@ -10244,7 +10243,7 @@ There are several experimental options we could use to assess the parallelism
 \begin_layout Standard
 Concerns regarding the difficulty of calculating fringing fields led us
  to view the capacitance measurement with skepticism.
- So, in January 2015, the untouched apparatus was brought back to life.
+ In January 2015, the untouched apparatus was brought back to life.
  The attractor and interferometer computers were turned on, and the interferomet
 er laser and SRS SR720 capacitance meter were reinstalled.
  Unlike normal science operation, where the encoder can inject systematic
@@ -10338,8 +10337,9 @@ In addition to the attractor-foil parallelism, we must know the absolute
 \end_layout
 
 \begin_layout Standard
-The determination of the touching point is done using the science data on
- a per-measurement level, rather than per-cut (See Section 
+The determination of the touching point is done using the science data from
+ the interferometer and attractor position on a per-measurement level, rather
+ than per-cut (See Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Implementation"
@@ -10364,7 +10364,7 @@ reference "sub:Parsing-into-cuts"
  for full detail).
  In contrast to all other analysis, the mean cut position is not used; instead,
  as each cut is an aggregate of individual measurements, the minimum position
- of individual measurements within a cut, as seen in Figure 
+ of individual measurements within a cut, plotted in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Attractor-Foil-touching-determin"
@@ -10372,14 +10372,7 @@ reference "fig:Attractor-Foil-touching-determin"
 \end_inset
 
 .
- The minimum-accepted attractor-pendulum separation is conservative at 
-\begin_inset CommandInset include
-LatexCommand input
-filename "../extracted/shortCut.tex"
-
-\end_inset
-
-.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -10409,7 +10402,16 @@ name "fig:Attractor-Foil-touching-determin"
 
 \end_inset
 
-Attractor-Foil touching determination
+Attractor-Foil touching determination.
+ The minimum-accepted attractor-pendulum separation is conservatively chosen
+ as 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/shortCut.tex"
+
+\end_inset
+
+.
 \end_layout
 
 \end_inset
@@ -10430,14 +10432,15 @@ Pendulum-side
 The most-challenging metrology was on the pendulum side of the foil.
  The pendulum was hand-lapped, rounding its edges and making its corners
  challenging to image.
- The attractor's location was fixed, so the pendulum's horizontal (
+ The attractor's location was fixed, so the pendulum's horizontal (Section
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Horizontal-offset"
 
 \end_inset
 
-) and vertical (
+) and vertical (Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Vertical-position"
@@ -10446,14 +10449,15 @@ reference "sub:Vertical-position"
 
 ) positions were referenced to measurements made prior to the installation
  of the foil.
- After the foil was installed and aligned, both the pendulum position (
+ After the foil was installed and aligned, both the pendulum position (Section
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Pendulum-Foil-separation"
 
 \end_inset
 
-) and angle relative to the foil were measured (
+) and angle relative to the foil were measured (Section
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Pendulum-angle"
@@ -10514,15 +10518,15 @@ reference "fig:Horizontal-fiber-position"
  position offset; the pendulum had been displaced horizontally in runs prior
  to the beginning of the science data in an effort to understand a systematic
  ISL-violating signal that would later be traced to the bypass capacitors
- 
+ (Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Capacitor-Systematic"
 
 \end_inset
 
-.
- As can be seen in section 
+).
+ As can be seen in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Off-center-torques"
@@ -10530,7 +10534,7 @@ reference "sub:Off-center-torques"
 \end_inset
 
 , the impressive null-ness of this attractor geometry allows us to get away
- with such a gross misalignment without measurable consequence.
+ with such a gross misalignment without important consequence.
 \end_layout
 
 \begin_layout Standard
@@ -10592,7 +10596,16 @@ The vertical position of the pendulum was determined using a height-gauge
 m.
  The pendulum's suspension system was fixed by a flexure-based clamp that
  went untouched throughout the entire science campaign.
- 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ XXXMA bound displacements of importance
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -10635,7 +10648,7 @@ The pendulum is allowed to swing freely as the fiber support is moved toward
  The autocollimator trace, plotted as a function of support-position shows
  a clear pattern from which the point at which the pendulum touches the
  foil may be extracted.
- The results of the pre-run bounce test
+ The results of the pre-science bounce test
 \begin_inset Note Note
 status open
 
@@ -10705,14 +10718,17 @@ Photos
 \end_layout
 
 \begin_layout Standard
-PlateWash is notable among inverse-square-law experiments in that we have
- visual access to the pendulum at all times through a glass vacuum viewport.
+The PlateWash apparatus permits visual access to the pendulum at all times
+ through a glass vacuum viewport.
+ Visual access provides a reliable and robust cross-check for our more-quantitat
+ive metrology techniques.
  With the addition a mirror, we are able to see both (left and right) sides
  of the pendulum and photograph them.
- Using the known thickness of the pendulum, we can compare photos when the
- pendulum is operating against photos where the pendulum is pressed lightly
- against a flat surface (attractor or foil) to determine the operating pendulum'
-s distance from, and angle with respect to, the foil.
+ Using the known thickness of the pendulum, we can compare photographs of
+ the pendulum taken during data-taking with photographs taken when the pendulum
+ is pressed lightly against a flat surface (attractor or foil) to determine
+ the data-taking pendulum's distance from, and angle with respect to, the
+ foil.
  For the photos used in this determination, see Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -10730,7 +10746,14 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXXRC
+\align center
+\begin_inset Graphics
+	filename Pictures/scaledCompilationLabelled.png
+	width 80page%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -10852,7 +10875,7 @@ Plateau Test
 \begin_inset Quotes erd
 \end_inset
 
- is a very quantitative method for determining the angle where the pendulum's
+ is a quantitative method for determining the angle where the pendulum's
  surface closest to the foil is parallel to the foil, but is susceptible
  to systematic error due to pendulum curvature and dust.
  The entire apparatus is tipped to a significant angle (at least tens of
@@ -10860,8 +10883,8 @@ Plateau Test
  symmetry axis.
  Then, the pendulum displaced toward and away from the foil while the autocollim
 ator reading (both up-down and left-right) is recorded.
- The angle at which the pendulum sits parallel to the foil becomes appears
- as a plateau in the plot of measured angle as a function of pendulum-support
+ The angle at which the pendulum sits parallel to the foil appears as a
+ plateau in the plot of measured angle as a function of pendulum-support
  displacement.
  
 \end_layout
@@ -10903,11 +10926,14 @@ Plateau Test
 
  to determine the relative angle, about a horizontal axis parallel to the
  foil, between pendulum and foil.
- We claim a difference of about 0.25
-\begin_inset space ~
+ We claim a difference of 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/plateauAngle.tex"
+
 \end_inset
 
-mrad between the science position and the maximally-parallel position.
+ between the science position and the maximally-parallel position.
  The dispersion at either end of the plateau comes from hysteresis; the
  pendulum peels away from the foil very slowly when leaving the plateau.
 \end_layout
@@ -10946,8 +10972,8 @@ Foil Thickness
 The thickness of the foil was determined by making many micrometer measurements
  of foil from an adjacent portion of the same roll.
  Touching the foil, particularly with a hard/sharp-cornered object like
- a micrometer can easily damage the foil by denting it.
- Even a piece of dust, compressed between the micrometer jaw and the foil,
+ a micrometer, can easily damage the foil by denting it.
+ Even a piece of dust, compressed between a micrometer jaw and the foil,
  can be sufficient to dimple the foil and increase its effective thickness.
  For this reason, we have not directly measured the actual foil's thickness.
  If the foil thickness measurement were to become of increased concern,
@@ -10973,7 +10999,7 @@ Assignment of attractor/foil separation
 The distance between the pendulum and the attractor is determined to be
  the sum of the pendulum-foil distance, the foil thickness, the attractor-foil
  distance, and the pendulum-angle correction.
- XXXRC
+ XXXRC Pay foil factor twice? Describe error summation methods.
 \end_layout
 
 \begin_layout Standard
