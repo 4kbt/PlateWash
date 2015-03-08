@@ -18963,7 +18963,7 @@ It is convenient to define a small library of basic shapes from which larger
 
 \begin_layout Standard
 Central to PlateWash design are flat plates.
- These come in two types, round and rectangular.
+ These plates come in two types, round and rectangular.
 \end_layout
 
 \begin_layout Subsection
@@ -18976,8 +18976,8 @@ It is convenient to develop a function for generating both round sheets
  radius.
  This function places points on a cartesian grid, with points accepted if
  they're internal to the specified mass.
- Grid spacing along the in-plane direction and axial direction may be independen
-tly selected.
+ Grid spacing along the in-plane directions and axial direction may be independe
+ntly selected.
  
 \end_layout
 
@@ -19120,7 +19120,14 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXXMA
+\align center
+\begin_inset Graphics
+	filename ../NewtonianSimulation/plots/displayPointsDemo.eps
+	width 70text%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -19869,7 +19876,15 @@ Angled torques
 \end_layout
 
 \begin_layout Standard
-The pendulum is oriented at an angle of XXXRC with respect to the attractor.
+The pendulum is oriented at an angle of 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/offsetAngle.tex"
+
+\end_inset
+
+ with respect to the attractor.
+ XXXRC - display computed angle torque signal.
  
 \end_layout
 
@@ -20771,7 +20786,7 @@ filename "../systematics/magnetic/extracted/CoilTurns.tex"
 
  turns of wire was placed near and on the apparatus to gauge any change
  in signal as a function of applied magnetic field.
- The coil was driven with current of 
+ The coil was driven with a constant current of 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../systematics/magnetic/extracted/CoilCurrent.tex"
@@ -20814,10 +20829,6 @@ Coil in the on-apparatus position
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-XXXRC diagram
 \end_layout
 
 \begin_layout Standard
@@ -22530,23 +22541,32 @@ ter.
  a measure of the isolating foil's displacement is essential.
  Without such a measurement, substantial systematic-uncertainty questions
  will linger.
+ The foil interferometer is one of the major successes of this experiment.
+\end_layout
+
+\begin_layout Subsubsection
+Capacitor/contact potential
+\end_layout
+
+\begin_layout Standard
+The decision to simultaneously remove both the bypass capacitors and the
+ contact-potential system was over-eager, though we didn't know it at the
+ time.
+ Had we ascertained that the systematic signal we saw was related only to
+ the capacitors, we could have significantly improved the sensitivity of
+ the overall measurement through decreased noise and decreased pendulum-foil
+ coupling.
+ Indeed, the most important single upgrade of the experiment will be to
+ restore those systems.
  
 \end_layout
 
-\begin_layout Subsubsection
-Pendulum
-\end_layout
-
 \begin_layout Standard
-XXXMA
-\end_layout
-
-\begin_layout Subsubsection
-Capacitor
-\end_layout
-
-\begin_layout Standard
-XXXMA
+It remains important for us to determine the mechanism by which the capacitor-mo
+dulated resonance couples to the pendulum/pendulum readout.
+ Addressing that coupling, which probably resides in the autocollimator
+ pre-amplifier, may yield improved noise.
+ 
 \end_layout
 
 \begin_layout Subsection
