@@ -11005,7 +11005,7 @@ Assignment of attractor/foil separation
 The distance between the pendulum and the attractor is determined to be
  the sum of the pendulum-foil distance, the foil thickness, the attractor-foil
  distance, and the pendulum-angle correction.
- XXXRC Pay foil factor twice? Describe error summation methods.
+ Describe error summation methods.
 \end_layout
 
 \begin_layout Standard

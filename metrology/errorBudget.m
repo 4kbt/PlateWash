@@ -7,6 +7,8 @@ bouncePosM = load( 'extracted/pfRawDist.dat'  );
 %scale error quantities
 plateauM   = plateauM   * pendulumBodyHeight / 2;
 bounceAngM = bounceAngM * pendulumBodyWidth  / 2;
+FoilFlatnessM = FoilFlatnessM * 2; %for two sides.
+
 
 scaleFactor = 1e6;
 
