@@ -3,7 +3,7 @@
 
 function rotArray = rotatePMArray(array, angle, rotVec)
 
-	modulus = sqrt(rotVec * rotVec');
+	modulus = sqrt( rotVec * rotVec' );
 	x = rotVec(1)/modulus; y = rotVec(2)/modulus; z = rotVec(3)/modulus; 
 	
 %	## http://www.gamedev.net/reference/articles/article1199.asp
@@ -23,31 +23,31 @@ function rotArray = rotatePMArray(array, angle, rotVec)
 end
 
 %!test
-%! m = [1 1 0 0];
-%! o = rotatePMArray(m, pi/2.0, [0 0 1]); 
+%! m = [ 1 1 0 0 ];
+%! o = rotatePMArray( m , pi/2.0 , [ 0 0 1 ] ); 
 %! assert(  sum( o - [1 0 1 0]) < 4 * eps)
 
 %!test
 %! nMasses = 6;
 %! for nSteps = 1:100
-%!   m = randn(nMasses,4);
-%!   rvec = randn(1,3);
+%!   m = randn( nMasses , 4 );
+%!   rvec = randn( 1 , 3 );
 %!   ang = 2 * pi / nSteps;
 %!   o = m;
 %!   for ctr = 1:nSteps
-%!     o = rotatePMArray(o, ang , rvec);
+%!     o = rotatePMArray( o , ang , rvec );
 %!   end
-%!   totalErr = sum(sum( o - m));
-%!   assert(totalErr < eps * nSteps*nMasses*4)
+%!   totalErr = sum( sum( o - m) );
+%!   assert(totalErr < eps * nSteps * nMasses * 4 )
 %! end
 
 %!test
-%! q = [1 1 0 0];
+%! q = [ 1 1 0 0 ];
 %! v = [];
 %! for ctr = 1:100
 %!	a = 2 * pi * rand;
-%!	p = rotatePMArray(q, a, [0 0 1]);
-%!	v = [v;a , mod(atan(p(:,2)./p(:,3)), pi/2) - mod( a, pi/2) ];
+%!	p = rotatePMArray( q , a , [ 0 0 1 ] );
+%!	v = [v ; a , mod( atan( p(:,2) ./ p(:,3) ), pi/2) - mod( a , pi/2 ) ];
 %! end
-%! plot(v(:,1), v(:,2)/eps)
-%! assert( abs(v(:,2) < 10*eps) );
+%! plot( v(:, 1) , v(:, 2) / eps )
+%! assert( abs( v(:, 2) < 10 * eps ) );
