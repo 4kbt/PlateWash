@@ -10749,9 +10749,8 @@ status open
 \align center
 \begin_inset Graphics
 	filename Pictures/scaledCompilationLabelled.png
-	width 80text%
-	height 80theight%
-	keepAspectRatio
+	width 100text%
+	height 100theight%
 
 \end_inset
 
