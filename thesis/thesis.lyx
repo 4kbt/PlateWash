@@ -10403,11 +10403,11 @@ name "fig:Attractor-Foil-touching-determin"
 \end_inset
 
 Attractor-Foil touching determination.
- The minimum-accepted attractor-pendulum separation is conservatively chosen
- as 
-\begin_inset CommandInset include
-LatexCommand input
-filename "../extracted/shortCut.tex"
+ The minimum-accepted attractor-pendulum separation is conservatively determined
+ in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Uncertainty-table-distance"
 
 \end_inset
 
@@ -10886,7 +10886,21 @@ ator reading (both up-down and left-right) is recorded.
  The angle at which the pendulum sits parallel to the foil appears as a
  plateau in the plot of measured angle as a function of pendulum-support
  displacement.
- 
+ As seen in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-Plateau-Test"
+
+\end_inset
+
+, we claim a difference of 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/plateauAngle.tex"
+
+\end_inset
+
+ between the science position and the maximally-parallel position.
 \end_layout
 
 \begin_layout Standard
@@ -10926,14 +10940,6 @@ Plateau Test
 
  to determine the relative angle, about a horizontal axis parallel to the
  foil, between pendulum and foil.
- We claim a difference of 
-\begin_inset CommandInset include
-LatexCommand input
-filename "../metrology/extracted/plateauAngle.tex"
-
-\end_inset
-
- between the science position and the maximally-parallel position.
  The dispersion at either end of the plateau comes from hysteresis; the
  pendulum peels away from the foil very slowly when leaving the plateau.
 \end_layout
@@ -12379,6 +12385,12 @@ filename "../metrology/extracted/totalSystematic.tex"
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Uncertainty-table-distance"
+
+\end_inset
+
 Uncertainty table for the minimum effective attractor-pendulum separation
 \end_layout
 
