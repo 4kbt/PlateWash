@@ -10749,7 +10749,9 @@ status open
 \align center
 \begin_inset Graphics
 	filename Pictures/scaledCompilationLabelled.png
-	width 80page%
+	width 80text%
+	height 80theight%
+	keepAspectRatio
 
 \end_inset
 
@@ -10777,14 +10779,6 @@ Pendulum position photos
 \end_inset
 
 
-\end_layout
-
-\begin_layout Subsubsection
-Assignment of pendulum-foil separation
-\end_layout
-
-\begin_layout Standard
-XXXRC
 \end_layout
 
 \begin_layout Section
