@@ -10817,6 +10817,46 @@ twist
 \end_layout
 
 \begin_layout Subsection
+Twist angle
+\end_layout
+
+\begin_layout Subsubsection
+Bounce test
+\end_layout
+
+\begin_layout Standard
+We can use the bounce-test data to measure the effective angular difference,
+ about a vertical axis tangent to the foil, between the pendulum's planar
+ orientation and the foil.
+ Comparing the angle at which the experimental data were taken with the
+ angle where the inferred lines cross in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Pendulum-bounce-test-results"
+
+\end_inset
+
+, we find that the angle between pendulum and foil is 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/offsetAngle.tex"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Photos
+\end_layout
+
+\begin_layout Standard
+Just as with the pendulum distance, we can use the pendulum photos to extract
+ the effective angle at which the pendulum sits.
+ XXXRC.
+\end_layout
+
+\begin_layout Subsection
 Tip angle
 \end_layout
 
@@ -10951,16 +10991,10 @@ Plateau Test
 Photos
 \end_layout
 
-\begin_layout Subsection
-Twist angle
-\end_layout
-
-\begin_layout Subsubsection
-Bounce test
-\end_layout
-
-\begin_layout Subsubsection
-Photos
+\begin_layout Standard
+As with the pendulum-distance and twist angle, we can use the pendulum photos
+ to extract a tip-angle measurement.
+ We find XXXRC.
 \end_layout
 
 \begin_layout Section
@@ -10998,7 +11032,36 @@ Assignment of attractor/foil separation
 The distance between the pendulum and the attractor is determined to be
  the sum of the pendulum-foil distance, the foil thickness, the attractor-foil
  distance, and the pendulum-angle correction.
- XXXRC Describe error summation methods.
+ Both the statistical and systematic errors are summed in quadrature, as
+ the systematic uncertainties quoted here are truly uncertain.
+ We have chosen the central values for those measurements that have meaningful
+ systematic uncertainty to reflect any bias we expect from these measurements.
+\end_layout
+
+\begin_layout Standard
+The flatness measurements quoted in the table are taken using conservative
+ estimates drawn from Figures 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:PendulumScans"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:AttractorScan"
+
+\end_inset
+
+, and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "FoilFlatness"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
