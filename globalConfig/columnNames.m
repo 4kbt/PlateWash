@@ -62,10 +62,15 @@ XSUnits = 1e-12;
 XLUnits = 1e-4;
 
 #Distance determination
-pfTouch =  56+17+ 12+2 ;  #swag
+#If you're reading this comment, my apologies.
+#pfTouch is tightly coupled with the output of errorBudget.m
+#This number is chosen to match the output of errorBudget. If it doesn't, the 
+#whole build breaks (by design). Again, my apologies, but I want to graduate.
+pfTouch =  138.9 ;  #swag
 touch2937 =  147 -2 + pfTouch;
 #Distance cut
-shortCut = (pfTouch+10)*1e-6;
+ifoOffset = 10e-6
+shortCut  = pfTouch*1e-6 + ifoOffset;
 
 logCrossover = -4;
 
