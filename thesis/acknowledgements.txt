@@ -1,13 +1,15 @@
-
 Alfred Hagedorn
 Alfred Hagedorn III
 Ann Nelson
+Barb Fulton
 Blayne Heckel
 Bob Shupe
+Brian Balfrey
 Charles Rogers
 Claire Cramer
 David Hyde
 David Kettler
+Debra Nastaj
 Eberhard Bodenschatz
 Eric Adelberger
 George Hagedorn
@@ -16,25 +18,32 @@ Hank Simons
 Jason Detwiler
 Jens Gundlach
 Jim Elms
+John Greendeer-Lee
+Kate Higgins
 Keath Marx
-Ki Young Choi
 Kipp Krause
+Ki Young Choi
 Krishna Venkateswara
+Kurt Snover
 Margaret Roston
 Mark Freeman
 Mary Ellen Jones
+Matt Dietrich
 Matt Turner
 Michael Famulare
 MicroE
+Monday Meeting
 Myrna Hagedorn
 Nikolai Tolich
 OGP Smartscopes
 Omega Instruments
 Peter Nelson
 Prashant Emani
+Raman Sundrum
 Rembar
 Sarah Dasher
 Scott Pollack
+Scott Schell
 Silas Wild
 Sky Sjue
 Stephan Schlamminger
@@ -46,6 +55,3 @@ Todd Wagner
 Tracy Lovejoy
 Victoria Clarkson
 Will Terrano
-John Greendeer-Lee
-Scott Schell
-Monday Meeting

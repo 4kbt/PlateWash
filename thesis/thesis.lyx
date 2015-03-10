@@ -138,6 +138,163 @@ lstparams "breakatwhitespace=true,breaklines=true,caption={Version Information},
 
 \end_layout
 
+\begin_layout Chapter*
+Dedication
+\end_layout
+
+\begin_layout Standard
+To you.
+\end_layout
+
+\begin_layout Standard
+This was written for you, that you might learn from our successes and from
+ our errors.
+ 
+\end_layout
+
+\begin_layout Standard
+This thesis is a companion to the computer software that automatically generated
+ it.
+ If you have unanswered questions about how most quantities and plots were
+ determined, please feel welcome to look around.
+ If you find an error and implement a patch, please let me know.
+\end_layout
+
+\begin_layout Chapter*
+Acknowledgements
+\end_layout
+
+\begin_layout Standard
+Susan Ashlock gets special mention, as she has given me endless support
+ with love, great patience, and myriad wonderful trips into the mountains
+ over the latter half of this work.
+ I can't wait to explore the world with her now that this thesis is complete.
+ Furthermore, this measurement's approaches of source-code management, continuou
+s analysis builds, and unit testing were inspired by looking over her software-e
+ngineer shoulders.
+ Without her professional influence, this blind measurement would not have
+ been possible.
+\end_layout
+
+\begin_layout Standard
+I thank the entire Eot-Wash group, the National Science Foundation, and
+ the United States taxpayer for unwavering support, even when a blitzkreig
+ experiment turned to a protracted and careful campaign.
+ 
+\end_layout
+
+\begin_layout Standard
+When a worthwhile project takes a decade, you'll find that a village full
+ of wonderful people have helped along the way.
+ What follows is an incomplete list of the many people and orgianizations
+ who have made significant direct or indirect contributions to this measurement.
+ Those CENPA members highlighted in bold worked directly on the instrument
+ or on development work for the instrument.
+ Those highlighted in italics contributed physics insight directly to the
+ measurement or its analysis.
+\end_layout
+
+\begin_layout Standard
+Alfred Hagedorn, Alfred Hagedorn III, Ann Nelson, Barb Fulton, 
+\emph on
+Blayne Heckel
+\emph default
+, Bob Shupe, Brian Balfrey, Catherine Provost, CENPA, Charles Rogers, 
+\emph on
+Claire Cramer
+\emph default
+, David Hyde, David Kettler, Debra Nastaj, Doug Will, Eberhard Bodenschatz,
+ 
+\emph on
+Eric Adelberger
+\emph default
+, George Hagedorn, Greg Harper, Hamish Robertson, 
+\series bold
+Hank Simons
+\series default
+, 
+\emph on
+Jason Detwiler
+\emph default
+, 
+\series bold
+\emph on
+Jens Gundlach
+\series default
+\emph default
+, 
+\series bold
+Jim Elms
+\series default
+, John Amsbaugh, 
+\emph on
+John Greendeer-Lee
+\emph default
+, Juliet Lovejoy, Kate Higgins, Keath Marx, 
+\series bold
+Kipp Krause
+\series default
+, Ki Young Choi, 
+\series bold
+\emph on
+Krishna Venkateswara
+\series default
+\emph default
+, 
+\emph on
+Kurt Snover
+\emph default
+, Margaret Roston, Mark Freeman, Mary Ellen Jones, 
+\emph on
+Matt Dietrich
+\emph default
+,
+\emph on
+ 
+\series bold
+Matt Turner
+\series default
+\emph default
+, Michael Chen, Michael Famulare, MicroE, Monday Meeting, Myrna Hagedorn,
+ Nichole Fernkes, 
+\emph on
+Nikolai Tolich
+\emph default
+, OGP Smartscopes, Omega Instruments, 
+\emph on
+Peter Nelson
+\emph default
+, 
+\series bold
+Prashant Emani
+\series default
+, Raman Sundrum, Rembar, Sarah Dasher, 
+\series bold
+\emph on
+Scott Pollack
+\series default
+\emph default
+, Scott Schell, Silas Wild, Sky Sjue, 
+\series bold
+\emph on
+Stephan Schlamminger
+\series default
+\emph default
+, Susan Ashlock, Tanja Bode, 
+\emph on
+Ted Cook
+\emph default
+, Terry Lynn Helms, 
+\emph on
+Todd Wagner
+\emph default
+, Tracy Lovejoy, Victoria Clarkson, and 
+\emph on
+Will Terrano
+\emph default
+ 
+\end_layout
+
 \begin_layout Standard
 \begin_inset CommandInset toc
 LatexCommand tableofcontents
