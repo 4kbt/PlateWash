@@ -17243,6 +17243,64 @@ reference "sec:Confidence-Interval-Algorithm"
  the important problem of confidence-interval determination.
 \end_layout
 
+\begin_layout Subparagraph
+Advantage - systematic metrology uncertainty
+\end_layout
+
+\begin_layout Standard
+The bootstrapped handling of uncertainties allows a trivial inclusion of
+ a traditionally difficult-to-handle uncertainty, colloquially known as
+ 
+\begin_inset Quotes eld
+\end_inset
+
+horizontal systematic errorbars
+\begin_inset Quotes erd
+\end_inset
+
+.
+ As the determination of the absolute separation of the pendulum and foil,
+ and hence the pendulum and attractor is necessarily uncertain (see Table
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Uncertainty-table-distance"
+
+\end_inset
+
+), this must be reflected in degraded confidence intervals at small 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+ From the perspective of our global fit, this measurement is unchanging,
+ making it a systematic uncertainty (and, indeed, it contains its own systematic
+ uncertainties).
+ The 
+\begin_inset Quotes eld
+\end_inset
+
+fuzzing
+\begin_inset Quotes erd
+\end_inset
+
+ process introduced above is readily adapted to this concern.
+ 
+\end_layout
+
+\begin_layout Standard
+For each iteration of the bootstrapped fit, in addition to individually
+ randomly displacing each position measurement by its individual statistical
+ uncertainty, we displace 
+\bar under
+all
+\bar default
+ positions by a single random amount, distributed by the known metrology
+ uncertainty.
+ This approach naturally incorporates our absolute position uncertainty
+ without degrading our known and meaningful differential position sensitivity.
+\end_layout
+
 \begin_layout Subsubsection
 Fitting approach -- second half
 \end_layout

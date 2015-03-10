@@ -76,4 +76,5 @@ logCrossover = -4;
 
 #silliness for speed
 enableSystematics = 1;
-SysNoX = 1; 
+SysNoX = 1;
+BootstrapSystematicPositionUncertainty = 1; 

@@ -41,6 +41,8 @@ totalErr    = sqrt( totalStat^2 + totalSys^2 );
 
 totalM = [ totalOffset totalStat totalSys totalErr ];
 
+save( '-ascii' , 'extracted/totalErr.dat' , 'totalM');
+
 formattedErrorOutput( totalM	 	* scaleFactor, 1 ,  'extracted/total'  );
 
 %Cross-check to ensure that initial guess for totalM matches computation
