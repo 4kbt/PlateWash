@@ -12202,6 +12202,12 @@ Interferometer
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/ifoPad.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -12211,6 +12217,12 @@ Interferometer
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/ifoPadCentral.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -12220,6 +12232,12 @@ Interferometer
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/ifoPadStatistical.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -12229,6 +12247,12 @@ Interferometer
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/ifoPadSystematic.tex"
+
+\end_inset
+
 
 \end_layout
 

@@ -18,6 +18,7 @@ formattedErrorOutput( bounceAngM 	* scaleFactor, 1 ,  'extracted/bounceAng' );
 formattedErrorOutput( PendulumFlatnessM * scaleFactor, 1 ,  'extracted/pendFlat'  );
 formattedErrorOutput( bouncePosM	* scaleFactor, 1 ,  'extracted/bouncePos' );
 formattedErrorOutput( attractorM 	* scaleFactor, 1 ,  'extracted/attractor' );
+formattedErrorOutput( InterferometerPadM* scaleFactor, 1 ,  'extracted/ifoPad'    );
 formattedErrorOutput( AttractorFlatnessM* scaleFactor, 1 ,  'extracted/attrFlat'  );
 formattedErrorOutput( FoilThickM 	* scaleFactor, 1 ,  'extracted/foilThick' );
 formattedErrorOutput( FoilFlatnessM 	* scaleFactor, 1 ,  'extracted/foilFlat'  );
@@ -29,6 +30,7 @@ errorTable = ...
 	  PendulumFlatnessM
 	  bouncePosM
 	  attractorM
+	  InterferometerPadM
 	  AttractorFlatnessM
 	  FoilThickM
 	  FoilFlatnessM

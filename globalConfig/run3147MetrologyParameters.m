@@ -51,3 +51,12 @@ FoilThickSysU     = 1e-6 ;
 FoilThickU	  = sqrt( FoilThickStatU^2 + FoilThickSysU^2 );
 
 FoilThickM = [ FoilThickAve FoilThickStatU FoilThickSysU FoilThickU ];
+
+columnNames %to import ifoOffset
+InterferometerPad	 = ifoOffset;
+InterferometerPadStatU   = 0e-6;
+InterferometerPadSysU	 = 0e-6;
+InterferometerPadU	 = sqrt( InterferometerPadStatU^2 + InterferometerPadSysU^2 );
+
+InterferometerPadM = ...
+	[ InterferometerPad InterferometerPadStatU InterferometerPadSysU InterferometerPadU ];
