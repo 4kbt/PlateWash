@@ -18,4 +18,4 @@ pl [-1000: -850]\
 	fn u ($1*1e6):($5*1e3) w l lc 4,\
 	fn u ($1*1e6):($7*1e3) w l lc 4,\
 	fn u ($1*1e6):($8*1e3) w l lc 4,\
-	HOMEDIR.'runAnalysis/results/run3147pM3FilterMerge.dat' u (column(pwPhiTopCol+ numSensors)):(column(psdCol + numSensors)*0.00625*1e3) w p pt 1 ps 1 lc 7 tit 'operating point'  
+	'run3145bounceAngleCull.dat' u 1:($2*1e3) w p pt 1 ps 1 lc 7 tit 'operating point'  

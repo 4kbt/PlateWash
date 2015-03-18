@@ -16,8 +16,8 @@ psdTheta=pwData(:,psdCol);
 distanceDown = repmat(phitop, 1,3) - bounceTouchPosition;
 
 %Uncertainty bands
-distanceDown(:,2) = distanceDown(:,2) - bounceTestUncertainty;
-distanceDown(:,3) = distanceDown(:,3) + bounceTestUncertainty;
+distanceDown(:,2) = distanceDown(:,2) - bounceTestU;
+distanceDown(:,3) = distanceDown(:,3) + bounceTestU;
 
 %Scale to radians
 distanceDown = distanceDown./(pendulumBodyWidth/2.0);

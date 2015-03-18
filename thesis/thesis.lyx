@@ -138,6 +138,163 @@ lstparams "breakatwhitespace=true,breaklines=true,caption={Version Information},
 
 \end_layout
 
+\begin_layout Chapter*
+Dedication
+\end_layout
+
+\begin_layout Standard
+To you.
+\end_layout
+
+\begin_layout Standard
+This was written for you, that you might learn from our successes and from
+ our errors.
+ 
+\end_layout
+
+\begin_layout Standard
+This thesis is a companion to the computer software that automatically generated
+ it.
+ If you have unanswered questions about how most quantities and plots were
+ determined, please feel welcome to look around.
+ If you find an error and implement a patch, please let me know.
+\end_layout
+
+\begin_layout Chapter*
+Acknowledgements
+\end_layout
+
+\begin_layout Standard
+Susan Ashlock gets special mention, as she has given me endless support
+ with love, great patience, and myriad wonderful trips into the mountains
+ over the latter half of this work.
+ I can't wait to explore the world with her now that this thesis is complete.
+ Furthermore, this measurement's approaches of source-code management, continuou
+s analysis builds, and unit testing were inspired by looking over her software-e
+ngineer shoulders.
+ Without her professional influence, this blind measurement would not have
+ been possible.
+\end_layout
+
+\begin_layout Standard
+I thank the entire Eot-Wash group, the National Science Foundation, and
+ the United States taxpayer for unwavering support, even when a blitzkreig
+ experiment turned to a protracted and careful campaign.
+ 
+\end_layout
+
+\begin_layout Standard
+When a worthwhile project takes a decade, you'll find that a village full
+ of wonderful people have helped along the way.
+ What follows is an incomplete list of the many people and orgianizations
+ who have made significant direct or indirect contributions to this measurement.
+ Those CENPA members highlighted in bold worked directly on the instrument
+ or on development work for the instrument.
+ Those highlighted in italics contributed physics insight directly to the
+ measurement or its analysis.
+\end_layout
+
+\begin_layout Standard
+Alfred Hagedorn, Alfred Hagedorn III, Ann Nelson, Barb Fulton, 
+\emph on
+Blayne Heckel
+\emph default
+, Bob Shupe, Brian Balfrey, Catherine Provost, CENPA, Charles Rogers, 
+\emph on
+Claire Cramer
+\emph default
+, David Hyde, David Kettler, Debra Nastaj, Doug Will, Eberhard Bodenschatz,
+ 
+\emph on
+Eric Adelberger
+\emph default
+, George Hagedorn, Greg Harper, Hamish Robertson, 
+\series bold
+Hank Simons
+\series default
+, 
+\emph on
+Jason Detwiler
+\emph default
+, 
+\series bold
+\emph on
+Jens Gundlach
+\series default
+\emph default
+, 
+\series bold
+Jim Elms
+\series default
+, John Amsbaugh, 
+\emph on
+John Greendeer-Lee
+\emph default
+, Juliet Lovejoy, Kate Higgins, Keath Marx, 
+\series bold
+Kipp Krause
+\series default
+, Ki Young Choi, 
+\series bold
+\emph on
+Krishna Venkateswara
+\series default
+\emph default
+, 
+\emph on
+Kurt Snover
+\emph default
+, Margaret Roston, Mark Freeman, Mary Ellen Jones, 
+\emph on
+Matt Dietrich
+\emph default
+,
+\emph on
+ 
+\series bold
+Matt Turner
+\series default
+\emph default
+, Michael Chen, Michael Famulare, MicroE, Monday Meeting, Myrna Hagedorn,
+ Nichole Fernkes, 
+\emph on
+Nikolai Tolich
+\emph default
+, OGP Smartscopes, Omega Instruments, 
+\emph on
+Peter Nelson
+\emph default
+, 
+\series bold
+Prashant Emani
+\series default
+, Raman Sundrum, Rembar, Sarah Dasher, 
+\series bold
+\emph on
+Scott Pollack
+\series default
+\emph default
+, Scott Schell, Silas Wild, Sky Sjue, 
+\series bold
+\emph on
+Stephan Schlamminger
+\series default
+\emph default
+, Susan Ashlock, Tanja Bode, 
+\emph on
+Ted Cook
+\emph default
+, Terry Lynn Helms, 
+\emph on
+Todd Wagner
+\emph default
+, Tracy Lovejoy, Victoria Clarkson, and 
+\emph on
+Will Terrano
+\emph default
+ 
+\end_layout
+
 \begin_layout Standard
 \begin_inset CommandInset toc
 LatexCommand tableofcontents
@@ -4878,18 +5035,16 @@ stiction
 \begin_inset Quotes erd
 \end_inset
 
- of non-flexure transation stages, and has minimal angular runout.
+ of non-flexure transation stages, and has minimal angular runout (Figure
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-See Figure XXXMA, autocollimator on attractor.
-\end_layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Flexure-runout"
 
 \end_inset
 
- When science data were 
+).
+  When science data were 
 \bar under
 not
 \bar default
@@ -5086,38 +5241,6 @@ RC
  circuit element, further low-passing the pressure fluctuations from the
  pulse-width modulation.
  
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-XXXMI square-wave motion of the attractor
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -5516,18 +5639,14 @@ filename "../extracted/brickHeight.tex"
  stepper motor.
  The frequency stability of the calibration tone was observed to be comparable
  to, or better than, the stability of the data acquisition clock.
- The sinusoidally varying gravitational torque appeared at twice the rotation
- frequency of 3.0 mHz
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMI do we extract this?
-\end_layout
+ The sinusoidally varying gravitational torque appeared at 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/qTesterFreq.tex"
 
 \end_inset
 
-.
+, twice the calibrator's rotation frequency.
  The amplitude of the calibration torque was taken to be 
 \begin_inset CommandInset include
 LatexCommand input
@@ -9798,19 +9917,19 @@ Understanding the separation between attractor and test masses is essential
  to any inverse square law test.
  However, because of the nearly-null parallel-plate geometry, the implications
  of a sufficiently-small error in metrology affect only the stated exclusion
- limits, but not the presence nor absence of a purported ISL violation.
+ limits, but not the presence nor absence of an ISL violation.
  This is an important contrast to non-null experiments, where an error in
  attractor/sensor separation alone can lead to a Newtonian-gravitationally
  faked or masked signal for new physics.
 \end_layout
 
 \begin_layout Standard
-For PlateWash, the metrology is relatively straightforward.
+For PlateWash, metrology is relatively straightforward.
  We must ascertain the extent to which the pendulum and attractor are parallel
  and obtain an estimate of their relative separation.
  As in most inverse-square law tests, this is confounded by the isolating
  foil stretched between them.
- As the foil is quite flat (see 
+ As the foil is quite flat (see Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Isolating-Foil"
@@ -9932,12 +10051,12 @@ Cleaning
 \end_layout
 
 \begin_layout Standard
-Once the attractor and foil were aligned, it was essential to remove any
- debris/dust in the gap between them.
+Once the attractor and foil were aligned, it was essential to guarantee
+ the absence of debris/dust in the gap between them.
  To characterize the amount of dust in the gap, and to verify alignment,
  the attractor-foil capacitance was measured as a function of attractor
  position, including positions where the attractor touched the foil.
- Touching was, at this step, determined by noting the position where the
+ Touching was, at this time, determined by noting the position where the
  capacitance reading became unreliable.
  The maximum capacitance recorded without signs of touching gave a proxy
  for the minimum attractor-foil separation.
@@ -9962,8 +10081,8 @@ ol, clean room wipes, and dry nitrogen.
 \begin_inset space ~
 \end_inset
 
-nF; because of the ambient atmosphere, this measurement should not be used
- to determine the distance of minimum approach.
+nF; because these measurements were carried out at atmospheric pressure,
+ they should not be used to determine the distance of minimum approach.
 \end_layout
 
 \begin_layout Subsection
@@ -10137,9 +10256,9 @@ Attractor-side
 \end_layout
 
 \begin_layout Standard
-This section is devoted to assessing the parallelism and absolute separation
- of the attractor and foil.
- As the positions of the pendulum and foil are determined by rigid metal
+This section assesses the parallelism and absolute separation of the attractor
+ and foil.
+ As the positions of the attractor and foil are determined by rigid metal
  fixations and kinematic mounting, their relative separation is more-easily
  determined than that of the pendulum and foil.
 \end_layout
@@ -10266,8 +10385,7 @@ ent of the two surfaces.
 \end_layout
 
 \begin_layout Standard
-There are several experimental options we could use to assess the parallelism
- of the attractor and foil.
+We used several methods to assess the parallelism of the attractor and foil.
  When aligning the apparatus, we tipped the apparatus, placing the pendulum
  onto the foil, pressed the attractor into the back of the foil, and used
  the autocollimator-measured angular displacement of the pendulum as a proxy
@@ -10282,7 +10400,7 @@ There are several experimental options we could use to assess the parallelism
 \begin_layout Standard
 Concerns regarding the difficulty of calculating fringing fields led us
  to view the capacitance measurement with skepticism.
- So, in January 2015, the untouched apparatus was brought back to life.
+ In January 2015, the untouched apparatus was brought back to life.
  The attractor and interferometer computers were turned on, and the interferomet
 er laser and SRS SR720 capacitance meter were reinstalled.
  Unlike normal science operation, where the encoder can inject systematic
@@ -10376,8 +10494,9 @@ In addition to the attractor-foil parallelism, we must know the absolute
 \end_layout
 
 \begin_layout Standard
-The determination of the touching point is done using the science data on
- a per-measurement level, rather than per-cut (See Section 
+The determination of the touching point is done using the science data from
+ the interferometer and attractor position on a per-measurement level, rather
+ than per-cut (See Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Implementation"
@@ -10402,7 +10521,7 @@ reference "sub:Parsing-into-cuts"
  for full detail).
  In contrast to all other analysis, the mean cut position is not used; instead,
  as each cut is an aggregate of individual measurements, the minimum position
- of individual measurements within a cut, as seen in Figure 
+ of individual measurements within a cut, plotted in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Attractor-Foil-touching-determin"
@@ -10410,14 +10529,7 @@ reference "fig:Attractor-Foil-touching-determin"
 \end_inset
 
 .
- The minimum-accepted attractor-pendulum separation is conservative at 
-\begin_inset CommandInset include
-LatexCommand input
-filename "../extracted/shortCut.tex"
-
-\end_inset
-
-.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -10447,7 +10559,16 @@ name "fig:Attractor-Foil-touching-determin"
 
 \end_inset
 
-Attractor-Foil touching determination
+Attractor-Foil touching determination.
+ The minimum-accepted attractor-pendulum separation is conservatively determined
+ in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Uncertainty-table-distance"
+
+\end_inset
+
+.
 \end_layout
 
 \end_inset
@@ -10468,14 +10589,15 @@ Pendulum-side
 The most-challenging metrology was on the pendulum side of the foil.
  The pendulum was hand-lapped, rounding its edges and making its corners
  challenging to image.
- The attractor's location was fixed, so the pendulum's horizontal (
+ The attractor's location was fixed, so the pendulum's horizontal (Section
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Horizontal-offset"
 
 \end_inset
 
-) and vertical (
+) and vertical (Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Vertical-position"
@@ -10484,14 +10606,15 @@ reference "sub:Vertical-position"
 
 ) positions were referenced to measurements made prior to the installation
  of the foil.
- After the foil was installed and aligned, both the pendulum position (
+ After the foil was installed and aligned, both the pendulum position (Section
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Pendulum-Foil-separation"
 
 \end_inset
 
-) and angle relative to the foil were measured (
+) and angle relative to the foil were measured (Section
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Pendulum-angle"
@@ -10552,15 +10675,15 @@ reference "fig:Horizontal-fiber-position"
  position offset; the pendulum had been displaced horizontally in runs prior
  to the beginning of the science data in an effort to understand a systematic
  ISL-violating signal that would later be traced to the bypass capacitors
- 
+ (Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Capacitor-Systematic"
 
 \end_inset
 
-.
- As can be seen in section 
+).
+ As can be seen in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Off-center-torques"
@@ -10568,7 +10691,7 @@ reference "sub:Off-center-torques"
 \end_inset
 
 , the impressive null-ness of this attractor geometry allows us to get away
- with such a gross misalignment without measurable consequence.
+ with such a gross misalignment without important consequence.
 \end_layout
 
 \begin_layout Standard
@@ -10630,7 +10753,16 @@ The vertical position of the pendulum was determined using a height-gauge
 m.
  The pendulum's suspension system was fixed by a flexure-based clamp that
  went untouched throughout the entire science campaign.
- 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ XXXMA bound displacements of importance
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -10673,7 +10805,7 @@ The pendulum is allowed to swing freely as the fiber support is moved toward
  The autocollimator trace, plotted as a function of support-position shows
  a clear pattern from which the point at which the pendulum touches the
  foil may be extracted.
- The results of the pre-run bounce test
+ The results of the pre-science bounce test
 \begin_inset Note Note
 status open
 
@@ -10743,14 +10875,17 @@ Photos
 \end_layout
 
 \begin_layout Standard
-PlateWash is notable among inverse-square-law experiments in that we have
- visual access to the pendulum at all times through a glass vacuum viewport.
+The PlateWash apparatus permits visual access to the pendulum at all times
+ through a glass vacuum viewport.
+ Visual access provides a reliable and robust cross-check for our more-quantitat
+ive metrology techniques.
  With the addition a mirror, we are able to see both (left and right) sides
  of the pendulum and photograph them.
- Using the known thickness of the pendulum, we can compare photos when the
- pendulum is operating against photos where the pendulum is pressed lightly
- against a flat surface (attractor or foil) to determine the operating pendulum'
-s distance from, and angle with respect to, the foil.
+ Using the known thickness of the pendulum, we can compare photographs of
+ the pendulum taken during data-taking with photographs taken when the pendulum
+ is pressed lightly against a flat surface (attractor or foil) to determine
+ the data-taking pendulum's distance from, and angle with respect to, the
+ foil.
  For the photos used in this determination, see Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -10768,7 +10903,15 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXXRC
+\align center
+\begin_inset Graphics
+	filename Pictures/scaledCompilationLabelled.png
+	width 100text%
+	height 100theight%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -10792,14 +10935,6 @@ Pendulum position photos
 \end_inset
 
 
-\end_layout
-
-\begin_layout Subsubsection
-Assignment of pendulum-foil separation
-\end_layout
-
-\begin_layout Standard
-XXXRC
 \end_layout
 
 \begin_layout Section
@@ -10836,6 +10971,46 @@ twist
 
  to be the angle made between the pendulum and the foil about a vertical
  axis parallel to the foil.
+\end_layout
+
+\begin_layout Subsection
+Twist angle
+\end_layout
+
+\begin_layout Subsubsection
+Bounce test
+\end_layout
+
+\begin_layout Standard
+We can use the bounce-test data to measure the effective angular difference,
+ about a vertical axis tangent to the foil, between the pendulum's planar
+ orientation and the foil.
+ Comparing the angle at which the experimental data were taken with the
+ angle where the inferred lines cross in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Pendulum-bounce-test-results"
+
+\end_inset
+
+, we find that the angle between pendulum and foil is 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/offsetAngle.tex"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Photos
+\end_layout
+
+\begin_layout Standard
+Just as with the pendulum distance, we can use the pendulum photos to extract
+ the effective angle at which the pendulum sits.
+ XXXRC.
 \end_layout
 
 \begin_layout Subsection
@@ -10890,7 +11065,7 @@ Plateau Test
 \begin_inset Quotes erd
 \end_inset
 
- is a very quantitative method for determining the angle where the pendulum's
+ is a quantitative method for determining the angle where the pendulum's
  surface closest to the foil is parallel to the foil, but is susceptible
  to systematic error due to pendulum curvature and dust.
  The entire apparatus is tipped to a significant angle (at least tens of
@@ -10898,10 +11073,24 @@ Plateau Test
  symmetry axis.
  Then, the pendulum displaced toward and away from the foil while the autocollim
 ator reading (both up-down and left-right) is recorded.
- The angle at which the pendulum sits parallel to the foil becomes appears
- as a plateau in the plot of measured angle as a function of pendulum-support
+ The angle at which the pendulum sits parallel to the foil appears as a
+ plateau in the plot of measured angle as a function of pendulum-support
  displacement.
- 
+ As seen in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-Plateau-Test"
+
+\end_inset
+
+, we claim a difference of 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/plateauAngle.tex"
+
+\end_inset
+
+ between the science position and the maximally-parallel position.
 \end_layout
 
 \begin_layout Standard
@@ -10941,11 +11130,6 @@ Plateau Test
 
  to determine the relative angle, about a horizontal axis parallel to the
  foil, between pendulum and foil.
- We claim a difference of about 0.25
-\begin_inset space ~
-\end_inset
-
-mrad between the science position and the maximally-parallel position.
  The dispersion at either end of the plateau comes from hysteresis; the
  pendulum peels away from the foil very slowly when leaving the plateau.
 \end_layout
@@ -10964,16 +11148,10 @@ mrad between the science position and the maximally-parallel position.
 Photos
 \end_layout
 
-\begin_layout Subsection
-Twist angle
-\end_layout
-
-\begin_layout Subsubsection
-Bounce test
-\end_layout
-
-\begin_layout Subsubsection
-Photos
+\begin_layout Standard
+As with the pendulum-distance and twist angle, we can use the pendulum photos
+ to extract a tip-angle measurement.
+ We find XXXRC.
 \end_layout
 
 \begin_layout Section
@@ -10984,8 +11162,8 @@ Foil Thickness
 The thickness of the foil was determined by making many micrometer measurements
  of foil from an adjacent portion of the same roll.
  Touching the foil, particularly with a hard/sharp-cornered object like
- a micrometer can easily damage the foil by denting it.
- Even a piece of dust, compressed between the micrometer jaw and the foil,
+ a micrometer, can easily damage the foil by denting it.
+ Even a piece of dust, compressed between a micrometer jaw and the foil,
  can be sufficient to dimple the foil and increase its effective thickness.
  For this reason, we have not directly measured the actual foil's thickness.
  If the foil thickness measurement were to become of increased concern,
@@ -11011,7 +11189,36 @@ Assignment of attractor/foil separation
 The distance between the pendulum and the attractor is determined to be
  the sum of the pendulum-foil distance, the foil thickness, the attractor-foil
  distance, and the pendulum-angle correction.
- XXXRC
+ Both the statistical and systematic errors are summed in quadrature, as
+ the systematic uncertainties quoted here are truly uncertain.
+ We have chosen the central values for those measurements that have meaningful
+ systematic uncertainty to reflect any bias we expect from these measurements.
+\end_layout
+
+\begin_layout Standard
+The flatness measurements quoted in the table are taken using conservative
+ estimates drawn from Figures 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:PendulumScans"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:AttractorScan"
+
+\end_inset
+
+, and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "FoilFlatness"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -11022,7 +11229,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="19" columns="6">
+<lyxtabular version="3" rows="22" columns="6">
 <features rotate="0" tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -11031,63 +11238,209 @@ status open
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Quantity
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Measurement
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Value
+
+\series bold
+Measured
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Contribution
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Statistical Uncertainty
+
+\series bold
+Statistical
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Systematic Uncertainty
+
+\series bold
+Systematic
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Method
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Value
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+ (
+\begin_inset Formula $\mu$
+\end_inset
+
+m)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Uncertainty (
+\begin_inset Formula $\mu$
+\end_inset
+
+m)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Uncertainty (
+\begin_inset Formula $\mu$
+\end_inset
+
+m)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11098,7 +11451,7 @@ Pendulum
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11107,7 +11460,7 @@ Pendulum
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11116,7 +11469,7 @@ Pendulum
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11125,7 +11478,7 @@ Pendulum
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11134,7 +11487,7 @@ Pendulum
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11145,7 +11498,7 @@ Pendulum
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11154,7 +11507,7 @@ Twist
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11163,37 +11516,61 @@ Bounce Test
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/offsetAngle.tex"
+
+\end_inset
+
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/bounceAngCentral.tex"
+
+\end_inset
+
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/bounceAngStatistical.tex"
+
+\end_inset
+
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/bounceAngSystematic.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -11201,7 +11578,7 @@ Bounce Test
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11210,7 +11587,7 @@ Bounce Test
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11219,7 +11596,7 @@ Photos
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11228,7 +11605,7 @@ Photos
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11237,7 +11614,7 @@ Photos
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11246,7 +11623,7 @@ Photos
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11257,7 +11634,7 @@ Photos
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11266,7 +11643,7 @@ Tip
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11275,37 +11652,61 @@ Plateau Test
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/plateauAngle.tex"
+
+\end_inset
+
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/plateauCentral.tex"
+
+\end_inset
+
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/plateauStatistical.tex"
+
+\end_inset
+
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/plateauSystematic.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -11313,7 +11714,7 @@ Plateau Test
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11322,7 +11723,7 @@ Plateau Test
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11331,7 +11732,7 @@ Photos
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11340,7 +11741,7 @@ Photos
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11349,7 +11750,7 @@ Photos
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11358,7 +11759,7 @@ Photos
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11369,7 +11770,7 @@ Photos
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11378,7 +11779,7 @@ Flatness
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11387,37 +11788,61 @@ Laser Scan
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/pendulumFlatness.tex"
+
+\end_inset
+
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/pendFlatCentral.tex"
+
+\end_inset
+
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/pendFlatStatistical.tex"
+
+\end_inset
+
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/pendFlatSystematic.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -11425,7 +11850,7 @@ Laser Scan
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11434,7 +11859,7 @@ Separation
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11443,7 +11868,69 @@ Bounce Test
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/pfRawDist.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/bouncePosCentral.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/bouncePosStatistical.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/bouncePosSystematic.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11452,7 +11939,16 @@ Bounce Test
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Photos
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11461,7 +11957,7 @@ Bounce Test
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11470,7 +11966,16 @@ Bounce Test
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11481,7 +11986,7 @@ Bounce Test
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11490,7 +11995,7 @@ Bounce Test
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11499,7 +12004,7 @@ Bounce Test
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11508,7 +12013,7 @@ Bounce Test
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11517,7 +12022,7 @@ Bounce Test
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11526,7 +12031,7 @@ Bounce Test
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11537,7 +12042,7 @@ Bounce Test
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11548,7 +12053,7 @@ Attractor
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11557,7 +12062,7 @@ Attractor
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11566,7 +12071,7 @@ Attractor
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11575,7 +12080,7 @@ Attractor
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11584,7 +12089,7 @@ Attractor
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11595,7 +12100,7 @@ Attractor
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11604,7 +12109,7 @@ Tip
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11613,37 +12118,61 @@ Interferometer
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/attractorTip.tex"
+
+\end_inset
+
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/attractorCentral.tex"
+
+\end_inset
+
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/attractorStatistical.tex"
+
+\end_inset
+
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/attractorSystematic.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -11651,7 +12180,7 @@ Interferometer
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11660,7 +12189,7 @@ Distance
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11669,37 +12198,61 @@ Interferometer
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/ifoPad.tex"
+
+\end_inset
+
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/ifoPadCentral.tex"
+
+\end_inset
+
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/ifoPadStatistical.tex"
+
+\end_inset
+
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/ifoPadSystematic.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -11707,7 +12260,7 @@ Interferometer
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11716,7 +12269,7 @@ Flatness
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11725,7 +12278,69 @@ Laser Scan
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/attractorFlatness.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/attrFlatCentral.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/attrFlatStatistical.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/attrFlatSystematic.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11734,7 +12349,7 @@ Laser Scan
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11743,7 +12358,7 @@ Laser Scan
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11752,7 +12367,25 @@ Laser Scan
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11763,63 +12396,7 @@ Laser Scan
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11830,7 +12407,7 @@ Foil
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11839,7 +12416,7 @@ Foil
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11848,7 +12425,7 @@ Foil
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11857,7 +12434,7 @@ Foil
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11866,7 +12443,7 @@ Foil
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11877,7 +12454,7 @@ Foil
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11886,7 +12463,7 @@ Thickness
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11895,7 +12472,7 @@ Micrometer
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11910,28 +12487,46 @@ filename "../extracted/foilThickness.tex"
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/foilThickCentral.tex"
+
+\end_inset
+
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/foilThickStatistical.tex"
+
+\end_inset
+
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/foilThickSystematic.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -11939,7 +12534,7 @@ filename "../extracted/foilThickness.tex"
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11948,7 +12543,7 @@ Flatness
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11957,7 +12552,69 @@ Laser Scan
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/foilFlatness.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/foilFlatCentral.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/foilFlatStatistical.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/foilFlatSystematic.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11966,7 +12623,7 @@ Laser Scan
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11975,7 +12632,7 @@ Laser Scan
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11984,7 +12641,25 @@ Laser Scan
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11995,74 +12670,18 @@ Laser Scan
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \series bold
-Total
+Total:
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12071,7 +12690,7 @@ Total
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12080,28 +12699,46 @@ Total
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/totalCentral.tex"
+
+\end_inset
+
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/totalStatistical.tex"
+
+\end_inset
+
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/totalSystematic.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -12119,7 +12756,13 @@ Total
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Uncertainty table for the final determination of pendulum-attractor separation
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Uncertainty-table-distance"
+
+\end_inset
+
+Uncertainty table for the minimum effective attractor-pendulum separation
 \end_layout
 
 \end_inset
@@ -12803,20 +13446,20 @@ status open
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 Harmonic (
-\begin_inset Formula $m)$
+\begin_inset Formula $m$
 \end_inset
 
-
+)
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12825,7 +13468,7 @@ Harmonic (
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12834,7 +13477,7 @@ Harmonic (
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12843,7 +13486,7 @@ Harmonic (
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12852,7 +13495,7 @@ Harmonic (
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12861,7 +13504,7 @@ Harmonic (
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12870,7 +13513,7 @@ Harmonic (
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12879,7 +13522,7 @@ Harmonic (
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12888,7 +13531,7 @@ Harmonic (
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12899,7 +13542,7 @@ Harmonic (
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12908,7 +13551,7 @@ Fourier coefficient
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12917,7 +13560,7 @@ Fourier coefficient
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12926,7 +13569,7 @@ Fourier coefficient
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12935,7 +13578,7 @@ Fourier coefficient
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12944,7 +13587,7 @@ Fourier coefficient
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12953,7 +13596,7 @@ Fourier coefficient
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12962,7 +13605,7 @@ Fourier coefficient
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12971,7 +13614,7 @@ Fourier coefficient
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12980,7 +13623,7 @@ Fourier coefficient
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12991,7 +13634,7 @@ Fourier coefficient
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13004,7 +13647,7 @@ Combined signal-to-noise ratio ( 1 to
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13013,7 +13656,7 @@ Combined signal-to-noise ratio ( 1 to
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13022,7 +13665,7 @@ Combined signal-to-noise ratio ( 1 to
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13031,7 +13674,7 @@ Combined signal-to-noise ratio ( 1 to
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13040,7 +13683,7 @@ Combined signal-to-noise ratio ( 1 to
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13049,7 +13692,7 @@ Combined signal-to-noise ratio ( 1 to
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13058,7 +13701,7 @@ Combined signal-to-noise ratio ( 1 to
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13067,7 +13710,7 @@ Combined signal-to-noise ratio ( 1 to
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13076,7 +13719,7 @@ Combined signal-to-noise ratio ( 1 to
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -16781,6 +17424,64 @@ reference "sec:Confidence-Interval-Algorithm"
  the important problem of confidence-interval determination.
 \end_layout
 
+\begin_layout Subparagraph
+Advantage - systematic metrology uncertainty
+\end_layout
+
+\begin_layout Standard
+The bootstrapped handling of uncertainties allows a trivial inclusion of
+ a traditionally difficult-to-handle uncertainty, colloquially known as
+ 
+\begin_inset Quotes eld
+\end_inset
+
+horizontal systematic errorbars
+\begin_inset Quotes erd
+\end_inset
+
+.
+ As the determination of the absolute separation of the pendulum and foil,
+ and hence the pendulum and attractor is necessarily uncertain (see Table
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Uncertainty-table-distance"
+
+\end_inset
+
+), this must be reflected in degraded confidence intervals at small 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+ From the perspective of our global fit, this measurement is unchanging,
+ making it a systematic uncertainty (and, indeed, it contains its own systematic
+ uncertainties).
+ The 
+\begin_inset Quotes eld
+\end_inset
+
+fuzzing
+\begin_inset Quotes erd
+\end_inset
+
+ process introduced above is readily adapted to this concern.
+ 
+\end_layout
+
+\begin_layout Standard
+For each iteration of the bootstrapped fit, in addition to individually
+ randomly displacing each position measurement by its individual statistical
+ uncertainty, we displace 
+\bar under
+all
+\bar default
+ positions by a single random amount, distributed by the known metrology
+ uncertainty.
+ This approach naturally incorporates our absolute position uncertainty
+ without degrading our known and meaningful differential position sensitivity.
+\end_layout
+
 \begin_layout Subsubsection
 Fitting approach -- second half
 \end_layout
@@ -18703,7 +19404,7 @@ It is convenient to define a small library of basic shapes from which larger
 
 \begin_layout Standard
 Central to PlateWash design are flat plates.
- These come in two types, round and rectangular.
+ These plates come in two types, round and rectangular.
 \end_layout
 
 \begin_layout Subsection
@@ -18716,8 +19417,8 @@ It is convenient to develop a function for generating both round sheets
  radius.
  This function places points on a cartesian grid, with points accepted if
  they're internal to the specified mass.
- Grid spacing along the in-plane direction and axial direction may be independen
-tly selected.
+ Grid spacing along the in-plane directions and axial direction may be independe
+ntly selected.
  
 \end_layout
 
@@ -18860,7 +19561,14 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXXMA
+\align center
+\begin_inset Graphics
+	filename ../NewtonianSimulation/plots/displayPointsDemo.eps
+	width 70text%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -19609,7 +20317,15 @@ Angled torques
 \end_layout
 
 \begin_layout Standard
-The pendulum is oriented at an angle of XXXRC with respect to the attractor.
+The pendulum is oriented at an angle of 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/offsetAngle.tex"
+
+\end_inset
+
+ with respect to the attractor.
+ XXXRC - display computed angle torque signal.
  
 \end_layout
 
@@ -20511,7 +21227,7 @@ filename "../systematics/magnetic/extracted/CoilTurns.tex"
 
  turns of wire was placed near and on the apparatus to gauge any change
  in signal as a function of applied magnetic field.
- The coil was driven with current of 
+ The coil was driven with a constant current of 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../systematics/magnetic/extracted/CoilCurrent.tex"
@@ -20554,10 +21270,6 @@ Coil in the on-apparatus position
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-XXXRC diagram
 \end_layout
 
 \begin_layout Standard
@@ -22228,27 +22940,74 @@ reference "sec:Force-law-inversion"
 \end_layout
 
 \begin_layout Subsubsection
-Foil
+Size
 \end_layout
 
 \begin_layout Standard
-XXXMA
+We don't yet know with confidence what the optimal spatial size of active
+ elements in an inverse square law experiment might be.
+ The smaller the active elements, the more-easily they can be aligned.
+ Larger sizes yield larger lever arms for torsion balances and more-uniform
+ gravitational fields.
+ The very direct geometry of the Huazhong apparatus 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "2007PhRvL..98t1101T"
+
+\end_inset
+
+ addresses the former concern, providing both easy alignment and a long
+ lever arm at the possible expense of larger Newtonian gravity backgrounds.
+ The scaling laws for proximity-enhanced noise with distance/area are strongly
+ dependent upon the underlying phenomena (patch fields, gas molecule rearrangeme
+nt, etc), which are, at best, partially understood.
+ 
+\end_layout
+
+\begin_layout Standard
+We will continue to experiment with size in an effort to improve our signal
+ to noise ratio.
+ 
 \end_layout
 
 \begin_layout Subsubsection
-Pendulum
+Foil-displacement
 \end_layout
 
 \begin_layout Standard
-XXXMA
+We spent about a year trying to find ways to avoid the need to measure the
+ foil's position before taking on the problem directly with the foil interferome
+ter.
+ In our opinion, for any attractor-displacing short-distance gravity experiment,
+ a measure of the isolating foil's displacement is essential.
+ Without such a measurement, substantial systematic-uncertainty questions
+ will linger.
+ The foil interferometer is one of the major successes of this experiment.
 \end_layout
 
 \begin_layout Subsubsection
-Capacitor
+Capacitor/contact potential
 \end_layout
 
 \begin_layout Standard
-XXXMA
+The decision to simultaneously remove both the bypass capacitors and the
+ contact-potential system was over-eager, though we didn't know it at the
+ time.
+ Had we ascertained that the systematic signal we saw was related only to
+ the capacitors, we could have significantly improved the sensitivity of
+ the overall measurement through decreased noise and decreased pendulum-foil
+ coupling.
+ Indeed, the most important single upgrade of the experiment will be to
+ restore those systems.
+ 
+\end_layout
+
+\begin_layout Standard
+It remains important for us to determine the mechanism by which the capacitor-mo
+dulated resonance couples to the pendulum/pendulum readout.
+ Addressing that coupling, which probably resides in the autocollimator
+ pre-amplifier, may yield improved noise.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -22694,8 +23453,10 @@ g for the foil systematic if we could hold the interferometer in its sensitive
 It has been suggested that we should replace the 90/10 coupler with a fiber
  circulator to increase the amount of light that reaches the detector by
  more than a factor of ten.
- This hasn't yet been thought through completely, but it does appear to
- be a drop-in replacement for the existing coupler.
+ Early experiments by Krishna Venkateswara suggest that a circulator will
+ be a drop-in replacement for the existing coupler and will yield increased
+ sensitivity.
+ 
 \end_layout
 
 \begin_layout Subsection

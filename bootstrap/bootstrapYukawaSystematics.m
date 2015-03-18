@@ -30,6 +30,12 @@ for bootStrapCounter = 1:(NumberOfYukawaBootstraps)  % three covers add, null, s
 		pMd(:,bCol) = pMd(:,bCol) + randn(rows(pMd),1) .* pMd(:,bErrCol);
 	end
 
+	if(BootstrapSystematicPositionUncertainty == 1)
+		bSPositionErr = randn * totalPAUncertainty;
+		pMd( : , aCol ) = pMd( : , aCol ) + bSPositionErr;
+		pMd( : , bCol ) = pMd( : , bCol ) + bSPositionErr;
+	end
+
 	if(1 == injectIFOSystematic)
 		%Fake torque
 		outTor = foilTranslationToTorque*fitVectorPolyLinearSpline( [pMd(:,aCol) pMd(:,bCol)], ifoP(bootStrapCounter,:), ifoV(bootStrapCounter, : ) );
@@ -74,7 +80,7 @@ for bootStrapCounter = 1:(NumberOfYukawaBootstraps)  % three covers add, null, s
 		tic
 
 		%Do the fit.
-		[x , csMin, convergence, details] = samin("chiSquareWSystematics", {trimmedPM, ranSeed', PendStruct, AttrStruct, CNStruct}, {LowerBounds', UpperBounds', 20, 5, 0.1, 10*iterAve, 5, 1e-3, 0.1, 1, 2});
+		[x , csMin, convergence, details] = samin("chiSquareWSystematics", {trimmedPM, ranSeed', PendStruct, AttrStruct, CNStruct}, {LowerBounds', UpperBounds', 20, 5, 0.5, 10*iterAve, 5, 1e-3, 0.1, 1, 2});
 
 		%0 = no convergence, 1 = good, 2 = near edge
 		fitInfo = convergence; 
