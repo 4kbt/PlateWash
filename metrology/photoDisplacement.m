@@ -1,22 +1,25 @@
 function [m e ang angErr] = photoDisplacement( P , plateThickness);
 
-	RealImageWidth   = [ mean( P(:,3) ), mean( P(:,4)) / sqrt( rows(P) )];
-	MirrorImageWidth = [ mean( P(:,5) ), mean( P(:,6)) / sqrt( rows(P) )];
-	GapDistance      = [ mean( P(:,7) ), mean( P(:,8)) / sqrt( rows(P) )]; 
-	
+	RealImageWidth   = uncertaintyOverTime( P(:,3), P(:,4) )(end,:);
+	MirrorImageWidth = uncertaintyOverTime( P(:,5), P(:,6) )(end,:);
+	GapDistance 	 = uncertaintyOverTime( P(:,7), P(:,8) )(end,:);
+
+	%This is important. The gap is physically half of its apparent size.
+	GapDistance      = GapDistance / 2.0; 
+		
 	ImageWidth       = [ RealImageWidth; MirrorImageWidth]; 
 
-	Width = mean(ImageWidth(:,1));
-	WidthErr = mean( ImageWidth(:,1) ) / sqrt( rows(ImageWidth) );
+	Width = uncertaintyOverTime( ImageWidth(:,1), ImageWidth(:,2))(end,:);
 
-	m = GapDistance (1) * plateThickness / Width;
+	m = GapDistance (1) * plateThickness / Width(1);
 	
-	e = GapDistance (2) * plateThickness / Width; 
+	e = GapDistance (2) * plateThickness / Width(1); 
 
 	%AngleComputation
 	X = P(:,1);
-	Y = P(:,7);
-	DY = P(:,8);
+	%Factors of two for reflection
+	Y =  P(:,7) / 2.0;
+	DY = P(:,8) / 2.0;
 
 	[fit fitErr] = wpolyfit( X, Y, DY, 1);
 
