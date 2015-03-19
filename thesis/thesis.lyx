@@ -11600,6 +11600,12 @@ Photos
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/photoTwistAng.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -11736,6 +11742,12 @@ Photos
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/photoTipAng.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -11952,6 +11964,12 @@ Photos
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/photoGapSize.tex"
+
+\end_inset
+
 
 \end_layout
 
