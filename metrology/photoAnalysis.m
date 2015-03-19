@@ -50,4 +50,4 @@ gapAng   = uncertaintyOverTime( gapMerge(:,1), gapMerge(:,2) ) (end,:);
 tipAngDiff = sciAng(1) - gapAng(1);
 tipAngDiffErr = sqrt( sciAng(2).^2 + gapAng(2).^2);
 
-printSIErr(tipAngDiff, tipAngDiffErr, 2, -3, 'rad', 'extracted/photoTipAng.tex');
+printSIErr(tipAngDiff, tipAngDiffErr, 2, -6, 'rad', 'extracted/photoTipAng.tex');
