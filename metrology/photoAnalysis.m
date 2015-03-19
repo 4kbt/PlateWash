@@ -28,7 +28,7 @@ FrontErr  = sqrt( ScienceGapFront(2)^2 + OPFE^2 );
 Angle    =     ( BackDist  - FrontDist  ) / pendulumLength;
 AngleErr = sqrt( BackErr^2 + FrontErr^2 ) / pendulumLength;
 
-printSIErr( Angle, AngleErr, 2, -3, 'rad', 'extracted/photoTwistAng.tex');
+printSIErr( Angle, AngleErr, 2, -6, 'rad', 'extracted/photoTwistAng.tex');
 
 AverageGap    = uncertaintyOverTime([BackDist; FrontDist], [BackErr; FrontErr])(end,:);
 
@@ -50,4 +50,4 @@ gapAng   = uncertaintyOverTime( gapMerge(:,1), gapMerge(:,2) ) (end,:);
 tipAngDiff = sciAng(1) - gapAng(1);
 tipAngDiffErr = sqrt( sciAng(2).^2 + gapAng(2).^2);
 
-printSIErr(tipAngDiff, tipAngDiffErr, 2, -3, 'rad', 'extracted/photoTipAng.tex');
+printSIErr(tipAngDiff, tipAngDiffErr, 2, -6, 'rad', 'extracted/photoTipAng.tex');
