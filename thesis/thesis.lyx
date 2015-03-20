@@ -177,7 +177,7 @@ ngineer shoulders.
 \end_layout
 
 \begin_layout Standard
-I thank the entire Eot-Wash group, the National Science Foundation, and
+I thank the entire Eöt-Wash group, the National Science Foundation, and
  the United States taxpayer for unwavering support, even when a blitzkreig
  experiment turned to a protracted and careful campaign.
  
@@ -23138,13 +23138,13 @@ Lessons learned
 
 \begin_layout Standard
 Scott Schell earned his spot in the acknowledgements when he told a backcountry-
-ski class this: 
+ski class, 
 \begin_inset Quotes eld
 \end_inset
 
-I think the major difference between a professional and an amateur is whether
- or not, at the end of the day, they ask the question, `what have I learned
- today'?
+I think the major difference between an expert and an amateur is whether
+ or not, at the end of the day, they ask and answer the question, `what
+ have I learned today?'
 \begin_inset Quotes erd
 \end_inset
 
@@ -23172,7 +23172,11 @@ The PlateWash experiment began as an attempt to make a lightning strike
 \begin_inset Formula $\mu$
 \end_inset
 
-m in ~2008, and reach 
+m in 
+\begin_inset Formula $\sim$
+\end_inset
+
+2008, and reach 
 \begin_inset Formula $20$
 \end_inset
 
@@ -23201,7 +23205,7 @@ m is evidence that we made a mistake, either in our estimate of our capability,
  in our execution, or in both.
  We made mistakes in both.
  I do not mean to say that the construction and execution of this experiment
- is not an acheivement, it is, but we will repeat our mistakes if we do
+ is not an achievement, it is, but we will repeat our mistakes if we do
  not learn from them.
 \end_layout
 
@@ -23211,13 +23215,14 @@ The field of avalanche safety, and professional risk management more generally,
 y.
  In the case of avalanches, if you underestimate your uncertainty more than
  a few times, you die.
- If you overestimate your uncertainty, you never get to play in the mountains.
- For physicists, the situation is similar; if we report a violation of Newton's
- Inverse Square Law Of Gravitation, and it's not true, our careers are damaged,
- if not ended.
+ If you overestimate your uncertainty, you never get to experience the joy
+ found among mountains.
+ For physicists, the situation is similar; if we report a violation of the
+ vaunted Newton's Inverse Square Law Of Gravitation, and it's not true,
+ our careers are damaged, if not ended.
  If we cower in fear of uncertainty, we'll never learn anything new about
  Nature.
- There is value to be had for physicists who study risk management.
+ Risk-management tools have real value for physicists.
 \end_layout
 
 \begin_layout Standard
@@ -23239,15 +23244,6 @@ key "mccammon2002evidence,atkins2000human"
  safety concerns.
  Everyone has blind spots, sometimes exacerbated by our environments.
  For us, as physicists, I believe it is the same.
- For this reason, I've broken out a 
-\begin_inset Quotes eld
-\end_inset
-
-social
-\begin_inset Quotes erd
-\end_inset
-
- subsection.
 \end_layout
 
 \begin_layout Subsection
@@ -23266,7 +23262,7 @@ name "sub:0-tunable-parameters,"
 \end_layout
 
 \begin_layout Standard
-Our research group has made its name with Equivalence Principle tests 
+Our research group made its name with Equivalence Principle tests 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "schlamminger2008test"
@@ -23311,7 +23307,7 @@ ties.
 \begin_layout Standard
 In our group's hole and wedge-pendulum experiments 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "Cook2013,2007PhRvL..98b1101K,2007PhRvL..98m1104A,2004PhRvD..70d2004H,2001PhRvL..86.1418H"
 
 \end_inset
@@ -23355,10 +23351,10 @@ In the PlateWash experiment, things are even more complicated.
  While this extra dimension of flexibility gives us extra discriminating
  power between specific inverse-square law violations, it also requires
  that we have an even better model of each systematic effect.
- With the myriad choices of start and end positions that we used in this
- experiment, ascertaining both our sensitivity to a specific inverse square
- law signal and our uncertainties became a real challenge.
- The methods outlined in 
+ With the intentionally myriad choices of start and end positions that we
+ used in this experiment, ascertaining both our sensitivity to a specific
+ inverse square law signal and our uncertainties became a real challenge.
+ The methods outlined in Sections 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Model-Comparison"
@@ -23374,7 +23370,7 @@ reference "sec:Force-law-inversion"
 
  now allow us to do this relatively efficiently, but it can be challenging
  to extract or judge a physics result by eye.
- The two-parameter approach is much more powerful for hunting down instrumental
+ The two-parameter approach is powerful for discriminating against instrumental
  effects, but the loss in clarity is substantial.
 \end_layout
 
@@ -23399,7 +23395,8 @@ key "2007PhRvL..98t1101T"
  lever arm at the possible expense of larger Newtonian gravity backgrounds.
  The scaling laws for proximity-enhanced noise with distance/area are strongly
  dependent upon the underlying phenomena (patch fields, gas molecule rearrangeme
-nt, etc), which are, at best, partially understood.
+nt, proximity-enhanced gas damping, etc), which are, at best, partially
+ understood.
  
 \end_layout
 
@@ -23437,7 +23434,7 @@ The decision to simultaneously remove both the bypass capacitors and the
  the overall measurement through decreased noise and decreased pendulum-foil
  coupling.
  Indeed, the most important single upgrade of the experiment will be to
- restore those systems.
+ reconnect those systems.
  
 \end_layout
 
@@ -23445,8 +23442,7 @@ The decision to simultaneously remove both the bypass capacitors and the
 It remains important for us to determine the mechanism by which the capacitor-mo
 dulated resonance couples to the pendulum/pendulum readout.
  Addressing that coupling, which probably resides in the autocollimator
- pre-amplifier, may yield improved noise.
- 
+ pre-amplifier, may yield improved noise and decreased systematic sensitivity.
 \end_layout
 
 \begin_layout Subsection
@@ -23526,7 +23522,7 @@ Blitzkreig vs Campaign
 
 \begin_layout Standard
 While it was first imagined as a short-range equivalence principle test,
- and again as a competing design idea to the early Eot-Wash 10-hole pendulum
+ and again as a competing design idea to the early Eöt-Wash 10-hole pendulum
  design, PlateWash, as it exists now, was sold in 2006-7 as a chance to
  jump ahead of the existing technology.
 \end_layout
@@ -23538,18 +23534,18 @@ Our action mirrored this blitzkreig philosophy.
  We put off complete solutions to systematic concerns in favor of estimates
  and a promise to tie up loose ends when the measurement was complete.
  When the experiment was first assembled, our first day of data easily surpassed
- the first Eot-Wash short-range experiments; we were on our way, led by
+ the first Eöt-Wash short-range experiments; we were on our way, led by
  the huge potential of PlateWash's efficient design.
  
 \end_layout
 
 \begin_layout Standard
-Our committment to the lightning-stab approach, where we would get a great
- measurement on our first try, led us astray; the first stabs didn't work.
+Our committment to the lightning-strike approach, where we would get a great
+ measurement on our first try, led us astray; the first strikes didn't work.
  Complete focus on delivering a respectable result instead of iteratively
  delivering coarse but reliable results slowed our progress.
  Without building a foundation of complete measurements on which we could
- stand, grow, and improve, we condemend ourselves to inefficiency.
+ stand, grow, and improve, we condemned ourselves to inefficiency.
 \end_layout
 
 \begin_layout Standard
@@ -23609,6 +23605,15 @@ l idea; one where it is obviously free from large classes of systematic
  In the early days of those experiments, perhaps no blind will be requisite.
 \end_layout
 
+\begin_layout Standard
+As this measurement comes to a close, while the blind remains stressful,
+ it is also refreshing.
+ We have done what we can to mitigate known systematic effects.
+ The result, whatever it will be, is as unaffected by our own biases as
+ we could manage.
+ If our measurement is to be repeated, it should be performed blind.
+\end_layout
+
 \begin_layout Subsection
 Social
 \end_layout
@@ -23663,7 +23668,7 @@ Contact potential
 \end_layout
 
 \begin_layout Standard
-As noted in 
+As noted in Sections 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Contact-potential-noise"
@@ -23682,8 +23687,8 @@ reference "par:Connection-to-contact"
  The elevated electrical potential difference between the pendulum and the
  foil is probably responsible for the level of swing coupling we see, limits
  the distance of closest approach between the pendulum and the foil, and
- surely enhanced the pendulum/foil coupling that forced us to make a systematic
- correction (
+ surely enhanced the pendulum/foil coupling that forced us to consider a
+ systematic correction (Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Subtraction-Foil"
@@ -23692,8 +23697,8 @@ reference "sec:Subtraction-Foil"
 
 ).
  In addition, the presence of a possible foil/attractor contact potential
- may have led to the short-range attractor foil coupling that makes the
- pendulum/foil systematic correction so daunting.
+ may have led to the observable short-range attractor foil coupling that
+ makes a pendulum/foil systematic correction so daunting.
  
 \end_layout
 
@@ -23711,26 +23716,29 @@ Pendulum Battery
 \end_layout
 
 \begin_layout Standard
-As we explained earlier (Figure 
+As we showed with Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Evidence-for-a-pendulum-battery"
 
 \end_inset
 
-), it is quite probable that the pendulum had its own trouble with an irreducibl
-e on-board battery, formed from the contact of the dissimilar metals of
- the pendulum body and the dense inlays.
- As measured, this voltage may have contributed ~100
+, it is probable that the pendulum had its own trouble with an irreducible
+ on-board battery, formed from the contact of the dissimilar metals of the
+ pendulum body and the dense inlays.
+ Alternatively, it is also possible that different regions of the foil surface
+ held slightly different effective electrical potential.
+ Either way, as measured, this voltage may have contributed 
+\begin_inset Formula $\sim100$
+\end_inset
+
+
 \begin_inset space ~
 \end_inset
 
 mV to the contact potential.
- Alternatively, it is also possible that different regions of the foil surface
- held slightly different effective electrical potential.
- Either way, a monolithic pendulum with a much-smaller area of closest approach,
- limited only to the active mass, may yield substantially better noise performan
-ce.
+ A monolithic pendulum with a much-smaller area of closest approach, limited
+ only to the active mass, may yield substantially better noise performance.
  If the dense/close side of the pendulum is sufficiently thick, it is also
  possible to imagine attaching a dense protruding 
 \begin_inset Quotes eld
@@ -23747,8 +23755,11 @@ inlay
 \end_layout
 
 \begin_layout Standard
-These approaches are only possible with the simultaneous use of a foil interfero
-meter.
+These approaches are 
+\bar under
+only
+\bar default
+ possible with the simultaneous use of a foil interferometer.
  The intentional loss of symmetry inherent to these designs requires that
  even more care be given to the foil's motion.
  While a tuned contact potential should limit the electrostatic effects
@@ -23803,7 +23814,7 @@ The autocollimator used in this iteration of the experiment was a coarse
 \end_layout
 
 \begin_layout Standard
-Furthermore, the encoder systematic (
+Furthermore, the encoder systematic (Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Encoder-narrative"
@@ -23823,8 +23834,8 @@ cm in length.
  While it would require considerable testing to be trustworthy, the benefits
  of full-time encoder operation would be considerable.
  The attractor could operate in feedback, decreasing the positioning scatter
- by at least an order of magnitude, and there would be no need to use a
- pressure gauge as a position readout.
+ by at least an order of magnitude, and there would be no need to use an
+ air pressure gauge as a position monitor.
  
 \end_layout
 
@@ -23833,7 +23844,7 @@ UV LED
 \end_layout
 
 \begin_layout Standard
-Our understanding of exactly what physical mechanisim increases the noise
+Our understanding of exactly which physical mechanism increases the noise
  in the torsion pendulum at short pendulum/foil separation is minimal.
  One possiblity is that the pendulum is being buffeted by outgassing from
  the foil, perhaps enhanced by squeeze-film effects.
@@ -23868,7 +23879,7 @@ Interferometer improvements
 \end_layout
 
 \begin_layout Standard
-As described in 
+As described in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Interferometer-noise"
@@ -23878,7 +23889,7 @@ reference "sub:Interferometer-noise"
 , the interferometer may be limited by polarization-related noise.
  If we were to switch to entirely polarization-maintaining fiber, it's possible
  that the pickup and drift we see could be reduced.
- 
+ We have begun to acquire the necessary fiber components to do so.
 \end_layout
 
 \begin_layout Standard
@@ -23887,7 +23898,7 @@ g for the foil systematic if we could hold the interferometer in its sensitive
  region of operation for the duration of the experiment.
  That could be accomplished by physically moving the interferometer fiber
  tip with slow-control feedback or by changing the laser temperature enough
- to shift the laser frequency.
+ to shift the laser wavelength.
  The new infrared laser is extremely resistant to temperature change, which
  may force us to develop a mechanism of moving the fiber tip in a smooth
  and controllable fashion.
@@ -23899,9 +23910,9 @@ g for the foil systematic if we could hold the interferometer in its sensitive
 It has been suggested that we should replace the 90/10 coupler with a fiber
  circulator to increase the amount of light that reaches the detector by
  more than a factor of ten.
- Early experiments by Krishna Venkateswara suggest that a circulator will
- be a drop-in replacement for the existing coupler and will yield increased
- sensitivity.
+ Early experiments on tilt-meter interferometer test apparatus by Krishna
+ Venkateswara suggest that a circulator will be a drop-in replacement for
+ the existing coupler and will yield increased sensitivity.
  
 \end_layout
 
@@ -23927,9 +23938,9 @@ Much of the difficulty in the data analysis stemmed from the use of a large
  the analyses of both systematic uncertainty and potential new physics would
  have been drastically simplified.
  The increased immunity to position-related systematic effects may not have
- been worth the massive cost in speed.
- While blindness is still a challenge, it's not impossible to blind such
- a measurement.
+ been worth the massive cost in complexity.
+ While blindness is still a challenge, it's equally possible to blind such
+ a few-position measurement.
 \end_layout
 
 \begin_layout Subsubsection
@@ -23938,7 +23949,8 @@ Blindness
 
 \begin_layout Standard
 Now that we have completed an entire measurement cycle with a blind measurement,
- we must revisit whether or not a blind has been helpful.
+ we must revisit as a group whether or not a blind has been helpful.
+ I contend that it has been essential to producing an unbiased result.
  Whether we choose to go blind for a second iteration or not is perhaps
  less important than whether we 
 \bar under
@@ -23957,16 +23969,16 @@ Octave has been a good and reliable tool throughout this work.
  While the Octave project continues to improve and work toward drop-in compatibi
 lity with MATLAB, much of the open-source effort has moved into the SciPy
  packages for Python.
- Writing future analysis code in Python will make it more readable, more
- accessible, and permit access to mathematical libraries that are audited
- by many more users.
+ Writing future analysis code in Python will make it more widely readable
+ and permit access to mathematical libraries that are audited by many more
+ users.
  
 \end_layout
 
 \begin_layout Standard
 A particular sticking point is our reliance upon the excellent Gnuplot plotting
  package.
- Information occasionally flows out of Octave, gets plotted in or analyzed
+ Data often flows out of an Octave program, gets plotted in or analyzed
  a little in Gnuplot, and then is no longer accessible to the tools in Octave.
  At least a man-month has been spent finding ways to smoothly move data
  from one to the other and back.
