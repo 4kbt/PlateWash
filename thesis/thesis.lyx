@@ -21021,13 +21021,14 @@ Interferometer
 \end_layout
 
 \begin_layout Standard
-We spent a lot of time trying to figure out how to generate a satisfactory
- test of the inverse square law without a measurement of the foil position.
- We were never able to find another way.
+We spent a lot of time trying to find clever ways to execute a satisfactory
+ parallel-plate test of the inverse square law without a measurement of
+ the isolating foil's position.
+ We were unable to find a way.
  For experiments of this type, where the attractor is modulated toward and
  away from the an isolating foil, estimates of the sensor/foil coupling
  and the foil motion itself are essential.
- This is the first measurement of which we are aware to make a direct on-line
+ This is the first measurement of which we are aware to make an on-line
  measurement of the isolating foil's displacement; an important step forward.
  
 \end_layout
@@ -21036,7 +21037,7 @@ We spent a lot of time trying to figure out how to generate a satisfactory
 Fiber Fizeau interferometers are common in the atomic-force-microscope world
  
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "rugar1988force,rugar1989improved"
 
 \end_inset
@@ -21048,15 +21049,15 @@ key "rugar1988force,rugar1989improved"
 \end_inset
 
 nm.
- Our laser suffered mightily from modehops and drifts.
+ Our laser suffered from modehops and drifts.
  Careful temperature control, current control, and current selection helped,
  but could not make the instrument usable for more than tens of minutes.
- A switch to a distributed-feedback 1330
+ A change to a distributed-feedback 1330
 \begin_inset space ~
 \end_inset
 
 nm laser and the requisite complete exchange of optical fibers, couplers,
- and sensors yielded a very stable instrument.
+ and sensors yielded a stable instrument.
  In fact, it is so stable against temperature drift that we have been unable
  to use changes in the laser-head temperature to counter other fringe drifts
  in the instrument.
@@ -21064,7 +21065,7 @@ nm laser and the requisite complete exchange of optical fibers, couplers,
 \end_layout
 
 \begin_layout Standard
-Another essential improvement is the micropositioning system (see Figures
+Another essential ingredient was the micropositioning system (see Figures
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -21079,12 +21080,13 @@ reference "fig:pendulum-foil-ifo closeup quarter"
 
 \end_inset
 
-) we added to control the fiber/foil separation.
- Without it, we spent hours attempting to position the fiber for proper
- fringe contrast.
+) we added to control the fiber-tip/foil separation.
+ Without it, we spent hours attempting to position the fiber by hand for
+ proper fringe contrast.
  As the fiber-foil separation is on the order of tens of microns, it is
- a very delicate operation.
- On one somber occasion, we punctured a foil with the fiber tip.
+ a delicate operation.
+ On one somber occasion, we punctured a foil with the fiber tip, requiring
+ a new foil and complete realignment/cleaning of the experiment.
  The current system is simple and suffers the backlash and imprecision inherent
  in servo actuation, but it is sufficient to gain useful control over fringe
  contrast.
@@ -21117,8 +21119,8 @@ Early in the experiment (2007-8), we uncovered an unexpected systematic
 \end_inset
 
 m.
- This matches the encoder grating spacing on the Micro-e encoder used to
- read out the attractor position.
+ This matches the encoder grating spacing on the Micro-E optical encoder
+ used to monitor the attractor position.
  We had operated for several months before noticing this effect; it is quite
  natural when hunting for a signal with typical length 
 \begin_inset Formula $\sim50$
@@ -21157,11 +21159,11 @@ This effect drove us to make two major changes:
 \end_layout
 
 \begin_layout Itemize
-Pneumatic attractor position metrology: This effect made it clear that electrica
-l pickup within the apparatus could become a concern.
- By moving to the precision pressure gauge as a way of ascertaining the
- attractor's position, it was possible to do a complete end-to-end test
- for any electrical pickup associated with the attractor (
+Pneumatic attractor position metrology: This systematic effect made it clear
+ that electrical pickup within the apparatus could become a concern.
+ By using to the precision pressure gauge as a way of ascertaining the attractor
+'s position, it was possible to do a complete end-to-end test for any electrical
+ pickup associated with the attractor (Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Attractor-position-control"
@@ -21170,7 +21172,8 @@ reference "sub:Attractor-position-control"
 
 ).
  Once the pressure gauge was shown to be a useable encoder by intercomparison
- with the position encoder, the position encoder was turned off and disconnected.
+ with the position encoder, the position encoder was turned off and disconnected
+ for the duration of the experiment.
 \end_layout
 
 \begin_layout Itemize
@@ -21186,7 +21189,7 @@ What is the form of the gravitational force law at short distance
 \begin_inset Quotes erd
 \end_inset
 
- through the techniques of 
+ through the techniques of Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Force-law-inversion"
@@ -21208,7 +21211,14 @@ MHz, with delicate grounding requirements.
  and unshielded leads extend for several inches within the vacuum chamber
  between the autocollimator's position-sensitive photodiode outputs and
  the high-gain transimpedance preamplifiers.
- This is a major target for future upgrades of the experiment.
+ This is a major target for future upgrades of the experiment (Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Autocollimator-upgrades"
+
+\end_inset
+
+).
  It is straightforward to shorten the leads by an order of magnitude and
  implement full electrical shielding for the photodiode and preamplifiers.
  
@@ -21240,9 +21250,19 @@ reference "fig:The-Capacitor-Systematic"
 \end_layout
 
 \begin_layout Standard
-It was decided early in the experiment (~2007-8) to ground the pendulum
- directly to the internal grounding block, giving a clear reference for
- ground.
+It was decided early in the experiment (
+\begin_inset Formula $\sim$
+\end_inset
+
+2007-8) to ground the pendulum directly to the internal grounding block,
+ which defines our experiment's electrical ground (Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Grounding"
+
+\end_inset
+
+).
  Furthermore, it was observed early on that the addition of 0.1-10
 \begin_inset space ~
 \end_inset
@@ -21253,8 +21273,9 @@ M
 
  resistors to the grounding of the attractor and foil gave improved noise
  and killed off any inexplicable signals we saw.
- This was very early in our understanding of the instrument; it felt like
- fine-tuning, but as we frequently run other experiments with 10-100
+ This was very early in our understanding of the instrument.
+ It felt like fine-tuning, but both because we routinely operate torsion
+ balances with 10-100
 \begin_inset space ~
 \end_inset
 
@@ -21262,30 +21283,30 @@ k
 \begin_inset Formula $\Omega$
 \end_inset
 
- resistors in series with the torsion fiber to protect it from electric
+ resistors in series with the torsion fiber as protection from electric
  transients and because the equilibration time of even a nanofarad capacitance
  across a megaohm resistor is 
 \begin_inset Formula $>10^{5}$
 \end_inset
 
- times shorter than the signal frequency, we left them in and turned to
- more-pressing concerns.
+ times shorter than the signal period, we left the resistors in and turned
+ to more-pressing concerns.
 \end_layout
 
 \begin_layout Standard
-Later, the sense that we had fine-tuned the apparatus and that at higher
- frequencies, the foil and attractor were effectively floating crept back
- in, and we decided that it would be better to bypass the resistors with
- large capacitors.
+Later, the worries that we had fine-tuned the apparatus and that at higher
+ frequencies, the foil and attractor were effectively electrically floating
+ resurfaced, and we decided that it would be wise to bypass the resistors
+ with large capacitors.
  We made that change and proceeded for years to refine the instrument.
  
 \end_layout
 
 \begin_layout Standard
-In 2012, the experiment was not blind, and an apparent inverse-square-law-violat
-ing signal was clearly resolved.
+In 2012, prior to our science campaign, the experiment was not blind, and
+ an apparent inverse-square-law-violating signal was clearly resolved.
  The signal was too large to have been an ISL violation, as prior experiments
- would have trivially resolved it, too.
+ would have trivially resolved it.
  At a suggestion from Krishna Venkateswara, the wires leading to the capacitors
  were clipped (at the same time we altered the lock-in frequency and, alas,
  separately disconnected the contact-potential control system), and the
@@ -21293,13 +21314,14 @@ ing signal was clearly resolved.
  In addition, the instrumental performance improved.
  Re-introducing the capacitors restored the signal, and shorting out the
  resistor with a wire also yielded a large signal.
- With no other reason to believe that the experiment had a problem, we began
- the science run reported here shortly thereafter, with the capacitors removed.
+ With no other reasons to believe that the experiment had a problem, we
+ began the science run reported in this thesis shortly thereafter, with
+ the capacitors removed.
 \end_layout
 
 \begin_layout Standard
 Our systematic tests to show that the science signal appears to be largely
- independent of the choice of resistor value are described in 
+ independent of the choice of resistor value are described in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Resistor-values"
@@ -21372,7 +21394,7 @@ reference "fig:The-Capacitor-Systematic"
 
  will squelch the effect, which we believe the resistor does.
  Bridging the resistor with a large capacitor provides an alternate path
- for high-frequency currents, restoring the resonator's 
+ for high-frequency alternating currents, restoring the resonator's 
 \begin_inset Formula $Q$
 \end_inset
 
@@ -21383,7 +21405,7 @@ reference "fig:The-Capacitor-Systematic"
 \begin_layout Standard
 Identifying the resonance gives us a culprit, but not a mechanism.
  Our best guess as to how a tunable resonance might influence the torque
- signal follows similar reasoning as in 
+ signal follows similar reasoning as in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Encoder-narrative"
@@ -21412,11 +21434,11 @@ MHz realm; easily in range of the expected LC resonant frequencies.
 \end_layout
 
 \begin_layout Standard
-In addition, the presence of the foil alllows a second possible, though
- less likely, coupling mechanism.
- Any mechanical resonance or displacement that could be driven by an increased
- effective attractor-foil or pendulum-foil voltage could also appear as
- a false torque.
+In addition, the presence of the foil allows a second possible, though less
+ likely, coupling mechanism.
+ Any mechanical resonance or displacement that could be driven by a resonance-en
+hanced effective attractor-foil or pendulum-foil voltage could also appear
+ as a false torque.
  
 \end_layout
 
@@ -21438,7 +21460,7 @@ name "chap:Systematic-Tests"
 \begin_layout Standard
 This chapter describes individual systematic tests to give us an approximate
  picture of this measurement's systematic susceptibilities.
- As described in 
+ As described in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Model-Comparison"
@@ -21539,7 +21561,7 @@ XXXMI: algorithm me!
 \end_inset
 
 .
- The circuit is modelled as an LCR resonator, see 
+ The circuit is modelled as an LCR resonator, see Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Capacitor-Systematic"
@@ -22022,7 +22044,7 @@ Magnetic systematic test results.
 
 T, as measured by rotating an AK8975 smartphone magnetometer 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "MagnetometerDatasheet"
 
 \end_inset
@@ -22336,7 +22358,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../systematics/thermal/plots/aveTempPlot.eps
-	width 50text%
+	width 80text%
 
 \end_inset
 
@@ -22369,12 +22391,20 @@ Rot-Wash
  right (but not top).
  The baseplate thermistor is screwed into the large aluminum baseplate internal
  to the apparatus.
- Spikes prior to day ~1338 are from heater-verification tests.
+ Spikes prior to day 
+\begin_inset Formula $\sim$
+\end_inset
+
+1338 are from heater-verification tests.
  The large step (red above blue) is when the heater on leg 1 was turned
  on.
  The second step (blue above red) has the heater on leg 2 turned on, and
  the heater on leg 1 turned off.
- At the end of that sequence (~day 1358), both heaters were turned off.
+ At the end of that sequence (
+\begin_inset Formula $\sim$
+\end_inset
+
+day 1358), both heaters were turned off.
  The sensors are hand calibrated to match each other and the exterior sensors
  prior to day 1338.
  Reliability of this calibration is low, but sufficient, as the important
@@ -22402,7 +22432,7 @@ Temperature variation at attractor frequency
 
 \begin_layout Standard
 For runs beginning with 
-\begin_inset Formula $\sim3217$
+\begin_inset Formula $\sim\#3217$
 \end_inset
 
 , the experiment was operated with wireless sensors reading out the resistance
@@ -22481,10 +22511,10 @@ non-conservative
 .
  In this analysis, we do not explicitly search for this effect, but it is
  possible to do.
- A much weaker signal for/defense against a non-conservative torque curve
- is the intrisic expansion of the distribution of the bootstrapped best-fit
- points in searches for new physics; biased sampling of short/long strokes
- can, however, lead to too-good fit results.
+ A weaker signal-for or defense-against a non-conservative torque curve
+ is the automatic intrinsic inflation of the distribution of the bootstrapped
+ best-fit points in searches for new physics; biased sampling of short/long
+ strokes may, however, lead to inaccurate fit results.
 \end_layout
 
 \begin_layout Standard
@@ -22597,7 +22627,7 @@ m wavelength, copper is more than 95% reflective.
 \begin_inset Formula $\pm$
 \end_inset
 
-XXXRC
+XXXRC.
 \end_layout
 
 \begin_layout Section
@@ -22661,8 +22691,8 @@ Foil Systematic
 \begin_layout Standard
 The foil systematic measurement is discussed separately from the other systemati
 c uncertainties for three reasons: the analysis is very different, the outcome
- is important, and, as a signal is clearly resolved, a correction must be
- made.
+ is important, and, as a foil displacement is resolved, the effect must
+ be handled with care.
 \end_layout
 
 \begin_layout Section
@@ -22677,7 +22707,8 @@ name "sec:Data/Fit"
 \end_layout
 
 \begin_layout Standard
-We used the foil measurements that were in-range as described in 
+We used the foil measurements that were in-range as described in Section
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "par:A-conservative-approach"
@@ -22685,7 +22716,7 @@ reference "par:A-conservative-approach"
 \end_inset
 
 .
- After the lock-in/cut procedure (
+ After the lock-in/cut procedure (Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Signal-Extraction"
@@ -22755,7 +22786,7 @@ Raw foil displacement triangle plot.
 As we do not have continuous full-sensitivity coverage of the entire measurement
  with the interferometer, we must build a model of the foil displacement
  as a function of attractor position and then apply it (with known uncertainties
-) via the foil-to-torque transfer function (
+) via the foil-to-torque transfer function (Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Pendulum-Foil-coupling"
@@ -22764,7 +22795,8 @@ reference "sub:Pendulum-Foil-coupling"
 
 ) to generate the foil-related torque-difference expected for attractor-position
  pair.
- To be conservative, we use the piecewise-linear technique outlined in 
+ To be conservative, we use the piecewise-linear technique outlined in Section
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Force-law-inversion"
@@ -22814,7 +22846,7 @@ Interferometer fit.
  This fits are used individually for subtraction in the bootstrapped global
  Yukawa fits.
  XXXRC - What about chopping out another 20 microns in short-cut in order
- to completely dump the innner systematic.
+ to completely dump the inner systematic.
  Feels good,right?
 \end_layout
 
@@ -23083,13 +23115,9 @@ Other models:
 With these data, it is possible to place useful limits upon other inverse-square
  law modifications such as a power-law potential, Fat Gravitons, Chameleons,
  Unparticles, and more.
- For each scenario, a new approach must be taken to properly address systematic
- uncertainties.
+ For each distinct scenario, a new approach should be taken to conservatively
+ address systematic uncertainties.
  For this reason, this thesis limits its results to Yukawa potentials.
-\end_layout
-
-\begin_layout Section
-Exclusion plots
 \end_layout
 
 \begin_layout Chapter
@@ -23751,6 +23779,13 @@ ttery reducing design mentioned above.
 
 \begin_layout Subsubsection
 Autocollimator
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Autocollimator-upgrades"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
