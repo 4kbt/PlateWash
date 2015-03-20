@@ -9915,9 +9915,10 @@ Metrology
 \begin_layout Standard
 Understanding the separation between attractor and test masses is essential
  to any inverse square law test.
- However, because of the nearly-null parallel-plate geometry, the implications
- of a sufficiently-small error in metrology affect only the stated exclusion
- limits, but not the presence nor absence of an ISL violation.
+ However, because of our experiment's nearly-null parallel-plate geometry,
+ the implications of a sufficiently-small error in metrology affect only
+ the stated exclusion limits, but not the presence nor absence of an ISL
+ violation.
  This is an important contrast to non-null experiments, where an error in
  attractor/sensor separation alone can lead to a Newtonian-gravitationally
  faked or masked signal for new physics.
@@ -10519,9 +10520,10 @@ reference "sub:Parsing-into-cuts"
 \end_inset
 
  for full detail).
- In contrast to all other analysis, the mean cut position is not used; instead,
- as each cut is an aggregate of individual measurements, the minimum position
- of individual measurements within a cut, plotted in Figure 
+ In contrast to all other analyses, the mean cut position is not used.
+ Instead, as each cut is an aggregate of individual measurements, we use
+ the minimum position of individual measurements within a cut, as plotted
+ in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Attractor-Foil-touching-determin"
@@ -10614,7 +10616,7 @@ reference "sub:Pendulum-Foil-separation"
 
 \end_inset
 
-) and angle relative to the foil were measured (Section
+) and angle relative to the foil were measured (Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Pendulum-angle"
@@ -10872,6 +10874,13 @@ Pendulum bounce-test.
 
 \begin_layout Subsubsection
 Photos
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Photo-displacement"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -10890,6 +10899,24 @@ ive metrology techniques.
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Pendulum-position-photos"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For each photograph, the thickness of the pendulum, the pendulum reflection,
+ and the gap between them were measured at repeatable points near the top,
+ middle, and bottom of the pendulum.
+ The widths of the gaps, divided by two to correct for reflection, were
+ calibrated by the known pendulum thicknesses.
+ The mean difference in gap size between the pre/post-science photographs
+ and the inclined/on-foil photographs was computed to generate an estimate
+ of the pendulum's displacement from the foil of 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/photoGapSize.tex"
 
 \end_inset
 
@@ -11008,9 +11035,26 @@ Photos
 \end_layout
 
 \begin_layout Standard
-Just as with the pendulum distance, we can use the pendulum photos to extract
- the effective angle at which the pendulum sits.
- XXXRC.
+Just as with the pendulum distance (Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Autocollimator Photo"
+
+\end_inset
+
+), we can use the pendulum photos to extract the effective angle at which
+ the pendulum sits.
+ The pendulum-thickness-calibrated difference between pre/post-science and
+ inclined/on-foil photographs for each view of the pendulum was computed.
+ The ratio of the two measured pendulum-foil separations to the pendulum
+ width yields a pendulum twist angle of 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/photoTwistAng.tex"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -11151,7 +11195,20 @@ Photos
 \begin_layout Standard
 As with the pendulum-distance and twist angle, we can use the pendulum photos
  to extract a tip-angle measurement.
- We find XXXRC.
+ For each photograph of the pendulum, we used the pendulum-thickness-calibrated
+ measurements of the apparent gap (again correcting for the factor of two
+ from reflection) to determine the relative slope of the pendulum and its
+ reflection in the foil.
+ The average difference between the slopes (in units of gap pixels per pixel
+ along the pendulum edge) of the science photographs and the inclined/on-foil
+ photographs was taken as the pendulum tip angle of 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/photoTipAng.tex"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
