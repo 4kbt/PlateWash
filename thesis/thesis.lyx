@@ -23944,6 +23944,33 @@ Much of the difficulty in the data analysis stemmed from the use of a large
 \end_layout
 
 \begin_layout Subsubsection
+Interleaved systematic studies
+\end_layout
+
+\begin_layout Standard
+The strategy of taking science data as quickly and comprehensively as possible
+ and then following up with systematic studies was very pragmatic.
+ Future measurements would benefit from interleaving systematic studies
+ with science measurements (see 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "baron2014order"
+
+\end_inset
+
+ for a beautiful and extreme example).
+ Each cut of science data could be immediately followed by repeating the
+ cut with a varied systematic parameter (magnetic field, interferometer
+ light power, attractor bias voltage, etc.).
+ This isn't possible with all sources of systematic uncertainty (imposed
+ temperature gradients take thousands of seconds to equilibrate), but it
+ would relax the requirement that the instrument remain untouched and stable
+ for months at a time.
+ In addition, in-line systematic studies offer the opportunity to monitor
+ the expected sensitivity of an entire measurement campaign in real time.
+\end_layout
+
+\begin_layout Subsubsection
 Blindness
 \end_layout
 
