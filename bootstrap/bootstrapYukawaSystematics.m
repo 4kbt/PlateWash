@@ -83,7 +83,7 @@ for bootStrapCounter = 1:(NumberOfYukawaBootstraps)  % three covers add, null, s
 		tic
 
 		%Do the fit.
-		[x , csMin, convergence, details] = samin("chiSquareWSystematics", {trimmedPM, ranSeed', PendStruct, AttrStruct, CNStruct}, {LowerBounds', UpperBounds', 20, 5, 0.3, 10*iterAve, 5, rows(trimmedPM.x1Vec)*0.01, 0.1, 1, 2});
+		[x , csMin, convergence, details] = samin("chiSquareWSystematics", {trimmedPM, ranSeed', PendStruct, AttrStruct, CNStruct}, {LowerBounds', UpperBounds', 20, 5, 0.9, 10*iterAve, 5, rows(trimmedPM.x1Vec)*0.01, 0.1, 1, 2});
 
 		%0 = no convergence, 1 = good, 2 = near edge
 		fitInfo = convergence; 
