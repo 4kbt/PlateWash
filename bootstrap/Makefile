@@ -35,7 +35,7 @@ yukawaFit : $(PREREQUISITES)
 	./yukawaPlots.sh
 	$(MAKE) TeXFigure
 
-test:yukawaFitTest arbFitTest
+test: arbFitTest
 
 FITNPATH := $(HOMEDIR)NewtonianSimulation/SimulationOutput/
 FITNAFILE := jan13OffsetAttractor.dat
