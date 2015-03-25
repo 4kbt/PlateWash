@@ -22684,6 +22684,14 @@ XXXRC - Krishna would like to see a square-waved blinded sensitivity to
  
 \end_layout
 
+\begin_layout Section
+Systematic error accommodation table
+\end_layout
+
+\begin_layout Standard
+XXXRC
+\end_layout
+
 \begin_layout Chapter
 Foil Systematic
 \end_layout
@@ -23079,13 +23087,68 @@ e systematic uncertainties.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
+\begin_inset Float figure
+wide false
+sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset CommandInset include
-LatexCommand input
-filename "../bootstrap/output/makeSymFigure.tex"
+\align center
+\begin_inset Graphics
+	filename ../bootstrap/output/bootstrapYukawa.Sysa0l0.0002slop0SysMinus.dat.grav.eps
+	width 80page%
+	rotateAngle 270
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Yukawa exclusion limits for gravity alone
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../bootstrap/output/bootstrapYukawa.Sysa0l0.0002slop0SysNull.dat.grav.eps
+	width 80page%
+	rotateAngle 270
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Yukawa exclusion limits for gravity alone without foil systematic subtraction
+\end_layout
 
 \end_inset
 
@@ -23098,9 +23161,34 @@ filename "../bootstrap/output/makeSymFigure.tex"
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "../bootstrap/output/makeSymFigureSystematics.tex"
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../bootstrap/output/bootstrapYukawa.Sysa0l0.0002slop0SysMinus.dat.eps
+	width 80page%
+	rotateAngle 270
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Yukawa exclusion plot, showing best-fits for all systematic effects
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -23108,7 +23196,7 @@ filename "../bootstrap/output/makeSymFigureSystematics.tex"
 \end_layout
 
 \begin_layout Subsection
-Other models:
+Other models
 \end_layout
 
 \begin_layout Standard
@@ -25175,6 +25263,34 @@ If
 \[
 \sigma_{F_{x}}^{2}=Q^{2}\sum_{i}\alpha_{i}^{2}\lambda_{i}^{4}T(\lambda_{i})^{2}\sigma_{B_{i}}^{2}e^{-2\bar{x}/\lambda_{i}}
 \]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Yukawa Fit Injections
+\end_layout
+
+\begin_layout Standard
+In this appendix we show, for completeness, the response of the global fitting
+ algorithm to signals injected into the science data.
+ These plots are of the same type as those described in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Yukawa-Potential-Constraints"
+
+\end_inset
+
+, but for many different systematic signal injections and with the foil-systemat
+ic signal added, subtracted, and left uncorrected.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "../bootstrap/output/makeSymFigureSystematics.tex"
 
 \end_inset
 
