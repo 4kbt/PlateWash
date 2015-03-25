@@ -18733,7 +18733,10 @@ filename "../extracted/NBinConfInterval.tex"
 
 \end_inset
 
- best-fit points.
+ best-fit point.
+ This number is chosen as the square-root of the number of bootstrapped
+ points in order to limit over-zealous fluctuations of the confidence interval
+ curves.
  We then plot four points, 
 \begin_inset Formula $(\lambda_{min},m_{\alpha}\pm2\sigma_{\alpha})$
 \end_inset
@@ -23022,9 +23025,6 @@ The upper two fields in the following figures will be most familiar to those
  Along the vertical axis is its strength relative to gravity.
  Each circular point in the plot is a best-fit point from the bootstrapped
  fit.
- Each diagonal cross point is the location of a fit's random seed.
- Vertical/horizontal cross points are the location of injected signals,
- to show that we can recover Yukawa signals.
  For perspective relative to the best results in the field, the exclusion
  limits of Kapner and Cook 
 \begin_inset CommandInset citation
@@ -23061,19 +23061,10 @@ Finally, we show the reduced
 
  for each fit.
  In diagonal crosses, we show all fits.
- As the fitter has a tendency to be trapped in local minima immediately
- after initialization, we drop any points that converge in fewer than 15
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMI automate me!
-\end_layout
-
-\end_inset
-
- iterations of the fit.
+ As past fitting algorithms had a tendency to be trapped in local minima
+ immediately after initialization, we drop any points that converge in fewer
+ than 5 iterations of the fit, which applies to essentially none of the
+ simulated-annealing fits.
  Points surviving that cut are shown in horizontal/vertical crosses.
  Points surviving all cuts, including minimum and maximum chi-squared (horizonta
 l lines) are shown as circles.
@@ -25276,6 +25267,8 @@ Yukawa Fit Injections
 \begin_layout Standard
 In this appendix we show, for completeness, the response of the global fitting
  algorithm to signals injected into the science data.
+ Vertical/horizontal cross points are the location of injected signals,
+ to show that we can recover Yukawa signals.
  These plots are of the same type as those described in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -25285,6 +25278,7 @@ reference "sub:Yukawa-Potential-Constraints"
 
 , but for many different systematic signal injections and with the foil-systemat
 ic signal added, subtracted, and left uncorrected.
+ 
 \end_layout
 
 \begin_layout Standard

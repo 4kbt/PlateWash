@@ -177,7 +177,7 @@ AppliedMagneticFieldUncertainty = 1e-3; %TotalBogus!
 heaterTemperatureUncertainty = 0.020; %TotalBogus!
 heaterTempGradientUncertainty = 0.001; %TotalBogus!
 
-NBinConfInterval = 14; %bin width for confidence interval determination
+NBinConfInterval = ceil( sqrt( NumberOfYukawaBootstraps ) ); %bin width for confidence interval determination
 printInteger( NBinConfInterval, [HOMEDIR 'extracted/NBinConfInterval.tex']);
 
 
