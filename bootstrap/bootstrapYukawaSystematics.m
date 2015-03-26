@@ -14,7 +14,7 @@ run3147PendulumParameters
 %Define accumulators
 fittedData =[];
 detailAC = [];
-iterAve = 1e4;
+iterAve = 3e5;
 
 %Bootstrap loop
 for bootStrapCounter = 1:(NumberOfYukawaBootstraps)  % three covers add, null, subtract case.
