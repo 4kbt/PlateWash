@@ -30,15 +30,6 @@ for bootStrapCounter = 1:(NumberOfYukawaBootstraps)  % three covers add, null, s
 		pMd(:,bCol) = pMd(:,bCol) + randn(rows(pMd),1) .* pMd(:,bErrCol);
 	end
 
-	bSPositionErr = 0;
-	if(BootstrapSystematicPositionUncertainty == 1)
-		bSPositionErr = randn * totalPAUncertainty
-		pMd( : , aCol ) = pMd( : , aCol ) + bSPositionErr;
-		pMd( : , bCol ) = pMd( : , bCol ) + bSPositionErr;
-		min(pMd(:,aCol))
-		min(pMd(:,bCol))
-	end
-
 	if(1 == injectIFOSystematic)
 		%Fake torque
 		outTor = foilTranslationToTorque*fitVectorPolyLinearSpline( [pMd(:,aCol) pMd(:,bCol)], ifoP(bootStrapCounter,:), ifoV(bootStrapCounter, : ) );
@@ -47,6 +38,14 @@ for bootStrapCounter = 1:(NumberOfYukawaBootstraps)  % three covers add, null, s
 		ifoSubtract = mod(bootStrapCounter,3) - 1;
 		pMd(:,torCol) = pMd(:,torCol) + ifoSubtract * outTor;
 	end
+	
+	bSPositionErr = 0;
+	if(BootstrapSystematicPositionUncertainty == 1)
+		bSPositionErr = randn * totalPAUncertainty;
+		pMd( : , aCol ) = pMd( : , aCol ) + bSPositionErr;
+		pMd( : , bCol ) = pMd( : , bCol ) + bSPositionErr;
+	end
+
 
 	%Output fit information
 	fittedData = [fittedData; pMd(:,aCol) pMd(:,bCol), pMd(:,torCol), ifoSubtract*ones(size(pM(:,aCol)))];
