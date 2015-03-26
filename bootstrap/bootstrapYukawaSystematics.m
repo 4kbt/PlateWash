@@ -77,12 +77,16 @@ for bootStrapCounter = 1:(NumberOfYukawaBootstraps)  % three covers add, null, s
 	trimmedPM = trimPM(pMd, signalColumns, torCol);
 	CNStruct = columnNamesStruct;
 
+	NumBoundsIterations = 2 * ( 2 * NumFitSystematics + 1 );
+	NumItersPerTempDrop = 3 * NumBoundsIterations;
+	TempDropFactor      = 0.1;
+
 	try
 		%When analyzing, make a cut on csMin
 		tic
 
 		%Do the fit.
-		[x , csMin, convergence, details] = samin("chiSquareWSystematics", {trimmedPM, ranSeed', PendStruct, AttrStruct, CNStruct}, {LowerBounds', UpperBounds', 20, 5, 0.9, 10*iterAve, 5, rows(trimmedPM.x1Vec)*0.01, 0.1, 1, 2});
+		[x , csMin, convergence, details] = samin("chiSquareWSystematics", {trimmedPM, ranSeed', PendStruct, AttrStruct, CNStruct}, {LowerBounds', UpperBounds', NumItersPerTempDrop, NumBoundsIterations, TempDropFactor, 10 * iterAve, 5, rows( trimmedPM.x1Vec ) * 0.01, 0.1, 1, 2});
 
 		%0 = no convergence, 1 = good, 2 = near edge
 		fitInfo = convergence; 
@@ -91,11 +95,11 @@ for bootStrapCounter = 1:(NumberOfYukawaBootstraps)  % three covers add, null, s
 		%number of temperature reductions
 		nf = rows(details);
 
-		if ( fitInfo > 0 )
+%		if ( fitInfo > 0 )
 			%adaptive averaging
 			iterAve = (iterAve * bootStrapCounter  + iter ...
 					 ) / ( bootStrapCounter + 1 );
-		end
+%		end
 
 		%detailAC = [detailAC; details];	
 
