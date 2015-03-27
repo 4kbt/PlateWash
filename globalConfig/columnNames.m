@@ -8,10 +8,11 @@ numIFOSensors = 25;
 numSensors = numPWSensors+numPSSensors+numIFOSensors;
 diffErrOffset = 6*numSensors;
 
-pwTimeCol  = 10;
+pwTimeCol   = 10;
 pwPhiTopCol = 21;
-pwFBOutCol = 23;
-torqueCol  = 16;
+pwFBOutCol  = 23;
+pwPsiCol    = 24;
+torqueCol   = 16;
 torCol = torqueCol;
 torerrCol = diffErrOffset+torCol;
 torqueACol = torqueCol + numSensors;
@@ -22,6 +23,8 @@ psdCol = 15;
 
 ABErrOffset = numSensors*15;
 psTimeCol   = 5 ;
+psCapCol    = 6 ;
+psEncCol    = 13;
 psSquareCol = 15;
 aCol = numSensors+numPWSensors+psSquareCol;
 aErrCol = aCol + ABErrOffset;
@@ -59,13 +62,19 @@ XSUnits = 1e-12;
 XLUnits = 1e-4;
 
 #Distance determination
-pfTouch =  56+17+ 12+2 ;  #swag
+#If you're reading this comment, my apologies.
+#pfTouch is tightly coupled with the output of errorBudget.m
+#This number is chosen to match the output of errorBudget. If it doesn't, the 
+#whole build breaks (by design). Again, my apologies, but I want to graduate.
+pfTouch =  138.9 ;  #swag
 touch2937 =  147 -2 + pfTouch;
 #Distance cut
-shortCut = (pfTouch+10)*1e-6;
+ifoOffset = 10e-6;
+shortCut  = pfTouch*1e-6 + ifoOffset;
 
 logCrossover = -4;
 
 #silliness for speed
 enableSystematics = 1;
-SysNoX = 1; 
+SysNoX = 1;
+BootstrapSystematicPositionUncertainty = 1; 

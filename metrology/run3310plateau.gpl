@@ -1,0 +1,24 @@
+set term postscript enhanced solid color eps
+set output 'run3310plateau.eps'
+
+fn = 'run3310plateau.dat'
+mn = 'run3147PsiOverTime.dat' 
+
+load HOMEDIR.'globalConfig/columnNames.m'
+
+set key noauto below 
+
+set ylabel 'pendulum tip, arbitrary zero (mrad)'
+
+set xlabel 'pendulum-position encoder, arbitrary zero ({/Symbol m}m)'
+set x2label 'time (days of 2009)'
+
+set xtics nomirror
+set x2tics
+
+pl [][3.3:3.8]\
+	fn u 2:($3*1e3) w p pt 7 ps 0.3 lc 3 ,\
+	fn u 2:(0) w p pt 7 lc 3 tit 'apparatus inclined, displacing pendulum support (lower axis)',\
+	mn u 1:($2*1e3) ax x2y1 w p pt 7 ps 0.3 lc 5,\
+	mn u 1:(0) w p pt 7 lc 5 tit 'tip angle throughout experiment, (upper axis)'
+

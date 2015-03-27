@@ -1,7 +1,9 @@
 prePreFit
 
 %Load analyzed torque data
-pM = load([HOMEDIR 'runAnalysis/results/run3147pM3FilterMerge.dat']);
+pM      = load( [ HOMEDIR 'runAnalysis/results/run3147pM3FilterMerge.dat'] );
+totalPA = load( [ HOMEDIR 'metrology/extracted/totalErr.dat' ] ) ;
+totalPAUncertainty = totalPA( 4 );
 
 %Define which columns have fitted signals
 signalColumns = [0; magFieldACol; magField2ACol; temperatureACol; tempGradientACol];

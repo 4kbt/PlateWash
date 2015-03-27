@@ -4,8 +4,8 @@ set term postscript enhanced solid color eps
 set output 'run1690attractorTwist.eps'
 
 set title 'attractor angular runout test'
-set xlabel 'attractor position ({/Symbol m}m, arbitrary datum)'
-set ylabel 'attractor angle ({/Symbol m}rad, arbitrary datum)'
+set xlabel 'attractor position ({/Symbol m}m, arbitrary zero)'
+set ylabel 'attractor angle ({/Symbol m}rad, arbitrary zero)'
 
 set key noauto
 

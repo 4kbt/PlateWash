@@ -8,7 +8,10 @@ MASSES=jan13Attractor.m jan13Pendulum.m
 
 SDIR := SimulationOutput
 
-all: plots/brickDemo.eps bellowsTorque plots/fullSimulation.eps plots/pmScanPlot.eps plots/offsetAttractorAssembly.eps $(SDIR)/scanMaxDiff.tex plots/fullDistribution.eps plots/offsetAttractorSim.eps
+all: plots/brickDemo.eps bellowsTorque plots/fullSimulation.eps plots/pmScanPlot.eps plots/offsetAttractorAssembly.eps $(SDIR)/scanMaxDiff.tex plots/fullDistribution.eps plots/offsetAttractorSim.eps plots/displayPointsDemo.eps
+
+plots/displayPointsDemo.eps : displayPointsDemo.m $(PARTS)
+	$(OCT) displayPointsDemo.m
 
 plots/brickDemo.eps : $(MLIB) brickDemo.m brickDemo.gpl $(PARTS)
 	$(OCT) brickDemo.m

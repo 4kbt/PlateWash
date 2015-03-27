@@ -4,6 +4,7 @@ OCT := $(OCT) --eval "addpath([HOMEDIR \"/runAnalysis/\"]);"
 OCT := $(OCT) --eval "addpath([HOMEDIR \"/calibration/pressure/\"]);"
 
 FFR := run3147filterFrequencyResponse
+TIM47:= run3147filterTimeDomain
 FILT := run3169filterTransfer
 WIND := run3147windowTransferFunctions
 LAG20:= run3220torqueLag
@@ -20,12 +21,16 @@ RAN47:= run3147randomAttractorExample
 ERR47:= run3147attractorPositionError
 TIMIN:= timingPlot
 
-all: $(FFR).eps $(FILT).eps $(WIND).eps $(LAG20).eps $(LAG24).eps $(LAG69).eps $(TOR67).eps $(NOT47).eps $(ALB47).eps $(AOT47).eps $(FBV47).eps $(TYP47).eps $(IFO47).eps $(RAN47).eps
+all: $(FFR).eps $(FILT).eps $(WIND).eps $(LAG20).eps $(LAG24).eps $(LAG69).eps $(TOR67).eps $(NOT47).eps $(ALB47).eps $(AOT47).eps $(FBV47).eps $(TYP47).eps $(IFO47).eps $(RAN47).eps $(TIM47).eps
 
 #Filter transfer functions
 $(FFR).eps: $(FFR).m $(FFR).gpl
 	$(OCT) $(FFR).m
 	$(GNU) $(FFR).gpl
+
+$(TIM47).eps: $(FFR).m $(TIM47).gpl
+	$(OCT) $(FFR).m
+	$(GNU) $(TIM47).gpl
 
 #Filters applied to real data
 $(FILT).eps : $(FILT).m $(FILT).gpl

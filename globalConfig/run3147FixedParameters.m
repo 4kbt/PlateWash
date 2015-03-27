@@ -74,6 +74,7 @@ qTesterWidth1=0.2e-3;
 qTesterChunkCalibWidth1 = 0.5e-3;
 
 qTesterFreq   = 3*2e-3;
+printSI(qTesterFreq, 2, -3, 'Hz', [HOMEDIR 'extracted/qTesterFreq.tex']);
 qTesterWidth  = 0.2e-3;
 qTesterTorque = 1.678e-14;
 printSI(qTesterTorque, 2, -15, 'N-m', [HOMEDIR 'extracted/qTesterTorque.tex']);
@@ -132,7 +133,7 @@ torqueBlur   = 1e-12;  printSI(torqueBlur, 1, -15, 'N-m', [HOMEDIR 'extracted/to
 %fprintf('# read Complete \n')
 
 %'INSUFFICENT bootstrap counts'
-NumberOfYukawaBootstraps = 30; %was 1000
+NumberOfYukawaBootstraps = 1000; %was 1000
 NumberOfArbFitBootstraps = NumberOfYukawaBootstraps; % was 300
 
 foilResonance = 1580;
@@ -151,8 +152,8 @@ foilDiameter = 77e-3; printSI(foilDiameter, 2, -3, 'm', [HOMEDIR '/extracted/foi
 IFOFringeTop = 3.28;
 IFOFringeBot = 1.639;
 
-IFODistPerFringe = 370e-9;
-IFODistCal = IFODistPerFringe/(3.28-1.639);
+IFODistPerFringe = 230e-9;
+IFODistCal = IFODistPerFringe/(IFOFringeTop-IFOFringeBot);
 injectIFOSystematic = 1;
 
 
@@ -178,6 +179,7 @@ AppliedMagneticFieldUncertainty = 1e-3; %TotalBogus!
 heaterTemperatureUncertainty = 0.020; %TotalBogus!
 heaterTempGradientUncertainty = 0.001; %TotalBogus!
 
-NBinConfInterval = 14; %bin width for confidence interval determination
+NBinConfInterval = ceil( sqrt( NumberOfYukawaBootstraps ) ); %bin width for confidence interval determination
 printInteger( NBinConfInterval, [HOMEDIR 'extracted/NBinConfInterval.tex']);
+
 

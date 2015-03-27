@@ -138,6 +138,163 @@ lstparams "breakatwhitespace=true,breaklines=true,caption={Version Information},
 
 \end_layout
 
+\begin_layout Chapter*
+Dedication
+\end_layout
+
+\begin_layout Standard
+To you.
+\end_layout
+
+\begin_layout Standard
+This was written for you, that you might learn from our successes and from
+ our errors.
+ 
+\end_layout
+
+\begin_layout Standard
+This thesis is a companion to the computer software that automatically generated
+ it.
+ If you have unanswered questions about how most quantities and plots were
+ determined, please feel welcome to look around.
+ If you find an error and implement a patch, please let me know.
+\end_layout
+
+\begin_layout Chapter*
+Acknowledgements
+\end_layout
+
+\begin_layout Standard
+Susan Ashlock gets special mention, as she has given me endless support
+ with love, great patience, and myriad wonderful trips into the mountains
+ over the latter half of this work.
+ I can't wait to explore the world with her now that this thesis is complete.
+ Furthermore, this measurement's approaches of source-code management, continuou
+s analysis builds, and unit testing were inspired by looking over her software-e
+ngineer shoulders.
+ Without her professional influence, this blind measurement would not have
+ been possible.
+\end_layout
+
+\begin_layout Standard
+I thank the entire Eöt-Wash group, the National Science Foundation, and
+ the United States taxpayer for unwavering support, even when a blitzkreig
+ experiment turned to a protracted and careful campaign.
+ 
+\end_layout
+
+\begin_layout Standard
+When a worthwhile project takes a decade, you'll find that a village full
+ of wonderful people have helped along the way.
+ What follows is an incomplete list of the many people and orgianizations
+ who have made significant direct or indirect contributions to this measurement.
+ Those CENPA members highlighted in bold worked directly on the instrument
+ or on development work for the instrument.
+ Those highlighted in italics contributed physics insight directly to the
+ measurement or its analysis.
+\end_layout
+
+\begin_layout Standard
+Alfred Hagedorn, Alfred Hagedorn III, Ann Nelson, Barb Fulton, 
+\emph on
+Blayne Heckel
+\emph default
+, Bob Shupe, Brian Balfrey, Catherine Provost, CENPA, Charles Rogers, 
+\emph on
+Claire Cramer
+\emph default
+, David Hyde, David Kettler, Debra Nastaj, Doug Will, Eberhard Bodenschatz,
+ 
+\emph on
+Eric Adelberger
+\emph default
+, George Hagedorn, Greg Harper, Hamish Robertson, 
+\series bold
+Hank Simons
+\series default
+, 
+\emph on
+Jason Detwiler
+\emph default
+, 
+\series bold
+\emph on
+Jens Gundlach
+\series default
+\emph default
+, 
+\series bold
+Jim Elms
+\series default
+, John Amsbaugh, 
+\emph on
+John Greendeer-Lee
+\emph default
+, Juliet Lovejoy, Kate Higgins, Keath Marx, 
+\series bold
+Kipp Krause
+\series default
+, Ki Young Choi, 
+\series bold
+\emph on
+Krishna Venkateswara
+\series default
+\emph default
+, 
+\emph on
+Kurt Snover
+\emph default
+, Margaret Roston, Mark Freeman, Mary Ellen Jones, 
+\emph on
+Matt Dietrich
+\emph default
+,
+\emph on
+ 
+\series bold
+Matt Turner
+\series default
+\emph default
+, Michael Chen, Michael Famulare, MicroE, Monday Meeting, Myrna Hagedorn,
+ Nichole Fernkes, 
+\emph on
+Nikolai Tolich
+\emph default
+, OGP Smartscopes, Omega Instruments, 
+\emph on
+Peter Nelson
+\emph default
+, 
+\series bold
+Prashant Emani
+\series default
+, Raman Sundrum, Rembar, Sarah Dasher, 
+\series bold
+\emph on
+Scott Pollack
+\series default
+\emph default
+, Scott Schell, Silas Wild, Sky Sjue, 
+\series bold
+\emph on
+Stephan Schlamminger
+\series default
+\emph default
+, Susan Ashlock, Tanja Bode, 
+\emph on
+Ted Cook
+\emph default
+, Terry Lynn Helms, 
+\emph on
+Todd Wagner
+\emph default
+, Tracy Lovejoy, Victoria Clarkson, and 
+\emph on
+Will Terrano
+\emph default
+ 
+\end_layout
+
 \begin_layout Standard
 \begin_inset CommandInset toc
 LatexCommand tableofcontents
@@ -1882,9 +2039,9 @@ Gauss' law test of gravity.
 \begin_inset Quotes erd
 \end_inset
 
- For any force in three spatial dimensions, the field from an infinite two-dimen
-sional sheet of charge must, by symmetry, be perpendicular to the plane
- of the sheet.
+ For any force in three spatial dimensions, the field from an infinite uniform
+ two-dimensional sheet of charge must, by symmetry, be perpendicular to
+ the plane of the sheet.
  Furthermore, if the interaction obeys Gauss' law, the flux of field remains
  constant with increasing distance from the sheet.
  Therefore, the strength of the interaction cannot vary with distance.
@@ -1946,8 +2103,9 @@ infinite sheet
 \begin_inset Quotes erd
 \end_inset
 
- approximation is valid and that gravity (and any new interaction) is the
- only messenger between the sheet and the pendulum.
+ approximation is valid, that the mechanism moving the sheet adds negligible
+ gravitational interaction, and that gravity (and any new interaction) is
+ the only messenger between the sheet and the pendulum.
  
 \end_layout
 
@@ -2261,7 +2419,7 @@ Throughout, we use torque units of fN-m, as the signals we seek are at that
 \end_inset
 
 fN-m.
- This leads to the rare odd automated statement of a torque like 
+ This leads to the rare automated statement of a torque like 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../extracted/translationTorqueFit.tex"
@@ -2270,9 +2428,20 @@ filename "../extracted/translationTorqueFit.tex"
 
 , where the point is that the signal is large and resolved, not that the
  uncertainty should be taken seriously beyond the leading two digits.
- There are limits to how much we should ask a computer to adapt to human
- tradition in approximate statements without risking reliable performance
- in definite ones.
+ These few oddities occur only where approximate statements are appropriate.
+ Our software libraries properly handle such quantities correctly in scientific
+ notation, but would lose the reader's visceral connection to the natural
+ scale of 
+\begin_inset Formula $1$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+fN.
+ Handling these corner-cases correctly would add significant complexity,
+ and thus opportunity for error, to our software.
 \end_layout
 
 \begin_layout Section
@@ -3050,7 +3219,7 @@ parallel-plate
 
  approximation underestimates the strength of the interaction between the
  pendulum inlay and the attractor.
- An estimate of the correction, 
+ An estimate of the fractional correction, 
 \begin_inset Formula $f_{c}$
 \end_inset
 
@@ -3743,7 +3912,17 @@ Both large faces of the pendulum and the front face of the attractor were
  hand-polished to a mirror finish with silicon-carbide and 3M lapping paper
  (aluminum oxide, possibly diamond).
  The individual components of the pendulum were etched before assembly in
- hydrochloric acid to remove any ferromagnetic impurities.
+ hydrochloric acid
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMA - concentration?
+\end_layout
+
+\end_inset
+
+ to remove any ferromagnetic impurities.
  After ultrasonic cleaning and a final rinse in de-ionized water, 30
 \begin_inset space ~
 \end_inset
@@ -4492,11 +4671,19 @@ mm) to the pendulum.
 \end_layout
 
 \begin_layout Standard
-The feedback voltage system was capable of applying voltages from -10-10
+The feedback voltage system was capable of applying voltages from 
+\begin_inset Formula $-10$
+\end_inset
+
+ to 
+\begin_inset Formula $+10$
+\end_inset
+
+
 \begin_inset space ~
 \end_inset
 
-V to either electrode, but in practice, the entire experiment ran on one
+V on either electrode, but in practice, the entire experiment ran on one
  electrode, with DC feedback voltage variation of less than 20% over the
  duration of the experiment (see Figure 
 \begin_inset CommandInset ref
@@ -4506,7 +4693,19 @@ reference "fig:Applied-feedback-signal"
 \end_inset
 
 ).
- 
+ Running on one electrode, by imposing a small 
+\begin_inset Quotes eld
+\end_inset
+
+pre-torque
+\begin_inset Quotes erd
+\end_inset
+
+ from the torsion fiber, has the advantage of avoiding feedback nonlinearities
+ introduced by any offset voltages or contact potential differences that
+ might be present between the two electrodes.
+ From a practical standpoint, however, having two electrodes makes recovery
+ from extreme transients (earthquakes, attractor-foil collisions) more expedient.
 \end_layout
 
 \begin_layout Standard
@@ -4836,18 +5035,16 @@ stiction
 \begin_inset Quotes erd
 \end_inset
 
- of non-flexure transation stages, and has minimal angular runout.
+ of non-flexure transation stages, and has minimal angular runout (Figure
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-See Figure XXXMA, autocollimator on attractor.
-\end_layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Flexure-runout"
 
 \end_inset
 
- When science data were 
+).
+  When science data were 
 \bar under
 not
 \bar default
@@ -4870,7 +5067,8 @@ reference "sec:Encoder-narrative"
 \end_inset
 
  for further motivation) .
- A pneumatic actuation system is, by definition, not electrical.
+ The pneumatic actuation system has zero electrical components within the
+ vacuum envelope.
  While the attractor flexure system was designed to accommodate standard
  micrometer actuators, if needed, the actuator is a phosphor-bronze bellows.
  The bellows is fed by a thin copper tube connected to a pressure-regulation
@@ -4883,8 +5081,11 @@ reference "sec:Encoder-narrative"
 \bar under
 all
 \bar default
- attractor-correlated systematic effects that could be present throughout
- the data acquisition, sensing, and control systems.
+ attractor-correlated systematic effects that could be introduced by the
+ data acquisition, sensing, and control systems.
+ This valve isolates systematic uncertainties to only those directly correlated
+ with the physical motion of the attractor or with changes in gas pressure
+ downstream of the isolating valve.
 \end_layout
 
 \begin_layout Standard
@@ -5040,38 +5241,6 @@ RC
  circuit element, further low-passing the pressure fluctuations from the
  pulse-width modulation.
  
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-XXXMI square-wave motion of the attractor
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -5470,18 +5639,14 @@ filename "../extracted/brickHeight.tex"
  stepper motor.
  The frequency stability of the calibration tone was observed to be comparable
  to, or better than, the stability of the data acquisition clock.
- The sinusoidally varying gravitational torque appeared at twice the rotation
- frequency of 3.0 mHz
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMI do we extract this?
-\end_layout
+ The sinusoidally varying gravitational torque appeared at 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/qTesterFreq.tex"
 
 \end_inset
 
-.
+, twice the calibrator's rotation frequency.
  The amplitude of the calibration torque was taken to be 
 \begin_inset CommandInset include
 LatexCommand input
@@ -6201,8 +6366,13 @@ As it is challenging to infer anything about an interferometer's signal
 \end_layout
 
 \begin_layout Standard
-Within this range, we use an approximation for the sinusoid's slope, 
-\begin_inset Formula $\frac{\pi\lambda}{8\sqrt{2}A_{0}}\sim\frac{370\mbox{ nm}}{\mbox{fringe (peak-to-peak) }}$
+Within this range, we use an approximation for the sinusoid's slope, if
+ 
+\begin_inset Formula $A_{0}$
+\end_inset
+
+ is half of the peak-to-peak fringe amplitude, 
+\begin_inset Formula $\frac{\lambda}{8\sqrt{2}A_{0}}\sim\frac{230\mbox{ nm}}{\mbox{fringe (peak-to-peak) }}$
 \end_inset
 
 , to convert measured output to displacement.
@@ -6699,377 +6869,7 @@ reference "sub:Electrical-Crosstalk"
 \end_layout
 
 \begin_layout Section
-Metrology
-\end_layout
-
-\begin_layout Subsection
-Initial Alignment
-\end_layout
-
-\begin_layout Standard
-XXXRC! The experiment was initially aligned using the autocollimator.
- The attractor was fixed in place against two registry blocks and firmly
- clamped.
- The autocollimator was then centered on the attractor and aligned such
- that the light returned to near the center of the sensor.
- The up-down and left-right angles were recorded.
- The attractor was then translated through its full range of motion, and
- the position on the autocollimator recorded, see Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Flexure-runout"
-
-\end_inset
-
-.
- The attractor was adjusted to a point 
-\begin_inset Formula $\sim20$
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset Formula $\mu$
-\end_inset
-
-m from the desired working position.
- The foil and attractor were cleaned with dry nitrogen and with clean room
- wipes/isopropanol.
- The foil was then placed in front of the attractor and iteratively aligned
- to the attractor using a combination of the autocollimator readout and
- a measurement of the attractor-foil capacitance.
- Gross alignment was done by hand.
- Fine adjustment was done using the Belleville washers on the foil mount.
- When optical alignment reached XXXRC 
-\begin_inset Formula $\mu$
-\end_inset
-
-rad, a capacitance of 
-\begin_inset Formula $\sim3$
-\end_inset
-
--400 pF was achieved, and the capacitance seemed to be at a minimum as a
- function of attractor-foil angle, the system was declared to be coarsely
- aligned.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename ../metrology/run1690attractorTwist.eps
-	width 100text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Flexure-runout"
-
-\end_inset
-
-Flexure runout, as measured by the autocollimator.
- The science data were taken using positions largely (perhaps entirely)
- within this region.
- The hard stop at right is the physical limit of the flexure's motion.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Cleaning
-\end_layout
-
-\begin_layout Standard
-Once the attractor and foil were aligned, it was essential to remove any
- debris/dust in the gap between them.
- To characterize the amount of dust in the gap, and to verify alignment,
- the attractor-foil capacitance was measured as a function of attractor
- position, including positions where the attractor touched the foil.
- Touching was, at this step, determined by noting the position where the
- capacitance reading became unreliable.
- The maximum capacitance recorded without signs of touching gave a proxy
- for the minimum attractor-foil separation.
- 
-\end_layout
-
-\begin_layout Standard
-The attractor assembly was removed and the attractor face cleaned with isopropan
-ol, clean room wipes, and dry nitrogen.
- The same was done with the attractor side of the foil.
- Both attractor and foil were visually inspected for dust.
- The attractor assembly was replaced against the registry blocks and re-clamped.
- The attractor-foil capacitance was measured as a function of attractor
- position.
- The cleaning procedure was repeated until no gains in capacitance were
- observed with subsequent cleanings.
- Typical maximum capacitances were 
-\begin_inset Formula $\sim2$
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-nF; because of the ambient atmosphere, this measurement should not be used
- to determine the distance of minimum approach.
-\end_layout
-
-\begin_layout Subsection
-Online Alignment
-\end_layout
-
-\begin_layout Standard
-The critical distances between and relative orientations of the pendulum,
- foil, and attractor were determined with the bell jar closed, under vacuum,
- and after bake-out.
- A number of methods were explored, but the method of choice was as follows:
- The freely twisting pendulum was allowed to tap the foil as the attractor
- was pressed into the foil by the flexure stage.
- As the attractor displaced the foil, the angular amplitude of the tapping
- signal necessarily decreased to zero.
- The point where this occurred was used as a reference to determine the
- absolute distance between the pendulum and the attractor 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-(XXXMI we should repeat at another phitop position?)
-\end_layout
-
-\end_inset
-
-.
- The pendulum horizontal and vertical angles, as measured by the autocollimator,
- at this point were taken to be the angles at which the pendulum was parallel
- to the attractor.
- 
-\end_layout
-
-\begin_layout Standard
-The pendulum-foil capacitance was measured as a function of pendulum position
- towards and away from the foil, as measured by the phitop encoder.
- 
-\end_layout
-
-\begin_layout Standard
-XXXRC Plots
-\end_layout
-
-\begin_layout Standard
-The pendulum foil distance was measured optically using a digital camera.
- 
-\end_layout
-
-\begin_layout Standard
-The attractor-foil capacitance was measured as a function of attractor position.
-\end_layout
-
-\begin_layout Standard
-The interferometer signal was measured as a function of attractor position.
- 
-\end_layout
-
-\begin_layout Standard
-The bounce test was repeated holding the pendulum close to the foil and
- moving the attractor.
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename Pictures/small/Pre3147SideViewMarch132012092956.jpg
-	width 50text%
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename Pictures/small/Post3164SideViewMay092012064354.jpg
-	width 50text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename Pictures/small/Pre3147BackSideViewMarch132012093012.jpg
-	width 50text%
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename Pictures/small/Post3164BackSideViewMay092012064412.jpg
-	width 50text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename Pictures/small/Pre3147FiberPositionMarch132012093038.jpg
-	width 50text%
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename Pictures/small/Post3164FiberPositionMay092012064424.jpg
-	width 50text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Alignment photos before (left) and after (right) science run.
- The upper photos look directly through the window, the middle photos are
- the mirror-image of the side opposite the window, and the lower photos
- are the reflected image of the fiber position against the foil's alignment
- marks.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Attractor-Foil touching
-\end_layout
-
-\begin_layout Standard
-To avoid any systematic effect due to direct attractor-foil touching, it
- is essential to place a short-distance cutoff on attractor positions.
- This is done on a per-measurement level, rather than per-cut (See Section
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sub:Implementation"
-
-\end_inset
-
- for a brief definition of a 
-\begin_inset Quotes eld
-\end_inset
-
-cut
-\begin_inset Quotes erd
-\end_inset
-
- or Section 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sub:Parsing-into-cuts"
-
-\end_inset
-
- for full detail).
- In contrast to all other analysis, the mean cut position is not used; instead,
- as each cut is an aggregate of individual measurements, the minimum position
- of individual measurements within a cut, as seen in Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Attractor-Foil-touching-determin"
-
-\end_inset
-
-.
- The minimum-accepted attractor-pendulum separation is conservative at 
-\begin_inset CommandInset include
-LatexCommand input
-filename "../extracted/shortCut.tex"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename ../ifo/ifoVsClosestApproach.eps
-	width 100text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Attractor-Foil-touching-determin"
-
-\end_inset
-
-Attractor-Foil touching determination
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Uncertainty Budget
+Enumeration of Uncertainties
 \end_layout
 
 \begin_layout Standard
@@ -7406,8 +7206,14 @@ essible characteristic timescale.
 
 \begin_layout Standard
 With the PlateWash atmosphere, inferring from our Lévy measurements at closest
- proximity to the foil, we expect gas damping-driven noise to be roughly
- 
+ proximity to the foil 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "schlamminger2010indirect"
+
+\end_inset
+
+, we expect gas damping-driven noise to be roughly 
 \begin_inset Formula $S_{\tau}(f)\approx$
 \end_inset
 
@@ -7772,50 +7578,10 @@ Earthquakes worldwide can affect the balance.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-XXXMA
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Earthquake!
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
 PlateWash also sees less-palpable seismic effects, such as the `microseismic
- peak' 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMA
-\end_layout
-
-\end_inset
-
- and the effects of nearby humanity (traffic and laboratory noise).
+ peak', an ever-present seismic signature of ocean waves striking the continenta
+l coastline, and the effects of nearby humanity (traffic and laboratory
+ noise).
  
 \end_layout
 
@@ -7974,42 +7740,6 @@ While the coupling mechanism to wind is related to some combination of seismic
  pendulum noise.
  Stormy periods can elevate torque noise by as much as an order of magnitude
  in comparison with still periods.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-XXXMA
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Wind and torque noise
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Paragraph
@@ -8180,71 +7910,14 @@ analog conversion noise can couple to the pendulum.
  No excess noise was seen.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-XXXMA
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Free pendulum noise with and without grounded feedback electrodes
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
-Noise model
-\end_layout
-
-\begin_layout Plain Layout
-XXXMA
-\end_layout
-
-\begin_layout Subsubsection
-Comparison with experiment
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Subsection
 Systematics 
 \end_layout
 
 \begin_layout Standard
 Systematic uncertainties are the primary challenge of this measurement.
- Ensuring that no gravitational signals are mimiced nor masked demands great
- care.
+ Ensuring that no gravitational signals are mimicked nor masked demands
+ great care.
  This section enumerates the many ways in which the experiment could lead
  us astray.
  Approximate quantitative estimates are given where calculable.
@@ -9087,23 +8760,8 @@ filename "../NewtonianSimulation/SimulationOutput/nonAttractorquad.tex"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Paragraph
-\begin_inset Note Note
-status open
-
-\begin_layout Paragraph
-Caterpillaring of the bellows
-\end_layout
-
-\begin_layout Plain Layout
-XXXMA The bellows might deform sideways slightly?
-\end_layout
-
-\end_inset
-
-
+ It is possible that the bellows could deflect sideways when it expands
+ axially; we do not expect the nonlinearity of this effect to be observable.
 \end_layout
 
 \begin_layout Paragraph
@@ -9462,8 +9120,8 @@ mm) travel, the flexure's internal travel limit was located not far from
 \end_layout
 
 \begin_layout Standard
-There's also an opportunity for the simple change in moment/torque due to
- the cantilevered attractor to provide a torque.
+The changing effective length of the cantilevered attractor assembly will
+ also deform the experiment's baseplate.
  A simple elasticity-theory estimate of the bending of the 1.25
 \begin_inset Quotes erd
 \end_inset
@@ -9742,7 +9400,11 @@ key "davis2001copper"
 \end_inset
 
 .
- For frequencies below ~100
+ For frequencies below 
+\begin_inset Formula $\sim100$
+\end_inset
+
+
 \begin_inset space ~
 \end_inset
 
@@ -10253,21 +9915,22 @@ Metrology
 \begin_layout Standard
 Understanding the separation between attractor and test masses is essential
  to any inverse square law test.
- However, because of the nearly-null parallel-plate geometry, the implications
- of an accidental error in metrology affect only the stated exclusion limits,
- but not the presence nor absence of a purported ISL violation.
+ However, because of our experiment's nearly-null parallel-plate geometry,
+ the implications of a sufficiently-small error in metrology affect only
+ the stated exclusion limits, but not the presence nor absence of an ISL
+ violation.
  This is an important contrast to non-null experiments, where an error in
- attractor/sensor separation alone can lead to a faked or masked signal
- for new physics.
+ attractor/sensor separation alone can lead to a Newtonian-gravitationally
+ faked or masked signal for new physics.
 \end_layout
 
 \begin_layout Standard
-For PlateWash, the metrology is relatively straightforward.
+For PlateWash, metrology is relatively straightforward.
  We must ascertain the extent to which the pendulum and attractor are parallel
  and obtain an estimate of their relative separation.
  As in most inverse-square law tests, this is confounded by the isolating
  foil stretched between them.
- As the foil is quite flat (see 
+ As the foil is quite flat (see Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Isolating-Foil"
@@ -10280,19 +9943,644 @@ reference "sub:Isolating-Foil"
 \end_layout
 
 \begin_layout Section
+Metrology
+\end_layout
+
+\begin_layout Subsection
+Initial Alignment
+\end_layout
+
+\begin_layout Standard
+The experiment was initially aligned using the autocollimator.
+ The attractor was fixed in place against two registry blocks and firmly
+ clamped.
+ The autocollimator was then centered on the attractor and aligned such
+ that the light returned to near the center of the sensor.
+ The up-down and left-right angles were recorded.
+ The attractor was then translated through its full range of motion, and
+ the position on the autocollimator recorded, see Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Flexure-runout"
+
+\end_inset
+
+.
+ The attractor was adjusted to a point 
+\begin_inset Formula $\sim20$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m from the desired working position.
+ The foil and attractor were cleaned with dry nitrogen and with clean room
+ wipes/isopropanol.
+ The foil was then placed in front of the attractor and iteratively aligned
+ to the attractor using a combination of the autocollimator readout and
+ a measurement of the attractor-foil capacitance.
+ Gross alignment was done by hand.
+ Fine adjustment was done using the Belleville washers on the foil mount.
+ When optical alignment reached 
+\begin_inset Formula $\sim100$
+\end_inset
+
+ 
+\begin_inset Formula $\mu$
+\end_inset
+
+rad, a capacitance of 
+\begin_inset Formula $\sim3$
+\end_inset
+
+-400 pF was achieved, and the capacitance seemed to be at a minimum as a
+ function of attractor-foil angle, the system was declared to be coarsely
+ aligned.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../metrology/run1690attractorTwist.eps
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Flexure-runout"
+
+\end_inset
+
+Flexure runout, as measured by the autocollimator.
+ The science data were taken using positions largely (perhaps entirely)
+ within this region.
+ The hard stop at right is the physical limit of the flexure's motion.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Cleaning
+\end_layout
+
+\begin_layout Standard
+Once the attractor and foil were aligned, it was essential to guarantee
+ the absence of debris/dust in the gap between them.
+ To characterize the amount of dust in the gap, and to verify alignment,
+ the attractor-foil capacitance was measured as a function of attractor
+ position, including positions where the attractor touched the foil.
+ Touching was, at this time, determined by noting the position where the
+ capacitance reading became unreliable.
+ The maximum capacitance recorded without signs of touching gave a proxy
+ for the minimum attractor-foil separation.
+ 
+\end_layout
+
+\begin_layout Standard
+The attractor assembly was removed and the attractor face cleaned with isopropan
+ol, clean room wipes, and dry nitrogen.
+ The same was done with the attractor side of the foil.
+ Both attractor and foil were visually inspected for dust.
+ The attractor assembly was replaced against the registry blocks and re-clamped.
+ The attractor-foil capacitance was measured as a function of attractor
+ position.
+ The cleaning procedure was repeated until no gains in capacitance were
+ observed with subsequent cleanings.
+ Typical maximum capacitances were 
+\begin_inset Formula $\sim2$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+nF; because these measurements were carried out at atmospheric pressure,
+ they should not be used to determine the distance of minimum approach.
+\end_layout
+
+\begin_layout Subsection
+Online Alignment
+\end_layout
+
+\begin_layout Standard
+The critical distances between and relative orientations of the pendulum,
+ foil, and attractor were determined with the bell jar closed, under vacuum,
+ and after bake-out.
+ Once the system's atmosphere was evacuated, both the pendulum's and foil's
+ motion were essentially unaffected by gas-related effects.
+ The foil-alignment motors (see Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Isolating-Foil"
+
+\end_inset
+
+) were then adjusted to maximize the highest measurable capacitance-before-short
+ing between the attractor and foil.
+ The pendulum's tip angle relative to the foil (about a horizontal axis
+ parallel to the plane of the foil) was minimized by imaging through the
+ bell-jar window and the 
+\begin_inset Quotes eld
+\end_inset
+
+plateau test
+\begin_inset Quotes erd
+\end_inset
+
+, as described in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Pendulum-angle"
+
+\end_inset
+
+.
+ Finally, the pendulum-foil distance was determined both by imaging and
+ by the `bounce test' detailed in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Bounce-test"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+A number of other methods were explored, but the method of choice was as
+ follows: The freely twisting pendulum was allowed to tap the foil as the
+ attractor was pressed into the foil by the flexure stage.
+ As the attractor displaced the foil, the angular amplitude of the tapping
+ signal necessarily decreased to zero.
+ The point where this occurred was used as a reference to determine the
+ absolute distance between the pendulum and the attractor 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+(XXXMI we should repeat at another phitop position?)
+\end_layout
+
+\end_inset
+
+.
+ The pendulum horizontal and vertical angles, as measured by the autocollimator,
+ at this point were taken to be the angles at which the pendulum was parallel
+ to the attractor.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+The bounce test was repeated holding the pendulum close to the foil and
+ moving the attractor.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Pictures/small/Pre3147SideViewMarch132012092956.jpg
+	width 50text%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Pictures/small/Post3164SideViewMay092012064354.jpg
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Pictures/small/Pre3147BackSideViewMarch132012093012.jpg
+	width 50text%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Pictures/small/Post3164BackSideViewMay092012064412.jpg
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Pictures/small/Pre3147FiberPositionMarch132012093038.jpg
+	width 50text%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Pictures/small/Post3164FiberPositionMay092012064424.jpg
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Alignment photos before (left) and after (right) science run.
+ The upper photos look directly through the window, the middle photos are
+ the mirror-image of the side opposite the window, and the lower photos
+ are the reflected image of the fiber position against the foil's alignment
+ marks.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Attractor-side
 \end_layout
 
 \begin_layout Standard
-XXXRC
+This section assesses the parallelism and absolute separation of the attractor
+ and foil.
+ As the positions of the attractor and foil are determined by rigid metal
+ fixations and kinematic mounting, their relative separation is more-easily
+ determined than that of the pendulum and foil.
 \end_layout
 
 \begin_layout Subsection
-Capacitor measurements
+Parallelism
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../metrology/run3305capSweep.eps
+	width 70text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:IFO-Cap-Crash-Plot"
+
+\end_inset
+
+Raw data used to infer the attractor-foil relative angle.
+ Each plot is a function of attractor displacement as measured by the optical
+ encoder, with a common arbitrary zero.
+ The upper panel shows the interferometer signal, with prominent touching
+ signal at displacements greater than ~708
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu m$
+\end_inset
+
+.
+ The middle panel shows the capacitance signal, which becomes unreliable
+ in the same location.
+ The bottom panel shows the pressure in the flexure bellows; the slope should
+ increase when the attractor makes contact with the foil.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../metrology/run3305fringes.eps
+	width 70text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Fringe-locations-taken"
+
+\end_inset
+
+Fringe locations taken from the upper panel of Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:IFO-Cap-Crash-Plot"
+
+\end_inset
+
+.
+ The upper panel shows the locations of maxima and minima.
+ The lower panel shows the displacement per fringe.
+ It should approach 
+\begin_inset Formula $\approx\lambda/2$
+\end_inset
+
+ as the attractor makes full contact with the foil.
+ The range of displacements where the displacement-per-fringe value is significa
+ntly different from 
+\begin_inset Formula $\lambda/2$
+\end_inset
+
+ should correspond to incomplete attractor-foil contact, and hence the misalignm
+ent of the two surfaces.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We used several methods to assess the parallelism of the attractor and foil.
+ When aligning the apparatus, we tipped the apparatus, placing the pendulum
+ onto the foil, pressed the attractor into the back of the foil, and used
+ the autocollimator-measured angular displacement of the pendulum as a proxy
+ for parallelism.
+ That got us close; the fine alignment was performed capacitively, tipping
+ the foil slightly until a maximal capacitance could be measured without
+ electrically shorting the attractor and foil together.
+ With that complete, we performed the science experiment.
+ 
+\end_layout
+
+\begin_layout Standard
+Concerns regarding the difficulty of calculating fringing fields led us
+ to view the capacitance measurement with skepticism.
+ In January 2015, the untouched apparatus was brought back to life.
+ The attractor and interferometer computers were turned on, and the interferomet
+er laser and SRS SR720 capacitance meter were reinstalled.
+ Unlike normal science operation, where the encoder can inject systematic
+ interference, it was possible to connect and turn on the attractor optical
+ encoder.
+ The attractor bellows was pressurized to push the attractor into the foil
+ by tens of microns, and allowed to leak slowly back over several hours,
+ producing a smooth slow displacement over time.
+ The results are shown in Figures 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:IFO-Cap-Crash-Plot"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Fringe-locations-taken"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+From Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Fringe-locations-taken"
+
+\end_inset
+
+, we conclude that the overall non-parallelism of the attractor and foil
+ is about 
+\begin_inset Formula $20$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m over the 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/AttractorDiameter.tex"
+
+\end_inset
+
+ diameter attractor.
+ It is conservative to add the 
+\begin_inset Formula $20$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m spacing directly into our computed attractor-pendulum separation.
+ As seen in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Flexure-runout"
+
+\end_inset
+
+, the variation in attractor angle throughout its range of travel is far
+ smaller than the otherwise-fixed misalignment.
 \end_layout
 
 \begin_layout Subsection
-Touching
+Attractor-Foil touching
+\end_layout
+
+\begin_layout Standard
+In addition to the attractor-foil parallelism, we must know the absolute
+ distance between the attractor and foil.
+ This is determined through observing the attractor-displacement position
+ where the attractor and foil touch.
+ This is essential both for metrology and to provide a sharp cutoff against
+ any foil-motion related systematic effects.
+\end_layout
+
+\begin_layout Standard
+The determination of the touching point is done using the science data from
+ the interferometer and attractor position on a per-measurement level, rather
+ than per-cut (See Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Implementation"
+
+\end_inset
+
+ for a brief definition of a 
+\begin_inset Quotes eld
+\end_inset
+
+cut
+\begin_inset Quotes erd
+\end_inset
+
+ or Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Parsing-into-cuts"
+
+\end_inset
+
+ for full detail).
+ In contrast to all other analyses, the mean cut position is not used.
+ Instead, as each cut is an aggregate of individual measurements, we use
+ the minimum position of individual measurements within a cut, as plotted
+ in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Attractor-Foil-touching-determin"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../ifo/ifoVsClosestApproach.eps
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Attractor-Foil-touching-determin"
+
+\end_inset
+
+Attractor-Foil touching determination.
+ The minimum-accepted attractor-pendulum separation is conservatively determined
+ in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Uncertainty-table-distance"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -10301,16 +10589,17 @@ Pendulum-side
 
 \begin_layout Standard
 The most-challenging metrology was on the pendulum side of the foil.
- The pendulum was hand-lapped, making its corners challenging to image and
- understand.
- The attractor's location was fixed, so the pendulum's horizontal (
+ The pendulum was hand-lapped, rounding its edges and making its corners
+ challenging to image.
+ The attractor's location was fixed, so the pendulum's horizontal (Section
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Horizontal-offset"
 
 \end_inset
 
-) and vertical (
+) and vertical (Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Vertical-position"
@@ -10319,21 +10608,22 @@ reference "sub:Vertical-position"
 
 ) positions were referenced to measurements made prior to the installation
  of the foil.
- After the foil was installed and aligned, both the pendulum position (
+ After the foil was installed and aligned, both the pendulum position (Section
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Pendulum-Foil-separation"
 
 \end_inset
 
-) and angle relative to the foil were measured (
+) and angle relative to the foil were measured (Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Pendulum-angle"
 
 \end_inset
 
-)
+).
 \end_layout
 
 \begin_layout Subsection
@@ -10387,15 +10677,15 @@ reference "fig:Horizontal-fiber-position"
  position offset; the pendulum had been displaced horizontally in runs prior
  to the beginning of the science data in an effort to understand a systematic
  ISL-violating signal that would later be traced to the bypass capacitors
- 
+ (Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Capacitor-Systematic"
 
 \end_inset
 
-.
- As can be seen in section 
+).
+ As can be seen in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Off-center-torques"
@@ -10403,7 +10693,7 @@ reference "sub:Off-center-torques"
 \end_inset
 
 , the impressive null-ness of this attractor geometry allows us to get away
- with such a gross misalignment without measurable consequence.
+ with such a gross misalignment without important consequence.
 \end_layout
 
 \begin_layout Standard
@@ -10463,53 +10753,13 @@ The vertical position of the pendulum was determined using a height-gauge
 \end_inset
 
 m.
- 
+ The pendulum's suspension system was fixed by a flexure-based clamp that
+ went untouched throughout the entire science campaign.
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-XXXMA1 Rigorously find the number See Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Pendulum-vertical-positioning"
-
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-XXXMA1
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Pendulum-vertical-positioning"
-
-\end_inset
-
-Pendulum vertical positioning photos
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
+ XXXMA bound displacements of importance
 \end_layout
 
 \end_inset
@@ -10528,8 +10778,27 @@ name "sub:Pendulum-Foil-separation"
 
 \end_layout
 
+\begin_layout Standard
+We assess the pendulum-foil separation in two different ways.
+ The most quantitative is the `bounce test', but it is potentially confounded
+ by both pendulum tip (misalignment with the foil about a horizontal axis
+ parallel to the foil face) and by dust between the pendulum and foil.
+ The most reliable, but less sensitive, approach uses direct imaging of
+ the pendulum-foil distance.
+ These two methods were found to be in reasonable agreement with capacitance
+ measurements, but do not require any detailed modelling nor consideration
+ of fringing fields.
+\end_layout
+
 \begin_layout Subsubsection
 Bounce test
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Bounce-test"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -10538,7 +10807,7 @@ The pendulum is allowed to swing freely as the fiber support is moved toward
  The autocollimator trace, plotted as a function of support-position shows
  a clear pattern from which the point at which the pendulum touches the
  foil may be extracted.
- The results of the pre-run bounce test
+ The results of the pre-science bounce test
 \begin_inset Note Note
 status open
 
@@ -10548,7 +10817,7 @@ XXXMA-show mid-run too
 
 \end_inset
 
- is shown in Figure 
+ are shown in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Pendulum-bounce-test-results"
@@ -10605,21 +10874,49 @@ Pendulum bounce-test.
 
 \begin_layout Subsubsection
 Photos
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Photo-displacement"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-PlateWash is unique among our group's ISL experiments in that we have visual
- access to the pendulum at all times through a glass vacuum viewport.
+The PlateWash apparatus permits visual access to the pendulum at all times
+ through a glass vacuum viewport.
+ Visual access provides a reliable and robust cross-check for our more-quantitat
+ive metrology techniques.
  With the addition a mirror, we are able to see both (left and right) sides
  of the pendulum and photograph them.
- Using the known thickness of the pendulum, we can compare photos when the
- pendulum is operating against photos where the pendulum is pressed lightly
- against a flat surface (attractor or foil) to determine the operating pendulum'
-s distance from, and angle with respect to, the foil.
+ Using the known thickness of the pendulum, we can compare photographs of
+ the pendulum taken during data-taking with photographs taken when the pendulum
+ is pressed lightly against a flat surface (attractor or foil) to determine
+ the data-taking pendulum's distance from, and angle with respect to, the
+ foil.
  For the photos used in this determination, see Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Pendulum-position-photos"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For each photograph, the thickness of the pendulum, the pendulum reflection,
+ and the gap between them were measured at repeatable points near the top,
+ middle, and bottom of the pendulum.
+ The widths of the gaps, divided by two to correct for reflection, were
+ calibrated by the known pendulum thicknesses.
+ The mean difference in gap size between the pre/post-science photographs
+ and the inclined/on-foil photographs was computed to generate an estimate
+ of the pendulum's displacement from the foil of 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/photoGapSize.tex"
 
 \end_inset
 
@@ -10633,7 +10930,15 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXXRC
+\align center
+\begin_inset Graphics
+	filename Pictures/scaledCompilationLabelled.png
+	width 100text%
+	height 100theight%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -10659,14 +10964,6 @@ Pendulum position photos
 
 \end_layout
 
-\begin_layout Subsubsection
-Assignment of pendulum-foil separation
-\end_layout
-
-\begin_layout Standard
-XXXRC
-\end_layout
-
 \begin_layout Section
 Pendulum angle
 \begin_inset CommandInset label
@@ -10681,20 +10978,26 @@ name "sec:Pendulum-angle"
 \begin_layout Standard
 The alignment angle of the pendulum with respect to the attractor is important
  to the sensitivity of the instrument, in both vertical tip and in twist.
-\end_layout
+ Here, we define 
+\begin_inset Quotes eld
+\end_inset
 
-\begin_layout Standard
-When aligning the instrument, the entire instrument is tilted until the
- pendulum rests firmly on the attractor.
- The angle, as measured by the autocollimator is recorded.
-\end_layout
+tip
+\begin_inset Quotes erd
+\end_inset
 
-\begin_layout Standard
-XXXRC
-\end_layout
+ to be the angle made between the pendulum and the foil about a horizontal
+ axis parallel to the foil.
+ We define 
+\begin_inset Quotes eld
+\end_inset
 
-\begin_layout Subsection
-Tip angle
+twist
+\begin_inset Quotes erd
+\end_inset
+
+ to be the angle made between the pendulum and the foil about a vertical
+ axis parallel to the foil.
 \end_layout
 
 \begin_layout Subsection
@@ -10705,8 +11008,207 @@ Twist angle
 Bounce test
 \end_layout
 
+\begin_layout Standard
+We can use the bounce-test data to measure the effective angular difference,
+ about a vertical axis tangent to the foil, between the pendulum's planar
+ orientation and the foil.
+ Comparing the angle at which the experimental data were taken with the
+ angle where the inferred lines cross in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Pendulum-bounce-test-results"
+
+\end_inset
+
+, we find that the angle between pendulum and foil is 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/offsetAngle.tex"
+
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Subsubsection
 Photos
+\end_layout
+
+\begin_layout Standard
+Just as with the pendulum distance (Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Autocollimator Photo"
+
+\end_inset
+
+), we can use the pendulum photos to extract the effective angle at which
+ the pendulum sits.
+ The pendulum-thickness-calibrated difference between pre/post-science and
+ inclined/on-foil photographs for each view of the pendulum was computed.
+ The ratio of the two measured pendulum-foil separations to the pendulum
+ width yields a pendulum twist angle of 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/photoTwistAng.tex"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Tip angle
+\end_layout
+
+\begin_layout Standard
+We expect the pendulum tip angle to be a stable quantity, determined primarily
+ by the initial alignment.
+ Over the duration of science data acquisition, the observed change in pendulum
+ tip was less than 
+\begin_inset Formula $100$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+rad (Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-Plateau-Test"
+
+\end_inset
+
+, light blue).
+ We measured the absolute tip angle in two ways: the 
+\begin_inset Quotes eld
+\end_inset
+
+plateau test
+\begin_inset Quotes erd
+\end_inset
+
+ and directly using photographs.
+\end_layout
+
+\begin_layout Subsubsection
+Plateau Test
+\end_layout
+
+\begin_layout Standard
+The 
+\begin_inset Quotes eld
+\end_inset
+
+Plateau Test
+\begin_inset Quotes erd
+\end_inset
+
+ is a quantitative method for determining the angle where the pendulum's
+ surface closest to the foil is parallel to the foil, but is susceptible
+ to systematic error due to pendulum curvature and dust.
+ The entire apparatus is tipped to a significant angle (at least tens of
+ milliradians) about the horizontal axis perpendicular to the attractor
+ symmetry axis.
+ Then, the pendulum displaced toward and away from the foil while the autocollim
+ator reading (both up-down and left-right) is recorded.
+ The angle at which the pendulum sits parallel to the foil appears as a
+ plateau in the plot of measured angle as a function of pendulum-support
+ displacement.
+ As seen in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-Plateau-Test"
+
+\end_inset
+
+, we claim a difference of 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/plateauAngle.tex"
+
+\end_inset
+
+ between the science position and the maximally-parallel position.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../metrology/run3310plateau.eps
+	width 70text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:The-Plateau-Test"
+
+\end_inset
+
+ The 
+\begin_inset Quotes eld
+\end_inset
+
+Plateau Test
+\begin_inset Quotes erd
+\end_inset
+
+ to determine the relative angle, about a horizontal axis parallel to the
+ foil, between pendulum and foil.
+ The dispersion at either end of the plateau comes from hysteresis; the
+ pendulum peels away from the foil very slowly when leaving the plateau.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Photos
+\end_layout
+
+\begin_layout Standard
+As with the pendulum-distance and twist angle, we can use the pendulum photos
+ to extract a tip-angle measurement.
+ For each photograph of the pendulum, we used the pendulum-thickness-calibrated
+ measurements of the apparent gap (again correcting for the factor of two
+ from reflection) to determine the relative slope of the pendulum and its
+ reflection in the foil.
+ The average difference between the slopes (in units of gap pixels per pixel
+ along the pendulum edge) of the science photographs and the inclined/on-foil
+ photographs was taken as the pendulum tip angle of 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/photoTipAng.tex"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
@@ -10717,8 +11219,8 @@ Foil Thickness
 The thickness of the foil was determined by making many micrometer measurements
  of foil from an adjacent portion of the same roll.
  Touching the foil, particularly with a hard/sharp-cornered object like
- a micrometer can easily damage the foil by denting it.
- Even a piece of dust, compressed between the micrometer jaw and the foil,
+ a micrometer, can easily damage the foil by denting it.
+ Even a piece of dust, compressed between a micrometer jaw and the foil,
  can be sufficient to dimple the foil and increase its effective thickness.
  For this reason, we have not directly measured the actual foil's thickness.
  If the foil thickness measurement were to become of increased concern,
@@ -10733,11 +11235,7 @@ filename "../extracted/foilThickness.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-m thick.
+ thick.
 \end_layout
 
 \begin_layout Section
@@ -10748,7 +11246,36 @@ Assignment of attractor/foil separation
 The distance between the pendulum and the attractor is determined to be
  the sum of the pendulum-foil distance, the foil thickness, the attractor-foil
  distance, and the pendulum-angle correction.
- XXXRC
+ Both the statistical and systematic errors are summed in quadrature, as
+ the systematic uncertainties quoted here are truly uncertain.
+ We have chosen the central values for those measurements that have meaningful
+ systematic uncertainty to reflect any bias we expect from these measurements.
+\end_layout
+
+\begin_layout Standard
+The flatness measurements quoted in the table are taken using conservative
+ estimates drawn from Figures 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:PendulumScans"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:AttractorScan"
+
+\end_inset
+
+, and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "FoilFlatness"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -10758,14 +11285,1895 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="28" columns="6">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
 
+\begin_layout Plain Layout
+
+\series bold
+Quantity
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Measurement
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Measured
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Contribution
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Statistical
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Systematic
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Method
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Value
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+ (
+\begin_inset Formula $\mu$
+\end_inset
+
+m)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Uncertainty (
+\begin_inset Formula $\mu$
+\end_inset
+
+m)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Uncertainty (
+\begin_inset Formula $\mu$
+\end_inset
+
+m)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Pendulum
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Twist
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Bounce Test
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/offsetAngle.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/bounceAngCentral.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/bounceAngStatistical.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/bounceAngSystematic.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Photos
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/photoTwistAng.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tip
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Plateau Test
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/plateauAngle.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/plateauCentral.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/plateauStatistical.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/plateauSystematic.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Photos
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/photoTipAng.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Flatness
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Laser Scan
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/pendulumFlatness.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/pendFlatCentral.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/pendFlatStatistical.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/pendFlatSystematic.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Separation
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Bounce Test
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/pfRawDist.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/bouncePosCentral.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/bouncePosStatistical.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/bouncePosSystematic.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Photos
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/photoGapSize.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Attractor
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tip
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Interferometer
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/attractorTip.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/attractorCentral.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/attractorStatistical.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/attractorSystematic.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Distance
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Interferometer
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/ifoPad.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/ifoPadCentral.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/ifoPadStatistical.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/ifoPadSystematic.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Flatness
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Laser Scan
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/attractorFlatness.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/attrFlatCentral.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/attrFlatStatistical.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/attrFlatSystematic.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Foil
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Thickness
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Micrometer
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/foilThickness.tex"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/foilThickCentral.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/foilThickStatistical.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/foilThickSystematic.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Flatness
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Laser Scan
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/foilFlatness.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/foilFlatCentral.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/foilFlatStatistical.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/foilFlatSystematic.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Total:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/totalCentral.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/totalStatistical.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/totalSystematic.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+:wq
 \end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Uncertainty-table-distance"
 
+\end_inset
+
+Uncertainty table for the minimum effective attractor-pendulum separation
 \end_layout
 
 \end_inset
@@ -10779,13 +13187,15 @@ status open
 \end_layout
 
 \begin_layout Chapter
-Experimental Plan
+Strategic choices and operation
 \end_layout
 
 \begin_layout Standard
-This chapter describes the strategies and choices we made in the operation
- of the instrument, from operating frequency to day-to-day operation.
- XXXMA; clarify
+This chapter describes important strategies and choices we made in the operation
+ of the instrument: selecting the signal frequency, selecting the pendulum-angle
+ signal as our science signal, random attractor locations, and the overall
+ distribution of attractor locations.
+ 
 \end_layout
 
 \begin_layout Section
@@ -11079,10 +13489,6 @@ reference "fig:Approximate-torque-to-angle-tran"
  
 \end_layout
 
-\begin_layout Standard
-(XXXRC Jens wants theory or experiment figure)
-\end_layout
-
 \begin_layout Subsubsection
 Readout Noise
 \end_layout
@@ -11133,8 +13539,8 @@ reference "sub:Statistical-Uncertainty"
 , the noise in the apparatus increases as the pendulum approaches the foil.
  In our frequency range of interest, it appears as relatively frequency-independ
 ent noise.
- Some of this noise is time-dependent, correlated with wind, human activity,
- and both local and worldwide seismic activity.
+ The level of this noise is time-dependent, correlated with wind, human
+ activity, and both local and worldwide seismic activity.
 \end_layout
 
 \begin_layout Subsubsection
@@ -11177,8 +13583,8 @@ s period.
 \begin_inset space ~
 \end_inset
 
-s response times of the pendulum feedback loop and the attractor drive prohibit
- useful operation at such a high frequency.
+s response times of both the pendulum feedback loop and the attractor drive
+ prohibit useful operation at such a high frequency.
  Near the attractor frequency of 
 \begin_inset CommandInset include
 LatexCommand input
@@ -11229,12 +13635,19 @@ name "fig:Torque-noise,-from"
 \end_inset
 
 Experimentally-measured torque noise, from systematic test 3167.
- Attractor stationary.
+ Attractor held stationary.
  Data in blue cover the entire time-series shown, while data in red are
  taken from the quiet period early in the morning of day 1227.
- (XXXRC Jens comments that figure doesn't align with text; perhaps add thermal
- limit, autocollimator line, add more commentary, show filtered and unfiltered,
- perhaps more panels.) 
+ The power spectrum prominently shows the effects of the calibration-signal
+ notch filters discussed in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Filtering"
+
+\end_inset
+
+.
+ Our lowest noise reliably occurs for several hours early each morning.
 \end_layout
 
 \end_inset
@@ -11322,11 +13735,8 @@ non-Gaussian
  interactions, and computer crashes happen.
  They are often short in duration, but overwhelming in amplitude.
  Measurements taken at these times are unusable.
- They are rare-enough that most experiments never incorporate them into
- their noise budget.
- This is the case for PlateWash as well, where such transients happened
- at most a few times in a day.
- For PlateWash, it will be shown in Section 
+ In this experiment, such transients happened at most a few times in a day.
+ It will be shown in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Filtering"
@@ -11352,9 +13762,9 @@ A second benefit to small
 \end_inset
 
  is the increased number of independent measurements.
- This experiment relies upon Monte Carlo-like measurements (random attractor
- locations) to understand systematic uncertainties and better constrain
- possible violations of the inverse-square law.
+ This experiment relies upon Monte-Carlo-like measurements (random attractor
+ locations) to constrain both systematic uncertainties and possible violations
+ of the inverse-square law.
  Frequent individual measurements allow faster exploration of parameter
  space (exploring a 
 \begin_inset Formula $6\times6$
@@ -11447,20 +13857,20 @@ status open
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 Harmonic (
-\begin_inset Formula $m)$
+\begin_inset Formula $m$
 \end_inset
 
-
+)
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11469,7 +13879,7 @@ Harmonic (
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11478,7 +13888,7 @@ Harmonic (
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11487,7 +13897,7 @@ Harmonic (
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11496,7 +13906,7 @@ Harmonic (
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11505,7 +13915,7 @@ Harmonic (
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11514,7 +13924,7 @@ Harmonic (
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11523,7 +13933,7 @@ Harmonic (
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11532,7 +13942,7 @@ Harmonic (
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11543,7 +13953,7 @@ Harmonic (
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11552,7 +13962,7 @@ Fourier coefficient
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11561,7 +13971,7 @@ Fourier coefficient
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11570,7 +13980,7 @@ Fourier coefficient
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11579,7 +13989,7 @@ Fourier coefficient
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11588,7 +13998,7 @@ Fourier coefficient
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11597,7 +14007,7 @@ Fourier coefficient
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11606,7 +14016,7 @@ Fourier coefficient
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11615,7 +14025,7 @@ Fourier coefficient
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11624,7 +14034,7 @@ Fourier coefficient
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11635,7 +14045,7 @@ Fourier coefficient
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11648,7 +14058,7 @@ Combined signal-to-noise ratio ( 1 to
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11657,7 +14067,7 @@ Combined signal-to-noise ratio ( 1 to
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11666,7 +14076,7 @@ Combined signal-to-noise ratio ( 1 to
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11675,7 +14085,7 @@ Combined signal-to-noise ratio ( 1 to
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11684,7 +14094,7 @@ Combined signal-to-noise ratio ( 1 to
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11693,7 +14103,7 @@ Combined signal-to-noise ratio ( 1 to
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11702,7 +14112,7 @@ Combined signal-to-noise ratio ( 1 to
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11711,7 +14121,7 @@ Combined signal-to-noise ratio ( 1 to
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11720,7 +14130,7 @@ Combined signal-to-noise ratio ( 1 to
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -11800,8 +14210,8 @@ reference "Fourier Harmonics"
 It is important that amplitude of the first harmonic of a unity-amplitude
  square wave is greater than one.
  Without resolving the square shape of the signal through its harmonics,
- we reap the increased sensitivity one expects from an attractor motion
- that spends far more time at maximum amplitude.
+ we reap the increased sensitivity one expects from an attractor path that
+ spends far more time at maximum amplitude.
  
 \end_layout
 
@@ -11839,8 +14249,8 @@ filename "../extracted/pTime.tex"
 \begin_inset space ~
 \end_inset
 
-s preceding a position change are excluded to reject any position-change
- related effects (see Section 
+s preceding a position change are excluded to conservatively reject any
+ position-change related effects (see Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Lags-1"
@@ -11892,8 +14302,8 @@ The combination of the large conservative dead-times with the 10
 
 s low-pass torque filter should render the measurement insensitive to small
  variations in the specific amounts of time to be dropped.
- The blind analysis makes it impossible for us to fine-tune for any desired
- result.
+ The blind analysis makes it impossible for us to fine-tune any choice of
+ dead-time for a desired result.
 \end_layout
 
 \begin_layout Standard
@@ -12018,9 +14428,9 @@ Switches per cut
 \end_layout
 
 \begin_layout Standard
-The number of attractor position changes per cut was chosen to be large-enough
- to allow a sufficient understanding of the switch-to-switch variation in
- the torque at each point.
+The number of attractor position changes per `cut', a group of identical
+ measurements, was chosen to be large-enough to allow a sufficient understanding
+ of the switch-to-switch variation in the torque at each point.
  We settled on 10 switches per cut in an ad-hoc fashion.
  It is slightly more than the minimum required to have a reasonable understandin
 g of the switch-to-switch variation ( 
@@ -12028,8 +14438,8 @@ g of the switch-to-switch variation (
 \end_inset
 
  samples is perhaps the minimum one should use for a reliable estimate of
- a variance), and still short enough to address the speed concerns laid
- out in Section 
+ a variance), and still short enough to address the speed concerns described
+ in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Statistics"
@@ -12068,7 +14478,7 @@ s filter applied (a factor of 3 below the Nyquist frequency), making it
  The loop was operated with zero integral-term to prevent improper wind-up
  in the challenging near-foil environment, so the integral channel contains
  no signal.
- The derivative term response is frequency-dependent, growing roughly linearly
+ The derivative-term response is frequency-dependent, growing roughly linearly
  with 
 \begin_inset Formula $\omega$
 \end_inset
@@ -12261,7 +14671,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../runAnalysis/supportingPlots/run3147AttractorOverTime.eps
-	width 50page%
+	width 70page%
 
 \end_inset
 
@@ -12278,18 +14688,8 @@ name "fig:Attractor-positions-over"
 
 \end_inset
 
-Attractor positions over the duration of the experiment.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMA draw vertical line/regions to denote systematic tests.
- Yellow/blue?
-\end_layout
-
-\end_inset
-
-
+Attractor positions used in this analysis.
+ 
 \end_layout
 
 \end_inset
@@ -12312,7 +14712,7 @@ random
 \end_inset
 
  and square-wave patterns.
- About half of the science data were taken using random patterns.
+ More than half of the science data were taken using random patterns.
  Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -12320,7 +14720,7 @@ reference "fig:Attractor-positions-over"
 
 \end_inset
 
- shows all attractor positions used in this thesis.
+ shows all attractor positions used in this analysis.
 \end_layout
 
 \begin_layout Standard
@@ -12361,7 +14761,7 @@ long
 \begin_inset Quotes erd
 \end_inset
 
- square wave measurements to allow more-straightforward intercomparison.
+ square-wave measurements to allow more-straightforward intercomparison.
 \end_layout
 
 \begin_layout Section
@@ -12369,8 +14769,8 @@ Campaign description
 \end_layout
 
 \begin_layout Standard
-The measurements began with science data, comprising runs 3146/7 to 3167.
- Systematics tests followed; bellows valve-off in 3168--3172; resistor tests
+The measurements began with science data, comprising runs 3146/7 to 3166.
+ Systematics tests followed; bellows valve-off in 3167--3172; resistor tests
  3174--3183; magnetic tests from 3184--3205; heating/thermistor tests from
  3206--3222; magnetic signal injection 3223--3225; attractor electrical
  bias 3234.
@@ -12454,7 +14854,23 @@ Flowchart diagramming the flow of data analysis.
 \end_layout
 
 \begin_layout Standard
-The flowchart shown in Figure 
+This section, Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Flow"
+
+\end_inset
+
+, is an executive summary for the details in the remainder of the chapter,
+ with the flowchart in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Flowchart-diagramming"
+
+\end_inset
+
+ as a companion.
+ Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Flowchart-diagramming"
@@ -12476,26 +14892,6 @@ reference "par:A-conservative-approach"
 , the interferometer data are only useful over parts of the run, requiring
  model-building in order to make a torque correction during times that the
  interferometer was unusable.
- 
-\end_layout
-
-\begin_layout Standard
-This section, Section 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Flow"
-
-\end_inset
-
-, is an executive summary for the details in the remainder of the chapter,
- with the flowchart in Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Flowchart-diagramming"
-
-\end_inset
-
- as a companion.
  
 \end_layout
 
@@ -12536,7 +14932,7 @@ reference "sec:Temperature--systematic"
 \begin_layout Standard
 In addition, all experimental parameters (alignment, dimensions, densities,
  analysis parameters, etc.) are stored in global configuration files that
- are read by any analysis program that requires them.
+ are read by each analysis program that requires them.
 \end_layout
 
 \begin_layout Subsubsection
@@ -12566,7 +14962,7 @@ run
 \end_inset
 
  of the experiment.
- In this document, a 
+ A 
 \begin_inset Quotes eld
 \end_inset
 
@@ -12575,7 +14971,7 @@ run
 \end_inset
 
  refers to a length of coincident operation of two or more DAQ systems specifica
-lly delineated by a run configuration file as having something interesting
+lly delineated by a run-configuration file as having something interesting
  to say.
  The main routine of the run-by-run analysis looks through the directory
  of run configuration files and analyzes the data loaded by each one.
@@ -12603,7 +14999,7 @@ reference "sub:Synchronization"
 , the data from each computer do not begin simultaneously and may have offsets
  between their clocks.
  We correct the differences in the clock rates and conservatively absorb
- the differences in clock datums into the assigned experimental dead times.
+ the differences in clock zeroes into the assigned experimental dead times.
 \end_layout
 
 \begin_layout Subsubsection
@@ -12611,18 +15007,19 @@ Filtering
 \end_layout
 
 \begin_layout Standard
-As described in 
+As described in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Filtering"
 
 \end_inset
 
-, the data are passed through FIR filters, primarily to notch out the gravitatio
-nal calibration signal and to bandpass away drift in the pendulum.
+, the torque data are passed through FIR filters, primarily to notch out
+ the gravitational calibration signal and to bandpass away drift in the
+ pendulum.
  All other channels to be analyzed alongside the torque data are passed
  through an inconsequential (low-pass at the Nyquist frequency), but equal
- duration, filter in order to phase-match them to the torque signal.
+ duration, filter to guarantee phase-matching with the torque signal.
 \end_layout
 
 \begin_layout Subsubsection
@@ -12742,15 +15139,16 @@ cuts
 \end_inset
 
  states are dropped from the cut before the aggregate properties of the
- cut are determined; as seen in Figure 
+ cut are determined.
+ As seen in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:The-first-8000"
 
 \end_inset
 
-, the positions of the first two states are inconsistent with the rest of
- the cut and retain information from the prior cut.
+, the positions of the first two states are often inconsistent with the
+ rest of the cut and retain position information from the prior cut.
  As detailed in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -12853,8 +15251,8 @@ arbitrary fit
 \begin_inset Quotes erd
 \end_inset
 
-, which is a model-free approach to characterizing our measured signal,
- with less attention to systematic uncertainty.
+, a model-free approach to characterizing our measured signal, with less
+ attention to systematic uncertainty.
 \end_layout
 
 \begin_layout Subsubsection
@@ -12864,7 +15262,7 @@ Interferometer branch
 \begin_layout Standard
 If the isolating foil moves in an attractor-correlated way, we need to know
  how much influence it may have on the pendulum.
- The optimal approach would have the foil interferometer operating continuously
+ An optimal approach would have the foil interferometer operating continuously
  and in-range; it would then be possible to add a joint fit for the foil-motion-
 to-torque constant to the global fit for new physics.
  As we only had partial coverage with the interferometer (Section 
@@ -12894,7 +15292,7 @@ reference "sub:Pendulum-Foil-coupling"
 \end_layout
 
 \begin_layout Paragraph
-Attractor position to foil motion fit
+Attractor-position to foil-motion fit
 \end_layout
 
 \begin_layout Standard
@@ -12943,7 +15341,7 @@ reference "sec:Model-Comparison"
 \end_inset
 
  space.
- The many bootstrapped fits of the attractor-driven foil motion torque correctio
+ The many bootstrapped fits of the attractor-driven foil-motion torque correctio
 n are individually applied to these fits, allowing direct propagation of
  the correction uncertainty into the final fit results.
 \end_layout
@@ -12992,7 +15390,8 @@ Just as for the foil displacement as a function of attractor position, we
  of attractor position.
  Furthermore, by subtracting the foil-motion torque correction from this
  fit, we are able to compensate for any foil-motion systematic.
- This is perhaps the most intuitive and general output of the experiment.
+ This is perhaps the most intuitive and general result generated by the
+ experiment.
 \end_layout
 
 \begin_layout Section
@@ -13078,11 +15477,12 @@ filename "../extracted/calibCutLength.tex"
 \end_inset
 
 s chunks and fit for a sinusoidal signal.
- The signal occurs at the calibrator's 
+ The signal occurs at twice the quadrupolar gravitational calibrator's rotationa
+l frequency (
 \begin_inset Formula $2\omega$
 \end_inset
 
- frequency; a fit is also incorporated for the 
+); a fit is also incorporated for the 
 \begin_inset Formula $1\omega$
 \end_inset
 
@@ -13159,16 +15559,6 @@ filename "../extracted/kappa.tex"
 \end_inset
 
 .
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-(XXXMA Jens wants a kappa errorbar)
-\end_layout
-
-\end_inset
-
  The time variation of the calibration signal is most-probably understood
  as slow drifts in the pendulum/foil/electrode spacing/alignment.
  It is also possible that some of the electronics involved in the feedback
@@ -13230,9 +15620,10 @@ reference "fig:Gravitational-calibration"
 \end_inset
 
  signal is possible, perhaps through modulation of the background magnetic
- field, the acoustic environment (an acoustic modulation was seen in acousticall
-y-driven studies of the foil interferometer), or the thermal environment,
- any of these effects should be small.
+ field, the acoustic environment (an acoustic modulation from the gravitational
+ calibration system was seen during intential driven-loudspeaker studies
+ of the foil interferometer), or the thermal environment, any of these effects
+ should be small.
 \end_layout
 
 \begin_layout Standard
@@ -13330,7 +15721,12 @@ key "WindowsTimeKnowledgebase"
 
 \end_inset
 
-: 
+:
+\end_layout
+
+\begin_layout Quote
+
+\emph on
 \begin_inset Quotes eld
 \end_inset
 
@@ -13349,7 +15745,9 @@ Windows XP and later versions of the Windows operating system implement
 \end_inset
 
  
-\emph on
+\end_layout
+
+\begin_layout Standard
 Caveat emptor.
 \end_layout
 
@@ -13388,9 +15786,9 @@ The user-space clocks are, in principle, resynchronized with the NTP clock
 Each DAQ computer has both a system clock and a hardware clock in the DAQ
  card.
  The data-taking cadence is defined by the DAQ card.
- For both the pendulum-computer's internal NI-6259 and the external USB
- NI-6211s used on the attractor and interferometer computers, the manufacturer
- guarantees the clock stability to 50 ppm, or 4 s/day.
+ For both the pendulum-computer's internal NI-6259 and the two external
+ USB NI-6211's used on the attractor and interferometer computers, the manufactu
+rer guarantees the clock stability to 50 ppm, or 4 s/day.
  In Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -13468,7 +15866,7 @@ Once we have characterized the clocks' stability, we can synchronize the
 \end_layout
 
 \begin_layout Standard
-With the clock rates matched, we must then align the datums of each clock
+With the clock rates matched, we must then align the zeroes of each clock
  at the start of each run.
  The clocks were manually observed to be synchronous with sub-second precision
  in almost every run.
@@ -13573,7 +15971,7 @@ Data are imported from three separate sources (torsion balance, attractor
 \end_inset
 
 s sample interval, so any extra timing mismatch (beyond that discussed in
- 
+ Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Timing"
@@ -13629,6 +16027,65 @@ name "fig:FIR Filter Transfer Functions"
 
 \end_inset
 
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../runAnalysis/supportingPlots/run3147filterTimeDomain.eps
+	width 70text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Time-domain-structure-of-filter"
+
+\end_inset
+
+Time-domain structure of torque filter coefficients.
+ The prominent 
+\begin_inset Quotes eld
+\end_inset
+
+sinc
+\begin_inset Quotes erd
+\end_inset
+
+ structure is the low-pass filter.
+ The calibration-line filters and high-pass filters are more subtle and
+ act at periods of 
+\begin_inset Formula $\sim200$
+\end_inset
+
+ samples and below.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -13761,6 +16218,13 @@ reference "fig:FIR Filter Transfer Functions"
 
 \end_inset
 
+ and the torque filter's coefficients are plotted in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Time-domain-structure-of-filter"
+
+\end_inset
+
 .
  Periodograms of the filters applied to experimental data are shown in Figure
  
@@ -13796,6 +16260,9 @@ status open
 \begin_layout Plain Layout
 Torque data before and after filtering.
  Attractor included to show relevant frequencies.
+ The attractor-drive system was operational for these data, but the isolating
+ `apparatus valve' was closed, preventing any attractor motion or gravitational
+ signal.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Measured Effect of FIR Filters"
@@ -13824,16 +16291,9 @@ filename "../extracted/numberOfCuts.tex"
 
 \end_inset
 
- cuts, the effect of cut-to-cut correlation is limited.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-(XXXMA cut-correlation estimation).
-\end_layout
-
-\end_inset
-
+ cuts, the effect of cut-to-cut correlation is extremely small in aggregate.
+ In addition, as attractor motion was either random or uniform, it should
+ not introduce any systematic uncertainty.
  The 3-cut length of the FIR filter was chosen by balancing the need to
  sufficiently attenuate and frequency-select the injected calibration signal
  (pushes to longer-duration filters) with the need to reject the effects
@@ -13891,6 +16351,18 @@ name "sub:Lags-1"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+In this section, we determine the times during the experiment during which
+ we believe the torque signal might be contaminated with information associated
+ with the act of changing attractor position.
+ During these times, which we deem to be `dead', no data are used for scientific
+ analysis.
+\end_layout
+
+\begin_layout Subsubsection
+Important durations/times
 \end_layout
 
 \begin_layout Standard
@@ -14034,11 +16506,7 @@ Attractor motion, convolved with DAQ IIR low-pass response.
  Scatter in the lower frame is from ambient air pressure variation (affects
  both blue and red), and variation in pneumatic-drive pulse-width modulation
  phase (red only).
- Duty cycle was a 15%
-\begin_inset Formula $\pm$
-\end_inset
-
-15% square wave.
+ 
 \end_layout
 
 \end_inset
@@ -14195,6 +16663,10 @@ name "fig:ElectronicTorqueLag"
 \end_inset
 
 Injected torques for dead-time determination after all filters.
+ The apparently-solid pink line is the injected coil current.
+ The scattered red dots are an entire torque dataset plotted with horizontal-axi
+s modulo the injected square-wave period.
+ The blue curve is the binned average of the experimentally-measured points.
 \end_layout
 
 \end_inset
@@ -14434,7 +16906,7 @@ The first measurement, and every-other subsequent measurement, is regarded
 \end_layout
 
 \begin_layout Standard
-The average of the A state measurements and the average of the B state measureme
+The average of the A-state measurements and the average of the B-state measureme
 nts are stored for each cut.
  In addition, the standard deviation, maximum, and minimum of each set of
  As and Bs are stored.
@@ -14443,7 +16915,10 @@ nts are stored for each cut.
 \begin_layout Standard
 The `lock-in' is made by taking the difference between the average of the
  As and the average of the Bs.
- 
+ The difference's mean, standard deviation, maximum, and minimum are all
+ recorded.
+ For the torque channel, these torque differences, in concert with the A
+ and B positions, comprise the science measurement.
 \end_layout
 
 \begin_layout Standard
@@ -14511,7 +16986,7 @@ name "fig:TriangleScatterPlot"
 
 \end_inset
 
-Your first `triangle plots', for both Yukawa-like and linear torques.
+`Triangle plots', for both Yukawa-like and linear torques.
  The upper frames show the simulated torque-as-a-function of distance curves.
  The middle frames show the `triangle plots' themselves; note the difference
  between them in the upper right corners.
@@ -14545,7 +17020,7 @@ A clear method of visualization is important to understanding the output
 \end_inset
 
 , we can plot every torque-difference measurement in a single plot, shown
- in the middle panels of 
+ in the middle panels of Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:TriangleScatterPlot"
@@ -14658,7 +17133,7 @@ The analysis presented here makes extensive use of a statistical method
  may be passed through any analysis routine developed for the original data
  set.
  With repetition, this process generates distributions of important output
- quantities (best-fit points in 
+ quantities (best-fit points in the Yukawa 
 \begin_inset Formula $\alpha-\lambda$
 \end_inset
 
@@ -14668,15 +17143,16 @@ The analysis presented here makes extensive use of a statistical method
 \begin_layout Standard
 The resampling scheme used in this analysis was to generate synthetic data
  sets of the same size as the original set by randomly selecting measurements
- (there are always duplicate picks, except in the special case where the
- original data are recovered, out of order) from the initial data set.
+ (there are always duplicate picks, except in the vanishingly rare case
+ where the original data are recovered, out of order) from the initial data
+ set.
  There is a related class of methods called `the jackknife' that generate
  statistics by considering complete sets of subsets of data, perhaps by
  dividing the initial data into subsets, fitting each subset, and drawing
  statistics from the fit outputs.
  The jackknife may be more readily accepted by those uncomfortable with
  the bootstrap; in the case of this measurement, there are too few measurements
- to allow meaningful statistics to be drawn from the fit outputs.
+ to allow meaningful statistics to be drawn from jackknifed fit outputs.
  Halving or quartering the dataset could be possible, but cutting it into
  ten pieces would result in too-little coverage in terms of varied attractor
  displacements.
@@ -14740,9 +17216,9 @@ name "sec:Model-Comparison"
 
 \begin_layout Standard
 The bootstrap makes comparison with any proposed model straightforward.
- No matter how exotic the fitting function and how sensitive it may be to
- individual datapoints or non-Gaussianity in the experimental data, it is
- straightforward to bootstrap the data, fit, bootstrap again, fit, etc...
+ No matter how exotic the fitting function and how sensitive it might be
+ to individual datapoints or non-Gaussianity in the experimental data, it
+ is straightforward to bootstrap the data, fit, bootstrap again, fit, etc...
  The distribution of fit outcomes can always be studied, and qualitative
  understanding is immediate.
  Settling on an algorithm for generating confidence intervals is, however,
@@ -14771,16 +17247,20 @@ A weakness of bootstrapped analysis is its reliance upon computational power
  that fitting parameter spaces are well-explored.
  It is possible to include systematic effects into bootstrapped confidence
  intervals by modelling each systematic and injecting the expected amount
- of noise into the data to be fitted.
+ of random uncertainty into the data to be fitted.
  If little is known about the systematic effect, however, this approach
  is challenging.
  
 \end_layout
 
 \begin_layout Standard
-It is more-reliable to attempt to include poorly-known systematics into
- the fit, fitting over all the data, including the systematic tests.
- This is done here by ascribing a new fictitious force to each systematic,
+It is more-reliable to include poorly-known systematics into the fit, fitting
+ over 
+\bar under
+all
+\bar default
+ the data, including both the science runs and the systematic tests.
+ We do this by ascribing a new fictitious force to each systematic effect,
  parametrized conservatively as a Yukawa torque, with its own strength and
  lengthscale.
  Furthermore, if we're able to compute 
@@ -15057,7 +17537,7 @@ reference "eq:PrototypeFitFunction"
 \end_inset
 
  is a recipe for trouble.
- With the aid and inspiration of Jason Detwiler, we computed the full non-linear
+ With aid and inspiration from Jason Detwiler, we computed the full non-linear
  variance of 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -15134,8 +17614,8 @@ reference "eq:X2 Statement"
 \end_inset
 
 .
- Nikolai Tolich was the first of those with whom we spoke to reach a quantitativ
-e understanding of the problem.
+ Nikolai Tolich was the first of those with whom we conferred to reach a
+ quantitative understanding of the problem.
  
 \end_layout
 
@@ -15238,7 +17718,7 @@ the flaw
 \end_layout
 
 \begin_layout Standard
-The profile-likelihood maximization is a challenging one, as it requires
+The profile-likelihood maximization would be a challenging one, as it requires
  global maximization over 
 \family roman
 \series medium
@@ -15276,7 +17756,7 @@ The profile-likelihood maximization is a challenging one, as it requires
 \end_inset
 
 , which numbers in the thousands.
- The Bayesian approach is perhaps more tractable if evaluated numerically
+ The Bayesian approach would be perhaps more tractable if evaluated numerically
  through a Monte Carlo or Markov-chain approach.
 \end_layout
 
@@ -15294,7 +17774,11 @@ Without a rigorous way to use
 \end_inset
 
  in a way that bakes in uncertainties of dependent variables, we cannot
- use it to pull out meaningful confidence intervals.
+ use 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+ to pull out meaningful confidence intervals.
  So, we return to the simple land of Monte Carlo tricks.
  We'll keep the linearized variance approach for the 
 \begin_inset Formula $B_{i}$
@@ -15349,6 +17833,64 @@ reference "sec:Confidence-Interval-Algorithm"
 \end_inset
 
  the important problem of confidence-interval determination.
+\end_layout
+
+\begin_layout Subparagraph
+Advantage - systematic metrology uncertainty
+\end_layout
+
+\begin_layout Standard
+The bootstrapped handling of uncertainties allows a trivial inclusion of
+ a traditionally difficult-to-handle uncertainty, colloquially known as
+ 
+\begin_inset Quotes eld
+\end_inset
+
+horizontal systematic errorbars
+\begin_inset Quotes erd
+\end_inset
+
+.
+ As the determination of the absolute separation of the pendulum and foil,
+ and hence the pendulum and attractor is necessarily uncertain (see Table
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Uncertainty-table-distance"
+
+\end_inset
+
+), this must be reflected in degraded confidence intervals at small 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+ From the perspective of our global fit, this measurement is unchanging,
+ making it a systematic uncertainty (and, indeed, it contains its own systematic
+ uncertainties).
+ The 
+\begin_inset Quotes eld
+\end_inset
+
+fuzzing
+\begin_inset Quotes erd
+\end_inset
+
+ process introduced above is readily adapted to this concern.
+ 
+\end_layout
+
+\begin_layout Standard
+For each iteration of the bootstrapped fit, in addition to individually
+ randomly displacing each position measurement by its individual statistical
+ uncertainty, we displace 
+\bar under
+all
+\bar default
+ positions by a single random amount, distributed by the known metrology
+ uncertainty.
+ This approach naturally incorporates our absolute position uncertainty
+ without degrading our known and meaningful differential position sensitivity.
 \end_layout
 
 \begin_layout Subsubsection
@@ -15468,12 +18010,12 @@ To extract science, consider the distribution of the
 \begin_inset Formula $(\alpha_{1},\lambda_{1})$
 \end_inset
 
- best-fit values over many bootstrapped/fuzzed fits.
+ best-fit values over many bootstrapped-and-fuzzed fits.
  
 \end_layout
 
 \begin_layout Itemize
-To extract understanding of any systematic uncertainties, study the distribution
+To extract understanding of systematic uncertainties, study the distribution
  of all remaining fitted variables.
 \end_layout
 
@@ -16191,7 +18733,10 @@ filename "../extracted/NBinConfInterval.tex"
 
 \end_inset
 
- best-fit points.
+ best-fit point.
+ This number is chosen as the square-root of the number of bootstrapped
+ points in order to limit over-zealous fluctuations of the confidence interval
+ curves.
  We then plot four points, 
 \begin_inset Formula $(\lambda_{min},m_{\alpha}\pm2\sigma_{\alpha})$
 \end_inset
@@ -16515,7 +19060,7 @@ reference "sub:Lock-in"
 \end_layout
 
 \begin_layout Standard
-For the approximate systematic tests detailed in 
+For the approximate systematic tests detailed in Chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "chap:Systematic-Tests"
@@ -16542,20 +19087,28 @@ All systems fail, and this fairly fragile blinding system was no exception.
  The more-important occasion was during the development of the blinding/unblindi
 ng code.
  A bug in the blinding code led to one of us (Charlie) seeing a Yukawa fit
- that resolved a signal at minimal 
-\begin_inset Formula $\lambda$
+ that resolved a signal with 
+\begin_inset Formula $\lambda<20$
 \end_inset
 
-, 
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m, 
 \begin_inset Formula $|\alpha|\sim10^{3\pm2}$
 \end_inset
 
 , and with indeterminant sign.
- This pre-dated our determination of systematic cuts, particularly that
- for the foil; the indeterminacy of the sign of the observed signal is particula
-rly important.
- We don't know whether our later determinations added to or subtracted from
- this signal.
+ This pre-dated our determination of systematic cuts, particularly those
+ related to the foil; the indeterminacy of the sign of the observed signal
+ is particularly important.
+ We don't know whether our later determinations added to, subtracted from,
+ or eliminated this signal.
  
 \end_layout
 
@@ -16565,13 +19118,14 @@ This type of failure of the blind is a weakness to software-blinds in null
  Often, the best estimate of an instrument's proper operation is its output.
  In a software-blinded null measurement, the experimenter is forced to perpetual
 ly dance around any accidental observation of the result.
- A reliable hardware-implemented blind, such as a clock skew or a hard-coded
- unknown offset is much more resistant to innocent mistakes.
+ A reliable hardware-implemented blind, such as a clock skew, a hard-coded
+ unknown offset, or an unknown stable experimental parameter is much more
+ resistant to innocent mistakes.
  
 \end_layout
 
 \begin_layout Standard
-We look forward to using what we've learned on one more iteration of this
+We look forward to using what we've learned on the next iteration of this
  experiment, as at least the known pitfalls of this blinding procedure can
  be avoided.
 \end_layout
@@ -16581,9 +19135,9 @@ Software
 \end_layout
 
 \begin_layout Standard
-The software used to compute these results and generate this document is
- all freely available under the GNU Public License (GPL) or more-permissive
- licenses.
+The software used to compute these results and programatically generate
+ this document is all freely available under the GNU Public License (GPL)
+ or more-permissive licenses.
  This thesis and all supporting code necessary to go from the original raw
  data to every plot and datapoint expressed in this document are housed
  within a single git repository.
@@ -16591,8 +19145,8 @@ The software used to compute these results and generate this document is
 \family typewriter
 git pull
 \family default
-') and linked to the experimental data , this document can be generated
- simply by typing `make'.
+') and linked to the experimental data, this document can be generated simply
+ by typing `make'.
 \end_layout
 
 \begin_layout Section
@@ -16600,8 +19154,8 @@ Software stack
 \end_layout
 
 \begin_layout Standard
-The software used in this analysis may be unfamiliar to some readers, so
- it is partially detailed here.
+The software used in this analysis may be unfamiliar to some physicists,
+ so it is partially detailed here.
  There are many tutorials available across the web to sate any depth of
  interest.
 \end_layout
@@ -16618,7 +19172,7 @@ key "Git_1.8.4"
 
 \end_inset
 
- is a 
+ is an industry-standard 
 \begin_inset Quotes eld
 \end_inset
 
@@ -16627,15 +19181,15 @@ source code management
 \end_inset
 
  utility designed to provide fast and easy tracking of changes.
- The entire development process is tracked, so changes can followed and
+ The entire development process is tracked, so changes can be followed and
  selectively reverted at any time.
- Furthermore, code can be maintained seamless in multiple branches, preventing
- speculative work from stepping on main-line production work.
+ Furthermore, code can be maintained seamlessly in multiple branches, preventing
+ speculative exploration from stepping on main-line production work.
  Git was designed from the start to be distributed.
  Anyone working on the project has a complete copy of the project source;
  it's effectively a distributed backup.
  This project is hosted on github, in addition to several machines at CENPA.
- Git is a standard in the software industry for source code managment.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -16666,7 +19220,9 @@ directed acyclic graph
  properly built before being used.
  Without a defined and programatic way to go from raw data to final results,
  there's no way for anyone, including the original experimenters, to vet
- the process used to generate the final result.
+ the process used to generate a final result.
+ Make resolves this concern, making it possible to perform the entire analysis
+ with a single auditable command.
 \end_layout
 
 \begin_layout Standard
@@ -16676,108 +19232,7 @@ In addition, Make natively handles parallel processing.
  
 \end_layout
 
-\begin_layout Subsection
-GNU Octave
-\begin_inset CommandInset label
-LatexCommand label
-name "sub:GNU-Octave"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Octave 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "octave:2012"
-
-\end_inset
-
- is an open source clone of MATLAB.
- It implements the entire basic MATLAB command set, is comparably fast in
- many applications, and is free to anyone.
- The octave-forge repositories provide similar function to many of the establish
-ed MATLAB toolboxes.
- The readable source has been directly important to this project; when a
- library (
-\family typewriter
-fir2.m
-\family default
-) upon which the PlateWash analysis depends changed and incorporated a bug,
- it only took a few hours to identify and solve the problem.
- 
-\end_layout
-
-\begin_layout Subsection
-Gnuplot
-\end_layout
-
-\begin_layout Standard
-Gnuplot 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Gnuplot_4.6"
-
-\end_inset
-
- is a powerful plotting package.
- Almost every plot in this thesis was dynamically generated by Gnuplot.
- In addition to Gnuplot's plotting capabilities, it provides limited but
- convenient Levenburg-Marquardt fitting routines.
- For some non-critical fits, Gnuplot was used.
- 
-\end_layout
-
-\begin_layout Subsection
-Assorted GNU/Unix tools
-\end_layout
-
-\begin_layout Standard
-The benevolent computer engineers of yore have left us many gifts.
- This thesis relies heavily upon bash, awk, sed, grep, and many other tools
- of the standard UNIX command set.
- While these tools may appear cryptic or antiquated to a young physicist,
- they're powerful.
- All the problems smart people had in the 1970s are the same problems smart
- people have now.
- The smart people in the past have given us their tools.
-\end_layout
-
-\begin_layout Standard
-Bash is the scripting language for a standard UNIX shell (and the name of
- the shell itself).
- Awk is designed for handling tabular arrays of data of all kinds.
- It is fast and flexible.
- Sed, the `string editor', is a tool designed for rapidly traversing text
- files and operating on them; think of it as find-and-replace on steroids.
- 
-\end_layout
-
-\begin_layout Subsection
-TeX, LaTeX, LyX, BibTeX, JabRef
-\end_layout
-
-\begin_layout Standard
-The finest document processing software on the planet.
- It's also some of the hardest to use.
- This document is written using LyX, a graphical interface to LaTeX.
- As most physicists are familiar with TeX, no further elaboration is required.
- 
-\end_layout
-
-\begin_layout Standard
-PlateWash-specific: Most numbers in this text are automatically generated
- from data after processing in Octave.
- Numbers intended for publication are saved, after accounting for significant
- digits, into text files.
- After a shell script wraps them in TeX's desired $ symbols, the file is
- included as a child document into the LyX/LaTeX document.
- Voilà, data analysis flows directly into text!
-\end_layout
-
-\begin_layout Subsection
+\begin_layout Subsubsection
 Sample
 \end_layout
 
@@ -16821,13 +19276,130 @@ lstparams "breakatwhitespace=true,breaklines=true,caption={Makefile},emptylines=
  
 \end_layout
 
+\begin_layout Subsection
+GNU Octave
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:GNU-Octave"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Octave 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "octave:2012"
+
+\end_inset
+
+ is an open source clone of the commercial general-purpose scientific computing
+ environment MATLAB.
+ It implements the entire basic MATLAB command set, is comparably fast in
+ many applications, and is free to anyone.
+ The octave-forge repositories provide similar function to many of the establish
+ed MATLAB toolboxes.
+ The readable source has been directly important to this project; when a
+ library (
+\family typewriter
+fir2.m
+\family default
+) upon which the PlateWash analysis depends changed and incorporated a bug,
+ it only took a few hours to identify and solve the problem.
+ 
+\end_layout
+
+\begin_layout Subsection
+Gnuplot
+\end_layout
+
+\begin_layout Standard
+Gnuplot 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Gnuplot_4.6"
+
+\end_inset
+
+ is a powerful plotting package.
+ Almost every plot in this thesis was dynamically generated by Gnuplot.
+ In addition to Gnuplot's plotting capabilities, it provides limited but
+ convenient Levenburg-Marquardt fitting routines.
+ For some non-critical fits, Gnuplot was used.
+ 
+\end_layout
+
+\begin_layout Subsection
+Assorted GNU/Unix tools
+\end_layout
+
+\begin_layout Standard
+The benevolent computer engineers of yore have left us many gifts.
+ This thesis relies heavily upon 
+\family typewriter
+bash
+\family default
+, 
+\family typewriter
+awk
+\family default
+, 
+\family typewriter
+sed
+\family default
+, 
+\family typewriter
+grep
+\family default
+, and many other tools of the standard UNIX command set.
+ While these tools may appear cryptic or antiquated to a young physicist,
+ they're powerful.
+ All the problems smart people had in the 1970s are the same problems smart
+ people have now.
+ The smart people in the past have given us their tools.
+\end_layout
+
+\begin_layout Standard
+Bash is the scripting language for a standard UNIX shell (and the name of
+ the shell itself).
+ Awk is designed for handling tabular arrays of data of all kinds.
+ It is fast and flexible.
+ Sed, the `string editor', is a tool designed for rapidly traversing text
+ files and operating on them; think of it as find-and-replace on steroids.
+ 
+\end_layout
+
+\begin_layout Subsection
+TeX, LaTeX, LyX, BibTeX, JabRef
+\end_layout
+
+\begin_layout Standard
+TeX is the finest document-processing software on the planet.
+ It's also hard to use.
+ This document is written using LyX, a graphical interface to LaTeX.
+ The bibliography is handled using BibTeX and JabRef.
+ 
+\end_layout
+
+\begin_layout Standard
+Most numbers in this text are automatically generated from data after processing
+ in Octave.
+ Numbers intended for publication are saved, after accounting for significant
+ digits and the peculiarities of the SI unit system, into text files.
+ After a script wraps them in TeX's desired $ symbols, the file is included
+ as a child document into the LyX/LaTeX document.
+ Voilà, data analysis flows directly into text! 
+\end_layout
+
 \begin_layout Section
 Daily Builds
 \end_layout
 
 \begin_layout Standard
-For the last months of this analysis, the data analysis and thesis were
- rebuilt from scratch hourly or daily.
+For the last year of this analysis, the data analysis and thesis were rebuilt
+ from scratch hourly or daily.
  This enables quick catching of integration bugs and allows collaborators
  to contribute to any part of the work at any time.
  Furthermore, frequent builds provide a clear picture of the deliverable
@@ -16866,8 +19438,7 @@ Testing is perhaps best explained by example.
  the results behave as expected.
  What if that were programatic? If, before you made serious use of a library,
  you could hit `test', and the software could run a predefined set of such
- tests.
- It is 
+ tests? It is 
 \emph on
 much
 \emph default
@@ -16895,12 +19466,61 @@ integration testing
 \begin_layout Standard
 Octave has a straightforward syntax for integrating unit tests into functions.
  Before the PlateWash analysis begins, the entire set of homespun Octave
- libraries is tested.
+ libraries is automatically tested.
  At present, this software project has insufficient formal testing coverage.
  This is improving, but our first results must be delivered before testing
  coverage is complete.
- As the testing coverage grows, the integrity of the project will grow.
+ As the testing coverage grows, the integrity of the project, too, will
+ grow.
  
+\end_layout
+
+\begin_layout Standard
+The code used in our Newtonian gravitational calculations (Chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Newtonian-Simulation"
+
+\end_inset
+
+) has good testing coverage.
+ That library's code is an excellent place to glimpse the possibilities
+ unit-testing makes available to the discerning physicist.
+\end_layout
+
+\begin_layout Section
+Advantages
+\end_layout
+
+\begin_layout Standard
+The advantages of having a dynamic ability to alter the data analysis at
+ any point in the entire project and be certain that correctly-processed
+ numbers, analysis, and plots will appear in the final text cannot be understate
+d.
+ This makes collaboration with others straightforward, as there's no fear
+ that large portions of an analysis will have to be 
+\begin_inset Quotes eld
+\end_inset
+
+re-done
+\begin_inset Quotes erd
+\end_inset
+
+ in response to changes early in the analysis process; it gets automatically
+ 
+\begin_inset Quotes eld
+\end_inset
+
+re-done
+\begin_inset Quotes erd
+\end_inset
+
+ every night.
+ In addition, this ability is critical to unblinding a sophisticated analysis;
+ complex processes proven to work on simulated data can be applied directly
+ to real data when the time comes.
+ Finally, and of greatest importance, the entire process is replicable;
+ anyone studying this experimental result can know exactly what was done.
 \end_layout
 
 \begin_layout Chapter
@@ -17083,6 +19703,10 @@ Movement
 
 \begin_layout Standard
 It is convenient to programatically translate and rotate mass distributions.
+ These functions allow the arbitrary assembly of simple components into
+ more complicated ones.
+ Furthermore, when patterning rotation- or translation-symmetric bodies,
+ copies of the repeated element are trivially made and positioned.
 \end_layout
 
 \begin_layout Subsection
@@ -17194,7 +19818,7 @@ It is convenient to define a small library of basic shapes from which larger
 
 \begin_layout Standard
 Central to PlateWash design are flat plates.
- These come in two types, round and rectangular.
+ These plates come in two types, round and rectangular.
 \end_layout
 
 \begin_layout Subsection
@@ -17207,8 +19831,8 @@ It is convenient to develop a function for generating both round sheets
  radius.
  This function places points on a cartesian grid, with points accepted if
  they're internal to the specified mass.
- Grid spacing along the in-plane direction and axial direction may be independen
-tly selected.
+ Grid spacing along the in-plane directions and axial direction may be independe
+ntly selected.
  
 \end_layout
 
@@ -17351,7 +19975,14 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXXMA
+\align center
+\begin_inset Graphics
+	filename ../NewtonianSimulation/plots/displayPointsDemo.eps
+	width 70text%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -17944,7 +20575,7 @@ Matt Turner's independent calculation
 Prior to the development of this Newtonian modelling package, Matt Turner
  developed an independent package for computing the PlateWash torques using
  a semi-analytic numerical approach.
- These results were found to be in agreement with this simulation package
+ His results were found to be in agreement with this simulation package
  for all pendulum/attractor combinations attempted.
  
 \end_layout
@@ -18100,7 +20731,15 @@ Angled torques
 \end_layout
 
 \begin_layout Standard
-The pendulum is oriented at an angle of XXXRC with respect to the attractor.
+The pendulum is oriented at an angle of 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/offsetAngle.tex"
+
+\end_inset
+
+ with respect to the attractor.
+ XXXRC - display computed angle torque signal.
  
 \end_layout
 
@@ -18385,22 +21024,23 @@ Interferometer
 \end_layout
 
 \begin_layout Standard
-We spent a lot of time trying to figure out how to generate a satisfactory
- test of the inverse square law without a measurement of the foil position.
- We were never able to find another way.
+We spent a lot of time trying to find clever ways to execute a satisfactory
+ parallel-plate test of the inverse square law without a measurement of
+ the isolating foil's position.
+ We were unable to find a way.
  For experiments of this type, where the attractor is modulated toward and
  away from the an isolating foil, estimates of the sensor/foil coupling
  and the foil motion itself are essential.
- This is the first measurement of which we are aware to make a direct on-line
+ This is the first measurement of which we are aware to make an on-line
  measurement of the isolating foil's displacement; an important step forward.
  
 \end_layout
 
 \begin_layout Standard
-Fiber fizeau interferometers are common in the atomic-force-microscope world
+Fiber Fizeau interferometers are common in the atomic-force-microscope world
  
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "rugar1988force,rugar1989improved"
 
 \end_inset
@@ -18412,15 +21052,15 @@ key "rugar1988force,rugar1989improved"
 \end_inset
 
 nm.
- Our laser suffered mightily from modehops and drifts.
+ Our laser suffered from modehops and drifts.
  Careful temperature control, current control, and current selection helped,
  but could not make the instrument usable for more than tens of minutes.
- A switch to a distributed-feedback 1330
+ A change to a distributed-feedback 1330
 \begin_inset space ~
 \end_inset
 
 nm laser and the requisite complete exchange of optical fibers, couplers,
- and sensors yielded a very stable instrument.
+ and sensors yielded a stable instrument.
  In fact, it is so stable against temperature drift that we have been unable
  to use changes in the laser-head temperature to counter other fringe drifts
  in the instrument.
@@ -18428,7 +21068,7 @@ nm laser and the requisite complete exchange of optical fibers, couplers,
 \end_layout
 
 \begin_layout Standard
-Another essential improvement is the micropositioning system (see Figures
+Another essential ingredient was the micropositioning system (see Figures
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -18443,12 +21083,13 @@ reference "fig:pendulum-foil-ifo closeup quarter"
 
 \end_inset
 
-) we added to control the fiber/foil separation.
- Without it, we spent hours attempting to position the fiber for proper
- fringe contrast.
+) we added to control the fiber-tip/foil separation.
+ Without it, we spent hours attempting to position the fiber by hand for
+ proper fringe contrast.
  As the fiber-foil separation is on the order of tens of microns, it is
- a very delicate operation.
- On one somber occasion, we punctured a foil with the fiber tip.
+ a delicate operation.
+ On one somber occasion, we punctured a foil with the fiber tip, requiring
+ a new foil and complete realignment/cleaning of the experiment.
  The current system is simple and suffers the backlash and imprecision inherent
  in servo actuation, but it is sufficient to gain useful control over fringe
  contrast.
@@ -18481,8 +21122,8 @@ Early in the experiment (2007-8), we uncovered an unexpected systematic
 \end_inset
 
 m.
- This matches the encoder grating spacing on the Micro-e encoder used to
- read out the attractor position.
+ This matches the encoder grating spacing on the Micro-E optical encoder
+ used to monitor the attractor position.
  We had operated for several months before noticing this effect; it is quite
  natural when hunting for a signal with typical length 
 \begin_inset Formula $\sim50$
@@ -18521,11 +21162,11 @@ This effect drove us to make two major changes:
 \end_layout
 
 \begin_layout Itemize
-Pneumatic attractor position metrology: This effect made it clear that electrica
-l pickup within the apparatus could become a concern.
- By moving to the precision pressure gauge as a way of ascertaining the
- attractor's position, it was possible to do a complete end-to-end test
- for any electrical pickup associated with the attractor (
+Pneumatic attractor position metrology: This systematic effect made it clear
+ that electrical pickup within the apparatus could become a concern.
+ By using to the precision pressure gauge as a way of ascertaining the attractor
+'s position, it was possible to do a complete end-to-end test for any electrical
+ pickup associated with the attractor (Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Attractor-position-control"
@@ -18534,7 +21175,8 @@ reference "sub:Attractor-position-control"
 
 ).
  Once the pressure gauge was shown to be a useable encoder by intercomparison
- with the position encoder, the position encoder was turned off and disconnected.
+ with the position encoder, the position encoder was turned off and disconnected
+ for the duration of the experiment.
 \end_layout
 
 \begin_layout Itemize
@@ -18550,7 +21192,7 @@ What is the form of the gravitational force law at short distance
 \begin_inset Quotes erd
 \end_inset
 
- through the techniques of 
+ through the techniques of Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Force-law-inversion"
@@ -18572,7 +21214,14 @@ MHz, with delicate grounding requirements.
  and unshielded leads extend for several inches within the vacuum chamber
  between the autocollimator's position-sensitive photodiode outputs and
  the high-gain transimpedance preamplifiers.
- This is a major target for future upgrades of the experiment.
+ This is a major target for future upgrades of the experiment (Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Autocollimator-upgrades"
+
+\end_inset
+
+).
  It is straightforward to shorten the leads by an order of magnitude and
  implement full electrical shielding for the photodiode and preamplifiers.
  
@@ -18604,9 +21253,19 @@ reference "fig:The-Capacitor-Systematic"
 \end_layout
 
 \begin_layout Standard
-It was decided early in the experiment (~2007-8) to ground the pendulum
- directly to the internal grounding block, giving a clear reference for
- ground.
+It was decided early in the experiment (
+\begin_inset Formula $\sim$
+\end_inset
+
+2007-8) to ground the pendulum directly to the internal grounding block,
+ which defines our experiment's electrical ground (Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Grounding"
+
+\end_inset
+
+).
  Furthermore, it was observed early on that the addition of 0.1-10
 \begin_inset space ~
 \end_inset
@@ -18617,8 +21276,9 @@ M
 
  resistors to the grounding of the attractor and foil gave improved noise
  and killed off any inexplicable signals we saw.
- This was very early in our understanding of the instrument; it felt like
- fine-tuning, but as we frequently run other experiments with 10-100
+ This was very early in our understanding of the instrument.
+ It felt like fine-tuning, but both because we routinely operate torsion
+ balances with 10-100
 \begin_inset space ~
 \end_inset
 
@@ -18626,30 +21286,30 @@ k
 \begin_inset Formula $\Omega$
 \end_inset
 
- resistors in series with the torsion fiber to protect it from electric
+ resistors in series with the torsion fiber as protection from electric
  transients and because the equilibration time of even a nanofarad capacitance
  across a megaohm resistor is 
 \begin_inset Formula $>10^{5}$
 \end_inset
 
- times shorter than the signal frequency, we left them in and turned to
- more-pressing concerns.
+ times shorter than the signal period, we left the resistors in and turned
+ to more-pressing concerns.
 \end_layout
 
 \begin_layout Standard
-Later, the sense that we had fine-tuned the apparatus and that at higher
- frequencies, the foil and attractor were effectively floating crept back
- in, and we decided that it would be better to bypass the resistors with
- large capacitors.
+Later, the worries that we had fine-tuned the apparatus and that at higher
+ frequencies, the foil and attractor were effectively electrically floating
+ resurfaced, and we decided that it would be wise to bypass the resistors
+ with large capacitors.
  We made that change and proceeded for years to refine the instrument.
  
 \end_layout
 
 \begin_layout Standard
-In 2012, the experiment was not blind, and an apparent inverse-square-law-violat
-ing signal was clearly resolved.
+In 2012, prior to our science campaign, the experiment was not blind, and
+ an apparent inverse-square-law-violating signal was clearly resolved.
  The signal was too large to have been an ISL violation, as prior experiments
- would have trivially resolved it, too.
+ would have trivially resolved it.
  At a suggestion from Krishna Venkateswara, the wires leading to the capacitors
  were clipped (at the same time we altered the lock-in frequency and, alas,
  separately disconnected the contact-potential control system), and the
@@ -18657,13 +21317,14 @@ ing signal was clearly resolved.
  In addition, the instrumental performance improved.
  Re-introducing the capacitors restored the signal, and shorting out the
  resistor with a wire also yielded a large signal.
- With no other reason to believe that the experiment had a problem, we began
- the science run reported here shortly thereafter, with the capacitors removed.
+ With no other reasons to believe that the experiment had a problem, we
+ began the science run reported in this thesis shortly thereafter, with
+ the capacitors removed.
 \end_layout
 
 \begin_layout Standard
 Our systematic tests to show that the science signal appears to be largely
- independent of the choice of resistor value are described in 
+ independent of the choice of resistor value are described in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Resistor-values"
@@ -18736,7 +21397,7 @@ reference "fig:The-Capacitor-Systematic"
 
  will squelch the effect, which we believe the resistor does.
  Bridging the resistor with a large capacitor provides an alternate path
- for high-frequency currents, restoring the resonator's 
+ for high-frequency alternating currents, restoring the resonator's 
 \begin_inset Formula $Q$
 \end_inset
 
@@ -18747,7 +21408,7 @@ reference "fig:The-Capacitor-Systematic"
 \begin_layout Standard
 Identifying the resonance gives us a culprit, but not a mechanism.
  Our best guess as to how a tunable resonance might influence the torque
- signal follows similar reasoning as in 
+ signal follows similar reasoning as in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Encoder-narrative"
@@ -18776,11 +21437,11 @@ MHz realm; easily in range of the expected LC resonant frequencies.
 \end_layout
 
 \begin_layout Standard
-In addition, the presence of the foil alllows a second possible, though
- less likely, coupling mechanism.
- Any mechanical resonance or displacement that could be driven by an increased
- effective attractor-foil or pendulum-foil voltage could also appear as
- a false torque.
+In addition, the presence of the foil allows a second possible, though less
+ likely, coupling mechanism.
+ Any mechanical resonance or displacement that could be driven by a resonance-en
+hanced effective attractor-foil or pendulum-foil voltage could also appear
+ as a false torque.
  
 \end_layout
 
@@ -18802,7 +21463,7 @@ name "chap:Systematic-Tests"
 \begin_layout Standard
 This chapter describes individual systematic tests to give us an approximate
  picture of this measurement's systematic susceptibilities.
- As described in 
+ As described in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Model-Comparison"
@@ -18903,7 +21564,7 @@ XXXMI: algorithm me!
 \end_inset
 
 .
- The circuit is modelled as an LCR resonator, see 
+ The circuit is modelled as an LCR resonator, see Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Capacitor-Systematic"
@@ -19002,7 +21663,7 @@ filename "../systematics/magnetic/extracted/CoilTurns.tex"
 
  turns of wire was placed near and on the apparatus to gauge any change
  in signal as a function of applied magnetic field.
- The coil was driven with current of 
+ The coil was driven with a constant current of 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../systematics/magnetic/extracted/CoilCurrent.tex"
@@ -19045,10 +21706,6 @@ Coil in the on-apparatus position
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-XXXRC diagram
 \end_layout
 
 \begin_layout Standard
@@ -19390,7 +22047,7 @@ Magnetic systematic test results.
 
 T, as measured by rotating an AK8975 smartphone magnetometer 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "MagnetometerDatasheet"
 
 \end_inset
@@ -19704,7 +22361,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../systematics/thermal/plots/aveTempPlot.eps
-	width 50text%
+	width 80text%
 
 \end_inset
 
@@ -19737,12 +22394,20 @@ Rot-Wash
  right (but not top).
  The baseplate thermistor is screwed into the large aluminum baseplate internal
  to the apparatus.
- Spikes prior to day ~1338 are from heater-verification tests.
+ Spikes prior to day 
+\begin_inset Formula $\sim$
+\end_inset
+
+1338 are from heater-verification tests.
  The large step (red above blue) is when the heater on leg 1 was turned
  on.
  The second step (blue above red) has the heater on leg 2 turned on, and
  the heater on leg 1 turned off.
- At the end of that sequence (~day 1358), both heaters were turned off.
+ At the end of that sequence (
+\begin_inset Formula $\sim$
+\end_inset
+
+day 1358), both heaters were turned off.
  The sensors are hand calibrated to match each other and the exterior sensors
  prior to day 1338.
  Reliability of this calibration is low, but sufficient, as the important
@@ -19770,7 +22435,7 @@ Temperature variation at attractor frequency
 
 \begin_layout Standard
 For runs beginning with 
-\begin_inset Formula $\sim3217$
+\begin_inset Formula $\sim\#3217$
 \end_inset
 
 , the experiment was operated with wireless sensors reading out the resistance
@@ -19849,10 +22514,10 @@ non-conservative
 .
  In this analysis, we do not explicitly search for this effect, but it is
  possible to do.
- A much weaker signal for/defense against a non-conservative torque curve
- is the intrisic expansion of the distribution of the bootstrapped best-fit
- points in searches for new physics; biased sampling of short/long strokes
- can, however, lead to too-good fit results.
+ A weaker signal-for or defense-against a non-conservative torque curve
+ is the automatic intrinsic inflation of the distribution of the bootstrapped
+ best-fit points in searches for new physics; biased sampling of short/long
+ strokes may, however, lead to inaccurate fit results.
 \end_layout
 
 \begin_layout Standard
@@ -19965,7 +22630,7 @@ m wavelength, copper is more than 95% reflective.
 \begin_inset Formula $\pm$
 \end_inset
 
-XXXRC
+XXXRC.
 \end_layout
 
 \begin_layout Section
@@ -20022,6 +22687,14 @@ XXXRC - Krishna would like to see a square-waved blinded sensitivity to
  
 \end_layout
 
+\begin_layout Section
+Systematic error accommodation table
+\end_layout
+
+\begin_layout Standard
+XXXRC
+\end_layout
+
 \begin_layout Chapter
 Foil Systematic
 \end_layout
@@ -20029,8 +22702,8 @@ Foil Systematic
 \begin_layout Standard
 The foil systematic measurement is discussed separately from the other systemati
 c uncertainties for three reasons: the analysis is very different, the outcome
- is important, and, as a signal is clearly resolved, a correction must be
- made.
+ is important, and, as a foil displacement is resolved, the effect must
+ be handled with care.
 \end_layout
 
 \begin_layout Section
@@ -20045,7 +22718,8 @@ name "sec:Data/Fit"
 \end_layout
 
 \begin_layout Standard
-We used the foil measurements that were in-range as described in 
+We used the foil measurements that were in-range as described in Section
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "par:A-conservative-approach"
@@ -20053,7 +22727,7 @@ reference "par:A-conservative-approach"
 \end_inset
 
 .
- After the lock-in/cut procedure (
+ After the lock-in/cut procedure (Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Signal-Extraction"
@@ -20123,7 +22797,7 @@ Raw foil displacement triangle plot.
 As we do not have continuous full-sensitivity coverage of the entire measurement
  with the interferometer, we must build a model of the foil displacement
  as a function of attractor position and then apply it (with known uncertainties
-) via the foil-to-torque transfer function (
+) via the foil-to-torque transfer function (Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Pendulum-Foil-coupling"
@@ -20132,7 +22806,8 @@ reference "sub:Pendulum-Foil-coupling"
 
 ) to generate the foil-related torque-difference expected for attractor-position
  pair.
- To be conservative, we use the piecewise-linear technique outlined in 
+ To be conservative, we use the piecewise-linear technique outlined in Section
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Force-law-inversion"
@@ -20182,7 +22857,7 @@ Interferometer fit.
  This fits are used individually for subtraction in the bootstrapped global
  Yukawa fits.
  XXXRC - What about chopping out another 20 microns in short-cut in order
- to completely dump the innner systematic.
+ to completely dump the inner systematic.
  Feels good,right?
 \end_layout
 
@@ -20350,9 +23025,6 @@ The upper two fields in the following figures will be most familiar to those
  Along the vertical axis is its strength relative to gravity.
  Each circular point in the plot is a best-fit point from the bootstrapped
  fit.
- Each diagonal cross point is the location of a fit's random seed.
- Vertical/horizontal cross points are the location of injected signals,
- to show that we can recover Yukawa signals.
  For perspective relative to the best results in the field, the exclusion
  limits of Kapner and Cook 
 \begin_inset CommandInset citation
@@ -20389,19 +23061,10 @@ Finally, we show the reduced
 
  for each fit.
  In diagonal crosses, we show all fits.
- As the fitter has a tendency to be trapped in local minima immediately
- after initialization, we drop any points that converge in fewer than 15
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMI automate me!
-\end_layout
-
-\end_inset
-
- iterations of the fit.
+ As past fitting algorithms had a tendency to be trapped in local minima
+ immediately after initialization, we drop any points that converge in fewer
+ than 5 iterations of the fit, which applies to essentially none of the
+ simulated-annealing fits.
  Points surviving that cut are shown in horizontal/vertical crosses.
  Points surviving all cuts, including minimum and maximum chi-squared (horizonta
 l lines) are shown as circles.
@@ -20415,13 +23078,68 @@ e systematic uncertainties.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
+\begin_inset Float figure
+wide false
+sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset CommandInset include
-LatexCommand input
-filename "../bootstrap/output/makeSymFigure.tex"
+\align center
+\begin_inset Graphics
+	filename ../bootstrap/output/bootstrapYukawa.Sysa0l0.0002slop0SysMinus.dat.grav.eps
+	width 80page%
+	rotateAngle 270
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Yukawa exclusion limits for gravity alone
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../bootstrap/output/bootstrapYukawa.Sysa0l0.0002slop0SysNull.dat.grav.eps
+	width 80page%
+	rotateAngle 270
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Yukawa exclusion limits for gravity alone without foil systematic subtraction
+\end_layout
 
 \end_inset
 
@@ -20434,9 +23152,34 @@ filename "../bootstrap/output/makeSymFigure.tex"
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "../bootstrap/output/makeSymFigureSystematics.tex"
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../bootstrap/output/bootstrapYukawa.Sysa0l0.0002slop0SysMinus.dat.eps
+	width 80page%
+	rotateAngle 270
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Yukawa exclusion plot, showing best-fits for all systematic effects
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -20444,20 +23187,16 @@ filename "../bootstrap/output/makeSymFigureSystematics.tex"
 \end_layout
 
 \begin_layout Subsection
-Other models:
+Other models
 \end_layout
 
 \begin_layout Standard
 With these data, it is possible to place useful limits upon other inverse-square
  law modifications such as a power-law potential, Fat Gravitons, Chameleons,
  Unparticles, and more.
- For each scenario, a new approach must be taken to properly address systematic
- uncertainties.
+ For each distinct scenario, a new approach should be taken to conservatively
+ address systematic uncertainties.
  For this reason, this thesis limits its results to Yukawa potentials.
-\end_layout
-
-\begin_layout Section
-Exclusion plots
 \end_layout
 
 \begin_layout Chapter
@@ -20478,13 +23217,13 @@ Lessons learned
 
 \begin_layout Standard
 Scott Schell earned his spot in the acknowledgements when he told a backcountry-
-ski class this: 
+ski class, 
 \begin_inset Quotes eld
 \end_inset
 
-I think the major difference between a professional and an amateur is whether
- or not, at the end of the day, they ask the question, `what have I learned
- today'?
+I think the major difference between an expert and an amateur is whether
+ or not, at the end of the day, they ask and answer the question, `what
+ have I learned today?'
 \begin_inset Quotes erd
 \end_inset
 
@@ -20496,7 +23235,7 @@ I think the major difference between a professional and an amateur is whether
 \begin_layout Standard
 The PlateWash experiment began as an attempt to make a lightning strike
  into new territory.
- The design is efficient, there is no more powerful geometry for raw signal.
+ The design is efficient; there is no more powerful geometry for raw signal.
  The systematic uncertainties for Newtonian gravity are easy, the rest are
  hard.
  With an optimistic view toward the latter, it's easy to see how we predicted
@@ -20512,7 +23251,11 @@ The PlateWash experiment began as an attempt to make a lightning strike
 \begin_inset Formula $\mu$
 \end_inset
 
-m in ~2008, and reach 
+m in 
+\begin_inset Formula $\sim$
+\end_inset
+
+2008, and reach 
 \begin_inset Formula $20$
 \end_inset
 
@@ -20525,7 +23268,7 @@ m in ~2008, and reach
 \end_inset
 
 m in perhaps 2010.
- That this result arrives in 2014 with a limit at greater than 
+ That this result arrives in 2015 with a limit at greater than 
 \begin_inset Formula $50$
 \end_inset
 
@@ -20541,7 +23284,7 @@ m is evidence that we made a mistake, either in our estimate of our capability,
  in our execution, or in both.
  We made mistakes in both.
  I do not mean to say that the construction and execution of this experiment
- is not an acheivement, it is, but we will repeat our mistakes if we do
+ is not an achievement, it is, but we will repeat our mistakes if we do
  not learn from them.
 \end_layout
 
@@ -20551,13 +23294,14 @@ The field of avalanche safety, and professional risk management more generally,
 y.
  In the case of avalanches, if you underestimate your uncertainty more than
  a few times, you die.
- If you overestimate your uncertainty, you never get to play in the mountains.
- For physicists, the situation is similar; if we report a violation of Newton's
- Inverse Square Law Of Gravitation, and it's not true, our careers are damaged,
- if not ended.
+ If you overestimate your uncertainty, you never get to experience the joy
+ found among mountains.
+ For physicists, the situation is similar; if we report a violation of the
+ vaunted Newton's Inverse Square Law Of Gravitation, and it's not true,
+ our careers are damaged, if not ended.
  If we cower in fear of uncertainty, we'll never learn anything new about
  Nature.
- There is value to be had for physicists who study risk management.
+ Risk-management tools have real value for physicists.
 \end_layout
 
 \begin_layout Standard
@@ -20579,15 +23323,6 @@ key "mccammon2002evidence,atkins2000human"
  safety concerns.
  Everyone has blind spots, sometimes exacerbated by our environments.
  For us, as physicists, I believe it is the same.
- For this reason, I've broken out a 
-\begin_inset Quotes eld
-\end_inset
-
-social
-\begin_inset Quotes erd
-\end_inset
-
- subsection.
 \end_layout
 
 \begin_layout Subsection
@@ -20606,7 +23341,7 @@ name "sub:0-tunable-parameters,"
 \end_layout
 
 \begin_layout Standard
-Our research group has made its name with Equivalence Principle tests 
+Our research group made its name with Equivalence Principle tests 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "schlamminger2008test"
@@ -20651,7 +23386,7 @@ ties.
 \begin_layout Standard
 In our group's hole and wedge-pendulum experiments 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "Cook2013,2007PhRvL..98b1101K,2007PhRvL..98m1104A,2004PhRvD..70d2004H,2001PhRvL..86.1418H"
 
 \end_inset
@@ -20695,10 +23430,10 @@ In the PlateWash experiment, things are even more complicated.
  While this extra dimension of flexibility gives us extra discriminating
  power between specific inverse-square law violations, it also requires
  that we have an even better model of each systematic effect.
- With the myriad choices of start and end positions that we used in this
- experiment, ascertaining both our sensitivity to a specific inverse square
- law signal and our uncertainties became a real challenge.
- The methods outlined in 
+ With the intentionally myriad choices of start and end positions that we
+ used in this experiment, ascertaining both our sensitivity to a specific
+ inverse square law signal and our uncertainties became a real challenge.
+ The methods outlined in Sections 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Model-Comparison"
@@ -20714,32 +23449,79 @@ reference "sec:Force-law-inversion"
 
  now allow us to do this relatively efficiently, but it can be challenging
  to extract or judge a physics result by eye.
- The two-parameter approach is much more powerful for hunting down instrumental
+ The two-parameter approach is powerful for discriminating against instrumental
  effects, but the loss in clarity is substantial.
 \end_layout
 
 \begin_layout Subsubsection
-Foil
+Size
 \end_layout
 
 \begin_layout Standard
-XXXMA
+We don't yet know with confidence what the optimal spatial size of active
+ elements in an inverse square law experiment might be.
+ The smaller the active elements, the more-easily they can be aligned.
+ Larger sizes yield larger lever arms for torsion balances and more-uniform
+ gravitational fields.
+ The very direct geometry of the Huazhong apparatus 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "2007PhRvL..98t1101T"
+
+\end_inset
+
+ addresses the former concern, providing both easy alignment and a long
+ lever arm at the possible expense of larger Newtonian gravity backgrounds.
+ The scaling laws for proximity-enhanced noise with distance/area are strongly
+ dependent upon the underlying phenomena (patch fields, gas molecule rearrangeme
+nt, proximity-enhanced gas damping, etc), which are, at best, partially
+ understood.
+ 
+\end_layout
+
+\begin_layout Standard
+We will continue to experiment with size in an effort to improve our signal
+ to noise ratio.
+ 
 \end_layout
 
 \begin_layout Subsubsection
-Pendulum
+Foil-displacement
 \end_layout
 
 \begin_layout Standard
-XXXMA
+We spent about a year trying to find ways to avoid the need to measure the
+ foil's position before taking on the problem directly with the foil interferome
+ter.
+ In our opinion, for any attractor-displacing short-distance gravity experiment,
+ a measure of the isolating foil's displacement is essential.
+ Without such a measurement, substantial systematic-uncertainty questions
+ will linger.
+ The foil interferometer is one of the major successes of this experiment.
 \end_layout
 
 \begin_layout Subsubsection
-Capacitor
+Capacitor/contact potential
 \end_layout
 
 \begin_layout Standard
-XXXMA
+The decision to simultaneously remove both the bypass capacitors and the
+ contact-potential system was over-eager, though we didn't know it at the
+ time.
+ Had we ascertained that the systematic signal we saw was related only to
+ the capacitors, we could have significantly improved the sensitivity of
+ the overall measurement through decreased noise and decreased pendulum-foil
+ coupling.
+ Indeed, the most important single upgrade of the experiment will be to
+ reconnect those systems.
+ 
+\end_layout
+
+\begin_layout Standard
+It remains important for us to determine the mechanism by which the capacitor-mo
+dulated resonance couples to the pendulum/pendulum readout.
+ Addressing that coupling, which probably resides in the autocollimator
+ pre-amplifier, may yield improved noise and decreased systematic sensitivity.
 \end_layout
 
 \begin_layout Subsection
@@ -20819,7 +23601,7 @@ Blitzkreig vs Campaign
 
 \begin_layout Standard
 While it was first imagined as a short-range equivalence principle test,
- and again as a competing design idea to the early Eot-Wash 10-hole pendulum
+ and again as a competing design idea to the early Eöt-Wash 10-hole pendulum
  design, PlateWash, as it exists now, was sold in 2006-7 as a chance to
  jump ahead of the existing technology.
 \end_layout
@@ -20831,18 +23613,18 @@ Our action mirrored this blitzkreig philosophy.
  We put off complete solutions to systematic concerns in favor of estimates
  and a promise to tie up loose ends when the measurement was complete.
  When the experiment was first assembled, our first day of data easily surpassed
- the first Eot-Wash short-range experiments; we were on our way, led by
+ the first Eöt-Wash short-range experiments; we were on our way, led by
  the huge potential of PlateWash's efficient design.
  
 \end_layout
 
 \begin_layout Standard
-Our committment to the lightning-stab approach, where we would get a great
- measurement on our first try, led us astray; the first stabs didn't work.
+Our committment to the lightning-strike approach, where we would get a great
+ measurement on our first try, led us astray; the first strikes didn't work.
  Complete focus on delivering a respectable result instead of iteratively
  delivering coarse but reliable results slowed our progress.
  Without building a foundation of complete measurements on which we could
- stand, grow, and improve, we condemend ourselves to inefficiency.
+ stand, grow, and improve, we condemned ourselves to inefficiency.
 \end_layout
 
 \begin_layout Standard
@@ -20902,6 +23684,15 @@ l idea; one where it is obviously free from large classes of systematic
  In the early days of those experiments, perhaps no blind will be requisite.
 \end_layout
 
+\begin_layout Standard
+As this measurement comes to a close, while the blind remains stressful,
+ it is also refreshing.
+ We have done what we can to mitigate known systematic effects.
+ The result, whatever it will be, is as unaffected by our own biases as
+ we could manage.
+ If our measurement is to be repeated, it should be performed blind.
+\end_layout
+
 \begin_layout Subsection
 Social
 \end_layout
@@ -20956,7 +23747,7 @@ Contact potential
 \end_layout
 
 \begin_layout Standard
-As noted in 
+As noted in Sections 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Contact-potential-noise"
@@ -20975,8 +23766,8 @@ reference "par:Connection-to-contact"
  The elevated electrical potential difference between the pendulum and the
  foil is probably responsible for the level of swing coupling we see, limits
  the distance of closest approach between the pendulum and the foil, and
- surely enhanced the pendulum/foil coupling that forced us to make a systematic
- correction (
+ surely enhanced the pendulum/foil coupling that forced us to consider a
+ systematic correction (Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Subtraction-Foil"
@@ -20985,8 +23776,8 @@ reference "sec:Subtraction-Foil"
 
 ).
  In addition, the presence of a possible foil/attractor contact potential
- may have led to the short-range attractor foil coupling that makes the
- pendulum/foil systematic correction so daunting.
+ may have led to the observable short-range attractor foil coupling that
+ makes a pendulum/foil systematic correction so daunting.
  
 \end_layout
 
@@ -21004,26 +23795,29 @@ Pendulum Battery
 \end_layout
 
 \begin_layout Standard
-As we explained earlier (Figure 
+As we showed with Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Evidence-for-a-pendulum-battery"
 
 \end_inset
 
-), it is quite probable that the pendulum had its own trouble with an irreducibl
-e on-board battery, formed from the contact of the dissimilar metals of
- the pendulum body and the dense inlays.
- As measured, this voltage may have contributed ~100
+, it is probable that the pendulum had its own trouble with an irreducible
+ on-board battery, formed from the contact of the dissimilar metals of the
+ pendulum body and the dense inlays.
+ Alternatively, it is also possible that different regions of the foil surface
+ held slightly different effective electrical potential.
+ Either way, as measured, this voltage may have contributed 
+\begin_inset Formula $\sim100$
+\end_inset
+
+
 \begin_inset space ~
 \end_inset
 
 mV to the contact potential.
- Alternatively, it is also possible that different regions of the foil surface
- held slightly different effective electrical potential.
- Either way, a monolithic pendulum with a much-smaller area of closest approach,
- limited only to the active mass, may yield substantially better noise performan
-ce.
+ A monolithic pendulum with a much-smaller area of closest approach, limited
+ only to the active mass, may yield substantially better noise performance.
  If the dense/close side of the pendulum is sufficiently thick, it is also
  possible to imagine attaching a dense protruding 
 \begin_inset Quotes eld
@@ -21040,8 +23834,11 @@ inlay
 \end_layout
 
 \begin_layout Standard
-These approaches are only possible with the simultaneous use of a foil interfero
-meter.
+These approaches are 
+\bar under
+only
+\bar default
+ possible with the simultaneous use of a foil interferometer.
  The intentional loss of symmetry inherent to these designs requires that
  even more care be given to the foil's motion.
  While a tuned contact potential should limit the electrostatic effects
@@ -21072,6 +23869,13 @@ ttery reducing design mentioned above.
 
 \begin_layout Subsubsection
 Autocollimator
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Autocollimator-upgrades"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -21089,7 +23893,7 @@ The autocollimator used in this iteration of the experiment was a coarse
 \end_layout
 
 \begin_layout Standard
-Furthermore, the encoder systematic (
+Furthermore, the encoder systematic (Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Encoder-narrative"
@@ -21109,8 +23913,8 @@ cm in length.
  While it would require considerable testing to be trustworthy, the benefits
  of full-time encoder operation would be considerable.
  The attractor could operate in feedback, decreasing the positioning scatter
- by at least an order of magnitude, and there would be no need to use a
- pressure gauge as a position readout.
+ by at least an order of magnitude, and there would be no need to use an
+ air pressure gauge as a position monitor.
  
 \end_layout
 
@@ -21119,7 +23923,7 @@ UV LED
 \end_layout
 
 \begin_layout Standard
-Our understanding of exactly what physical mechanisim increases the noise
+Our understanding of exactly which physical mechanism increases the noise
  in the torsion pendulum at short pendulum/foil separation is minimal.
  One possiblity is that the pendulum is being buffeted by outgassing from
  the foil, perhaps enhanced by squeeze-film effects.
@@ -21154,7 +23958,7 @@ Interferometer improvements
 \end_layout
 
 \begin_layout Standard
-As described in 
+As described in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Interferometer-noise"
@@ -21164,7 +23968,7 @@ reference "sub:Interferometer-noise"
 , the interferometer may be limited by polarization-related noise.
  If we were to switch to entirely polarization-maintaining fiber, it's possible
  that the pickup and drift we see could be reduced.
- 
+ We have begun to acquire the necessary fiber components to do so.
 \end_layout
 
 \begin_layout Standard
@@ -21173,7 +23977,7 @@ g for the foil systematic if we could hold the interferometer in its sensitive
  region of operation for the duration of the experiment.
  That could be accomplished by physically moving the interferometer fiber
  tip with slow-control feedback or by changing the laser temperature enough
- to shift the laser frequency.
+ to shift the laser wavelength.
  The new infrared laser is extremely resistant to temperature change, which
  may force us to develop a mechanism of moving the fiber tip in a smooth
  and controllable fashion.
@@ -21185,8 +23989,10 @@ g for the foil systematic if we could hold the interferometer in its sensitive
 It has been suggested that we should replace the 90/10 coupler with a fiber
  circulator to increase the amount of light that reaches the detector by
  more than a factor of ten.
- This hasn't yet been thought through completely, but it does appear to
- be a drop-in replacement for the existing coupler.
+ Early experiments on tilt-meter interferometer test apparatus by Krishna
+ Venkateswara suggest that a circulator will be a drop-in replacement for
+ the existing coupler and will yield increased sensitivity.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -21211,9 +24017,36 @@ Much of the difficulty in the data analysis stemmed from the use of a large
  the analyses of both systematic uncertainty and potential new physics would
  have been drastically simplified.
  The increased immunity to position-related systematic effects may not have
- been worth the massive cost in speed.
- While blindness is still a challenge, it's not impossible to blind such
- a measurement.
+ been worth the massive cost in complexity.
+ While blindness is still a challenge, it's equally possible to blind such
+ a few-position measurement.
+\end_layout
+
+\begin_layout Subsubsection
+Interleaved systematic studies
+\end_layout
+
+\begin_layout Standard
+The strategy of taking science data as quickly and comprehensively as possible
+ and then following up with systematic studies was very pragmatic.
+ Future measurements would benefit from interleaving systematic studies
+ with science measurements (see 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "baron2014order"
+
+\end_inset
+
+ for a beautiful and extreme example).
+ Each cut of science data could be immediately followed by repeating the
+ cut with a varied systematic parameter (magnetic field, interferometer
+ light power, attractor bias voltage, etc.).
+ This isn't possible with all sources of systematic uncertainty (imposed
+ temperature gradients take thousands of seconds to equilibrate), but it
+ would relax the requirement that the instrument remain untouched and stable
+ for months at a time.
+ In addition, in-line systematic studies offer the opportunity to monitor
+ the expected sensitivity of an entire measurement campaign in real time.
 \end_layout
 
 \begin_layout Subsubsection
@@ -21222,7 +24055,8 @@ Blindness
 
 \begin_layout Standard
 Now that we have completed an entire measurement cycle with a blind measurement,
- we must revisit whether or not a blind has been helpful.
+ we must revisit as a group whether or not a blind has been helpful.
+ I contend that it has been essential to producing an unbiased result.
  Whether we choose to go blind for a second iteration or not is perhaps
  less important than whether we 
 \bar under
@@ -21241,16 +24075,16 @@ Octave has been a good and reliable tool throughout this work.
  While the Octave project continues to improve and work toward drop-in compatibi
 lity with MATLAB, much of the open-source effort has moved into the SciPy
  packages for Python.
- Writing future analysis code in Python will make it more readable, more
- accessible, and permit access to mathematical libraries that are audited
- by many more users.
+ Writing future analysis code in Python will make it more widely readable
+ and permit access to mathematical libraries that are audited by many more
+ users.
  
 \end_layout
 
 \begin_layout Standard
 A particular sticking point is our reliance upon the excellent Gnuplot plotting
  package.
- Information occasionally flows out of Octave, gets plotted in or analyzed
+ Data often flows out of an Octave program, gets plotted in or analyzed
  a little in Gnuplot, and then is no longer accessible to the tools in Octave.
  At least a man-month has been spent finding ways to smoothly move data
  from one to the other and back.
@@ -22420,6 +25254,37 @@ If
 \[
 \sigma_{F_{x}}^{2}=Q^{2}\sum_{i}\alpha_{i}^{2}\lambda_{i}^{4}T(\lambda_{i})^{2}\sigma_{B_{i}}^{2}e^{-2\bar{x}/\lambda_{i}}
 \]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Yukawa Fit Injections
+\end_layout
+
+\begin_layout Standard
+In this appendix we show, for completeness, the response of the global fitting
+ algorithm to signals injected into the science data.
+ Vertical/horizontal cross points are the location of injected signals,
+ to show that we can recover Yukawa signals.
+ These plots are of the same type as those described in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Yukawa-Potential-Constraints"
+
+\end_inset
+
+, but for many different systematic signal injections and with the foil-systemat
+ic signal added, subtracted, and left uncorrected.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "../bootstrap/output/makeSymFigureSystematics.tex"
 
 \end_inset
 
