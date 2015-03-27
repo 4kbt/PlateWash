@@ -27,7 +27,7 @@ FITSH:=--eval 'alpha= 500;  lambda=30e-6 ; injSlope= 0e-11; alpha1=-20  ; lambda
 FITSI:=--eval 'alpha= 100;  lambda=200e-6; injSlope= 1e-11; alpha1=137  ; lambda1=8e-6; alpha2=4e4 ; lambda2=310e-6;'
 FITSJ:=--eval 'alpha= 100;  lambda=200e-6; injSlope= 5e-11; alpha1=10   ; lambda1=1e-3; alpha2=1000; lambda2=20e-6;'
 
-all : yukawaFit arbFit sysTest newtonianInjection output/makeSymFigureSystematics.tex test output/$(IFOFIGURE).eps
+all : arbFit sysTest newtonianInjection output/makeSymFigureSystematics.tex test output/$(IFOFIGURE).eps
 	$(HOMEDIR)/bin/mathify.sh extracted/
 
 yukawaFit : $(PREREQUISITES)
@@ -35,7 +35,7 @@ yukawaFit : $(PREREQUISITES)
 	./yukawaPlots.sh
 	$(MAKE) TeXFigure
 
-test:yukawaFitTest arbFitTest
+test: arbFitTest
 
 FITNPATH := $(HOMEDIR)NewtonianSimulation/SimulationOutput/
 FITNAFILE := jan13OffsetAttractor.dat

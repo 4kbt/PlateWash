@@ -7,8 +7,9 @@ end
 
 if(X2 < 0)
 	printf('leasqrDiff, varG, torque^2, varG/torerr^2\n');
-	diag = [(GBV- pM(:,fitColumn)).^2 varG pM(:,fitErrColumn).^2  varG ./ pM(:,fitErrColumn).^2];
-	[max(diag); mean(diag); median(diag); min(diag); std(diag)]
+
+	chiSquareWSystematicsDiagnostics
+
 	transpose(x)
 
 	errmsg = transpose(x);

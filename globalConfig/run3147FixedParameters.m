@@ -131,7 +131,7 @@ torqueBlur   = 1e-12;  printSI(torqueBlur, 1, -15, 'N-m', [HOMEDIR 'extracted/to
 %fprintf('# read Complete \n')
 
 %'INSUFFICENT bootstrap counts'
-NumberOfYukawaBootstraps = 30; %was 1000
+NumberOfYukawaBootstraps = 1000; %was 1000
 NumberOfArbFitBootstraps = NumberOfYukawaBootstraps; % was 300
 
 foilResonance = 1580;
@@ -177,7 +177,7 @@ AppliedMagneticFieldUncertainty = 1e-3; %TotalBogus!
 heaterTemperatureUncertainty = 0.020; %TotalBogus!
 heaterTempGradientUncertainty = 0.001; %TotalBogus!
 
-NBinConfInterval = 14; %bin width for confidence interval determination
+NBinConfInterval = ceil( sqrt( NumberOfYukawaBootstraps ) ); %bin width for confidence interval determination
 printInteger( NBinConfInterval, [HOMEDIR 'extracted/NBinConfInterval.tex']);
 
 

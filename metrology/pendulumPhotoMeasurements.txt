@@ -1,0 +1,38 @@
+#Name		VerticalPosition	Err	RealWidth	Err	ReflectedWidth	Err	GapWidth	Err
+#pre-science
+BelowScratch	113.4			4	47.2		2	48.1		2	10		2
+Taurus		328.2			4	49.2		2	48.3		2	8.1		2
+SmallLightNotch	625.2			4	52.1		2	49.1		2	8.1		2
+
+#post-science
+BelowScratch	110.9			4	44.1		2	45.1		2	10		2
+Taurus		314.1			4	47.0		2	47.0		2	7.5		2
+SmallLightNotch	616.2			4	49.0		2	46.0		2	9		2
+
+#against plate
+BelowScratch	102.7			4	42.0		2	44.0		2	4		2
+Taurus		298.1			4	45.0		2	42.3		2	3		2
+SmallLightNotch	588.5			4	46.0		2	43.0		2	4		2
+
+
+#FrontSide
+#pre-science
+BelowScratch	119			2	59		2	59		2	7		2
+DarkMark	566			3	61		2	60		2	8		2
+BottomScratch	1115			3	59		2	58		2	8		2
+Length		1165.4			4	
+
+#post-science
+BelowScratch	120			3	59		2	58		2	7		2
+DarkMark	556			3	59		2	59		2	8		2
+BottomScratch	1102.5			3	58		2	59		2	7		2
+Length		1149.4			4
+
+
+#onplate
+BelowScratch	122			3	59		2	59		2	3		2
+DarkMark	571			3	60		2	60		2	5		2
+BottomScratch	1129.3			3	60		2	59		2	4		2
+Length		1181			4
+
+

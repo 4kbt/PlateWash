@@ -14,7 +14,7 @@ run3147PendulumParameters
 %Define accumulators
 fittedData =[];
 detailAC = [];
-iterAve = 1e7;
+iterAve = 3e5;
 
 %Bootstrap loop
 for bootStrapCounter = 1:(NumberOfYukawaBootstraps)  % three covers add, null, subtract case.
@@ -30,12 +30,6 @@ for bootStrapCounter = 1:(NumberOfYukawaBootstraps)  % three covers add, null, s
 		pMd(:,bCol) = pMd(:,bCol) + randn(rows(pMd),1) .* pMd(:,bErrCol);
 	end
 
-	if(BootstrapSystematicPositionUncertainty == 1)
-		bSPositionErr = randn * totalPAUncertainty;
-		pMd( : , aCol ) = pMd( : , aCol ) + bSPositionErr;
-		pMd( : , bCol ) = pMd( : , bCol ) + bSPositionErr;
-	end
-
 	if(1 == injectIFOSystematic)
 		%Fake torque
 		outTor = foilTranslationToTorque*fitVectorPolyLinearSpline( [pMd(:,aCol) pMd(:,bCol)], ifoP(bootStrapCounter,:), ifoV(bootStrapCounter, : ) );
@@ -44,6 +38,14 @@ for bootStrapCounter = 1:(NumberOfYukawaBootstraps)  % three covers add, null, s
 		ifoSubtract = mod(bootStrapCounter,3) - 1;
 		pMd(:,torCol) = pMd(:,torCol) + ifoSubtract * outTor;
 	end
+	
+	bSPositionErr = 0;
+	if(BootstrapSystematicPositionUncertainty == 1)
+		bSPositionErr = randn * totalPAUncertainty;
+		pMd( : , aCol ) = pMd( : , aCol ) + bSPositionErr;
+		pMd( : , bCol ) = pMd( : , bCol ) + bSPositionErr;
+	end
+
 
 	%Output fit information
 	fittedData = [fittedData; pMd(:,aCol) pMd(:,bCol), pMd(:,torCol), ifoSubtract*ones(size(pM(:,aCol)))];
@@ -75,12 +77,16 @@ for bootStrapCounter = 1:(NumberOfYukawaBootstraps)  % three covers add, null, s
 	trimmedPM = trimPM(pMd, signalColumns, torCol);
 	CNStruct = columnNamesStruct;
 
+	NumBoundsIterations = 2 * ( 2 * NumFitSystematics + 1 );
+	NumItersPerTempDrop = 3 * NumBoundsIterations;
+	TempDropFactor      = 0.1;
+
 	try
 		%When analyzing, make a cut on csMin
 		tic
 
 		%Do the fit.
-		[x , csMin, convergence, details] = samin("chiSquareWSystematics", {trimmedPM, ranSeed', PendStruct, AttrStruct, CNStruct}, {LowerBounds', UpperBounds', 20, 5, 0.5, 10*iterAve, 5, 1e-3, 0.1, 1, 2});
+		[x , csMin, convergence, details] = samin("chiSquareWSystematics", {trimmedPM, ranSeed', PendStruct, AttrStruct, CNStruct}, {LowerBounds', UpperBounds', NumItersPerTempDrop, NumBoundsIterations, TempDropFactor, 10 * iterAve, 5, rows( trimmedPM.x1Vec ) * 0.01, 0.1, 1, 2});
 
 		%0 = no convergence, 1 = good, 2 = near edge
 		fitInfo = convergence; 
@@ -89,21 +95,26 @@ for bootStrapCounter = 1:(NumberOfYukawaBootstraps)  % three covers add, null, s
 		%number of temperature reductions
 		nf = rows(details);
 
-		iterAve = (iterAve + iter)/2;
+%		if ( fitInfo > 0 )
+			%adaptive averaging
+			iterAve = (iterAve * bootStrapCounter  + iter ...
+					 ) / ( bootStrapCounter + 1 );
+%		end
 
 		%detailAC = [detailAC; details];	
 
 		%[x, csMin, fitInfo, iter, nf]   = sqp(ranSeed, cSFunc, [], [], LowerBounds, UpperBounds,NumIterations);
 
 		%Display fit outcome
-		[csMin fitInfo iter nf]
+		[csMin fitInfo iter nf bSPositionErr]
 
 		%Output fit results
 		x = unLogLA(x, logCrossover);
 		x(1) = logAlphasToAlphas(x(1), logCrossover);
-		bsO = [ transpose(x) csMin nf iter fitInfo ranSeed bootStrapCounter toc rows(pM) ifoSubtract];
+		bsO = [ transpose(x) csMin nf iter fitInfo ranSeed bootStrapCounter toc rows(pM) ifoSubtract bSPositionErr];
+
 		%Dynamically locates subtraction column for variable number of parameters
-		injSubCol = columns(bsO);
+		injSubCol = columns(bsO) - 1;
 
 		%if fit converged, save it.
 	%	if(fitInfo == 101) 

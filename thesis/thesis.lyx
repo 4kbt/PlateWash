@@ -177,7 +177,7 @@ ngineer shoulders.
 \end_layout
 
 \begin_layout Standard
-I thank the entire Eot-Wash group, the National Science Foundation, and
+I thank the entire Eöt-Wash group, the National Science Foundation, and
  the United States taxpayer for unwavering support, even when a blitzkreig
  experiment turned to a protracted and careful campaign.
  
@@ -9915,9 +9915,10 @@ Metrology
 \begin_layout Standard
 Understanding the separation between attractor and test masses is essential
  to any inverse square law test.
- However, because of the nearly-null parallel-plate geometry, the implications
- of a sufficiently-small error in metrology affect only the stated exclusion
- limits, but not the presence nor absence of an ISL violation.
+ However, because of our experiment's nearly-null parallel-plate geometry,
+ the implications of a sufficiently-small error in metrology affect only
+ the stated exclusion limits, but not the presence nor absence of an ISL
+ violation.
  This is an important contrast to non-null experiments, where an error in
  attractor/sensor separation alone can lead to a Newtonian-gravitationally
  faked or masked signal for new physics.
@@ -10519,9 +10520,10 @@ reference "sub:Parsing-into-cuts"
 \end_inset
 
  for full detail).
- In contrast to all other analysis, the mean cut position is not used; instead,
- as each cut is an aggregate of individual measurements, the minimum position
- of individual measurements within a cut, plotted in Figure 
+ In contrast to all other analyses, the mean cut position is not used.
+ Instead, as each cut is an aggregate of individual measurements, we use
+ the minimum position of individual measurements within a cut, as plotted
+ in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Attractor-Foil-touching-determin"
@@ -10614,14 +10616,14 @@ reference "sub:Pendulum-Foil-separation"
 
 \end_inset
 
-) and angle relative to the foil were measured (Section
+) and angle relative to the foil were measured (Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Pendulum-angle"
 
 \end_inset
 
-)
+).
 \end_layout
 
 \begin_layout Subsection
@@ -10872,6 +10874,13 @@ Pendulum bounce-test.
 
 \begin_layout Subsubsection
 Photos
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Photo-displacement"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -10890,6 +10899,24 @@ ive metrology techniques.
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Pendulum-position-photos"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For each photograph, the thickness of the pendulum, the pendulum reflection,
+ and the gap between them were measured at repeatable points near the top,
+ middle, and bottom of the pendulum.
+ The widths of the gaps, divided by two to correct for reflection, were
+ calibrated by the known pendulum thicknesses.
+ The mean difference in gap size between the pre/post-science photographs
+ and the inclined/on-foil photographs was computed to generate an estimate
+ of the pendulum's displacement from the foil of 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/photoGapSize.tex"
 
 \end_inset
 
@@ -11008,9 +11035,26 @@ Photos
 \end_layout
 
 \begin_layout Standard
-Just as with the pendulum distance, we can use the pendulum photos to extract
- the effective angle at which the pendulum sits.
- XXXRC.
+Just as with the pendulum distance (Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Autocollimator Photo"
+
+\end_inset
+
+), we can use the pendulum photos to extract the effective angle at which
+ the pendulum sits.
+ The pendulum-thickness-calibrated difference between pre/post-science and
+ inclined/on-foil photographs for each view of the pendulum was computed.
+ The ratio of the two measured pendulum-foil separations to the pendulum
+ width yields a pendulum twist angle of 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/photoTwistAng.tex"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -11151,7 +11195,20 @@ Photos
 \begin_layout Standard
 As with the pendulum-distance and twist angle, we can use the pendulum photos
  to extract a tip-angle measurement.
- We find XXXRC.
+ For each photograph of the pendulum, we used the pendulum-thickness-calibrated
+ measurements of the apparent gap (again correcting for the factor of two
+ from reflection) to determine the relative slope of the pendulum and its
+ reflection in the foil.
+ The average difference between the slopes (in units of gap pixels per pixel
+ along the pendulum edge) of the science photographs and the inclined/on-foil
+ photographs was taken as the pendulum tip angle of 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/photoTipAng.tex"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
@@ -11229,7 +11286,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="22" columns="6">
+<lyxtabular version="3" rows="28" columns="6">
 <features rotate="0" tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -11600,6 +11657,68 @@ Photos
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/photoTwistAng.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -11736,6 +11855,68 @@ Photos
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/photoTipAng.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -11854,6 +12035,62 @@ filename "../metrology/extracted/pendFlatSystematic.tex"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 Separation
 \end_layout
 
@@ -11952,6 +12189,12 @@ Photos
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/photoGapSize.tex"
+
+\end_inset
+
 
 \end_layout
 
@@ -12184,6 +12427,62 @@ filename "../metrology/extracted/attractorSystematic.tex"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 Distance
 \end_layout
 
@@ -12253,6 +12552,62 @@ filename "../metrology/extracted/ifoPadSystematic.tex"
 
 \end_inset
 
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -12538,6 +12893,62 @@ filename "../metrology/extracted/foilThickSystematic.tex"
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 Flatness
 \end_layout
 
@@ -12749,7 +13160,7 @@ filename "../metrology/extracted/totalSystematic.tex"
 
 \end_inset
 
-
+:wq
 \end_layout
 
 \begin_layout Plain Layout
@@ -18322,7 +18733,10 @@ filename "../extracted/NBinConfInterval.tex"
 
 \end_inset
 
- best-fit points.
+ best-fit point.
+ This number is chosen as the square-root of the number of bootstrapped
+ points in order to limit over-zealous fluctuations of the confidence interval
+ curves.
  We then plot four points, 
 \begin_inset Formula $(\lambda_{min},m_{\alpha}\pm2\sigma_{\alpha})$
 \end_inset
@@ -20610,13 +21024,14 @@ Interferometer
 \end_layout
 
 \begin_layout Standard
-We spent a lot of time trying to figure out how to generate a satisfactory
- test of the inverse square law without a measurement of the foil position.
- We were never able to find another way.
+We spent a lot of time trying to find clever ways to execute a satisfactory
+ parallel-plate test of the inverse square law without a measurement of
+ the isolating foil's position.
+ We were unable to find a way.
  For experiments of this type, where the attractor is modulated toward and
  away from the an isolating foil, estimates of the sensor/foil coupling
  and the foil motion itself are essential.
- This is the first measurement of which we are aware to make a direct on-line
+ This is the first measurement of which we are aware to make an on-line
  measurement of the isolating foil's displacement; an important step forward.
  
 \end_layout
@@ -20625,7 +21040,7 @@ We spent a lot of time trying to figure out how to generate a satisfactory
 Fiber Fizeau interferometers are common in the atomic-force-microscope world
  
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "rugar1988force,rugar1989improved"
 
 \end_inset
@@ -20637,15 +21052,15 @@ key "rugar1988force,rugar1989improved"
 \end_inset
 
 nm.
- Our laser suffered mightily from modehops and drifts.
+ Our laser suffered from modehops and drifts.
  Careful temperature control, current control, and current selection helped,
  but could not make the instrument usable for more than tens of minutes.
- A switch to a distributed-feedback 1330
+ A change to a distributed-feedback 1330
 \begin_inset space ~
 \end_inset
 
 nm laser and the requisite complete exchange of optical fibers, couplers,
- and sensors yielded a very stable instrument.
+ and sensors yielded a stable instrument.
  In fact, it is so stable against temperature drift that we have been unable
  to use changes in the laser-head temperature to counter other fringe drifts
  in the instrument.
@@ -20653,7 +21068,7 @@ nm laser and the requisite complete exchange of optical fibers, couplers,
 \end_layout
 
 \begin_layout Standard
-Another essential improvement is the micropositioning system (see Figures
+Another essential ingredient was the micropositioning system (see Figures
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -20668,12 +21083,13 @@ reference "fig:pendulum-foil-ifo closeup quarter"
 
 \end_inset
 
-) we added to control the fiber/foil separation.
- Without it, we spent hours attempting to position the fiber for proper
- fringe contrast.
+) we added to control the fiber-tip/foil separation.
+ Without it, we spent hours attempting to position the fiber by hand for
+ proper fringe contrast.
  As the fiber-foil separation is on the order of tens of microns, it is
- a very delicate operation.
- On one somber occasion, we punctured a foil with the fiber tip.
+ a delicate operation.
+ On one somber occasion, we punctured a foil with the fiber tip, requiring
+ a new foil and complete realignment/cleaning of the experiment.
  The current system is simple and suffers the backlash and imprecision inherent
  in servo actuation, but it is sufficient to gain useful control over fringe
  contrast.
@@ -20706,8 +21122,8 @@ Early in the experiment (2007-8), we uncovered an unexpected systematic
 \end_inset
 
 m.
- This matches the encoder grating spacing on the Micro-e encoder used to
- read out the attractor position.
+ This matches the encoder grating spacing on the Micro-E optical encoder
+ used to monitor the attractor position.
  We had operated for several months before noticing this effect; it is quite
  natural when hunting for a signal with typical length 
 \begin_inset Formula $\sim50$
@@ -20746,11 +21162,11 @@ This effect drove us to make two major changes:
 \end_layout
 
 \begin_layout Itemize
-Pneumatic attractor position metrology: This effect made it clear that electrica
-l pickup within the apparatus could become a concern.
- By moving to the precision pressure gauge as a way of ascertaining the
- attractor's position, it was possible to do a complete end-to-end test
- for any electrical pickup associated with the attractor (
+Pneumatic attractor position metrology: This systematic effect made it clear
+ that electrical pickup within the apparatus could become a concern.
+ By using to the precision pressure gauge as a way of ascertaining the attractor
+'s position, it was possible to do a complete end-to-end test for any electrical
+ pickup associated with the attractor (Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Attractor-position-control"
@@ -20759,7 +21175,8 @@ reference "sub:Attractor-position-control"
 
 ).
  Once the pressure gauge was shown to be a useable encoder by intercomparison
- with the position encoder, the position encoder was turned off and disconnected.
+ with the position encoder, the position encoder was turned off and disconnected
+ for the duration of the experiment.
 \end_layout
 
 \begin_layout Itemize
@@ -20775,7 +21192,7 @@ What is the form of the gravitational force law at short distance
 \begin_inset Quotes erd
 \end_inset
 
- through the techniques of 
+ through the techniques of Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Force-law-inversion"
@@ -20797,7 +21214,14 @@ MHz, with delicate grounding requirements.
  and unshielded leads extend for several inches within the vacuum chamber
  between the autocollimator's position-sensitive photodiode outputs and
  the high-gain transimpedance preamplifiers.
- This is a major target for future upgrades of the experiment.
+ This is a major target for future upgrades of the experiment (Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Autocollimator-upgrades"
+
+\end_inset
+
+).
  It is straightforward to shorten the leads by an order of magnitude and
  implement full electrical shielding for the photodiode and preamplifiers.
  
@@ -20829,9 +21253,19 @@ reference "fig:The-Capacitor-Systematic"
 \end_layout
 
 \begin_layout Standard
-It was decided early in the experiment (~2007-8) to ground the pendulum
- directly to the internal grounding block, giving a clear reference for
- ground.
+It was decided early in the experiment (
+\begin_inset Formula $\sim$
+\end_inset
+
+2007-8) to ground the pendulum directly to the internal grounding block,
+ which defines our experiment's electrical ground (Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Grounding"
+
+\end_inset
+
+).
  Furthermore, it was observed early on that the addition of 0.1-10
 \begin_inset space ~
 \end_inset
@@ -20842,8 +21276,9 @@ M
 
  resistors to the grounding of the attractor and foil gave improved noise
  and killed off any inexplicable signals we saw.
- This was very early in our understanding of the instrument; it felt like
- fine-tuning, but as we frequently run other experiments with 10-100
+ This was very early in our understanding of the instrument.
+ It felt like fine-tuning, but both because we routinely operate torsion
+ balances with 10-100
 \begin_inset space ~
 \end_inset
 
@@ -20851,30 +21286,30 @@ k
 \begin_inset Formula $\Omega$
 \end_inset
 
- resistors in series with the torsion fiber to protect it from electric
+ resistors in series with the torsion fiber as protection from electric
  transients and because the equilibration time of even a nanofarad capacitance
  across a megaohm resistor is 
 \begin_inset Formula $>10^{5}$
 \end_inset
 
- times shorter than the signal frequency, we left them in and turned to
- more-pressing concerns.
+ times shorter than the signal period, we left the resistors in and turned
+ to more-pressing concerns.
 \end_layout
 
 \begin_layout Standard
-Later, the sense that we had fine-tuned the apparatus and that at higher
- frequencies, the foil and attractor were effectively floating crept back
- in, and we decided that it would be better to bypass the resistors with
- large capacitors.
+Later, the worries that we had fine-tuned the apparatus and that at higher
+ frequencies, the foil and attractor were effectively electrically floating
+ resurfaced, and we decided that it would be wise to bypass the resistors
+ with large capacitors.
  We made that change and proceeded for years to refine the instrument.
  
 \end_layout
 
 \begin_layout Standard
-In 2012, the experiment was not blind, and an apparent inverse-square-law-violat
-ing signal was clearly resolved.
+In 2012, prior to our science campaign, the experiment was not blind, and
+ an apparent inverse-square-law-violating signal was clearly resolved.
  The signal was too large to have been an ISL violation, as prior experiments
- would have trivially resolved it, too.
+ would have trivially resolved it.
  At a suggestion from Krishna Venkateswara, the wires leading to the capacitors
  were clipped (at the same time we altered the lock-in frequency and, alas,
  separately disconnected the contact-potential control system), and the
@@ -20882,13 +21317,14 @@ ing signal was clearly resolved.
  In addition, the instrumental performance improved.
  Re-introducing the capacitors restored the signal, and shorting out the
  resistor with a wire also yielded a large signal.
- With no other reason to believe that the experiment had a problem, we began
- the science run reported here shortly thereafter, with the capacitors removed.
+ With no other reasons to believe that the experiment had a problem, we
+ began the science run reported in this thesis shortly thereafter, with
+ the capacitors removed.
 \end_layout
 
 \begin_layout Standard
 Our systematic tests to show that the science signal appears to be largely
- independent of the choice of resistor value are described in 
+ independent of the choice of resistor value are described in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Resistor-values"
@@ -20961,7 +21397,7 @@ reference "fig:The-Capacitor-Systematic"
 
  will squelch the effect, which we believe the resistor does.
  Bridging the resistor with a large capacitor provides an alternate path
- for high-frequency currents, restoring the resonator's 
+ for high-frequency alternating currents, restoring the resonator's 
 \begin_inset Formula $Q$
 \end_inset
 
@@ -20972,7 +21408,7 @@ reference "fig:The-Capacitor-Systematic"
 \begin_layout Standard
 Identifying the resonance gives us a culprit, but not a mechanism.
  Our best guess as to how a tunable resonance might influence the torque
- signal follows similar reasoning as in 
+ signal follows similar reasoning as in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Encoder-narrative"
@@ -21001,11 +21437,11 @@ MHz realm; easily in range of the expected LC resonant frequencies.
 \end_layout
 
 \begin_layout Standard
-In addition, the presence of the foil alllows a second possible, though
- less likely, coupling mechanism.
- Any mechanical resonance or displacement that could be driven by an increased
- effective attractor-foil or pendulum-foil voltage could also appear as
- a false torque.
+In addition, the presence of the foil allows a second possible, though less
+ likely, coupling mechanism.
+ Any mechanical resonance or displacement that could be driven by a resonance-en
+hanced effective attractor-foil or pendulum-foil voltage could also appear
+ as a false torque.
  
 \end_layout
 
@@ -21027,7 +21463,7 @@ name "chap:Systematic-Tests"
 \begin_layout Standard
 This chapter describes individual systematic tests to give us an approximate
  picture of this measurement's systematic susceptibilities.
- As described in 
+ As described in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Model-Comparison"
@@ -21128,7 +21564,7 @@ XXXMI: algorithm me!
 \end_inset
 
 .
- The circuit is modelled as an LCR resonator, see 
+ The circuit is modelled as an LCR resonator, see Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Capacitor-Systematic"
@@ -21611,7 +22047,7 @@ Magnetic systematic test results.
 
 T, as measured by rotating an AK8975 smartphone magnetometer 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "MagnetometerDatasheet"
 
 \end_inset
@@ -21925,7 +22361,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../systematics/thermal/plots/aveTempPlot.eps
-	width 50text%
+	width 80text%
 
 \end_inset
 
@@ -21958,12 +22394,20 @@ Rot-Wash
  right (but not top).
  The baseplate thermistor is screwed into the large aluminum baseplate internal
  to the apparatus.
- Spikes prior to day ~1338 are from heater-verification tests.
+ Spikes prior to day 
+\begin_inset Formula $\sim$
+\end_inset
+
+1338 are from heater-verification tests.
  The large step (red above blue) is when the heater on leg 1 was turned
  on.
  The second step (blue above red) has the heater on leg 2 turned on, and
  the heater on leg 1 turned off.
- At the end of that sequence (~day 1358), both heaters were turned off.
+ At the end of that sequence (
+\begin_inset Formula $\sim$
+\end_inset
+
+day 1358), both heaters were turned off.
  The sensors are hand calibrated to match each other and the exterior sensors
  prior to day 1338.
  Reliability of this calibration is low, but sufficient, as the important
@@ -21991,7 +22435,7 @@ Temperature variation at attractor frequency
 
 \begin_layout Standard
 For runs beginning with 
-\begin_inset Formula $\sim3217$
+\begin_inset Formula $\sim\#3217$
 \end_inset
 
 , the experiment was operated with wireless sensors reading out the resistance
@@ -22070,10 +22514,10 @@ non-conservative
 .
  In this analysis, we do not explicitly search for this effect, but it is
  possible to do.
- A much weaker signal for/defense against a non-conservative torque curve
- is the intrisic expansion of the distribution of the bootstrapped best-fit
- points in searches for new physics; biased sampling of short/long strokes
- can, however, lead to too-good fit results.
+ A weaker signal-for or defense-against a non-conservative torque curve
+ is the automatic intrinsic inflation of the distribution of the bootstrapped
+ best-fit points in searches for new physics; biased sampling of short/long
+ strokes may, however, lead to inaccurate fit results.
 \end_layout
 
 \begin_layout Standard
@@ -22186,7 +22630,7 @@ m wavelength, copper is more than 95% reflective.
 \begin_inset Formula $\pm$
 \end_inset
 
-XXXRC
+XXXRC.
 \end_layout
 
 \begin_layout Section
@@ -22243,6 +22687,14 @@ XXXRC - Krishna would like to see a square-waved blinded sensitivity to
  
 \end_layout
 
+\begin_layout Section
+Systematic error accommodation table
+\end_layout
+
+\begin_layout Standard
+XXXRC
+\end_layout
+
 \begin_layout Chapter
 Foil Systematic
 \end_layout
@@ -22250,8 +22702,8 @@ Foil Systematic
 \begin_layout Standard
 The foil systematic measurement is discussed separately from the other systemati
 c uncertainties for three reasons: the analysis is very different, the outcome
- is important, and, as a signal is clearly resolved, a correction must be
- made.
+ is important, and, as a foil displacement is resolved, the effect must
+ be handled with care.
 \end_layout
 
 \begin_layout Section
@@ -22266,7 +22718,8 @@ name "sec:Data/Fit"
 \end_layout
 
 \begin_layout Standard
-We used the foil measurements that were in-range as described in 
+We used the foil measurements that were in-range as described in Section
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "par:A-conservative-approach"
@@ -22274,7 +22727,7 @@ reference "par:A-conservative-approach"
 \end_inset
 
 .
- After the lock-in/cut procedure (
+ After the lock-in/cut procedure (Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Signal-Extraction"
@@ -22344,7 +22797,7 @@ Raw foil displacement triangle plot.
 As we do not have continuous full-sensitivity coverage of the entire measurement
  with the interferometer, we must build a model of the foil displacement
  as a function of attractor position and then apply it (with known uncertainties
-) via the foil-to-torque transfer function (
+) via the foil-to-torque transfer function (Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Pendulum-Foil-coupling"
@@ -22353,7 +22806,8 @@ reference "sub:Pendulum-Foil-coupling"
 
 ) to generate the foil-related torque-difference expected for attractor-position
  pair.
- To be conservative, we use the piecewise-linear technique outlined in 
+ To be conservative, we use the piecewise-linear technique outlined in Section
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Force-law-inversion"
@@ -22403,7 +22857,7 @@ Interferometer fit.
  This fits are used individually for subtraction in the bootstrapped global
  Yukawa fits.
  XXXRC - What about chopping out another 20 microns in short-cut in order
- to completely dump the innner systematic.
+ to completely dump the inner systematic.
  Feels good,right?
 \end_layout
 
@@ -22571,9 +23025,6 @@ The upper two fields in the following figures will be most familiar to those
  Along the vertical axis is its strength relative to gravity.
  Each circular point in the plot is a best-fit point from the bootstrapped
  fit.
- Each diagonal cross point is the location of a fit's random seed.
- Vertical/horizontal cross points are the location of injected signals,
- to show that we can recover Yukawa signals.
  For perspective relative to the best results in the field, the exclusion
  limits of Kapner and Cook 
 \begin_inset CommandInset citation
@@ -22610,19 +23061,10 @@ Finally, we show the reduced
 
  for each fit.
  In diagonal crosses, we show all fits.
- As the fitter has a tendency to be trapped in local minima immediately
- after initialization, we drop any points that converge in fewer than 15
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMI automate me!
-\end_layout
-
-\end_inset
-
- iterations of the fit.
+ As past fitting algorithms had a tendency to be trapped in local minima
+ immediately after initialization, we drop any points that converge in fewer
+ than 5 iterations of the fit, which applies to essentially none of the
+ simulated-annealing fits.
  Points surviving that cut are shown in horizontal/vertical crosses.
  Points surviving all cuts, including minimum and maximum chi-squared (horizonta
 l lines) are shown as circles.
@@ -22636,13 +23078,68 @@ e systematic uncertainties.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
+\begin_inset Float figure
+wide false
+sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset CommandInset include
-LatexCommand input
-filename "../bootstrap/output/makeSymFigure.tex"
+\align center
+\begin_inset Graphics
+	filename ../bootstrap/output/bootstrapYukawa.Sysa0l0.0002slop0SysMinus.dat.grav.eps
+	width 80page%
+	rotateAngle 270
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Yukawa exclusion limits for gravity alone
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../bootstrap/output/bootstrapYukawa.Sysa0l0.0002slop0SysNull.dat.grav.eps
+	width 80page%
+	rotateAngle 270
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Yukawa exclusion limits for gravity alone without foil systematic subtraction
+\end_layout
 
 \end_inset
 
@@ -22655,9 +23152,34 @@ filename "../bootstrap/output/makeSymFigure.tex"
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "../bootstrap/output/makeSymFigureSystematics.tex"
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../bootstrap/output/bootstrapYukawa.Sysa0l0.0002slop0SysMinus.dat.eps
+	width 80page%
+	rotateAngle 270
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Yukawa exclusion plot, showing best-fits for all systematic effects
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -22665,20 +23187,16 @@ filename "../bootstrap/output/makeSymFigureSystematics.tex"
 \end_layout
 
 \begin_layout Subsection
-Other models:
+Other models
 \end_layout
 
 \begin_layout Standard
 With these data, it is possible to place useful limits upon other inverse-square
  law modifications such as a power-law potential, Fat Gravitons, Chameleons,
  Unparticles, and more.
- For each scenario, a new approach must be taken to properly address systematic
- uncertainties.
+ For each distinct scenario, a new approach should be taken to conservatively
+ address systematic uncertainties.
  For this reason, this thesis limits its results to Yukawa potentials.
-\end_layout
-
-\begin_layout Section
-Exclusion plots
 \end_layout
 
 \begin_layout Chapter
@@ -22699,13 +23217,13 @@ Lessons learned
 
 \begin_layout Standard
 Scott Schell earned his spot in the acknowledgements when he told a backcountry-
-ski class this: 
+ski class, 
 \begin_inset Quotes eld
 \end_inset
 
-I think the major difference between a professional and an amateur is whether
- or not, at the end of the day, they ask the question, `what have I learned
- today'?
+I think the major difference between an expert and an amateur is whether
+ or not, at the end of the day, they ask and answer the question, `what
+ have I learned today?'
 \begin_inset Quotes erd
 \end_inset
 
@@ -22733,7 +23251,11 @@ The PlateWash experiment began as an attempt to make a lightning strike
 \begin_inset Formula $\mu$
 \end_inset
 
-m in ~2008, and reach 
+m in 
+\begin_inset Formula $\sim$
+\end_inset
+
+2008, and reach 
 \begin_inset Formula $20$
 \end_inset
 
@@ -22762,7 +23284,7 @@ m is evidence that we made a mistake, either in our estimate of our capability,
  in our execution, or in both.
  We made mistakes in both.
  I do not mean to say that the construction and execution of this experiment
- is not an acheivement, it is, but we will repeat our mistakes if we do
+ is not an achievement, it is, but we will repeat our mistakes if we do
  not learn from them.
 \end_layout
 
@@ -22772,13 +23294,14 @@ The field of avalanche safety, and professional risk management more generally,
 y.
  In the case of avalanches, if you underestimate your uncertainty more than
  a few times, you die.
- If you overestimate your uncertainty, you never get to play in the mountains.
- For physicists, the situation is similar; if we report a violation of Newton's
- Inverse Square Law Of Gravitation, and it's not true, our careers are damaged,
- if not ended.
+ If you overestimate your uncertainty, you never get to experience the joy
+ found among mountains.
+ For physicists, the situation is similar; if we report a violation of the
+ vaunted Newton's Inverse Square Law Of Gravitation, and it's not true,
+ our careers are damaged, if not ended.
  If we cower in fear of uncertainty, we'll never learn anything new about
  Nature.
- There is value to be had for physicists who study risk management.
+ Risk-management tools have real value for physicists.
 \end_layout
 
 \begin_layout Standard
@@ -22800,15 +23323,6 @@ key "mccammon2002evidence,atkins2000human"
  safety concerns.
  Everyone has blind spots, sometimes exacerbated by our environments.
  For us, as physicists, I believe it is the same.
- For this reason, I've broken out a 
-\begin_inset Quotes eld
-\end_inset
-
-social
-\begin_inset Quotes erd
-\end_inset
-
- subsection.
 \end_layout
 
 \begin_layout Subsection
@@ -22827,7 +23341,7 @@ name "sub:0-tunable-parameters,"
 \end_layout
 
 \begin_layout Standard
-Our research group has made its name with Equivalence Principle tests 
+Our research group made its name with Equivalence Principle tests 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "schlamminger2008test"
@@ -22872,7 +23386,7 @@ ties.
 \begin_layout Standard
 In our group's hole and wedge-pendulum experiments 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "Cook2013,2007PhRvL..98b1101K,2007PhRvL..98m1104A,2004PhRvD..70d2004H,2001PhRvL..86.1418H"
 
 \end_inset
@@ -22916,10 +23430,10 @@ In the PlateWash experiment, things are even more complicated.
  While this extra dimension of flexibility gives us extra discriminating
  power between specific inverse-square law violations, it also requires
  that we have an even better model of each systematic effect.
- With the myriad choices of start and end positions that we used in this
- experiment, ascertaining both our sensitivity to a specific inverse square
- law signal and our uncertainties became a real challenge.
- The methods outlined in 
+ With the intentionally myriad choices of start and end positions that we
+ used in this experiment, ascertaining both our sensitivity to a specific
+ inverse square law signal and our uncertainties became a real challenge.
+ The methods outlined in Sections 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Model-Comparison"
@@ -22935,7 +23449,7 @@ reference "sec:Force-law-inversion"
 
  now allow us to do this relatively efficiently, but it can be challenging
  to extract or judge a physics result by eye.
- The two-parameter approach is much more powerful for hunting down instrumental
+ The two-parameter approach is powerful for discriminating against instrumental
  effects, but the loss in clarity is substantial.
 \end_layout
 
@@ -22960,7 +23474,8 @@ key "2007PhRvL..98t1101T"
  lever arm at the possible expense of larger Newtonian gravity backgrounds.
  The scaling laws for proximity-enhanced noise with distance/area are strongly
  dependent upon the underlying phenomena (patch fields, gas molecule rearrangeme
-nt, etc), which are, at best, partially understood.
+nt, proximity-enhanced gas damping, etc), which are, at best, partially
+ understood.
  
 \end_layout
 
@@ -22998,7 +23513,7 @@ The decision to simultaneously remove both the bypass capacitors and the
  the overall measurement through decreased noise and decreased pendulum-foil
  coupling.
  Indeed, the most important single upgrade of the experiment will be to
- restore those systems.
+ reconnect those systems.
  
 \end_layout
 
@@ -23006,8 +23521,7 @@ The decision to simultaneously remove both the bypass capacitors and the
 It remains important for us to determine the mechanism by which the capacitor-mo
 dulated resonance couples to the pendulum/pendulum readout.
  Addressing that coupling, which probably resides in the autocollimator
- pre-amplifier, may yield improved noise.
- 
+ pre-amplifier, may yield improved noise and decreased systematic sensitivity.
 \end_layout
 
 \begin_layout Subsection
@@ -23087,7 +23601,7 @@ Blitzkreig vs Campaign
 
 \begin_layout Standard
 While it was first imagined as a short-range equivalence principle test,
- and again as a competing design idea to the early Eot-Wash 10-hole pendulum
+ and again as a competing design idea to the early Eöt-Wash 10-hole pendulum
  design, PlateWash, as it exists now, was sold in 2006-7 as a chance to
  jump ahead of the existing technology.
 \end_layout
@@ -23099,18 +23613,18 @@ Our action mirrored this blitzkreig philosophy.
  We put off complete solutions to systematic concerns in favor of estimates
  and a promise to tie up loose ends when the measurement was complete.
  When the experiment was first assembled, our first day of data easily surpassed
- the first Eot-Wash short-range experiments; we were on our way, led by
+ the first Eöt-Wash short-range experiments; we were on our way, led by
  the huge potential of PlateWash's efficient design.
  
 \end_layout
 
 \begin_layout Standard
-Our committment to the lightning-stab approach, where we would get a great
- measurement on our first try, led us astray; the first stabs didn't work.
+Our committment to the lightning-strike approach, where we would get a great
+ measurement on our first try, led us astray; the first strikes didn't work.
  Complete focus on delivering a respectable result instead of iteratively
  delivering coarse but reliable results slowed our progress.
  Without building a foundation of complete measurements on which we could
- stand, grow, and improve, we condemend ourselves to inefficiency.
+ stand, grow, and improve, we condemned ourselves to inefficiency.
 \end_layout
 
 \begin_layout Standard
@@ -23170,6 +23684,15 @@ l idea; one where it is obviously free from large classes of systematic
  In the early days of those experiments, perhaps no blind will be requisite.
 \end_layout
 
+\begin_layout Standard
+As this measurement comes to a close, while the blind remains stressful,
+ it is also refreshing.
+ We have done what we can to mitigate known systematic effects.
+ The result, whatever it will be, is as unaffected by our own biases as
+ we could manage.
+ If our measurement is to be repeated, it should be performed blind.
+\end_layout
+
 \begin_layout Subsection
 Social
 \end_layout
@@ -23224,7 +23747,7 @@ Contact potential
 \end_layout
 
 \begin_layout Standard
-As noted in 
+As noted in Sections 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Contact-potential-noise"
@@ -23243,8 +23766,8 @@ reference "par:Connection-to-contact"
  The elevated electrical potential difference between the pendulum and the
  foil is probably responsible for the level of swing coupling we see, limits
  the distance of closest approach between the pendulum and the foil, and
- surely enhanced the pendulum/foil coupling that forced us to make a systematic
- correction (
+ surely enhanced the pendulum/foil coupling that forced us to consider a
+ systematic correction (Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Subtraction-Foil"
@@ -23253,8 +23776,8 @@ reference "sec:Subtraction-Foil"
 
 ).
  In addition, the presence of a possible foil/attractor contact potential
- may have led to the short-range attractor foil coupling that makes the
- pendulum/foil systematic correction so daunting.
+ may have led to the observable short-range attractor foil coupling that
+ makes a pendulum/foil systematic correction so daunting.
  
 \end_layout
 
@@ -23272,26 +23795,29 @@ Pendulum Battery
 \end_layout
 
 \begin_layout Standard
-As we explained earlier (Figure 
+As we showed with Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Evidence-for-a-pendulum-battery"
 
 \end_inset
 
-), it is quite probable that the pendulum had its own trouble with an irreducibl
-e on-board battery, formed from the contact of the dissimilar metals of
- the pendulum body and the dense inlays.
- As measured, this voltage may have contributed ~100
+, it is probable that the pendulum had its own trouble with an irreducible
+ on-board battery, formed from the contact of the dissimilar metals of the
+ pendulum body and the dense inlays.
+ Alternatively, it is also possible that different regions of the foil surface
+ held slightly different effective electrical potential.
+ Either way, as measured, this voltage may have contributed 
+\begin_inset Formula $\sim100$
+\end_inset
+
+
 \begin_inset space ~
 \end_inset
 
 mV to the contact potential.
- Alternatively, it is also possible that different regions of the foil surface
- held slightly different effective electrical potential.
- Either way, a monolithic pendulum with a much-smaller area of closest approach,
- limited only to the active mass, may yield substantially better noise performan
-ce.
+ A monolithic pendulum with a much-smaller area of closest approach, limited
+ only to the active mass, may yield substantially better noise performance.
  If the dense/close side of the pendulum is sufficiently thick, it is also
  possible to imagine attaching a dense protruding 
 \begin_inset Quotes eld
@@ -23308,8 +23834,11 @@ inlay
 \end_layout
 
 \begin_layout Standard
-These approaches are only possible with the simultaneous use of a foil interfero
-meter.
+These approaches are 
+\bar under
+only
+\bar default
+ possible with the simultaneous use of a foil interferometer.
  The intentional loss of symmetry inherent to these designs requires that
  even more care be given to the foil's motion.
  While a tuned contact potential should limit the electrostatic effects
@@ -23340,6 +23869,13 @@ ttery reducing design mentioned above.
 
 \begin_layout Subsubsection
 Autocollimator
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Autocollimator-upgrades"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -23357,7 +23893,7 @@ The autocollimator used in this iteration of the experiment was a coarse
 \end_layout
 
 \begin_layout Standard
-Furthermore, the encoder systematic (
+Furthermore, the encoder systematic (Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Encoder-narrative"
@@ -23377,8 +23913,8 @@ cm in length.
  While it would require considerable testing to be trustworthy, the benefits
  of full-time encoder operation would be considerable.
  The attractor could operate in feedback, decreasing the positioning scatter
- by at least an order of magnitude, and there would be no need to use a
- pressure gauge as a position readout.
+ by at least an order of magnitude, and there would be no need to use an
+ air pressure gauge as a position monitor.
  
 \end_layout
 
@@ -23387,7 +23923,7 @@ UV LED
 \end_layout
 
 \begin_layout Standard
-Our understanding of exactly what physical mechanisim increases the noise
+Our understanding of exactly which physical mechanism increases the noise
  in the torsion pendulum at short pendulum/foil separation is minimal.
  One possiblity is that the pendulum is being buffeted by outgassing from
  the foil, perhaps enhanced by squeeze-film effects.
@@ -23422,7 +23958,7 @@ Interferometer improvements
 \end_layout
 
 \begin_layout Standard
-As described in 
+As described in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Interferometer-noise"
@@ -23432,7 +23968,7 @@ reference "sub:Interferometer-noise"
 , the interferometer may be limited by polarization-related noise.
  If we were to switch to entirely polarization-maintaining fiber, it's possible
  that the pickup and drift we see could be reduced.
- 
+ We have begun to acquire the necessary fiber components to do so.
 \end_layout
 
 \begin_layout Standard
@@ -23441,7 +23977,7 @@ g for the foil systematic if we could hold the interferometer in its sensitive
  region of operation for the duration of the experiment.
  That could be accomplished by physically moving the interferometer fiber
  tip with slow-control feedback or by changing the laser temperature enough
- to shift the laser frequency.
+ to shift the laser wavelength.
  The new infrared laser is extremely resistant to temperature change, which
  may force us to develop a mechanism of moving the fiber tip in a smooth
  and controllable fashion.
@@ -23453,9 +23989,9 @@ g for the foil systematic if we could hold the interferometer in its sensitive
 It has been suggested that we should replace the 90/10 coupler with a fiber
  circulator to increase the amount of light that reaches the detector by
  more than a factor of ten.
- Early experiments by Krishna Venkateswara suggest that a circulator will
- be a drop-in replacement for the existing coupler and will yield increased
- sensitivity.
+ Early experiments on tilt-meter interferometer test apparatus by Krishna
+ Venkateswara suggest that a circulator will be a drop-in replacement for
+ the existing coupler and will yield increased sensitivity.
  
 \end_layout
 
@@ -23481,9 +24017,36 @@ Much of the difficulty in the data analysis stemmed from the use of a large
  the analyses of both systematic uncertainty and potential new physics would
  have been drastically simplified.
  The increased immunity to position-related systematic effects may not have
- been worth the massive cost in speed.
- While blindness is still a challenge, it's not impossible to blind such
- a measurement.
+ been worth the massive cost in complexity.
+ While blindness is still a challenge, it's equally possible to blind such
+ a few-position measurement.
+\end_layout
+
+\begin_layout Subsubsection
+Interleaved systematic studies
+\end_layout
+
+\begin_layout Standard
+The strategy of taking science data as quickly and comprehensively as possible
+ and then following up with systematic studies was very pragmatic.
+ Future measurements would benefit from interleaving systematic studies
+ with science measurements (see 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "baron2014order"
+
+\end_inset
+
+ for a beautiful and extreme example).
+ Each cut of science data could be immediately followed by repeating the
+ cut with a varied systematic parameter (magnetic field, interferometer
+ light power, attractor bias voltage, etc.).
+ This isn't possible with all sources of systematic uncertainty (imposed
+ temperature gradients take thousands of seconds to equilibrate), but it
+ would relax the requirement that the instrument remain untouched and stable
+ for months at a time.
+ In addition, in-line systematic studies offer the opportunity to monitor
+ the expected sensitivity of an entire measurement campaign in real time.
 \end_layout
 
 \begin_layout Subsubsection
@@ -23492,7 +24055,8 @@ Blindness
 
 \begin_layout Standard
 Now that we have completed an entire measurement cycle with a blind measurement,
- we must revisit whether or not a blind has been helpful.
+ we must revisit as a group whether or not a blind has been helpful.
+ I contend that it has been essential to producing an unbiased result.
  Whether we choose to go blind for a second iteration or not is perhaps
  less important than whether we 
 \bar under
@@ -23511,16 +24075,16 @@ Octave has been a good and reliable tool throughout this work.
  While the Octave project continues to improve and work toward drop-in compatibi
 lity with MATLAB, much of the open-source effort has moved into the SciPy
  packages for Python.
- Writing future analysis code in Python will make it more readable, more
- accessible, and permit access to mathematical libraries that are audited
- by many more users.
+ Writing future analysis code in Python will make it more widely readable
+ and permit access to mathematical libraries that are audited by many more
+ users.
  
 \end_layout
 
 \begin_layout Standard
 A particular sticking point is our reliance upon the excellent Gnuplot plotting
  package.
- Information occasionally flows out of Octave, gets plotted in or analyzed
+ Data often flows out of an Octave program, gets plotted in or analyzed
  a little in Gnuplot, and then is no longer accessible to the tools in Octave.
  At least a man-month has been spent finding ways to smoothly move data
  from one to the other and back.
@@ -24690,6 +25254,37 @@ If
 \[
 \sigma_{F_{x}}^{2}=Q^{2}\sum_{i}\alpha_{i}^{2}\lambda_{i}^{4}T(\lambda_{i})^{2}\sigma_{B_{i}}^{2}e^{-2\bar{x}/\lambda_{i}}
 \]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Yukawa Fit Injections
+\end_layout
+
+\begin_layout Standard
+In this appendix we show, for completeness, the response of the global fitting
+ algorithm to signals injected into the science data.
+ Vertical/horizontal cross points are the location of injected signals,
+ to show that we can recover Yukawa signals.
+ These plots are of the same type as those described in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Yukawa-Potential-Constraints"
+
+\end_inset
+
+, but for many different systematic signal injections and with the foil-systemat
+ic signal added, subtracted, and left uncorrected.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "../bootstrap/output/makeSymFigureSystematics.tex"
 
 \end_inset
 
