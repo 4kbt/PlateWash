@@ -10,6 +10,8 @@ end
 oTor =  [wTorque /pi*NyquistFrequency, abs(rTorque )];
 oSens = [wSensors/pi*NyquistFrequency, abs(rSensors)];
 
+fTorqueTranspose = transpose(fTorque);
+
 save 'run3147filterResponseTorque.dat'  oTor
 save 'run3147filterResponseSensors.dat' oSens
-save 'run3147filterTimeDomain.dat' fTorque
+save 'run3147filterTimeDomain.dat' fTorqueTranspose
