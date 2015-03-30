@@ -15851,7 +15851,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/charlie/trialEotwash/Eotwash/runAnalysis/supportingPlots/timingPlot.eps
+	filename ../runAnalysis/supportingPlots/timingPlot.eps
 	width 60page%
 	rotateAngle 270
 
