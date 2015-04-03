@@ -36,7 +36,7 @@ LYX	:= $(LYXINTERACT) -batch --export "pdf2" -dbg info,latex
 	@echo $(OCT)
 	@echo $(MLIB)
 
-PARALLEL := -j 4
+PARALLEL := -j 8 
 
 SINGLEQUOTECUTTER := sed -e "s/^.*'\(.*\)'.*$$/\1/"
 
