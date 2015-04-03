@@ -4,7 +4,7 @@ CURRENTDIR := $(shell pwd)
 PATHINJECT := tmp/pathinject
 
 dissertation: gitlog.log
-	$(if $(shell ls data), ,$(shell ln -s /mnt/ssd/PWData/ data))
+	$(if $(shell ls data), ,$(shell ln -s ~/PWData/ data))
 	$(shell bin/countXXXs.sh thesis/thesis.lyx >> data/xxxCount.dat)
 	$(shell bin/commitPlot.sh > data/gitCommitTimes.dat)
 	$(shell sed -i  "s|HOMEDIR := .*|HOMEDIR := $(CURRENTDIR)/|" Makefile.inc)
