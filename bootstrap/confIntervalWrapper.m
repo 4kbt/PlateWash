@@ -19,7 +19,7 @@ end
 
 data = [d(:,2) d(:,3)]; 
 
-minBinNum = NBinConfInterval; %From FixedParameters
+minBinNum = max( [7 ceil( sqrt( rows(data) ) ) ] ) ; %From FixedParameters
 
 cI = confidenceIntervals( data, minBinNum, "TurnerSmoothing", 0);
 

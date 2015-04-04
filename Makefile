@@ -22,6 +22,9 @@ dissertation: gitlog.log
 gitlog.log: 
 	git log > gitlog.log
 
+debianPackages.txt:
+	dpkg-query -l > $@
+
 clean:
 	$(MAKE) -C mlib clean
 	$(MAKE) -C calibration clean

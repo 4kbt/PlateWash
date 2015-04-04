@@ -68,7 +68,7 @@ yukawaFitTest : $(PREREQUISITES)
 
 #To improve build speed, commenting bootstraps.
 #sysTest : yukSysFitA yukSysFitB yukSysFitC yukSysFitD yukSysFitE  yukSysFitF yukSysFitG yukSysFitH yukSysFitI yukawaSystematicsPlots.sh
-sysTest : yukSysFitA yukSysFitB yukSysFitC yukawaSystematicsPlots.sh
+sysTest : yukSysFitA yukSysFitB yukSysFitC yukSysFitI yukawaSystematicsPlots.sh
 	./yukawaSystematicsPlots.sh $(HOMEDIR)
 	
 output/makeSymFigureSystematics.tex: sysTest generatePlottingTeXSystematics.sh output

@@ -186,7 +186,7 @@ I thank the entire Eöt-Wash group, the National Science Foundation, and
 \begin_layout Standard
 When a worthwhile project takes a decade, you'll find that a village full
  of wonderful people have helped along the way.
- What follows is an incomplete list of the many people and orgianizations
+ What follows is an incomplete list of the many people and organizations
  who have made significant direct or indirect contributions to this measurement.
  Those CENPA members highlighted in bold worked directly on the instrument
  or on development work for the instrument.
@@ -195,7 +195,8 @@ When a worthwhile project takes a decade, you'll find that a village full
 \end_layout
 
 \begin_layout Standard
-Alfred Hagedorn, Alfred Hagedorn III, Ann Nelson, Barb Fulton, 
+Alfred Hagedorn, Alfred Hagedorn III, Alice Crawford, Ann Nelson, Barb Fulton,
+ 
 \emph on
 Blayne Heckel
 \emph default
@@ -203,8 +204,12 @@ Blayne Heckel
 \emph on
 Claire Cramer
 \emph default
-, David Hyde, David Kettler, Debra Nastaj, Doug Will, Eberhard Bodenschatz,
- 
+, 
+\emph on
+Dan Kapner
+\emph default
+, David Hyde, David Kettler, Debra Nastaj, Don Hartill, Doug Will, Eberhard
+ Bodenschatz, 
 \emph on
 Eric Adelberger
 \emph default
@@ -212,7 +217,7 @@ Eric Adelberger
 \series bold
 Hank Simons
 \series default
-, 
+, James Napolitano, 
 \emph on
 Jason Detwiler
 \emph default
@@ -230,7 +235,8 @@ Jim Elms
 \emph on
 John Greendeer-Lee
 \emph default
-, Juliet Lovejoy, Kate Higgins, Keath Marx, 
+, Jon McCoy, Josh Long, Juliet Lovejoy, Karen Daniels, Kate Higgins, Keath
+ Marx, 
 \series bold
 Kipp Krause
 \series default
@@ -255,8 +261,8 @@ Matt Dietrich
 Matt Turner
 \series default
 \emph default
-, Michael Chen, Michael Famulare, MicroE, Monday Meeting, Myrna Hagedorn,
- Nichole Fernkes, 
+, Michael Chen, Michael Famulare, Michelle Wang, MicroE, Monday Meeting,
+ Myrna Hagedorn, Nichole Fernkes, 
 \emph on
 Nikolai Tolich
 \emph default
@@ -268,17 +274,21 @@ Peter Nelson
 \series bold
 Prashant Emani
 \series default
-, Raman Sundrum, Rembar, Sarah Dasher, 
+, Raman Sundrum, Rembar, Richard Wiener, Sarah Dasher, 
 \series bold
 \emph on
 Scott Pollack
 \series default
 \emph default
-, Scott Schell, Silas Wild, Sky Sjue, 
+, Scott Schell, Shawn Tanner, Silas Wild, Sky Sjue, 
 \series bold
 \emph on
 Stephan Schlamminger
 \series default
+\emph default
+, 
+\emph on
+Svenja Fleischer
 \emph default
 , Susan Ashlock, Tanja Bode, 
 \emph on
@@ -290,9 +300,7 @@ Todd Wagner
 \emph default
 , Tracy Lovejoy, Victoria Clarkson, and 
 \emph on
-Will Terrano
-\emph default
- 
+Will Terrano.
 \end_layout
 
 \begin_layout Standard
@@ -1402,6 +1410,15 @@ key "adelberger2003tests,antoniadis2011short,NewmanBoyntonReview2009"
 \end_inset
 
 .
+ Of timely note is 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "murata2015review"
+
+\end_inset
+
+, which features a comprehensive and uniform accounting of the field's modern
+ history.
 \end_layout
 
 \begin_layout Standard
@@ -1706,6 +1723,35 @@ key "Venkateswara2010"
 \end_inset
 
 .
+ Experiments at Cornell 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "davisUndergraduateThesis"
+
+\end_inset
+
+, Dusseldorf 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "haiberger2005fabrication"
+
+\end_inset
+
+, the PTB 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "nesterov2013nanonewton"
+
+\end_inset
+
+, and Humboldt State 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "leopardi2013tests"
+
+\end_inset
+
+ have not yet reported exclusion limits.
 \end_layout
 
 \begin_layout Standard
@@ -15813,7 +15859,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/charlie/trialEotwash/Eotwash/runAnalysis/supportingPlots/timingPlot.eps
+	filename ../runAnalysis/supportingPlots/timingPlot.eps
 	width 60page%
 	rotateAngle 270
 

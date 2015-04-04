@@ -46,7 +46,8 @@ alMax = 1e8
 alMin = 1e-5
 
 
-ptsz = 0.7
+ptsz  = 0.7
+ptszS = 0.5
 set key noauto
 set format x ""
 set ylabel 'alpha'
@@ -70,7 +71,9 @@ pl [:][alMin:]\
 	kapFile w l lt -1  tit 'Kapner et al.',\
 	cookFile w l lt 0 tit "Cook thesis",\
 	for [ctr=NumToPlot:1:-1] \
-	fn index 0 u ( @cutFunc ? column(2*ctr) * XLUnits : 1/0):( column(2*ctr+1)) w p lc ctr pt 7 ps ptsz,\
+	fn index 0 u (            column(2*ctr) * XLUnits      ):( column(2*ctr+1)) w p lc ctr pt 1 ps ptszS,\
+	for [ctr=NumToPlot:1:-1] \
+	fn index 0 u ( @cutFunc ? column(2*ctr) * XLUnits : 1/0):( column(2*ctr+1)) w p lc ctr pt 7 ps ptsz ,\
 	for [ctr=NumToPlot:1:-1] \
 	fn index 1 u (column(ctr) * XLUnits):(column(ctr+NumSystematics)) w p lc ctr pt 1 ps ptsz*3
 	
@@ -92,10 +95,13 @@ pl [:][alMin:]\
 	kapFile  w l lt -1  ,\
 	cookFile w l lt 0   ,\
 	for [ctr=NumToPlot:1:-1] \
-	fn index 0 u (@cutFunc ? column(2*ctr) * XLUnits: 1/0):( -column(2*ctr+1)) w p lc ctr pt 7 ps ptsz\
+	fn index 0 u (            column(2*ctr) * XLUnits     ):( -column(2*ctr+1)) w p lc ctr pt 1 ps ptszS ,\
+	for [ctr=NumToPlot:1:-1] \
+	fn index 0 u ( @cutFunc ? column(2*ctr) * XLUnits: 1/0):( -column(2*ctr+1)) w p lc ctr pt 7 ps ptsz \
 			title columnhead(1+2*ctr),\
 	for [ctr=NumToPlot:1:-1] \
 	fn index 1 u (column(ctr) * XLUnits):(-column(ctr+NumSystematics)) w p lc ctr pt 1 ps ptsz*3
+	
 	
 
 set format x "% g"
@@ -116,8 +122,10 @@ recWidth = RECORDS_records/2;
 set logsc y
 
 pl \
-	fn index 0 u ( @cutFunc ?  $1 * slopeCal : 1/0) w p pt 7 ps ptsz lc 1 tit 'positive',\
-	fn index 0 u ( @cutFunc ? -$1 * slopeCal : 1/0) w p pt 7 ps ptsz lc 3 tit 'negative',\
+	fn index 0 u (             $1 * slopeCal      ) w p pt 1 ps ptszS lc 1              ,\
+	fn index 0 u ( @cutFunc ?  $1 * slopeCal : 1/0) w p pt 7 ps ptsz  lc 1 tit 'positive',\
+	fn index 0 u (            -$1 * slopeCal      ) w p pt 1 ps ptszS lc 3              ,\
+	fn index 0 u ( @cutFunc ? -$1 * slopeCal : 1/0) w p pt 7 ps ptsz  lc 3 tit 'negative',\
 	fn index 1 u (recWidth):( column(NumSystematics*2+1)  * slopeCal ):(recWidth):(0) w xyerrorlines pt 1 ps 0 lc 1 lw 2 tit 'injected signal, if positive',\
 	fn index 1 u (recWidth):(-column(NumSystematics*2+1)  * slopeCal ):(recWidth):(0) w xyerrorlines pt 1 ps 0 lc 3 lw 2 tit 'injected signal, if negative'
 	
