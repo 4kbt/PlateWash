@@ -3,7 +3,7 @@ include Makefile.inc
 CURRENTDIR := $(shell pwd)
 PATHINJECT := tmp/pathinject
 
-dissertation: gitlog.log
+dissertation: gitlog.log debianPackages.txt
 	$(if $(shell ls data), ,$(shell ln -s ~/PWData/ data))
 	$(shell bin/countXXXs.sh thesis/thesis.lyx >> data/xxxCount.dat)
 	$(shell bin/commitPlot.sh > data/gitCommitTimes.dat)
