@@ -10,6 +10,6 @@ press = [o(:,15) o(:,13) polyval(pressEncP,o(:,15))];
 
 plot(o(:,15), o(:,13),'.', o(:,15), polyval(pressEncP,o(:,15)),'.');
 
-save 'run2937pressEncOutput.dat' pressEncP
+save('-ascii', 'run2937pressEncOutput.dat', 'pressEncP');
 
-save 'run2937pressEncData.dat' press
+save('-ascii', 'run2937pressEncData.dat'  , 'press'    );
