@@ -7440,7 +7440,12 @@ The influence of any contact-potential noise, either through direct fluctuation
 \end_inset
 
  at better than the 100 mV level.
- 
+ Swing parallel to the foil, which we expect to have approximately equal
+ amplitude, should cause much smaller variations in electrostatic torques
+ acting on the pendulum, as only the effective lever-arm of the pendulum
+ may be altered.
+ If the contact potential varies across the foil plane, parallel-swing torques
+ will come primarily from that variation.
 \end_layout
 
 \begin_layout Standard
@@ -14478,14 +14483,9 @@ The number of attractor position changes per `cut', a group of identical
  measurements, was chosen to be large-enough to allow a sufficient understanding
  of the switch-to-switch variation in the torque at each point.
  We settled on 10 switches per cut in an ad-hoc fashion.
- It is slightly more than the minimum required to have a reasonable understandin
-g of the switch-to-switch variation ( 
-\begin_inset Formula $\sim7$
-\end_inset
-
- samples is perhaps the minimum one should use for a reliable estimate of
- a variance), and still short enough to address the speed concerns described
- in Section 
+ It provides a reasonable understanding of the switch-to-switch variation,
+ and is still short-enough to address the speed concerns described in Section
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Statistics"
