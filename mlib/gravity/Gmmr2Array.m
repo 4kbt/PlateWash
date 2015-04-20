@@ -6,7 +6,7 @@ function force=Gmmr2Array(mass1, mass2)
 	%Which way does the force act?
 	rvec = mass2( : , 2:4 ) - ones( rows( mass2 ) , 1 ) * mass1( 2:4 );
 
-	%Pythagoras for modulus
+	%Pythagorean theorem to determine |r|
 	r = sqrt( sum( (rvec .* rvec) , 2 ) );
 	
 	%The inverse square law!
