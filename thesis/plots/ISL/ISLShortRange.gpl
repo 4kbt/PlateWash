@@ -16,7 +16,7 @@ unset key
 set label 1 "Experimentally Excluded" at -3,4 center front 	font "Helvetica, 15"
 #set label 2 "Proposed Experiment" at -4.2,0.3 center front rotate by -39 font "Helvetica, 11"
 set label 3 "Gravitational Strength" at -5.05,-3 front font "Helvetica, 9"
-set label 4 "Stanford 05    "  at -4.5, log10(1.5e5) center front font "Helvetica, 11"
+set label 4 "Stanford 08    "  at -4.5, log10(1.5e5) center front font "Helvetica, 11"
 #set label 5 "Colorado 03" at -3.7,1.8 center front font "Helvetica, 11"
 set label 6 "Washington 04" at -3.1,-0.5 center front font "Helvetica, 11"
 set label 7 "Irvine 80" at -2.55,-1.0 front font "Helvetica, 11"
@@ -33,7 +33,7 @@ set arrow 1 from -3,-0.8 to -3.2,-1.5 lt -1 front
 #Irvine
 set arrow 3 from -2.2,-1.3 to -2.3,-3.1  lt -1 front
 #Stanford
-set arrow 4 from -4.85, 5.15 to -5.,4.9 lt -1 front 
+set arrow 4 from -4.5, 4.8 to -4.4,2.5 lt -1 front 
 #Gravitational Strength
 set arrow 5 from -4.8,-2.6 to -5,0 lt 9  lw 1 front
 set arrow 9 from -3.7,-2.7 to -3.6,-1.9 lt -1 front 
@@ -43,17 +43,17 @@ set arrow 14 from -2.6,-3.4 to -2.8,-3 lt -1 front
 
 set output 'ISLShortRange.eps'
 
-set yrange[-4:6]
-pl [x=-5.2:-2] \
+set yrange[-4:7]
+pl [x=-5.3:-2] \
 	'Irvine1985.dat'  u (log10($1)):(log10(2.0*$2)) 	smooth csplines w filledcurve x2 lt 5 ,\
 	'2004prd.dat' u (log10($1)):(log10($2)) 		smooth csplines w filledcurve x2 lt 5 ,\
-	'stanfordPRD2005.dat' u (log10($1)):(log10($2)) 	smooth csplines w filledcurve x2 lt 5 ,\
+	'stanford2008.dat' u (log10($1)):(log10($2)) 		smooth csplines w filledcurve x2 lt 5 ,\
 	'sr2006.dat' u (log10($1/1000.)):(log10($2))		smooth csplines w filledcurve x2 lt 5 ,\
 	'cookData.dat' u (log10($1)):(log10($2))		smooth csplines w filledcurve x2 lt 5 ,\
 	'hstLR.dat' u (log10($1)):(log10($2))			smooth csplines w filledcurve x2 lt 5 ,\
 	'Irvine1985.dat' u (log10($1)):(log10(2.0*($2))) 	smooth csplines w l lt -1 ,\
 	'2004prd.trim.dat' u (log10($1)):(log10($2)) 		smooth csplines w l lt -1 ,\
-	'stanfordPRD2005.dat' u (log10($1)):(log10($2)) 	smooth csplines w l lt -1 ,\
+	'stanford2008.dat' u (log10($1)):(log10($2)) 	smooth csplines w l lt -1 ,\
 	'sr2006.dat' u (log10($1/1000.)):(log10($2))		smooth csplines w l lt -1 ,\
 	'Huazhong.dat' u (log10($1)):(log10($2)) 		smooth csplines w l lt -1 ,\
 	'cookData.dat' u (log10($1)):(log10($2))		smooth csplines w l lt -1 ,\
