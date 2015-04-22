@@ -33,10 +33,10 @@ printSI(autocolNoise,  1, -9, 'rad/$\sqrt{\mbox{Hz}}$', [HOMEDIR 'extracted/auto
 psdToRadians = psdWidth/focalLength/2.0/2.0; printDecimal(psdToRadians*2.0*1000, [HOMEDIR 'extracted/autocollDynamicRangePeak2PeakmRad.tex'], 2); %2 for detector width, 2 for single-bounce.
 
 %Controls the post-lockin blinding.
-unBlind = 0 ;
+unBlind = 1 ;
 %Injects before the lockin
 fakeTheData = 0;
-%Controls the use of "postLockinSignalInjection"
+%Controls the use of "postLockinSignalInjection". Should be 1 at all times.
 testInjection = 1;
 
 
