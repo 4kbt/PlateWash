@@ -195,8 +195,8 @@ When a worthwhile project takes a decade, you'll find that a village full
 \end_layout
 
 \begin_layout Standard
-Alfred Hagedorn, Alfred Hagedorn III, Alice Crawford, Ann Nelson, Barb Fulton,
- 
+Alfred Hagedorn, Alfred Hagedorn III, Alice Crawford, Allen Myers, Ann Nelson,
+ Barb Fulton, 
 \emph on
 Blayne Heckel
 \emph default
@@ -208,8 +208,12 @@ Claire Cramer
 \emph on
 Dan Kapner
 \emph default
-, David Hyde, David Kettler, Debra Nastaj, Don Hartill, Doug Will, Eberhard
- Bodenschatz, 
+, David Hyde, David Kettler, 
+\emph on
+David Newell
+\emph default
+, David Peterson, Debra Nastaj, Don Hartill, Doug Will, Eberhard Bodenschatz,
+ 
 \emph on
 Eric Adelberger
 \emph default
@@ -294,7 +298,7 @@ Svenja Fleischer
 \emph on
 Ted Cook
 \emph default
-, Terry Lynn Helms, 
+, Terry Lynn Helms, Tim Van Wechel, 
 \emph on
 Todd Wagner
 \emph default
@@ -22938,7 +22942,7 @@ Interferometer fit.
 \end_layout
 
 \begin_layout Section
-Systematic Subtraction and Uncertainty Propagation
+Systematic Subtraction and Uncertainty Propagationa
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:Subtraction-Foil"
