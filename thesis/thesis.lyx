@@ -5961,11 +5961,8 @@ m), less light re-enters the fiber core after reflecting from the foil.
  By adjusting the fiber-foil distance, it is possible to tune the internally
  and externally-reflected light to have comparable intensity, maximizing
  the interference contrast.
- In PlateWash, the operating point is 
-\begin_inset Formula $\sim XXXRC\pm XXXRC$
-\end_inset
-
- from the foil (can get it from the crash plot), as seen in Figure 
+ In PlateWash, the operating point is very close to the foil, as seen in
+ Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Image-of-the-interferometer-tip"
@@ -5983,37 +5980,6 @@ The reflected light returns down the fiber to the 90/10 splitter.
  The remaining 10% proceeds back to the laser, where it is blocked by a
  Faraday isolator.
  
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Foil-interferometer-signal-as-fcn-of-pressure-position"
-
-\end_inset
-
-XXXRC Foil interferometer signal as a function of attractor pressure (top
- axis) and position (bottom axis).
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -6281,7 +6247,7 @@ Determining fringe contrast can be done by displacing the foil.
  be obtained, as in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:Foil-interferometer-signal-as-fcn-of-pressure-position"
+reference "fig:IFO-Cap-Crash-Plot"
 
 \end_inset
 
@@ -10371,7 +10337,11 @@ Raw data used to infer the attractor-foil relative angle.
  Each plot is a function of attractor displacement as measured by the optical
  encoder, with a common arbitrary zero.
  The upper panel shows the interferometer signal, with prominent touching
- signal at displacements greater than ~708
+ signal at displacements greater than 
+\begin_inset Formula $\sim708$
+\end_inset
+
+
 \begin_inset space ~
 \end_inset
 
