@@ -175,9 +175,9 @@ LamUB = log10(10/XLUnits);
 SloUB = log10(1e-4/XSUnits) - logCrossover;
 
 %1e-8 gives beautiful fits, of course.
-AppliedMagneticFieldUncertainty = 1e-3; %TotalBogus!
-heaterTemperatureUncertainty = 0.020; %TotalBogus!
-heaterTempGradientUncertainty = 0.001; %TotalBogus!
+AppliedMagneticFieldUncertainty = 0.8/500*50; %Measured field was 50 uT, Applied was 500 uT.
+heaterTemperatureUncertainty = 0.020; %Reasonable from thermistor data
+heaterTempGradientUncertainty = 0.001; %1 mK across an isolated aluminum puck.
 
 NBinConfInterval = ceil( sqrt( NumberOfYukawaBootstraps ) ); %bin width for confidence interval determination
 printInteger( NBinConfInterval, [HOMEDIR 'extracted/NBinConfInterval.tex']);
