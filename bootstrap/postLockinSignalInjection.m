@@ -73,10 +73,13 @@ if( testInjection == 1)
 	trimmedPM = trimPM(pM, signalColumns, torCol);
         CNStruct = columnNamesStruct;
 	X2Check = chiSquareWSystematics(trimmedPM, injectedSignalArray, PendStruct, AttrStruct, CNStruct)
-	if(  X2Check > 2* rows(pM))
-		X2PerRows = X2Check/rows(pM)
-		error('chiSquared of the correct fit is too large!')
-	end
+
+	%Disabling this for unblinding!
+%	if(  X2Check > 2* rows(pM))
+%		X2PerRows = X2Check/rows(pM)
+%		error('chiSquared of the correct fit is too large!')
+%	end
+
 end
 
 if ( 1 == exist("fileInjection" ))
