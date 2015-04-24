@@ -23018,7 +23018,7 @@ We declare that our measurement is unblinded with git commit XXXRC.
 \family typewriter
 cat $(echo run*.dta run*.hdr run*.dat | sort) | sha1sum
 \family default
- is XXXRC.
+ is c68496dd3fefcb5d9c5af912701409ad85695451.
 \end_layout
 
 \begin_layout Section
