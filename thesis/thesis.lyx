@@ -17015,7 +17015,14 @@ source code used for the analysis, as much as possible as inline text instead
 \begin_inset Quotes eld
 \end_inset
 
-Triangle Plot
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Triangle-Plot"
+
+\end_inset
+
+ Plot
 \begin_inset Quotes erd
 \end_inset
 
@@ -19748,7 +19755,7 @@ status open
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "../mlib/gravity/Gmmr2Array.m"
-lstparams "caption={pointMatrixGravity.m},language=Matlab"
+lstparams "language=Matlab,caption={Gmmr2Array.m}"
 
 \end_inset
 
@@ -19980,10 +19987,11 @@ Display
 \end_layout
 
 \begin_layout Standard
-It is essential to know what it is that you're modelling.
- This data format lends itself to simple plotting of mass configurations.
- When the mass configurations are simply-plotted, many kinds of errors are
- trivially apparent.
+When modelling a system, it is essential to have a visual cross-check on
+ its configuration.
+ Our matrix format lends itself to simple plotting of mass configurations.
+ When mass configurations are plotted, many kinds of errors are trivially
+ apparent.
  Plotting is as simple as 
 \end_layout
 
@@ -20007,7 +20015,7 @@ status open
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "../mlib/gravity/displayPoints.m"
-lstparams "caption={mlib/gravity/displayPoints.m},language=Matlab"
+lstparams "language=Matlab,caption={displayPoints.m}"
 
 \end_inset
 
@@ -20089,35 +20097,19 @@ Pendulum
 \begin_layout Standard
 The pendulum is assembled from three components, a rectangular-prism body,
  and two rectangular-prism inlays.
- The density of the inlays are chosen to yield the actual inlay density
- when summed with the body's density.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Box Boxed
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
+ The density of the inlays are chosen to yield the true inlay density when
+ summed with the body's density.
+ The dimensions are drawn from a configuration file.
+ The pendulum body is modelled with 10 points through its thickness, 28
+ points across its width, and 15 points vertically.
+ The inlays are modelled with two points through their thickness, and 15
+ points across their width and height.
+ 
+\begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-
-\size small
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "../NewtonianSimulation/parts/jan13Pendulum.m"
-lstparams "caption={Pendulum},language=Matlab"
-
-\end_inset
-
-
+XXXMI automate these numbers
 \end_layout
 
 \end_inset
@@ -20166,35 +20158,72 @@ missing
 
  mass from an infinite sheet that the cylindrical sheet purports to represent
  and subtracting it from the known-uniform force due to an infinite sheet.
- As all pointwise separations are large in the latter case, any questions
- of grid overlap are rendered moot.
+ As all pointwise separations are large in the latter case, any residual
+ effects of grid overlap are small indeed.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Box Boxed
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
+The attractor is composed of three parts: the dense 
+\begin_inset Quotes eld
+\end_inset
+
+plate
+\begin_inset Quotes erd
+\end_inset
+
+, a lower density 
+\begin_inset Quotes eld
+\end_inset
+
+backer
+\begin_inset Quotes erd
+\end_inset
+
+, and the over-compensating 
+\begin_inset Quotes eld
+\end_inset
+
+rim
+\begin_inset Quotes erd
+\end_inset
+
+.
+ The dimensions are drawn, as with the pendulum, from a configuration file.
+ The 
+\begin_inset Quotes eld
+\end_inset
+
+plate
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+backer
+\begin_inset Quotes erd
+\end_inset
+
+ are annuli of equal inner and outer radius, with 2 and 4 grid points through
+ their thickness and as many as 70 points in a cartesian grid laterally.
+ As above, these are annuli with inner radius equal to the tru attractor
+ radius and are modelled to have negative mass.
+ The positive-mass 
+\begin_inset Quotes eld
+\end_inset
+
+rim
+\begin_inset Quotes erd
+\end_inset
+
+ has 10 grid points axially and as many as 50 points laterally.
+ 
+\begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-
-\size small
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "../NewtonianSimulation/parts/jan13Attractor.m"
-lstparams "caption={jan13Attractor.m},language=Matlab"
-
-\end_inset
-
-
+XXXMI automate these numbers
 \end_layout
 
 \end_inset
@@ -20218,34 +20247,14 @@ spindles
 .
  The gravitational effect of the spindles should be very small, but they
  are incorporated into the simulation.
- Each spindle is simulated as a cylindrical column of aluminum.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Box Boxed
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
+ Each spindle is simulated as a cylindrical column of aluminum with five
+ axial grid points and five lateral grid points.
+ 
+\begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-
-\size small
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "../NewtonianSimulation/parts/jan13Spindles.m"
-lstparams "caption={jan13Spindles.m},language=Matlab"
-
-\end_inset
-
-
+XXXMI automate these numbers
 \end_layout
 
 \end_inset
@@ -20261,33 +20270,16 @@ Bellows
 The Newtonian influence of gas flowing into and out of the bellows is easily
  simulated by computing the gravitational effect of a nearby cylinder of
  varying density.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Box Boxed
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
+ We model it as a cylinder with 7 axial grid points and 7 lateral grid points.
+ The dimensional change of the bellows is quite small relative to the separation
+ from the pendulum and is near the pendulum's center-line, so the mass-appearanc
+e should be the dominant gravitational effect.
+ 
+\begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-
-\size small
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "../NewtonianSimulation/parts/jan13Bellows.m"
-lstparams "caption={jan13Bellows.m},language=Matlab"
-
-\end_inset
-
-
+XXXMI automate these numbers
 \end_layout
 
 \end_inset
@@ -20428,7 +20420,7 @@ Verification
 \end_layout
 
 \begin_layout Standard
-As discussed in 
+As discussed in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Testing"
@@ -20445,7 +20437,8 @@ Point-point forces make sense:
 \end_layout
 
 \begin_layout Standard
-A direct check of the force between one-kg masses at 1 m has value 
+A direct check of the force between one-kg point masses at 1 m has value
+ 
 \begin_inset Formula $G$
 \end_inset
 
@@ -20458,12 +20451,12 @@ Point-point torques make sense:
 
 \begin_layout Standard
 The torque about the origin on a point mass placed 1 m from the origin (at
- (0,1,0)) and acted upon by a point mass placed 1
+ ( 0 , 1 , 0 ) ) and acted upon by a point mass placed 1
 \begin_inset space ~
 \end_inset
 
 m away along the direction perpendicular to the test mass's displacement
- from the origin (at (1,1,0)) has numerical value 
+ from the origin (at ( 1 , 1 , 0 ) ) has numerical value 
 \begin_inset Formula $G$
 \end_inset
 
@@ -20493,7 +20486,8 @@ The force on a point mass toward a 140
 \begin_inset space ~
 \end_inset
 
-m radius cylindrical sheet is computed for displacements from 
+m radius, 10-cm thick cylindrical sheet is computed for displacements from
+ 
 \begin_inset Formula $\sim0.2$
 \end_inset
 
@@ -20506,13 +20500,25 @@ m radius cylindrical sheet is computed for displacements from
 \end_inset
 
 m away from the sheet.
- To test for any grid-sensitivity, the sheet is randomly-translated in-plane
+ The grid spacing axially was 5
+\begin_inset space ~
+\end_inset
+
+mm, and laterally was 500
+\begin_inset space ~
+\end_inset
+
+mm To test for any grid-sensitivity, the sheet is randomly-translated in-plane
  with standard deviation of the grid spacing.
  At distances greater than 1
 \begin_inset space ~
 \end_inset
 
-m, the force is within <1% of the expected value.
+m, the force is within 
+\begin_inset Formula $<1$
+\end_inset
+
+% of the expected value.
  
 \end_layout
 
@@ -20617,7 +20623,7 @@ Q-tester is in rough agreement
 \end_layout
 
 \begin_layout Standard
-As described in 
+As described in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Calibration"
@@ -20674,7 +20680,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../NewtonianSimulation/plots/fullSimulation.eps
-	width 50page%
+	width 70page%
 
 \end_inset
 
@@ -20759,7 +20765,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../NewtonianSimulation/plots/offsetAttractorAssembly.eps
-	width 50text%
+	width 70text%
 
 \end_inset
 
@@ -20966,22 +20972,14 @@ filename "../extracted/pendulumPMScanGridSize.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-m tangential and 
+ tangential and 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../extracted/pendulumPMScanVertStep.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-m perpendicular to the surface.
+ perpendicular to the surface.
  Given that the pendulum-attractor gap can be as small as 80-90 
 \begin_inset Formula $\mu$
 \end_inset
@@ -21016,7 +21014,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../NewtonianSimulation/plots/pmScanPlot.eps
-	width 50page%
+	width 70page%
 
 \end_inset
 
@@ -21047,9 +21045,9 @@ Torques due to the leading
 
 m of the attractor and pendulum, computed from the laser-microscope scans
  of the attractor and pendulum surfaces.
- Each line of computed points corresponds to an independent sub-grid randomizati
-on of local component masses (see text) and random rotation of the attractor
- with respect to the attractor's primary axis.
+ Each line of computed points corresponds to an independent grid-scale random-po
+sitioning of local component masses (see text) and random rotation of the
+ attractor with respect to the attractor axis.
 \end_layout
 
 \end_inset
@@ -21110,12 +21108,12 @@ key "rugar1988force,rugar1989improved"
 
 .
  They are commonly implemented with infrared lasers.
- New to the field, we first used a visible system at 660
+ New to the field, we first built a visible system at 660
 \begin_inset space ~
 \end_inset
 
 nm.
- Our laser suffered from modehops and drifts.
+ Our Fabry-Perot diode laser suffered from modehops and drifts.
  Careful temperature control, current control, and current selection helped,
  but could not make the instrument usable for more than tens of minutes.
  A change to a distributed-feedback 1330
@@ -21124,9 +21122,9 @@ nm.
 
 nm laser and the requisite complete exchange of optical fibers, couplers,
  and sensors yielded a stable instrument.
- In fact, it is so stable against temperature drift that we have been unable
- to use changes in the laser-head temperature to counter other fringe drifts
- in the instrument.
+ In fact, the laser is so stable against temperature drift that we have
+ been unable to use changes in the laser-head temperature to compensate
+ for other drifts in the instrument.
  
 \end_layout
 
@@ -21188,7 +21186,7 @@ m.
  This matches the encoder grating spacing on the Micro-E optical encoder
  used to monitor the attractor position.
  We had operated for several months before noticing this effect; it is quite
- natural when hunting for a signal with typical length 
+ human when hunting for a signal with typical length 
 \begin_inset Formula $\sim50$
 \end_inset
 
@@ -21277,7 +21275,8 @@ MHz, with delicate grounding requirements.
  and unshielded leads extend for several inches within the vacuum chamber
  between the autocollimator's position-sensitive photodiode outputs and
  the high-gain transimpedance preamplifiers.
- This is a major target for future upgrades of the experiment (Section 
+ This is an obvious target for future upgrades of the experiment (Section
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Autocollimator-upgrades"
@@ -21407,7 +21406,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename diagrams/CapacitorSystematic.pdf
-	width 50page%
+	width 70page%
 
 \end_inset
 
@@ -21579,9 +21578,9 @@ m farthest from the foil.
  The analyses in this chapter are blind to gravity; torque measurements
  are intercomparisons between two square wave measurements, suppressing
  any common-mode gravitational information.
- This is done by subtracting torque data measured without any externally-applied
- influence from torque data measured with an externally-applied systematic
- influence.
+ Blindness is preserved by subtracting torque data measured without any
+ externally-applied influence from torque data measured with an externally-appli
+ed systematic influence.
  In the case of the magnetic field systematic, we also considered the difference
  between data taken with applied fields of opposite sign.
 \end_layout
@@ -21668,7 +21667,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../systematics/resistor/plots/resistorPlot.eps
-	width 70text%
+	width 80text%
 
 \end_inset
 
@@ -21686,6 +21685,16 @@ name "Resistor Tests"
 \end_inset
 
 Summary of resistor tests
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXMI rotate this caption
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -21710,14 +21719,14 @@ name "sec:Magnetism--systematic"
 \end_layout
 
 \begin_layout Standard
-A large (
+A 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../systematics/magnetic/extracted/CoilDiameter.tex"
 
 \end_inset
 
- diameter ) coil with 
+ diameter coil with 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../systematics/magnetic/extracted/CoilTurns.tex"
@@ -22298,7 +22307,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Short-stroke Thermal Tests
+Long-stroke Magnetic Tests
 \end_layout
 
 \end_inset
@@ -22316,8 +22325,8 @@ Temperature gradient
 \end_layout
 
 \begin_layout Standard
-Using the on-board heating resistors, one leg of the attractor was heated
- with 20 mW (
+Using heating resistors glued to the attractor spindles, one leg of the
+ attractor was heated with 20 mW (
 \begin_inset space ~
 \end_inset
 
@@ -22733,11 +22742,7 @@ filename "../systematics/electrical/extracted/longStrokeL0Diff3167.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-N-m.
+.
 \end_layout
 
 \begin_layout Section
@@ -22766,7 +22771,7 @@ Foil Systematic
 The foil systematic measurement is discussed separately from the other systemati
 c uncertainties for three reasons: the analysis is very different, the outcome
  is important, and, as a foil displacement is resolved, the effect must
- be handled with care.
+ be handled with extra care.
 \end_layout
 
 \begin_layout Section
@@ -22805,7 +22810,22 @@ reference "fig:Raw-foil-displacement"
 
 \end_inset
 
-.
+ as 
+\begin_inset Quotes eld
+\end_inset
+
+triangle plots
+\begin_inset Quotes erd
+\end_inset
+
+ (see Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Triangle-Plot"
+
+\end_inset
+
+).
  
 \end_layout
 
@@ -22935,7 +22955,7 @@ Interferometer fit.
 \end_layout
 
 \begin_layout Section
-Subtraction
+Systematic Subtraction and Uncertainty Propagation
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:Subtraction-Foil"
