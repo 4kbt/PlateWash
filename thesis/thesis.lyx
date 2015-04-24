@@ -3649,13 +3649,17 @@ Fiber positioning assembly, January 2011 (prior to foil-motor installation):
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
-XXXRC
+XXXMA
 \end_layout
 
 \begin_layout Plain Layout
@@ -3663,6 +3667,11 @@ XXXRC
 
 \begin_layout Plain Layout
 Attractor schematic with dimensions
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -5961,11 +5970,8 @@ m), less light re-enters the fiber core after reflecting from the foil.
  By adjusting the fiber-foil distance, it is possible to tune the internally
  and externally-reflected light to have comparable intensity, maximizing
  the interference contrast.
- In PlateWash, the operating point is 
-\begin_inset Formula $\sim XXXRC\pm XXXRC$
-\end_inset
-
- from the foil (can get it from the crash plot), as seen in Figure 
+ In PlateWash, the operating point is very close to the foil, as seen in
+ Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Image-of-the-interferometer-tip"
@@ -5983,37 +5989,6 @@ The reflected light returns down the fiber to the 90/10 splitter.
  The remaining 10% proceeds back to the laser, where it is blocked by a
  Faraday isolator.
  
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Foil-interferometer-signal-as-fcn-of-pressure-position"
-
-\end_inset
-
-XXXRC Foil interferometer signal as a function of attractor pressure (top
- axis) and position (bottom axis).
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -6281,7 +6256,7 @@ Determining fringe contrast can be done by displacing the foil.
  be obtained, as in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:Foil-interferometer-signal-as-fcn-of-pressure-position"
+reference "fig:IFO-Cap-Crash-Plot"
 
 \end_inset
 
@@ -8099,8 +8074,7 @@ dependent and may depend upon the detailed structure of the junction, leading
 \begin_layout Standard
 To be safe from the effects attractor-correlated contact potential variation,
  the pendulum/foil contact potential cannot change by more than 1-10 nV
- (XXXRC - Eric is rightfully concerned here; verify estimate) in an attractor-co
-rrelated way.
+ in an attractor-correlated way.
  This voltage is hard to measure in any way but with a torsion balance,
  as the effective output impedance of any contact-potential generating phenomeno
 n will be large (cannot drive much current), and the input impedance of
@@ -8425,8 +8399,18 @@ Proximity-enhanced gas damping as a function of attractor-foil separation.
 
 s ringdown time of the foil), gas damping will be an inconsequential source
  of systematic uncertainty.
- XXXRC - Eric points out that a 10% variation in amplitude might be significant
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+XXXRC - Eric points out that a 10% variation in amplitude might be significant
  without quantifying the amplitude itself.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -9226,7 +9210,16 @@ Magnetic systematics are among the most difficult to assess in these experiments
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 XXXRC Jens wants numbers for all of these.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
@@ -9270,8 +9263,17 @@ name "par:Pendulum-magnetic-moment"
 The pendulum has a magnetic moment.
  It may be measured by applying a time-varying uniform magnetic field to
  the apparatus.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
  XXXRC expand/cross-ref.
  
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subparagraph
@@ -10371,7 +10373,11 @@ Raw data used to infer the attractor-foil relative angle.
  Each plot is a function of attractor displacement as measured by the optical
  encoder, with a common arbitrary zero.
  The upper panel shows the interferometer signal, with prominent touching
- signal at displacements greater than ~708
+ signal at displacements greater than 
+\begin_inset Formula $\sim708$
+\end_inset
+
+
 \begin_inset space ~
 \end_inset
 
@@ -23004,8 +23010,11 @@ Blind commit
 
 \begin_layout Standard
 We declare that our measurement is unblinded with git commit XXXRC.
- Furthermore, the hash of the data directory, as evaluated by XXXRC (include
- hashing script) is XXXRC.
+ Furthermore, the hash of the data directory, as evaluated by 
+\family typewriter
+cat $(echo run*.dta run*.hdr run*.dat | sort) | sha1sum
+\family default
+ is XXXRC.
 \end_layout
 
 \begin_layout Section
@@ -23057,49 +23066,70 @@ Unaddressed systematic uncertainties
 \end_layout
 
 \begin_layout Subsubsection
+The interferometer
+\end_layout
+
+\begin_layout Standard
+As we moved to unblind, careful consideration of the sign of the reconstructed
+ foil-displacement signal led us to realize that the reconstruction algorithm
+ is more susceptible to the effect of fringe turning points than originally
+ believed.
+ Without understanding the sign-flips at the fringe turning points, there
+ is a danger that the measured foil movement could be underestimated by
+ an aggregate measurement.
+ This statement is being written with about a week to go until unblinding,
+ as we must allow for computation time to analyze the data.
+ More analysis is on the way, and will be presented at the unblinding and
+ in future pre-unblinding commits.
+ Periodic absolute calibration of the sign of the interferometer signal,
+ perhaps by making tiny displacements of the interferometer tip in a known
+ direction, would resolve this ambiguity entirely.
+ 
+\end_layout
+
+\begin_layout Subsubsection
 Pendulum-foil attractor-correlated contact potential variation
+\end_layout
+
+\begin_layout Standard
+As referenced above, a small variation in pendulum-foil contact potential
+ could yield an inverse-square-law violating signal, should the change somehow
+ contain information about the attractor-foil spacing.
+ If it does not have access to spacing information, it would tend to be
+ a smooth, perhaps linear, function of attractor displacement.
+ It is possible to hunt for such an effect by biasing the attractor and
+ foil together with respect to the pendulum, increasing the influence of
+ the small 
+\begin_inset Formula $\delta V$
+\end_inset
+
+ voltage as 
+\begin_inset Formula $(V+\delta V)^{2}\approx V^{2}+V\delta V$
+\end_inset
+
+.
+ It's a tricky measurement to make, as the pendulum-foil coupling will increase
+ like 
+\begin_inset Formula $V^{2}$
+\end_inset
+
+, but it's not impossible.
 \end_layout
 
 \begin_layout Subsubsection
 Magnetism
 \end_layout
 
-\begin_layout Subsubsection
-Casimir
-\end_layout
-
 \begin_layout Standard
-We don't believe that the Casimir effect can get through the isolating foil,
- but we can't prove it won't (see Section 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sub:Casimir-effect"
-
-\end_inset
-
-).
- The possibility of a Casimir subtlety should be entertained.
-\end_layout
-
-\begin_layout Subsubsection
-Pendulum/Attractor deformation
-\end_layout
-
-\begin_layout Subsubsection
-Interferometer heating
-\end_layout
-
-\begin_layout Standard
-While we performed a test to check whether the interferometer's localized
- light might have heated the foil enough to open a thermal or outgassing
- mechanism of communication between the pendulum and attractor, a record-keeping
- lapse prevented us from making any quantitative statements.
- We know which run marks a return to laser-on operation, but we don't know
- with certainty which run began the laser-off period.
-\end_layout
-
-\begin_layout Standard
-While we don't expect this to be 
+There are a number of unaddressed small magnetic effects.
+ While we have measured the magnetic fields of our pendulum and attractor
+ to available sensor precision, and the active elements were acid-cleaned,
+ it remains possible that there are magnetic impurities in our materials
+ that could give rise to an inverse-square-law violating effect.
+ These effects should be small, however, as ferromagnetic impurities must
+ be fairly sizeable and concentrated before they become important.
+ Oroup's rotary magnetic-sensing turntable would allow us to place tighter
+ constraints upon any magnetic effect.
 \end_layout
 
 \begin_layout Subsubsection
@@ -23124,15 +23154,111 @@ plateau
 \begin_inset Quotes erd
 \end_inset
 
- tests.
+ tests, limiting the size of any possible dust that might have compromised
+ the more-quantitative measurements.
+ Our attractor-foil separation and resolved interferometer signal may provide
+ a hint of dust present in the attractor-foil gap.
+ While we don't expect the dust to substantially affect our overall measurement
+ of attractor-foil spacing (misalignment and dust would yield similar signals),
+ if it did, it would affect only our claimed 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, not the presence or absence of an inverse square law violation.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Pendulum/Attractor deformation
+\end_layout
+
+\begin_layout Standard
+It is possible that the pendulum or attractor has deformed while under vacuum,
+ as did some of our earlier masses.
+ If the pendulum inlays deformed slightly, it will only act to alter our
+ metrology, not the presence or absence of a violation.
+ If the attractor deformed, it is possible that the null-ness of the attractor
+ could be compromised, in addition to altering metrology.
+ Re-scanning these masses with the SmartScope will yield sufficient information
+ to make this determination.
+\end_layout
+
+\begin_layout Subsubsection
+Interferometer heating
+\end_layout
+
+\begin_layout Standard
+While we performed a test to check whether the interferometer's localized
+ light might have heated the foil enough to open a thermal or outgassing
+ mechanism of communication between the pendulum and attractor, a record-keeping
+ lapse prevented us from making any quantitative statements.
+ We know which run marks a return to laser-on operation, but we don't know
+ with certainty which run began the laser-off period.
+\end_layout
+
+\begin_layout Standard
+While we don't expect this to be a major concern, it's not impossible, and
+ it is testable in a future iteration of the experiment.
+\end_layout
+
+\begin_layout Subsubsection
+Casimir
+\end_layout
+
+\begin_layout Standard
+We don't believe that the Casimir effect can get through the isolating foil,
+ but we can't prove it won't (see Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Casimir-effect"
+
+\end_inset
+
+).
+ The possibility of a Casimir subtlety should be entertained.
 \end_layout
 
 \begin_layout Subsection
 If a signal is resolved
 \end_layout
 
+\begin_layout Standard
+It might be new physics, it might be one of the above systematic effects,
+ or it might be something we missed.
+ While that sentence is tautological, it leads us forward.
+ If the signal is new physics, it will survive future tests.
+ It is possible to evaluate many of the above systematics readily, in some
+ cases with external measurements, in others by repeating the measurement
+ with upgrades.
+ If the systematic is something inherent to our apparatus, repeated experiments
+ by others in the field, or with completely different designs, like our
+ group's wedge-pendulum apparatus, will help to improve everyone's understanding
+ of Nature.
+ 
+\end_layout
+
+\begin_layout Standard
+Any repetition of our experiment should be performed blind.
+ Remaining blind has helped us so much in identifying previously unknown
+ systematics and properly characterizing known ones.
+ 
+\end_layout
+
 \begin_layout Subsection
 If a signal is not resolved
+\end_layout
+
+\begin_layout Standard
+Everything in the resolved-signal section above applies.
+ If a measurement is important to the physics community, null or no, it
+ should be rechecked and confirmed by others.
+ The only reasons to stop hunting for both greater sensitivity and experimental
+ certainty are if the level of measurement precision substantially exceeds
+ theoretical prediction or if no major experimental improvements are feasible.
+ In the case of short-range gravity, the former is unlikely to happen in
+ our lifetime, and the latter is precluded by our short list of easy experimenta
+l upgrades.
+ PlateWash is worth doing at least one more time.
 \end_layout
 
 \begin_layout Chapter
