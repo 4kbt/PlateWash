@@ -23013,7 +23013,8 @@ Blind commit
 \end_layout
 
 \begin_layout Standard
-We declare that our measurement is unblinded with git commit XXXRC.
+We declare that our measurement is unblinded with git commit 3ab13338192cc79cf82
+697bbcbfeefc29e364be8.
  Furthermore, the hash of the data directory, as evaluated by 
 \family typewriter
 cat $(echo run*.dta run*.hdr run*.dat | sort) | sha1sum
