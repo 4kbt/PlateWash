@@ -15,7 +15,7 @@ pl \
 	'touchingTorques.dat'  u ($1*1e6):($2*c) w p pt 7 ps 0.5 lc 2,\
 	'ifoTorqueBestFit.dat' u ($1*1e6):($2*c) w l lt 1 
 	
-pl [70:120][-2e-11*c:2e-11*c] \
+pl [70:170][-2e-11*c:2e-11*c] \
 	'positionVsTorque.dat' u ($1*1e6):($2*c) w p pt 7 ps 0.5 lc 3 tit 'all measurements',\
 	'touchingTorques.dat'  u ($1*1e6):($2*c) w p pt 7 ps 0.5 lc 2 tit 'points where interferometer shows large movement',\
 	'ifoTorqueBestFit.dat' u ($1*1e6):($2*c) w l lt 1 tit 'bootstrapped best fit to all touching points'
