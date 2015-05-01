@@ -156,8 +156,8 @@ This was written for you, that you might learn from our successes and from
 This thesis is a companion to the computer software that automatically generated
  it.
  If you have unanswered questions about how most quantities and plots were
- determined, please feel welcome to look around.
- If you find an error and implement a patch, please let me know.
+ determined, please look around.
+ If you find an error, please let me know.
 \end_layout
 
 \begin_layout Chapter*
@@ -3803,6 +3803,15 @@ name "fig:PendulumScans"
 
 Laser scans of the pendulum surfaces.
  The tantalum inlays are visible as the height-step at right.
+ The side of the pendulum used in this experiment is the one denoted, 
+\begin_inset Quotes eld
+\end_inset
+
+X in upper right
+\begin_inset Quotes erd
+\end_inset
+
+.
 \end_layout
 
 \end_inset
