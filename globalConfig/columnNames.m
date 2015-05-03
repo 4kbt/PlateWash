@@ -38,7 +38,8 @@ bMinCol = bCol + 9*numSensors; #yes, aMinCol++.
 
 ifoTimeCol  = 1;
 ifoDataCol  = 2;
-ifopMCol = numPWSensors+numPSSensors+ifoDataCol;
+ifopMTimeCol = numSensors + numPWSensors+numPSSensors+ifoTimeCol;
+ifopMCol     = numPWSensors+numPSSensors+ifoDataCol;
 ifoErrCol =  ifopMCol+diffErrOffset;
 ifoACol = ifopMCol + numSensors;
 ifoBCol = ifopMCol + 2* numSensors;
