@@ -1,9 +1,9 @@
 set xlabel 'pendulum-attractor separation ({/Symbol m}m)'
 set ylabel 'torque (fN-m)
 
-name = system("echo $GNUPLOTME")
+nme = system("echo $GNUPLOTME")
 
-filename = name .".eps"
+filename = nme .".eps"
 
 print filename
 
@@ -12,9 +12,16 @@ set output filename
 
 lim = 10
 
+#Code to provide an approximate vertical match between fits and injected curve
+matchFitMin = 275
+matchFitMax = 300
+
+stats [matchFitMin:matchFitMax] nme index 0 u ($1*1e6):2 prefix "FITTED"
+stats [matchFitMin:matchFitMax] nme index 1 u ($1*1e6):2 prefix "CURVE"
+
 set key noauto
 
 pl [100:850][]\
-	name\
+	nme\
 	 index 0  u ($1*1e6):($2*1e15) w p pt 7 ps 0.3 lc 3 tit 'bootstrapped data, arbitrary vertical offset',\
-	 '' index 1 u ($1*1e6):($2*1e15) w l lt 1 tit 'injected signal'
+	 '' index 1 u ($1*1e6):(($2 +FITTED_mean_y - CURVE_mean_y)*1e15) w l lt 1 tit 'injected signal'

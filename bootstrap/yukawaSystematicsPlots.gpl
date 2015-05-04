@@ -47,7 +47,7 @@ alMin = 1e-5
 
 
 ptsz  = 0.7
-ptszS = 0.5
+ptszS = 0.7 
 set key noauto
 set format x ""
 set ylabel 'alpha'

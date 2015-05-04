@@ -3,6 +3,11 @@ include ../Makefile.inc
 PREREQUISITES =  *.m $(HOMEDIR)/calibration/pressure/run2937pressEncOutput.dat $(MLIB) $(HOMEDIR)/runAnalysis/results/run3147pM3FilterMerge.dat $(HOMEDIR)/ifo/
 
 IFOOUT:=output/bootstrapArbFit.bootstrappedFits.dat
+IFOUP:=output/bootstrapArbFitUpward.bootstrappedFits.dat
+IFODOWN:=output/bootstrapArbFitDownward.bootstrappedFits.dat
+IFOEND:=output/bootstrapArbFitEndSegment.bootstrappedFits.dat
+IFO80s:=output/bootstrapArbFitLateEighties.bootstrappedFits.dat
+
 
 IFOFIGURE := IFOBSFits
 
@@ -120,11 +125,21 @@ arbFitTest : $(PREREQUISITES)
 $(IFOOUT) : $(PREREQUISITES) ifoArbWrapper.m
 	$(OCT) ifoArbWrapper.m
 
-
 output/$(IFOFIGURE).eps : $(IFOOUT) plottableBSFits.m $(IFOFIGURE).gpl
 	$(OCT) plottableBSFits.m
 	$(GNU) $(IFOFIGURE).gpl
-	
+
+$(IFOUP)  : $(PREREQUISITES) ifoArbWrapperUpward.m
+	$(OCT) ifoArbWrapperUpward.m	
+
+$(IFODOWN)  : $(PREREQUISITES) ifoArbWrapperDownward.m
+	$(OCT) ifoArbWrapperDownward.m	
+
+$(IFOEND)  : $(PREREQUISITES) ifoArbWrapperEndSegment.m
+	$(OCT) ifoArbWrapperEndSegment.m	
+
+$(IFO80s)  : $(PREREQUISITES) ifoArbWrapperLateEighties.m
+	$(OCT) ifoArbWrapperLateEighties.m	
 
 TeXFigure : generatePlottingTeX.sh output
 	./generatePlottingTeX.sh $(HOMEDIR)
