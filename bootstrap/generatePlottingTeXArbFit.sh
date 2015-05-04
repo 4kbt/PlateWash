@@ -34,7 +34,7 @@ do
 	fi
 
 	echo '\par\end{centering}' >> $fn
-	echo "\caption{Bootstrapped arbitrary fit with injected linear slope \$ $slopeTeX\$ N-m/m,  Yukawa interaction with \$\\alpha=$alpha\$, \$\\lambda=$lambda\$ \$\\mu\$m }"  >> $fn
+	echo "\caption{Bootstrapped arbitrary fit with injected linear slope \$ $slopeTeX\$ N-m/m,  Yukawa interaction with \$\\alpha=$alpha\$, \$\\lambda=$lambda\$ \$\\mu\$m. Curves moved vertically to approximately agree over the interval [275,300] \$\\mu\$m. }"  >> $fn
 	echo  '\end{figure}' >> $fn
 	echo '' >> $fn
 done
