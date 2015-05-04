@@ -23094,6 +23094,20 @@ As we moved to unblind, careful consideration of the sign of the reconstructed
  perhaps by making tiny displacements of the interferometer tip in a known
  direction, would resolve this ambiguity entirely.
  
+\emph on
+A pre-unblinding note: Subsequent analysis since the beginning of unblinding,
+ and before the result is known, suggests that the degree of suppression
+ should be relatively small.
+ Determining the absolute sign of the foil's displacement in time for the
+ unblinding will elude us.
+ Thus, we will take our limits considering both sides of the interferometer
+ signal.
+ If a resolved signal appears when both the interferometer signal is added
+ 
+\bar under
+and
+\bar default
+ subtracted, it is probably not due to a foil-motion effect.
 \end_layout
 
 \begin_layout Subsubsection
@@ -23137,7 +23151,7 @@ There are a number of unaddressed small magnetic effects.
  that could give rise to an inverse-square-law violating effect.
  These effects should be small, however, as ferromagnetic impurities must
  be fairly sizeable and concentrated before they become important.
- Oroup's rotary magnetic-sensing turntable would allow us to place tighter
+ Our group's rotary magnetic-sensing turntable would allow us to place tighter
  constraints upon any magnetic effect.
 \end_layout
 
@@ -23225,6 +23239,19 @@ reference "sub:Casimir-effect"
 
 ).
  The possibility of a Casimir subtlety should be entertained.
+\end_layout
+
+\begin_layout Subsubsection
+Timing (this point added after unblinding had begun, but before the result
+ was known)
+\end_layout
+
+\begin_layout Standard
+Presuming that there is at least a small linear background torque, as expected,
+ it is possible to use the torque data to directly synchronize the attractor-com
+puter and pendulum-computer clocks.
+ If there is an error in our synchronization, correlation analysis may allow
+ its detection and resolution.
 \end_layout
 
 \begin_layout Subsection
