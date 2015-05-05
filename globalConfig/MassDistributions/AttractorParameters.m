@@ -49,7 +49,7 @@ dal1=AttractorBackerThickness; 	AttrStruct.dal1	= dal1; % Al attractor thickness
 
 %These offsets are entirely unchecked!
 attrHorizSimOffsetStep = 5e-3;
-attrHorizOffset = 3.5e-3;	attrHorizOffsetErr = 0.3e-3;	
+attrHorizOffset = 70e-6;	attrHorizOffsetErr = 25e-6;	
 printSIErr(attrHorizOffset    , attrHorizOffsetErr, 2, -3,'m', [HOMEDIR '/extracted/attrHorizOffset.tex']);
 attrVertOffset = 0.5e-3;	attrVertOffsetErr = 0.3e-3;
 printSIErr(attrVertOffset     , attrVertOffsetErr,  2, -3,'m', [HOMEDIR '/extracted/attrVertOffset.tex']);
