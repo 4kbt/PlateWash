@@ -22423,7 +22423,7 @@ filename "../systematics/thermal/extracted/shortStrokeL0Diff.tex"
 \end_inset
 
 .
- XXXRC-scaling
+ 
 \begin_inset Note Note
 status open
 
@@ -22508,6 +22508,218 @@ day 1358), both heaters were turned off.
  is not understood, but no known instrumental effect accounts for it.
  It may correspond to a temperature rise within the PlateWash enclosure
  or to a common-mode ADC drift.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="4">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Systematic Measurement
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Measured Effect
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Applied Stimulus
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ambient Stimulus
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Long-stroke thermal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../systematics/thermal/extracted/longStrokeL0Diff.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+200
+\begin_inset space ~
+\end_inset
+
+mK , 
+\begin_inset Formula $\Delta$
+\end_inset
+
+50
+\begin_inset space ~
+\end_inset
+
+mK
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+<20
+\begin_inset space ~
+\end_inset
+
+mK, 
+\begin_inset Formula $\Delta1$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+mK
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Short-stroke thermal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../systematics/thermal/extracted/shortStrokeL0Diff.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+200
+\begin_inset space ~
+\end_inset
+
+mK, 
+\begin_inset Formula $\Delta50$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+mK
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+<20
+\begin_inset space ~
+\end_inset
+
+mK, 
+\begin_inset Formula $\Delta1$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+mK
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Temperature-systematic measurements
 \end_layout
 
 \end_inset
@@ -22764,22 +22976,23 @@ filename "../systematics/electrical/extracted/longStrokeL0Diff3167.tex"
 .
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
 \begin_layout Section
 Dead-time sensitivity
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 XXXRC - Krishna would like to see a square-waved blinded sensitivity to
  dead time.
  
 \end_layout
 
-\begin_layout Section
-Systematic error accommodation table
-\end_layout
+\end_inset
 
-\begin_layout Standard
-XXXRC
+
 \end_layout
 
 \begin_layout Chapter
