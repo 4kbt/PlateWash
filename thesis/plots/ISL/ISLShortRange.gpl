@@ -16,7 +16,7 @@ unset key
 set label 1 "Experimentally Excluded" at -3,4 center front 	font "Helvetica, 15"
 #set label 2 "Proposed Experiment" at -4.2,0.3 center front rotate by -39 font "Helvetica, 11"
 set label 3 "Gravitational Strength" at -5.05,-3 front font "Helvetica, 9"
-set label 4 "Stanford 08    "  at -4.5, log10(1.5e5) center front font "Helvetica, 11"
+set label 4 "Stanford 08    "  at -4, log10(1.5e5) center front font "Helvetica, 11"
 #set label 5 "Colorado 03" at -3.7,1.8 center front font "Helvetica, 11"
 set label 6 "Washington 04" at -3.1,-0.5 center front font "Helvetica, 11"
 set label 7 "Irvine 80" at -2.55,-1.0 front font "Helvetica, 11"
@@ -25,6 +25,7 @@ set label 9 "Washington 06" at -3.7, -3.2 center front font "Helvetica, 11"
 set label 12 "Huazhong 07" at -3.8, 1 center front font "Helvetica, 11"
 set label 13 "Washington 12" at -4.4,-1.8 center front font "Helvetica, 11"
 set label 14 "Huazhong 12" at -2.67,-3.55 center front font "Helvetica, 11"
+set label 15 "Maryland 09" at -4.5, 6.3 center front font "Helvetica, 11"
 
 #Washington
 set arrow 1 from -3,-0.8 to -3.2,-1.5 lt -1 front
@@ -33,13 +34,15 @@ set arrow 1 from -3,-0.8 to -3.2,-1.5 lt -1 front
 #Irvine
 set arrow 3 from -2.2,-1.3 to -2.3,-3.1  lt -1 front
 #Stanford
-set arrow 4 from -4.5, 4.8 to -4.4,2.5 lt -1 front 
+set arrow 4 from -4, 4.8 to -4.4,2.5 lt -1 front 
 #Gravitational Strength
 set arrow 5 from -4.8,-2.6 to -5,0 lt 9  lw 1 front
 set arrow 9 from -3.7,-2.7 to -3.6,-1.9 lt -1 front 
 set arrow 12 from -3.85,0.7 to -4.1,0 lt -1 front
 set arrow 13 from -4.5,-1.5 to -4.3,-0.5 lt -1 front
 set arrow 14 from -2.6,-3.4 to -2.8,-3 lt -1 front
+#Maryland
+set arrow 15 from -4.5, 6   to -4.65,4.2 lt -1 front
 
 set output 'ISLShortRange.eps'
 
@@ -56,6 +59,7 @@ pl [x=-5.3:-2] \
 	'stanford2008.dat' u (log10($1)):(log10($2)) 	smooth csplines w l lt -1 ,\
 	'sr2006.dat' u (log10($1/1000.)):(log10($2))		smooth csplines w l lt -1 ,\
 	'Huazhong.dat' u (log10($1)):(log10($2)) 		smooth csplines w l lt -1 ,\
+	'Maryland.dat' u (log10($1)):(log10($2)) 		                w l lt -1 ,\
 	'cookData.dat' u (log10($1)):(log10($2))		smooth csplines w l lt -1 ,\
 	'hstLR.dat'    u (log10($1)):(log10($2))		smooth csplines w l lt -1 ,\
 	0.0   lt 0 

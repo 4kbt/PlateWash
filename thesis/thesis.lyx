@@ -254,7 +254,7 @@ Krishna Venkateswara
 \emph on
 Kurt Snover
 \emph default
-, Margaret Roston, Mark Freeman, Mary Ellen Jones, 
+, Laura Bodine, Margaret Roston, Mark Freeman, Mary Ellen Jones, 
 \emph on
 Matt Dietrich
 \emph default
@@ -3230,21 +3230,11 @@ status open
 \end_layout
 
 \begin_layout Standard
-XXXRC integrate this correction into the analysis (It's small, but meaningful,
- and straightforward to implement; the pendulum was angled by a fixed angle
- corresponding to a 
-\begin_inset Formula $10$
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset Formula $\mu$
-\end_inset
-
-m tip for the entire measurement.) 
+While we do not incorporate this calculation into our current analysis,
+ preferring instead to take a distance penalty for the pendulum twist, future
+ iterations of the analysis should do so.
+ Vectorizing this calculation for the Octave analysis requires careful attention
+ to detail, and may have substantially slowed our bootstrapped fits.
 \end_layout
 
 \begin_layout Subsubsection
@@ -8677,8 +8667,14 @@ filename "../NewtonianSimulation/SimulationOutput/jan13Attractorquad.tex"
 
 .
  There is a left-right asymmetry of the curve due to the asymmetry of the
- pendulum, but for a displacement of the pendulum XXXRC horizontally, the
- linear term becomes 
+ pendulum, but for a displacement of the pendulum 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/attrHorizOffset.tex"
+
+\end_inset
+
+ horizontally, the linear term becomes 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../NewtonianSimulation/SimulationOutput/jan13OffsetAttractorlin.tex"
@@ -10790,7 +10786,14 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXXRC
+\align center
+\begin_inset Graphics
+	filename Pictures/horizontalOffsetMay52015Crop.jpg
+	width 70page%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -10803,7 +10806,9 @@ name "fig:Horizontal-fiber-position"
 
 \end_inset
 
-Horizontal fiber position
+Horizontal fiber position.
+ The rough lateral scratches at the top of the attractor mark its highest
+ point.
 \end_layout
 
 \end_inset
@@ -20755,7 +20760,7 @@ filename "../extracted/attrHorizOffset.tex"
 
 \end_inset
 
- (toward the window) and vertically by 
+ (away from the window) and vertically by 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../extracted/attrVertOffset.tex"
@@ -20763,8 +20768,8 @@ filename "../extracted/attrVertOffset.tex"
 \end_inset
 
  with respect to the pendulum.
- (XXXRC verify numbers) The torques due to the complete off-center attractory
- assembly are shown in Figure 
+ The torques due to the complete off-center attractory assembly are shown
+ in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:OffsetPendulumTorque"
@@ -22423,7 +22428,7 @@ filename "../systematics/thermal/extracted/shortStrokeL0Diff.tex"
 \end_inset
 
 .
- XXXRC-scaling
+ 
 \begin_inset Note Note
 status open
 
@@ -22508,6 +22513,218 @@ day 1358), both heaters were turned off.
  is not understood, but no known instrumental effect accounts for it.
  It may correspond to a temperature rise within the PlateWash enclosure
  or to a common-mode ADC drift.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="4">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Systematic Measurement
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Measured Effect
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Applied Stimulus
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ambient Stimulus
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Long-stroke thermal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../systematics/thermal/extracted/longStrokeL0Diff.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+200
+\begin_inset space ~
+\end_inset
+
+mK , 
+\begin_inset Formula $\Delta$
+\end_inset
+
+50
+\begin_inset space ~
+\end_inset
+
+mK
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+<20
+\begin_inset space ~
+\end_inset
+
+mK, 
+\begin_inset Formula $\Delta1$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+mK
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Short-stroke thermal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../systematics/thermal/extracted/shortStrokeL0Diff.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+200
+\begin_inset space ~
+\end_inset
+
+mK, 
+\begin_inset Formula $\Delta50$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+mK
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+<20
+\begin_inset space ~
+\end_inset
+
+mK, 
+\begin_inset Formula $\Delta1$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+mK
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Temperature-systematic measurements
 \end_layout
 
 \end_inset
@@ -22714,14 +22931,12 @@ m wavelength, copper is more than 95% reflective.
  much of it should couple back into the fiber cladding and dissipate elsewhere.
  Nonetheless, the few microwatts that must be dissipated through conduction
  in the foil may contribute to a slight foil temperature rise.
- To test for any related systematic effect, in runs XXXRC, we operated the
- attractor in the XXXRC stroke mode with the interferometer laser turned
- off.
- The blinded difference in torques was XXXRC
-\begin_inset Formula $\pm$
-\end_inset
-
-XXXRC.
+ To test for any related systematic effect, in runs prior to 3234, we operated
+ the attractor with the interferometer laser turned off.
+ Unfortunately, a record-keeping oversight prevented us from knowing during
+ which prior runs the laser was disabled.
+ As noted in our unblinding statement, this test should be done in any future
+ experiment.
 \end_layout
 
 \begin_layout Section
@@ -22764,22 +22979,23 @@ filename "../systematics/electrical/extracted/longStrokeL0Diff3167.tex"
 .
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
 \begin_layout Section
 Dead-time sensitivity
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 XXXRC - Krishna would like to see a square-waved blinded sensitivity to
  dead time.
  
 \end_layout
 
-\begin_layout Section
-Systematic error accommodation table
-\end_layout
+\end_inset
 
-\begin_layout Standard
-XXXRC
+
 \end_layout
 
 \begin_layout Chapter
@@ -22958,9 +23174,8 @@ Interferometer fit.
  Each line is a different bootstrapped fit.
  This fits are used individually for subtraction in the bootstrapped global
  Yukawa fits.
- XXXRC - What about chopping out another 20 microns in short-cut in order
- to completely dump the inner systematic.
- Feels good,right?
+ A reanalysis of the data with a more conservative cut may allow us to set
+ tighter limits in the future.
 \end_layout
 
 \end_inset
@@ -23094,6 +23309,20 @@ As we moved to unblind, careful consideration of the sign of the reconstructed
  perhaps by making tiny displacements of the interferometer tip in a known
  direction, would resolve this ambiguity entirely.
  
+\emph on
+A pre-unblinding note: Subsequent analysis since the beginning of unblinding,
+ and before the result is known, suggests that the degree of suppression
+ should be relatively small.
+ Determining the absolute sign of the foil's displacement in time for the
+ unblinding will elude us.
+ Thus, we will take our limits considering both sides of the interferometer
+ signal.
+ If a resolved signal appears when both the interferometer signal is added
+ 
+\bar under
+and
+\bar default
+ subtracted, it is probably not due to a foil-motion effect.
 \end_layout
 
 \begin_layout Subsubsection
@@ -23137,7 +23366,7 @@ There are a number of unaddressed small magnetic effects.
  that could give rise to an inverse-square-law violating effect.
  These effects should be small, however, as ferromagnetic impurities must
  be fairly sizeable and concentrated before they become important.
- Oroup's rotary magnetic-sensing turntable would allow us to place tighter
+ Our group's rotary magnetic-sensing turntable would allow us to place tighter
  constraints upon any magnetic effect.
 \end_layout
 
@@ -23225,6 +23454,19 @@ reference "sub:Casimir-effect"
 
 ).
  The possibility of a Casimir subtlety should be entertained.
+\end_layout
+
+\begin_layout Subsubsection
+Timing (this point added after unblinding had begun, but before the result
+ was known)
+\end_layout
+
+\begin_layout Standard
+Presuming that there is at least a small linear background torque, as expected,
+ it is possible to use the torque data to directly synchronize the attractor-com
+puter and pendulum-computer clocks.
+ If there is an error in our synchronization, correlation analysis may allow
+ its detection and resolution.
 \end_layout
 
 \begin_layout Subsection
