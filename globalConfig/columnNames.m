@@ -1,8 +1,9 @@
 #This script is executed by both Octave and Gnuplot. Choose syntax carefully. Use only # as a comment character.
 
 numSystematics = 4;
+numAuxiliarySystematics = 3;
 numPWDAQSensors = 25;
-numPWSensors = numPWDAQSensors+numSystematics;
+numPWSensors = numPWDAQSensors+numSystematics+numAuxiliarySystematics;
 numPSSensors = 15;
 numIFOSensors = 25;
 numSensors = numPWSensors+numPSSensors+numIFOSensors;
@@ -57,6 +58,12 @@ temperatureBCol     = temperatureCol+2*numSensors;
 tempGradientCol     = numPWDAQSensors+4;
 tempGradientACol    = tempGradientCol+numSensors;
 tempGradientBCol    = tempGradientCol+2*numSensors;
+
+#Auxiliary Systematics
+resistorTestCol     = numPWDAQSensors+numSystematics + 1; 
+capacitorTestCol    = numPWDAQSensors+numSystematics + 2; 
+pneumaticTestCol    = numPWDAQSensors+numSystematics + 3; 
+
 
 #Chisquared unit conversion factors, not columns, but needed for chisquaredWSystematics.m
 XSUnits = 1e-12;

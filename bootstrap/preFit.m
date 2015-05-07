@@ -5,6 +5,12 @@ pM      = load( [ HOMEDIR 'runAnalysis/results/run3147pM3FilterMerge.dat'] );
 totalPA = load( [ HOMEDIR 'metrology/extracted/totalErr.dat' ] ) ;
 totalPAUncertainty = totalPA( 4 );
 
+%Cut away auxiliary systematics; could be one line, but less transparent
+pM = pM( pM(:, resistorTestCol  ) == 0 , : );
+pM = pM( pM(:, capacitorTestCol ) == 0 , : );
+pM = pM( pM(:, pneumaticTestCol ) == 0 , : );
+
+
 %Define which columns have fitted signals
 signalColumns = [0; magFieldACol; magField2ACol; temperatureACol; tempGradientACol];
 signalColString = {"Gravity" "MagneticField" "MagneticField^2" "AttractorTemp" "AttractorTempGradient"};
