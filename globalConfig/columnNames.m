@@ -76,7 +76,7 @@ XLUnits = 1e-4;
 pfTouch =  138.9 ;  #swag
 touch2937 =  147 -2 + pfTouch;
 #Distance cut
-ifoOffset = 10e-6;
+ifoOffset = 20e-6;
 shortCut  = pfTouch*1e-6 + ifoOffset;
 
 logCrossover = -4;
