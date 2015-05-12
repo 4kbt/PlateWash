@@ -14,6 +14,8 @@ catch
 end
 
 
+%From run3077free.m
+fprintf('FREQUENCY IS NOT PROPERLY DEFINED. CHECK run3077free.m for provenance!!!! Post-fit best fit is 13.2 mHz');
 fundamentalConstants
 
 pendulumF0=0.0128; %some provenance in run3077 
