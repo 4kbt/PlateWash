@@ -23805,14 +23805,6 @@ With these data, it is possible to place useful limits upon other inverse-square
 \end_layout
 
 \begin_layout Chapter
-Interpretation
-\end_layout
-
-\begin_layout Standard
-XXXRC -- to be filled in after unblinding.
-\end_layout
-
-\begin_layout Chapter
 Future
 \end_layout
 
@@ -24230,10 +24222,6 @@ Our committment to the lightning-strike approach, where we would get a great
  delivering coarse but reliable results slowed our progress.
  Without building a foundation of complete measurements on which we could
  stand, grow, and improve, we condemned ourselves to inefficiency.
-\end_layout
-
-\begin_layout Standard
- 
 \end_layout
 
 \begin_layout Subsubsection
@@ -24695,6 +24683,127 @@ A particular sticking point is our reliance upon the excellent Gnuplot plotting
  from one to the other and back.
  A search for a more integrated analysis and plotting environment will be
  worthwhile.
+\end_layout
+
+\begin_layout Chapter
+Conclusions
+\end_layout
+
+\begin_layout Section
+Unblinding
+\end_layout
+
+\begin_layout Standard
+We unblinded the experiment in public on May 5, 2015.
+ The talk can be seen in its entirety on the internet [XXXRC].
+ The unblinding process began using git hash XXXRC, as documented on Twitter
+ [XXXRC] and elsewhere.
+ The initial appearance of the exclusion (Figure XXXRC) and arbitrary-fit
+ (Figure XXXRC) plots was extremely puzzling.
+\end_layout
+
+\begin_layout Standard
+Hasty inspection made it clear that something had gone "weird", as it appeared
+ that the torque-variance cut (Section XXXRC) had failed to cut away substantial
+ quantities of noisy data.
+ With the blind restriction lifted, we could look directly at the central
+ values of the torque data, plotted in Figure XXXRC.
+ It appeared that a section of data differed substantially from the rest,
+ but didn't appear to be flagged as a systematic test (see Figure XXXRC)
+\end_layout
+
+\begin_layout Standard
+(Make a figure that shows uncut data, data after original cuts, data after
+ old and new cuts)
+\end_layout
+
+\begin_layout Standard
+The following day, we determined that the well-resolved and apparently anomalous
+ data were from the tests associated with the "capacitor systematic" (Section
+ XXXRC).
+ This made plain the fact that systematic test data for which we do not
+ make a global fit were included into the global fit data, a clear clerical
+ error.
+ In all, XXXRC runs were included in the global fit that should not have
+ been.
+ These runs comprised the "capacitor systematic" tests and the electrical-crosst
+alk test.
+\end_layout
+
+\begin_layout Standard
+The capacitor-systematic data included a lengthy run with a well-resolved
+ and, compared with the science data, gigantic signal.
+ This necessarily altered the behavior of our adaptive variance cut (Section
+ XXXRC), allowing large quantities of earthquake and foil-touching transients
+ into the final dataset.
+\end_layout
+
+\begin_layout Standard
+With that knowledge, on May 7, we began fitting again with those irrelevant
+ runs removed.
+ The changes are summarized with the commit hash XXXRC.
+ The resulting fits are shown in Figures XXXRC and XXXRC.
+\end_layout
+
+\begin_layout Standard
+These results should be regarded as the unblinded scientific outcome of
+ the experiment.
+ Jens Gundlach points out that the fact that such a blatant clerical error
+ might have been allowed to be unblinded publicly as proof that the blind
+ analysis was truly blind.
+ If we had peeked into the raw data or fit outcomes, we surely would have
+ repaired the problem.
+\end_layout
+
+\begin_layout Section
+Post-unblinding curiosity
+\end_layout
+
+\begin_layout Standard
+It is clear from Figure XXXRC that there's a somewhat-resolved signal at
+ the shortest distances.
+ Comparison with the foil interferometer signal Figure XXXRC shows a possible
+ culprit.
+ As noted in XXXRC, residual foil-touching is an easy candidate for such
+ a signal.
+ So, we ran an alternate analysis using a slightly smaller subset of the
+ data (XXXRC instead of XXXRC), cutting away the leading 10 microns of the
+ data.
+ This change is described in commit XXXRC.
+ The fits are shown inFigures XXXRC and XXXRC.
+ They are not substantially different from Figures XXXRC and XXXRC.
+\end_layout
+
+\begin_layout Section
+Conclusions
+\end_layout
+
+\begin_layout Standard
+We're proud of this measurement.
+ While we surely did not reach our initial sensitivity goals for the experiment,
+ we unambiguously demonstrated a careful approach to the parallel-plate
+ geometry.
+ The experiment incorporated a number of systematic-uncertainty mitigating
+ technologies: pneumatic drive, random attractor positioning, and the critically
+ important interferometric foil-position monitor.
+ Our analysis was performed largely blind, the analysis, from raw data to
+ finished product, is reproducible, and the result was unblinded in public.
+\end_layout
+
+\begin_layout Standard
+No evidence for a significant violation of Newton's inverse-square law is
+ observed.
+ Using the traditional Yukawa parametrization (Section XXXRC), we find that
+ the inverse-square law holds (
+\begin_inset Formula $\alpha<1$
+\end_inset
+
+) at distances larger than XXXRC microns with 95% confidence.
+\end_layout
+
+\begin_layout Standard
+You'll find the code used to generate this work at https://www.github.com/4kbt/Pla
+teWash/ and by request from the author.
 \end_layout
 
 \begin_layout Standard
