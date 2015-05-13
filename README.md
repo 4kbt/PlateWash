@@ -1,26 +1,16 @@
 Eotwash
 =======
 
-This repository contains the analysis code needed to generate the PlateWash data analysis and Charlie's thesis.
+This repository contains the analysis code needed to generate the PlateWash data analysis and Charlie Hagedorn's thesis.
 
-To use this code: clone the repository. Then, get the data from Charlie, and store it in ~/PWData/ (or alter the root Makefile to point at it).
+To use this code: clone the repository. Get the data (<= 46 GB) and store it in ~/PWData/ (or alter the root Makefile to point at it). Our group has not yet authorized the release of our data into the wild; if we make it publicly accessible, this file will be updated. Interested parties should contact Charlie Hagedorn ( cah49@uw.edu ) or Jens Gundlach ( gundlach@npl.washington.edu ).
 
-Once installation is complete, executing 'make' in the project directory will do exactly that. The thesis will appear in thesis/thesis.pdf . Present execution time on Charlie's computer (using 3 out of 4 cores at 3 GHz) is 98 minutes.
+Once installation is complete, executing 'make' in the project directory will do exactly that. The thesis will appear in thesis/thesis.pdf . Execution time for the unblinded code (on an Intel(R) Core(TM) i5-3330 CPU, 8GB RAM) is less than nine days. Bootstrapped simulated annealing is slow. The rest of the code executes in a few hours.
 
-This should execute on any linux box running GNU octave (3.6.4) with octave-forge, GNU make (3.81), LyX (2.0.6), GNU awk (4.0.1), GNU sed (4.2.2), and gnuplot (4.6 patch 4). The octave-forge installation may need to be a Debian one (see path curiosities in initializeOctave.). 
+This should execute on any linux box running GNU octave (3.8.2) with octave-forge, GNU make (4.0), LyX (2.1.2), GNU awk (4.1.1), GNU sed (4.2.2), and gnuplot (4.6 patch 6). The octave-forge installation may need to be a Debian one (see path curiosities in initializeOctave.). The reference system is the newly-released Debian Jessie, which went stable the day after unblinding began. The forthcoming thesis will contain a complete accounting of every package on the unblinding computer.
 
-The only correct way to execute code is through `make`, not with octave/gnuplot.  Using make `.INTERACT` will yield a persistent shell (see Makefile.inc) for debugging. 
+Because paths are delicately configured, the only correct way to execute code is through `make`, not with octave/gnuplot.  Using make `.INTERACT` will yield a persistent Octave shell (see Makefile.inc) for debugging. 
 
-Presently functional (incomplete list): 
+This code is not beautiful, but it works. Constructive criticism is especially encouraged, even more so if you have a patch/pull request.
 
-* Calibration
-
-* Run analysis of the science data set
-
-* Bootstrapped fitting of yukawa potentials and of arbitrary forms.
-
-* Newtonian simulation code is present, works. WashCycle branch does computations for Matt, Krishna, and Will.
-
-* Thesis generation. 'make dissertation' is functional.
-
-* Systematics are partially handled. Magnetic, Thermal, Electrical, etc. are working.
+Please consult the LICENSE file for details regarding code reuse.
