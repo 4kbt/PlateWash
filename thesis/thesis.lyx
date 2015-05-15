@@ -24695,11 +24695,137 @@ Unblinding
 
 \begin_layout Standard
 We unblinded the experiment in public on May 5, 2015.
- The talk can be seen in its entirety on the internet [XXXRC].
- The unblinding process began using git hash XXXRC, as documented on Twitter
- [XXXRC] and elsewhere.
- The initial appearance of the exclusion (Figure XXXRC) and arbitrary-fit
- (Figure XXXRC) plots was extremely puzzling.
+ The talk can be seen in its entirety on the internet 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "UnblindingTalk"
+
+\end_inset
+
+.
+ The unblinding process began using git hash 5d34825dd0aa6a4e1da560448ecce3dfcdc
+5ffff, as documented on Twitter 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "UnblindingTweet"
+
+\end_inset
+
+ and elsewhere.
+ The initial appearance of the exclusion (Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Unblinded-alpha-lambda-plots."
+
+\end_inset
+
+) and arbitrary-fit (Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Unblinded-arbitrary-fit-plot"
+
+\end_inset
+
+) plots was extremely puzzling.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Pictures/unblindedArbFitBootstrap.eps
+	width 75text%
+	rotateAngle 270
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Unblinded-arbitrary-fit-plot"
+
+\end_inset
+
+Unblinded arbitrary-fit plot
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Pictures/unblindedAlphaLambdaMinus.eps
+	width 35text%
+	rotateAngle 270
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Pictures/unblindedAlphaLambdaPlus.eps
+	width 35text%
+	rotateAngle 270
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Unblinded-alpha-lambda-plots."
+
+\end_inset
+
+Unblinded alpha-lambda plots.
+ Interferometer subtracted on left, added on right.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -24707,20 +24833,67 @@ Hasty inspection made it clear that something had gone "weird", as it appeared
  that the torque-variance cut (Section XXXRC) had failed to cut away substantial
  quantities of noisy data.
  With the blind restriction lifted, we could look directly at the central
- values of the torque data, plotted in Figure XXXRC.
+ values of the torque data, plotted in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Per-cut-torques,-uncut,"
+
+\end_inset
+
+.
  It appeared that a section of data differed substantially from the rest,
- but didn't appear to be flagged as a systematic test (see Figure XXXRC)
+ but didn't appear to be flagged as a systematic test.
 \end_layout
 
 \begin_layout Standard
-(Make a figure that shows uncut data, data after original cuts, data after
- old and new cuts)
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+XXXRC
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Per-cut-torques,-uncut,"
+
+\end_inset
+
+Per-cut torques, uncut, with unblinding cuts, and after the removal of inappropr
+iate runs.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 The following day, we determined that the well-resolved and apparently anomalous
  data were from the tests associated with the "capacitor systematic" (Section
- XXXRC).
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Capacitor-Systematic"
+
+\end_inset
+
+).
  This made plain the fact that systematic test data for which we do not
  make a global fit were included into the global fit data, a clear clerical
  error.
