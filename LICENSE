@@ -1,9 +1,14 @@
 Copyright (c) 2004-2015, Charles Hagedorn
 All rights reserved.
 
-All files ending in .lyx, .jpg, .png, .gif, .ps, .eps, .odp, .JPG, .tex, .pdf, .xcf, .dia and .bib are presented for inspection. Reproduction for any other purpose is prohibited without specific prior written permission.
+All files ending in .lyx, .jpg, .png, .gif, .ps, .eps, .odp, .JPG, .tex, 
+.pdf, .xcf, .dia and .bib are presented for inspection. Reproduction for
+any other purpose is prohibited without specific prior written permission.
 
-There are several files *.m files within the repository that are licensed GPLv3. They and our changes to them are licensed with the GNU Public License, version 3. The text of the license is reproduced at the end of this file.
+There are several *.m files within the repository that are licensed
+GPLv3. They and our changes to them are licensed with the GNU Public
+License, version 3. The text of the license is reproduced at the end of
+this file.
 
 For the remainder of the repository: 
 
