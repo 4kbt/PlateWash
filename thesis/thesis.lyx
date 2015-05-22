@@ -7,6 +7,7 @@
 \definecolor{pants}{RGB}{255,127,0}
 \usepackage{grffile}
 \usepackage{dpfloat}
+\date{}
 \end_preamble
 \use_default_options false
 \maintain_unincluded_children false
@@ -91,19 +92,155 @@ Charles A.
  Hagedorn
 \end_layout
 
+\begin_layout Standard
+\align center
+A dissertation submitted in partial fulfillment of the requirements for
+ the degree of:
+\end_layout
+
+\begin_layout Standard
+\align center
+Doctor of Philosophy
+\end_layout
+
+\begin_layout Standard
+\align center
+University of Washington
+\end_layout
+
+\begin_layout Standard
+\align center
+2015
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Reading Committee: 
+\end_layout
+
+\begin_layout Standard
+\align center
+Jens Gundlach, Chair
+\end_layout
+
+\begin_layout Standard
+\align center
+Eric Adelberger
+\end_layout
+
+\begin_layout Standard
+\align center
+Blayne Heckel
+\end_layout
+
+\begin_layout Standard
+\align center
+Ann Nelson
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Program Authorized to Offer Degree: Department of Physics
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+University of Washington 
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+Abstract
+\end_layout
+
+\begin_layout Standard
+\align center
+A Sub-Millimeter Gauss' Law Test of Gravity
+\end_layout
+
+\begin_layout Standard
+\align center
+Charles A.
+ Hagedorn
+\end_layout
+
+\begin_layout Standard
+\align center
+Chair of the Supervisory Committee: 
+\end_layout
+
+\begin_layout Standard
+\align center
+Professor Jens H.
+ Gundlach
+\end_layout
+
+\begin_layout Standard
+\align center
+Department of Physics
+\end_layout
+
 \begin_layout Verse
-Stub abstract: We tested it.
- It worked.
- Our sensitivity at 
+\align left
+We performed a parallel-plate test of the gravitational inverse-square law
+ at submillimeter distances.
+ Using a tantalum/titanium torsion balance locked in electrostatic feedback,
+ we performed a null search for deviations from uniformity of the gravitational
+ field of a planar tantalum mass.
+ Key innovations include an interferometric isolating-foil position monitor,
+ a completely reproducible analysis toolchain, and a publicly-unblinded
+ analysis.
+ In the traditional Yukawa parametrization, our results are consistent,
+ at 95% confidence, with Newton's inverse-square law at 
 \begin_inset Formula $\alpha=1$
 \end_inset
 
- is 
-\begin_inset Formula $\lambda=70\,\mu$
+ over distances from 
+\begin_inset Formula $\lambda=$
 \end_inset
 
-m.
- XXXRC
+XXXRC to millimeters.
+\end_layout
+
+\begin_layout Verse
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+©Copyright 2015 
+\end_layout
+
+\begin_layout Standard
+\align center
+Charles Hagedorn
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
