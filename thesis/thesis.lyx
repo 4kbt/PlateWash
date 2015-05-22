@@ -19750,6 +19750,13 @@ While it is less computationally-efficient, and can have numerical rounding
  by breaking field and test masses into aggregations of many small point
  masses and computing the simple sums of forces and torques between them.
  Done this way, there is only the inverse square law to implement correctly.
+ We make the unorthodox inclusion of code into the text precisely to demonstrate
+ its simplicity.
+ This is the 
+\emph on
+whole
+\emph default
+ library!
 \end_layout
 
 \begin_layout Section
@@ -19840,7 +19847,7 @@ status open
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "../mlib/gravity/pointMatrixGravity.m"
-lstparams "caption={pointMatrixGravity.m},language=Matlab"
+lstparams "language=Matlab,firstline=1,lastline=42,caption={pointMatrixGravity.m (additional unit tests suppressed for brevity)}"
 
 \end_inset
 
@@ -19931,7 +19938,7 @@ status open
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "../mlib/gravity/translatePMArray.m"
-lstparams "caption={translatePMArray.m},language=Matlab"
+lstparams "language=Matlab,lastline=14,caption={translatePMArray.m (some unit tests omitted for brevity)}"
 
 \end_inset
 
@@ -19982,7 +19989,7 @@ status open
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "../mlib/gravity/rotatePMArray.m"
-lstparams "caption={rotatePMArray.m},language=Matlab"
+lstparams "language=Matlab,lastline=35,caption={rotatePMArray.m (some unit tests omitted for brevity)}"
 
 \end_inset
 
