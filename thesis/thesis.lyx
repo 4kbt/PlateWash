@@ -11476,8 +11476,8 @@ status open
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="28" columns="6">
-<features rotate="0" tabularvalignment="middle">
-<column alignment="center" valignment="top">
+<features rotate="0" tabularvalignment="middle" tabularwidth="100text%">
+<column alignment="center" valignment="top" width="0pt">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
