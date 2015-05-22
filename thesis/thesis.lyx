@@ -23781,7 +23781,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../bootstrap/output/bootstrapYukawa.Sysa0l0.0002slop0SysMinus.dat.grav.eps
-	width 80page%
+	width 50theight%
 	rotateAngle 270
 
 \end_inset
@@ -23820,7 +23820,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../bootstrap/output/bootstrapYukawa.Sysa0l0.0002slop0SysNull.dat.grav.eps
-	width 80page%
+	width 50theight%
 	rotateAngle 270
 
 \end_inset
@@ -23855,7 +23855,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../bootstrap/output/bootstrapYukawa.Sysa0l0.0002slop0SysMinus.dat.eps
-	width 80page%
+	width 50theight%
 	rotateAngle 270
 
 \end_inset
