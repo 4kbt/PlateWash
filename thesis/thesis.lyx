@@ -21788,7 +21788,8 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../systematics/resistor/plots/resistorPlot.eps
-	width 80text%
+	width 100text%
+	rotateAngle 270
 
 \end_inset
 
