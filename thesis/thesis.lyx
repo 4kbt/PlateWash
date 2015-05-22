@@ -3448,33 +3448,6 @@ Experimental masses
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Pendulum
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 Our Ti (
 \begin_inset CommandInset include
 LatexCommand input
@@ -4623,21 +4596,7 @@ llimator with a 400
 \begin_inset space ~
 \end_inset
 
-mm focal length, depicted in Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "Autocollimator Photo"
-
-\end_inset
-
- and diagrammed in Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "Autocollimator Diagram"
-
-\end_inset
-
-.
+mm focal length.
  Light from a near-infrared (
 \begin_inset Formula $\sim780$
 \end_inset
@@ -11514,6 +11473,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="28" columns="6">
 <features rotate="0" tabularvalignment="middle">
@@ -13389,7 +13349,7 @@ filename "../metrology/extracted/totalSystematic.tex"
 
 \end_inset
 
-:wq
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -13416,7 +13376,7 @@ Uncertainty table for the minimum effective attractor-pendulum separation
 \end_layout
 
 \begin_layout Chapter
-Strategic choices and operation
+Strategic choices and opera tion
 \end_layout
 
 \begin_layout Standard
@@ -22380,7 +22340,7 @@ Perpendicular parallel
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Standard
 \begin_inset Note Note
 status open
 
