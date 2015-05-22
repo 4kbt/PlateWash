@@ -17811,7 +17811,7 @@ reference "eq:X2 Statement"
 \end_layout
 
 \begin_layout Paragraph
-Explanation - 
+Explanation: 
 \begin_inset Formula $\chi^{2}$
 \end_inset
 
@@ -17843,8 +17843,8 @@ If we take, as above, all our uncertainties to be distributed according
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-P(\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n}) & = & \int\prod_{j=1}^{N}\left(e^{(G(x_{A},x_{B},B_{1},\ldots B_{n},\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n})-\Delta\tau_{j})^{2}/\sigma_{\Delta\tau_{j}}^{2}}P(x_{A},\bar{x}_{A_{j}},\sigma_{x_{A_{j}}})P(x_{B},\bar{x}_{B_{j}},\sigma_{x_{B_{j}}})\right.\\
- &  & \left.\times\prod_{i=1}^{n}P(B_{i},\bar{B}_{i_{j}},\sigma_{B_{i_{j}}})\right)dx_{A}dx_{B}dB_{1}\ldots dB_{n},
+P(\lambda_{1},\ldots\lambda_{n},\alpha_{1},\ldots\alpha_{n}) & = & \int\prod_{j=1}^{N}\left(e^{(G(x_{A},x_{B},B_{1},\ldots B_{n},\lambda_{1},\ldots\lambda_{n},\alpha_{1},\ldots\alpha_{n})-\Delta\tau_{j})^{2}/\sigma_{\Delta\tau_{j}}^{2}}\right.\\
+ &  & \left.\times P(x_{A},\bar{x}_{A_{j}},\sigma_{x_{A_{j}}})P(x_{B},\bar{x}_{B_{j}},\sigma_{x_{B_{j}}})\prod_{i=1}^{n}P(B_{i},\bar{B}_{i_{j}},\sigma_{B_{i_{j}}})\right)dx_{A}dx_{B}dB_{1}\ldots dB_{n},
 \end{eqnarray*}
 
 \end_inset
@@ -17860,7 +17860,7 @@ if you're Bayesian.
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-L(\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n}) & = & \max_{x_{A_{j}},x_{B_{j}},B_{2_{j}},\ldots,B_{n_{j}}\forall j}\left(\log\left[\prod_{j=1}^{N}\left(e^{(G(x_{A_{j}},x_{B_{j}},B_{1},\ldots B_{n_{j}},\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n})-\Delta\tau_{j})^{2}/\sigma_{\Delta\tau_{j}}^{2}}\right.\right.\right.\\
+L(\lambda_{1},\ldots\lambda_{n},\alpha_{1},\ldots\alpha_{n}) & = & \max_{x_{A_{j}},x_{B_{j}},B_{2_{j}},\ldots,B_{n_{j}}\forall j}\left(\log\left[\prod_{j=1}^{N}\left(e^{(G(x_{A_{j}},x_{B_{j}},B_{1},\ldots B_{n_{j}},\lambda_{1},\ldots\lambda_{n},\alpha_{1},\ldots\alpha_{n})-\Delta\tau_{j})^{2}/\sigma_{\Delta\tau_{j}}^{2}}\right.\right.\right.\\
  &  & \left.\left.\left.\times P(x_{A_{j}},\bar{x}_{A_{j}},\sigma_{x_{A_{j}}})P(x_{B_{j}},\bar{x}_{B_{j}},\sigma_{x_{B_{j}}})\prod_{i=1}^{n}P(B_{i_{j}},\bar{B}_{i_{j}},\sigma_{B_{i_{j}}})\right)\right]\right)
 \end{eqnarray*}
 
@@ -17872,7 +17872,8 @@ L(\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n}) & = & \max_{x_{A_{j
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-L(\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n}) & = & \max_{x_{A_{j}},x_{B_{j}},B_{2_{j}},\ldots,B_{n_{j}}\forall j}\left(\sum_{j=1}^{N}\left(\frac{G(x_{A_{j}},x_{B_{j}},B_{1},\ldots B_{n_{j}},\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n})-\Delta\tau_{j})^{2}}{\sigma_{\Delta\tau_{j}}^{2}}\right.\right.\\
+L(\lambda_{1},\ldots\lambda_{n},\alpha_{1},\ldots\alpha_{n}) & = & \max_{x_{A_{j}},x_{B_{j}},B_{2_{j}},\ldots,B_{n_{j}}\forall j}\left(\vphantom{\sum_{j=1}^{N}\left(\frac{G(x_{A_{j}},x_{B_{j}},B_{1},\ldots B_{n_{j}},\lambda_{1},\ldots\lambda_{n},\alpha_{1},\ldots\alpha_{n})-\Delta\tau_{j})^{2}}{\sigma_{\Delta\tau_{j}}^{2}}\right.}\right.\\
+ &  & \sum_{j=1}^{N}\left(\frac{G(x_{A_{j}},x_{B_{j}},B_{1},\ldots B_{n_{j}},\lambda_{1},\ldots\lambda_{n},\alpha_{1},\ldots\alpha_{n})-\Delta\tau_{j})^{2}}{\sigma_{\Delta\tau_{j}}^{2}}\right.\\
  &  & \left.\left.+\frac{(x_{A_{j}}-\bar{x}_{A_{j}})^{2}}{\sigma_{x_{A_{j}}}^{2}}+\frac{(x_{B_{j}}-\bar{x}_{B_{j}})^{2}}{\sigma_{x_{B_{j}}}^{2}}+\sum_{i=1}^{n}\frac{(B_{i_{i}}-\bar{B}_{i_{j}})^{2}}{\sigma_{B_{i_{j}}}^{2}}\frac{1}{\sigma_{B_{i_{j}}}\sqrt{2\pi}}\right)\right)
 \end{eqnarray*}
 
