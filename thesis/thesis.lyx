@@ -20763,7 +20763,7 @@ Matt Turner's independent calculation
 \end_layout
 
 \begin_layout Standard
-Prior to the development of this Newtonian modelling package, Matt Turner
+Prior to the development of this Newtonian modeling package, Matt Turner
  developed an independent package for computing the PlateWash torques using
  a semi-analytic numerical approach.
  His results were found to be in agreement with this simulation package
@@ -20785,11 +20785,28 @@ status open
 \end_layout
 
 \begin_layout Section
-Newtonian Simulations of Platewash
+Newtonian Simulations of PlateWash
+\end_layout
+
+\begin_layout Standard
+In this section, we use the simulation package to set limits on the sizes
+ of Newtonian systematics for our experiment.
 \end_layout
 
 \begin_layout Subsection
 Centered torques 
+\end_layout
+
+\begin_layout Standard
+First, we compute the expected torque and departure from linearity with
+ the pendulum and attractor exactly aligned, as seen in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Centered-torque"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -20813,6 +20830,12 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Centered-torque"
+
+\end_inset
+
 Simulation output for a centered pendulum.
  Non-linearities are below the 0.1 fN-m requirement, especially over the
  
