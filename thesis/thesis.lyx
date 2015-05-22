@@ -21781,7 +21781,7 @@ reference "Resistor Tests"
 \begin_layout Standard
 \begin_inset Float figure
 wide false
-sideways false
+sideways true
 status open
 
 \begin_layout Plain Layout
@@ -21805,17 +21805,8 @@ name "Resistor Tests"
 
 \end_inset
 
-Summary of resistor tests
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMI rotate this caption
-\end_layout
-
-\end_inset
-
-
+Summary of resistor tests.
+ Note logarithmic axes.
 \end_layout
 
 \end_inset
