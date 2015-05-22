@@ -8,6 +8,7 @@
 \usepackage{grffile}
 \usepackage{dpfloat}
 \date{}
+\RequirePackage[hyphens]{url} 
 \end_preamble
 \use_default_options false
 \maintain_unincluded_children false
@@ -25104,17 +25105,6 @@ You'll find the code used to generate this work at https://www.github.com/4kbt/P
 teWash/ and by request from the author.
 \end_layout
 
-\begin_layout Standard
-\begin_inset CommandInset bibtex
-LatexCommand bibtex
-bibfiles "thesis"
-options "bibtotoc,unsrtnat"
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Chapter
 \start_of_appendix
 Yukawa Variance and the Detwiler Square
@@ -26297,6 +26287,17 @@ ic signal added, subtracted, and left uncorrected.
 \begin_inset CommandInset include
 LatexCommand input
 filename "../bootstrap/output/makeSymFigureSystematics.tex"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "thesis"
+options "bibtotoc,apsrev"
 
 \end_inset
 
