@@ -7,6 +7,8 @@
 \definecolor{pants}{RGB}{255,127,0}
 \usepackage{grffile}
 \usepackage{dpfloat}
+\date{}
+\RequirePackage[hyphens]{url} 
 \end_preamble
 \use_default_options false
 \maintain_unincluded_children false
@@ -91,19 +93,155 @@ Charles A.
  Hagedorn
 \end_layout
 
+\begin_layout Standard
+\align center
+A dissertation submitted in partial fulfillment of the requirements for
+ the degree of:
+\end_layout
+
+\begin_layout Standard
+\align center
+Doctor of Philosophy
+\end_layout
+
+\begin_layout Standard
+\align center
+University of Washington
+\end_layout
+
+\begin_layout Standard
+\align center
+2015
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Reading Committee: 
+\end_layout
+
+\begin_layout Standard
+\align center
+Jens Gundlach, Chair
+\end_layout
+
+\begin_layout Standard
+\align center
+Eric Adelberger
+\end_layout
+
+\begin_layout Standard
+\align center
+Blayne Heckel
+\end_layout
+
+\begin_layout Standard
+\align center
+Ann Nelson
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Program Authorized to Offer Degree: Department of Physics
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+University of Washington 
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+Abstract
+\end_layout
+
+\begin_layout Standard
+\align center
+A Sub-Millimeter Gauss' Law Test of Gravity
+\end_layout
+
+\begin_layout Standard
+\align center
+Charles A.
+ Hagedorn
+\end_layout
+
+\begin_layout Standard
+\align center
+Chair of the Supervisory Committee: 
+\end_layout
+
+\begin_layout Standard
+\align center
+Professor Jens H.
+ Gundlach
+\end_layout
+
+\begin_layout Standard
+\align center
+Department of Physics
+\end_layout
+
 \begin_layout Verse
-Stub abstract: We tested it.
- It worked.
- Our sensitivity at 
+\align left
+We performed a parallel-plate test of the gravitational inverse-square law
+ at submillimeter distances.
+ Using a tantalum/titanium torsion balance locked in electrostatic feedback,
+ we performed a null search for deviations from uniformity of the gravitational
+ field of a planar tantalum mass.
+ Key innovations include an interferometric isolating-foil position monitor,
+ a completely reproducible analysis toolchain, and a publicly-unblinded
+ analysis.
+ In the traditional Yukawa parametrization, our results are consistent,
+ at 95% confidence, with Newton's inverse-square law at 
 \begin_inset Formula $\alpha=1$
 \end_inset
 
- is 
-\begin_inset Formula $\lambda=70\,\mu$
+ over distances from 
+\begin_inset Formula $\lambda=$
 \end_inset
 
-m.
- XXXRC
+XXXRC to millimeters.
+\end_layout
+
+\begin_layout Verse
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+©Copyright 2015 
+\end_layout
+
+\begin_layout Standard
+\align center
+Charles Hagedorn
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3311,33 +3449,6 @@ Experimental masses
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Pendulum
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 Our Ti (
 \begin_inset CommandInset include
 LatexCommand input
@@ -4486,21 +4597,7 @@ llimator with a 400
 \begin_inset space ~
 \end_inset
 
-mm focal length, depicted in Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "Autocollimator Photo"
-
-\end_inset
-
- and diagrammed in Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "Autocollimator Diagram"
-
-\end_inset
-
-.
+mm focal length.
  Light from a near-infrared (
 \begin_inset Formula $\sim780$
 \end_inset
@@ -11377,10 +11474,11 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="28" columns="6">
-<features rotate="0" tabularvalignment="middle">
-<column alignment="center" valignment="top">
+<features rotate="0" tabularvalignment="middle" tabularwidth="100text%">
+<column alignment="center" valignment="top" width="0pt">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -11507,7 +11605,7 @@ m)
 \begin_layout Plain Layout
 
 \series bold
-Uncertainty (
+Error (
 \begin_inset Formula $\mu$
 \end_inset
 
@@ -11522,7 +11620,7 @@ m)
 \begin_layout Plain Layout
 
 \series bold
-Uncertainty (
+Error (
 \begin_inset Formula $\mu$
 \end_inset
 
@@ -13252,7 +13350,7 @@ filename "../metrology/extracted/totalSystematic.tex"
 
 \end_inset
 
-:wq
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -13279,7 +13377,7 @@ Uncertainty table for the minimum effective attractor-pendulum separation
 \end_layout
 
 \begin_layout Chapter
-Strategic choices and operation
+Strategic choices and opera tion
 \end_layout
 
 \begin_layout Standard
@@ -17714,7 +17812,7 @@ reference "eq:X2 Statement"
 \end_layout
 
 \begin_layout Paragraph
-Explanation - 
+Explanation: 
 \begin_inset Formula $\chi^{2}$
 \end_inset
 
@@ -17746,8 +17844,8 @@ If we take, as above, all our uncertainties to be distributed according
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-P(\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n}) & = & \int\prod_{j=1}^{N}\left(e^{(G(x_{A},x_{B},B_{1},\ldots B_{n},\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n})-\Delta\tau_{j})^{2}/\sigma_{\Delta\tau_{j}}^{2}}P(x_{A},\bar{x}_{A_{j}},\sigma_{x_{A_{j}}})P(x_{B},\bar{x}_{B_{j}},\sigma_{x_{B_{j}}})\right.\\
- &  & \left.\times\prod_{i=1}^{n}P(B_{i},\bar{B}_{i_{j}},\sigma_{B_{i_{j}}})\right)dx_{A}dx_{B}dB_{1}\ldots dB_{n},
+P(\lambda_{1},\ldots\lambda_{n},\alpha_{1},\ldots\alpha_{n}) & = & \int\prod_{j=1}^{N}\left(e^{(G(x_{A},x_{B},B_{1},\ldots B_{n},\lambda_{1},\ldots\lambda_{n},\alpha_{1},\ldots\alpha_{n})-\Delta\tau_{j})^{2}/\sigma_{\Delta\tau_{j}}^{2}}\right.\\
+ &  & \left.\times P(x_{A},\bar{x}_{A_{j}},\sigma_{x_{A_{j}}})P(x_{B},\bar{x}_{B_{j}},\sigma_{x_{B_{j}}})\prod_{i=1}^{n}P(B_{i},\bar{B}_{i_{j}},\sigma_{B_{i_{j}}})\right)dx_{A}dx_{B}dB_{1}\ldots dB_{n},
 \end{eqnarray*}
 
 \end_inset
@@ -17763,7 +17861,7 @@ if you're Bayesian.
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-L(\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n}) & = & \max_{x_{A_{j}},x_{B_{j}},B_{2_{j}},\ldots,B_{n_{j}}\forall j}\left(\log\left[\prod_{j=1}^{N}\left(e^{(G(x_{A_{j}},x_{B_{j}},B_{1},\ldots B_{n_{j}},\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n})-\Delta\tau_{j})^{2}/\sigma_{\Delta\tau_{j}}^{2}}\right.\right.\right.\\
+L(\lambda_{1},\ldots\lambda_{n},\alpha_{1},\ldots\alpha_{n}) & = & \max_{x_{A_{j}},x_{B_{j}},B_{2_{j}},\ldots,B_{n_{j}}\forall j}\left(\log\left[\prod_{j=1}^{N}\left(e^{(G(x_{A_{j}},x_{B_{j}},B_{1},\ldots B_{n_{j}},\lambda_{1},\ldots\lambda_{n},\alpha_{1},\ldots\alpha_{n})-\Delta\tau_{j})^{2}/\sigma_{\Delta\tau_{j}}^{2}}\right.\right.\right.\\
  &  & \left.\left.\left.\times P(x_{A_{j}},\bar{x}_{A_{j}},\sigma_{x_{A_{j}}})P(x_{B_{j}},\bar{x}_{B_{j}},\sigma_{x_{B_{j}}})\prod_{i=1}^{n}P(B_{i_{j}},\bar{B}_{i_{j}},\sigma_{B_{i_{j}}})\right)\right]\right)
 \end{eqnarray*}
 
@@ -17775,7 +17873,8 @@ L(\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n}) & = & \max_{x_{A_{j
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-L(\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n}) & = & \max_{x_{A_{j}},x_{B_{j}},B_{2_{j}},\ldots,B_{n_{j}}\forall j}\left(\sum_{j=1}^{N}\left(\frac{G(x_{A_{j}},x_{B_{j}},B_{1},\ldots B_{n_{j}},\lambda_{1},\ldots\lambda_{n},\alpha_{1}\ldots,\alpha_{n})-\Delta\tau_{j})^{2}}{\sigma_{\Delta\tau_{j}}^{2}}\right.\right.\\
+L(\lambda_{1},\ldots\lambda_{n},\alpha_{1},\ldots\alpha_{n}) & = & \max_{x_{A_{j}},x_{B_{j}},B_{2_{j}},\ldots,B_{n_{j}}\forall j}\left(\vphantom{\sum_{j=1}^{N}\left(\frac{G(x_{A_{j}},x_{B_{j}},B_{1},\ldots B_{n_{j}},\lambda_{1},\ldots\lambda_{n},\alpha_{1},\ldots\alpha_{n})-\Delta\tau_{j})^{2}}{\sigma_{\Delta\tau_{j}}^{2}}\right.}\right.\\
+ &  & \sum_{j=1}^{N}\left(\frac{G(x_{A_{j}},x_{B_{j}},B_{1},\ldots B_{n_{j}},\lambda_{1},\ldots\lambda_{n},\alpha_{1},\ldots\alpha_{n})-\Delta\tau_{j})^{2}}{\sigma_{\Delta\tau_{j}}^{2}}\right.\\
  &  & \left.\left.+\frac{(x_{A_{j}}-\bar{x}_{A_{j}})^{2}}{\sigma_{x_{A_{j}}}^{2}}+\frac{(x_{B_{j}}-\bar{x}_{B_{j}})^{2}}{\sigma_{x_{B_{j}}}^{2}}+\sum_{i=1}^{n}\frac{(B_{i_{i}}-\bar{B}_{i_{j}})^{2}}{\sigma_{B_{i_{j}}}^{2}}\frac{1}{\sigma_{B_{i_{j}}}\sqrt{2\pi}}\right)\right)
 \end{eqnarray*}
 
@@ -19652,6 +19751,13 @@ While it is less computationally-efficient, and can have numerical rounding
  by breaking field and test masses into aggregations of many small point
  masses and computing the simple sums of forces and torques between them.
  Done this way, there is only the inverse square law to implement correctly.
+ We make the unorthodox inclusion of code into the text precisely to demonstrate
+ its simplicity.
+ This is the 
+\emph on
+whole
+\emph default
+ library!
 \end_layout
 
 \begin_layout Section
@@ -19742,7 +19848,7 @@ status open
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "../mlib/gravity/pointMatrixGravity.m"
-lstparams "caption={pointMatrixGravity.m},language=Matlab"
+lstparams "language=Matlab,firstline=1,lastline=42,caption={pointMatrixGravity.m (additional unit tests suppressed for brevity)}"
 
 \end_inset
 
@@ -19833,7 +19939,7 @@ status open
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "../mlib/gravity/translatePMArray.m"
-lstparams "caption={translatePMArray.m},language=Matlab"
+lstparams "language=Matlab,lastline=14,caption={translatePMArray.m (some unit tests omitted for brevity)}"
 
 \end_inset
 
@@ -19884,7 +19990,7 @@ status open
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "../mlib/gravity/rotatePMArray.m"
-lstparams "caption={rotatePMArray.m},language=Matlab"
+lstparams "language=Matlab,lastline=35,caption={rotatePMArray.m (some unit tests omitted for brevity)}"
 
 \end_inset
 
@@ -20665,7 +20771,7 @@ Matt Turner's independent calculation
 \end_layout
 
 \begin_layout Standard
-Prior to the development of this Newtonian modelling package, Matt Turner
+Prior to the development of this Newtonian modeling package, Matt Turner
  developed an independent package for computing the PlateWash torques using
  a semi-analytic numerical approach.
  His results were found to be in agreement with this simulation package
@@ -20687,11 +20793,28 @@ status open
 \end_layout
 
 \begin_layout Section
-Newtonian Simulations of Platewash
+Newtonian Simulations of PlateWash
+\end_layout
+
+\begin_layout Standard
+In this section, we use the simulation package to set limits on the sizes
+ of Newtonian systematics for our experiment.
 \end_layout
 
 \begin_layout Subsection
 Centered torques 
+\end_layout
+
+\begin_layout Standard
+First, we compute the expected torque and departure from linearity with
+ the pendulum and attractor exactly aligned, as seen in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Centered-torque"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -20715,6 +20838,12 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Centered-torque"
+
+\end_inset
+
 Simulation output for a centered pendulum.
  Non-linearities are below the 0.1 fN-m requirement, especially over the
  
@@ -21684,14 +21813,15 @@ reference "Resistor Tests"
 \begin_layout Standard
 \begin_inset Float figure
 wide false
-sideways false
+sideways true
 status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename ../systematics/resistor/plots/resistorPlot.eps
-	width 80text%
+	width 100text%
+	rotateAngle 270
 
 \end_inset
 
@@ -21708,17 +21838,8 @@ name "Resistor Tests"
 
 \end_inset
 
-Summary of resistor tests
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-XXXMI rotate this caption
-\end_layout
-
-\end_inset
-
-
+Summary of resistor tests.
+ Note logarithmic axes.
 \end_layout
 
 \end_inset
@@ -22164,14 +22285,15 @@ key "MagnetometerDatasheet"
 \begin_layout Standard
 \begin_inset Float figure
 wide false
-sideways false
+sideways true
 status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename ../systematics/magnetic/plots/longStrokeolHist.datlongStrokeo0Hist.dat.eps
-	width 80text%
+	width 100text%
+	rotateAngle 270
 
 \end_inset
 
@@ -22195,13 +22317,15 @@ Long-stroke Magnetic Tests
 \begin_layout Standard
 \begin_inset Float figure
 wide false
-sideways false
+sideways true
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename ../systematics/magnetic/plots/shortStrokeolHist.datshortStrokeo0Hist.datshortStrokeorHist.dat.eps
-	width 80col%
+	width 100text%
+	rotateAngle 270
 
 \end_inset
 
@@ -22243,7 +22367,7 @@ Perpendicular parallel
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Standard
 \begin_inset Note Note
 status open
 
@@ -22285,14 +22409,15 @@ name "sec:Temperature--systematic"
 \begin_layout Standard
 \begin_inset Float figure
 wide false
-sideways false
+sideways true
 status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename ../systematics/thermal/plots/longStrokeoHHist.datlongStrokeo0Hist.dat.eps
-	width 80col%
+	width 100text%
+	rotateAngle 270
 
 \end_inset
 
@@ -22316,14 +22441,15 @@ Long-stroke Thermal Tests
 \begin_layout Standard
 \begin_inset Float figure
 wide false
-sideways false
+sideways true
 status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename ../systematics/magnetic/plots/shortStrokeolHist.datshortStrokeo0Hist.datshortStrokeorHist.dat.eps
-	width 80text%
+	width 100text%
+	rotateAngle 270
 
 \end_inset
 
@@ -23692,7 +23818,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../bootstrap/output/bootstrapYukawa.Sysa0l0.0002slop0SysMinus.dat.grav.eps
-	width 80page%
+	width 50theight%
 	rotateAngle 270
 
 \end_inset
@@ -23731,7 +23857,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../bootstrap/output/bootstrapYukawa.Sysa0l0.0002slop0SysNull.dat.grav.eps
-	width 80page%
+	width 50theight%
 	rotateAngle 270
 
 \end_inset
@@ -23766,7 +23892,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../bootstrap/output/bootstrapYukawa.Sysa0l0.0002slop0SysMinus.dat.eps
-	width 80page%
+	width 50theight%
 	rotateAngle 270
 
 \end_inset
@@ -24979,17 +25105,6 @@ You'll find the code used to generate this work at https://www.github.com/4kbt/P
 teWash/ and by request from the author.
 \end_layout
 
-\begin_layout Standard
-\begin_inset CommandInset bibtex
-LatexCommand bibtex
-bibfiles "thesis"
-options "bibtotoc,unsrtnat"
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Chapter
 \start_of_appendix
 Yukawa Variance and the Detwiler Square
@@ -26172,6 +26287,17 @@ ic signal added, subtracted, and left uncorrected.
 \begin_inset CommandInset include
 LatexCommand input
 filename "../bootstrap/output/makeSymFigureSystematics.tex"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "thesis"
+options "bibtotoc,apsrev"
 
 \end_inset
 
