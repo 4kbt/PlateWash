@@ -16704,70 +16704,6 @@ Attractor motion, convolved with DAQ IIR low-pass response.
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename ../runAnalysis/supportingPlots/run3220torqueLag.eps
-	width 75text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:TorqueFeedbackLag"
-
-\end_inset
-
-Pendulum, in PD feedback, coherently-averaged response to periodic magnetic
- torque.
- Magnet states are as-driven by the attractor control DAQ, no phase lag;
- scatter driven by sample/clock beating.
- The measured data are filtered with a 
-\begin_inset CommandInset include
-LatexCommand input
-filename "../extracted/filterHigh3220.tex"
-
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-mHz high-pass filter.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Subsubsection
 \begin_inset Quotes eld
 \end_inset
@@ -17035,51 +16971,6 @@ filename "../extracted/lockAve.tex"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-This is done by the octave function `squareLockM.m'
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Box Boxed
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status open
-
-\begin_layout Plain Layout
-
-\size small
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "../mlib/squareLockM.m"
-lstparams "breakatwhitespace=true,breaklines=true,emptylines=0,language=Matlab,linerange={1-17,19-23,71-104},caption={squareLockM.m}"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 The first measurement, and every-other subsequent measurement, is regarded
  as an `A' measurement.
  The second measurement, and every-other subsequent measurement (the complement
@@ -17104,33 +16995,6 @@ The `lock-in' is made by taking the difference between the average of the
  recorded.
  For the torque channel, these torque differences, in concert with the A
  and B positions, comprise the science measurement.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Subsection
-Questions:
-\end_layout
-
-\begin_layout Itemize
-I'm very interested in including the 
-\bar under
-actual 
-\bar default
-source code used for the analysis, as much as possible as inline text instead
- of appendices.
- If there's a bug in my analysis routines, I want the reader to be able
- to correct for it and repeat my results.
- A lot of dirty laundry lies in an experiment's source code; I want to air
- it out.
- Do you have any thoughts on how I can do it, but keep things readable?
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Section
@@ -25038,10 +24902,101 @@ The capacitor-systematic data included a lengthy run with a well-resolved
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+XXXRC
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Arbitrary-fit-torque-unblinded-corrected"
+
+\end_inset
+
+Arbitrary-fit torque, as unblinded, with irrelevant runs removed.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Yukawa-Fit,-with-irrelevant-runs-removed"
+
+\end_inset
+
+Yukawa Fit, with irrelevant runs removed.
+ Interferometer correction is both added and subtracted.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 With that knowledge, on May 7, we began fitting again with those irrelevant
  runs removed.
- The changes are summarized with the commit hash XXXRC.
- The resulting fits are shown in Figures XXXRC and XXXRC.
+ The changes are summarized with the commit hash 6f9be5dea4c24126fb9bbc7b8f3cbf8
+155c76651.
+ In order to generate a smoother fit with higher bootstrapped statistics
+ in limited time, we parallelized the fitting process further with commit
+ 537b7685094cde1d00dd3e464758fb32732c5e38.
+ The aggregated outputs from several repetitions of the fit were used to
+ generate the confidence intervals shown here.
+ The fit results are included in the document's code repository.
+ The resulting fits and the associated confidence intervals are shown in
+ Figures 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Arbitrary-fit-torque-unblinded-corrected"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Yukawa-Fit,-with-irrelevant-runs-removed"
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -25055,22 +25010,159 @@ These results should be regarded as the unblinded scientific outcome of
 \end_layout
 
 \begin_layout Section
-Post-unblinding curiosity
+Ten fewer microns
 \end_layout
 
 \begin_layout Standard
-It is clear from Figure XXXRC that there's a somewhat-resolved signal at
- the shortest distances.
- Comparison with the foil interferometer signal Figure XXXRC shows a possible
- culprit.
- As noted in XXXRC, residual foil-touching is an easy candidate for such
- a signal.
- So, we ran an alternate analysis using a slightly smaller subset of the
- data (XXXRC instead of XXXRC), cutting away the leading 10 microns of the
- data.
- This change is described in commit XXXRC.
- The fits are shown inFigures XXXRC and XXXRC.
- They are not substantially different from Figures XXXRC and XXXRC.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:As-unblinded-foil-interferometer"
+
+\end_inset
+
+As-unblinded foil-interferometer signal reconstruction
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It is clear from Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Arbitrary-fit-torque-unblinded-corrected"
+
+\end_inset
+
+ that there's a somewhat-resolved signal at the shortest distances.
+ Comparison with the foil interferometer signal, Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:As-unblinded-foil-interferometer"
+
+\end_inset
+
+, shows a possible culprit.
+ As noted in the pre-unblinding caption from Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Interferometer-fit.-Each"
+
+\end_inset
+
+, residual foil-touching is an easy candidate for such a signal.
+ We ran an alternate analysis using a slightly smaller subset of the data
+ (XXXRC instead of XXXRC), cutting away the leading 10 microns of the data.
+ This change is described in commit bec5a46fd98392eb35ff94573710246f95122900.
+ As in the section above, we parallelized the code further, as in commit
+ 9e8c5cd11ecc322d1ce47e8fd01587fc2af1b28d.
+ The fits are shown in Figures 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Arbitrary-fit-torque-reconstruction-ten-fewer-microns"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Yukawa-fit-torque-reconstruction-ten-fewer-microns"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Arbitrary-fit-torque-reconstruction-ten-fewer-microns"
+
+\end_inset
+
+Arbitrary-fit torque reconstruction, ten fewer microns.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Yukawa-fit-torque-reconstruction-ten-fewer-microns"
+
+\end_inset
+
+Yukawa fit, ten fewer microns.
+ The interferometer signal has been both added and subtracted.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
