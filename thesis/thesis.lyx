@@ -26534,11 +26534,13 @@ Build System Configuration
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing single
 The Debian Linux computer used to generate this analysis and text had the
  following packages (versions) installed:
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing single
 \begin_inset CommandInset include
 LatexCommand input
 preview true
