@@ -18878,6 +18878,16 @@ The outcome of the bootstrapped Yukawa fits is a distribution of best-fit
 \end_inset
 
  plane.
+ The final form of our algorithm was suggested by Matt Turner, earning the
+ moniker, 
+\begin_inset Quotes eld
+\end_inset
+
+Turner Smoothing
+\begin_inset Quotes erd
+\end_inset
+
+.
  Working from small 
 \begin_inset Formula $\lambda$
 \end_inset
@@ -25276,14 +25286,56 @@ Turner Smoothing
 \begin_inset Quotes erd
 \end_inset
 
- XXXRC, and move a fixed-number bin (an integer-multiple of 20, to make
- accurate 95% limits) left-to-right through the best-fit points.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Confidence-Interval-Algorithm"
+
+\end_inset
+
+, and move a fixed-number bin (an integer-multiple of 20, to make accurate
+ 95% limits) left-to-right through the best-fit points.
  For each binning, we sort the points into increasing order of 
 \begin_inset Formula $|\alpha|$
 \end_inset
 
 , discard the top 5% of points, and take the next-largest point (19th of
  20, 38th of 40, 57th of 60) as representative of the 95th percentile.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+95% limits on the Yukawa-parametrized 
+\begin_inset Formula $|\alpha|$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
