@@ -26523,6 +26523,32 @@ filename "../bootstrap/output/makeSymFigureSystematics.tex"
 
 \end_layout
 
+\begin_layout Chapter
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Build-System-Configuration"
+
+\end_inset
+
+Build System Configuration
+\end_layout
+
+\begin_layout Standard
+The Debian Linux computer used to generate this analysis and text had the
+ following packages (versions) installed:
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+preview true
+filename "../debianPackages.tex"
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex

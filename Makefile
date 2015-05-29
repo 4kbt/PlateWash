@@ -3,7 +3,7 @@ include Makefile.inc
 CURRENTDIR := $(shell pwd)
 PATHINJECT := tmp/pathinject
 
-dissertation: gitlog.log debianPackages.txt
+dissertation: gitlog.log debianPackages.tex
 	$(if $(shell ls data), ,$(shell ln -s ~/PWData/ data))
 	$(shell bin/countXXXs.sh thesis/thesis.lyx >> data/xxxCount.dat)
 	$(shell bin/commitPlot.sh > data/gitCommitTimes.dat)
@@ -24,6 +24,10 @@ gitlog.log:
 
 debianPackages.txt:
 	dpkg-query -l > $@
+	
+debianPackages.tex: debianPackages.txt
+	awk '{ORS=" "}  NR > 5 {print $$2 " (" $$3 ")"}' debianPackages.txt > $@
+
 
 clean:
 	$(MAKE) -C mlib clean

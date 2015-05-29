@@ -126,7 +126,7 @@ IFOTouchThreshold = 4e-9;
 
 %Commented because thresholding is now dynamic in torErrThresh()
 %torErrThresh = 1e-14;
-torErrMin    = 1e-18;
+torErrMin    = 1e-18;  printSI(torErrMin,  1, -15, 'N-m', [HOMEDIR 'extracted/torErrMin.tex']);
 %Used to for artifically increasing noise to provide partial-blindness.
 torqueBlur   = 1e-12;  printSI(torqueBlur, 1, -15, 'N-m', [HOMEDIR 'extracted/torqueBlur.tex']);
 
