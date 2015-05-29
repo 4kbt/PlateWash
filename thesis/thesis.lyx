@@ -26552,6 +26552,7 @@ filename "../debianPackages.tex"
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing single
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 bibfiles "thesis"
