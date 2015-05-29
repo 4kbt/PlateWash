@@ -24998,8 +24998,17 @@ alk test.
 The capacitor-systematic data included a lengthy run with a well-resolved
  and, compared with the science data, gigantic signal.
  This necessarily altered the behavior of our adaptive variance cut (Section
- XXXRC), allowing large quantities of earthquake and foil-touching transients
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Excised-cuts"
+
+\end_inset
+
+), allowing large quantities of earthquake and foil-touching transients
  into the final dataset.
+ The combined inclusion of a well-resolved signal and extremely non-Gaussian
+ outliers made the result meaningless.
 \end_layout
 
 \begin_layout Standard
