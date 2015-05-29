@@ -26536,7 +26536,12 @@ Build System Configuration
 \begin_layout Standard
 \align left
 The Debian Linux computer used to generate this analysis and text had the
- following packages (versions) installed:
+ following packages (versions) installed.
+ This list of packages is 
+\bar under
+not
+\bar default
+ minimal.
 \end_layout
 
 \begin_layout Standard
