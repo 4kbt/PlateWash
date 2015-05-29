@@ -17,6 +17,7 @@ dissertation: gitlog.log debianPackages.tex
 	$(MAKE) $(PARALLEL) -C ifo
 	$(MAKE) $(PARALLEL) -C systematics 
 	$(MAKE) $(PARALLEL) -C bootstrap
+	$(MAKE) $(PARALLEL) -C conclusion 
 	$(MAKE) -C thesis 
 
 gitlog.log: 
