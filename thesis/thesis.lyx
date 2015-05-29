@@ -17175,6 +17175,125 @@ In this work, these will be presented only as scatter plots, but if the
 \end_layout
 
 \begin_layout Section
+Excised cuts
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Excised-cuts"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this section, we describe ways in which data expected to be anomalous
+ were excised from the dataset, commonly called 
+\begin_inset Quotes eld
+\end_inset
+
+cuts
+\begin_inset Quotes erd
+\end_inset
+
+.
+ To prevent a vocabulary collision with our previously-defined 
+\begin_inset Quotes eld
+\end_inset
+
+cut
+\begin_inset Quotes erd
+\end_inset
+
+, meaning a single measurement, we refer here only to 
+\begin_inset Quotes eld
+\end_inset
+
+excisions
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+To reject a short period of data where the pendulum autocollimator was disabled,
+ causing the recorded torque to read 0 for a continuous stretch of data,
+ we impose a minimum threshold on the torque 
+\emph on
+uncertainty 
+\emph default
+of 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/torErrMin.tex"
+
+\end_inset
+
+, far below our expected per-cut uncertainty.
+\end_layout
+
+\begin_layout Itemize
+To reject truly non-Gaussian transients from the data (e.g.
+ earthquakes, foil strikes, etc.), we reject cuts whose torque 
+\emph on
+central value
+\emph default
+ or 
+\emph on
+uncertainty
+\emph default
+ is greater than five times the standard deviation of the torque 
+\emph on
+central values
+\emph default
+ of the entire dataset.
+ With this approach, we will not accidentally reject a real signal that
+ persists for more than a few cuts, as might happen with an excision determined
+ from the distribution of torque-cut uncertainties.
+ While this excision seems like an oddity, there are few ways that one can
+ reliably determine outliers while blind.
+ This approach can be viewed as a conservative analog to Chauvenet's Criterion
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "taylor1996introduction"
+
+\end_inset
+
+, as we only have thousands of measurements in total and expect that our
+ science signal will be buried within the single-measurement statisticial
+ noise..
+\end_layout
+
+\begin_layout Itemize
+To prevent any attractor-foil touching signal from entering the dataset,
+ we excise away any cut with even a single attractor point within 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../metrology/extracted/ifoPad.tex"
+
+\end_inset
+
+ of the expected attractor-foil touching point.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Post-unblinding comment: the order of the latter two excisions should have
+ been exchanged, but were not.
+ We believe that this has an inconsequential effect on the result, and would
+ tend to improve the measurement's sensitivity slightly (see Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Excised-data"
+
+\end_inset
+
+ for further discussion).
+\end_layout
+
+\begin_layout Section
 Bootstrap
 \end_layout
 
@@ -23507,40 +23626,6 @@ Results
 \end_layout
 
 \begin_layout Section
-Description of runs
-\end_layout
-
-\begin_layout Standard
-Attractor overview graphic
-\end_layout
-
-\begin_layout Standard
-Uncertainty overview
-\end_layout
-
-\begin_layout Standard
-Torque central value overview
-\end_layout
-
-\begin_layout Section
-Raw data
-\end_layout
-
-\begin_layout Standard
-XXXRC raw torque plots; systematic subtracted, omitted, added.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Section: Binned Triangle Plot XXXMA
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
 Bootstrapped 
 \begin_inset Quotes eld
 \end_inset
@@ -23789,9 +23874,9 @@ Other models
 With these data, it is possible to place useful limits upon other inverse-square
  law modifications such as a power-law potential, Fat Gravitons, Chameleons,
  Unparticles, and more.
- For each distinct scenario, a new approach should be taken to conservatively
- address systematic uncertainties.
- For this reason, this thesis limits its results to Yukawa potentials.
+ For each distinct scenario, care should be taken to conservatively address
+ systematic uncertainties.
+ For this reason, we limit our results to Yukawa potentials.
 \end_layout
 
 \begin_layout Chapter
@@ -24820,8 +24905,14 @@ Unblinded alpha-lambda plots.
 
 \begin_layout Standard
 Hasty inspection made it clear that something had gone "weird", as it appeared
- that the torque-variance cut (Section XXXRC) had failed to cut away substantial
- quantities of noisy data.
+ that the torque-variance cut (Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Excised-cuts"
+
+\end_inset
+
+) had failed to cut away substantial quantities of noisy data.
  With the blind restriction lifted, we could look directly at the central
  values of the torque data, plotted in Figure 
 \begin_inset CommandInset ref
@@ -25122,10 +25213,6 @@ Arbitrary-fit torque reconstruction, ten fewer microns.
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -25166,14 +25253,65 @@ Yukawa fit, ten fewer microns.
 \end_layout
 
 \begin_layout Section
-Conclusions
+Absolute 
+\begin_inset Formula $|\alpha|$
+\end_inset
+
+ limits
 \end_layout
 
 \begin_layout Standard
-We're proud of this measurement.
- While we surely did not reach our initial sensitivity goals for the experiment,
- we unambiguously demonstrated a careful approach to the parallel-plate
- geometry.
+It is a technical hurdle to take the inclusion limits from the preceding
+ sections and reliably generate exclusion limits for 
+\begin_inset Formula $|\alpha|$
+\end_inset
+
+.
+ Fortunately, the bootstrapped data allow us an easy path forward.
+ Just as with the inclusion limits, we take the approach of 
+\begin_inset Quotes eld
+\end_inset
+
+Turner Smoothing
+\begin_inset Quotes erd
+\end_inset
+
+ XXXRC, and move a fixed-number bin (an integer-multiple of 20, to make
+ accurate 95% limits) left-to-right through the best-fit points.
+ For each binning, we sort the points into increasing order of 
+\begin_inset Formula $|\alpha|$
+\end_inset
+
+, discard the top 5% of points, and take the next-largest point (19th of
+ 20, 38th of 40, 57th of 60) as representative of the 95th percentile.
+\end_layout
+
+\begin_layout Section
+Excised data
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Excised-data"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+XXXRC
+\end_layout
+
+\begin_layout Section
+Sign
+\end_layout
+
+\begin_layout Section
+Conclusion
+\end_layout
+
+\begin_layout Standard
+We demonstrated a thorough approach to parallel-plate inverse-square law
+ tests.
  The experiment incorporated a number of systematic-uncertainty mitigating
  technologies: pneumatic drive, random attractor positioning, and the critically
  important interferometric foil-position monitor.
@@ -25182,8 +25320,8 @@ We're proud of this measurement.
 \end_layout
 
 \begin_layout Standard
-No evidence for a significant violation of Newton's inverse-square law is
- observed.
+After addressing the No evidence for a significant violation of Newton's
+ inverse-square law is observed.
  Using the traditional Yukawa parametrization (Section XXXRC), we find that
  the inverse-square law holds (
 \begin_inset Formula $\alpha<1$
