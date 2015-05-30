@@ -1,0 +1,19 @@
+set term postscript enhanced solid color eps
+set output 'absoluteConfidence.eps'
+
+set xlabel 'lambda (m)'
+set ylabel 'absolute value of alpha'
+
+set logsc
+set key noauto
+
+pl [5e-6:1e-3] \
+	'unblindedMerge.dat.cia' u ($3*1e-4):5 w l lt 1 tit 'As Unblinded',\
+	'' u ($4*1e-4):5 w l lt 1, \
+	'' u ($1*1e-4):5 w l lt 1, \
+	'tenFewerMerge.dat.cia' u ($3*1e-4):5 w l lt 3 tit 'Ten Fewer Microns',\
+	'' u ($4*1e-4):5 w l lt 3, \
+	'' u ($1*1e-4):5 w l lt 3, \
+	1 lt -1,\
+	'../thesis/plots/ISL/kapnerNov06.dat' w l tit 'Kapner et al.',\
+	'../thesis/plots/ISL/cookData.dat' w l tit 'Cook et al.',\
