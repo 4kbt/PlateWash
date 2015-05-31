@@ -25051,6 +25051,14 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../conclusion/unblindedMerge.dat.labelled.grav.eps
+	width 70text%
+	rotateAngle 270
+
+\end_inset
+
 
 \end_layout
 
@@ -25244,6 +25252,18 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../conclusion/tenFewerMerge.dat.labelled.grav.eps
+	width 70text%
+	rotateAngle 270
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -25319,6 +25339,13 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/charlie/swankyEotwash/Eotwash/conclusion/absoluteConfidence.eps
+	width 70text%
+
+\end_inset
+
 
 \end_layout
 
@@ -25381,8 +25408,9 @@ We demonstrated a thorough approach to parallel-plate inverse-square law
 \end_layout
 
 \begin_layout Standard
-After addressing the No evidence for a significant violation of Newton's
- inverse-square law is observed.
+After addressing the obvious clerical error in our run configuration, no
+ evidence for a significant violation of Newton's inverse-square law is
+ observed.
  Using the traditional Yukawa parametrization (Section XXXRC), we find that
  the inverse-square law holds (
 \begin_inset Formula $\alpha<1$
@@ -25392,8 +25420,8 @@ After addressing the No evidence for a significant violation of Newton's
 \end_layout
 
 \begin_layout Standard
-You'll find the code used to generate this work at https://www.github.com/4kbt/Pla
-teWash/ and by request from the author.
+The code used to generate this work is freely available: https://www.github.com/4k
+bt/PlateWash/ and by request from the author.
 \end_layout
 
 \begin_layout Chapter
