@@ -4,9 +4,10 @@ set macro
 gravityFlag = "gravityOnly"
 
 fn = system("echo $GNUPLOTME");
+cn = fn.'.ci'
+fn = fn.'.labelled'
 outfile = fn .".eps"
 
-cn = fn.'.ci'
 
 
 if ( exists( gravityFlag) ) {
