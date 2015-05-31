@@ -361,6 +361,10 @@ Hank Simons
 \series default
 , James Napolitano, 
 \emph on
+Jarek Kaspar
+\emph default
+, 
+\emph on
 Jason Detwiler
 \emph default
 , 
@@ -398,9 +402,9 @@ Matt Dietrich
 \emph default
 ,
 \emph on
- 
+ Matt Sternberg,
 \series bold
-Matt Turner
+ Matt Turner
 \series default
 \emph default
 , Michael Chen, Michael Famulare, Michelle Wang, MicroE, Monday Meeting,
@@ -23352,12 +23356,13 @@ Blind commit
 \end_layout
 
 \begin_layout Standard
-We declare that our measurement is unblinded with git commit XXXRC.
+We declare that our measurement is unblinded with git commit 3ab13338192cc79cf82
+697bbcbfeefc29e364be8.
  Furthermore, the hash of the data directory, as evaluated by 
 \family typewriter
 cat $(echo run*.dta run*.hdr run*.dat | sort) | sha1sum
 \family default
- is XXXRC.
+ is c68496dd3fefcb5d9c5af912701409ad85695451.
 \end_layout
 
 \begin_layout Section

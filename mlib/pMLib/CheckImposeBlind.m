@@ -13,7 +13,7 @@ else
                 end
         else
                 'Torque column is unblinded. Are you ready for this?'
-                        pause
+                 %       pause
         end
 end
 

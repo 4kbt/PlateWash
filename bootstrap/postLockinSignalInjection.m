@@ -42,10 +42,14 @@ if( testInjection == 1)
 
 	yo(:,2) = yo(:,1)*injSlope + yo(:,2);
 
+	%inject random error and preserve blind if needed
+	if( unBlind ~= 1 )
+		pM(:,torCol) = randn( rows(pM) , 1) .* pM(:,torerrCol);
+	end
+
 	%Fake it!
-%	dBSArchive(:,3) = genFakeData(yo, dBSArchive);
-	pM(:,torCol) = ...
-		genFakeData( yo , [pM(:,aCol), pM(:,bCol), pM(:,torCol), pM(:,torerrCol)]) + ...
+	pM(:,torCol) = pM(:,torCol) + ... 
+		genFakeData( yo , [pM(:,aCol), pM(:,bCol), pM(:,torCol), 0*pM(:,torerrCol)]) + ...
 		genFakeData( yo1, [pM(:,aCol), pM(:,bCol), pM(:,torCol), 0*pM(:,torerrCol)]) .* pM(:,magFieldACol ) + ...
 		genFakeData( yo2, [pM(:,aCol), pM(:,bCol), pM(:,torCol), 0*pM(:,torerrCol)]) .* pM(:,magField2ACol);
 
@@ -69,10 +73,13 @@ if( testInjection == 1)
 	trimmedPM = trimPM(pM, signalColumns, torCol);
         CNStruct = columnNamesStruct;
 	X2Check = chiSquareWSystematics(trimmedPM, injectedSignalArray, PendStruct, AttrStruct, CNStruct)
-	if(  X2Check > 2* rows(pM))
-		X2PerRows = X2Check/rows(pM)
-		error('chiSquared of the correct fit is too large!')
-	end
+
+	%Disabling this for unblinding!
+%	if(  X2Check > 2* rows(pM))
+%		X2PerRows = X2Check/rows(pM)
+%		error('chiSquared of the correct fit is too large!')
+%	end
+
 end
 
 if ( 1 == exist("fileInjection" ))
