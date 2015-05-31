@@ -1,0 +1,16 @@
+load HOMEDIR.'globalConfig/columnNames.m'
+
+runTimeCol = pwTimeCol+numSensors;
+
+set logsc y
+
+set ylabel '|torque difference| fN-m'
+set xlabel 'time (days since Jan 1 2009)'
+
+set key noauto
+
+pl \
+        '../bootstrap/output/onLoad.dat'            u (column(runTimeCol)/86400):(1e15*abs(column(torqueCol))) tit 'Raw Cuts',\
+        '../bootstrap/output/afterClericalFix.dat'  u (column(runTimeCol)/86400):(1e15*abs(column(torqueCol))) tit 'After "Clerical Fix"',\
+        '../bootstrap/output/afterAnalysisCuts.dat' u (column(runTimeCol)/86400):(1e15*abs(column(torqueCol))) tit 'After analysis cuts',\
+
