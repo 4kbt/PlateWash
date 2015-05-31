@@ -13,3 +13,8 @@ tenFewerMerge.dat.ci tenFewerMerge.dat.cia tenFewerMerge.dat.grav.eps tenFewerMe
 
 absoluteConfidence.eps: absoluteConfidence.gpl tenFewerMerge.dat.cia unblindedMerge.dat.cia
 	$(GNU) absoluteConfidence.gpl
+
+clean:
+	-rm *.eps
+	-rm *.dat
+	-rm *.dat.*
