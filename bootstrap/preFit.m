@@ -41,6 +41,9 @@ pM = pM( (pM(:,torerrCol)   > torErrMin),:);
 distanceCuts
 
 %save for conclusion plot
-save 'output/afterAnalysisCuts.dat' pM
+%alphsInjected and slopInj are set, if not before, by postLockinSignalInjection
+if(alphasInjected == 0 & injSlope == 0);
+	save 'output/afterAnalysisCuts.dat' pM
+end
 
 postPreFit

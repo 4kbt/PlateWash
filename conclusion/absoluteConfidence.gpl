@@ -4,10 +4,16 @@ set output 'absoluteConfidence.eps'
 set xlabel 'lambda (m)'
 set ylabel 'absolute value of alpha'
 
+set format x "10^{%T}"
+set format y "10^{%T}"
+
+
 set logsc
 set key noauto
 
 pl [5e-6:1e-3] \
+	'../thesis/plots/ISL/kapnerNov06.dat' w l tit 'Kapner et al.' lt -1,\
+	'../thesis/plots/ISL/cookData.dat' w l tit 'Cook et al.' lt 0,\
 	'unblindedMerge.dat.cia' u ($3*1e-4):5 w l lt 1 tit 'As Unblinded',\
 	'' u ($4*1e-4):5 w l lt 1, \
 	'' u ($1*1e-4):5 w l lt 1, \
@@ -15,5 +21,3 @@ pl [5e-6:1e-3] \
 	'' u ($4*1e-4):5 w l lt 3, \
 	'' u ($1*1e-4):5 w l lt 3, \
 	1 lt -1,\
-	'../thesis/plots/ISL/kapnerNov06.dat' w l tit 'Kapner et al.',\
-	'../thesis/plots/ISL/cookData.dat' w l tit 'Cook et al.',\
