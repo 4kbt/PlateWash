@@ -6,12 +6,12 @@ gravityFlag = "gravityOnly"
 fn = system("echo $GNUPLOTME");
 cn = fn.'.ci'
 fn = fn.'.labelled'
-outfile = fn .".eps"
+outfile = fn .".zoom.eps"
 
 
 
 if ( exists( gravityFlag) ) {
-	outfile = fn .".grav.eps"
+	outfile = fn .".zoom.grav.eps"
 }
 
 load HOMEDIR.'/globalConfig/columnNames.m'
@@ -19,7 +19,7 @@ load HOMEDIR.'/globalConfig/columnNames.m'
 cookFile = HOMEDIR.'/thesis/plots/ISL/cookData.dat'
 kapFile  = HOMEDIR.'/thesis/plots/ISL/kapner95limit.dat'
 
-set term postscript enhanced solid color size 9,15
+set term postscript enhanced solid color size 9,7.5
 set output outfile 
 
 set logsc x
@@ -47,13 +47,13 @@ alMax = 1e8
 alMin = 1e-5
 
 
-ptsz  = 0.1
-ptszS = 0.1 
+ptsz  = 0.5
+ptszS = 0.5 
 set key noauto
 set format x ""
 set ylabel 'alpha'
 set format y "10^{%T}"
-set multiplot layout 4,1
+set multiplot layout 2,1
 
 #pl [0.009:102][alMin:alMax]\
 
@@ -64,7 +64,7 @@ if ( exists(gravityFlag) ) {
 
 ltf( x, lim) =  ( x < lim ) ? lim : x
 
-pl [:][alMin:]\
+pl [10e-6:3e-3][alMin:]\
 	1 lt 0 lw 2,\
 	cn u ($3*XLUnits):( ltf( $5 + 2.0 * $6 , alMin ) ) w filledcurve y2 lt 4 lw 2,\
 	cn u ($3*XLUnits):( ltf( $5 - 2.0 * $6 , alMin ) ) w filledcurve y1 lt 4 lw 2,\
@@ -89,7 +89,7 @@ set ylabel 'negative alpha'
 set xlabel 'lambda (m)'
 #pl [0.009:102][alMin:alMax]\
 
-pl [:][alMin:]\
+pl [10e-6:3e-3][alMin:]\
 	1 lt 0 lw 2,\
 	cn u ($3*XLUnits):( ltf( -$5 + 2.0 * $6, alMin ) ) w filledcurve y2 lt 4 lw 2,\
 	cn u ($3*XLUnits):( ltf( -$5 - 2.0 * $6, alMin ) ) w filledcurve y1 lt 4 lw 2,\
@@ -104,43 +104,3 @@ pl [:][alMin:]\
 			title columnhead(1+2*ctr),\
 	for [ctr=NumToPlot:1:-1] \
 	fn index 1 u (column(ctr) * XLUnits):(-column(ctr+NumSystematics)) w p lc ctr pt 1 ps ptsz*3
-	
-	
-
-set format x "% g"
-unset logsc x
-#unset logsc y 
-set yrange [:] noreverse
-set ylabel 'slope (fN/mm)'
-set xlabel 'fit #'
-
-slopeCal = XSUnits / 1e-15 * 1e-3;
-
-
-#stats doesn't work with logsc
-unset logsc y
-#the multiplication transcends trouble with the columnheader strings
-stats fn index 0  u (1*$1) name "RECORDS"
-recWidth = RECORDS_records/2;
-set logsc y
-
-pl \
-	fn index 0 u (             $1 * slopeCal      ) w p pt 1 ps ptszS lc 1              ,\
-	fn index 0 u ( @cutFunc ?  $1 * slopeCal : 1/0) w p pt 7 ps ptsz  lc 1 tit 'positive',\
-	fn index 0 u (            -$1 * slopeCal      ) w p pt 1 ps ptszS lc 3              ,\
-	fn index 0 u ( @cutFunc ? -$1 * slopeCal : 1/0) w p pt 7 ps ptsz  lc 3 tit 'negative',\
-	fn index 1 u (recWidth):( column(NumSystematics*2+1)  * slopeCal ):(recWidth):(0) w xyerrorlines pt 1 ps 0 lc 1 lw 2 tit 'injected signal, if positive',\
-	fn index 1 u (recWidth):(-column(NumSystematics*2+1)  * slopeCal ):(recWidth):(0) w xyerrorlines pt 1 ps 0 lc 3 lw 2 tit 'injected signal, if negative'
-	
-	
-unset logsc y
-set format y "%.2f"
-set ylabel 'chi squared/NDF'
-pl \
-	fn index 0 u (column(chiCol)/column(NDF)) w p pt 2 ps ptsz lc -1 tit 'all data',\
-	fn index 0 u (column(iterCol) > iterMin ? column(chiCol)/column(NDF) : 1/0) w p pt 1 ps ptsz lc 1 tit 'after fit-iteration cut',\
-	fn index 0 u ( @cutFunc ? column(chiCol)/column(NDF) : 1/0) w p pt 7 ps ptsz lc 3 tit 'after all cuts',\
-
-unset multiplot
-unset xlabel
-
