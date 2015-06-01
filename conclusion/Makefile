@@ -1,6 +1,6 @@
 include ../Makefile.inc
 
-all: absoluteConfidence.eps tenFewerMerge.dat.grav.eps tenFewerMerge.dat.eps unblindedMerge.dat.grav.eps unblindedMerge.dat.eps
+all: absoluteConfidence.eps tenFewerMerge.dat.grav.eps tenFewerMerge.dat.eps unblindedMerge.dat.grav.eps unblindedMerge.dat.eps clericalFixRuns.eps
 
 tenFewerMerge.dat: TenFewerData stripHeaderFooterAndMerge.sh
 	./stripHeaderFooterAndMerge.sh TenFewerData tenFewerMerge.dat
@@ -13,6 +13,9 @@ tenFewerMerge.dat.ci tenFewerMerge.dat.cia tenFewerMerge.dat.grav.eps tenFewerMe
 
 absoluteConfidence.eps: absoluteConfidence.gpl tenFewerMerge.dat.cia unblindedMerge.dat.cia
 	$(GNU) absoluteConfidence.gpl
+
+clericalFixRuns.eps: clericalFixRuns.gpl
+	$(GNU) clericalFixRuns.gpl
 
 clean:
 	-rm *.eps
