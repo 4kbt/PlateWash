@@ -14,7 +14,7 @@ do
 	echo '\begin{figure}'    >> $fn
 	echo '\begin{centering}' >> $fn
 
-	echo "\\includegraphics[height=0.4\\textheight, angle=270]{$myPathName$names}" >> $fn
+	echo "\\includegraphics[height=0.5\\textheight, angle=270]{$myPathName$names}" >> $fn
 
 	#Cutting out individual variables from filename
 	trimmed=`echo $names | sed "s:$prefix::" | sed "s:$suffix::" | sed 's/\.//'`
