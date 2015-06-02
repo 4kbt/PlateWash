@@ -23668,9 +23668,49 @@ Force Law
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../bootstrap/output/bootstrapArbFit.a0l0.0002slop0Levenberg.dat.eps
+	width 70text%
+	rotateAngle 270
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Bootstrapped arbitrary fit.
+ This is a piecewise-linear reconstruction of the pendulum as a function
+ of attractor position.
+ There are 
 \begin_inset CommandInset include
 LatexCommand input
-filename "../bootstrap/output/makeArbFigure.tex"
+filename "../extracted/numBootstraps.tex"
+
+\end_inset
+
+ independent reconstructions in this plot.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
 
 \end_inset
 
@@ -23678,27 +23718,17 @@ filename "../bootstrap/output/makeArbFigure.tex"
 \end_layout
 
 \begin_layout Standard
-The bootstrapped 
-\begin_inset Quotes eld
-\end_inset
-
-arbitrary force law
-\begin_inset Quotes erd
-\end_inset
-
- plots, computed as described in 
+As described in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Force-law-inversion"
 
 \end_inset
 
- are plotted in this section.
- These are piecewise linear fits to the data; as close to a model-free fit
+, we make piecewise linear fits to the data; as close to a model-free fit
  as one can reasonably get.
- Fits with signals injected into the data are shown alongside the injected
- signals.
- 
+ It is a reconstruction from thousands of differential measurements.
+ The arbitrary fit does not include any fits for systematic effects.
 \end_layout
 
 \begin_layout Section
@@ -25101,7 +25131,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/charlie/willItBuild/Eotwash/conclusion/unblindedArbFit.eps
+	filename ../conclusion/unblindedArbFit.eps
 	width 70page%
 	rotateAngle 270
 
@@ -25251,7 +25281,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/charlie/willItBuild/Eotwash/conclusion/unblindedIFOBSFits.eps
+	filename ../conclusion/unblindedIFOBSFits.eps
 	width 79text%
 
 \end_inset
@@ -25321,6 +25351,14 @@ reference "fig:Interferometer-fit.-Each"
 
 , or 97.2% of the unblinded dataset), removing the closest 10 microns of
  the data.
+ As seen in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Interferometer-fit.-Each"
+
+\end_inset
+
+, this removes any preferred direction of short-range interferometer signal.
  We have not explored any other modification of the excisions.
  This change is described in commit bec5a46fd98392eb35ff94573710246f95122900.
  As in the section above, we parallelized the code further, as in commit
@@ -25372,8 +25410,9 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../conclusion/tenFewerIFOBSFits.eps
+	filename ../bootstrap/output/bootstrapArbFit.a0l0.0002slop0Levenberg.dat.eps
 	width 70text%
+	rotateAngle 270
 
 \end_inset
 
@@ -25544,7 +25583,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/charlie/willItBuild/Eotwash/conclusion/tenFewerMerge.dat.labelled.zoom3.grav.eps
+	filename ../conclusion/tenFewerMerge.dat.labelled.zoom3.grav.eps
 	width 70text%
 	rotateAngle 270
 
@@ -26941,7 +26980,49 @@ If
 \end_layout
 
 \begin_layout Chapter
-Yukawa Fit Injections
+Fit Injections
+\end_layout
+
+\begin_layout Section
+Arbitrary Fits
+\end_layout
+
+\begin_layout Standard
+The bootstrapped 
+\begin_inset Quotes eld
+\end_inset
+
+arbitrary force law
+\begin_inset Quotes erd
+\end_inset
+
+ plots, computed as described in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Force-law-inversion"
+
+\end_inset
+
+ are plotted in this section.
+ These are piecewise linear fits to the data; as close to a model-free fit
+ as one can reasonably get.
+ Fits with signals added to the real (or simulated, if the thesis is built
+ blind) data are shown alongside the injected signals.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "../bootstrap/output/makeArbFigure.tex"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Yukawa Fits
 \end_layout
 
 \begin_layout Standard
