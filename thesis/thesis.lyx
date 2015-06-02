@@ -23689,6 +23689,12 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Bootstrapped-arbitrary-fit."
+
+\end_inset
+
 Bootstrapped arbitrary fit.
  This is a piecewise-linear reconstruction of the pendulum as a function
  of attractor position.
@@ -23727,7 +23733,14 @@ reference "sec:Force-law-inversion"
 
 , we make piecewise linear fits to the data; as close to a model-free fit
  as one can reasonably get.
- It is a reconstruction from thousands of differential measurements.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Bootstrapped-arbitrary-fit."
+
+\end_inset
+
+ is a reconstruction from thousands of differential measurements.
  The arbitrary fit does not include any fits for systematic effects.
 \end_layout
 
