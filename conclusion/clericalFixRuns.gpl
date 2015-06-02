@@ -1,4 +1,4 @@
-set term postscript enhanced solid color size 9,15
+set term postscript enhanced solid color eps "Helvetica" 20 size 6,10
 set output 'clericalFixRuns.eps'
 
 load HOMEDIR.'globalConfig/columnNames.m'

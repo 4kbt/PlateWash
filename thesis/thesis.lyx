@@ -25048,8 +25048,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../conclusion/clericalFixRuns.eps
-	width 70text%
-	rotateAngle 270
+	width 75text%
 
 \end_inset
 
@@ -25147,7 +25146,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../conclusion/unblindedArbFit.eps
-	width 70page%
+	width 90page%
 	rotateAngle 270
 
 \end_inset
@@ -25189,8 +25188,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../conclusion/unblindedMerge.dat.labelled.grav.eps
-	width 70text%
-	rotateAngle 270
+	width 75text%
 
 \end_inset
 
@@ -25426,7 +25424,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../bootstrap/output/bootstrapArbFit.a0l0.0002slop0Levenberg.dat.eps
-	width 70text%
+	width 90text%
 	rotateAngle 270
 
 \end_inset
@@ -25467,8 +25465,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../conclusion/tenFewerMerge.dat.labelled.grav.eps
-	width 70text%
-	rotateAngle 270
+	width 75text%
 
 \end_inset
 
@@ -25486,7 +25483,8 @@ name "fig:Yukawa-fit-torque-reconstruction-ten-fewer-microns"
 \end_inset
 
 Yukawa fit, ten fewer microns.
- The interferometer signal has been both added and subtracted.
+ The interferometer signal has been both added and subtracted, creating
+ the alternating pattern in the fitted slope.
  A signal is weakly resolved both slightly below 100
 \begin_inset space ~
 \end_inset
@@ -25531,7 +25529,6 @@ status open
 \begin_inset Graphics
 	filename ../conclusion/tenFewerMerge.dat.labelled.zoom.grav.eps
 	width 70text%
-	rotateAngle 270
 
 \end_inset
 
@@ -25600,7 +25597,6 @@ status open
 \begin_inset Graphics
 	filename ../conclusion/tenFewerMerge.dat.labelled.zoom3.grav.eps
 	width 70text%
-	rotateAngle 270
 
 \end_inset
 
@@ -25677,14 +25673,14 @@ Turner Smoothing
 \begin_inset Quotes erd
 \end_inset
 
- 
+ (Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Confidence-Interval-Algorithm"
 
 \end_inset
 
-, and move a fixed-number bin (an integer-multiple of 20, to make accurate
+), and move a fixed-number bin (an integer-multiple of 20, to make accurate
  95% limits) left-to-right through the best-fit points.
  For each binning, we sort the points into increasing order of 
 \begin_inset Formula $|\alpha|$
@@ -25724,7 +25720,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../conclusion/absoluteConfidence.eps
-	width 70text%
+	width 100text%
 
 \end_inset
 
@@ -25801,9 +25797,11 @@ Conclusion
 \begin_layout Standard
 We demonstrated a thorough approach to parallel-plate inverse-square law
  tests.
- The experiment incorporated a number of systematic-uncertainty mitigating
+ The parallel-plate geometry allows an efficient null test for new physics,
+ at the cost of many attractor-position-correlated systematic uncertainties.
+ Our experiment incorporated a number of systematic-uncertainty mitigating
  technologies: pneumatic drive, random attractor positioning, and the critically
- important interferometric foil-position monitor.
+-important interferometric foil-position monitor.
  Our analysis was performed largely blind; the approach to systematic uncertaint
 y was determined without reference to any effect upon the final result.
  The analysis, from raw data to finished product, is reproducible.
@@ -25822,7 +25820,7 @@ reference "eq:YukawaPotential"
 \end_inset
 
 ), our results are are consistent with the inverse-square law (
-\begin_inset Formula $\alpha<1$
+\begin_inset Formula $|\alpha|<1$
 \end_inset
 
 ) for 
@@ -25833,8 +25831,8 @@ reference "eq:YukawaPotential"
 \end_layout
 
 \begin_layout Standard
-The code used to generate this work is freely available: https://www.github.com/4k
-bt/PlateWash/ and by request from the author.
+The code used to generate this entire body of work is freely available:
+ https://www.github.com/4kbt/PlateWash/ and by request from the author.
 \end_layout
 
 \begin_layout Chapter

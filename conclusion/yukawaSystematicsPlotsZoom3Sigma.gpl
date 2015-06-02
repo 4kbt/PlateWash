@@ -19,7 +19,7 @@ load HOMEDIR.'/globalConfig/columnNames.m'
 cookFile = HOMEDIR.'/thesis/plots/ISL/cookData.dat'
 kapFile  = HOMEDIR.'/thesis/plots/ISL/kapner95limit.dat'
 
-set term postscript enhanced solid color size 9,7.5
+set term postscript enhanced solid color eps "Helvetica" 20 size 6,5
 set output outfile 
 
 set logsc x
