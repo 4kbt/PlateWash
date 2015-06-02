@@ -25391,6 +25391,17 @@ reference "fig:Yukawa-fit-torque-reconstruction-ten-fewer-microns"
 \end_inset
 
 .
+ 
+\series bold
+We regard this 
+\begin_inset Quotes eld
+\end_inset
+
+ten fewer microns
+\begin_inset Quotes erd
+\end_inset
+
+ dataset as our most reliable result.
 \end_layout
 
 \begin_layout Standard
@@ -25805,13 +25816,13 @@ We demonstrated a thorough approach to parallel-plate inverse-square law
  Our analysis was performed largely blind; the approach to systematic uncertaint
 y was determined without reference to any effect upon the final result.
  The analysis, from raw data to finished product, is reproducible.
- The result was unblinded in public.
+ The analysis was unblinded in public.
 \end_layout
 
 \begin_layout Standard
-After addressing the obvious clerical error in our run configuration, no
- evidence for a significant violation of Newton's inverse-square law is
- observed.
+After addressing the obvious clerical error in our run configuration and
+ making a more-conservative interferometer-guided cut, no evidence for a
+ significant violation of Newton's inverse-square law is observed.
  Using the traditional Yukawa parametrization (Equation 
 \begin_inset CommandInset ref
 LatexCommand ref
