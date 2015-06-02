@@ -23743,7 +23743,15 @@ filename "../extracted/numBootstraps.tex"
 
  independent reconstructions, so the scatter does not reflect a traditional
  one-sigma errorbar.
+ To demonstrate our ability to recover injected signals, we include Appendix
  
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Arbitrary-Fits"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
@@ -23823,13 +23831,36 @@ Finally, we show the reduced
  Points surviving that cut are shown in horizontal/vertical crosses.
  Points surviving all cuts, including minimum and maximum chi-squared (horizonta
 l lines) are shown as circles.
- That the majority of fits have reduced-
+ 
 \begin_inset Formula $\chi^{2}$
 \end_inset
 
- much better than 1 is due to the overfitting inherent to the use of conservativ
-e systematic uncertainties.
+ is of limited quantitative value, as in many torsion balance experiments,
+ per-cut errorbars will tend to underestimate the uncertainties; we expect
+ the 
+\bar under
+relative
+\bar default
+ uncertainties to be meaningful.
+ Furthermore, as we jointly fit for systematic uncertainty, any reduced-
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+ better than 1 may be due to the overfitting inherent to the use of conservative
+ systematic uncertainties.
  
+\end_layout
+
+\begin_layout Standard
+We demonstrate the performance of our fitting algorithm against synthetic
+ torques added to the data in Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Yukawa-Fits"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -27009,6 +27040,13 @@ Fit Injections
 
 \begin_layout Section
 Arbitrary Fits
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Arbitrary-Fits"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -27047,6 +27085,13 @@ filename "../bootstrap/output/makeArbFigure.tex"
 
 \begin_layout Section
 Yukawa Fits
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Yukawa-Fits"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
