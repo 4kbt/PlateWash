@@ -23698,14 +23698,6 @@ name "fig:Bootstrapped-arbitrary-fit."
 Bootstrapped arbitrary fit.
  This is a piecewise-linear reconstruction of the pendulum as a function
  of attractor position.
- There are 
-\begin_inset CommandInset include
-LatexCommand input
-filename "../extracted/numBootstraps.tex"
-
-\end_inset
-
- independent reconstructions in this plot.
  
 \end_layout
 
@@ -23742,6 +23734,16 @@ reference "fig:Bootstrapped-arbitrary-fit."
 
  is a reconstruction from thousands of differential measurements.
  The arbitrary fit does not include any fits for systematic effects.
+ As plotted, there are 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/numBootstraps.tex"
+
+\end_inset
+
+ independent reconstructions, so the scatter does not reflect a traditional
+ one-sigma errorbar.
+ 
 \end_layout
 
 \begin_layout Section
