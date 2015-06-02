@@ -20746,10 +20746,14 @@ ion level for
 \end_layout
 
 \begin_layout Paragraph
+\begin_inset Note Note
+status open
+
+\begin_layout Paragraph
 Q-tester is in rough agreement
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 As described in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -20761,6 +20765,11 @@ reference "sec:Calibration"
  signal.
  The torque from the bricks, as measured by calibrating the torque signal
  using the pendulum's calculated moment of inertia and XXXRC
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -20943,13 +20952,14 @@ Simulation output for the offset pendulum
 \end_inset
 
 
-\end_layout
+\begin_inset Note Note
+status open
 
 \begin_layout Subsection
 Angled torques
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 The pendulum is oriented at an angle of 
 \begin_inset CommandInset include
 LatexCommand input
@@ -20960,6 +20970,11 @@ filename "../metrology/extracted/offsetAngle.tex"
  with respect to the attractor.
  XXXRC - display computed angle torque signal.
  
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -25693,6 +25708,10 @@ name "fig:95-limits-on"
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
 \begin_layout Section
 Excised data
 \begin_inset CommandInset label
@@ -25704,7 +25723,7 @@ name "sec:Excised-data"
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 XXXRC
 \end_layout
 
@@ -25714,6 +25733,11 @@ Sign
 
 \begin_layout Section
 Fitted systematics
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
