@@ -1,0 +1,106 @@
+set macro
+
+#Flag for plotting gravity alone, instead of all systematics.
+gravityFlag = "gravityOnly"
+
+fn = system("echo $GNUPLOTME");
+cn = fn.'.ci'
+fn = fn.'.labelled'
+outfile = fn .".zoom3.eps"
+
+
+
+if ( exists( gravityFlag) ) {
+	outfile = fn .".zoom3.grav.eps"
+}
+
+load HOMEDIR.'/globalConfig/columnNames.m'
+
+cookFile = HOMEDIR.'/thesis/plots/ISL/cookData.dat'
+kapFile  = HOMEDIR.'/thesis/plots/ISL/kapner95limit.dat'
+
+set term postscript enhanced solid color size 9,7.5
+set output outfile 
+
+set logsc x
+set logsc y
+
+chiCut = 2 
+#chiMin  = 0.75 #e-10
+chiMin  = 0.75e-10
+
+set style fill transparent pattern 4 
+
+iterMin =  5 
+
+cutFunc = "( (column(chiCol) < chiCut*column(NDF)) & (column(chiCol) > chiMin*column(NDF)) & (column(iterCol) > iterMin ))"
+
+set title 'bootstrapped best fits, with systematics'
+
+NumSystematics = numSystematics+1 #treats science as a systematic
+
+NDF = 1+2*NumSystematics+5+1+2*NumSystematics+2
+chiCol = 1+2*NumSystematics+1
+iterCol = 1 + 2 * NumSystematics + 3
+
+alMax = 1e8
+alMin = 1e-5
+
+
+ptsz  = 0.5
+ptszS = 0.5 
+set key noauto
+set format x ""
+set ylabel 'alpha'
+set format y "10^{%T}"
+set multiplot layout 2,1
+
+#pl [0.009:102][alMin:alMax]\
+
+NumToPlot = NumSystematics
+if ( exists(gravityFlag) ) {
+	NumToPlot = 1
+}
+
+ltf( x, lim) =  ( x < lim ) ? lim : x
+
+pl [10e-6:3e-3][alMin:]\
+	1 lt 0 lw 2,\
+	cn u ($3*XLUnits):( ltf( $5 + 3.0 * $6 , alMin ) ) w filledcurve y2 lt 4 lw 2,\
+	cn u ($3*XLUnits):( ltf( $5 - 3.0 * $6 , alMin ) ) w filledcurve y1 lt 4 lw 2,\
+	cn u ($4*XLUnits):( ltf( $5 + 3.0 * $6 , alMin ) ) w filledcurve y2 lt 5 lw 2,\
+	cn u ($4*XLUnits):( ltf( $5 - 3.0 * $6 , alMin ) ) w filledcurve y1 lt 5 lw 2,\
+	kapFile w l lt -1  tit 'Kapner et al.',\
+	cookFile w l lt 0 tit "Cook thesis",\
+	for [ctr=NumToPlot:1:-1] \
+	fn index 0 u (            column(2*ctr) * XLUnits      ):( column(2*ctr+1)) w p lc ctr pt 1 ps ptszS,\
+	for [ctr=NumToPlot:1:-1] \
+	fn index 0 u ( @cutFunc ? column(2*ctr) * XLUnits : 1/0):( column(2*ctr+1)) w p lc ctr pt 7 ps ptsz ,\
+	for [ctr=NumToPlot:1:-1] \
+	fn index 1 u (column(ctr) * XLUnits):(column(ctr+NumSystematics)) w p lc ctr pt 1 ps ptsz*3
+	
+
+unset title
+
+set yrange [:] reverse
+set key below noauto
+set format x "10^{%T}"
+set ylabel 'negative alpha'
+set xlabel 'lambda (m)'
+#pl [0.009:102][alMin:alMax]\
+
+pl [10e-6:3e-3][alMin:]\
+	1 lt 0 lw 2,\
+	cn u ($3*XLUnits):( ltf( -$5 + 3.0 * $6, alMin ) ) w filledcurve y2 lt 4 lw 2,\
+	cn u ($3*XLUnits):( ltf( -$5 - 3.0 * $6, alMin ) ) w filledcurve y1 lt 4 lw 2,\
+	cn u ($4*XLUnits):( ltf( -$5 + 3.0 * $6, alMin ) ) w filledcurve y2 lt 5 lw 2,\
+	cn u ($4*XLUnits):( ltf( -$5 - 3.0 * $6, alMin ) ) w filledcurve y1 lt 5 lw 2,\
+	kapFile  w l lt -1  ,\
+	cookFile w l lt 0   ,\
+	for [ctr=NumToPlot:1:-1] \
+	fn index 0 u (            column(2*ctr) * XLUnits     ):( -column(2*ctr+1)) w p lc ctr pt 1 ps ptszS ,\
+	for [ctr=NumToPlot:1:-1] \
+	fn index 0 u ( @cutFunc ? column(2*ctr) * XLUnits: 1/0):( -column(2*ctr+1)) w p lc ctr pt 7 ps ptsz \
+			title columnhead(1+2*ctr),\
+	for [ctr=NumToPlot:1:-1] \
+	fn index 1 u (column(ctr) * XLUnits):(-column(ctr+NumSystematics)) w p lc ctr pt 1 ps ptsz*3

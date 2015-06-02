@@ -36,5 +36,5 @@ set key below
 set lmargin screen 0.1 
 pl \
 	1/0 w p pt 7 lc 1 tit 'Raw Data',\
-	1/0 w p pt 2 lc -1 tit 'Resistor and electrical-crosstalk runs removed',\
+	1/0 w p pt 2 lc -1 tit 'Capacitor and electrical-crosstalk runs removed',\
         '../bootstrap/output/afterAnalysisCuts.dat' u (column(runTimeCol)/86400):(1e15*abs(column(torqueCol))) lc 3 pt 7 tit 'After analysis excisions',\

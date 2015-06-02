@@ -23,6 +23,7 @@ do
 	gnuplot -e "HOMEDIR = \"$1\"" yukawaSystematicsPlotsZoom.gpl
 	gnuplot -e "HOMEDIR = \"$1\"; gravityOnly = 1" yukawaSystematicsPlots.gpl
 	gnuplot -e "HOMEDIR = \"$1\"; gravityOnly = 1" yukawaSystematicsPlotsZoom.gpl
+	gnuplot -e "HOMEDIR = \"$1\"; gravityOnly = 1" yukawaSystematicsPlotsZoom3Sigma.gpl
 done
 
 #for  PLOTME in `ls output/*.plt`

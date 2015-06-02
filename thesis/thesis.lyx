@@ -24779,6 +24779,35 @@ A particular sticking point is our reliance upon the excellent Gnuplot plotting
 Conclusions
 \end_layout
 
+\begin_layout Standard
+
+\emph on
+This chapter was constructed by combining the results of many runs of the
+ unblinded analysis in order to accommodate the thesis-submission deadline.
+ Building the analysis from the git commits noted in the chapter will allow
+ reconstruction of these results.
+ The best-fit points used to construct the confidence-interval plots below
+ are included in the project's git repository to aid in reproducibility
+ and alternate analysis.
+ The preceding document was built using the 
+\begin_inset Quotes eld
+\end_inset
+
+Ten Fewer Microns
+\begin_inset Quotes erd
+\end_inset
+
+ analysis denoted in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Ten-fewer-microns"
+
+\end_inset
+
+.
+ 
+\end_layout
+
 \begin_layout Section
 Unblinding
 \end_layout
@@ -24793,8 +24822,8 @@ key "UnblindingTalk"
 \end_inset
 
 .
- The unblinding process began using git hash 5d34825dd0aa6a4e1da560448ecce3dfcdc
-5ffff, as documented on Twitter 
+ The unblinding process began using git commit hash 5d34825dd0aa6a4e1da560448ecc
+e3dfcdc5ffff, as documented on Twitter 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "UnblindingTweet"
@@ -24900,8 +24929,16 @@ name "fig:Unblinded-alpha-lambda-plots."
 
 \end_inset
 
-Unblinded alpha-lambda plots.
+Alpha-lambda plots, precisely as unblinded.
+ Our apologies for the plotting artifacts; the distribution of the best-fit
+ points in the upper two panels is of greatest importance.
  Interferometer subtracted on left, added on right.
+ A signal is clearly resolved in both plots.
+ Note poor 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+.
 \end_layout
 
 \end_inset
@@ -24948,7 +24985,15 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXXRC
+\align center
+\begin_inset Graphics
+	filename ../conclusion/clericalFixRuns.eps
+	width 70text%
+	rotateAngle 270
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -24961,8 +25006,17 @@ name "fig:Per-cut-torques,-uncut,"
 
 \end_inset
 
-Per-cut torques, uncut, with unblinding cuts, and after the removal of inappropr
-iate runs.
+Per-cut torques, uncut, after each excision, and in the now-final form.
+ The red-circle 
+\begin_inset Quotes eld
+\end_inset
+
+Raw Data
+\begin_inset Quotes erd
+\end_inset
+
+ points that appear without overlying points in the middle frame were the
+ incorrectly-included capacitor-test and electrical-crosstalk test runs.
 \end_layout
 
 \end_inset
@@ -24993,7 +25047,7 @@ reference "sec:Capacitor-Systematic"
  This made plain the fact that systematic test data for which we do not
  make a global fit were included into the global fit data, a clear clerical
  error.
- In all, XXXRC runs were included in the global fit that should not have
+ In all, nine runs were included in the global fit that should not have
  been.
  These runs comprised the "capacitor systematic" tests and the electrical-crosst
 alk test.
@@ -25002,6 +25056,14 @@ alk test.
 \begin_layout Standard
 The capacitor-systematic data included a lengthy run with a well-resolved
  and, compared with the science data, gigantic signal.
+ See Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Resistor Tests"
+
+\end_inset
+
+ for the well-resolved >100 fN-m signal.
  This necessarily altered the behavior of our adaptive variance cut (Section
  
 \begin_inset CommandInset ref
@@ -25010,9 +25072,8 @@ reference "sec:Excised-cuts"
 
 \end_inset
 
-), allowing large quantities of earthquake and foil-touching transients
- into the final dataset.
- The combined inclusion of a well-resolved signal and extremely non-Gaussian
+), allowing extra transients into the final dataset.
+ The combined inclusion of a well-resolved signal and added non-Gaussian
  outliers made the result meaningless.
 \end_layout
 
@@ -25023,7 +25084,15 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-XXXRC
+\align center
+\begin_inset Graphics
+	filename /home/charlie/willItBuild/Eotwash/conclusion/unblindedArbFit.eps
+	width 70page%
+	rotateAngle 270
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -25036,7 +25105,8 @@ name "fig:Arbitrary-fit-torque-unblinded-corrected"
 
 \end_inset
 
-Arbitrary-fit torque, as unblinded, with irrelevant runs removed.
+Arbitrary-fit torque, as unblinded, with capacitor-test and crosstalk-test
+ runs removed.
 \end_layout
 
 \end_inset
@@ -25078,8 +25148,22 @@ name "fig:Yukawa-Fit,-with-irrelevant-runs-removed"
 \end_inset
 
 Yukawa Fit, with irrelevant runs removed.
- Interferometer correction is both added and subtracted.
- 
+ Interferometer correction is both added and subtracted, creating the alternatin
+g pattern in the fitted slope.
+ A signal is weakly resolved in this analysis at sub-gravitational strength
+ with negative 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda\sim$
+\end_inset
+
+1
+\begin_inset space ~
+\end_inset
+
+mm.
 \end_layout
 
 \end_inset
@@ -25126,7 +25210,7 @@ reference "fig:Yukawa-Fit,-with-irrelevant-runs-removed"
 These results should be regarded as the unblinded scientific outcome of
  the experiment.
  Jens Gundlach points out that the fact that such a blatant clerical error
- might have been allowed to be unblinded publicly as proof that the blind
+ might have been allowed to be unblinded publicly is evidence the blind
  analysis was truly blind.
  If we had peeked into the raw data or fit outcomes, we surely would have
  repaired the problem.
@@ -25134,6 +25218,13 @@ These results should be regarded as the unblinded scientific outcome of
 
 \begin_layout Section
 Ten fewer microns
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Ten-fewer-microns"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -25143,6 +25234,13 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/charlie/willItBuild/Eotwash/conclusion/unblindedIFOBSFits.eps
+	width 79text%
+
+\end_inset
+
 
 \end_layout
 
@@ -25198,8 +25296,17 @@ reference "fig:Interferometer-fit.-Each"
 \end_inset
 
 , residual foil-touching is an easy candidate for such a signal.
- We ran an alternate analysis using a slightly smaller subset of the data
- (XXXRC instead of XXXRC), cutting away the leading 10 microns of the data.
+ We immediately ran an alternate analysis using a subset of the data (
+\begin_inset Formula $\sim2325$
+\end_inset
+
+ cuts instead of 
+\begin_inset Formula $\sim2391$
+\end_inset
+
+, or 97.2% of the unblinded dataset), removing the closest 10 microns of
+ the data.
+ We have not explored any other modification of the excisions.
  This change is described in commit bec5a46fd98392eb35ff94573710246f95122900.
  As in the section above, we parallelized the code further, as in commit
  9e8c5cd11ecc322d1ce47e8fd01587fc2af1b28d.
@@ -25218,7 +25325,27 @@ reference "fig:Yukawa-fit-torque-reconstruction-ten-fewer-microns"
 \end_inset
 
 .
- 
+\end_layout
+
+\begin_layout Standard
+To provide further understanding of the result, we additionally include
+ a zoomed-in plot (Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Enlarged-version-of"
+
+\end_inset
+
+) and a plot with three-sigma confidence intervals (Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:3-sigma-limits"
+
+\end_inset
+
+).
+ The three-sigma plot should represent 95% confidence intervals in a strict
+ interpretation of the look-elsewhere effect
 \end_layout
 
 \begin_layout Standard
@@ -25226,6 +25353,17 @@ reference "fig:Yukawa-fit-torque-reconstruction-ten-fewer-microns"
 wide false
 sideways false
 status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../conclusion/tenFewerIFOBSFits.eps
+	width 70text%
+
+\end_inset
+
+
+\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -25280,6 +25418,156 @@ name "fig:Yukawa-fit-torque-reconstruction-ten-fewer-microns"
 
 Yukawa fit, ten fewer microns.
  The interferometer signal has been both added and subtracted.
+ A signal is weakly resolved both slightly below 100
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m and near 
+\begin_inset Formula $1$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+mm.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../conclusion/tenFewerMerge.dat.labelled.zoom.grav.eps
+	width 70text%
+	rotateAngle 270
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Enlarged-version-of"
+
+\end_inset
+
+Enlarged version of Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Yukawa-fit-torque-reconstruction-ten-fewer-microns"
+
+\end_inset
+
+.
+ A signal is weakly resolved both slightly below 100
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m and near 
+\begin_inset Formula $1$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+mm.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/charlie/willItBuild/Eotwash/conclusion/tenFewerMerge.dat.labelled.zoom3.grav.eps
+	width 70text%
+	rotateAngle 270
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:3-sigma-limits"
+
+\end_inset
+
+Enlarged version of Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Yukawa-fit-torque-reconstruction-ten-fewer-microns"
+
+\end_inset
+
+, generated with 
+\begin_inset Formula $3$
+\end_inset
+
+-
+\begin_inset Formula $\sigma$
+\end_inset
+
+ confidence intervals.
+ As there are < 100 independent regions sampled by the confidence-interval
+ determination, this represents a strict accommodation of the look-elsewhere
+ effect at 95% confidence.
+ No significant signal is observed.
 \end_layout
 
 \end_inset
@@ -25335,6 +25623,26 @@ reference "sec:Confidence-Interval-Algorithm"
 
 , discard the top 5% of points, and take the next-largest point (19th of
  20, 38th of 40, 57th of 60) as representative of the 95th percentile.
+ The result is plotted in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:95-limits-on"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+While this approach yields a pretty and easily-interpreted plot, we caution
+ that it is more meaningful to consider the two-sided plot of the confidence
+ intervals.
+ It is not possible to combine two experiments nor compare weakly-resolved
+ signals using a 
+\begin_inset Formula $|\alpha|$
+\end_inset
+
+ plot, while two-sided limits can be combined and compared.
 \end_layout
 
 \begin_layout Standard
@@ -25358,6 +25666,12 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:95-limits-on"
+
+\end_inset
+
 95% limits on the Yukawa-parametrized 
 \begin_inset Formula $|\alpha|$
 \end_inset
@@ -25399,6 +25713,10 @@ Sign
 \end_layout
 
 \begin_layout Section
+Fitted systematics
+\end_layout
+
+\begin_layout Section
 Conclusion
 \end_layout
 
@@ -25408,20 +25726,32 @@ We demonstrated a thorough approach to parallel-plate inverse-square law
  The experiment incorporated a number of systematic-uncertainty mitigating
  technologies: pneumatic drive, random attractor positioning, and the critically
  important interferometric foil-position monitor.
- Our analysis was performed largely blind, the analysis, from raw data to
- finished product, is reproducible, and the result was unblinded in public.
+ Our analysis was performed largely blind; the approach to systematic uncertaint
+y was determined without reference to any effect upon the final result.
+ The analysis, from raw data to finished product, is reproducible.
+ The result was unblinded in public.
 \end_layout
 
 \begin_layout Standard
 After addressing the obvious clerical error in our run configuration, no
  evidence for a significant violation of Newton's inverse-square law is
  observed.
- Using the traditional Yukawa parametrization (Section XXXRC), we find that
- the inverse-square law holds (
+ Using the traditional Yukawa parametrization (Equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:YukawaPotential"
+
+\end_inset
+
+), our results are are consistent with the inverse-square law (
 \begin_inset Formula $\alpha<1$
 \end_inset
 
-) at distances larger than XXXRC microns with 95% confidence.
+) for 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ between XXXRC and XXXRC microns with 95% confidence.
 \end_layout
 
 \begin_layout Standard
