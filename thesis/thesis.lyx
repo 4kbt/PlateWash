@@ -130,7 +130,6 @@ status open
 
 \begin_layout Plain Layout
 
-\size largest
 
 \backslash
 vspace{2cm}
@@ -158,7 +157,6 @@ status open
 
 \begin_layout Plain Layout
 
-\size larger
 
 \backslash
 vspace{2cm}
@@ -7190,7 +7188,7 @@ name "sub:Fiber-thermal-noise"
 As Saulson and González neatly described 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "saulson1990thermal,Gonz\\'alez199512,1995PhDT........16G"
+key "saulson1990thermal,Gonzalez199512,1995PhDT........16G"
 
 \end_inset
 
