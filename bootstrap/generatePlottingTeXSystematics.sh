@@ -50,7 +50,7 @@ pname=`echo $names | sed 's/\.dat\.eps/\.dat.plt\.jpg/'`
 echo '\begin{figure}[p]' >> $fn
 echo '\begin{leftfullpage}' >> $fn
 echo '\begin{centering}' >> $fn
-	echo "\\includegraphics[height=0.85\\textheight, angle=270,natwidth=3240,natheight=3240]{$myPathName$pname}" >> $fn
+	echo "\\includegraphics[width=0.9\\textwidth, angle=270,natwidth=3240,natheight=3240]{$myPathName$pname}" >> $fn
 	#echo "\\includegraphics[height=0.5\\textheight, angle=270]{$myPathName$pname}" >> $fn
 echo '\par\end{centering}' >> $fn
 
