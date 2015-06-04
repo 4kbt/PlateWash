@@ -22462,7 +22462,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../systematics/thermal/plots/longStrokeoHHist.datlongStrokeo0Hist.dat.eps
+	filename ../systematics/thermal/plots/longStrokeolHist.datlongStrokeo0Hist.datlongStrokeorHist.dat.eps
 	width 100text%
 	rotateAngle 270
 
@@ -22494,7 +22494,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../systematics/magnetic/plots/shortStrokeolHist.datshortStrokeo0Hist.datshortStrokeorHist.dat.eps
+	filename ../systematics/thermal/plots/shortStrokeolHist.datshortStrokeo0Hist.datshortStrokeorHist.dat.eps
 	width 100text%
 	rotateAngle 270
 
@@ -22504,7 +22504,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Long-stroke Magnetic Tests
+Short-stroke Thermal Tests
 \end_layout
 
 \end_inset
