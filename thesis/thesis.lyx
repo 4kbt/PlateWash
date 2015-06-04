@@ -23904,7 +23904,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Yukawa exclusion limits for gravity alone
+Yukawa exclusion limits for gravity alone, with foil systematic subtracted
 \end_layout
 
 \end_inset
@@ -23930,7 +23930,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../bootstrap/output/bootstrapYukawa.Sysa0l0.0002slop0SysNull.dat.grav.eps
+	filename ../bootstrap/output/bootstrapYukawa.Sysa0l0.0002slop0SysPlus.dat.grav.eps
 	width 50theight%
 	rotateAngle 270
 
@@ -23978,7 +23978,44 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Yukawa exclusion plot, showing best-fits for all systematic effects
+Yukawa exclusion plot, showing best-fits for all systematic effects.
+ Foil systematic subtracted.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../bootstrap/output/bootstrapYukawa.Sysa0l0.0002slop0SysPlus.dat.eps
+	width 50theight%
+	rotateAngle 270
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Yukawa exclusion plot, showing best-fits for all systematic effects.
+ Foil systematic added.
 \end_layout
 
 \end_inset
