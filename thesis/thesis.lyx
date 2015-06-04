@@ -201,12 +201,12 @@ Department of Physics
 \begin_layout Verse
 \align left
 We performed a parallel-plate test of the gravitational inverse-square law
- at submillimeter distances.
+ at sub-millimeter distances.
  Using a tantalum/titanium torsion balance locked in electrostatic feedback,
  we performed a null search for deviations from uniformity of the gravitational
  field of a planar tantalum mass.
  Key innovations include an interferometric isolating-foil position monitor,
- a completely reproducible analysis toolchain, and a publicly-unblinded
+ a completely reproducible analysis tool-chain, and a publicly-unblinded
  analysis.
  In the traditional Yukawa parametrization, our results are consistent,
  at 95% confidence, with Newton's inverse-square law at 
@@ -316,7 +316,7 @@ ngineer shoulders.
 
 \begin_layout Standard
 I thank the entire Eöt-Wash group, the National Science Foundation, and
- the United States taxpayer for unwavering support, even when a blitzkreig
+ the United States taxpayer for unwavering support, even when a blitzkrieg
  experiment turned to a protracted and careful campaign.
  
 \end_layout
@@ -471,7 +471,7 @@ Four fundamental interactions are known to Physics.
  In historical order of characterization, they are gravity, which governs
  planetary motions; electromagnetism, which describes the interactions of
  electrically charged objects, and the weak force and strong forces, which
- govern nuclear and subnuclear dynamics.
+ govern nuclear and sub-nuclear dynamics.
  The electric and weak forces were unified theoretically by Glashow, Salam,
  and Weinberg as the electroweak interaction in 1967 
 \begin_inset CommandInset citation
@@ -1064,7 +1064,7 @@ Dark Energy
 \end_layout
 
 \begin_layout Standard
-At present, the dominant motivation for submillimeter gravity tests comes
+At present, the dominant motivation for sub-millimeter gravity tests comes
  from the physics of 
 \begin_inset Quotes eld
 \end_inset
@@ -1224,7 +1224,7 @@ key "CosmologicalConstantProblem"
 Any deviation, particularly a weakening, of gravity at short range might
  provide the clues needed to explain this major theoretical problem.
  If the dark energy is a cosmological constant, then the motivation for
- submillimeter gravitational experiments is even stronger.
+ sub-millimeter gravitational experiments is even stronger.
 \end_layout
 
 \begin_layout Subsection
@@ -1577,7 +1577,7 @@ key "KeplerFirstSecondLaws,KeplerThirdLaw"
 
 \end_inset
 
- are now taught to students as necessary corrolaries of Newton's theory,
+ are now taught to students as necessary corollaries of Newton's theory,
  but Kepler's observations were essential to the formulation of the theory
  itself
 \begin_inset Note Note
@@ -1986,8 +1986,9 @@ key "PhysRevLett.107.171101"
  theory could possibly be due to new physics.
  So far, no clear deviations have been observed, so the measurement uncertaintie
 s are traditionally converted into exclusion limits for gravity.
- A new variation on the Casimir technique will use ultracold Strontium spectrosc
-opy to test theoretical predictions of the Van der Waals interaction 
+ A new variation on the Casimir technique will use ultra-cold Strontium
+ spectroscopy to test theoretical predictions of the Van der Waals interaction
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "NISTPMG2013"
@@ -2106,8 +2107,8 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-A kindergartener's perspective: the inverse square law, with allowed possiblitie
-s plotted.
+A kindergartener's perspective: the inverse square law, with allowed possibiliti
+es plotted.
  Force laws are drawn from the edge of the Yukawa and 
 \begin_inset Quotes eld
 \end_inset
@@ -2654,7 +2655,7 @@ Flat plate force
 \begin_layout Standard
 The form of possible inverse square law violations is not known from first
  principles.
- However, under the assumption that a new interaction can be modelled by
+ However, under the assumption that a new interaction can be modeled by
  a Yukawa potential (Equation 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -4686,7 +4687,7 @@ Diff/Sum
  channels was computed and divided by their sum.
  This standard procedure minimizes the autocollimator's sensitivity to light
  intensity variations.
- Doing the computations in software allowed more-precise levelling of the
+ Doing the computations in software allowed more-precise leveling of the
  twist axis signal than can be readily achieved in hardware, as any synthetic
  combination of the tip and twist angles can be trivially generated.
  
@@ -4971,7 +4972,7 @@ XXXMI
 
 diameter stainless threaded rods, with aluminum adapters on the ends, to
  the stainless steel baseplate of the bell jar.
- The jar itself sat atop three aluminum legs with adjustable levelling feet.
+ The jar itself sat atop three aluminum legs with adjustable leveling feet.
  The entire apparatus was installed upon a U-shaped solid masonry block
  table that was mortared to the cement floor of the laboratory.
  The bell jar's lid was sealed with a double O-ring seal.
@@ -5194,7 +5195,7 @@ stiction
 \begin_inset Quotes erd
 \end_inset
 
- of non-flexure transation stages, and has minimal angular runout (Figure
+ of non-flexure translation stages, and has minimal angular runout (Figure
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -5841,7 +5842,7 @@ status open
 
 \begin_layout Plain Layout
 Torque between pendulum and lead-quadrupole calibration bricks, as computed
- by the newtonian simulation package (Chapter 
+ by the Newtonian simulation package (Chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "chap:Newtonian-Simulation"
@@ -6133,7 +6134,7 @@ The signal from a Fizeau interferometer is readily understood.
 \begin_inset Formula $\theta$
 \end_inset
 
-, the intensity travelling back down the fiber is roughly 
+, the intensity traveling back down the fiber is roughly 
 \end_layout
 
 \begin_layout Standard
@@ -7244,7 +7245,7 @@ filename "../systematics/pressure/extracted/unconstrainedQ.tex"
 \begin_layout Standard
 Proximity-enhanced gas damping is geometry dependent.
  It arises in regions of constrained gas flow.
- Restricted volumes of gas that are compressed/rarified by oscillator motion
+ Restricted volumes of gas that are compressed/rarefied by oscillator motion
  have slight over/under-pressures that oppose oscillator motion.
  If the restricted volume's equilibration time 
 \begin_inset Formula $\tau_{eq}$
@@ -7376,7 +7377,7 @@ key "PhysRevA.84.023412,PhysRevLett.109.103001WinelandGasNoise"
 
 .
  This gives rise to a changing electrostatic environment at each surface.
- Our pendulum and foil are gold coated in order to minimise this effect
+ Our pendulum and foil are gold coated in order to minimize this effect
  - gold's work function is only weakly-dependent on crystal orientation
  
 \begin_inset CommandInset citation
@@ -7622,7 +7623,7 @@ reference "Autocollimator noise"
 \end_inset
 
  response function at high frequency, angle readout noise is the primary
- limit on the instruments' torque sensitivity at high frequency.
+ limit on the instrument's torque sensitivity at high frequency.
  
 \end_layout
 
@@ -7661,7 +7662,7 @@ Rotation of the ground: This rotates the instrument relative to the pendulum
 
 \begin_layout Enumerate
 Magnetic damper asymmetry: If the field of the swing damper is inhomogeneous,
- and the prehanger mass has a magnetic moment or is insufficienty-centered,
+ and the prehanger mass has a magnetic moment or is insufficiently-centered,
  damper swing will be converted to a torque.
 \end_layout
 
@@ -7778,8 +7779,8 @@ Tilt
 \begin_layout Standard
 The effects of tilt are almost indistinguishable from other ground motion
  in PlateWash.
- Qualititatively, we expect ground rotation to be our dominant source of
- external noise at sub-mHz frequencies.
+ Qualitatively, we expect ground rotation to be our dominant source of external
+ noise at sub-mHz frequencies.
  As an example, on sunny days, we see a marked change in torque at sunrise
  when sunlight and its associated heating reaches the hillside in which
  our laboratory is embedded.
@@ -8717,7 +8718,7 @@ normal
  Uncertainties stated here reflect the difference between a simple linear+quadra
 tic fit and our simulated model.
  They do not take into account absolute uncertainties in density.
- At primary issue is the linearity of residual newtonian gravity, which
+ At primary issue is the linearity of residual Newtonian gravity, which
  these numbers constrain.
 \end_layout
 
@@ -9246,7 +9247,7 @@ Flexure non-linearity
 One interesting systematic effect that can exhibit considerable nonlinearity
  is the nonlinearity of the flexure itself.
  Most tilt-related effects are essentially blind to the attractor-foil distance.
- In order to maximise our use of the flexure's limited (
+ In order to maximize our use of the flexure's limited (
 \begin_inset Formula $<2$
 \end_inset
 
@@ -10027,7 +10028,7 @@ reference "fig:The-first-8000"
 \end_inset
 
 mHz is the gravitational calibration tone.
- The torque spectral reponse above the pendulum's 13
+ The torque spectral response above the pendulum's 13
 \begin_inset space ~
 \end_inset
 
@@ -10979,7 +10980,7 @@ We assess the pendulum-foil separation in two different ways.
  The most reliable, but less sensitive, approach uses direct imaging of
  the pendulum-foil distance.
  These two methods were found to be in reasonable agreement with capacitance
- measurements, but do not require any detailed modelling nor consideration
+ measurements, but do not require any detailed modeling nor consideration
  of fringing fields.
 \end_layout
 
@@ -13381,7 +13382,7 @@ Uncertainty table for the minimum effective attractor-pendulum separation
 \end_layout
 
 \begin_layout Chapter
-Strategic choices and opera tion
+Strategic choices and operation
 \end_layout
 
 \begin_layout Standard
@@ -15810,7 +15811,7 @@ reference "fig:Gravitational-calibration"
 
  signal is possible, perhaps through modulation of the background magnetic
  field, the acoustic environment (an acoustic modulation from the gravitational
- calibration system was seen during intential driven-loudspeaker studies
+ calibration system was seen during intentional driven-loudspeaker studies
  of the foil interferometer), or the thermal environment, any of these effects
  should be small.
 \end_layout
@@ -17125,7 +17126,7 @@ ric about the ascending diagonal (
 \begin_inset Formula $x$
 \end_inset
 
-, with the corrolary that 
+, with the corollary that 
 \begin_inset Formula $\Delta\tau(x,x)=0$
 \end_inset
 
@@ -17265,7 +17266,7 @@ key "taylor1996introduction"
 \end_inset
 
 , as we only have thousands of measurements in total and expect that our
- science signal will be buried within the single-measurement statisticial
+ science signal will be buried within the single-measurement statistical
  noise..
 \end_layout
 
@@ -17425,7 +17426,7 @@ A weakness of bootstrapped analysis is its reliance upon computational power
  If the dimension of a problem gets too high, it is difficult to ensure
  that fitting parameter spaces are well-explored.
  It is possible to include systematic effects into bootstrapped confidence
- intervals by modelling each systematic and injecting the expected amount
+ intervals by modeling each systematic and injecting the expected amount
  of random uncertainty into the data to be fitted.
  If little is known about the systematic effect, however, this approach
  is challenging.
@@ -17740,8 +17741,8 @@ Detwiler Trick
 \end_inset
 
  is worth a look).
- While we succeded, this entire approach has a fatal flaw; the flaw is in
- Equation 
+ While we succeeded, this entire approach has a fatal flaw; the flaw is
+ in Equation 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:Linearized Variance"
@@ -17871,7 +17872,7 @@ L(\lambda_{1},\ldots\lambda_{n},\alpha_{1},\ldots\alpha_{n}) & = & \max_{x_{A_{j
 \end_layout
 
 \begin_layout Standard
-The Frequentist approach oversimplifies the problem by choosing the maximium
+The Frequentist approach oversimplifies the problem by choosing the maximum
  alone, but it makes clear the resolution to 
 \begin_inset Quotes eld
 \end_inset
@@ -18214,7 +18215,7 @@ name "sub:fbar"
 \end_layout
 
 \begin_layout Standard
-The integrals needed for these subsubsections are worked out in Appendix
+The integrals needed for these sub-subsections are worked out in Appendix
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -19164,7 +19165,7 @@ Blindness
 \begin_layout Standard
 The most accurate experiments are free of bias.
  It is possible to perform an unbiased experiment without a blind, but it
- is difficult to guarantee that all pre-concieved notions of experimental
+ is difficult to guarantee that all preconcieved notions of experimental
  results and implications are suppressed.
  Critics of blind experiments claim that, 
 \begin_inset Quotes eld
@@ -19293,8 +19294,8 @@ m,
 \begin_inset Formula $|\alpha|\sim10^{3\pm2}$
 \end_inset
 
-, and with indeterminant sign.
- This pre-dated our determination of systematic cuts, particularly those
+, and with indeterminate sign.
+ This predated our determination of systematic cuts, particularly those
  related to the foil; the indeterminacy of the sign of the observed signal
  is particularly important.
  We don't know whether our later determinations added to, subtracted from,
@@ -19325,7 +19326,7 @@ Software
 \end_layout
 
 \begin_layout Standard
-The software used to compute these results and programatically generate
+The software used to compute these results and programmatically generate
  this document is all freely available under the GNU Public License (GPL)
  or more-permissive licenses.
  This thesis and all supporting code necessary to go from the original raw
@@ -19408,7 +19409,7 @@ directed acyclic graph
  This thesis makes partial use of those utilities.
  The dependency handling is primarily used to ensure that dependencies are
  properly built before being used.
- Without a defined and programatic way to go from raw data to final results,
+ Without a defined and programmatic way to go from raw data to final results,
  there's no way for anyone, including the original experimenters, to vet
  the process used to generate a final result.
  Make resolves this concern, making it possible to perform the entire analysis
@@ -19626,7 +19627,7 @@ Testing is perhaps best explained by example.
  power and the integrated Fourier-space power are equal.
  People usually try a few inputs until they're approximately satisfied that
  the results behave as expected.
- What if that were programatic? If, before you made serious use of a library,
+ What if that were programmatic? If, before you made serious use of a library,
  you could hit `test', and the software could run a predefined set of such
  tests? It is 
 \emph on
@@ -20026,7 +20027,7 @@ Right Annular Prism
 It is convenient to develop a function for generating both round sheets
  and rings at the same time, as a round sheet is a ring with zero inner
  radius.
- This function places points on a cartesian grid, with points accepted if
+ This function places points on a Cartesian grid, with points accepted if
  they're internal to the specified mass.
  Grid spacing along the in-plane directions and axial direction may be independe
 ntly selected.
@@ -20070,7 +20071,7 @@ Right Rectangular Prism
 \end_layout
 
 \begin_layout Standard
-The other major shape used in PlateWash modelling is the right rectangular
+The other major shape used in PlateWash modeling is the right rectangular
  prism.
  All dimensions may be specified, and grid spacings along each dimension
  may be independently specified.
@@ -20114,7 +20115,7 @@ Display
 \end_layout
 
 \begin_layout Standard
-When modelling a system, it is essential to have a visual cross-check on
+When modeling a system, it is essential to have a visual cross-check on
  its configuration.
  Our matrix format lends itself to simple plotting of mass configurations.
  When mass configurations are plotted, many kinds of errors are trivially
@@ -20213,7 +20214,7 @@ Parts
 \end_layout
 
 \begin_layout Standard
-For PlateWash-specific modelling, it is convenient to define a few assemblies.
+For PlateWash-specific modeling, it is convenient to define a few assemblies.
  
 \end_layout
 
@@ -20227,9 +20228,9 @@ The pendulum is assembled from three components, a rectangular-prism body,
  The density of the inlays are chosen to yield the true inlay density when
  summed with the body's density.
  The dimensions are drawn from a configuration file.
- The pendulum body is modelled with 10 points through its thickness, 28
- points across its width, and 15 points vertically.
- The inlays are modelled with two points through their thickness, and 15
+ The pendulum body is modeled with 10 points through its thickness, 28 points
+ across its width, and 15 points vertically.
+ The inlays are modeled with two points through their thickness, and 15
  points across their width and height.
  
 \begin_inset Note Note
@@ -20270,7 +20271,7 @@ Superposition
 \begin_layout Standard
 The planar sheets utilize a critical principle of superposition.
  In the region where the pendulum-attractor separation is comparable to
- the grid spacing, any pointwise calculation of forces and torques is almost
+ the grid spacing, any point wise calculation of forces and torques is almost
  guaranteed to be erroneous or require careful attention.
  This difficulty can be bypassed entirely by superposition.
  The gravitational field from a cylindrical sheet can be computed either
@@ -20285,7 +20286,7 @@ missing
 
  mass from an infinite sheet that the cylindrical sheet purports to represent
  and subtracting it from the known-uniform force due to an infinite sheet.
- As all pointwise separations are large in the latter case, any residual
+ As all point-wise separations are large in the latter case, any residual
  effects of grid overlap are small indeed.
 \end_layout
 
@@ -20333,9 +20334,9 @@ backer
 \end_inset
 
  are annuli of equal inner and outer radius, with 2 and 4 grid points through
- their thickness and as many as 70 points in a cartesian grid laterally.
- As above, these are annuli with inner radius equal to the tru attractor
- radius and are modelled to have negative mass.
+ their thickness and as many as 70 points in a Cartesian grid laterally.
+ As above, these are annuli with inner radius equal to the true attractor
+ radius and are modeled to have negative mass.
  The positive-mass 
 \begin_inset Quotes eld
 \end_inset
@@ -20903,7 +20904,7 @@ filename "../extracted/attrVertOffset.tex"
 \end_inset
 
  with respect to the pendulum.
- The torques due to the complete off-center attractory assembly are shown
+ The torques due to the complete off-center attractor assembly are shown
  in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -21278,7 +21279,7 @@ key "rugar1988force,rugar1989improved"
 \end_inset
 
 nm.
- Our Fabry-Perot diode laser suffered from modehops and drifts.
+ Our Fabry-Perot diode laser suffered from mode-hops and drifts.
  Careful temperature control, current control, and current selection helped,
  but could not make the instrument usable for more than tens of minutes.
  A change to a distributed-feedback 1330
@@ -21400,7 +21401,7 @@ reference "sub:Attractor-position-control"
 \end_inset
 
 ).
- Once the pressure gauge was shown to be a useable encoder by intercomparison
+ Once the pressure gauge was shown to be a usable encoder by intercomparison
  with the position encoder, the position encoder was turned off and disconnected
  for the duration of the experiment.
 \end_layout
@@ -21791,7 +21792,7 @@ XXXMI: algorithm me!
 \end_inset
 
 .
- The circuit is modelled as an LCR resonator, see Section 
+ The circuit is modeled as an LCR resonator, see Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Capacitor-Systematic"
@@ -23327,7 +23328,7 @@ Interferometer fit.
 \end_layout
 
 \begin_layout Section
-Systematic Subtraction and Uncertainty Propagationa
+Systematic Subtraction and Uncertainty Propagation
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:Subtraction-Foil"
@@ -23504,7 +23505,7 @@ There are a number of unaddressed small magnetic effects.
  it remains possible that there are magnetic impurities in our materials
  that could give rise to an inverse-square-law violating effect.
  These effects should be small, however, as ferromagnetic impurities must
- be fairly sizeable and concentrated before they become important.
+ be fairly sizable and concentrated before they become important.
  Our group's rotary magnetic-sensing turntable would allow us to place tighter
  constraints upon any magnetic effect.
 \end_layout
@@ -23846,8 +23847,8 @@ relative
 \begin_inset Formula $\chi^{2}$
 \end_inset
 
- better than 1 may be due to the overfitting inherent to the use of conservative
- systematic uncertainties.
+ better than 1 may be due to the over-fitting inherent to the use of conservativ
+e systematic uncertainties.
  
 \end_layout
 
@@ -24089,7 +24090,7 @@ In the modern avalanche world, communication and an understanding of human
  it is the subtle ones that most-often kill the experienced backcountry
  traveler.
  In most avalanche accidents among the avalanche-aware, the clues are present,
- and the error is one of judgement 
+ and the error is one of judgment 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "mccammon2002evidence,atkins2000human"
@@ -24269,8 +24270,8 @@ Foil-displacement
 
 \begin_layout Standard
 We spent about a year trying to find ways to avoid the need to measure the
- foil's position before taking on the problem directly with the foil interferome
-ter.
+ foil position before taking on the problem directly with the foil interferomete
+r.
  In our opinion, for any attractor-displacing short-distance gravity experiment,
  a measure of the isolating foil's displacement is essential.
  Without such a measurement, substantial systematic-uncertainty questions
@@ -24374,7 +24375,7 @@ Error budgets provide the guidance necessary for keeping experiments from
 \end_layout
 
 \begin_layout Subsubsection
-Blitzkreig vs Campaign
+Blitzkrieg vs Campaign
 \end_layout
 
 \begin_layout Standard
@@ -24385,7 +24386,7 @@ While it was first imagined as a short-range equivalence principle test,
 \end_layout
 
 \begin_layout Standard
-Our action mirrored this blitzkreig philosophy.
+Our action mirrored this blitzkrieg philosophy.
  The goal was to push for the single best measurement we could get, as quickly
  as we could.
  We put off complete solutions to systematic concerns in favor of estimates
@@ -24397,7 +24398,7 @@ Our action mirrored this blitzkreig philosophy.
 \end_layout
 
 \begin_layout Standard
-Our committment to the lightning-strike approach, where we would get a great
+Our commitment to the lightning-strike approach, where we would get a great
  measurement on our first try, led us astray; the first strikes didn't work.
  Complete focus on delivering a respectable result instead of iteratively
  delivering coarse but reliable results slowed our progress.
@@ -24413,10 +24414,10 @@ Complexity
 PlateWash is a very simple experiment.
  Its simplicity is perhaps its second-strongest feature (behind the intrinsicall
 y-null nature of the short-range field from the attractor).
- In pursuing the random attractor motion, blind analysis, and auditable/repeatab
-le analysis software, I severely underestimated the implied complexity of
- each.
- Correct execution of all of them are necessary to yield a maximally-believeable
+ In pursuing the random attractor motion, blind analysis, and audit-able/repeata
+ble analysis software, I severely underestimated the implied complexity
+ of each.
+ Correct execution of all of them are necessary to yield a maximally-believable
  result, but each one has generated a year or more's worth of work.
  Constrained complexity must be a hallmark of future short-range experiments.
  PlateWash has led the way into new areas and generated new tools to simplify
@@ -24616,7 +24617,7 @@ only
  The intentional loss of symmetry inherent to these designs requires that
  even more care be given to the foil's motion.
  While a tuned contact potential should limit the electrostatic effects
- of any swing, gas dynamics and other effects presently cancelled by approximate
+ of any swing, gas dynamics and other effects presently canceled by approximate
  symmetries may become more pronounced.
 \end_layout
 
@@ -24658,7 +24659,7 @@ The autocollimator used in this iteration of the experiment was a coarse
  The wide dynamic range, software-defined rotation, and two-dimensional
  operation were all quite useful to making this measurement possible.
  The noise floor of the autocollimator, however, wasn't too far away from
- the intrisic noise of the torsion balance.
+ the intrinsic noise of the torsion balance.
  Improved readout would allow us to run higher-gain feedback loops, with
  larger differential terms.
  The stiffer loop performance would allow us to operate at shorter separations
@@ -24699,7 +24700,7 @@ UV LED
 \begin_layout Standard
 Our understanding of exactly which physical mechanism increases the noise
  in the torsion pendulum at short pendulum/foil separation is minimal.
- One possiblity is that the pendulum is being buffeted by outgassing from
+ One possibility is that the pendulum is being buffeted by outgassing from
  the foil, perhaps enhanced by squeeze-film effects.
  Another is that adsorbed materials on the foil surface may be slowly rearrangin
 g themselves, causing fluctuations of the effective electrostatic interactions
@@ -24714,7 +24715,7 @@ key "PhysRevLett.109.103001WinelandGasNoise"
 , it's possible that retracting the pendulum away from the foil and illuminating
  the active surfaces with ultraviolet light might improve the noise.
  Through photoelectric-like effects, UV light is known to significantly
- accelerate outgassing rates and expel adsorped surface layers.
+ accelerate outgassing rates and expel adsorbed surface layers.
  Trying out a UV light-emitting diode, as we've already used in our LISA
  
 \begin_inset CommandInset citation
@@ -24787,7 +24788,7 @@ name "sub:Position-choices"
 \begin_layout Standard
 Much of the difficulty in the data analysis stemmed from the use of a large
  ensemble of attractor positions instead of two or three.
- If we had instead chosed to operate with one or two position differences,
+ If we had instead chosen to operate with one or two position differences,
  the analyses of both systematic uncertainty and potential new physics would
  have been drastically simplified.
  The increased immunity to position-related systematic effects may not have
