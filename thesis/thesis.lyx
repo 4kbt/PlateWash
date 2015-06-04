@@ -390,6 +390,7 @@ Charles Hagedorn
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Box Boxed
 position "t"
 hor_pos "c"
@@ -17503,6 +17504,7 @@ In all instances where the bootstrap was used, this simple Octave function
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Box Boxed
 position "t"
 hor_pos "c"
@@ -17514,7 +17516,7 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -19595,6 +19597,7 @@ As a sample, here is the root makefile for the project.
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Box Boxed
 position "t"
 hor_pos "c"
@@ -19627,6 +19630,7 @@ lstparams "breakatwhitespace=true,breaklines=true,caption={Makefile},emptylines=
 \end_layout
 
 \begin_layout LyX-Code
+\align center
  
 \end_layout
 
@@ -19990,6 +19994,7 @@ The force
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Box Boxed
 position "t"
 hor_pos "c"
@@ -20027,6 +20032,7 @@ Where the inverse square law is evaluated by perhaps the simplest possible
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Box Boxed
 position "t"
 hor_pos "c"
@@ -20081,6 +20087,7 @@ Translation is defined by a three-vector.
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Box Boxed
 position "t"
 hor_pos "c"
@@ -20132,6 +20139,7 @@ key "GruberQuaternionRotation"
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Box Boxed
 position "t"
 hor_pos "c"
@@ -20198,6 +20206,7 @@ ntly selected.
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Box Boxed
 position "t"
 hor_pos "c"
@@ -20242,6 +20251,7 @@ The other major shape used in PlateWash modeling is the right rectangular
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Box Boxed
 position "t"
 hor_pos "c"
@@ -20287,6 +20297,7 @@ When modeling a system, it is essential to have a visual cross-check on
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Box Boxed
 position "t"
 hor_pos "c"
