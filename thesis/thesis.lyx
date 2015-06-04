@@ -295,7 +295,8 @@ This thesis is a companion to the computer software that automatically generated
  it.
  If you have unanswered questions about how most quantities and plots were
  determined, please look around.
- If you find an error, please let me know.
+ https://www.github.com/4kbt/PlateWash/ If you find an error, please let me
+ know.
 \end_layout
 
 \begin_layout Chapter*
@@ -333,8 +334,8 @@ When a worthwhile project takes a decade, you'll find that a village full
 \end_layout
 
 \begin_layout Standard
-Alfred Hagedorn, Alfred Hagedorn III, Alice Crawford, Allen Myers, Ann Nelson,
- Barb Fulton, 
+Alfred Hagedorn II, Alfred Hagedorn III, Alice Crawford, Allen Myers, Ann
+ Nelson, Barb Fulton, 
 \emph on
 Blayne Heckel
 \emph default
@@ -3602,7 +3603,7 @@ reference "fig:fiber assembly"
 
 ) and the magnetic damper were attached, through a ceramic electrical isolator,
  to a motorized two-axis translation and one-axis rotary stage.
- Electrical contact to the pendulum was established by way of a thin (<0.5
+ Electrical contact to the pendulum was established by a thin (<0.5
 \begin_inset space ~
 \end_inset
 
@@ -3991,11 +3992,7 @@ filename "../extracted/spindleLength.tex"
 
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-m long, 
+ long, 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../extracted/spindleDiameter.tex"
@@ -4573,8 +4570,8 @@ mm thick.
 \end_layout
 
 \begin_layout Standard
-The dimensions of the entire instrument are partially-set by the availability
- of thin foils.
+The dimensions of the entire instrument are set by the availability of thin
+ foils.
  We were unable to find strong metal foils of thickness 
 \begin_inset Formula $<12$
 \end_inset
@@ -5538,6 +5535,10 @@ s before the locking valve opens.
 s delay isn't quite sufficient to fully pressurize the pneumatic lines;
  when the locking valve opens, the attractor systematically jumps about
  50
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset Formula $\mu$
 \end_inset
 
@@ -7726,7 +7727,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../runAnalysis/supportingPlots/run3147NoiseOverTime.eps
-	width 50page%
+	width 70text%
 
 \end_inset
 
@@ -7737,7 +7738,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../runAnalysis/supportingPlots/run3147NoiseThroughTheDay.eps
-	width 50page%
+	width 70text%
 
 \end_inset
 
@@ -8446,7 +8447,7 @@ reference "fig:Proximity-enhanced-gas-damping"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard
@@ -8678,10 +8679,6 @@ XXXMA1 - do it
 \end_inset
 
 
-\end_layout
-
-\begin_layout Paragraph
-Attractor Drift
 \end_layout
 
 \begin_layout Paragraph
@@ -9157,7 +9154,7 @@ reference "fig:AttractorScan"
 \begin_layout Standard
 The torque due to all known flatness variations (roughness, irregularities,
  and dishing of surfaces) of attractor and pendulum were estimated numerically
- (see 
+ (Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Torques-from-surface"
@@ -9172,7 +9169,8 @@ filename "../NewtonianSimulation/SimulationOutput/scanMaxDiff.tex"
 \end_inset
 
  for all possible pendulum positions and azimuthal rotations of the attractor.
- This estimation was made using the pendulum and attractor scans (see 
+ This estimation was made using the pendulum and attractor scans (Section
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Torques-from-surface"
@@ -9724,7 +9722,7 @@ If there is a temperature gradient between the foil and the attractor, attractor
  Heat transfer is enhanced over very short distances in vacuum by near-field
  electromagnetic effects, somewhat like the Casimir interaction, as in 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "jones2013thermal"
 
 \end_inset
@@ -9759,7 +9757,7 @@ The foil interferometer has approximately 0.5 mW of infrared optical power
  way.
  95-99% of the light is reflected 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "loebich1972optical"
 
 \end_inset
@@ -10891,7 +10889,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename Pictures/horizontalOffsetMay52015Crop.jpg
-	width 70page%
+	height 85theight%
 
 \end_inset
 
@@ -11232,7 +11230,7 @@ Photos
 Just as with the pendulum distance (Section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "Autocollimator Photo"
+reference "sub:Pendulum-Foil-separation"
 
 \end_inset
 
@@ -11341,7 +11339,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../metrology/run3310plateau.eps
-	width 70text%
+	width 85text%
 
 \end_inset
 
@@ -14137,7 +14135,7 @@ Harmonic (
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -16088,7 +16086,7 @@ s per period, is a brutal but acceptable step, as the attractor-motion period
 s.
  The installation of a simple time-distribution system will completely remove
  this source of uncertainty in the future, making sub-second synchronization
- straightforward in the future.
+ straightforward.
  
 \end_layout
 
@@ -16160,7 +16158,7 @@ Data are imported from three separate sources (torsion balance, attractor
 \begin_inset space ~
 \end_inset
 
-s sample interval, so any extra timing mismatch (beyond that discussed in
+s sample interval, so any extra timing mismatch (beyond the discussion in
  Section 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -16168,7 +16166,7 @@ reference "sec:Timing"
 
 \end_inset
 
- is at most 1.6 s.
+) is at most 1.6 s.
  
 \end_layout
 
@@ -16193,7 +16191,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../runAnalysis/supportingPlots/run3147filterFrequencyResponse.eps
-	width 75text%
+	width 80text%
 
 \end_inset
 
@@ -16235,7 +16233,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../runAnalysis/supportingPlots/run3147filterTimeDomain.eps
-	width 70text%
+	width 80text%
 
 \end_inset
 
@@ -16437,7 +16435,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../runAnalysis/supportingPlots/run3169filterTransfer.eps
-	width 75col%
+	width 80text%
 
 \end_inset
 
@@ -16675,7 +16673,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../runAnalysis/supportingPlots/run3169lags.eps
-	width 75text%
+	width 80text%
 
 \end_inset
 
@@ -16771,7 +16769,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../runAnalysis/supportingPlots/run3224torqueLag.eps
-	width 75text%
+	width 80text%
 
 \end_inset
 
@@ -16877,7 +16875,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../runAnalysis/supportingPlots/run3147windowTransferFunctions.eps
-	width 75col%
+	width 80text%
 
 \end_inset
 
@@ -17003,17 +17001,17 @@ The `lock-in' is made by taking the difference between the average of the
 \end_layout
 
 \begin_layout Section
-\begin_inset Quotes eld
-\end_inset
-
-
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:Triangle-Plot"
 
 \end_inset
 
- Plot
+
+\begin_inset Quotes eld
+\end_inset
+
+Triangle Plot
 \begin_inset Quotes erd
 \end_inset
 
@@ -17288,14 +17286,26 @@ filename "../metrology/extracted/ifoPad.tex"
 Post-unblinding comment: the order of the latter two excisions should have
  been exchanged, but were not.
  We believe that this has an inconsequential effect on the result, and would
- tend to improve the measurement's sensitivity slightly (see Section 
+ tend to improve the measurement's sensitivity slightly
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+(see Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Excised-data"
 
 \end_inset
 
- for further discussion).
+ for further discussion)
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
@@ -17398,7 +17408,8 @@ name "sec:Model-Comparison"
 The bootstrap makes comparison with any proposed model straightforward.
  No matter how exotic the fitting function and how sensitive it might be
  to individual datapoints or non-Gaussianity in the experimental data, it
- is straightforward to bootstrap the data, fit, bootstrap again, fit, etc...
+ is straightforward to bootstrap the data, fit, bootstrap again, fit, repeating
+ as needed.
  The distribution of fit outcomes can always be studied, and qualitative
  understanding is immediate.
  Settling on an algorithm for generating confidence intervals is, however,
@@ -17718,7 +17729,7 @@ reference "eq:PrototypeFitFunction"
 
  is a recipe for trouble.
  With aid and inspiration from Jason Detwiler, we computed the full non-linear
- variance of 
+ variance of Equation 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:PrototypeDifferenceFunction"
@@ -18918,16 +18929,23 @@ s of the subset
 \end_inset
 
  composed of the first 
+\begin_inset Formula $N$
+\end_inset
+
+ (for this thesis, 
 \begin_inset CommandInset include
 LatexCommand input
 filename "../extracted/NBinConfInterval.tex"
 
 \end_inset
 
- best-fit point.
- This number is chosen as the square-root of the number of bootstrapped
- points in order to limit over-zealous fluctuations of the confidence interval
- curves.
+) best-fit points.
+ 
+\begin_inset Formula $N$
+\end_inset
+
+ is chosen as the square-root of the number of bootstrapped points in order
+ to limit over-zealous fluctuations of the confidence interval curves.
  We then plot four points, 
 \begin_inset Formula $(\lambda_{min},m_{\alpha}\pm2\sigma_{\alpha})$
 \end_inset
@@ -20177,7 +20195,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../NewtonianSimulation/plots/displayPointsDemo.eps
-	width 70text%
+	width 85text%
 
 \end_inset
 
@@ -20498,7 +20516,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../NewtonianSimulation/plots/fullDistributionZoomOutTrim.eps
-	width 70theight%
+	height 70theight%
 
 \end_inset
 
@@ -23213,7 +23231,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../runAnalysis/supportingPlots/run3147ifoTriangle.eps
-	width 70text%
+	height 70theight%
 
 \end_inset
 
@@ -23678,7 +23696,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../bootstrap/output/bootstrapArbFit.a0l0.0002slop0Levenberg.dat.eps
-	width 70text%
+	width 90text%
 	rotateAngle 270
 
 \end_inset
@@ -23792,7 +23810,7 @@ The upper two fields in the following figures will be most familiar to those
  For perspective relative to the best results in the field, the exclusion
  limits of Kapner and Cook 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "Kapner2005,Cook2013"
 
 \end_inset
@@ -24002,7 +24020,7 @@ ski class,
 
 I think the major difference between an expert and an amateur is whether
  or not, at the end of the day, they ask and answer the question, `what
- have I learned today?'
+ have I learned today?' 
 \begin_inset Quotes erd
 \end_inset
 
@@ -25874,6 +25892,7 @@ reference "eq:YukawaPotential"
 \end_layout
 
 \begin_layout Standard
+\align left
 The code used to generate this entire body of work is freely available:
  https://www.github.com/4kbt/PlateWash/ and by request from the author.
 \end_layout
@@ -25900,13 +25919,38 @@ The fitting plan:
 
 \begin_layout Enumerate
 Define a fitting function, 
-\begin_inset Newline newline
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\begin{eqnarray*}
+F(x,B_{1\dots n}|\alpha_{1\ldots n},\lambda_{1\ldots n}) & = & \pi Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}\\
+ &  & \left(1-e^{-(t_{p}-t_{I})/\lambda_{i}}\right)\left(1-e^{-t_{a}/\lambda_{i}}\right)\left(1-e^{-t_{I}/\lambda_{i}}\right)e^{-x/\lambda_{i}}+Cx
+\end{eqnarray*}
+
 \end_inset
 
 
-\begin_inset Formula $F(x,B_{1\dots n}|\alpha_{1\ldots n},\lambda_{1\ldots n})=\pi Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}\left(1-e^{-(t_{p}-t_{I})/\lambda_{i}}\right)\left(1-e^{-t_{a}/\lambda_{i}}\right)\left(1-e^{-t_{I}/\lambda_{i}}\right)e^{-x/\lambda_{i}}+Cx$
-\end_inset
-
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
 .
 \end_layout
 
@@ -25919,8 +25963,25 @@ Let the thickness corrections be
 \end_layout
 
 \begin_layout Enumerate
-So, 
-\begin_inset Formula $F(x,B_{1\dots n}|\alpha_{1\ldots n},\lambda_{1\ldots n})=\pi Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}T(\lambda_{i})e^{-x/\lambda_{i}}+Cx=Q\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}T(\lambda_{i})e^{-x/\lambda_{i}}+Cx$
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+So,
+\begin_inset Formula 
+\begin{eqnarray*}
+F(x,B_{1\dots n}|\alpha_{1\ldots n},\lambda_{1\ldots n}) & = & \pi Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}T(\lambda_{i})e^{-x/\lambda_{i}}+Cx\\
+ & = & Q\sum_{i}\alpha_{i}B_{i}\lambda_{i}^{2}T(\lambda_{i})e^{-x/\lambda_{i}}+Cx
+\end{eqnarray*}
+
 \end_inset
 
 
@@ -27144,6 +27205,7 @@ not
 \end_layout
 
 \begin_layout Standard
+\paragraph_spacing single
 \align left
 \begin_inset CommandInset include
 LatexCommand input
