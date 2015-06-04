@@ -290,6 +290,23 @@ end{titlepage}
 
 \begin_layout Standard
 \align center
+©Copyright 2015 
+\end_layout
+
+\begin_layout Standard
+\align center
+Charles Hagedorn
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
 University of Washington 
 \end_layout
 
@@ -366,23 +383,6 @@ m.
 \end_layout
 
 \begin_layout Verse
-\begin_inset Newpage newpage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-©Copyright 2015 
-\end_layout
-
-\begin_layout Standard
-\align center
-Charles Hagedorn
-\end_layout
-
-\begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
 
