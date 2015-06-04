@@ -217,7 +217,23 @@ We performed a parallel-plate test of the gravitational inverse-square law
 \begin_inset Formula $\lambda=$
 \end_inset
 
-XXXRC to millimeters.
+104
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m to 1320
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m.
 \end_layout
 
 \begin_layout Verse
@@ -295,8 +311,8 @@ This thesis is a companion to the computer software that automatically generated
  it.
  If you have unanswered questions about how most quantities and plots were
  determined, please look around.
- https://www.github.com/4kbt/PlateWash/ If you find an error, please let me
- know.
+ https://www.github.com/4kbt/PlateWash/ .
+ If you find an error, please let me know.
 \end_layout
 
 \begin_layout Chapter*
@@ -25170,10 +25186,6 @@ Raw Data
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -25925,13 +25937,35 @@ reference "eq:YukawaPotential"
 \begin_inset Formula $\lambda$
 \end_inset
 
- between XXXRC and XXXRC microns with 95% confidence.
+ between 104 
+\begin_inset Formula $\mu m$
+\end_inset
+
+ and 1320 
+\begin_inset Formula $\mu$
+\end_inset
+
+m with 95% confidence.
+ This limit is expected to improve to 
+\begin_inset Formula $95$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m with the improved fit resolution permitted by even more computation of
+ best-fit points.
 \end_layout
 
 \begin_layout Standard
 \align left
-The code used to generate this entire body of work is freely available:
- https://www.github.com/4kbt/PlateWash/ and by request from the author.
+The code that generates this entire body of work is freely available: https://ww
+w.github.com/4kbt/PlateWash/ and by request from the author.
 \end_layout
 
 \begin_layout Chapter
