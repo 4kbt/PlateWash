@@ -345,17 +345,20 @@ Department of Physics
 \end_layout
 
 \begin_layout Verse
-\align left
-We performed a parallel-plate test of the gravitational inverse-square law
- at sub-millimeter distances.
+Newton's inverse-square law of gravitation is the oldest standing mathematical
+ description of a fundamental interaction.
+ Experimental tests of gravity's distance-dependence define a frontier between
+ our understanding of gravity and many proposed forms of new physics.
+ We performed a parallel-plate test of the gravitational inverse-square
+ law at sub-millimeter distances.
  Using a tantalum/titanium torsion balance locked in electrostatic feedback,
  we performed a null search for deviations from uniformity of the gravitational
- field of a planar tantalum mass.
+ field of a planar tantalum/aluminum mass.
  Key innovations include an interferometric isolating-foil position monitor,
  a completely reproducible analysis tool-chain, and a publicly-unblinded
  analysis.
- In the traditional Yukawa parametrization, our results are consistent,
- at 95% confidence, with Newton's inverse-square law at 
+ Using the traditional Yukawa parametrization, our results are consistent
+ with Newton's inverse-square law at 
 \begin_inset Formula $\alpha=1$
 \end_inset
 
@@ -379,7 +382,7 @@ m to 1320
 \begin_inset Formula $\mu$
 \end_inset
 
-m.
+m with 95% confidence,.
 \end_layout
 
 \begin_layout Verse
@@ -441,8 +444,16 @@ This thesis is a companion to the computer software that automatically generated
  it.
  If you have unanswered questions about how most quantities and plots were
  determined, please look around.
- https://www.github.com/4kbt/PlateWash/ .
- If you find an error, please let me know.
+ 
+\end_layout
+
+\begin_layout Standard
+The source code is here: https://www.github.com/4kbt/PlateWash/ .
+ 
+\end_layout
+
+\begin_layout Standard
+If you find an error, please let me know.
 \end_layout
 
 \begin_layout Chapter*
@@ -1935,7 +1946,7 @@ key "Cook2013"
 
 \end_inset
 
-(2013).
+ (2013).
  In parallel, a 1
 \begin_inset space ~
 \end_inset
@@ -2302,7 +2313,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename Pictures/small/OverviewLastPhotoBeforeCloseDecember212011.jpg
-	width 50page%
+	width 80text%
 
 \end_inset
 
@@ -3124,10 +3135,23 @@ status open
 \end_layout
 
 \begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
 \begin_inset Formula 
-\[
-\Delta\tau_{full}=\pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}e^{-d/\lambda}\left(1-e^{-(t_{p}-t_{I})/\lambda}-e^{-s/\lambda}\left(1-e^{-(t_{p}-t_{I})/\lambda}\right)\right)\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{I}/\lambda}\right)
-\]
+\begin{eqnarray*}
+\Delta\tau_{full} & = & \pi\alpha Gh\left(\frac{w^{2}}{4}-j^{2}\right)\left(\rho_{h}-\rho_{l}\right)\rho_{a}\lambda^{2}e^{-d/\lambda}\\
+ &  & \times\left(1-e^{-(t_{p}-t_{I})/\lambda}-e^{-s/\lambda}\left(1-e^{-(t_{p}-t_{I})/\lambda}\right)\right)\left(1-e^{-t_{a}/\lambda}\right)\left(1-e^{-t_{I}/\lambda}\right)
+\end{eqnarray*}
 
 \end_inset
 
@@ -6848,7 +6872,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename Pictures/small/InterferometerControlLeverDecember222011.jpg
-	width 70text%
+	width 85theight%
 	rotateAngle 270
 
 \end_inset
@@ -7884,7 +7908,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../runAnalysis/supportingPlots/run3147NoiseThroughTheDay.eps
-	width 70text%
+	width 80text%
 
 \end_inset
 
@@ -8880,18 +8904,16 @@ Non-infinite
 As the attractor does not have the spatial extent of an infinite sheet,
  the gravitational field of the attractor has both distance and misalignment
  dependence.
- To estimate the size of this effect, two independent mass-integration programs
- were written.
- When completed, it was discovered that one trivial bug separated the two
- codes from nearly exact agreement.
- See Chapter 
+ To estimate the size of this effect, we developed a Newtonian modeling
+ software library to compute the forces and torques directly (see Chapter
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "chap:Newtonian-Simulation"
 
 \end_inset
 
- for a description of both methods.
+).
  As expected from flat surfaces in the near field, the torque vs.
  distance curves are predominantly linear.
  For a centered pendulum, the expected torque per unit attractor displacement
@@ -9621,6 +9643,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../systematics/magnetic/thermalMagneticField.eps
+	width 80text%
 
 \end_inset
 
@@ -23387,7 +23410,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../runAnalysis/supportingPlots/run3147ifoTriangle.eps
-	height 70theight%
+	height 90theight%
 
 \end_inset
 
@@ -24235,6 +24258,10 @@ The PlateWash experiment began as an attempt to make a lightning strike
 
  at 
 \begin_inset Formula $40$
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 
