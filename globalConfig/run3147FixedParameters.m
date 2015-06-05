@@ -133,7 +133,7 @@ torqueBlur   = 1e-12;  printSI(torqueBlur, 1, -15, 'N-m', [HOMEDIR 'extracted/to
 %fprintf('# read Complete \n')
 
 %'INSUFFICENT bootstrap counts'
-NumberOfYukawaBootstraps = 563; %was 1000
+NumberOfYukawaBootstraps = 480; %was 1000
 NumberOfArbFitBootstraps = NumberOfYukawaBootstraps; % was 300
 printInteger( NumberOfYukawaBootstraps , [HOMEDIR '/extracted/numBootstraps.tex']);
 
