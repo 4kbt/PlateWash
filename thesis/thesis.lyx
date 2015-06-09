@@ -22106,7 +22106,30 @@ filename "../systematics/magnetic/extracted/CoilCurrent.tex"
 \end_inset
 
 .
+ Histograms of the long-stroke and short-stroke tests are shown in Figures
  
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Long-stroke-Magnetic-Tests,"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Short-stroke-Magnetic-Tests:"
+
+\end_inset
+
+.
+ The results are summarized in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Magnetic-systematic-test"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -22468,6 +22491,12 @@ filename "../systematics/magnetic/extracted/shortStrokeLRDiff.tex"
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Magnetic-systematic-test"
+
+\end_inset
+
 Magnetic systematic test results.
  The 
 \begin_inset Quotes eld
@@ -22529,6 +22558,12 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Long-stroke-Magnetic-Tests,"
+
+\end_inset
+
 Long-stroke Magnetic Tests, a blind comparison of field-on and field-off
  torque differences.
 \end_layout
@@ -22562,6 +22597,12 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Short-stroke-Magnetic-Tests:"
+
+\end_inset
+
 Short-stroke Magnetic Tests: A blind comparison of field-on, field-off,
  and field-flipped torque differences.
 \end_layout
@@ -22655,7 +22696,14 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Long-stroke Thermal Tests
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Long-stroke-Thermal-Tests:"
+
+\end_inset
+
+Long-stroke Thermal Tests: Blind comparison of torque differences between
+ heat-off and with left and right attractor spindles heated.
 \end_layout
 
 \end_inset
@@ -22687,7 +22735,14 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Short-stroke Thermal Tests
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Short-stroke-Thermal-Tests:"
+
+\end_inset
+
+Short-stroke Thermal Tests: Blind comparison of torque differences between
+ heat-off and with left and right attractor spindles heated.
 \end_layout
 
 \end_inset
@@ -22800,7 +22855,29 @@ We believe that the science-run temperature difference between the attractor
 
 \end_inset
 
+ Histograms of the tests are shown in Figures 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Long-stroke-Thermal-Tests:"
 
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Short-stroke-Thermal-Tests:"
+
+\end_inset
+
+.
+ The results are summarized in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Temperature-systematic-measureme"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -23080,6 +23157,12 @@ mK
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Temperature-systematic-measureme"
+
+\end_inset
+
 Temperature-systematic measurements
 \end_layout
 
