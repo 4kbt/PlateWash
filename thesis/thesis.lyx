@@ -6872,7 +6872,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename Pictures/small/InterferometerControlLeverDecember222011.jpg
-	width 85theight%
+	height 85theight%
 	rotateAngle 270
 
 \end_inset
@@ -9664,7 +9664,15 @@ Expected thermally-driven magnetic fields, computed using the formalism
  begun by Varpula 
 \emph on
 et al.
+
 \emph default
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "varpula1984magnetic"
+
+\end_inset
+
 .
  The fields are small, but reach easily through the foil.
 \end_layout
@@ -22122,7 +22130,17 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Coil in the on-apparatus position
+Coil in the on-apparatus position.
+ Current was applied to the coil in both directions, allowing searches for
+ systematics proportional to both 
+\begin_inset Formula $\vec{B}$
+\end_inset
+
+ and 
+\begin_inset Formula $|\vec{B}|^{2}$
+\end_inset
+
+.
 \end_layout
 
 \end_inset
@@ -22511,7 +22529,8 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Long-stroke Magnetic Tests
+Long-stroke Magnetic Tests, a blind comparison of field-on and field-off
+ torque differences.
 \end_layout
 
 \end_inset
@@ -22543,7 +22562,8 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Short-stroke Magnetic Tests
+Short-stroke Magnetic Tests: A blind comparison of field-on, field-off,
+ and field-flipped torque differences.
 \end_layout
 
 \end_inset
