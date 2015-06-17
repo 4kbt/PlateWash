@@ -4279,8 +4279,8 @@ nm Au were deposited by thermal evaporation.
 
 \begin_layout Standard
 The pendulum and attractors used in this experiment are actually our prototypes.
- A second higher-quality Ti-Pt pendulum and was built and operated for more
- than a year in vacuum before it was noted that the inlay glue had failed,
+ A second higher-quality Ti-Pt pendulum was built and operated for more
+ than a year in vacuum before it was noted that the inlay glue had failed
  and the surfaces had bubbled by more than 20
 \begin_inset space ~
 \end_inset
@@ -6872,7 +6872,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename Pictures/small/InterferometerControlLeverDecember222011.jpg
-	width 85theight%
+	height 85theight%
 	rotateAngle 270
 
 \end_inset
@@ -9664,7 +9664,15 @@ Expected thermally-driven magnetic fields, computed using the formalism
  begun by Varpula 
 \emph on
 et al.
+
 \emph default
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "varpula1984magnetic"
+
+\end_inset
+
 .
  The fields are small, but reach easily through the foil.
 \end_layout
@@ -22098,7 +22106,30 @@ filename "../systematics/magnetic/extracted/CoilCurrent.tex"
 \end_inset
 
 .
+ Histograms of the long-stroke and short-stroke tests are shown in Figures
  
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Long-stroke-Magnetic-Tests,"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Short-stroke-Magnetic-Tests:"
+
+\end_inset
+
+.
+ The results are summarized in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Magnetic-systematic-test"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -22122,7 +22153,17 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Coil in the on-apparatus position
+Coil in the on-apparatus position.
+ Current was applied to the coil in both directions, allowing searches for
+ systematics proportional to both 
+\begin_inset Formula $\vec{B}$
+\end_inset
+
+ and 
+\begin_inset Formula $|\vec{B}|^{2}$
+\end_inset
+
+.
 \end_layout
 
 \end_inset
@@ -22450,6 +22491,12 @@ filename "../systematics/magnetic/extracted/shortStrokeLRDiff.tex"
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Magnetic-systematic-test"
+
+\end_inset
+
 Magnetic systematic test results.
  The 
 \begin_inset Quotes eld
@@ -22511,7 +22558,14 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Long-stroke Magnetic Tests
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Long-stroke-Magnetic-Tests,"
+
+\end_inset
+
+Long-stroke Magnetic Tests, a blind comparison of field-on and field-off
+ torque differences.
 \end_layout
 
 \end_inset
@@ -22543,7 +22597,14 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Short-stroke Magnetic Tests
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Short-stroke-Magnetic-Tests:"
+
+\end_inset
+
+Short-stroke Magnetic Tests: A blind comparison of field-on, field-off,
+ and field-flipped torque differences.
 \end_layout
 
 \end_inset
@@ -22635,7 +22696,14 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Long-stroke Thermal Tests
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Long-stroke-Thermal-Tests:"
+
+\end_inset
+
+Long-stroke Thermal Tests: Blind comparison of torque differences between
+ heat-off and with left and right attractor spindles heated.
 \end_layout
 
 \end_inset
@@ -22667,7 +22735,14 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Short-stroke Thermal Tests
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Short-stroke-Thermal-Tests:"
+
+\end_inset
+
+Short-stroke Thermal Tests: Blind comparison of torque differences between
+ heat-off and with left and right attractor spindles heated.
 \end_layout
 
 \end_inset
@@ -22780,7 +22855,29 @@ We believe that the science-run temperature difference between the attractor
 
 \end_inset
 
+ Histograms of the tests are shown in Figures 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Long-stroke-Thermal-Tests:"
 
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Short-stroke-Thermal-Tests:"
+
+\end_inset
+
+.
+ The results are summarized in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Temperature-systematic-measureme"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -23060,6 +23157,12 @@ mK
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Temperature-systematic-measureme"
+
+\end_inset
+
 Temperature-systematic measurements
 \end_layout
 
