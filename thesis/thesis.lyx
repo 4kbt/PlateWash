@@ -6872,7 +6872,8 @@ status open
 \align center
 \begin_inset Graphics
 	filename Pictures/small/InterferometerControlLeverDecember222011.jpg
-	height 85theight%
+	width 85theight%
+	scaleBeforeRotation
 	rotateAngle 270
 
 \end_inset
