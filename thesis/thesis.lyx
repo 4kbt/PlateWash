@@ -382,7 +382,7 @@ m to 1320
 \begin_inset Formula $\mu$
 \end_inset
 
-m with 95% confidence,.
+m with 95% confidence.
 \end_layout
 
 \begin_layout Verse
@@ -786,7 +786,7 @@ key "bennett2006final"
 
 .
  An improved experiment is under construction at Fermilab to address this
- concern by the end of the decade
+ concern by the end of the decade 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "DOEGMinus2Review"
@@ -4010,7 +4010,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename Pictures/small/SensorsOnSpindleLegsMay222011.jpg
-	width 50page%
+	width 80text%
 
 \end_inset
 
@@ -10635,7 +10635,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../metrology/run3305capSweep.eps
-	width 90text%
+	width 100text%
 
 \end_inset
 
@@ -10695,7 +10695,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../metrology/run3305fringes.eps
-	width 90text%
+	width 100text%
 
 \end_inset
 
@@ -14687,7 +14687,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename plots/lagFrequencySNR.eps
-	width 90text%
+	width 100text%
 
 \end_inset
 
@@ -14983,7 +14983,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../runAnalysis/supportingPlots/run3147randomAttractorExample.eps
-	width 90text%
+	width 100text%
 
 \end_inset
 
@@ -16412,7 +16412,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../runAnalysis/supportingPlots/run3147filterTimeDomain.eps
-	width 90text%
+	width 100text%
 
 \end_inset
 
@@ -16614,7 +16614,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../runAnalysis/supportingPlots/run3169filterTransfer.eps
-	width 90text%
+	width 100text%
 
 \end_inset
 
@@ -17207,7 +17207,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename plots/triangleExample.eps
-	width 100page%
+	width 100text%
 
 \end_inset
 
