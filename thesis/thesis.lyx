@@ -6001,7 +6001,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../NewtonianSimulation/plots/brickDemo.eps
-	width 50page%
+	width 70page%
 
 \end_inset
 
@@ -6795,7 +6795,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../ifo/ifoLFSpectrum.eps
-	width 50page%
+	width 90text%
 
 \end_inset
 
@@ -7909,7 +7909,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../runAnalysis/supportingPlots/run3147NoiseThroughTheDay.eps
-	width 80text%
+	width 90text%
 
 \end_inset
 
@@ -8108,7 +8108,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename plots/run1646contactPotential.eps
-	width 70text%
+	width 90text%
 
 \end_inset
 
@@ -8631,7 +8631,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../systematics/pressure/squeezeFilm.eps
-	width 70text%
+	width 80text%
 	rotateAngle 270
 
 \end_inset
@@ -10635,7 +10635,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../metrology/run3305capSweep.eps
-	width 70text%
+	width 90text%
 
 \end_inset
 
@@ -10695,7 +10695,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../metrology/run3305fringes.eps
-	width 70text%
+	width 90text%
 
 \end_inset
 
@@ -11517,7 +11517,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../metrology/run3310plateau.eps
-	width 85text%
+	width 90text%
 
 \end_inset
 
@@ -14687,6 +14687,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename plots/lagFrequencySNR.eps
+	width 90text%
 
 \end_inset
 
@@ -14982,7 +14983,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../runAnalysis/supportingPlots/run3147randomAttractorExample.eps
-	width 70page%
+	width 90text%
 
 \end_inset
 
@@ -15037,7 +15038,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../runAnalysis/supportingPlots/run3147AttractorOverTime.eps
-	width 70page%
+	width 90text%
 
 \end_inset
 
@@ -15781,7 +15782,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../calibration/run3147calFitChk.eps
-	width 75col%
+	width 90text%
 
 \end_inset
 
@@ -16180,7 +16181,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../runAnalysis/supportingPlots/timingPlot.eps
-	width 60page%
+	width 90text%
 	rotateAngle 270
 
 \end_inset
@@ -16369,7 +16370,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../runAnalysis/supportingPlots/run3147filterFrequencyResponse.eps
-	width 80text%
+	width 90text%
 
 \end_inset
 
@@ -16411,7 +16412,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../runAnalysis/supportingPlots/run3147filterTimeDomain.eps
-	width 80text%
+	width 90text%
 
 \end_inset
 
@@ -16613,7 +16614,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../runAnalysis/supportingPlots/run3169filterTransfer.eps
-	width 80text%
+	width 90text%
 
 \end_inset
 
@@ -16851,7 +16852,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../runAnalysis/supportingPlots/run3169lags.eps
-	width 80text%
+	width 90text%
 
 \end_inset
 
@@ -16947,7 +16948,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../runAnalysis/supportingPlots/run3224torqueLag.eps
-	width 80text%
+	width 90text%
 
 \end_inset
 
@@ -17053,7 +17054,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../runAnalysis/supportingPlots/run3147windowTransferFunctions.eps
-	width 80text%
+	width 90text%
 
 \end_inset
 
@@ -17206,7 +17207,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename plots/triangleExample.eps
-	width 80page%
+	width 100page%
 
 \end_inset
 
@@ -20654,7 +20655,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../NewtonianSimulation/plots/fullDistribution.eps
-	width 80text%
+	width 90text%
 
 \end_inset
 
@@ -21040,7 +21041,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../NewtonianSimulation/plots/fullSimulation.eps
-	width 70page%
+	width 90text%
 
 \end_inset
 
@@ -21131,7 +21132,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../NewtonianSimulation/plots/offsetAttractorAssembly.eps
-	width 70text%
+	width 90text%
 
 \end_inset
 
@@ -21386,7 +21387,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../NewtonianSimulation/plots/pmScanPlot.eps
-	width 70page%
+	width 90text%
 
 \end_inset
 
@@ -21778,7 +21779,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename diagrams/CapacitorSystematic.pdf
-	width 70page%
+	width 90page%
 
 \end_inset
 
@@ -22057,7 +22058,15 @@ name "Resistor Tests"
 
 \end_inset
 
-Summary of resistor tests.
+Summary of resistor tests to confirm that 20
+\begin_inset space ~
+\end_inset
+
+M
+\begin_inset Formula $\Omega$
+\end_inset
+
+ was not finely-tuned.
  Note logarithmic axes.
 \end_layout
 
@@ -22891,7 +22900,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../systematics/thermal/plots/aveTempPlot.eps
-	width 80text%
+	width 90text%
 
 \end_inset
 
@@ -23594,6 +23603,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../bootstrap/output/IFOBSFits.eps
+	width 90text%
 
 \end_inset
 
@@ -23955,6 +23965,28 @@ l upgrades.
 
 \begin_layout Chapter
 Results
+\end_layout
+
+\begin_layout Standard
+Results shown in this chapter display the output of a run of the complete
+ end-to-end analysis using 
+\begin_inset CommandInset include
+LatexCommand input
+filename "../extracted/numBootstraps.tex"
+
+\end_inset
+
+ bootstrapped points, divided equally among interferometer-added, interferometer
+-subtracted, and no-interferometer-correction fits.
+ A more thorough analysis, combining almost 5000 points, is described in
+ Chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Conclusions"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
@@ -25211,6 +25243,13 @@ A particular sticking point is our reliance upon the excellent Gnuplot plotting
 
 \begin_layout Chapter
 Conclusions
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Conclusions"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -25310,7 +25349,8 @@ name "fig:Unblinded-arbitrary-fit-plot"
 
 \end_inset
 
-Unblinded arbitrary-fit plot
+Unblinded arbitrary-fit plot, precisely as-unblinded.
+ Something is clearly amiss.
 \end_layout
 
 \end_inset
@@ -25337,15 +25377,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename Pictures/unblindedAlphaLambdaMinus.eps
-	width 35text%
-	rotateAngle 270
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename Pictures/unblindedAlphaLambdaPlus.eps
-	width 35text%
+	width 70text%
 	rotateAngle 270
 
 \end_inset
@@ -25363,11 +25395,11 @@ name "fig:Unblinded-alpha-lambda-plots."
 
 \end_inset
 
-Alpha-lambda plots, precisely as unblinded.
+Alpha-lambda plot, precisely as unblinded.
  Our apologies for the plotting artifacts; the distribution of the best-fit
  points in the upper two panels is of greatest importance.
- Interferometer subtracted on left, added on right.
- A signal is clearly resolved in both plots.
+ Interferometer correction subtracted.
+ A signal is clearly resolved.
  Note poor 
 \begin_inset Formula $\chi^{2}$
 \end_inset
@@ -25380,7 +25412,53 @@ Alpha-lambda plots, precisely as unblinded.
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Pictures/unblindedAlphaLambdaPlus.eps
+	width 70text%
+	rotateAngle 270
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Unblinded-alpha-lambda-plots.-1"
+
+\end_inset
+
+Alpha-lambda plot, precisely as unblinded.
+ Our apologies for the plotting artifacts; the distribution of the best-fit
+ points in the upper two panels is of greatest importance.
+ Interferometer correction added.
+ A signal is clearly resolved.
+ Note poor 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -25665,7 +25743,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../conclusion/unblindedIFOBSFits.eps
-	width 79text%
+	width 90text%
 
 \end_inset
 
