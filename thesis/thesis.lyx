@@ -1852,7 +1852,7 @@ At scales of meters and below, tests of the inverse square law become more
  specialized.
  Experimental designs become more and more carefully crafted to suppress
  systematics that would otherwise hide the signature of gravity entirely.
- Prior to 2001, the shortest distance at which gravity had been observed
+ Prior to 2001, the shortest distances at which gravity had been observed
  was 
 \begin_inset Formula $\sim0.5$
 \end_inset
@@ -1874,6 +1874,25 @@ et al.
 \begin_inset CommandInset citation
 LatexCommand citep
 key "PhysRevLett.44.1645"
+
+\end_inset
+
+ and 
+\begin_inset Formula $\sim800-900$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m by Mitrofanov and Ponomareva in 1988 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "mitrofanov"
 
 \end_inset
 
@@ -8997,7 +9016,7 @@ Small non-uniformities in density of the attractor or pendulum materials
  In the absence of a pendulum non-uniformity, an attractor void will cause
  a lateral position-dependent torque.
  If the attractor void were to occur near the outer corner of the dense
- pendulum inlay (worst case), the unmodulated torque would be
+ pendulum inlay (worst case), the unmodulated torque would be 
 \begin_inset Formula $<10^{-24}$
 \end_inset
 
@@ -11109,6 +11128,8 @@ name "fig:Horizontal-fiber-position"
 Horizontal fiber position.
  The rough lateral scratches at the top of the attractor mark its highest
  point.
+ The fiber is visible as a faint out-of-focus, nearly vertical line on both
+ the attractor and the machinist's scale.
 \end_layout
 
 \end_inset
@@ -16928,7 +16949,7 @@ The general problem of filter combination is simple in frequency-space,
 \begin_layout Standard
 The experiment itself provides a solution to the problem of determining
  the settling-time of the overall torque feedback system.
- The pendulum has a magnetic moment (see 
+ The pendulum has a magnetic moment (see Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "par:Pendulum-magnetic-moment"
@@ -16939,7 +16960,7 @@ reference "par:Pendulum-magnetic-moment"
  Using a coil placed around the apparatus for systematic tests, it is possible
  to produce arbitrary torques on the pendulum.
  The attractor position is measured using an analog electronic pressure
- gauge (see 
+ gauge (see Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Attractor-position-control"
@@ -17372,7 +17393,7 @@ In the lowest panel, we plot the projection of the scatter plot along the
 \begin_layout Standard
 In this work, these will be presented only as scatter plots, but if the
  out-of-page scatter of the points is relatively uniform, it is possible
- to bin the points locally and plot circular errorbars to add more clarity
+ to bin the points locally and plot circular error-bars to add more clarity
  to the plots.
  As the PlateWash data have considerable variation in variance over time,
  it is extremely challenging to plot.
@@ -18240,7 +18261,7 @@ The bootstrapped handling of uncertainties allows a trivial inclusion of
 \begin_inset Quotes eld
 \end_inset
 
-horizontal systematic errorbars
+horizontal systematic error-bars
 \begin_inset Quotes erd
 \end_inset
 
@@ -19413,7 +19434,7 @@ PlateWash is not an entirely blind experiment.
  because we had not discovered a way to monitor the health of the experiment
  without access to data which included the central values of each measurement.
  During that time, it became clear that monitoring the distribution of the
- errorbars of each cut was sufficient to ensure nothing was going wrong
+ error-bars of each cut was sufficient to ensure nothing was going wrong
  within the instrument.
  Once that determination was made, we blinded ourselves to the central values
  of all torque measurements.
@@ -20392,8 +20413,8 @@ reference "fig:DisplayPoints"
 
 \end_inset
 
- can be panned and zoomed in three dimensions, giving easy intuitive access
- to the model.
+ can be panned, zoomed, and rotated in three dimensions, giving easy intuitive
+ access to the model.
 \end_layout
 
 \begin_layout Standard
@@ -20794,8 +20815,15 @@ Point-point forces make sense:
 \end_layout
 
 \begin_layout Standard
-A direct check of the force between one-kg point masses at 1 m has value
- 
+A direct check of the force between two 1
+\begin_inset space ~
+\end_inset
+
+kg point masses with 1
+\begin_inset space ~
+\end_inset
+
+m separation has value 
 \begin_inset Formula $G$
 \end_inset
 
@@ -21754,10 +21782,10 @@ k
 \end_layout
 
 \begin_layout Standard
-Later, the worries that we had fine-tuned the apparatus and that at higher
- frequencies, the foil and attractor were effectively electrically floating
- resurfaced, and we decided that it would be wise to bypass the resistors
- with large capacitors.
+Later, the worry that we had fine-tuned the apparatus and the worry that
+ at higher frequencies the foil and attractor were effectively electrically
+ floating resurfaced, and we decided that it would be wise to bypass the
+ resistors with large capacitors.
  We made that change and proceeded for years to refine the instrument.
  
 \end_layout
@@ -24098,7 +24126,7 @@ filename "../extracted/numBootstraps.tex"
 \end_inset
 
  independent reconstructions, so the scatter does not reflect a traditional
- one-sigma errorbar.
+ one-sigma error-bar.
  To demonstrate our ability to recover injected signals, we include Appendix
  
 \begin_inset CommandInset ref
@@ -24192,7 +24220,7 @@ l lines) are shown as circles.
 \end_inset
 
  is of limited quantitative value, as in many torsion balance experiments,
- per-cut errorbars will tend to underestimate the uncertainties; we expect
+ per-cut error-bars will tend to underestimate the uncertainties; we expect
  the 
 \bar under
 relative
