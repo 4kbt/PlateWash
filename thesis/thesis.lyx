@@ -9,6 +9,7 @@
 \usepackage{dpfloat}
 \date{}
 \RequirePackage[hyphens]{url} 
+\pagestyle{plain}
 \end_preamble
 \use_default_options false
 \maintain_unincluded_children false
