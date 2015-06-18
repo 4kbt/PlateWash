@@ -9,7 +9,7 @@ psu = '../results/unCorrectedpsTimeInfo.dat'
 set multiplot layout 2,1
 
 set xlabel 'run duration (d)'
-set ylabel 'NTP minus system-clock (s)'
+set ylabel 'NTP minus local time (s)'
 set key below Left 
 
 pl \
