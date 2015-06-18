@@ -27537,26 +27537,15 @@ Build System Configuration
 
 \begin_layout Standard
 \align left
-The Debian Linux computer used to generate this analysis and text had the
- following packages (versions) installed.
- This list of packages is 
-\bar under
-not
-\bar default
- minimal.
-\end_layout
-
-\begin_layout Standard
-\paragraph_spacing single
-\align left
-\begin_inset CommandInset include
-LatexCommand input
-preview true
-filename "../debianPackages.tex"
-
-\end_inset
-
-
+The names of all packages installed on the Debian Linux computer used to
+ generate this analysis and text are recorded in the project git repository.
+ Furthermore, the SHA256 hash of the list, as evaluated by 
+\family typewriter
+sha256sum debianPackagesThesisBuild.txt 
+\family default
+is
+\family typewriter
+ 115f9bbfb23c0c49644c1f85b2db5f1b8ad968dcd09d94ec2d79a201d01d414c.
 \end_layout
 
 \begin_layout Standard
